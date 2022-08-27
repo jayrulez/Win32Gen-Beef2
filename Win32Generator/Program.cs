@@ -1035,7 +1035,8 @@ namespace Win32Generator
 
                 AddTabs(indentLevel + 2, ref outputContent);
                 string fullParamsString = string.Join(", ", func.GetParamsString());
-                outputContent.AppendLine($"protected new function [CallingConvention(.Stdcall)] {func.ReturnType}(/*{name}*/SelfOuter* self{(func.HasParams ? ", " : "")}{fullParamsString}) {finalMethodName};");
+                //outputContent.AppendLine($"protected new function [CallingConvention(.Stdcall)] {func.ReturnType}(/*{name}*/SelfOuter* self{(func.HasParams ? ", " : "")}{fullParamsString}) {finalMethodName};");
+                outputContent.AppendLine($"protected new function [CallingConvention(.Stdcall)] {func.ReturnType}(SelfOuter* self{(func.HasParams ? ", " : "")}{fullParamsString}) {finalMethodName};");
 
                 var prettyMethod = $"public {func.ReturnType} {func.Name}({fullParamsString}) mut => VT.[Friend]{finalMethodName}(&this{(func.HasParams ? ", " : "")}{func.GetParamsNames()});";
 
@@ -1138,7 +1139,7 @@ namespace Win32Generator
                 {
                     parameter.CallName = parameter.Name;
 
-                    if (parameter.Attributes.Contains("Const") && parameter.Attributes.Contains("In"))
+                   // if (parameter.Attributes.Contains("Const") && parameter.Attributes.Contains("In"))
                     {
                         //parameter.TypeName = $"ref {parameter.TypeName}";
                         //parameter.TypeName.TrimEnd('*');
@@ -1252,33 +1253,40 @@ namespace Win32Generator
 
             var typeInfo = GetTypeInfo(typeObject);
 
-            if (typeInfo.type.Contains("Guid*"))
+            if (typeInfo.kind == "PointerTo" && typeInfo.childKind == "Native" && !typeInfo.type.Equals("void*"))
             {
                 typeInfo.type = typeInfo.type.TrimEnd('*');
-                typeInfo.type = $"ref {typeInfo.type}";
+                //typeInfo.type = $"ref {typeInfo.type}";
             }
 
             return (typeInfo.type, attrs);
         }
 
-        private static (string type, string kind) GetTypeInfo(JObject typeObject)
+        private static (string type, string kind, string childKind) GetTypeInfo(JObject typeObject)
         {
             var typeKind = typeObject["Kind"].ToString();
+            var typeChild = typeObject["Child"];
+
+            string childKind = string.Empty;
+            if (typeChild != null)
+            {
+                childKind = typeChild["Kind"].ToString();
+            }
 
             if (typeKind == "Native")
             {
-                return (GetNativeType(typeObject["Name"].ToString()), typeKind);
+                return (GetNativeType(typeObject["Name"].ToString()), typeKind, childKind);
             }
             else if (typeKind == "NativeTypedef")
             {
-                return (GetNativeTypedef(typeObject["Name"].ToString()), typeKind);
+                return (GetNativeTypedef(typeObject["Name"].ToString()), typeKind, childKind);
             }
             else if (typeKind == "ApiRef")
             {
                 var targetKind = typeObject["TargetKind"]?.ToString();
                 if (targetKind == "Com")
-                    return ($"{typeObject["Name"].ToString()}*", typeKind);
-                return (typeObject["Name"].ToString(), typeKind);
+                    return ($"{typeObject["Name"].ToString()}*", typeKind, childKind);
+                return (typeObject["Name"].ToString(), typeKind, childKind);
             }
             else if (typeKind == "PointerTo")
             {
@@ -1288,7 +1296,7 @@ namespace Win32Generator
                 var type = GetTypeInfo(childObject);
                 //if (type.type == "Guid" || type.type == "PWSTR")
                 //    return (type.type, typeKind);
-                return ($"{type.type}*", typeKind);
+                return ($"{type.type}*", typeKind, childKind);
             }
             else if (typeKind == "Array")
             {
@@ -1304,17 +1312,17 @@ namespace Win32Generator
                 }
 
 
-                return ($"{type.type}[{size}]", typeKind);
+                return ($"{type.type}[{size}]", typeKind, childKind);
             }
             else if (typeKind == "LPArray")
             {
                 var childObject = typeObject["Child"].ToObject<JObject>();
                 var type = GetTypeInfo(childObject);
-                return ($"{type.type}*", typeKind);
+                return ($"{type.type}*", typeKind, childKind);
             }
             else if (typeKind == "MissingClrType")
             {
-                return ("void*", typeKind);
+                return ("void*", typeKind, childKind);
             }
             else
             {
