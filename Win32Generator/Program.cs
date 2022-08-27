@@ -249,8 +249,8 @@ namespace Win32Generator
 
                 _ProcessTypes(types, null, typesBuilder, 0, apiFile.Api);
                 _ProcessConstants(constants, ref constantsContent, 0);
-                _ProcessFunctions(functions, ref functionsContent, 0);
-                _ProcessUnicodeAliases(unicodeAliases, ref unicodeAliasesContent, 0);
+                _ProcessFunctions(functions, unicodeAliases, ref functionsContent, 0);
+                _ProcessUnicodeAliases(functions, unicodeAliases, ref unicodeAliasesContent, 0);
 
                 var outputContent = new StringBuilder();
 
@@ -366,15 +366,32 @@ namespace Win32Generator
         }
 
 
-        private static void _ProcessUnicodeAliases(JArray unicodeAliases, ref StringBuilder unicodeAliasesContent, int indentLevel)
+        private static void _ProcessUnicodeAliases(JArray functions, JArray unicodeAliases, ref StringBuilder unicodeAliasesContent, int indentLevel)
         {
-        }
+            if (unicodeAliases.Count == 0)
+                return;
 
-        private static void _ProcessFunctions(JArray functions, ref StringBuilder outputContent, int indentLevel)
-        {
-            foreach (var function in functions)
+            foreach (var unicodeAlias in unicodeAliases)
             {
 
+            }
+
+            int x = 1;
+        }
+
+        private static void _ProcessFunctions(JArray functions, JArray unicodeAliases, ref StringBuilder outputContent, int indentLevel)
+        {
+            List<String> unicodeAliasNames = new List<string>();
+            if (unicodeAliases.Count > 0)
+            {
+                foreach (var ua in unicodeAliases)
+                {
+                    unicodeAliasNames.Add(ua.ToString());
+                }
+            }
+
+            foreach (var function in functions)
+            {
                 var architectures = function!["Architectures"]!.ToObject<JArray>();
 
                 var functionObject = function.ToObject<JObject>();
@@ -387,6 +404,7 @@ namespace Win32Generator
                 var @params = functionObject["Params"].ToObject<JArray>();
 
                 List<string> paramStrings = new List<string>();
+                List<string> paramNames = new List<string>();
 
                 if (@params != null)
                 {
@@ -403,13 +421,14 @@ namespace Win32Generator
                             attrStrings.Add(attrString);
                         }
 
-                       //if (attrStrings.Count == 1 && attrStrings.Contains("Out"))
-                       // {
-                       //     paramString += $"out ";
-                       // }
+                        //if (attrStrings.Count == 1 && attrStrings.Contains("Out"))
+                        // {
+                        //     paramString += $"out ";
+                        // }
                         paramString += $"{paramType} {ReplaceNameIfReservedWord(paramName)}";
 
                         paramStrings.Add(paramString);
+                        paramNames.Add(ReplaceNameIfReservedWord(paramName));
                     }
                 }
 
@@ -423,6 +442,15 @@ namespace Win32Generator
                 outputContent.AppendLine($"[Import(\"{importDll}.lib\"), CLink, CallingConvention(.Stdcall)]");
                 AddTabs(indentLevel + 1, ref outputContent);
                 outputContent.AppendLine($"public static extern {returnType} {name}({string.Join(", ", paramStrings)});");
+
+                var unicodeAlias = unicodeAliasNames.FirstOrDefault(ua => ua.Equals(name.TrimEnd('A')));
+                if(unicodeAlias != null)
+                {
+                    AddTabs(indentLevel + 1, ref outputContent);
+                    outputContent.AppendLine($"public static {returnType} {unicodeAlias}({string.Join(", ", paramStrings)}) => {name}({string.Join(", ", paramNames)});");
+                    int y = 0;
+                }
+
                 outputContent.AppendLine();
 
 
@@ -1034,7 +1062,7 @@ namespace Win32Generator
             var name = comObject["Name"].ToString();
             var guid = comObject["Guid"].ToString();
 
-            AddTabs(indentLevel+1, ref outputContent);
+            AddTabs(indentLevel + 1, ref outputContent);
             outputContent.AppendLine($"public const Guid CLSID_{name} = {FormatGuid(guid)};");
             outputContent.AppendLine();
         }
