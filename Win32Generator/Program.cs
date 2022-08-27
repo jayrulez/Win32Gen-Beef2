@@ -40,7 +40,7 @@ namespace Win32Generator
             {"Single", "float" },
             {"Double", "double" },
             {"Boolean", "bool" },
-            {"Char", "char8" },
+            {"Char", "char16" },
             {"Guid", "Guid" },
         };
 
@@ -396,41 +396,43 @@ namespace Win32Generator
 
                 var functionObject = function.ToObject<JObject>();
 
-                var name = functionObject["Name"].ToString();
+                //var name = functionObject["Name"].ToString();
                 var importDll = functionObject["DllImport"].ToString();
 
-                var returnType = GetTypeFromJObject(functionObject["ReturnType"].ToObject<JObject>());
+                var func = GenerateFunction(functionObject);
 
-                var @params = functionObject["Params"].ToObject<JArray>();
+                //var returnType = GetTypeFromJObject(functionObject["ReturnType"].ToObject<JObject>());
 
-                List<string> paramStrings = new List<string>();
-                List<string> paramNames = new List<string>();
+                //var @params = functionObject["Params"].ToObject<JArray>();
 
-                if (@params != null)
-                {
-                    foreach (var @param in @params)
-                    {
-                        var paramName = @param["Name"].ToString();
-                        var paramType = GetTypeFromJObject(@param["Type"].ToObject<JObject>());
-                        var attrs = @param["Attrs"].ToObject<JArray>();
-                        string paramString = string.Empty;
-                        List<String> attrStrings = new List<String>();
-                        foreach (var attr in attrs)
-                        {
-                            var attrString = attr.ToString();
-                            attrStrings.Add(attrString);
-                        }
+                //List<string> paramStrings = new List<string>();
+                //List<string> paramNames = new List<string>();
 
-                        //if (attrStrings.Count == 1 && attrStrings.Contains("Out"))
-                        // {
-                        //     paramString += $"out ";
-                        // }
-                        paramString += $"{paramType} {ReplaceNameIfReservedWord(paramName)}";
+                //if (@params != null)
+                //{
+                //    foreach (var @param in @params)
+                //    {
+                //        var paramName = @param["Name"].ToString();
+                //        var paramType = GetTypeFromJObject(@param["Type"].ToObject<JObject>());
+                //        var attrs = @param["Attrs"].ToObject<JArray>();
+                //        string paramString = string.Empty;
+                //        List<String> attrStrings = new List<String>();
+                //        foreach (var attr in attrs)
+                //        {
+                //            var attrString = attr.ToString();
+                //            attrStrings.Add(attrString);
+                //        }
 
-                        paramStrings.Add(paramString);
-                        paramNames.Add(ReplaceNameIfReservedWord(paramName));
-                    }
-                }
+                //        //if (attrStrings.Count == 1 && attrStrings.Contains("Out"))
+                //        // {
+                //        //     paramString += $"out ";
+                //        // }
+                //        paramString += $"{paramType} {ReplaceNameIfReservedWord(paramName)}";
+
+                //        paramStrings.Add(paramString);
+                //        paramNames.Add(ReplaceNameIfReservedWord(paramName));
+                //    }
+                //}
 
                 if (architectures!.Count > 0)
                 {
@@ -441,13 +443,13 @@ namespace Win32Generator
                 AddTabs(indentLevel + 1, ref outputContent);
                 outputContent.AppendLine($"[Import(\"{importDll}.lib\"), CLink, CallingConvention(.Stdcall)]");
                 AddTabs(indentLevel + 1, ref outputContent);
-                outputContent.AppendLine($"public static extern {returnType} {name}({string.Join(", ", paramStrings)});");
+                outputContent.AppendLine($"public static extern {func.ReturnType} {func.Name}({func.GetParamsString()});");
 
-                var unicodeAlias = unicodeAliasNames.FirstOrDefault(ua => ua.Equals(name.TrimEnd('A')));
-                if(unicodeAlias != null)
+                var unicodeAlias = unicodeAliasNames.FirstOrDefault(ua => ua.Equals(func.Name.TrimEnd('A')));
+                if (unicodeAlias != null)
                 {
                     AddTabs(indentLevel + 1, ref outputContent);
-                    outputContent.AppendLine($"public static {returnType} {unicodeAlias}({string.Join(", ", paramStrings)}) => {name}({string.Join(", ", paramNames)});");
+                    outputContent.AppendLine($"public static {func.ReturnType} {unicodeAlias}({func.GetParamsString()}) => {func.Name}({func.GetParamsNames()});");
                     int y = 0;
                 }
 
@@ -739,6 +741,7 @@ namespace Win32Generator
                 outputContent.Append($", Packed({packingSize})");
             }
             outputContent.Append("]");
+            outputContent.AppendLine();
             AddTabs(indentLevel, ref outputContent);
             outputContent.AppendLine($"{(isAnonymous ? /*"private"*/"public" : "public")} {(isStruct ? "struct" : "struct" /*union*/)} {name}");
             AddTabs(indentLevel, ref outputContent);
@@ -766,18 +769,18 @@ namespace Win32Generator
                     int x = 8;
                 }
 
-                var ft = GetTypeFromJObject(fieldType);
+                var fieldTypeInfo = GetTypeInfo(fieldType);
 
-                if (string.IsNullOrEmpty(ft))
+                if (string.IsNullOrEmpty(fieldTypeInfo.type))
                 {
                     throw new Exception();
                 }
 
                 AddTabs(indentLevel + 1, ref outputContent);
-                if (ft.Contains("_Anonymous_") && fieldName.Contains("Anonymous"))
-                    outputContent.AppendLine($"public using {ft} {ReplaceNameIfReservedWord(fieldName)};");
+                if (fieldTypeInfo.type.Contains("_Anonymous_") && fieldName.Contains("Anonymous"))
+                    outputContent.AppendLine($"public using {fieldTypeInfo.type} {ReplaceNameIfReservedWord(fieldName)};");
                 else
-                    outputContent.AppendLine($"public {ft} {ReplaceNameIfReservedWord(fieldName)};");
+                    outputContent.AppendLine($"public {fieldTypeInfo.type} {ReplaceNameIfReservedWord(fieldName)};");
 
                 //
                 //if (fieldTypeKind == "Native")
@@ -967,72 +970,74 @@ namespace Win32Generator
             {
                 var methodObject = method.ToObject<JObject>();
 
-                var methodName = methodObject["Name"].ToString();
+                var func = GenerateFunction(methodObject);
 
-                var returnType = GetTypeFromJObject(methodObject["ReturnType"].ToObject<JObject>());
+                //var methodName = methodObject["Name"].ToString();
 
-                var @params = methodObject["Params"].ToObject<JArray>();
+                //var returnType = GetTypeFromJObject(methodObject["ReturnType"].ToObject<JObject>());
 
-                var finalMethodName = getNextUnusedName(usedNames, methodName);
+                //var @params = methodObject["Params"].ToObject<JArray>();
+
+                var finalMethodName = getNextUnusedName(usedNames, func.Name);
 
                 if (replaceCOMMethods.Contains(finalMethodName))
                 {
                     finalMethodName = $"COM_{finalMethodName}";
                 }
 
-                List<string> paramStrings = new List<string>();
-                List<string> paramNames = new List<string>();
+                //List<string> paramStrings = new List<string>();
+                //List<string> paramNames = new List<string>();
 
-                if (@params != null)
-                {
-                    foreach (var @param in @params)
-                    {
-                        var paramName = @param["Name"].ToString();
+                //if (@params != null)
+                //{
+                //    foreach (var @param in @params)
+                //    {
+                //        var paramName = @param["Name"].ToString();
 
-                        var paramType = GetTypeFromJObject(@param["Type"].ToObject<JObject>());
+                //        var paramType = GetTypeFromJObject(@param["Type"].ToObject<JObject>());
 
-                        if (paramType.Contains("IImageList"))
-                        {
-                            var paramTypeApi = string.Empty;
-                            var typeChild = param["Type"]["Child"]?.ToObject<JObject>();
-                            if (typeChild != null)
-                            {
-                                paramTypeApi = typeChild["Api"].ToString();
-                            }
-                            else
-                            {
-                                paramTypeApi = param["Type"]?["Api"]?.ToString();
-                            }
-                            if (!string.IsNullOrEmpty(paramTypeApi))
-                            {
-                                paramType = $"{paramTypeApi}.{paramType}";
-                            }
-                        }
-                        var attrs = @param["Attrs"].ToObject<JArray>();
-                        string paramString = string.Empty;
-                        List<String> attrStrings = new List<String>();
-                        foreach (var attr in attrs)
-                        {
-                            var attrString = attr.ToString();
-                            attrStrings.Add(attrString);
-                        }
+                //        if (paramType.Contains("IImageList"))
+                //        {
+                //            var paramTypeApi = string.Empty;
+                //            var typeChild = param["Type"]["Child"]?.ToObject<JObject>();
+                //            if (typeChild != null)
+                //            {
+                //                paramTypeApi = typeChild["Api"].ToString();
+                //            }
+                //            else
+                //            {
+                //                paramTypeApi = param["Type"]?["Api"]?.ToString();
+                //            }
+                //            if (!string.IsNullOrEmpty(paramTypeApi))
+                //            {
+                //                paramType = $"{paramTypeApi}.{paramType}";
+                //            }
+                //        }
+                //        var attrs = @param["Attrs"].ToObject<JArray>();
+                //        string paramString = string.Empty;
+                //        List<String> attrStrings = new List<String>();
+                //        foreach (var attr in attrs)
+                //        {
+                //            var attrString = attr.ToString();
+                //            attrStrings.Add(attrString);
+                //        }
 
-                        if (attrStrings.Count == 1 && attrStrings.Contains("Out"))
-                        {
-                            //paramString += $"out ";
-                        }
-                        paramString += $"{paramType} {ReplaceNameIfReservedWord(paramName)}";
+                //        if (attrStrings.Count == 1 && attrStrings.Contains("Out"))
+                //        {
+                //            //paramString += $"out ";
+                //        }
+                //        paramString += $"{paramType} {ReplaceNameIfReservedWord(paramName)}";
 
-                        paramStrings.Add(paramString);
-                        paramNames.Add(ReplaceNameIfReservedWord(paramName));
-                    }
-                }
+                //        paramStrings.Add(paramString);
+                //        paramNames.Add(ReplaceNameIfReservedWord(paramName));
+                //    }
+                //}
 
                 AddTabs(indentLevel + 2, ref outputContent);
-                string fullParamsString = string.Join(", ", paramStrings);
-                outputContent.AppendLine($"protected new function [CallingConvention(.Stdcall)] {returnType}(/*{name}*/SelfOuter* self{(paramStrings.Count > 0 ? ", " : "")}{fullParamsString}) {finalMethodName};");
+                string fullParamsString = string.Join(", ", func.GetParamsString());
+                outputContent.AppendLine($"protected new function [CallingConvention(.Stdcall)] {func.ReturnType}(/*{name}*/SelfOuter* self{(func.HasParams ? ", " : "")}{fullParamsString}) {finalMethodName};");
 
-                var prettyMethod = $"public {returnType} {methodName}({fullParamsString}) mut => VT.[Friend]{finalMethodName}(&this{(paramStrings.Count > 0 ? ", " : "")}{string.Join(", ", paramNames)});";
+                var prettyMethod = $"public {func.ReturnType} {func.Name}({fullParamsString}) mut => VT.[Friend]{finalMethodName}(&this{(func.HasParams ? ", " : "")}{func.GetParamsNames()});";
 
                 prettyMethods.Add(prettyMethod);
 
@@ -1071,70 +1076,224 @@ namespace Win32Generator
         {
             var name = comObject["Name"].ToString();
 
-            var returnType = GetTypeFromJObject(comObject["ReturnType"].ToObject<JObject>());
+            var func = GenerateFunction(comObject);
 
-            var @params = comObject["Params"].ToObject<JArray>();
+            //var returnType = GetTypeFromJObject(comObject["ReturnType"].ToObject<JObject>());
 
-            List<string> paramStrings = new List<string>();
+            //var @params = comObject["Params"].ToObject<JArray>();
+
+            //List<string> paramStrings = new List<string>();
+
+            //if (@params != null)
+            //{
+            //    foreach (var @param in @params)
+            //    {
+            //        var paramName = @param["Name"].ToString();
+            //        var paramType = GetTypeFromJObject(@param["Type"].ToObject<JObject>());
+            //        var attrs = @param["Attrs"].ToObject<JArray>();
+            //        string paramString = string.Empty;
+            //        List<String> attrStrings = new List<String>();
+            //        foreach (var attr in attrs)
+            //        {
+            //            var attrString = attr.ToString();
+            //            attrStrings.Add(attrString);
+            //        }
+
+            //        //if (attrStrings.Count == 1 && attrStrings.Contains("Out"))
+            //        //{
+            //        //    paramString += $"out ";
+            //        //}
+            //        paramString += $"{paramType} {ReplaceNameIfReservedWord(paramName)}";
+
+            //        paramStrings.Add(paramString);
+            //    }
+            //}
+
+            //AddTabs(indentLevel + 1, ref outputContent);
+            outputContent.AppendLine($"public function {func.ReturnType} {func.Name}({func.GetParamsString()});");
+        }
+
+        private class FunctionParameter
+        {
+            public String TypeName { get; set; }
+            public String Name { get; set; }
+            public String CallName { get; set; }
+            public List<String> Attributes { get; } = new List<String>();
+        }
+
+        private class Function
+        {
+            public string Name { get; set; }
+            public string ReturnType { get; set; }
+            public List<FunctionParameter> Parameters { get; set; } = new();
+
+            private bool baked = false;
+
+            private string bakedParamsString = null;
+            private string bakedNamesString = null;
+
+            private void Bake()
+            {
+                foreach (var parameter in Parameters)
+                {
+                    parameter.CallName = parameter.Name;
+
+                    if (parameter.Attributes.Contains("Const") && parameter.Attributes.Contains("In"))
+                    {
+                        //parameter.TypeName = $"ref {parameter.TypeName}";
+                        //parameter.TypeName.TrimEnd('*');
+                        //parameter.CallName = $"ref {parameter.Name}";
+                        if (parameter.TypeName.StartsWith("ref "))
+                        {
+                            parameter.CallName = $"ref {parameter.CallName}";
+                        }
+                    }
+                }
+
+                bakedParamsString = string.Join(", ", Parameters.Select(p => $"{p.TypeName} {p.Name}").ToList());
+                bakedNamesString = string.Join(", ", Parameters.Select(p => p.CallName).ToList()); ;
+
+                baked = true;
+            }
+
+            public string GetParamsString()
+            {
+                if (!baked)
+                {
+                    Bake();
+                }
+
+                return bakedParamsString;
+            }
+
+            public string GetParamsNames()
+            {
+                if (!baked)
+                {
+                    Bake();
+                }
+
+                return bakedNamesString;
+            }
+
+            public bool HasParams => Parameters.Count > 0;
+        }
+
+        private static Function GenerateFunction(JObject functionObject)
+        {
+            var name = functionObject["Name"].ToString();
+
+            var returnType = GetTypeInfo(functionObject["ReturnType"].ToObject<JObject>());
+
+            var @params = functionObject["Params"].ToObject<JArray>();
+
+            Function function = new Function()
+            {
+                Name = name,
+                ReturnType = returnType.type,
+            };
 
             if (@params != null)
             {
                 foreach (var @param in @params)
                 {
                     var paramName = @param["Name"].ToString();
-                    var paramType = GetTypeFromJObject(@param["Type"].ToObject<JObject>());
-                    var attrs = @param["Attrs"].ToObject<JArray>();
-                    string paramString = string.Empty;
-                    List<String> attrStrings = new List<String>();
-                    foreach (var attr in attrs)
+                    var paramType = GetParamTypeInfo(@param["Type"].ToObject<JObject>());
+
+                    if (paramType.type.Contains("IImageList"))
                     {
-                        var attrString = attr.ToString();
-                        attrStrings.Add(attrString);
+                        var paramTypeApi = string.Empty;
+                        var typeChild = param["Type"]["Child"]?.ToObject<JObject>();
+                        if (typeChild != null)
+                        {
+                            paramTypeApi = typeChild["Api"].ToString();
+                        }
+                        else
+                        {
+                            paramTypeApi = param["Type"]?["Api"]?.ToString();
+                        }
+                        if (!string.IsNullOrEmpty(paramTypeApi))
+                        {
+                            paramType.type = $"{paramTypeApi}.{paramType.type}";
+                        }
                     }
 
-                    //if (attrStrings.Count == 1 && attrStrings.Contains("Out"))
-                    //{
-                    //    paramString += $"out ";
-                    //}
-                    paramString += $"{paramType} {ReplaceNameIfReservedWord(paramName)}";
+                    var functionParameter = new FunctionParameter()
+                    {
+                        Name = ReplaceNameIfReservedWord(paramName),
+                        TypeName = paramType.type
+                    };
 
-                    paramStrings.Add(paramString);
+                    paramType.attributes.AddRange(paramType.attributes);
+
+                    var attrs = @param["Attrs"].ToObject<JArray>();
+                    foreach (var attr in attrs)
+                    {
+                        functionParameter.Attributes.Add(attr.ToString());
+                    }
+
+                    function.Parameters.Add(functionParameter);
                 }
             }
 
-            //AddTabs(indentLevel + 1, ref outputContent);
-            outputContent.AppendLine($"public function {returnType} {name}({string.Join(", ", paramStrings)});");
+            return function;
         }
 
-        private static string GetTypeFromJObject(JObject typeObject)
+        private static (string type, List<string> attributes) GetParamTypeInfo(JObject typeObject)
+        {
+            //var typeKind = typeObject["Kind"].ToString();
+            var attrs = new List<String>();
+
+            var typeObjectAttrs = typeObject["Attrs"];
+            if (typeObjectAttrs != null)
+            {
+                attrs = typeObjectAttrs.ToObject<JArray>().Select(a => a.ToString()).ToList();
+            }
+
+            var typeInfo = GetTypeInfo(typeObject);
+
+            if (typeInfo.type.Contains("Guid*"))
+            {
+                typeInfo.type = typeInfo.type.TrimEnd('*');
+                typeInfo.type = $"ref {typeInfo.type}";
+            }
+
+            return (typeInfo.type, attrs);
+        }
+
+        private static (string type, string kind) GetTypeInfo(JObject typeObject)
         {
             var typeKind = typeObject["Kind"].ToString();
 
             if (typeKind == "Native")
             {
-                return GetNativeType(typeObject["Name"].ToString());
+                return (GetNativeType(typeObject["Name"].ToString()), typeKind);
             }
             else if (typeKind == "NativeTypedef")
             {
-                return GetNativeTypedef(typeObject["Name"].ToString());
+                return (GetNativeTypedef(typeObject["Name"].ToString()), typeKind);
             }
             else if (typeKind == "ApiRef")
             {
                 var targetKind = typeObject["TargetKind"]?.ToString();
                 if (targetKind == "Com")
-                    return $"{typeObject["Name"].ToString()}*";
-                return typeObject["Name"].ToString();
+                    return ($"{typeObject["Name"].ToString()}*", typeKind);
+                return (typeObject["Name"].ToString(), typeKind);
             }
             else if (typeKind == "PointerTo")
             {
                 var childObject = typeObject["Child"].ToObject<JObject>();
-                var type = GetTypeFromJObject(childObject);
-                return $"{type}*";
+                //var attrArray = typeObject["Attrs"].ToObject<JArray>();
+                //List<string> attrs = attrArray.Select(attr => attr.ToString()).ToList(); // todo: use this
+                var type = GetTypeInfo(childObject);
+                //if (type.type == "Guid" || type.type == "PWSTR")
+                //    return (type.type, typeKind);
+                return ($"{type.type}*", typeKind);
             }
             else if (typeKind == "Array")
             {
                 var childObject = typeObject["Child"].ToObject<JObject>();
-                var type = GetTypeFromJObject(childObject);
+                var type = GetTypeInfo(childObject);
 
                 int size = 1;
 
@@ -1145,17 +1304,17 @@ namespace Win32Generator
                 }
 
 
-                return $"{type}[{size}]";
+                return ($"{type.type}[{size}]", typeKind);
             }
             else if (typeKind == "LPArray")
             {
                 var childObject = typeObject["Child"].ToObject<JObject>();
-                var type = GetTypeFromJObject(childObject);
-                return $"{type}*";
+                var type = GetTypeInfo(childObject);
+                return ($"{type.type}*", typeKind);
             }
             else if (typeKind == "MissingClrType")
             {
-                return "void*";
+                return ("void*", typeKind);
             }
             else
             {
