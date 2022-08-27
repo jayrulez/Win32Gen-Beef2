@@ -1253,10 +1253,19 @@ namespace Win32Generator
 
             var typeInfo = GetTypeInfo(typeObject);
 
-            if (typeInfo.kind == "PointerTo" && typeInfo.childKind == "Native" && !typeInfo.type.Equals("void*"))
+            if (typeInfo.type.Contains("Guid"))
             {
-                typeInfo.type = typeInfo.type.TrimEnd('*');
-                //typeInfo.type = $"ref {typeInfo.type}";
+                int x = 1;
+            }
+
+            if (typeInfo.kind == "PointerTo" && typeInfo.childKind == "Native")
+            {
+
+                if ((attrs.Count == 2 && attrs.Contains("In") && attrs.Contains("Const")) || typeInfo.type == "Guid*")
+                {
+                    typeInfo.type = typeInfo.type.TrimEnd('*');
+                    typeInfo.type = $"ref {typeInfo.type}";
+                }
             }
 
             return (typeInfo.type, attrs);
