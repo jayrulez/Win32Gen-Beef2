@@ -695,13 +695,15 @@ namespace Win32Generator
             outputContent.AppendLine("}");
         }
 
-        private static void __ProcessStructOrUnion(JObject structOrInion, JObject parentStructType, ref StringBuilder outputContent, int indentLevel, string api, out bool isAnonymous, ref HashSet<string> referencedApis)
+        private static List<string> __ProcessStructOrUnion(JObject structOrInion, JObject parentStructType, ref StringBuilder outputContent, int indentLevel, string api, out bool isAnonymous, ref HashSet<string> referencedApis)
         {
             var kind = structOrInion["Kind"]!.ToString();
             var name = structOrInion["Name"]!.ToString();
             var packingSize = structOrInion["PackingSize"]!.ToString();
             var fields = structOrInion["Fields"]!.ToObject<JArray>();
             var nestedTypes = structOrInion!["NestedTypes"]!.ToObject<JArray>();
+
+            List<string> returnFamUnionMembers = new List<string>();
 
             isAnonymous = name.Contains("_Anonymous") && (name.Contains("__Struct") || name.Contains("__Union"));
             bool isStruct = kind == "Struct";
@@ -716,7 +718,13 @@ namespace Win32Generator
                 {
                     foreach (var nestedType in nestedTypes)
                     {
-                        __ProcessStructOrUnion(nestedType.ToObject<JObject>(), structOrInion, ref membersWriter, indentLevel + 1, api, out bool _, ref referencedApis);
+                        var famUnionMembers = __ProcessStructOrUnion(nestedType.ToObject<JObject>(), structOrInion, ref membersWriter, indentLevel + 1, api, out bool _, ref referencedApis);
+
+                        if (famUnionMembers.Count > 0)
+                        {
+                            attributes.Add($"FlexibleArray({string.Join(", ", famUnionMembers.Select(f => $"\"{f}\"").ToList())})");
+                        }
+
                         membersWriter.AppendLine();
                         processedNestedTypes.Add(nestedType["Name"].ToString());
                     }
@@ -742,14 +750,21 @@ namespace Win32Generator
                     var finalFieldName = ReplaceNameIfReservedWord(fieldName);
                     string fieldVisibility = "public";
 
-                    if (fieldTypeInfo.kind == "Array" && fieldTypeInfo.type.EndsWith("[0]"))
+                    if (!isStruct)
+                    {
+                        referencedApis.Add("System.Interop");
+                        returnFamUnionMembers.Add(finalFieldName);
+                        finalFieldName += "_impl";
+                    }
+                    else if (fieldTypeInfo.kind == "Array" && fieldTypeInfo.type.EndsWith("[0]"))
                     {
                         //AddTabs(indentLevel + 1, ref membersWriter);
                         //membersWriter.AppendLine("[Warn(\"Consider accessing this structure with System.Interop.FlexibleArray<>\")]");
-                        attributes.Add($"FlexibleArray(\"{finalFieldName}\")");
-                        finalFieldName += "_impl";
-                        fieldVisibility = "private";
+
                         referencedApis.Add("System.Interop");
+                        attributes.Add($"FlexibleArray(\"{finalFieldName}\")");
+                        fieldVisibility = "private";
+                        finalFieldName += "_impl";
                     }
                     AddTabs(indentLevel + 1, ref membersWriter);
                     if (fieldTypeInfo.type.Contains("_Anonymous_") && fieldName.Contains("Anonymous"))
@@ -801,6 +816,8 @@ namespace Win32Generator
                 ProcessedStructsOrUnions.Add(api, new List<JObject>());
             }
             ProcessedStructsOrUnions[api].Add(structOrInion);
+
+            return returnFamUnionMembers;
         }
 
         private static void __ProcessCOMType(JObject comObject, JObject parentType, ref StringBuilder outputContent, int indentLevel, string api)
