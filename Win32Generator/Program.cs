@@ -720,11 +720,11 @@ namespace Win32Generator
                     {
                         var famUnionMembers = __ProcessStructOrUnion(nestedType.ToObject<JObject>(), structOrInion, ref membersWriter, indentLevel + 1, api, out bool _, ref referencedApis);
 
-                        if (famUnionMembers.Count > 0)
+                        if (famUnionMembers.Count> 0)
                         {
                             attributes.Add($"FlexibleArray({string.Join(", ", famUnionMembers.Select(f => $"\"{f}\"").ToList())})");
                         }
-
+                        
                         membersWriter.AppendLine();
                         processedNestedTypes.Add(nestedType["Name"].ToString());
                     }
@@ -750,20 +750,21 @@ namespace Win32Generator
                     var finalFieldName = ReplaceNameIfReservedWord(fieldName);
                     string fieldVisibility = "public";
 
-                    if (!isStruct)
-                    {
-                        referencedApis.Add("System.Interop");
-                        returnFamUnionMembers.Add(finalFieldName);
-                        finalFieldName += "_impl";
-                    }
-                    else if (fieldTypeInfo.kind == "Array" && fieldTypeInfo.type.EndsWith("[0]"))
+                    if (fieldTypeInfo.kind == "Array" && fieldTypeInfo.type.EndsWith("[0]"))
                     {
                         //AddTabs(indentLevel + 1, ref membersWriter);
                         //membersWriter.AppendLine("[Warn(\"Consider accessing this structure with System.Interop.FlexibleArray<>\")]");
 
                         referencedApis.Add("System.Interop");
-                        attributes.Add($"FlexibleArray(\"{finalFieldName}\")");
-                        fieldVisibility = "private";
+                        if (isStruct)
+                        {
+                            attributes.Add($"FlexibleArray(\"{finalFieldName}\")");
+                            fieldVisibility = "private";
+                        }
+                        else
+                        {
+                            returnFamUnionMembers.Add(finalFieldName);
+                        }
                         finalFieldName += "_impl";
                     }
                     AddTabs(indentLevel + 1, ref membersWriter);
