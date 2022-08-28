@@ -168,16 +168,11 @@ namespace Win32Generator
 
                 var apiString = fileString.Replace(Path.DirectorySeparatorChar.ToString(), ".");
 
-                var outputPath = Path.Combine(options.OutputDir, dirString);
+                var outputPath = Path.Combine(options.OutputDir, "Generated", dirString);
 
                 var apiFile = new APIFile(filePart, apiString, file, outputPath);
 
                 APIFiles.Add(apiFile);
-
-                if (apiString.Contains("Storage.EnhancedStorage"))
-                {
-                    int x = 1;
-                }
 
 
                 var inputContent = File.ReadAllText(apiFile.InputPath);
@@ -202,6 +197,54 @@ namespace Win32Generator
             APIFiles.OrderBy(f => f.Dependencies.Count);
 
             ProcessAPIFiles(APIFiles);
+
+            var extrasStringBuilder =new StringBuilder();
+
+            extrasStringBuilder.AppendLine($"namespace {RootNamespace}");
+            extrasStringBuilder.AppendLine("{");
+            extrasStringBuilder.AppendLine();
+            AddTabs(1, ref extrasStringBuilder);
+            extrasStringBuilder.AppendLine($"public static");
+            AddTabs(1, ref extrasStringBuilder);
+            extrasStringBuilder.AppendLine("{");
+            {
+                AddTabs(2, ref extrasStringBuilder);
+                extrasStringBuilder.AppendLine("public const ANYSIZE_ARRAY = 1;");
+            }
+
+            AddTabs(1, ref extrasStringBuilder);
+            extrasStringBuilder.AppendLine("}");
+            extrasStringBuilder.AppendLine("}");
+            extrasStringBuilder.AppendLine();
+            extrasStringBuilder.AppendLine("namespace Win32.UI.Shell.PropertiesSystem");
+            extrasStringBuilder.AppendLine("{");
+            {
+                AddTabs(1, ref extrasStringBuilder);
+                extrasStringBuilder.AppendLine("extension PROPERTYKEY");
+                AddTabs(1, ref extrasStringBuilder);
+                extrasStringBuilder.AppendLine("{");
+                {
+                    AddTabs(2, ref extrasStringBuilder);
+                    extrasStringBuilder.AppendLine("public this(Guid fmtid, uint32 pid)");
+
+                    AddTabs(2, ref extrasStringBuilder);
+                    extrasStringBuilder.AppendLine("{");
+                    {
+                        AddTabs(3, ref extrasStringBuilder);
+                        extrasStringBuilder.AppendLine("this.fmtid = fmtid;");
+                        AddTabs(3, ref extrasStringBuilder);
+                        extrasStringBuilder.AppendLine("this.pid = pid;");
+                    }
+                    AddTabs(2, ref extrasStringBuilder);
+                    extrasStringBuilder.AppendLine("}");
+                }
+                AddTabs(1, ref extrasStringBuilder);
+                extrasStringBuilder.AppendLine("}");
+            }
+            extrasStringBuilder.AppendLine("}");
+
+
+            File.WriteAllText(Path.Combine(options.OutputDir, "Support.bf"), extrasStringBuilder.ToString());
         }
 
         private static void ProcessAPIFiles(List<APIFile> apiFiles)
@@ -220,168 +263,125 @@ namespace Win32Generator
             if (ProcessedAPIFiles.Contains(apiFile))
                 return;
 
-            //foreach (var dependency in apiFile.Dependencies)
-            //{
-            //    var dependencyFile = APIFiles.FirstOrDefault(a => a.Api == dependency);
-            //    if (dependencyFile != null)
-            //    {
-            //        if (ProcessedAPIFiles.Contains(dependencyFile))
-            //            continue;
-            //        ProcessAPIFile(dependencyFile);
-            //    }
-            //    else
-            //    {
-            //        throw new Exception($"Unknown dependency node '{dependency}'.");
-            //    }
-            //}
+            var constants = apiFile.Content.GetValue("Constants")!.ToObject<JArray>();
+            var types = apiFile.Content.GetValue("Types")!.ToObject<JArray>();
+            var functions = apiFile.Content.GetValue("Functions")!.ToObject<JArray>();
+            var unicodeAliases = apiFile.Content.GetValue("UnicodeAliases")!.ToObject<JArray>();
 
+            var typesBuilder = new TypesBuilder();
+            var constantsContent = new StringBuilder();
+            var functionsContent = new StringBuilder();
+
+            HashSet<string> structOrUnionReferencedApis = new HashSet<string>();
+
+            _ProcessTypes(types, null, typesBuilder, 0, apiFile.Api, ref structOrUnionReferencedApis);
+            _ProcessConstants(constants, ref constantsContent, 0);
+            _ProcessFunctions(functions, unicodeAliases, ref functionsContent, 0);
+
+            var outputContent = new StringBuilder();
+
+            if (apiFile.Dependencies.Count > 0)
             {
-                var constants = apiFile.Content.GetValue("Constants")!.ToObject<JArray>();
-                var types = apiFile.Content.GetValue("Types")!.ToObject<JArray>();
-                var functions = apiFile.Content.GetValue("Functions")!.ToObject<JArray>();
-                var unicodeAliases = apiFile.Content.GetValue("UnicodeAliases")!.ToObject<JArray>();
-
-                var typesBuilder = new TypesBuilder();
-                var constantsContent = new StringBuilder();
-                var functionsContent = new StringBuilder();
-                var unicodeAliasesContent = new StringBuilder();
-
-                HashSet<string> structOrUnionReferencedApis = new HashSet<string>();
-
-                _ProcessTypes(types, null, typesBuilder, 0, apiFile.Api, ref structOrUnionReferencedApis);
-                _ProcessConstants(constants, ref constantsContent, 0);
-                _ProcessFunctions(functions, unicodeAliases, ref functionsContent, 0);
-                _ProcessUnicodeAliases(functions, unicodeAliases, ref unicodeAliasesContent, 0);
-
-                var outputContent = new StringBuilder();
-
-                if (apiFile.Dependencies.Count > 0)
+                foreach (var dedepndencyApi in apiFile.Dependencies)
                 {
-                    foreach (var dedepndencyApi in apiFile.Dependencies)
-                    {
-                        outputContent.AppendLine($"using {RootNamespace}.{dedepndencyApi};");
-                    }
+                    outputContent.AppendLine($"using {RootNamespace}.{dedepndencyApi};");
                 }
+            }
 
-                outputContent.AppendLine($"using System;");
-                foreach (var referencedApi in structOrUnionReferencedApis)
-                {
-                    outputContent.AppendLine($"using {referencedApi};");
-                }
-                outputContent.AppendLine($"");
+            outputContent.AppendLine($"using System;");
+            foreach (var referencedApi in structOrUnionReferencedApis)
+            {
+                outputContent.AppendLine($"using {referencedApi};");
+            }
+            outputContent.AppendLine($"");
 
-                var fileName = Path.GetFileName(apiFile.InputPath);
-                var @namespace = $"{RootNamespace}.{apiFile.Api}";
+            var fileName = Path.GetFileName(apiFile.InputPath);
+            var @namespace = $"{RootNamespace}.{apiFile.Api}";
 
-                outputContent.AppendLine($"namespace {@namespace};");
+            outputContent.AppendLine($"namespace {@namespace};");
 
-                // Write out constants
-                if (constantsContent.Length > 0)
-                {
-                    outputContent.AppendLine("#region Constants");
-                    outputContent.AppendLine("public static");
-                    outputContent.AppendLine("{");
-
-                    outputContent.Append(constantsContent.ToString());
-
-                    outputContent.AppendLine("}");
-                    outputContent.AppendLine("#endregion");
-                }
-                outputContent.AppendLine();
-
-                // native typedefs
-
-                outputContent.AppendLine("#region TypeDefs");
-                outputContent.Append(typesBuilder.NativeTypedefs);
-                outputContent.AppendLine("#endregion");
-                outputContent.AppendLine();
-
-                // enums
-                outputContent.AppendLine("#region Enums");
-                outputContent.Append(typesBuilder.Enums);
-                outputContent.AppendLine("#endregion");
-                outputContent.AppendLine();
-
-                // function pointers
-                outputContent.AppendLine("#region Function Pointers");
-                //outputContent.AppendLine("public static");
-                //outputContent.AppendLine("{");
-                outputContent.Append(typesBuilder.FunctionPointers);
-                //outputContent.AppendLine("}");
-                outputContent.AppendLine("#endregion");
-                outputContent.AppendLine();
-
-                // structs and unions
-                outputContent.AppendLine("#region Structs");
-                outputContent.Append(typesBuilder.StructsOrUnions);
-                outputContent.AppendLine("#endregion");
-                outputContent.AppendLine();
-
-                // com class ids
-                outputContent.AppendLine("#region COM Class IDs");
+            // Write out constants
+            if (constantsContent.Length > 0)
+            {
+                outputContent.AppendLine("#region Constants");
                 outputContent.AppendLine("public static");
                 outputContent.AppendLine("{");
-                outputContent.Append(typesBuilder.ComClassIDs);
+
+                outputContent.Append(constantsContent.ToString());
+
+                outputContent.AppendLine("}");
+                outputContent.AppendLine("#endregion");
+            }
+            outputContent.AppendLine();
+
+            // native typedefs
+
+            outputContent.AppendLine("#region TypeDefs");
+            outputContent.Append(typesBuilder.NativeTypedefs);
+            outputContent.AppendLine("#endregion");
+            outputContent.AppendLine();
+
+            // enums
+            outputContent.AppendLine("#region Enums");
+            outputContent.Append(typesBuilder.Enums);
+            outputContent.AppendLine("#endregion");
+            outputContent.AppendLine();
+
+            // function pointers
+            outputContent.AppendLine("#region Function Pointers");
+            //outputContent.AppendLine("public static");
+            //outputContent.AppendLine("{");
+            outputContent.Append(typesBuilder.FunctionPointers);
+            //outputContent.AppendLine("}");
+            outputContent.AppendLine("#endregion");
+            outputContent.AppendLine();
+
+            // structs and unions
+            outputContent.AppendLine("#region Structs");
+            outputContent.Append(typesBuilder.StructsOrUnions);
+            outputContent.AppendLine("#endregion");
+            outputContent.AppendLine();
+
+            // com class ids
+            outputContent.AppendLine("#region COM Class IDs");
+            outputContent.AppendLine("public static");
+            outputContent.AppendLine("{");
+            outputContent.Append(typesBuilder.ComClassIDs);
+            outputContent.AppendLine("}");
+            outputContent.AppendLine("#endregion");
+            outputContent.AppendLine();
+
+            // com
+            outputContent.AppendLine("#region COM Types");
+            outputContent.Append(typesBuilder.Com);
+            outputContent.AppendLine("#endregion");
+            outputContent.AppendLine();
+
+
+            // Frite out functions
+            if (functionsContent.Length > 0)
+            {
+                outputContent.AppendLine("#region Functions");
+
+                outputContent.AppendLine("public static");
+                outputContent.AppendLine("{");
+                outputContent.Append(functionsContent.ToString());
                 outputContent.AppendLine("}");
                 outputContent.AppendLine("#endregion");
                 outputContent.AppendLine();
-
-                // com
-                outputContent.AppendLine("#region COM Types");
-                outputContent.Append(typesBuilder.Com);
-                outputContent.AppendLine("#endregion");
-                outputContent.AppendLine();
-
-
-                // Frite out functions
-                if (functionsContent.Length > 0)
-                {
-                    outputContent.AppendLine("#region Functions");
-
-                    outputContent.AppendLine("public static");
-                    outputContent.AppendLine("{");
-                    outputContent.Append(functionsContent.ToString());
-                    outputContent.AppendLine("}");
-                    outputContent.AppendLine("#endregion");
-                    outputContent.AppendLine();
-                }
-
-                // Write out unicode aliases
-                if (unicodeAliasesContent.Length > 0)
-                {
-                    outputContent.AppendLine("#region Aliases");
-                    outputContent.Append(unicodeAliasesContent.ToString());
-                    outputContent.AppendLine("#endregion");
-                    outputContent.AppendLine();
-                }
-
-                if (!Directory.Exists(apiFile.OutputPath))
-                    Directory.CreateDirectory(apiFile.OutputPath);
-
-                var outputFilePath = Path.Join(apiFile.OutputPath, apiFile.Name + ".bf");
-
-                File.WriteAllText(outputFilePath, outputContent.ToString());
-
-                //Console.WriteLine($"Generated '{outputFilePath}' from '{apiFile.InputPath}'.");
             }
 
+            if (!Directory.Exists(apiFile.OutputPath))
+                Directory.CreateDirectory(apiFile.OutputPath);
+
+            var outputFilePath = Path.Join(apiFile.OutputPath, apiFile.Name + ".bf");
+
+            File.WriteAllText(outputFilePath, outputContent.ToString());
+
+            //Console.WriteLine($"Generated '{outputFilePath}' from '{apiFile.InputPath}'.");
 
             ProcessedAPIFiles.Add(apiFile);
             apiFile.Content = null;
-        }
-
-
-        private static void _ProcessUnicodeAliases(JArray functions, JArray unicodeAliases, ref StringBuilder unicodeAliasesContent, int indentLevel)
-        {
-            if (unicodeAliases.Count == 0)
-                return;
-
-            foreach (var unicodeAlias in unicodeAliases)
-            {
-
-            }
-
-            int x = 1;
         }
 
         private static void _ProcessFunctions(JArray functions, JArray unicodeAliases, ref StringBuilder outputContent, int indentLevel)
@@ -422,7 +422,6 @@ namespace Win32Generator
                 {
                     AddTabs(indentLevel + 1, ref outputContent);
                     outputContent.AppendLine($"public static {func.ReturnType} {unicodeAlias}({func.GetParamsString()}) => {func.Name}({func.GetParamsNames()});");
-                    int y = 0;
                 }
 
                 outputContent.AppendLine();
@@ -448,11 +447,6 @@ namespace Win32Generator
                 var value = constantObject!["Value"]!.ToString();
                 var valueType = constantObject!["ValueType"]!.ToString();
 
-                if (typeName == "float" || typeName == "Single")
-                {
-                    int x = 1;
-                }
-
                 if (valueType == "PropertyKey")
                 {
                     var valueObject = constantObject!["Value"]!.ToObject<JObject>();
@@ -477,26 +471,6 @@ namespace Win32Generator
 
                     outputContent.AppendLine($"public const {GetType(typeName)} {name} = .({FormatGuid(guid)}, {pid});");
                     outputContent.AppendLine();
-
-                    //outputContent.Append($"public static {GetType(typeName)} {name} = .(){{");
-                    //outputContent.AppendLine();
-                    //foreach (var fieldValue in valueObject!)
-                    //{
-                    //    AddTabs(indentLevel + 2, ref outputContent);
-                    //    var fvk = fieldValue.Key;
-                    //    if (fieldValue.Key == "Fmtid")
-                    //    {
-                    //        fvk = "fmtid"; // for some reason, json file has lower case
-                    //        outputContent.AppendLine($"{fvk} = {FormatGuid(fieldValue!.Value!.ToString())},");
-                    //    }
-                    //    else
-                    //    {
-                    //        fvk = "pid";// for some reason, json file has lower case
-                    //        outputContent.AppendLine($"{fvk} = {fieldValue!.Value!.ToString()},");
-                    //    }
-                    //}
-                    //AddTabs(indentLevel + 1, ref outputContent);
-                    //outputContent.AppendLine("};");
                 }
                 else if (typeKind == "Native" || typeName == "HRESULT")
                 {
@@ -720,16 +694,28 @@ namespace Win32Generator
                     {
                         var famUnionMembers = __ProcessStructOrUnion(nestedType.ToObject<JObject>(), structOrInion, ref membersWriter, indentLevel + 1, api, out bool _, ref referencedApis);
 
-                        if (famUnionMembers.Count> 0)
+                        if (famUnionMembers.Count > 0)
                         {
                             attributes.Add($"FlexibleArray({string.Join(", ", famUnionMembers.Select(f => $"\"{f}\"").ToList())})");
                         }
-                        
+
                         membersWriter.AppendLine();
                         processedNestedTypes.Add(nestedType["Name"].ToString());
                     }
                 }
-                foreach (var field in fields!)
+
+                bool allFieldsAreFams = true;
+                foreach (var field in fields)
+                {
+                    var fieldType = field["Type"]!.ToObject<JObject>();
+                    var fieldTypeInfo = GetTypeInfo(fieldType);
+                    if (!fieldTypeInfo.type.EndsWith("[ANYSIZE_ARRAY]"))
+                    {
+                        allFieldsAreFams = false;
+                    }
+                }
+
+                foreach (var field in fields)
                 {
                     var fieldName = field["Name"]!.ToString();
                     var fieldType = field["Type"]!.ToObject<JObject>();
@@ -750,7 +736,7 @@ namespace Win32Generator
                     var finalFieldName = ReplaceNameIfReservedWord(fieldName);
                     string fieldVisibility = "public";
 
-                    if (fieldTypeInfo.kind == "Array" && fieldTypeInfo.type.EndsWith("[0]"))
+                    if (fieldTypeInfo.kind == "Array" && fieldTypeInfo.type.EndsWith("[ANYSIZE_ARRAY]"))
                     {
                         //AddTabs(indentLevel + 1, ref membersWriter);
                         //membersWriter.AppendLine("[Warn(\"Consider accessing this structure with System.Interop.FlexibleArray<>\")]");
@@ -760,12 +746,20 @@ namespace Win32Generator
                         {
                             attributes.Add($"FlexibleArray(\"{finalFieldName}\")");
                             fieldVisibility = "private";
+                            finalFieldName += "_impl";
                         }
                         else
                         {
-                            returnFamUnionMembers.Add(finalFieldName);
+                            if (allFieldsAreFams)
+                            {
+                                returnFamUnionMembers.Add(finalFieldName);
+                                finalFieldName += "_impl";
+                            }
+                            else
+                            {
+                                fieldTypeInfo.type = fieldTypeInfo.type.Replace("[ANYSIZE_ARRAY]", "[ANYSIZE_ARRAY]");
+                            }
                         }
-                        finalFieldName += "_impl";
                     }
                     AddTabs(indentLevel + 1, ref membersWriter);
                     if (fieldTypeInfo.type.Contains("_Anonymous_") && fieldName.Contains("Anonymous"))
@@ -910,54 +904,6 @@ namespace Win32Generator
                     finalMethodName = $"COM_{finalMethodName}";
                 }
 
-                //List<string> paramStrings = new List<string>();
-                //List<string> paramNames = new List<string>();
-
-                //if (@params != null)
-                //{
-                //    foreach (var @param in @params)
-                //    {
-                //        var paramName = @param["Name"].ToString();
-
-                //        var paramType = GetTypeFromJObject(@param["Type"].ToObject<JObject>());
-
-                //        if (paramType.Contains("IImageList"))
-                //        {
-                //            var paramTypeApi = string.Empty;
-                //            var typeChild = param["Type"]["Child"]?.ToObject<JObject>();
-                //            if (typeChild != null)
-                //            {
-                //                paramTypeApi = typeChild["Api"].ToString();
-                //            }
-                //            else
-                //            {
-                //                paramTypeApi = param["Type"]?["Api"]?.ToString();
-                //            }
-                //            if (!string.IsNullOrEmpty(paramTypeApi))
-                //            {
-                //                paramType = $"{paramTypeApi}.{paramType}";
-                //            }
-                //        }
-                //        var attrs = @param["Attrs"].ToObject<JArray>();
-                //        string paramString = string.Empty;
-                //        List<String> attrStrings = new List<String>();
-                //        foreach (var attr in attrs)
-                //        {
-                //            var attrString = attr.ToString();
-                //            attrStrings.Add(attrString);
-                //        }
-
-                //        if (attrStrings.Count == 1 && attrStrings.Contains("Out"))
-                //        {
-                //            //paramString += $"out ";
-                //        }
-                //        paramString += $"{paramType} {ReplaceNameIfReservedWord(paramName)}";
-
-                //        paramStrings.Add(paramString);
-                //        paramNames.Add(ReplaceNameIfReservedWord(paramName));
-                //    }
-                //}
-
                 AddTabs(indentLevel + 2, ref outputContent);
                 string fullParamsString = string.Join(", ", func.GetParamsString());
                 //outputContent.AppendLine($"protected new function [CallingConvention(.Stdcall)] {func.ReturnType}(/*{name}*/SelfOuter* self{(func.HasParams ? ", " : "")}{fullParamsString}) {finalMethodName};");
@@ -1004,38 +950,6 @@ namespace Win32Generator
 
             var func = GenerateFunction(comObject);
 
-            //var returnType = GetTypeFromJObject(comObject["ReturnType"].ToObject<JObject>());
-
-            //var @params = comObject["Params"].ToObject<JArray>();
-
-            //List<string> paramStrings = new List<string>();
-
-            //if (@params != null)
-            //{
-            //    foreach (var @param in @params)
-            //    {
-            //        var paramName = @param["Name"].ToString();
-            //        var paramType = GetTypeFromJObject(@param["Type"].ToObject<JObject>());
-            //        var attrs = @param["Attrs"].ToObject<JArray>();
-            //        string paramString = string.Empty;
-            //        List<String> attrStrings = new List<String>();
-            //        foreach (var attr in attrs)
-            //        {
-            //            var attrString = attr.ToString();
-            //            attrStrings.Add(attrString);
-            //        }
-
-            //        //if (attrStrings.Count == 1 && attrStrings.Contains("Out"))
-            //        //{
-            //        //    paramString += $"out ";
-            //        //}
-            //        paramString += $"{paramType} {ReplaceNameIfReservedWord(paramName)}";
-
-            //        paramStrings.Add(paramString);
-            //    }
-            //}
-
-            //AddTabs(indentLevel + 1, ref outputContent);
             outputContent.AppendLine($"public function {func.ReturnType} {func.Name}({func.GetParamsString()});");
         }
 
@@ -1178,11 +1092,6 @@ namespace Win32Generator
 
             var typeInfo = GetTypeInfo(typeObject);
 
-            if (typeInfo.type.Contains("Guid"))
-            {
-                int x = 1;
-            }
-
             if (typeInfo.kind == "PointerTo" && typeInfo.childKind == "Native")
             {
 
@@ -1237,12 +1146,12 @@ namespace Win32Generator
                 var childObject = typeObject["Child"].ToObject<JObject>();
                 var type = GetTypeInfo(childObject);
 
-                int size = 0;
+                string size = "ANYSIZE_ARRAY";
 
                 var shape = typeObject["Shape"].ToObject<JObject>();
                 if (shape != null)
                 {
-                    size = int.Parse(shape["Size"].ToString());
+                    size = shape["Size"].ToString();
                 }
 
                 return ($"{type.type}[{size}]", typeKind, childKind);
