@@ -776,6 +776,11 @@ namespace Win32Generator
                     throw new Exception();
                 }
 
+                if (fieldTypeInfo.kind == "Array" && fieldTypeInfo.type.EndsWith("[0]"))
+                {
+                    //AddTabs(indentLevel + 1, ref outputContent);
+                    //outputContent.AppendLine("[Error(\"Consider accessing this structure with System.Interop.FlexibleArray<>\")]");
+                }
                 AddTabs(indentLevel + 1, ref outputContent);
                 if (fieldTypeInfo.type.Contains("_Anonymous_") && fieldName.Contains("Anonymous"))
                     outputContent.AppendLine($"public using {fieldTypeInfo.type} {ReplaceNameIfReservedWord(fieldName)};");
@@ -1139,7 +1144,7 @@ namespace Win32Generator
                 {
                     parameter.CallName = parameter.Name;
 
-                   // if (parameter.Attributes.Contains("Const") && parameter.Attributes.Contains("In"))
+                    // if (parameter.Attributes.Contains("Const") && parameter.Attributes.Contains("In"))
                     {
                         //parameter.TypeName = $"ref {parameter.TypeName}";
                         //parameter.TypeName.TrimEnd('*');
@@ -1312,7 +1317,7 @@ namespace Win32Generator
                 var childObject = typeObject["Child"].ToObject<JObject>();
                 var type = GetTypeInfo(childObject);
 
-                int size = 1;
+                int size = 0;
 
                 var shape = typeObject["Shape"].ToObject<JObject>();
                 if (shape != null)
@@ -1320,8 +1325,10 @@ namespace Win32Generator
                     size = int.Parse(shape["Size"].ToString());
                 }
 
-
-                return ($"{type.type}[{size}]", typeKind, childKind);
+                if (size == 0)
+                    return ($"{type.type}[]", typeKind, childKind);
+                else
+                    return ($"{type.type}[{size}]", typeKind, childKind);
             }
             else if (typeKind == "LPArray")
             {
