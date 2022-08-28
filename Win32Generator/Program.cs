@@ -246,8 +246,9 @@ namespace Win32Generator
                 var functionsContent = new StringBuilder();
                 var unicodeAliasesContent = new StringBuilder();
 
+                HashSet<string> structOrUnionReferencedApis = new HashSet<string>();
 
-                _ProcessTypes(types, null, typesBuilder, 0, apiFile.Api);
+                _ProcessTypes(types, null, typesBuilder, 0, apiFile.Api, ref structOrUnionReferencedApis);
                 _ProcessConstants(constants, ref constantsContent, 0);
                 _ProcessFunctions(functions, unicodeAliases, ref functionsContent, 0);
                 _ProcessUnicodeAliases(functions, unicodeAliases, ref unicodeAliasesContent, 0);
@@ -263,6 +264,10 @@ namespace Win32Generator
                 }
 
                 outputContent.AppendLine($"using System;");
+                foreach (var referencedApi in structOrUnionReferencedApis)
+                {
+                    outputContent.AppendLine($"using {referencedApi};");
+                }
                 outputContent.AppendLine($"");
 
                 var fileName = Path.GetFileName(apiFile.InputPath);
@@ -400,39 +405,6 @@ namespace Win32Generator
                 var importDll = functionObject["DllImport"].ToString();
 
                 var func = GenerateFunction(functionObject);
-
-                //var returnType = GetTypeFromJObject(functionObject["ReturnType"].ToObject<JObject>());
-
-                //var @params = functionObject["Params"].ToObject<JArray>();
-
-                //List<string> paramStrings = new List<string>();
-                //List<string> paramNames = new List<string>();
-
-                //if (@params != null)
-                //{
-                //    foreach (var @param in @params)
-                //    {
-                //        var paramName = @param["Name"].ToString();
-                //        var paramType = GetTypeFromJObject(@param["Type"].ToObject<JObject>());
-                //        var attrs = @param["Attrs"].ToObject<JArray>();
-                //        string paramString = string.Empty;
-                //        List<String> attrStrings = new List<String>();
-                //        foreach (var attr in attrs)
-                //        {
-                //            var attrString = attr.ToString();
-                //            attrStrings.Add(attrString);
-                //        }
-
-                //        //if (attrStrings.Count == 1 && attrStrings.Contains("Out"))
-                //        // {
-                //        //     paramString += $"out ";
-                //        // }
-                //        paramString += $"{paramType} {ReplaceNameIfReservedWord(paramName)}";
-
-                //        paramStrings.Add(paramString);
-                //        paramNames.Add(ReplaceNameIfReservedWord(paramName));
-                //    }
-                //}
 
                 if (architectures!.Count > 0)
                 {
@@ -581,7 +553,7 @@ namespace Win32Generator
             public StringBuilder ComClassIDs = new StringBuilder();
         }
 
-        private static void _ProcessTypes(JArray types, JObject parentType, TypesBuilder builder, int indentLevel, string api)
+        private static void _ProcessTypes(JArray types, JObject parentType, TypesBuilder builder, int indentLevel, string api, ref HashSet<string> referencedApis)
         {
             foreach (var type in types!)
             {
@@ -602,13 +574,13 @@ namespace Win32Generator
                 else if (typeKind == "Struct")
                 {
                     var structObject = type.ToObject<JObject>();
-                    __ProcessStructOrUnion(structObject, parentType, ref tempBuilder, indentLevel, api, out bool isAnonymousStruct);
+                    __ProcessStructOrUnion(structObject, parentType, ref tempBuilder, indentLevel, api, out bool isAnonymousStruct, ref referencedApis);
                     current = builder.StructsOrUnions;
                 }
                 else if (typeKind == "Union")
                 {
                     var unionObject = type.ToObject<JObject>();
-                    __ProcessStructOrUnion(unionObject, parentType, ref tempBuilder, indentLevel, api, out bool isAnonymousUnion);
+                    __ProcessStructOrUnion(unionObject, parentType, ref tempBuilder, indentLevel, api, out bool isAnonymousUnion, ref referencedApis);
                     current = builder.StructsOrUnions;
                 }
                 else if (typeKind == "Com")
@@ -723,7 +695,7 @@ namespace Win32Generator
             outputContent.AppendLine("}");
         }
 
-        private static void __ProcessStructOrUnion(JObject structOrInion, JObject parentStructType, ref StringBuilder outputContent, int indentLevel, string api, out bool isAnonymous)
+        private static void __ProcessStructOrUnion(JObject structOrInion, JObject parentStructType, ref StringBuilder outputContent, int indentLevel, string api, out bool isAnonymous, ref HashSet<string> referencedApis)
         {
             var kind = structOrInion["Kind"]!.ToString();
             var name = structOrInion["Name"]!.ToString();
@@ -734,11 +706,83 @@ namespace Win32Generator
             isAnonymous = name.Contains("_Anonymous") && (name.Contains("__Struct") || name.Contains("__Union"));
             bool isStruct = kind == "Struct";
 
+            StringBuilder membersWriter = new StringBuilder();
+            List<string> attributes = new List<string>();
+
+            // process members first so we can determine attributes
+            {
+                var processedNestedTypes = new HashSet<string>();
+                if (nestedTypes != null)
+                {
+                    foreach (var nestedType in nestedTypes)
+                    {
+                        __ProcessStructOrUnion(nestedType.ToObject<JObject>(), structOrInion, ref membersWriter, indentLevel + 1, api, out bool _, ref referencedApis);
+                        membersWriter.AppendLine();
+                        processedNestedTypes.Add(nestedType["Name"].ToString());
+                    }
+                }
+                foreach (var field in fields!)
+                {
+                    var fieldName = field["Name"]!.ToString();
+                    var fieldType = field["Type"]!.ToObject<JObject>();
+                    var fieldTypeKind = fieldType!["Kind"]!.ToString();
+
+                    if (name.Contains("D3D12_TEXTURE_COPY_LOCATION"))
+                    {
+                        int x = 8;
+                    }
+
+                    var fieldTypeInfo = GetTypeInfo(fieldType);
+
+                    if (string.IsNullOrEmpty(fieldTypeInfo.type))
+                    {
+                        throw new Exception();
+                    }
+
+                    var finalFieldName = ReplaceNameIfReservedWord(fieldName);
+                    string fieldVisibility = "public";
+
+                    if (fieldTypeInfo.kind == "Array" && fieldTypeInfo.type.EndsWith("[0]"))
+                    {
+                        //AddTabs(indentLevel + 1, ref membersWriter);
+                        //membersWriter.AppendLine("[Warn(\"Consider accessing this structure with System.Interop.FlexibleArray<>\")]");
+                        attributes.Add($"FlexibleArray(\"{finalFieldName}\")");
+                        finalFieldName += "_impl";
+                        fieldVisibility = "private";
+                        referencedApis.Add("System.Interop");
+                    }
+                    AddTabs(indentLevel + 1, ref membersWriter);
+                    if (fieldTypeInfo.type.Contains("_Anonymous_") && fieldName.Contains("Anonymous"))
+                        membersWriter.AppendLine($"{fieldVisibility} using {fieldTypeInfo.type} {finalFieldName};");
+                    else
+                        membersWriter.AppendLine($"{fieldVisibility} {fieldTypeInfo.type} {finalFieldName};");
+                }
+
+                if (nestedTypes != null)
+                {
+                    foreach (var nestedType in nestedTypes)
+                    {
+                        var nestedTypeName = nestedType["Name"]!.ToString();
+                        if (!processedNestedTypes.Contains(nestedTypeName))
+                        {
+                            //throw new Exception($"Nested Type '{nestedTypeName}' was not processed.");
+                            Console.WriteLine($"Nested Type '{nestedTypeName}' was not processed.");
+                        }
+                    }
+                    //_ProcessTypes(nestedTypes, parentStructType, ref outputContent, indentLevel + 1, ref usings);
+                }
+            }
+
+
             AddTabs(indentLevel, ref outputContent);
             outputContent.Append(isStruct ? "[CRepr" : "[CRepr, Union");
             if (packingSize != "0")
             {
                 outputContent.Append($", Packed({packingSize})");
+            }
+            foreach (var attribute in attributes)
+            {
+                outputContent.Append($", {attribute}");
             }
             outputContent.Append("]");
             outputContent.AppendLine();
@@ -747,150 +791,8 @@ namespace Win32Generator
             AddTabs(indentLevel, ref outputContent);
             outputContent.AppendLine("{");
 
-            int bitfieldCount = 0;
-            var processedNestedTypes = new HashSet<string>();
-            if (nestedTypes != null)
-            {
-                foreach (var nestedType in nestedTypes)
-                {
-                    __ProcessStructOrUnion(nestedType.ToObject<JObject>(), structOrInion, ref outputContent, indentLevel + 1, api, out bool _);
-                    outputContent.AppendLine();
-                    processedNestedTypes.Add(nestedType["Name"].ToString());
-                }
-            }
-            foreach (var field in fields!)
-            {
-                var fieldName = field["Name"]!.ToString();
-                var fieldType = field["Type"]!.ToObject<JObject>();
-                var fieldTypeKind = fieldType!["Kind"]!.ToString();
+            outputContent.Append(membersWriter);
 
-                if (name.Contains("D3D12_TEXTURE_COPY_LOCATION"))
-                {
-                    int x = 8;
-                }
-
-                var fieldTypeInfo = GetTypeInfo(fieldType);
-
-                if (string.IsNullOrEmpty(fieldTypeInfo.type))
-                {
-                    throw new Exception();
-                }
-
-                if (fieldTypeInfo.kind == "Array" && fieldTypeInfo.type.EndsWith("[0]"))
-                {
-                    //AddTabs(indentLevel + 1, ref outputContent);
-                    //outputContent.AppendLine("[Error(\"Consider accessing this structure with System.Interop.FlexibleArray<>\")]");
-                }
-                AddTabs(indentLevel + 1, ref outputContent);
-                if (fieldTypeInfo.type.Contains("_Anonymous_") && fieldName.Contains("Anonymous"))
-                    outputContent.AppendLine($"public using {fieldTypeInfo.type} {ReplaceNameIfReservedWord(fieldName)};");
-                else
-                    outputContent.AppendLine($"public {fieldTypeInfo.type} {ReplaceNameIfReservedWord(fieldName)};");
-
-                //
-                //if (fieldTypeKind == "Native")
-                //{
-                //    var fieldTypeName = fieldType!["Name"]!.ToString();
-                //    AddTabs(indentLevel + 1, ref outputContent);
-                //    outputContent.AppendLine($"public {GetNativeType(fieldTypeName) ?? throw new Exception($"Field Type '{fieldTypeName}' not mapped to a native type yet.")} {ReplaceNameIfReservedWord(fieldName)};");
-                //}
-                //else if (fieldTypeKind == "NativeTypedef")
-                //{
-                //    var fieldTypeName = fieldType!["Name"]!.ToString();
-                //    AddTabs(indentLevel + 1, ref outputContent);
-                //    outputContent.AppendLine($"public {GetNativeTypedef(fieldTypeName) ?? throw new Exception($"Field Type '{fieldTypeName}' not mapped to a native type yet.")} {ReplaceNameIfReservedWord(fieldName)};");
-                //}
-                //else if (fieldTypeKind == "ApiRef")
-                //{
-                //    var fieldTypeName = fieldType!["Name"]!.ToString();
-
-
-                //    AddTabs(indentLevel + 1, ref outputContent);
-
-                //    if (fieldTypeName.Contains("_Anonymous_"))
-                //        outputContent.AppendLine($"public using {fieldTypeName} {ReplaceNameIfReservedWord(fieldName)};");
-                //    else
-                //        outputContent.AppendLine($"public {fieldTypeName} {ReplaceNameIfReservedWord(fieldName)};");
-                //}
-                //else if (fieldTypeKind == "Array")
-                //{
-                //    var childKind = fieldType["Child"]["Kind"]!.ToString();
-
-                //    string fieldTypeName = null;
-                //    string childFieldType = null;
-                //    int arraySize = 1;
-
-                //    if (childKind == "ApiRef")
-                //    {
-                //        fieldTypeName = fieldType["Child"]["Name"].ToString();
-                //        childFieldType = fieldTypeName;
-                //    }
-                //    else if (childKind == "NativeTypedef")
-                //    {
-                //        fieldTypeName = fieldType["Child"]["Name"]!.ToString();
-                //        childFieldType = GetNativeTypedef(fieldTypeName);
-                //    }
-                //    else if (childKind == "Native")
-                //    {
-                //        fieldTypeName = fieldType["Child"]["Name"]!.ToString();
-                //        childFieldType = GetNativeType(fieldTypeName);
-                //    }
-                //    else if (childKind == "PointerTo")
-                //    {
-                //        fieldTypeName = fieldType["Child"]["Child"]["Name"]!.ToString();
-                //        var innerKind = fieldType["Child"]["Child"]["Kind"]!.ToString();
-
-                //        if (innerKind == "Native")
-                //        {
-                //            childFieldType = GetNativeType(fieldTypeName);
-                //        }
-                //        else if (innerKind == "ApiRef")
-                //        {
-                //            childFieldType = fieldTypeName;
-                //        }
-                //        else
-                //        {
-                //            throw new Exception();
-                //        }
-
-                //    }
-                //    else
-                //    {
-                //        Console.WriteLine(childKind);
-                //        throw new Exception();
-                //    }
-
-                //    var shape = fieldType["Shape"].ToObject<JObject>();
-                //    if (shape != null)
-                //        arraySize = int.Parse(fieldType["Shape"]["Size"].ToString());
-
-                //    if (String.IsNullOrEmpty(childFieldType))
-                //    {
-                //        throw new Exception();
-                //    }
-
-                //    AddTabs(indentLevel + 1, ref outputContent);
-                //    outputContent.AppendLine($"public {childFieldType}[{arraySize}] {ReplaceNameIfReservedWord(fieldName)};");
-                //}
-                //else
-                //{
-                //    Console.WriteLine($"Struct Field Kind '{fieldTypeKind} - {t}' not handled yet -.");
-                //}
-            }
-
-            if (nestedTypes != null)
-            {
-                foreach (var nestedType in nestedTypes)
-                {
-                    var nestedTypeName = nestedType["Name"]!.ToString();
-                    if (!processedNestedTypes.Contains(nestedTypeName))
-                    {
-                        //throw new Exception($"Nested Type '{nestedTypeName}' was not processed.");
-                        Console.WriteLine($"Nested Type '{nestedTypeName}' was not processed.");
-                    }
-                }
-                //_ProcessTypes(nestedTypes, parentStructType, ref outputContent, indentLevel + 1, ref usings);
-            }
             AddTabs(indentLevel, ref outputContent);
             outputContent.AppendLine("}");
 
@@ -1325,10 +1227,7 @@ namespace Win32Generator
                     size = int.Parse(shape["Size"].ToString());
                 }
 
-                if (size == 0)
-                    return ($"{type.type}[]", typeKind, childKind);
-                else
-                    return ($"{type.type}[{size}]", typeKind, childKind);
+                return ($"{type.type}[{size}]", typeKind, childKind);
             }
             else if (typeKind == "LPArray")
             {
