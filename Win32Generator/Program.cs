@@ -699,37 +699,31 @@ namespace Win32Generator
                     {
                         var famUnionMembers = __ProcessStructOrUnion(nestedType.ToObject<JObject>(), structOrInion, ref membersWriter, indentLevel + 1, api, out bool _, ref referencedApis);
 
-                        if (famUnionMembers.Count > 0)
-                        {
-                            attributes.Add($"FlexibleArray({string.Join(", ", famUnionMembers.Select(f => $"\"{f}\"").ToList())})");
-                        }
+                        //if (famUnionMembers.Count > 0)
+                        //{
+                        //    attributes.Add($"FlexibleArray({string.Join(", ", famUnionMembers.Select(f => $"\"{f}\"").ToList())})");
+                        //}
 
-                        membersWriter.AppendLine();
                         processedNestedTypes.Add(nestedType["Name"].ToString());
                     }
                 }
 
-                bool allFieldsAreFams = true;
-                foreach (var field in fields)
-                {
-                    var fieldType = field["Type"]!.ToObject<JObject>();
-                    var fieldTypeInfo = GetTypeInfo(fieldType);
-                    if (!fieldTypeInfo.type.EndsWith("[ANYSIZE_ARRAY]"))
-                    {
-                        allFieldsAreFams = false;
-                    }
-                }
+                //bool allFieldsAreFams = true;
+                //foreach (var field in fields)
+                //{
+                //    var fieldType = field["Type"]!.ToObject<JObject>();
+                //    var fieldTypeInfo = GetTypeInfo(fieldType);
+                //    if (!fieldTypeInfo.type.EndsWith("[ANYSIZE_ARRAY]"))
+                //    {
+                //        allFieldsAreFams = false;
+                //    }
+                //}
 
                 foreach (var field in fields)
                 {
-                    var fieldName = field["Name"]!.ToString();
-                    var fieldType = field["Type"]!.ToObject<JObject>();
-                    var fieldTypeKind = fieldType!["Kind"]!.ToString();
-
-                    if (name.Contains("D3D12_TEXTURE_COPY_LOCATION"))
-                    {
-                        int x = 8;
-                    }
+                    var fieldName = field["Name"].ToString();
+                    var fieldType = field["Type"].ToObject<JObject>();
+                    var fieldTypeKind = fieldType["Kind"]!.ToString();
 
                     var fieldTypeInfo = GetTypeInfo(fieldType);
 
@@ -746,24 +740,30 @@ namespace Win32Generator
                         //AddTabs(indentLevel + 1, ref membersWriter);
                         //membersWriter.AppendLine("[Warn(\"Consider accessing this structure with System.Interop.FlexibleArray<>\")]");
 
-                        referencedApis.Add("System.Interop");
+                        var propertyFieldName = finalFieldName;
+                        fieldVisibility = "private";
+                        finalFieldName += "_impl";
+
+                        AddTabs(indentLevel + 1, ref membersWriter);
+                        membersWriter.AppendLine($"public {fieldTypeInfo.type.Replace("[ANYSIZE_ARRAY]", "*")} {propertyFieldName} mut => &{finalFieldName};");
+                        //referencedApis.Add("System.Interop");
                         if (isStruct)
                         {
-                            attributes.Add($"FlexibleArray(\"{finalFieldName}\")");
-                            fieldVisibility = "private";
-                            finalFieldName += "_impl";
+                            //attributes.Add($"FlexibleArray(\"{finalFieldName}\")");
+                            //fieldVisibility = "private";
+                            //finalFieldName += "_impl";
                         }
                         else
                         {
-                            if (allFieldsAreFams)
-                            {
+                            //if (allFieldsAreFams)
+                            //{
                                 returnFamUnionMembers.Add(finalFieldName);
-                                finalFieldName += "_impl";
-                            }
-                            else
-                            {
-                                fieldTypeInfo.type = fieldTypeInfo.type.Replace("[ANYSIZE_ARRAY]", "[ANYSIZE_ARRAY]");
-                            }
+                                //finalFieldName += "_impl";
+                            //}
+                            //else
+                            //{
+                            //    fieldTypeInfo.type = fieldTypeInfo.type.Replace("[ANYSIZE_ARRAY]", "[ANYSIZE_ARRAY]");
+                            //}
                         }
                     }
                     AddTabs(indentLevel + 1, ref membersWriter);
