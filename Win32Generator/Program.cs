@@ -198,22 +198,21 @@ namespace Win32Generator
 
             ProcessAPIFiles(APIFiles);
 
-            var extrasStringBuilder =new StringBuilder();
+            var extrasStringBuilder = new StringBuilder();
 
             extrasStringBuilder.AppendLine($"namespace {RootNamespace}");
             extrasStringBuilder.AppendLine("{");
-            extrasStringBuilder.AppendLine();
             AddTabs(1, ref extrasStringBuilder);
             extrasStringBuilder.AppendLine($"public static");
             AddTabs(1, ref extrasStringBuilder);
             extrasStringBuilder.AppendLine("{");
             {
                 AddTabs(2, ref extrasStringBuilder);
-                extrasStringBuilder.AppendLine("public const ANYSIZE_ARRAY = 1;");
+                extrasStringBuilder.AppendLine("public const uint ANYSIZE_ARRAY = 1;");
             }
-
             AddTabs(1, ref extrasStringBuilder);
             extrasStringBuilder.AppendLine("}");
+
             extrasStringBuilder.AppendLine("}");
             extrasStringBuilder.AppendLine();
             extrasStringBuilder.AppendLine("namespace Win32.UI.Shell.PropertiesSystem");
@@ -225,7 +224,7 @@ namespace Win32Generator
                 extrasStringBuilder.AppendLine("{");
                 {
                     AddTabs(2, ref extrasStringBuilder);
-                    extrasStringBuilder.AppendLine("public this(Guid fmtid, uint32 pid)");
+                    extrasStringBuilder.AppendLine("public this(System.Guid fmtid, uint32 pid)");
 
                     AddTabs(2, ref extrasStringBuilder);
                     extrasStringBuilder.AppendLine("{");
@@ -303,6 +302,7 @@ namespace Win32Generator
             // Write out constants
             if (constantsContent.Length > 0)
             {
+                outputContent.AppendLine();
                 outputContent.AppendLine("#region Constants");
                 outputContent.AppendLine("public static");
                 outputContent.AppendLine("{");
@@ -312,55 +312,71 @@ namespace Win32Generator
                 outputContent.AppendLine("}");
                 outputContent.AppendLine("#endregion");
             }
-            outputContent.AppendLine();
 
             // native typedefs
 
-            outputContent.AppendLine("#region TypeDefs");
-            outputContent.Append(typesBuilder.NativeTypedefs);
-            outputContent.AppendLine("#endregion");
-            outputContent.AppendLine();
+            if (typesBuilder.NativeTypedefs.Length > 0)
+            {
+                outputContent.AppendLine();
+                outputContent.AppendLine("#region TypeDefs");
+                outputContent.Append(typesBuilder.NativeTypedefs);
+                outputContent.AppendLine("#endregion");
+                outputContent.AppendLine();
+            }
 
             // enums
-            outputContent.AppendLine("#region Enums");
-            outputContent.Append(typesBuilder.Enums);
-            outputContent.AppendLine("#endregion");
-            outputContent.AppendLine();
+            if (typesBuilder.Enums.Length > 0)
+            {
+                outputContent.AppendLine();
+                outputContent.AppendLine("#region Enums");
+                outputContent.Append(typesBuilder.Enums);
+                outputContent.AppendLine("#endregion");
+                outputContent.AppendLine();
+            }
 
             // function pointers
-            outputContent.AppendLine("#region Function Pointers");
-            //outputContent.AppendLine("public static");
-            //outputContent.AppendLine("{");
-            outputContent.Append(typesBuilder.FunctionPointers);
-            //outputContent.AppendLine("}");
-            outputContent.AppendLine("#endregion");
-            outputContent.AppendLine();
+            if (typesBuilder.FunctionPointers.Length > 0)
+            {
+                outputContent.AppendLine("#region Function Pointers");
+                outputContent.Append(typesBuilder.FunctionPointers);
+                outputContent.AppendLine("#endregion");
+            }
 
             // structs and unions
-            outputContent.AppendLine("#region Structs");
-            outputContent.Append(typesBuilder.StructsOrUnions);
-            outputContent.AppendLine("#endregion");
-            outputContent.AppendLine();
+            if (typesBuilder.StructsOrUnions.Length > 0)
+            {
+                outputContent.AppendLine();
+                outputContent.AppendLine("#region Structs");
+                outputContent.Append(typesBuilder.StructsOrUnions);
+                outputContent.AppendLine("#endregion");
+            }
 
             // com class ids
-            outputContent.AppendLine("#region COM Class IDs");
-            outputContent.AppendLine("public static");
-            outputContent.AppendLine("{");
-            outputContent.Append(typesBuilder.ComClassIDs);
-            outputContent.AppendLine("}");
-            outputContent.AppendLine("#endregion");
-            outputContent.AppendLine();
+            if (typesBuilder.ComClassIDs.Length > 0)
+            {
+                outputContent.AppendLine();
+                outputContent.AppendLine("#region COM Class IDs");
+                outputContent.AppendLine("public static");
+                outputContent.AppendLine("{");
+                outputContent.Append(typesBuilder.ComClassIDs);
+                outputContent.AppendLine("}");
+                outputContent.AppendLine("#endregion");
+            }
 
             // com
-            outputContent.AppendLine("#region COM Types");
-            outputContent.Append(typesBuilder.Com);
-            outputContent.AppendLine("#endregion");
-            outputContent.AppendLine();
+            if (typesBuilder.Com.Length > 0)
+            {
+                outputContent.AppendLine();
+                outputContent.AppendLine("#region COM Types");
+                outputContent.Append(typesBuilder.Com);
+                outputContent.AppendLine("#endregion");
+            }
 
 
             // Frite out functions
             if (functionsContent.Length > 0)
             {
+                outputContent.AppendLine();
                 outputContent.AppendLine("#region Functions");
 
                 outputContent.AppendLine("public static");
@@ -368,7 +384,6 @@ namespace Win32Generator
                 outputContent.Append(functionsContent.ToString());
                 outputContent.AppendLine("}");
                 outputContent.AppendLine("#endregion");
-                outputContent.AppendLine();
             }
 
             if (!Directory.Exists(apiFile.OutputPath))
@@ -406,7 +421,7 @@ namespace Win32Generator
 
                 var func = GenerateFunction(functionObject);
 
-                if (architectures!.Count > 0)
+                if (architectures.Count > 0)
                 {
                     var arcs = architectures.ToList<JToken>().Select(a => GetNativeArch(a.ToString()));
                     outputContent.AppendLine($"#if {string.Join(" || ", arcs)}");
@@ -452,7 +467,6 @@ namespace Win32Generator
                     var valueObject = constantObject!["Value"]!.ToObject<JObject>();
 
                     AddTabs(indentLevel + 1, ref outputContent);
-                    outputContent.Append($"");
 
                     string guid = String.Empty;
                     string pid = String.Empty;
@@ -470,28 +484,19 @@ namespace Win32Generator
                     }
 
                     outputContent.AppendLine($"public const {GetType(typeName)} {name} = .({FormatGuid(guid)}, {pid});");
-                    outputContent.AppendLine();
                 }
                 else if (typeKind == "Native" || typeName == "HRESULT")
                 {
                     AddTabs(indentLevel + 1, ref outputContent);
                     outputContent.AppendLine($"public const {GetType(typeName)} {name} = {GetValue(typeName, value)};");
-                    outputContent.AppendLine($"");
                 }
                 else if (typeKind == "ApiRef")
                 {
-                    if (typeApi != null)
-                    {
-                        var parts = typeApi.Split('.');
-                        parts = parts.Take(parts.Length - 1).ToArray();
-                    }
-
                     try
                     {
                         var valueObject = constantObject!["Value"]!.ToObject<JObject>();
 
                         AddTabs(indentLevel + 1, ref outputContent);
-                        outputContent.Append($"");
 
                         outputContent.Append($"public static {GetType(typeName)} {name} = .(){{");
                         outputContent.AppendLine();
