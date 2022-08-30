@@ -20,6 +20,8 @@ namespace Win32Generator
 
     class Program
     {
+        public static HashSet<string> NativeTypeDefsAndEnums = new HashSet<string>();
+
         private const string RootNamespace = "Win32";
 
         private static Dictionary<string, string> NativeTypes = new Dictionary<string, string>()
@@ -191,6 +193,15 @@ namespace Win32Generator
 
                     if (referencedApi != apiFile.Api)
                         apiFile.Dependencies.Add(referencedApi);
+                }
+
+                // Gather types and native typedefs and enums, Used to exclude them when modiflying COM signatures where return types need to be an out param
+                foreach (JObject type in apiFile.Content["Types"].ToObject<JArray>())
+                {
+                    if (type["Kind"]?.ToString() == "Enum" || type["Kind"]?.ToString() == "NativeTypedef")
+                    {
+                        NativeTypeDefsAndEnums.Add(type["Name"].ToString());
+                    }
                 }
             }
 
@@ -430,13 +441,13 @@ namespace Win32Generator
                 AddTabs(indentLevel + 1, ref outputContent);
                 outputContent.AppendLine($"[Import(\"{importDll}.lib\"), CLink, CallingConvention(.Stdcall)]");
                 AddTabs(indentLevel + 1, ref outputContent);
-                outputContent.AppendLine($"public static extern {func.ReturnType} {func.Name}({func.GetParamsString()});");
+                outputContent.AppendLine($"public static extern {func.ReturnType.TypeName} {func.Name}({func.GetParamsString()});");
 
                 var unicodeAlias = unicodeAliasNames.FirstOrDefault(ua => ua.Equals(func.Name.TrimEnd('A')));
                 if (unicodeAlias != null)
                 {
                     AddTabs(indentLevel + 1, ref outputContent);
-                    outputContent.AppendLine($"public static {func.ReturnType} {unicodeAlias}({func.GetParamsString()}) => {func.Name}({func.GetParamsNames()});");
+                    outputContent.AppendLine($"public static {func.ReturnType.TypeName} {unicodeAlias}({func.GetParamsString()}) => {func.Name}({func.GetParamsNames()});");
                 }
 
                 outputContent.AppendLine();
@@ -757,8 +768,8 @@ namespace Win32Generator
                         {
                             //if (allFieldsAreFams)
                             //{
-                                returnFamUnionMembers.Add(finalFieldName);
-                                //finalFieldName += "_impl";
+                            returnFamUnionMembers.Add(finalFieldName);
+                            //finalFieldName += "_impl";
                             //}
                             //else
                             //{
@@ -909,14 +920,35 @@ namespace Win32Generator
                     finalMethodName = $"COM_{finalMethodName}";
                 }
 
+                bool returnIsOutputParam = false;
+                if (func.ReturnType.Kind == "ApiRef" && !NativeTypeDefsAndEnums.Contains(func.ReturnType.TypeName))
+                {
+                    if(func.ReturnType.TargetKind != "Com")
+                    {
+                        returnIsOutputParam = true;
+                    }
+                    Console.WriteLine("{0} - {1}::{2} - {3}", name, func.Name, func.ReturnType.TypeName, func.ReturnType.TargetKind);
+                }
+
                 AddTabs(indentLevel + 2, ref outputContent);
                 string fullParamsString = string.Join(", ", func.GetParamsString());
-                //outputContent.AppendLine($"protected new function [CallingConvention(.Stdcall)] {func.ReturnType}(/*{name}*/SelfOuter* self{(func.HasParams ? ", " : "")}{fullParamsString}) {finalMethodName};");
-                outputContent.AppendLine($"protected new function [CallingConvention(.Stdcall)] {func.ReturnType}(SelfOuter* self{(func.HasParams ? ", " : "")}{fullParamsString}) {finalMethodName};");
 
-                var prettyMethod = $"public {func.ReturnType} {func.Name}({fullParamsString}) mut => VT.[Friend]{finalMethodName}(&this{(func.HasParams ? ", " : "")}{func.GetParamsNames()});";
+                if (returnIsOutputParam)
+                {
+                    outputContent.AppendLine($"protected new function [CallingConvention(.Stdcall)] void(SelfOuter* self, out {func.ReturnType.TypeName} @return{(func.HasParams ? ", " : "")}{fullParamsString}) {finalMethodName};");
 
-                prettyMethods.Add(prettyMethod);
+                    var prettyMethod = $"public {func.ReturnType.TypeName} {func.Name}({fullParamsString}) mut => VT.[Friend]{finalMethodName}(&this, ..?{(func.HasParams ? ", " : "")}{func.GetParamsNames()});";
+
+                    prettyMethods.Add(prettyMethod);
+                }
+                else
+                {
+                    outputContent.AppendLine($"protected new function [CallingConvention(.Stdcall)] {func.ReturnType.TypeName}(SelfOuter* self{(func.HasParams ? ", " : "")}{fullParamsString}) {finalMethodName};");
+
+                    var prettyMethod = $"public {func.ReturnType.TypeName} {func.Name}({fullParamsString}) mut => VT.[Friend]{finalMethodName}(&this{(func.HasParams ? ", " : "")}{func.GetParamsNames()});";
+
+                    prettyMethods.Add(prettyMethod);
+                }
 
                 usedNames.Add(finalMethodName);
             }
@@ -955,7 +987,7 @@ namespace Win32Generator
 
             var func = GenerateFunction(comObject);
 
-            outputContent.AppendLine($"public function {func.ReturnType} {func.Name}({func.GetParamsString()});");
+            outputContent.AppendLine($"public function {func.ReturnType.TypeName} {func.Name}({func.GetParamsString()});");
         }
 
         private class FunctionParameter
@@ -966,10 +998,17 @@ namespace Win32Generator
             public List<String> Attributes { get; } = new List<String>();
         }
 
+        private class FunctionReturnType
+        {
+            public string TypeName { get; set; }
+            public string Kind { get; set; }
+            public string TargetKind { get; set; }
+        }
+
         private class Function
         {
             public string Name { get; set; }
-            public string ReturnType { get; set; }
+            public FunctionReturnType ReturnType { get; set; }
             public List<FunctionParameter> Parameters { get; set; } = new();
 
             private bool baked = false;
@@ -1035,7 +1074,12 @@ namespace Win32Generator
             Function function = new Function()
             {
                 Name = name,
-                ReturnType = returnType.type,
+                ReturnType = new FunctionReturnType
+                {
+                    TypeName = returnType.type,
+                    Kind = returnType.kind,
+                    TargetKind = returnType.targetKind
+                },
             };
 
             if (@params != null)
@@ -1043,39 +1087,15 @@ namespace Win32Generator
                 foreach (var @param in @params)
                 {
                     var paramName = @param["Name"].ToString();
-                    var paramType = GetParamTypeInfo(@param["Type"].ToObject<JObject>());
-
-                    if (paramType.type.Contains("IImageList"))
-                    {
-                        var paramTypeApi = string.Empty;
-                        var typeChild = param["Type"]["Child"]?.ToObject<JObject>();
-                        if (typeChild != null)
-                        {
-                            paramTypeApi = typeChild["Api"].ToString();
-                        }
-                        else
-                        {
-                            paramTypeApi = param["Type"]?["Api"]?.ToString();
-                        }
-                        if (!string.IsNullOrEmpty(paramTypeApi))
-                        {
-                            paramType.type = $"{paramTypeApi}.{paramType.type}";
-                        }
-                    }
+                    var paramType = GetParamTypeInfo(@param.ToObject<JObject>());
 
                     var functionParameter = new FunctionParameter()
                     {
                         Name = ReplaceNameIfReservedWord(paramName),
-                        TypeName = paramType.type
+                        TypeName = paramType.type,
                     };
 
-                    paramType.attributes.AddRange(paramType.attributes);
-
-                    var attrs = @param["Attrs"].ToObject<JArray>();
-                    foreach (var attr in attrs)
-                    {
-                        functionParameter.Attributes.Add(attr.ToString());
-                    }
+                    functionParameter.Attributes.AddRange(paramType.attributes);
 
                     function.Parameters.Add(functionParameter);
                 }
@@ -1084,15 +1104,17 @@ namespace Win32Generator
             return function;
         }
 
-        private static (string type, List<string> attributes) GetParamTypeInfo(JObject typeObject)
+        private static (string type, List<string> attributes) GetParamTypeInfo(JObject paramObject)
         {
             //var typeKind = typeObject["Kind"].ToString();
             var attrs = new List<String>();
 
-            var typeObjectAttrs = typeObject["Attrs"];
-            if (typeObjectAttrs != null)
+            var typeObject = paramObject["Type"].ToObject<JObject>();
+
+            var paramObjectAttrs = paramObject["Attrs"];
+            if (paramObjectAttrs != null)
             {
-                attrs = typeObjectAttrs.ToObject<JArray>().Select(a => a.ToString()).ToList();
+                attrs = paramObjectAttrs.ToObject<JArray>().Select(a => a.ToString()).ToList();
             }
 
             var typeInfo = GetTypeInfo(typeObject);
@@ -1100,20 +1122,50 @@ namespace Win32Generator
             if (typeInfo.kind == "PointerTo" && typeInfo.childKind == "Native")
             {
 
-                if ((attrs.Count == 2 && attrs.Contains("In") && attrs.Contains("Const")) || typeInfo.type == "Guid*")
+                if ((attrs.Count == 2 && attrs.Contains("In") && attrs.Contains("Const")) && typeInfo.type != "void*")
                 {
                     typeInfo.type = typeInfo.type.TrimEnd('*');
-                    typeInfo.type = $"ref {typeInfo.type}";
+                    typeInfo.type = $"in {typeInfo.type}";
                 }
+                //else if (typeInfo.type == "Guid*")
+                //{
+                //    typeInfo.type = typeInfo.type.TrimEnd('*');
+                //    typeInfo.type = $"in {typeInfo.type}";
+                //}
             }
 
             return (typeInfo.type, attrs);
         }
 
-        private static (string type, string kind, string childKind) GetTypeInfo(JObject typeObject)
+        private static (string type, string kind, string childKind, string targetKind) GetTypeInfo(JObject typeObject)
         {
             var typeKind = typeObject["Kind"].ToString();
             var typeChild = typeObject["Child"];
+            string name = string.Empty;
+            if (typeObject["Name"] != null)
+                name = typeObject["Name"].ToString();
+
+            if (name.Contains("IImageList"))
+            {
+                var paramTypeApi = string.Empty;
+                var typeChildObject = typeObject["Child"]?.ToObject<JObject>();
+                if (typeChildObject != null)
+                {
+                    paramTypeApi = typeChildObject["Api"].ToString();
+                }
+                else
+                {
+                    paramTypeApi = typeObject["Api"]?.ToString();
+                }
+                if (!string.IsNullOrEmpty(paramTypeApi))
+                {
+                    name = $"{paramTypeApi}.{name}";
+                }
+            }
+
+            var targetKind = string.Empty;
+            if (typeObject["TargetKind"] != null)
+                targetKind = typeObject["TargetKind"].ToString();
 
             string childKind = string.Empty;
             if (typeChild != null)
@@ -1123,18 +1175,17 @@ namespace Win32Generator
 
             if (typeKind == "Native")
             {
-                return (GetNativeType(typeObject["Name"].ToString()), typeKind, childKind);
+                return (GetNativeType(name), typeKind, childKind, targetKind);
             }
             else if (typeKind == "NativeTypedef")
             {
-                return (GetNativeTypedef(typeObject["Name"].ToString()), typeKind, childKind);
+                return (GetNativeTypedef(name), typeKind, childKind, targetKind);
             }
             else if (typeKind == "ApiRef")
             {
-                var targetKind = typeObject["TargetKind"]?.ToString();
                 if (targetKind == "Com")
-                    return ($"{typeObject["Name"].ToString()}*", typeKind, childKind);
-                return (typeObject["Name"].ToString(), typeKind, childKind);
+                    return ($"{name}*", typeKind, childKind, targetKind);
+                return (name, typeKind, childKind, targetKind);
             }
             else if (typeKind == "PointerTo")
             {
@@ -1144,7 +1195,7 @@ namespace Win32Generator
                 var type = GetTypeInfo(childObject);
                 //if (type.type == "Guid" || type.type == "PWSTR")
                 //    return (type.type, typeKind);
-                return ($"{type.type}*", typeKind, childKind);
+                return ($"{type.type}*", typeKind, childKind, targetKind);
             }
             else if (typeKind == "Array")
             {
@@ -1159,17 +1210,17 @@ namespace Win32Generator
                     size = shape["Size"].ToString();
                 }
 
-                return ($"{type.type}[{size}]", typeKind, childKind);
+                return ($"{type.type}[{size}]", typeKind, childKind, targetKind);
             }
             else if (typeKind == "LPArray")
             {
                 var childObject = typeObject["Child"].ToObject<JObject>();
                 var type = GetTypeInfo(childObject);
-                return ($"{type.type}*", typeKind, childKind);
+                return ($"{type.type}*", typeKind, childKind, targetKind);
             }
             else if (typeKind == "MissingClrType")
             {
-                return ("void*", typeKind, childKind);
+                return ("void*", typeKind, childKind, targetKind);
             }
             else
             {
