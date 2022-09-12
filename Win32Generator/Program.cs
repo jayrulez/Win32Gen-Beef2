@@ -905,6 +905,11 @@ namespace Win32Generator
             {
                 var methodObject = method.ToObject<JObject>();
 
+                if (name == "ID3D11DeviceContext1" && methodObject["Name"].ToString() == "ClearView")
+                {
+                    int g = 1;
+                }
+
                 var func = GenerateFunction(methodObject);
 
                 //var methodName = methodObject["Name"].ToString();
@@ -935,7 +940,7 @@ namespace Win32Generator
 
                 if (returnIsOutputParam)
                 {
-                    outputContent.AppendLine($"protected new function [CallingConvention(.Stdcall)] void(SelfOuter* self, out {func.ReturnType.TypeName} @return{(func.HasParams ? ", " : "")}{fullParamsString}) {finalMethodName};");
+                    outputContent.AppendLine($"protected new function [CallingConvention(.Stdcall)] {func.ReturnType.TypeName}(SelfOuter* self, out {func.ReturnType.TypeName} @return{(func.HasParams ? ", " : "")}{fullParamsString}) {finalMethodName};");
 
                     var prettyMethod = $"public {func.ReturnType.TypeName} {func.Name}({fullParamsString}) mut => VT.[Friend]{finalMethodName}(&this, ..?{(func.HasParams ? ", " : "")}{func.GetParamsNames()});";
 
@@ -1124,8 +1129,11 @@ namespace Win32Generator
 
                 if ((attrs.Count == 2 && attrs.Contains("In") && attrs.Contains("Const")) && typeInfo.type != "void*")
                 {
-                    typeInfo.type = typeInfo.type.TrimEnd('*');
-                    typeInfo.type = $"in {typeInfo.type}";
+                    if (typeInfo.type == "Guid*")
+                    {
+                        typeInfo.type = typeInfo.type.TrimEnd('*');
+                        typeInfo.type = $"in {typeInfo.type}";
+                    }
                 }
                 //else if (typeInfo.type == "Guid*")
                 //{
@@ -1215,6 +1223,8 @@ namespace Win32Generator
             else if (typeKind == "LPArray")
             {
                 var childObject = typeObject["Child"].ToObject<JObject>();
+                int countConst = typeObject["CountConst"].ToObject<int>();
+                int countParamsIndex = typeObject["CountParamIndex"].ToObject<int>();
                 var type = GetTypeInfo(childObject);
                 return ($"{type.type}*", typeKind, childKind, targetKind);
             }
