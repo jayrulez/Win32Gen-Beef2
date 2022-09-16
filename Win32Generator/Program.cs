@@ -940,7 +940,7 @@ namespace Win32Generator
 
                 if (returnIsOutputParam)
                 {
-                    outputContent.AppendLine($"protected new function [CallingConvention(.Stdcall)] {func.ReturnType.TypeName}(SelfOuter* self, out {func.ReturnType.TypeName} @return{(func.HasParams ? ", " : "")}{fullParamsString}) {finalMethodName};");
+                    outputContent.AppendLine($"protected new function [CallingConvention(.Stdcall)] void(SelfOuter* self, out {func.ReturnType.TypeName} @return{(func.HasParams ? ", " : "")}{fullParamsString}) {finalMethodName};");
 
                     var prettyMethod = $"public {func.ReturnType.TypeName} {func.Name}({fullParamsString}) mut => VT.[Friend]{finalMethodName}(&this, ..?{(func.HasParams ? ", " : "")}{func.GetParamsNames()});";
 
