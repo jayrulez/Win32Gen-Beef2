@@ -220,6 +220,10 @@ namespace Win32Generator
             {
                 AddTabs(2, ref extrasStringBuilder);
                 extrasStringBuilder.AppendLine("public const uint ANYSIZE_ARRAY = 1;");
+                AddTabs(2, ref extrasStringBuilder);
+                extrasStringBuilder.AppendLine("public const uint32 FALSE = 0;");
+                AddTabs(2, ref extrasStringBuilder);
+                extrasStringBuilder.AppendLine("public const uint32 TRUE = 1;");
             }
             AddTabs(1, ref extrasStringBuilder);
             extrasStringBuilder.AppendLine("}");
