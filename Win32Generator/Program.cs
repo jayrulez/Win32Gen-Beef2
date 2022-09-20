@@ -287,7 +287,7 @@ namespace Win32Generator
             			return (HRESULT)(win32Error) <= 0 ? (HRESULT)(win32Error) : (HRESULT)(((win32Error) & 0x0000FFFF) | ((uint32)FACILITY_CODE.FACILITY_WIN32 << 16) | 0x80000000);
             		}
 
-            		public static mixin FOURCC(var ch0, var ch1, var ch2, var ch3)
+            		public static mixin FOURCC(char8 ch0, char8 ch1, char8 ch2, char8 ch3)
             		{
             			((uint32)(uint8)(ch0) | ((uint32)(uint8)(ch1) << 8) | ((uint32)(uint8)(ch2) << 16) | ((uint32)(uint8)(ch3) << 24 ))
             		}
@@ -576,27 +576,27 @@ namespace Win32Generator
                 }
                 else if (typeKind == "ApiRef")
                 {
-                    try
-                    {
-                        var valueObject = constantObject!["Value"]!.ToObject<JObject>();
+                    //try
+                    //{
+                    //    var valueObject = constantObject!["Value"]!.ToObject<JObject>();
 
-                        AddTabs(indentLevel + 1, ref outputContent);
+                    //    AddTabs(indentLevel + 1, ref outputContent);
 
-                        outputContent.Append($"public static {GetType(typeName)} {name} = .(){{");
-                        outputContent.AppendLine();
-                        foreach (var fieldValue in valueObject!)
-                        {
-                            AddTabs(indentLevel + 2, ref outputContent);
-                            outputContent.AppendLine($"{fieldValue.Key} = {fieldValue!.Value!.ToString()},");
-                        }
-                        AddTabs(indentLevel + 1, ref outputContent);
-                        outputContent.AppendLine("};");
-                    }
-                    catch (Exception)
-                    {
+                    //    outputContent.Append($"public static {GetType(typeName)} {name} = .(){{");
+                    //    outputContent.AppendLine();
+                    //    foreach (var fieldValue in valueObject!)
+                    //    {
+                    //        AddTabs(indentLevel + 2, ref outputContent);
+                    //        outputContent.AppendLine($"{fieldValue.Key} = {fieldValue!.Value!.ToString()},");
+                    //    }
+                    //    AddTabs(indentLevel + 1, ref outputContent);
+                    //    outputContent.AppendLine("};");
+                    //}
+                    //catch (Exception)
+                    //{
                         AddTabs(indentLevel + 1, ref outputContent);
                         outputContent.Append($"public const {GetType(typeName)} {name} = {GetValue(typeName, value)};");
-                    }
+                    //}
                     outputContent.AppendLine($"");
                 }
                 else
