@@ -211,51 +211,118 @@ namespace Win32Generator
 
             var extrasStringBuilder = new StringBuilder();
 
-            extrasStringBuilder.AppendLine($"namespace {RootNamespace}");
-            extrasStringBuilder.AppendLine("{");
-            AddTabs(1, ref extrasStringBuilder);
-            extrasStringBuilder.AppendLine($"public static");
-            AddTabs(1, ref extrasStringBuilder);
-            extrasStringBuilder.AppendLine("{");
-            {
-                AddTabs(2, ref extrasStringBuilder);
-                extrasStringBuilder.AppendLine("public const uint ANYSIZE_ARRAY = 1;");
-                AddTabs(2, ref extrasStringBuilder);
-                extrasStringBuilder.AppendLine("public const uint32 FALSE = 0;");
-                AddTabs(2, ref extrasStringBuilder);
-                extrasStringBuilder.AppendLine("public const uint32 TRUE = 1;");
-            }
-            AddTabs(1, ref extrasStringBuilder);
-            extrasStringBuilder.AppendLine("}");
+            //extrasStringBuilder.AppendLine($"namespace {RootNamespace}");
+            //extrasStringBuilder.AppendLine("{");
+            //AddTabs(1, ref extrasStringBuilder);
+            //extrasStringBuilder.AppendLine($"public static");
+            //AddTabs(1, ref extrasStringBuilder);
+            //extrasStringBuilder.AppendLine("{");
+            //{
+            //    AddTabs(2, ref extrasStringBuilder);
+            //    extrasStringBuilder.AppendLine("public const uint ANYSIZE_ARRAY = 1;");
+            //    AddTabs(2, ref extrasStringBuilder);
+            //    extrasStringBuilder.AppendLine("public const uint32 FALSE = 0;");
+            //    AddTabs(2, ref extrasStringBuilder);
+            //    extrasStringBuilder.AppendLine("public const uint32 TRUE = 1;");
+            //}
+            //AddTabs(1, ref extrasStringBuilder);
+            //extrasStringBuilder.AppendLine("}");
 
-            extrasStringBuilder.AppendLine("}");
-            extrasStringBuilder.AppendLine();
-            extrasStringBuilder.AppendLine("namespace Win32.UI.Shell.PropertiesSystem");
-            extrasStringBuilder.AppendLine("{");
-            {
-                AddTabs(1, ref extrasStringBuilder);
-                extrasStringBuilder.AppendLine("extension PROPERTYKEY");
-                AddTabs(1, ref extrasStringBuilder);
-                extrasStringBuilder.AppendLine("{");
-                {
-                    AddTabs(2, ref extrasStringBuilder);
-                    extrasStringBuilder.AppendLine("public this(System.Guid fmtid, uint32 pid)");
 
-                    AddTabs(2, ref extrasStringBuilder);
-                    extrasStringBuilder.AppendLine("{");
-                    {
-                        AddTabs(3, ref extrasStringBuilder);
-                        extrasStringBuilder.AppendLine("this.fmtid = fmtid;");
-                        AddTabs(3, ref extrasStringBuilder);
-                        extrasStringBuilder.AppendLine("this.pid = pid;");
-                    }
-                    AddTabs(2, ref extrasStringBuilder);
-                    extrasStringBuilder.AppendLine("}");
-                }
-                AddTabs(1, ref extrasStringBuilder);
-                extrasStringBuilder.AppendLine("}");
+            //extrasStringBuilder.AppendLine("}");
+            //extrasStringBuilder.AppendLine();
+
+            //extrasStringBuilder.AppendLine("namespace Win32.UI.Shell.PropertiesSystem");
+            //extrasStringBuilder.AppendLine("{");
+            //{
+            //    AddTabs(1, ref extrasStringBuilder);
+            //    extrasStringBuilder.AppendLine("extension PROPERTYKEY");
+            //    AddTabs(1, ref extrasStringBuilder);
+            //    extrasStringBuilder.AppendLine("{");
+            //    {
+            //        AddTabs(2, ref extrasStringBuilder);
+            //        extrasStringBuilder.AppendLine("public this(System.Guid fmtid, uint32 pid)");
+
+            //        AddTabs(2, ref extrasStringBuilder);
+            //        extrasStringBuilder.AppendLine("{");
+            //        {
+            //            AddTabs(3, ref extrasStringBuilder);
+            //            extrasStringBuilder.AppendLine("this.fmtid = fmtid;");
+            //            AddTabs(3, ref extrasStringBuilder);
+            //            extrasStringBuilder.AppendLine("this.pid = pid;");
+            //        }
+            //        AddTabs(2, ref extrasStringBuilder);
+            //        extrasStringBuilder.AppendLine("}");
+            //    }
+            //    AddTabs(1, ref extrasStringBuilder);
+            //    extrasStringBuilder.AppendLine("}");
+            //}
+            //extrasStringBuilder.AppendLine("}");
+
+            var win32Extras = $$"""
+            namespace Win32
+            {
+            	using Win32.Foundation;
+            	using Win32.System.Diagnostics.Debug;
+            	using System;
+
+            	public static
+            	{
+            		public const uint ANYSIZE_ARRAY = 1;
+            		public const uint32 FALSE = 0;
+            		public const uint32 TRUE = 1;
+
+            		public static bool SUCCEEDED(HRESULT hr)
+            		{
+            			return hr >= 0;
+            		}
+
+            		public static bool FAILED(HRESULT hr)
+            		{
+            			return hr < 0;
+            		}
+
+            		public static HRESULT HRESULT_FROM_WIN32(uint64 win32Error)
+            		{
+            			return (HRESULT)(win32Error) <= 0 ? (HRESULT)(win32Error) : (HRESULT)(((win32Error) & 0x0000FFFF) | ((uint32)FACILITY_CODE.FACILITY_WIN32 << 16) | 0x80000000);
+            		}
+
+            		public static mixin FOURCC(var ch0, var ch1, var ch2, var ch3)
+            		{
+            			((uint32)(uint8)(ch0) | ((uint32)(uint8)(ch1) << 8) | ((uint32)(uint8)(ch2) << 16) | ((uint32)(uint8)(ch3) << 24 ))
+            		}
+
+            		[Comptime(ConstEval=true)]
+            		public static uint32 FOURCC(String str)
+            		{
+            			Runtime.Assert(str.Length == 4);
+            			return (uint32)(uint8)(str[0]) | (uint32)(uint8)(str[1]) << 8 | (uint32)(uint8)(str[2]) << 16 | (uint32)(uint8)(str[3]) << 24;
+            		}
+            	}
             }
-            extrasStringBuilder.AppendLine("}");
+
+            namespace Win32.Foundation
+            {
+            	extension WIN32_ERROR
+            	{
+            		public static implicit operator uint64(Self self) => self;
+            	}
+            }
+
+            namespace Win32.UI.Shell.PropertiesSystem
+            {
+            	extension PROPERTYKEY
+            	{
+            		public this(System.Guid fmtid, uint32 pid)
+            		{
+            			this.fmtid = fmtid;
+            			this.pid = pid;
+            		}
+            	}
+            }
+            """;
+
+            extrasStringBuilder.Append(win32Extras);
 
 
             File.WriteAllText(Path.Combine(options.OutputDir, "Support.bf"), extrasStringBuilder.ToString());
@@ -443,6 +510,8 @@ namespace Win32Generator
                 }
 
                 AddTabs(indentLevel + 1, ref outputContent);
+                if (importDll.Equals("XAudio2_8"))
+                    importDll = "XAudio2";
                 outputContent.AppendLine($"[Import(\"{importDll}.lib\"), CLink, CallingConvention(.Stdcall)]");
                 AddTabs(indentLevel + 1, ref outputContent);
                 outputContent.AppendLine($"public static extern {func.ReturnType.TypeName} {func.Name}({func.GetParamsString()});");
