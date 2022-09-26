@@ -2289,6 +2289,22 @@
 		,"FreeFunc":"DnsReleaseContextHandle"
 	}
 	,{
+		"Name":"IP6_ADDRESS"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Union"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"IP6Qword","Type":{"Kind":"Array","Shape":{"Size":2},"Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":[]}
+			,{"Name":"IP6Dword","Type":{"Kind":"Array","Shape":{"Size":4},"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			,{"Name":"IP6Word","Type":{"Kind":"Array","Shape":{"Size":8},"Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":[]}
+			,{"Name":"IP6Byte","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
 		"Name":"IP4_ARRAY"
 		,"Architectures":[]
 		,"Platform":null
@@ -2304,14 +2320,13 @@
 	}
 	,{
 		"Name":"IP6_ADDRESS"
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"IP6Qword","Type":{"Kind":"Array","Shape":{"Size":2},"Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":[]}
-			,{"Name":"IP6Dword","Type":{"Kind":"Array","Shape":{"Size":4},"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			{"Name":"IP6Dword","Type":{"Kind":"Array","Shape":{"Size":4},"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
 			,{"Name":"IP6Word","Type":{"Kind":"Array","Shape":{"Size":8},"Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":[]}
 			,{"Name":"IP6Byte","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 		]
@@ -3313,7 +3328,7 @@
 		]
 	}
 	,{
-		"Name":"_DnsRecordOptW"
+		"Name":"DNS_RECORD_OPTW"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -4092,7 +4107,7 @@
 		,"Params":[
 			{"Name":"Status","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pQueryContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
-			,{"Name":"pDnsRecord","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DNS_RECORDA","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pDnsRecord","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DNS_RECORDW","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]}},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -4246,28 +4261,13 @@
 		,"NestedTypes":[
 		]
 	}
-	,{
-		"Name":"IP6_ADDRESS"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Union"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"IP6Dword","Type":{"Kind":"Array","Shape":{"Size":4},"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
-			,{"Name":"IP6Word","Type":{"Kind":"Array","Shape":{"Size":8},"Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":[]}
-			,{"Name":"IP6Byte","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
 ]
 
 ,"Functions":[
 	{
 		"Name":"DnsQueryConfig"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4285,7 +4285,7 @@
 	,{
 		"Name":"DnsRecordCopyEx"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DNS_RECORDA","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4300,7 +4300,7 @@
 	,{
 		"Name":"DnsRecordSetCopyEx"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DNS_RECORDA","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4315,7 +4315,7 @@
 	,{
 		"Name":"DnsRecordCompare"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4329,7 +4329,7 @@
 	,{
 		"Name":"DnsRecordSetCompare"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4345,7 +4345,7 @@
 	,{
 		"Name":"DnsRecordSetDetach"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DNS_RECORDA","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4358,7 +4358,7 @@
 	,{
 		"Name":"DnsFree"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4372,7 +4372,7 @@
 	,{
 		"Name":"DnsQuery_A"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4390,7 +4390,7 @@
 	,{
 		"Name":"DnsQuery_UTF8"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4408,7 +4408,7 @@
 	,{
 		"Name":"DnsQuery_W"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4426,7 +4426,7 @@
 	,{
 		"Name":"DnsQueryEx"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4441,7 +4441,7 @@
 	,{
 		"Name":"DnsCancelQuery"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4454,7 +4454,7 @@
 	,{
 		"Name":"DnsFreeCustomServers"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4468,7 +4468,7 @@
 	,{
 		"Name":"DnsGetApplicationSettings"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4483,7 +4483,7 @@
 	,{
 		"Name":"DnsSetApplicationSettings"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4498,7 +4498,7 @@
 	,{
 		"Name":"DnsAcquireContextHandle_W"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4513,7 +4513,7 @@
 	,{
 		"Name":"DnsAcquireContextHandle_A"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4528,7 +4528,7 @@
 	,{
 		"Name":"DnsReleaseContextHandle"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4541,7 +4541,7 @@
 	,{
 		"Name":"DnsModifyRecordsInSet_W"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4559,7 +4559,7 @@
 	,{
 		"Name":"DnsModifyRecordsInSet_A"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4577,7 +4577,7 @@
 	,{
 		"Name":"DnsModifyRecordsInSet_UTF8"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4595,7 +4595,7 @@
 	,{
 		"Name":"DnsReplaceRecordSetW"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4612,7 +4612,7 @@
 	,{
 		"Name":"DnsReplaceRecordSetA"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4629,7 +4629,7 @@
 	,{
 		"Name":"DnsReplaceRecordSetUTF8"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4646,7 +4646,7 @@
 	,{
 		"Name":"DnsValidateName_W"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4660,7 +4660,7 @@
 	,{
 		"Name":"DnsValidateName_A"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4674,7 +4674,7 @@
 	,{
 		"Name":"DnsValidateName_UTF8"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4688,7 +4688,7 @@
 	,{
 		"Name":"DnsNameCompare_A"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4702,7 +4702,7 @@
 	,{
 		"Name":"DnsNameCompare_W"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4716,7 +4716,7 @@
 	,{
 		"Name":"DnsWriteQuestionToBuffer_W"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4734,7 +4734,7 @@
 	,{
 		"Name":"DnsWriteQuestionToBuffer_UTF8"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4752,7 +4752,7 @@
 	,{
 		"Name":"DnsExtractRecordsFromMessage_W"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4767,7 +4767,7 @@
 	,{
 		"Name":"DnsExtractRecordsFromMessage_UTF8"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4782,7 +4782,7 @@
 	,{
 		"Name":"DnsGetProxyInformation"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4799,7 +4799,7 @@
 	,{
 		"Name":"DnsFreeProxyName"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4812,7 +4812,7 @@
 	,{
 		"Name":"DnsConnectionGetProxyInfoForHostUrl"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4829,7 +4829,7 @@
 	,{
 		"Name":"DnsConnectionFreeProxyInfoEx"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4842,7 +4842,7 @@
 	,{
 		"Name":"DnsConnectionGetProxyInfo"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4857,7 +4857,7 @@
 	,{
 		"Name":"DnsConnectionFreeProxyInfo"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4870,7 +4870,7 @@
 	,{
 		"Name":"DnsConnectionSetProxyInfo"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4885,7 +4885,7 @@
 	,{
 		"Name":"DnsConnectionDeleteProxyInfo"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4899,7 +4899,7 @@
 	,{
 		"Name":"DnsConnectionGetProxyList"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4913,7 +4913,7 @@
 	,{
 		"Name":"DnsConnectionFreeProxyList"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4926,7 +4926,7 @@
 	,{
 		"Name":"DnsConnectionGetNameList"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4939,7 +4939,7 @@
 	,{
 		"Name":"DnsConnectionFreeNameList"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4952,7 +4952,7 @@
 	,{
 		"Name":"DnsConnectionUpdateIfIndexTable"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4965,7 +4965,7 @@
 	,{
 		"Name":"DnsConnectionSetPolicyEntries"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4979,7 +4979,7 @@
 	,{
 		"Name":"DnsConnectionDeletePolicyEntries"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4992,7 +4992,7 @@
 	,{
 		"Name":"DnsServiceConstructInstance"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DNS_SERVICE_INSTANCE","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5014,7 +5014,7 @@
 	,{
 		"Name":"DnsServiceCopyInstance"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DNS_SERVICE_INSTANCE","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5027,7 +5027,7 @@
 	,{
 		"Name":"DnsServiceFreeInstance"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5040,7 +5040,7 @@
 	,{
 		"Name":"DnsServiceBrowse"
 		,"SetLastError":true
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5054,7 +5054,7 @@
 	,{
 		"Name":"DnsServiceBrowseCancel"
 		,"SetLastError":true
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5067,7 +5067,7 @@
 	,{
 		"Name":"DnsServiceResolve"
 		,"SetLastError":true
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5081,7 +5081,7 @@
 	,{
 		"Name":"DnsServiceResolveCancel"
 		,"SetLastError":true
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5094,7 +5094,7 @@
 	,{
 		"Name":"DnsServiceRegister"
 		,"SetLastError":true
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5108,7 +5108,7 @@
 	,{
 		"Name":"DnsServiceDeRegister"
 		,"SetLastError":true
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5122,7 +5122,7 @@
 	,{
 		"Name":"DnsServiceRegisterCancel"
 		,"SetLastError":false
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5135,7 +5135,7 @@
 	,{
 		"Name":"DnsStartMulticastQuery"
 		,"SetLastError":true
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5149,7 +5149,7 @@
 	,{
 		"Name":"DnsStopMulticastQuery"
 		,"SetLastError":true
-		,"DllImport":"DNSAPI"
+		,"DllImport":"DNSAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5176,7 +5176,6 @@
 	,"DNS_TSIG_DATA"
 	,"DNS_WINSR_DATA"
 	,"DNS_RECORD"
-	,"_DnsRecordOpt"
 	,"DnsQuery_"
 	,"DnsAcquireContextHandle_"
 	,"DnsModifyRecordsInSet_"

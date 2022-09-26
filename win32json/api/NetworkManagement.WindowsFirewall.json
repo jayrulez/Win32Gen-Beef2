@@ -202,9 +202,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"bstrRemoteHost","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"lExternalPort","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
@@ -488,9 +486,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"lExternalPort","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"bstrProtocol","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
@@ -1762,9 +1758,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"SHARINGCONNECTION_ENUM_FLAGS","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]},"Attrs":["In"]}
 					,{"Name":"ppColl","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"INetSharingPortMappingCollection","TargetKind":"Com","Api":"NetworkManagement.WindowsFirewall","Parents":[]}},"Attrs":["Out","RetVal"]}
@@ -1946,9 +1940,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"SHARINGCONNECTION_ENUM_FLAGS","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]},"Attrs":["In"]}
 					,{"Name":"ppColl","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"INetSharingPublicConnectionCollection","TargetKind":"Com","Api":"NetworkManagement.WindowsFirewall","Parents":[]}},"Attrs":["Out","RetVal"]}
@@ -1961,9 +1953,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"SHARINGCONNECTION_ENUM_FLAGS","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]},"Attrs":["In"]}
 					,{"Name":"ppColl","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"INetSharingPrivateConnectionCollection","TargetKind":"Com","Api":"NetworkManagement.WindowsFirewall","Parents":[]}},"Attrs":["Out","RetVal"]}
@@ -1976,9 +1966,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"pNetConnection","Type":{"Kind":"ApiRef","Name":"INetConnection","TargetKind":"Com","Api":"NetworkManagement.WindowsFirewall","Parents":[]},"Attrs":["In"]}
 					,{"Name":"ppNetSharingConfiguration","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"INetSharingConfiguration","TargetKind":"Com","Api":"NetworkManagement.WindowsFirewall","Parents":[]}},"Attrs":["Out","RetVal"]}
@@ -2005,9 +1993,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"pNetConnection","Type":{"Kind":"ApiRef","Name":"INetConnection","TargetKind":"Com","Api":"NetworkManagement.WindowsFirewall","Parents":[]},"Attrs":["In"]}
 					,{"Name":"ppProps","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"INetConnectionProps","TargetKind":"Com","Api":"NetworkManagement.WindowsFirewall","Parents":[]}},"Attrs":["Out","RetVal"]}
@@ -2428,7 +2414,7 @@
 		]
 	}
 	,{
-		"Name":"_tag_FW_DYNAMIC_KEYWORD_ORIGIN_TYPE"
+		"Name":"FW_DYNAMIC_KEYWORD_ORIGIN_TYPE"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
@@ -2442,7 +2428,7 @@
 		,"IntegerBase":"Int32"
 	}
 	,{
-		"Name":"_tag_FW_DYNAMIC_KEYWORD_ADDRESS0"
+		"Name":"FW_DYNAMIC_KEYWORD_ADDRESS0"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -2458,46 +2444,46 @@
 		]
 	}
 	,{
-		"Name":"_tag_FW_DYNAMIC_KEYWORD_ADDRESS_DATA0"
+		"Name":"FW_DYNAMIC_KEYWORD_ADDRESS_DATA0"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"dynamicKeywordAddress","Type":{"Kind":"ApiRef","Name":"_tag_FW_DYNAMIC_KEYWORD_ADDRESS0","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]},"Attrs":[]}
-			,{"Name":"next","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_tag_FW_DYNAMIC_KEYWORD_ADDRESS_DATA0","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]}},"Attrs":[]}
+			{"Name":"dynamicKeywordAddress","Type":{"Kind":"ApiRef","Name":"FW_DYNAMIC_KEYWORD_ADDRESS0","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]},"Attrs":[]}
+			,{"Name":"next","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FW_DYNAMIC_KEYWORD_ADDRESS_DATA0","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]}},"Attrs":[]}
 			,{"Name":"schemaVersion","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"originType","Type":{"Kind":"ApiRef","Name":"_tag_FW_DYNAMIC_KEYWORD_ORIGIN_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]},"Attrs":[]}
+			,{"Name":"originType","Type":{"Kind":"ApiRef","Name":"FW_DYNAMIC_KEYWORD_ORIGIN_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
 	}
 	,{
-		"Name":"_tag_FW_DYNAMIC_KEYWORD_ADDRESS_FLAGS"
+		"Name":"FW_DYNAMIC_KEYWORD_ADDRESS_FLAGS"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"FW_DYNAMIC_KEYWORD_ADDRESS_FLAGS_AUTO_RESOLVE","Value":1}
 		]
-		,"IntegerBase":"Int32"
+		,"IntegerBase":"UInt32"
 	}
 	,{
-		"Name":"_tag_FW_DYNAMIC_KEYWORD_ADDRESS_ENUM_FLAGS"
+		"Name":"FW_DYNAMIC_KEYWORD_ADDRESS_ENUM_FLAGS"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"FW_DYNAMIC_KEYWORD_ADDRESS_ENUM_FLAGS_AUTO_RESOLVE","Value":1}
 			,{"Name":"FW_DYNAMIC_KEYWORD_ADDRESS_ENUM_FLAGS_NON_AUTO_RESOLVE","Value":2}
 			,{"Name":"FW_DYNAMIC_KEYWORD_ADDRESS_ENUM_FLAGS_ALL","Value":3}
 		]
-		,"IntegerBase":"Int32"
+		,"IntegerBase":"UInt32"
 	}
 	,{
 		"Name":"PFN_FWADDDYNAMICKEYWORDADDRESS0"
@@ -2509,7 +2495,7 @@
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"dynamicKeywordAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_tag_FW_DYNAMIC_KEYWORD_ADDRESS0","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]}},"Attrs":["In","Const"]}
+			{"Name":"dynamicKeywordAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FW_DYNAMIC_KEYWORD_ADDRESS0","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]}},"Attrs":["In","Const"]}
 		]
 	}
 	,{
@@ -2536,7 +2522,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"dynamicKeywordAddressData","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_tag_FW_DYNAMIC_KEYWORD_ADDRESS_DATA0","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"dynamicKeywordAddressData","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FW_DYNAMIC_KEYWORD_ADDRESS_DATA0","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]}}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -2550,7 +2536,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"dynamicKeywordAddressId","Type":{"Kind":"Native","Name":"Guid"},"Attrs":["In"]}
-			,{"Name":"dynamicKeywordAddressData","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_tag_FW_DYNAMIC_KEYWORD_ADDRESS_DATA0","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"dynamicKeywordAddressData","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FW_DYNAMIC_KEYWORD_ADDRESS_DATA0","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]}}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -2563,7 +2549,7 @@
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"dynamicKeywordAddressData","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_tag_FW_DYNAMIC_KEYWORD_ADDRESS_DATA0","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]}},"Attrs":["In"]}
+			{"Name":"dynamicKeywordAddressData","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FW_DYNAMIC_KEYWORD_ADDRESS_DATA0","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]}},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -4902,9 +4888,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"profileType","Type":{"Kind":"ApiRef","Name":"NET_FW_PROFILE_TYPE2","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]},"Attrs":["In"]}
 					,{"Name":"enabled","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
@@ -4917,9 +4901,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"profileType","Type":{"Kind":"ApiRef","Name":"NET_FW_PROFILE_TYPE2","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]},"Attrs":["In"]}
 					,{"Name":"enabled","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
@@ -4932,9 +4914,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"profileType","Type":{"Kind":"ApiRef","Name":"NET_FW_PROFILE_TYPE2","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]},"Attrs":["In"]}
 					,{"Name":"interfaces","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
@@ -4947,9 +4927,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"profileType","Type":{"Kind":"ApiRef","Name":"NET_FW_PROFILE_TYPE2","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]},"Attrs":["In"]}
 					,{"Name":"interfaces","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
@@ -4962,9 +4940,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"profileType","Type":{"Kind":"ApiRef","Name":"NET_FW_PROFILE_TYPE2","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]},"Attrs":["In"]}
 					,{"Name":"Block","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
@@ -4977,9 +4953,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"profileType","Type":{"Kind":"ApiRef","Name":"NET_FW_PROFILE_TYPE2","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]},"Attrs":["In"]}
 					,{"Name":"Block","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
@@ -4992,9 +4966,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"profileType","Type":{"Kind":"ApiRef","Name":"NET_FW_PROFILE_TYPE2","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]},"Attrs":["In"]}
 					,{"Name":"disabled","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
@@ -5007,9 +4979,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"profileType","Type":{"Kind":"ApiRef","Name":"NET_FW_PROFILE_TYPE2","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]},"Attrs":["In"]}
 					,{"Name":"disabled","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
@@ -5022,9 +4992,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"profileType","Type":{"Kind":"ApiRef","Name":"NET_FW_PROFILE_TYPE2","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]},"Attrs":["In"]}
 					,{"Name":"disabled","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
@@ -5037,9 +5005,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"profileType","Type":{"Kind":"ApiRef","Name":"NET_FW_PROFILE_TYPE2","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]},"Attrs":["In"]}
 					,{"Name":"disabled","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
@@ -5119,9 +5085,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"profileType","Type":{"Kind":"ApiRef","Name":"NET_FW_PROFILE_TYPE2","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]},"Attrs":["In"]}
 					,{"Name":"action","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"NET_FW_ACTION","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]}},"Attrs":["Out","RetVal"]}
@@ -5134,9 +5098,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"profileType","Type":{"Kind":"ApiRef","Name":"NET_FW_PROFILE_TYPE2","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]},"Attrs":["In"]}
 					,{"Name":"action","Type":{"Kind":"ApiRef","Name":"NET_FW_ACTION","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]},"Attrs":["In"]}
@@ -5149,9 +5111,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"profileType","Type":{"Kind":"ApiRef","Name":"NET_FW_PROFILE_TYPE2","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]},"Attrs":["In"]}
 					,{"Name":"action","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"NET_FW_ACTION","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]}},"Attrs":["Out","RetVal"]}
@@ -5164,9 +5124,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"profileType","Type":{"Kind":"ApiRef","Name":"NET_FW_PROFILE_TYPE2","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]},"Attrs":["In"]}
 					,{"Name":"action","Type":{"Kind":"ApiRef","Name":"NET_FW_ACTION","TargetKind":"Default","Api":"NetworkManagement.WindowsFirewall","Parents":[]},"Attrs":["In"]}
@@ -5179,9 +5137,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"group","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"enabled","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
@@ -5436,7 +5392,7 @@
 	{
 		"Name":"NetworkIsolationSetupAppContainerBinaries"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-net-isolation-l1-1-0"
+		,"DllImport":"api-ms-win-net-isolation-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5455,7 +5411,7 @@
 	,{
 		"Name":"NetworkIsolationRegisterForAppContainerChanges"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-net-isolation-l1-1-0"
+		,"DllImport":"api-ms-win-net-isolation-l1-1-0.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5471,7 +5427,7 @@
 	,{
 		"Name":"NetworkIsolationUnregisterForAppContainerChanges"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-net-isolation-l1-1-0"
+		,"DllImport":"api-ms-win-net-isolation-l1-1-0.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5484,7 +5440,7 @@
 	,{
 		"Name":"NetworkIsolationFreeAppContainers"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-net-isolation-l1-1-0"
+		,"DllImport":"api-ms-win-net-isolation-l1-1-0.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5497,7 +5453,7 @@
 	,{
 		"Name":"NetworkIsolationEnumAppContainers"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-net-isolation-l1-1-0"
+		,"DllImport":"api-ms-win-net-isolation-l1-1-0.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5512,7 +5468,7 @@
 	,{
 		"Name":"NetworkIsolationGetAppContainerConfig"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-net-isolation-l1-1-0"
+		,"DllImport":"api-ms-win-net-isolation-l1-1-0.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5526,7 +5482,7 @@
 	,{
 		"Name":"NetworkIsolationSetAppContainerConfig"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-net-isolation-l1-1-0"
+		,"DllImport":"api-ms-win-net-isolation-l1-1-0.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5540,7 +5496,7 @@
 	,{
 		"Name":"NetworkIsolationDiagnoseConnectFailureAndGetInfo"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-net-isolation-l1-1-0"
+		,"DllImport":"api-ms-win-net-isolation-l1-1-0.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

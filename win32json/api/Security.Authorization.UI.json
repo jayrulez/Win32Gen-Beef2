@@ -163,6 +163,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"CFSTR_ACLUI_SID_INFO_LIST"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"CFSTR_ACLUI_SID_INFO_LIST"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"SECURITY_OBJECT_ID_OBJECT_SD"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -347,7 +354,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"RequestedInformation","Type":{"Kind":"ApiRef","Name":"OBJECT_SECURITY_INFORMATION","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["In"]}
-					,{"Name":"ppSecurityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["In","Out"]}
+					,{"Name":"ppSecurityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["In","Out"]}
 					,{"Name":"fDefault","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
@@ -361,7 +368,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"SecurityInformation","Type":{"Kind":"ApiRef","Name":"OBJECT_SECURITY_INFORMATION","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pSecurityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["In","Out"]}
+					,{"Name":"pSecurityDescriptor","Type":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -509,7 +516,7 @@
 					{"Name":"pguidObjectType","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
 					,{"Name":"pUserSid","Type":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pszServerName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-					,{"Name":"pSD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["In","Out"]}
+					,{"Name":"pSD","Type":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["In"]}
 					,{"Name":"ppObjectTypeList","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OBJECT_TYPE_LIST","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["In","Out"]}
 					,{"Name":"pcObjectTypeListLength","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
 					,{"Name":"ppGrantedAccessList","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}}},"Attrs":["In","Out"]}
@@ -676,7 +683,7 @@
 	{
 		"Name":"CreateSecurityPage"
 		,"SetLastError":true
-		,"DllImport":"ACLUI"
+		,"DllImport":"ACLUI.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HPROPSHEETPAGE","TargetKind":"Default","Api":"UI.Controls","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -689,7 +696,7 @@
 	,{
 		"Name":"EditSecurity"
 		,"SetLastError":true
-		,"DllImport":"ACLUI"
+		,"DllImport":"ACLUI.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -703,7 +710,7 @@
 	,{
 		"Name":"EditSecurityAdvanced"
 		,"SetLastError":false
-		,"DllImport":"ACLUI"
+		,"DllImport":"ACLUI.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

@@ -205,6 +205,125 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"wszGRAVE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"̀"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"wszACUTE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"́"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"wszCIRCUMFLEX"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"̂"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"wszTILDE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"̃"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"wszMACRON"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"̄"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"wszOVERSCORE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"̅"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"wszBREVE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"̆"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"wszDOT_ABOVE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"̇"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"wszUMLAUT"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"̈"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"wszHOOK_ABOVE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"̉"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"wszRING"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"̊"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"wszDOUBLE_ACUTE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"̋"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"wszHACEK"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"̌"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"wszCEDILLA"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"̧"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"wszOGONEK"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"̨"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"wszTONOS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"΄"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"wszDIARESIS_TONOS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"΅"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"SHFT_INVALID"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -1621,7 +1740,7 @@
 		]
 	}
 	,{
-		"Name":"tagKbdLayer"
+		"Name":"KBDTABLES"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -1649,7 +1768,7 @@
 		]
 	}
 	,{
-		"Name":"_VK_FUNCTION_PARAM"
+		"Name":"VK_FPARAM"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -1663,7 +1782,7 @@
 		]
 	}
 	,{
-		"Name":"_VK_TO_FUNCTION_TABLE"
+		"Name":"VK_F"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -1674,14 +1793,14 @@
 			,{"Name":"NLSFEProcType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"NLSFEProcCurrent","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"NLSFEProcSwitch","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"NLSFEProc","Type":{"Kind":"Array","Shape":{"Size":8},"Child":{"Kind":"ApiRef","Name":"_VK_FUNCTION_PARAM","TargetKind":"Default","Api":"UI.Input.KeyboardAndMouse","Parents":[]}},"Attrs":[]}
-			,{"Name":"NLSFEProcAlt","Type":{"Kind":"Array","Shape":{"Size":8},"Child":{"Kind":"ApiRef","Name":"_VK_FUNCTION_PARAM","TargetKind":"Default","Api":"UI.Input.KeyboardAndMouse","Parents":[]}},"Attrs":[]}
+			,{"Name":"NLSFEProc","Type":{"Kind":"Array","Shape":{"Size":8},"Child":{"Kind":"ApiRef","Name":"VK_FPARAM","TargetKind":"Default","Api":"UI.Input.KeyboardAndMouse","Parents":[]}},"Attrs":[]}
+			,{"Name":"NLSFEProcAlt","Type":{"Kind":"Array","Shape":{"Size":8},"Child":{"Kind":"ApiRef","Name":"VK_FPARAM","TargetKind":"Default","Api":"UI.Input.KeyboardAndMouse","Parents":[]}},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
 	}
 	,{
-		"Name":"tagKbdNlsLayer"
+		"Name":"KBDNLSTABLES"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -1691,7 +1810,7 @@
 			{"Name":"OEMIdentifier","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"LayoutInformation","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"NumOfVkToF","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"pVkToF","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_VK_TO_FUNCTION_TABLE","TargetKind":"Default","Api":"UI.Input.KeyboardAndMouse","Parents":[]}},"Attrs":[]}
+			,{"Name":"pVkToF","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VK_F","TargetKind":"Default","Api":"UI.Input.KeyboardAndMouse","Parents":[]}},"Attrs":[]}
 			,{"Name":"NumOfMouseVKey","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"pusMouseVKey","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":[]}
 		]
@@ -1784,7 +1903,7 @@
 		,"Fields":[
 			{"Name":"dx","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"dy","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"mouseData","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"mouseData","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"MOUSE_EVENT_FLAGS","TargetKind":"Default","Api":"UI.Input.KeyboardAndMouse","Parents":[]},"Attrs":[]}
 			,{"Name":"time","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwExtraInfo","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
@@ -1873,7 +1992,7 @@
 	{
 		"Name":"_TrackMouseEvent"
 		,"SetLastError":false
-		,"DllImport":"COMCTL32"
+		,"DllImport":"COMCTL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1886,7 +2005,7 @@
 	,{
 		"Name":"LoadKeyboardLayoutA"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HKL","TargetKind":"Default","Api":"UI.TextServices","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1900,7 +2019,7 @@
 	,{
 		"Name":"LoadKeyboardLayoutW"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HKL","TargetKind":"Default","Api":"UI.TextServices","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1914,7 +2033,7 @@
 	,{
 		"Name":"ActivateKeyboardLayout"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HKL","TargetKind":"Default","Api":"UI.TextServices","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1928,7 +2047,7 @@
 	,{
 		"Name":"ToUnicodeEx"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1947,7 +2066,7 @@
 	,{
 		"Name":"UnloadKeyboardLayout"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1960,7 +2079,7 @@
 	,{
 		"Name":"GetKeyboardLayoutNameA"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1973,7 +2092,7 @@
 	,{
 		"Name":"GetKeyboardLayoutNameW"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1986,7 +2105,7 @@
 	,{
 		"Name":"GetKeyboardLayoutList"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2000,7 +2119,7 @@
 	,{
 		"Name":"GetKeyboardLayout"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HKL","TargetKind":"Default","Api":"UI.TextServices","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2013,7 +2132,7 @@
 	,{
 		"Name":"GetMouseMovePointsEx"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2030,7 +2149,7 @@
 	,{
 		"Name":"TrackMouseEvent"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2043,7 +2162,7 @@
 	,{
 		"Name":"RegisterHotKey"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2059,7 +2178,7 @@
 	,{
 		"Name":"UnregisterHotKey"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2073,7 +2192,7 @@
 	,{
 		"Name":"SwapMouseButton"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2086,7 +2205,7 @@
 	,{
 		"Name":"GetDoubleClickTime"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2098,7 +2217,7 @@
 	,{
 		"Name":"SetDoubleClickTime"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2111,7 +2230,7 @@
 	,{
 		"Name":"SetFocus"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2124,7 +2243,7 @@
 	,{
 		"Name":"GetActiveWindow"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2136,7 +2255,7 @@
 	,{
 		"Name":"GetFocus"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2148,7 +2267,7 @@
 	,{
 		"Name":"GetKBCodePage"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2160,7 +2279,7 @@
 	,{
 		"Name":"GetKeyState"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int16"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2173,7 +2292,7 @@
 	,{
 		"Name":"GetAsyncKeyState"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int16"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2186,7 +2305,7 @@
 	,{
 		"Name":"GetKeyboardState"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2199,7 +2318,7 @@
 	,{
 		"Name":"SetKeyboardState"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2212,7 +2331,7 @@
 	,{
 		"Name":"GetKeyNameTextA"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2227,7 +2346,7 @@
 	,{
 		"Name":"GetKeyNameTextW"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2242,7 +2361,7 @@
 	,{
 		"Name":"GetKeyboardType"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2255,7 +2374,7 @@
 	,{
 		"Name":"ToAscii"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2272,7 +2391,7 @@
 	,{
 		"Name":"ToAsciiEx"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2290,7 +2409,7 @@
 	,{
 		"Name":"ToUnicode"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2308,7 +2427,7 @@
 	,{
 		"Name":"OemKeyScan"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2321,7 +2440,7 @@
 	,{
 		"Name":"VkKeyScanA"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int16"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2334,7 +2453,7 @@
 	,{
 		"Name":"VkKeyScanW"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int16"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2347,7 +2466,7 @@
 	,{
 		"Name":"VkKeyScanExA"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int16"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2361,7 +2480,7 @@
 	,{
 		"Name":"VkKeyScanExW"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int16"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2375,7 +2494,7 @@
 	,{
 		"Name":"keybd_event"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2391,7 +2510,7 @@
 	,{
 		"Name":"mouse_event"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2408,7 +2527,7 @@
 	,{
 		"Name":"SendInput"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2423,7 +2542,7 @@
 	,{
 		"Name":"GetLastInputInfo"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2436,7 +2555,7 @@
 	,{
 		"Name":"MapVirtualKeyA"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2450,7 +2569,7 @@
 	,{
 		"Name":"MapVirtualKeyW"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2464,7 +2583,7 @@
 	,{
 		"Name":"MapVirtualKeyExA"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2479,7 +2598,7 @@
 	,{
 		"Name":"MapVirtualKeyExW"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2494,7 +2613,7 @@
 	,{
 		"Name":"GetCapture"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2506,7 +2625,7 @@
 	,{
 		"Name":"SetCapture"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2519,7 +2638,7 @@
 	,{
 		"Name":"ReleaseCapture"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2531,7 +2650,7 @@
 	,{
 		"Name":"EnableWindow"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2545,7 +2664,7 @@
 	,{
 		"Name":"IsWindowEnabled"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2558,7 +2677,7 @@
 	,{
 		"Name":"DragDetect"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2572,7 +2691,7 @@
 	,{
 		"Name":"SetActiveWindow"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2585,7 +2704,7 @@
 	,{
 		"Name":"BlockInput"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

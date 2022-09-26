@@ -117,6 +117,58 @@
 
 ,"Types":[
 	{
+		"Name":"VBS_BASIC_ENCLAVE_BASIC_CALL_RETURN_FROM_EXCEPTION"
+		,"Architectures":["X64"]
+		,"Platform":null
+		,"Kind":"FunctionPointer"
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"Int32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"ExceptionRecord","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VBS_BASIC_ENCLAVE_EXCEPTION_AMD64","TargetKind":"Default","Api":"System.Environment","Parents":[]}},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"VBS_BASIC_ENCLAVE_BASIC_CALL_TERMINATE_THREAD"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"FunctionPointer"
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"Int32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"ThreadDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VBS_BASIC_ENCLAVE_THREAD_DESCRIPTOR64","TargetKind":"Default","Api":"System.Environment","Parents":[]}},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"VBS_BASIC_ENCLAVE_BASIC_CALL_INTERRUPT_THREAD"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"FunctionPointer"
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"Int32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"ThreadDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VBS_BASIC_ENCLAVE_THREAD_DESCRIPTOR64","TargetKind":"Default","Api":"System.Environment","Parents":[]}},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"VBS_BASIC_ENCLAVE_BASIC_CALL_CREATE_THREAD"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"FunctionPointer"
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"Int32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"ThreadDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VBS_BASIC_ENCLAVE_THREAD_DESCRIPTOR64","TargetKind":"Default","Api":"System.Environment","Parents":[]}},"Attrs":["In"]}
+		]
+	}
+	,{
 		"Name":"ENCLAVE_SEALING_IDENTITY_POLICY"
 		,"Architectures":[]
 		,"Platform":null
@@ -311,7 +363,7 @@
 	}
 	,{
 		"Name":"VBS_BASIC_ENCLAVE_BASIC_CALL_RETURN_FROM_EXCEPTION"
-		,"Architectures":["X64"]
+		,"Architectures":["X86","Arm64"]
 		,"Platform":null
 		,"Kind":"FunctionPointer"
 		,"SetLastError":false
@@ -319,12 +371,12 @@
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"ExceptionRecord","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VBS_BASIC_ENCLAVE_EXCEPTION_AMD64","TargetKind":"Default","Api":"System.Environment","Parents":[]}},"Attrs":["In"]}
+			{"Name":"ExceptionRecord","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"VBS_BASIC_ENCLAVE_BASIC_CALL_TERMINATE_THREAD"
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"FunctionPointer"
 		,"SetLastError":false
@@ -332,12 +384,12 @@
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"ThreadDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VBS_BASIC_ENCLAVE_THREAD_DESCRIPTOR64","TargetKind":"Default","Api":"System.Environment","Parents":[]}},"Attrs":["In"]}
+			{"Name":"ThreadDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VBS_BASIC_ENCLAVE_THREAD_DESCRIPTOR32","TargetKind":"Default","Api":"System.Environment","Parents":[]}},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"VBS_BASIC_ENCLAVE_BASIC_CALL_INTERRUPT_THREAD"
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"FunctionPointer"
 		,"SetLastError":false
@@ -345,7 +397,7 @@
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"ThreadDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VBS_BASIC_ENCLAVE_THREAD_DESCRIPTOR64","TargetKind":"Default","Api":"System.Environment","Parents":[]}},"Attrs":["In"]}
+			{"Name":"ThreadDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VBS_BASIC_ENCLAVE_THREAD_DESCRIPTOR32","TargetKind":"Default","Api":"System.Environment","Parents":[]}},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -395,7 +447,7 @@
 	}
 	,{
 		"Name":"VBS_BASIC_ENCLAVE_BASIC_CALL_CREATE_THREAD"
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"FunctionPointer"
 		,"SetLastError":false
@@ -403,7 +455,7 @@
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"ThreadDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VBS_BASIC_ENCLAVE_THREAD_DESCRIPTOR64","TargetKind":"Default","Api":"System.Environment","Parents":[]}},"Attrs":["In"]}
+			{"Name":"ThreadDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VBS_BASIC_ENCLAVE_THREAD_DESCRIPTOR32","TargetKind":"Default","Api":"System.Environment","Parents":[]}},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -521,65 +573,13 @@
 		,"NestedTypes":[
 		]
 	}
-	,{
-		"Name":"VBS_BASIC_ENCLAVE_BASIC_CALL_RETURN_FROM_EXCEPTION"
-		,"Architectures":["X86","Arm64"]
-		,"Platform":null
-		,"Kind":"FunctionPointer"
-		,"SetLastError":false
-		,"ReturnType":{"Kind":"Native","Name":"Int32"}
-		,"ReturnAttrs":[]
-		,"Attrs":[]
-		,"Params":[
-			{"Name":"ExceptionRecord","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
-		]
-	}
-	,{
-		"Name":"VBS_BASIC_ENCLAVE_BASIC_CALL_TERMINATE_THREAD"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"FunctionPointer"
-		,"SetLastError":false
-		,"ReturnType":{"Kind":"Native","Name":"Int32"}
-		,"ReturnAttrs":[]
-		,"Attrs":[]
-		,"Params":[
-			{"Name":"ThreadDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VBS_BASIC_ENCLAVE_THREAD_DESCRIPTOR32","TargetKind":"Default","Api":"System.Environment","Parents":[]}},"Attrs":["In"]}
-		]
-	}
-	,{
-		"Name":"VBS_BASIC_ENCLAVE_BASIC_CALL_INTERRUPT_THREAD"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"FunctionPointer"
-		,"SetLastError":false
-		,"ReturnType":{"Kind":"Native","Name":"Int32"}
-		,"ReturnAttrs":[]
-		,"Attrs":[]
-		,"Params":[
-			{"Name":"ThreadDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VBS_BASIC_ENCLAVE_THREAD_DESCRIPTOR32","TargetKind":"Default","Api":"System.Environment","Parents":[]}},"Attrs":["In"]}
-		]
-	}
-	,{
-		"Name":"VBS_BASIC_ENCLAVE_BASIC_CALL_CREATE_THREAD"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"FunctionPointer"
-		,"SetLastError":false
-		,"ReturnType":{"Kind":"Native","Name":"Int32"}
-		,"ReturnAttrs":[]
-		,"Attrs":[]
-		,"Params":[
-			{"Name":"ThreadDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VBS_BASIC_ENCLAVE_THREAD_DESCRIPTOR32","TargetKind":"Default","Api":"System.Environment","Parents":[]}},"Attrs":["In"]}
-		]
-	}
 ]
 
 ,"Functions":[
 	{
 		"Name":"SetEnvironmentStringsW"
 		,"SetLastError":false
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -592,7 +592,7 @@
 	,{
 		"Name":"GetCommandLineA"
 		,"SetLastError":false
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -604,7 +604,7 @@
 	,{
 		"Name":"GetCommandLineW"
 		,"SetLastError":false
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -616,7 +616,7 @@
 	,{
 		"Name":"GetEnvironmentStrings"
 		,"SetLastError":false
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -628,7 +628,7 @@
 	,{
 		"Name":"GetEnvironmentStringsW"
 		,"SetLastError":false
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -640,7 +640,7 @@
 	,{
 		"Name":"FreeEnvironmentStringsA"
 		,"SetLastError":true
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -653,7 +653,7 @@
 	,{
 		"Name":"FreeEnvironmentStringsW"
 		,"SetLastError":true
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -666,7 +666,7 @@
 	,{
 		"Name":"GetEnvironmentVariableA"
 		,"SetLastError":true
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -681,7 +681,7 @@
 	,{
 		"Name":"GetEnvironmentVariableW"
 		,"SetLastError":true
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -696,7 +696,7 @@
 	,{
 		"Name":"SetEnvironmentVariableA"
 		,"SetLastError":true
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -710,7 +710,7 @@
 	,{
 		"Name":"SetEnvironmentVariableW"
 		,"SetLastError":true
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -724,7 +724,7 @@
 	,{
 		"Name":"ExpandEnvironmentStringsA"
 		,"SetLastError":true
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -739,7 +739,7 @@
 	,{
 		"Name":"ExpandEnvironmentStringsW"
 		,"SetLastError":true
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -754,7 +754,7 @@
 	,{
 		"Name":"SetCurrentDirectoryA"
 		,"SetLastError":false
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -767,7 +767,7 @@
 	,{
 		"Name":"SetCurrentDirectoryW"
 		,"SetLastError":false
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -780,7 +780,7 @@
 	,{
 		"Name":"GetCurrentDirectoryA"
 		,"SetLastError":false
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -794,7 +794,7 @@
 	,{
 		"Name":"GetCurrentDirectoryW"
 		,"SetLastError":false
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -808,7 +808,7 @@
 	,{
 		"Name":"NeedCurrentDirectoryForExePathA"
 		,"SetLastError":false
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -821,7 +821,7 @@
 	,{
 		"Name":"NeedCurrentDirectoryForExePathW"
 		,"SetLastError":false
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -834,7 +834,7 @@
 	,{
 		"Name":"CreateEnvironmentBlock"
 		,"SetLastError":true
-		,"DllImport":"USERENV"
+		,"DllImport":"USERENV.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -849,7 +849,7 @@
 	,{
 		"Name":"DestroyEnvironmentBlock"
 		,"SetLastError":true
-		,"DllImport":"USERENV"
+		,"DllImport":"USERENV.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -862,7 +862,7 @@
 	,{
 		"Name":"ExpandEnvironmentStringsForUserA"
 		,"SetLastError":true
-		,"DllImport":"USERENV"
+		,"DllImport":"USERENV.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -878,7 +878,7 @@
 	,{
 		"Name":"ExpandEnvironmentStringsForUserW"
 		,"SetLastError":true
-		,"DllImport":"USERENV"
+		,"DllImport":"USERENV.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -894,7 +894,7 @@
 	,{
 		"Name":"IsEnclaveTypeSupported"
 		,"SetLastError":true
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -907,7 +907,7 @@
 	,{
 		"Name":"CreateEnclave"
 		,"SetLastError":true
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -927,7 +927,7 @@
 	,{
 		"Name":"LoadEnclaveData"
 		,"SetLastError":true
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -948,7 +948,7 @@
 	,{
 		"Name":"InitializeEnclave"
 		,"SetLastError":true
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -965,7 +965,7 @@
 	,{
 		"Name":"LoadEnclaveImageA"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-enclave-l1-1-1"
+		,"DllImport":"api-ms-win-core-enclave-l1-1-1.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -979,7 +979,7 @@
 	,{
 		"Name":"LoadEnclaveImageW"
 		,"SetLastError":true
-		,"DllImport":"api-ms-win-core-enclave-l1-1-1"
+		,"DllImport":"api-ms-win-core-enclave-l1-1-1.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -993,7 +993,7 @@
 	,{
 		"Name":"CallEnclave"
 		,"SetLastError":true
-		,"DllImport":"vertdll"
+		,"DllImport":"vertdll.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1009,7 +1009,7 @@
 	,{
 		"Name":"TerminateEnclave"
 		,"SetLastError":true
-		,"DllImport":"vertdll"
+		,"DllImport":"vertdll.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1023,7 +1023,7 @@
 	,{
 		"Name":"DeleteEnclave"
 		,"SetLastError":true
-		,"DllImport":"api-ms-win-core-enclave-l1-1-1"
+		,"DllImport":"api-ms-win-core-enclave-l1-1-1.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1036,7 +1036,7 @@
 	,{
 		"Name":"EnclaveGetAttestationReport"
 		,"SetLastError":false
-		,"DllImport":"vertdll"
+		,"DllImport":"vertdll.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1052,7 +1052,7 @@
 	,{
 		"Name":"EnclaveVerifyAttestationReport"
 		,"SetLastError":false
-		,"DllImport":"vertdll"
+		,"DllImport":"vertdll.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1067,7 +1067,7 @@
 	,{
 		"Name":"EnclaveSealData"
 		,"SetLastError":false
-		,"DllImport":"vertdll"
+		,"DllImport":"vertdll.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1086,7 +1086,7 @@
 	,{
 		"Name":"EnclaveUnsealData"
 		,"SetLastError":false
-		,"DllImport":"vertdll"
+		,"DllImport":"vertdll.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1105,7 +1105,7 @@
 	,{
 		"Name":"EnclaveGetEnclaveInformation"
 		,"SetLastError":false
-		,"DllImport":"vertdll"
+		,"DllImport":"vertdll.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

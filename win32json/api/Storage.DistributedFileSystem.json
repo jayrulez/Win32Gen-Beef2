@@ -236,6 +236,86 @@
 
 ,"Types":[
 	{
+		"Name":"DFS_INFO_1_32"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"EntryPath","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DFS_INFO_2_32"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"EntryPath","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Comment","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"State","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"NumberOfStorages","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DFS_STORAGE_INFO_0_32"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"State","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ServerName","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ShareName","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DFS_INFO_3_32"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"EntryPath","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Comment","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"State","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"NumberOfStorages","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Storage","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DFS_INFO_4_32"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"EntryPath","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Comment","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"State","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Timeout","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Guid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
+			,{"Name":"NumberOfStorages","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Storage","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
 		"Name":"DFS_TARGET_PRIORITY_CLASS"
 		,"Architectures":[]
 		,"Platform":null
@@ -281,19 +361,6 @@
 		]
 	}
 	,{
-		"Name":"DFS_INFO_1_32"
-		,"Architectures":["X64","Arm64"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"EntryPath","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
 		"Name":"DFS_INFO_2"
 		,"Architectures":[]
 		,"Platform":null
@@ -303,22 +370,6 @@
 		,"Fields":[
 			{"Name":"EntryPath","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"Comment","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"State","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"NumberOfStorages","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"DFS_INFO_2_32"
-		,"Architectures":["X64","Arm64"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"EntryPath","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Comment","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"State","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NumberOfStorages","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -336,21 +387,6 @@
 			{"Name":"State","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ServerName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"ShareName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"DFS_STORAGE_INFO_0_32"
-		,"Architectures":["X64","Arm64"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"State","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"ServerName","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"ShareName","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -389,23 +425,6 @@
 		]
 	}
 	,{
-		"Name":"DFS_INFO_3_32"
-		,"Architectures":["X64","Arm64"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"EntryPath","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Comment","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"State","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"NumberOfStorages","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Storage","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
 		"Name":"DFS_INFO_4"
 		,"Architectures":[]
 		,"Platform":null
@@ -420,25 +439,6 @@
 			,{"Name":"Guid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"NumberOfStorages","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Storage","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DFS_STORAGE_INFO","TargetKind":"Default","Api":"Storage.DistributedFileSystem","Parents":[]}},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"DFS_INFO_4_32"
-		,"Architectures":["X64","Arm64"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"EntryPath","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Comment","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"State","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Timeout","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Guid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
-			,{"Name":"NumberOfStorages","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Storage","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -513,7 +513,7 @@
 			,{"Name":"PropertyFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"MetadataSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"SdLengthReserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"pSecurityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":[]}
+			,{"Name":"pSecurityDescriptor","Type":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":[]}
 			,{"Name":"NumberOfStorages","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
@@ -535,7 +535,7 @@
 			,{"Name":"PropertyFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"MetadataSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"SdLengthReserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"pSecurityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":[]}
+			,{"Name":"pSecurityDescriptor","Type":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":[]}
 			,{"Name":"NumberOfStorages","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Storage","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DFS_STORAGE_INFO_1","TargetKind":"Default","Api":"Storage.DistributedFileSystem","Parents":[]}},"Attrs":[]}
 		]
@@ -668,7 +668,7 @@
 			,{"Name":"PropertyFlagMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"PropertyFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"SdLengthReserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"pSecurityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":[]}
+			,{"Name":"pSecurityDescriptor","Type":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -682,7 +682,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"SdLengthReserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"pSecurityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":[]}
+			,{"Name":"pSecurityDescriptor","Type":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -797,7 +797,7 @@
 	{
 		"Name":"NetDfsAdd"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -814,7 +814,7 @@
 	,{
 		"Name":"NetDfsAddStdRoot"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -830,7 +830,7 @@
 	,{
 		"Name":"NetDfsRemoveStdRoot"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -845,7 +845,7 @@
 	,{
 		"Name":"NetDfsAddFtRoot"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -862,7 +862,7 @@
 	,{
 		"Name":"NetDfsRemoveFtRoot"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -878,7 +878,7 @@
 	,{
 		"Name":"NetDfsRemoveFtRootForced"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -895,7 +895,7 @@
 	,{
 		"Name":"NetDfsRemove"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -910,7 +910,7 @@
 	,{
 		"Name":"NetDfsEnum"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -928,7 +928,7 @@
 	,{
 		"Name":"NetDfsGetInfo"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -945,7 +945,7 @@
 	,{
 		"Name":"NetDfsSetInfo"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -962,7 +962,7 @@
 	,{
 		"Name":"NetDfsGetClientInfo"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -979,7 +979,7 @@
 	,{
 		"Name":"NetDfsSetClientInfo"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -996,7 +996,7 @@
 	,{
 		"Name":"NetDfsMove"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1011,7 +1011,7 @@
 	,{
 		"Name":"NetDfsAddRootTarget"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1028,7 +1028,7 @@
 	,{
 		"Name":"NetDfsRemoveRootTarget"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1043,7 +1043,7 @@
 	,{
 		"Name":"NetDfsGetSecurity"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1052,14 +1052,14 @@
 		,"Params":[
 			{"Name":"DfsEntryPath","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"SecurityInformation","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"ppSecurityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"ppSecurityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["Out"]}
 			,{"Name":"lpcbSecurityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"NetDfsSetSecurity"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1068,13 +1068,13 @@
 		,"Params":[
 			{"Name":"DfsEntryPath","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"SecurityInformation","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"pSecurityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pSecurityDescriptor","Type":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"NetDfsGetStdContainerSecurity"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1083,14 +1083,14 @@
 		,"Params":[
 			{"Name":"MachineName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"SecurityInformation","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"ppSecurityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"ppSecurityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["Out"]}
 			,{"Name":"lpcbSecurityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"NetDfsSetStdContainerSecurity"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1099,13 +1099,13 @@
 		,"Params":[
 			{"Name":"MachineName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"SecurityInformation","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"pSecurityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pSecurityDescriptor","Type":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"NetDfsGetFtContainerSecurity"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1114,14 +1114,14 @@
 		,"Params":[
 			{"Name":"DomainName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"SecurityInformation","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"ppSecurityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"ppSecurityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["Out"]}
 			,{"Name":"lpcbSecurityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"NetDfsSetFtContainerSecurity"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1130,13 +1130,13 @@
 		,"Params":[
 			{"Name":"DomainName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"SecurityInformation","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"pSecurityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pSecurityDescriptor","Type":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"NetDfsGetSupportedNamespaceVersion"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

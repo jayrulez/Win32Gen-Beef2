@@ -2,10 +2,80 @@
 
 "Constants":[
 	{
+		"Name":"RADIUS_EXTENSION_INIT"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"RadiusExtensionInit"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"RADIUS_EXTENSION_TERM"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"RadiusExtensionTerm"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"RADIUS_EXTENSION_PROCESS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"RadiusExtensionProcess"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"RADIUS_EXTENSION_PROCESS_EX"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"RadiusExtensionProcessEx"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"RADIUS_EXTENSION_FREE_ATTRIBUTES"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"RadiusExtensionFreeAttributes"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"AUTHSRV_PARAMETERS_KEY_W"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"System\\CurrentControlSet\\Services\\AuthSrv\\Parameters"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"AUTHSRV_EXTENSIONS_VALUE_W"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"ExtensionDLLs"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"AUTHSRV_AUTHORIZATION_VALUE_W"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"AuthorizationDLLs"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"AUTHSRV_ENFORCE_NP_FOR_PAP_CHALLENGE_RESPONSE_VALUE_W"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"EnforceNetworkPolicyForPAPBasedChallengeResponse"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"RADIUS_EXTENSION_VERSION"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"RADIUS_EXTENSION_PROCESS2"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"RadiusExtensionProcess2"
 		,"Attrs":[]
 	}
 ]
@@ -1826,7 +1896,7 @@
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Add","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"AttributeAt","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RADIUS_ATTRIBUTE","TargetKind":"Default","Api":"NetworkManagement.NetworkPolicyServer","Parents":[]}}}}}}}}}}},"Attrs":["Const"]}
+			,{"Name":"AttributeAt","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["Const"]}
 			,{"Name":"GetSize","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
 			,{"Name":"InsertAt","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
 			,{"Name":"RemoveAt","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}

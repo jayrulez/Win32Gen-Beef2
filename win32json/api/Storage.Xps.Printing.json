@@ -261,7 +261,7 @@
 	{
 		"Name":"StartXpsPrintJob"
 		,"SetLastError":false
-		,"DllImport":"XPSPRINT"
+		,"DllImport":"XPSPRINT.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -275,15 +275,15 @@
 			,{"Name":"completionEvent","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"printablePagesOn","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":6,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"printablePagesOnCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"xpsPrintJob","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IXpsPrintJob","TargetKind":"Com","Api":"Storage.Xps.Printing","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"documentStream","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IXpsPrintJobStream","TargetKind":"Com","Api":"Storage.Xps.Printing","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"printTicketStream","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IXpsPrintJobStream","TargetKind":"Com","Api":"Storage.Xps.Printing","Parents":[]}},"Attrs":["Out","Optional"]}
+			,{"Name":"xpsPrintJob","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IXpsPrintJob","TargetKind":"Com","Api":"Storage.Xps.Printing","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"documentStream","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IXpsPrintJobStream","TargetKind":"Com","Api":"Storage.Xps.Printing","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"printTicketStream","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IXpsPrintJobStream","TargetKind":"Com","Api":"Storage.Xps.Printing","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"StartXpsPrintJob1"
 		,"SetLastError":false
-		,"DllImport":"XPSPRINT"
+		,"DllImport":"XPSPRINT.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -295,8 +295,8 @@
 			,{"Name":"outputFileName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"progressEvent","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"completionEvent","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"xpsPrintJob","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IXpsPrintJob","TargetKind":"Com","Api":"Storage.Xps.Printing","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"printContentReceiver","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IXpsOMPackageTarget","TargetKind":"Com","Api":"Storage.Xps","Parents":[]}},"Attrs":["Out","Optional"]}
+			,{"Name":"xpsPrintJob","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IXpsPrintJob","TargetKind":"Com","Api":"Storage.Xps.Printing","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"printContentReceiver","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IXpsOMPackageTarget","TargetKind":"Com","Api":"Storage.Xps","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 ]

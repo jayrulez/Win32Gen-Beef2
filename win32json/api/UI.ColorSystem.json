@@ -604,6 +604,21 @@
 		,"IntegerBase":"UInt32"
 	}
 	,{
+		"Name":"ICM_MODE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"ICM_OFF","Value":1}
+			,{"Name":"ICM_ON","Value":2}
+			,{"Name":"ICM_QUERY","Value":3}
+			,{"Name":"ICM_DONE_OUTSIDEDC","Value":4}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
 		"Name":"COLOR_MATCH_TO_TARGET_ACTION"
 		,"Architectures":[]
 		,"Platform":null
@@ -1667,7 +1682,7 @@
 	{
 		"Name":"SetICMMode"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1675,13 +1690,13 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hdc","Type":{"Kind":"ApiRef","Name":"HDC","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]},"Attrs":["In"]}
-			,{"Name":"mode","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
+			,{"Name":"mode","Type":{"Kind":"ApiRef","Name":"ICM_MODE","TargetKind":"Default","Api":"UI.ColorSystem","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"CheckColorsInGamut"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1697,7 +1712,7 @@
 	,{
 		"Name":"GetColorSpace"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HCOLORSPACE","TargetKind":"Default","Api":"UI.ColorSystem","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1710,7 +1725,7 @@
 	,{
 		"Name":"GetLogColorSpaceA"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1725,7 +1740,7 @@
 	,{
 		"Name":"GetLogColorSpaceW"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1740,7 +1755,7 @@
 	,{
 		"Name":"CreateColorSpaceA"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HCOLORSPACE","TargetKind":"Default","Api":"UI.ColorSystem","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1753,7 +1768,7 @@
 	,{
 		"Name":"CreateColorSpaceW"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HCOLORSPACE","TargetKind":"Default","Api":"UI.ColorSystem","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1766,7 +1781,7 @@
 	,{
 		"Name":"SetColorSpace"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HCOLORSPACE","TargetKind":"Default","Api":"UI.ColorSystem","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1780,7 +1795,7 @@
 	,{
 		"Name":"DeleteColorSpace"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1793,7 +1808,7 @@
 	,{
 		"Name":"GetICMProfileA"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1808,7 +1823,7 @@
 	,{
 		"Name":"GetICMProfileW"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1823,7 +1838,7 @@
 	,{
 		"Name":"SetICMProfileA"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1837,7 +1852,7 @@
 	,{
 		"Name":"SetICMProfileW"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1851,7 +1866,7 @@
 	,{
 		"Name":"GetDeviceGammaRamp"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1865,7 +1880,7 @@
 	,{
 		"Name":"SetDeviceGammaRamp"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1879,7 +1894,7 @@
 	,{
 		"Name":"ColorMatchToTarget"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1894,7 +1909,7 @@
 	,{
 		"Name":"EnumICMProfilesA"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1909,7 +1924,7 @@
 	,{
 		"Name":"EnumICMProfilesW"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1924,7 +1939,7 @@
 	,{
 		"Name":"UpdateICMRegKeyA"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1940,7 +1955,7 @@
 	,{
 		"Name":"UpdateICMRegKeyW"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1956,7 +1971,7 @@
 	,{
 		"Name":"ColorCorrectPalette"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1972,7 +1987,7 @@
 	,{
 		"Name":"OpenColorProfileA"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1988,7 +2003,7 @@
 	,{
 		"Name":"OpenColorProfileW"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2004,7 +2019,7 @@
 	,{
 		"Name":"CloseColorProfile"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2017,7 +2032,7 @@
 	,{
 		"Name":"GetColorProfileFromHandle"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2032,7 +2047,7 @@
 	,{
 		"Name":"IsColorProfileValid"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2046,7 +2061,7 @@
 	,{
 		"Name":"CreateProfileFromLogColorSpaceA"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2060,7 +2075,7 @@
 	,{
 		"Name":"CreateProfileFromLogColorSpaceW"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2074,7 +2089,7 @@
 	,{
 		"Name":"GetCountColorProfileElements"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2088,7 +2103,7 @@
 	,{
 		"Name":"GetColorProfileHeader"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2102,7 +2117,7 @@
 	,{
 		"Name":"GetColorProfileElementTag"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2117,7 +2132,7 @@
 	,{
 		"Name":"IsColorProfileTagPresent"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2132,7 +2147,7 @@
 	,{
 		"Name":"GetColorProfileElement"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2150,7 +2165,7 @@
 	,{
 		"Name":"SetColorProfileHeader"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2164,7 +2179,7 @@
 	,{
 		"Name":"SetColorProfileElementSize"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2179,7 +2194,7 @@
 	,{
 		"Name":"SetColorProfileElement"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2196,7 +2211,7 @@
 	,{
 		"Name":"SetColorProfileElementReference"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2211,7 +2226,7 @@
 	,{
 		"Name":"GetPS2ColorSpaceArray"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2229,7 +2244,7 @@
 	,{
 		"Name":"GetPS2ColorRenderingIntent"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2245,7 +2260,7 @@
 	,{
 		"Name":"GetPS2ColorRenderingDictionary"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2262,7 +2277,7 @@
 	,{
 		"Name":"GetNamedProfileInfo"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2276,7 +2291,7 @@
 	,{
 		"Name":"ConvertColorNameToIndex"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2292,7 +2307,7 @@
 	,{
 		"Name":"ConvertIndexToColorName"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2308,7 +2323,7 @@
 	,{
 		"Name":"CreateDeviceLinkProfile"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2327,7 +2342,7 @@
 	,{
 		"Name":"CreateColorTransformA"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2343,7 +2358,7 @@
 	,{
 		"Name":"CreateColorTransformW"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2359,7 +2374,7 @@
 	,{
 		"Name":"CreateMultiProfileTransform"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2377,20 +2392,20 @@
 	,{
 		"Name":"DeleteColorTransform"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hxform","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In","Out"]}
+			{"Name":"hxform","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"TranslateBitmapBits"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2413,7 +2428,7 @@
 	,{
 		"Name":"CheckBitmapBits"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2434,7 +2449,7 @@
 	,{
 		"Name":"TranslateColors"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2452,7 +2467,7 @@
 	,{
 		"Name":"CheckColors"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2469,7 +2484,7 @@
 	,{
 		"Name":"GetCMMInfo"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2483,7 +2498,7 @@
 	,{
 		"Name":"RegisterCMMA"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2498,7 +2513,7 @@
 	,{
 		"Name":"RegisterCMMW"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2513,7 +2528,7 @@
 	,{
 		"Name":"UnregisterCMMA"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2527,7 +2542,7 @@
 	,{
 		"Name":"UnregisterCMMW"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2541,7 +2556,7 @@
 	,{
 		"Name":"SelectCMM"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2554,7 +2569,7 @@
 	,{
 		"Name":"GetColorDirectoryA"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2569,7 +2584,7 @@
 	,{
 		"Name":"GetColorDirectoryW"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2584,7 +2599,7 @@
 	,{
 		"Name":"InstallColorProfileA"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2598,7 +2613,7 @@
 	,{
 		"Name":"InstallColorProfileW"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2612,7 +2627,7 @@
 	,{
 		"Name":"UninstallColorProfileA"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2627,7 +2642,7 @@
 	,{
 		"Name":"UninstallColorProfileW"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2642,7 +2657,7 @@
 	,{
 		"Name":"EnumColorProfilesA"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2659,7 +2674,7 @@
 	,{
 		"Name":"EnumColorProfilesW"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2676,7 +2691,7 @@
 	,{
 		"Name":"SetStandardColorSpaceProfileA"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2691,7 +2706,7 @@
 	,{
 		"Name":"SetStandardColorSpaceProfileW"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2706,7 +2721,7 @@
 	,{
 		"Name":"GetStandardColorSpaceProfileA"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2722,7 +2737,7 @@
 	,{
 		"Name":"GetStandardColorSpaceProfileW"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2738,7 +2753,7 @@
 	,{
 		"Name":"AssociateColorProfileWithDeviceA"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2753,7 +2768,7 @@
 	,{
 		"Name":"AssociateColorProfileWithDeviceW"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2768,7 +2783,7 @@
 	,{
 		"Name":"DisassociateColorProfileFromDeviceA"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2783,7 +2798,7 @@
 	,{
 		"Name":"DisassociateColorProfileFromDeviceW"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2798,7 +2813,7 @@
 	,{
 		"Name":"SetupColorMatchingW"
 		,"SetLastError":false
-		,"DllImport":"ICMUI"
+		,"DllImport":"ICMUI.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2811,7 +2826,7 @@
 	,{
 		"Name":"SetupColorMatchingA"
 		,"SetLastError":false
-		,"DllImport":"ICMUI"
+		,"DllImport":"ICMUI.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2824,7 +2839,7 @@
 	,{
 		"Name":"WcsAssociateColorProfileWithDevice"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2839,7 +2854,7 @@
 	,{
 		"Name":"WcsDisassociateColorProfileFromDevice"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2854,7 +2869,7 @@
 	,{
 		"Name":"WcsEnumColorProfilesSize"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2869,7 +2884,7 @@
 	,{
 		"Name":"WcsEnumColorProfiles"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2886,7 +2901,7 @@
 	,{
 		"Name":"WcsGetDefaultColorProfileSize"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2904,7 +2919,7 @@
 	,{
 		"Name":"WcsGetDefaultColorProfile"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2923,7 +2938,7 @@
 	,{
 		"Name":"WcsSetDefaultColorProfile"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2941,7 +2956,7 @@
 	,{
 		"Name":"WcsSetDefaultRenderingIntent"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2955,7 +2970,7 @@
 	,{
 		"Name":"WcsGetDefaultRenderingIntent"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2969,7 +2984,7 @@
 	,{
 		"Name":"WcsGetUsePerUserProfiles"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2984,7 +2999,7 @@
 	,{
 		"Name":"WcsSetUsePerUserProfiles"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2999,7 +3014,7 @@
 	,{
 		"Name":"WcsTranslateColors"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3021,7 +3036,7 @@
 	,{
 		"Name":"WcsCheckColors"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3040,7 +3055,7 @@
 	,{
 		"Name":"CMCheckColors"
 		,"SetLastError":false
-		,"DllImport":"ICM32"
+		,"DllImport":"ICM32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3057,7 +3072,7 @@
 	,{
 		"Name":"CMCheckRGBs"
 		,"SetLastError":false
-		,"DllImport":"ICM32"
+		,"DllImport":"ICM32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3078,7 +3093,7 @@
 	,{
 		"Name":"CMConvertColorNameToIndex"
 		,"SetLastError":false
-		,"DllImport":"ICM32"
+		,"DllImport":"ICM32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3094,7 +3109,7 @@
 	,{
 		"Name":"CMConvertIndexToColorName"
 		,"SetLastError":false
-		,"DllImport":"ICM32"
+		,"DllImport":"ICM32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3110,7 +3125,7 @@
 	,{
 		"Name":"CMCreateDeviceLinkProfile"
 		,"SetLastError":false
-		,"DllImport":"ICM32"
+		,"DllImport":"ICM32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3128,7 +3143,7 @@
 	,{
 		"Name":"CMCreateMultiProfileTransform"
 		,"SetLastError":false
-		,"DllImport":"ICM32"
+		,"DllImport":"ICM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3145,7 +3160,7 @@
 	,{
 		"Name":"CMCreateProfileW"
 		,"SetLastError":false
-		,"DllImport":"ICM32"
+		,"DllImport":"ICM32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3159,7 +3174,7 @@
 	,{
 		"Name":"CMCreateTransform"
 		,"SetLastError":false
-		,"DllImport":"ICM32"
+		,"DllImport":"ICM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3174,7 +3189,7 @@
 	,{
 		"Name":"CMCreateTransformW"
 		,"SetLastError":false
-		,"DllImport":"ICM32"
+		,"DllImport":"ICM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3189,7 +3204,7 @@
 	,{
 		"Name":"CMCreateTransformExt"
 		,"SetLastError":false
-		,"DllImport":"ICM32"
+		,"DllImport":"ICM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3205,7 +3220,7 @@
 	,{
 		"Name":"CMCheckColorsInGamut"
 		,"SetLastError":false
-		,"DllImport":"ICM32"
+		,"DllImport":"ICM32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3221,7 +3236,7 @@
 	,{
 		"Name":"CMCreateProfile"
 		,"SetLastError":false
-		,"DllImport":"ICM32"
+		,"DllImport":"ICM32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3235,7 +3250,7 @@
 	,{
 		"Name":"CMTranslateRGB"
 		,"SetLastError":false
-		,"DllImport":"ICM32"
+		,"DllImport":"ICM32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3243,7 +3258,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hcmTransform","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
-			,{"Name":"ColorRef","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"ColorRef","Type":{"Kind":"ApiRef","Name":"COLORREF","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpColorRef","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
@@ -3251,7 +3266,7 @@
 	,{
 		"Name":"CMTranslateRGBs"
 		,"SetLastError":false
-		,"DllImport":"ICM32"
+		,"DllImport":"ICM32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3272,7 +3287,7 @@
 	,{
 		"Name":"CMCreateTransformExtW"
 		,"SetLastError":false
-		,"DllImport":"ICM32"
+		,"DllImport":"ICM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3288,20 +3303,20 @@
 	,{
 		"Name":"CMDeleteTransform"
 		,"SetLastError":false
-		,"DllImport":"ICM32"
+		,"DllImport":"ICM32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hcmTransform","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In","Out"]}
+			{"Name":"hcmTransform","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"CMGetInfo"
 		,"SetLastError":false
-		,"DllImport":"ICM32"
+		,"DllImport":"ICM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3314,7 +3329,7 @@
 	,{
 		"Name":"CMGetNamedProfileInfo"
 		,"SetLastError":false
-		,"DllImport":"ICM32"
+		,"DllImport":"ICM32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3328,7 +3343,7 @@
 	,{
 		"Name":"CMIsProfileValid"
 		,"SetLastError":false
-		,"DllImport":"ICM32"
+		,"DllImport":"ICM32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3342,7 +3357,7 @@
 	,{
 		"Name":"CMTranslateColors"
 		,"SetLastError":false
-		,"DllImport":"ICM32"
+		,"DllImport":"ICM32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3360,7 +3375,7 @@
 	,{
 		"Name":"CMTranslateRGBsExt"
 		,"SetLastError":false
-		,"DllImport":"ICM32"
+		,"DllImport":"ICM32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3383,7 +3398,7 @@
 	,{
 		"Name":"WcsOpenColorProfileA"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3402,7 +3417,7 @@
 	,{
 		"Name":"WcsOpenColorProfileW"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3421,7 +3436,7 @@
 	,{
 		"Name":"WcsCreateIccProfile"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3435,7 +3450,7 @@
 	,{
 		"Name":"WcsGetCalibrationManagementState"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3448,7 +3463,7 @@
 	,{
 		"Name":"WcsSetCalibrationManagementState"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3461,7 +3476,7 @@
 	,{
 		"Name":"ColorProfileAddDisplayAssociation"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3479,7 +3494,7 @@
 	,{
 		"Name":"ColorProfileRemoveDisplayAssociation"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3496,7 +3511,7 @@
 	,{
 		"Name":"ColorProfileSetDisplayDefaultAssociation"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3514,7 +3529,7 @@
 	,{
 		"Name":"ColorProfileGetDisplayList"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3531,7 +3546,7 @@
 	,{
 		"Name":"ColorProfileGetDisplayDefault"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3549,7 +3564,7 @@
 	,{
 		"Name":"ColorProfileGetDisplayUserScope"
 		,"SetLastError":false
-		,"DllImport":"mscms"
+		,"DllImport":"mscms.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

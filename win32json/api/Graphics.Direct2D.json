@@ -2990,7 +2990,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"drawingStateBlock","Type":{"Kind":"ApiRef","Name":"ID2D1DrawingStateBlock","TargetKind":"Com","Api":"Graphics.Direct2D","Parents":[]},"Attrs":["In","Out"]}
+					{"Name":"drawingStateBlock","Type":{"Kind":"ApiRef","Name":"ID2D1DrawingStateBlock","TargetKind":"Com","Api":"Graphics.Direct2D","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -3295,6 +3295,7 @@
 			,{
 				"Name":"GetDesktopDpi"
 				,"SetLastError":false
+				,"Obsolete":true
 				,"ReturnType":{"Kind":"Native","Name":"Void"}
 				,"ReturnAttrs":[]
 				,"Architectures":[]
@@ -6857,7 +6858,7 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"__AnonymousBase_d2d1_1helper_L45_C31","Type":{"Kind":"ApiRef","Name":"D2D_MATRIX_4X3_F","TargetKind":"Default","Api":"Graphics.Direct2D.Common","Parents":[]},"Attrs":[]}
+			{"Name":"Base","Type":{"Kind":"ApiRef","Name":"D2D_MATRIX_4X3_F","TargetKind":"Default","Api":"Graphics.Direct2D.Common","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -6870,7 +6871,7 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"__AnonymousBase_d2d1_1helper_L97_C31","Type":{"Kind":"ApiRef","Name":"D2D_MATRIX_4X4_F","TargetKind":"Default","Api":"Graphics.Direct2D.Common","Parents":[]},"Attrs":[]}
+			{"Name":"Base","Type":{"Kind":"ApiRef","Name":"D2D_MATRIX_4X4_F","TargetKind":"Default","Api":"Graphics.Direct2D.Common","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -6883,7 +6884,7 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"__AnonymousBase_d2d1_1helper_L472_C31","Type":{"Kind":"ApiRef","Name":"D2D_MATRIX_5X4_F","TargetKind":"Default","Api":"Graphics.Direct2D.Common","Parents":[]},"Attrs":[]}
+			{"Name":"Base","Type":{"Kind":"ApiRef","Name":"D2D_MATRIX_5X4_F","TargetKind":"Default","Api":"Graphics.Direct2D.Common","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -11924,7 +11925,7 @@
 	{
 		"Name":"D2D1CreateFactory"
 		,"SetLastError":false
-		,"DllImport":"d2d1"
+		,"DllImport":"d2d1.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11934,13 +11935,13 @@
 			{"Name":"factoryType","Type":{"Kind":"ApiRef","Name":"D2D1_FACTORY_TYPE","TargetKind":"Default","Api":"Graphics.Direct2D","Parents":[]},"Attrs":["In"]}
 			,{"Name":"riid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
 			,{"Name":"pFactoryOptions","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"D2D1_FACTORY_OPTIONS","TargetKind":"Default","Api":"Graphics.Direct2D","Parents":[]}},"Attrs":["In","Optional","Const"]}
-			,{"Name":"ppIFactory","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out"]}
+			,{"Name":"ppIFactory","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","ComOutPtr"]}
 		]
 	}
 	,{
 		"Name":"D2D1MakeRotateMatrix"
 		,"SetLastError":false
-		,"DllImport":"d2d1"
+		,"DllImport":"d2d1.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11955,7 +11956,7 @@
 	,{
 		"Name":"D2D1MakeSkewMatrix"
 		,"SetLastError":false
-		,"DllImport":"d2d1"
+		,"DllImport":"d2d1.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11971,7 +11972,7 @@
 	,{
 		"Name":"D2D1IsMatrixInvertible"
 		,"SetLastError":false
-		,"DllImport":"d2d1"
+		,"DllImport":"d2d1.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11984,7 +11985,7 @@
 	,{
 		"Name":"D2D1InvertMatrix"
 		,"SetLastError":false
-		,"DllImport":"d2d1"
+		,"DllImport":"d2d1.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11997,7 +11998,7 @@
 	,{
 		"Name":"D2D1CreateDevice"
 		,"SetLastError":false
-		,"DllImport":"d2d1"
+		,"DllImport":"d2d1.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12012,7 +12013,7 @@
 	,{
 		"Name":"D2D1CreateDeviceContext"
 		,"SetLastError":false
-		,"DllImport":"d2d1"
+		,"DllImport":"d2d1.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12027,7 +12028,7 @@
 	,{
 		"Name":"D2D1ConvertColorSpace"
 		,"SetLastError":false
-		,"DllImport":"d2d1"
+		,"DllImport":"d2d1.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"D2D1_COLOR_F","TargetKind":"Default","Api":"Graphics.Direct2D.Common","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12042,7 +12043,7 @@
 	,{
 		"Name":"D2D1SinCos"
 		,"SetLastError":false
-		,"DllImport":"d2d1"
+		,"DllImport":"d2d1.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12057,7 +12058,7 @@
 	,{
 		"Name":"D2D1Tan"
 		,"SetLastError":false
-		,"DllImport":"d2d1"
+		,"DllImport":"d2d1.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Single"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12070,7 +12071,7 @@
 	,{
 		"Name":"D2D1Vec3Length"
 		,"SetLastError":false
-		,"DllImport":"d2d1"
+		,"DllImport":"d2d1.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Single"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12085,7 +12086,7 @@
 	,{
 		"Name":"D2D1ComputeMaximumScaleFactor"
 		,"SetLastError":false
-		,"DllImport":"d2d1"
+		,"DllImport":"d2d1.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Single"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12098,7 +12099,7 @@
 	,{
 		"Name":"D2D1GetGradientMeshInteriorPointsFromCoonsPatch"
 		,"SetLastError":false
-		,"DllImport":"d2d1"
+		,"DllImport":"d2d1.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

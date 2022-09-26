@@ -7786,6 +7786,83 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"OPENTNEFSTREAM"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"OpenTnefStream"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"OPENTNEFSTREAMEX"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"OpenTnefStreamEx"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GETTNEFSTREAMCODEPAGE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"GetTnefStreamCodePage"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"cbDisplayName"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":41
+		,"Attrs":[]
+	}
+	,{
+		"Name":"cbEmailName"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":11
+		,"Attrs":[]
+	}
+	,{
+		"Name":"cbSeverName"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":12
+		,"Attrs":[]
+	}
+	,{
+		"Name":"cbTYPE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":16
+		,"Attrs":[]
+	}
+	,{
+		"Name":"cbMaxIdData"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":200
+		,"Attrs":[]
+	}
+	,{
+		"Name":"prioLow"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":3
+		,"Attrs":[]
+	}
+	,{
+		"Name":"prioNorm"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2
+		,"Attrs":[]
+	}
+	,{
+		"Name":"prioHigh"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1
+		,"Attrs":[]
+	}
+	,{
 		"Name":"atypNull"
 		,"Type":{"Kind":"Native","Name":"Int32"}
 		,"ValueType":"Int32"
@@ -9220,6 +9297,47 @@
 						]
 					}
 					,{
+						"Name":"_GetGroupList_e__Struct"
+						,"Architectures":[]
+						,"Platform":null
+						,"Kind":"Struct"
+						,"Size":0
+						,"PackingSize":0
+						,"Fields":[
+							{"Name":"GroupList","Type":{"Kind":"ApiRef","Name":"LINEAGENTGROUPLIST","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]},"Attrs":[]}
+						]
+						,"NestedTypes":[
+						]
+					}
+					,{
+						"Name":"_GetAgentInfo_e__Struct"
+						,"Architectures":[]
+						,"Platform":null
+						,"Kind":"Struct"
+						,"Size":0
+						,"PackingSize":1
+						,"Fields":[
+							{"Name":"hAgent","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+							,{"Name":"AgentInfo","Type":{"Kind":"ApiRef","Name":"LINEAGENTINFO","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]},"Attrs":[]}
+						]
+						,"NestedTypes":[
+						]
+					}
+					,{
+						"Name":"_GetAgentCaps_e__Struct"
+						,"Architectures":[]
+						,"Platform":null
+						,"Kind":"Struct"
+						,"Size":0
+						,"PackingSize":1
+						,"Fields":[
+							{"Name":"dwAddressID","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+							,{"Name":"AgentCaps","Type":{"Kind":"ApiRef","Name":"LINEAGENTCAPS","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]},"Attrs":[]}
+						]
+						,"NestedTypes":[
+						]
+					}
+					,{
 						"Name":"_SetAgentSessionState_e__Struct"
 						,"Architectures":[]
 						,"Platform":null
@@ -9248,47 +9366,6 @@
 						,"NestedTypes":[
 						]
 					}
-					,{
-						"Name":"_GetGroupList_e__Struct"
-						,"Architectures":[]
-						,"Platform":null
-						,"Kind":"Struct"
-						,"Size":0
-						,"PackingSize":0
-						,"Fields":[
-							{"Name":"GroupList","Type":{"Kind":"ApiRef","Name":"LINEAGENTGROUPLIST","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]},"Attrs":[]}
-						]
-						,"NestedTypes":[
-						]
-					}
-					,{
-						"Name":"_GetAgentCaps_e__Struct"
-						,"Architectures":[]
-						,"Platform":null
-						,"Kind":"Struct"
-						,"Size":0
-						,"PackingSize":1
-						,"Fields":[
-							{"Name":"dwAddressID","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-							,{"Name":"AgentCaps","Type":{"Kind":"ApiRef","Name":"LINEAGENTCAPS","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]},"Attrs":[]}
-						]
-						,"NestedTypes":[
-						]
-					}
-					,{
-						"Name":"_GetAgentInfo_e__Struct"
-						,"Architectures":[]
-						,"Platform":null
-						,"Kind":"Struct"
-						,"Size":0
-						,"PackingSize":1
-						,"Fields":[
-							{"Name":"hAgent","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-							,{"Name":"AgentInfo","Type":{"Kind":"ApiRef","Name":"LINEAGENTINFO","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]},"Attrs":[]}
-						]
-						,"NestedTypes":[
-						]
-					}
 				]
 			}
 		]
@@ -9310,7 +9387,7 @@
 		]
 	}
 	,{
-		"Name":"linereqmakecallW_tag"
+		"Name":"LINEREQMAKECALLW"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -9348,7 +9425,7 @@
 		]
 	}
 	,{
-		"Name":"linereqmediacallW_tag"
+		"Name":"LINEREQMEDIACALLW"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -11300,9 +11377,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"bstrTerminalSuperclass","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"lMediaType","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
@@ -11621,9 +11696,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"TapiEvent","Type":{"Kind":"ApiRef","Name":"TAPI_EVENT","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]},"Attrs":["In"]}
 					,{"Name":"lSubEvent","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
@@ -11637,9 +11710,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"TapiEvent","Type":{"Kind":"ApiRef","Name":"TAPI_EVENT","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]},"Attrs":["In"]}
 					,{"Name":"lSubEvent","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
@@ -11704,9 +11775,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"AddressCap","Type":{"Kind":"ApiRef","Name":"ADDRESS_CAPABILITY","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]},"Attrs":["In"]}
 					,{"Name":"plCapability","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["Out","RetVal"]}
@@ -11719,9 +11788,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"AddressCapString","Type":{"Kind":"ApiRef","Name":"ADDRESS_CAPABILITY_STRING","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]},"Attrs":["In"]}
 					,{"Name":"ppCapabilityString","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
@@ -11871,9 +11938,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"pclCap","Type":{"Kind":"ApiRef","Name":"PHONECAPS_LONG","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]},"Attrs":["In"]}
 					,{"Name":"plCapability","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["Out","RetVal"]}
@@ -11886,9 +11951,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"pcsCap","Type":{"Kind":"ApiRef","Name":"PHONECAPS_STRING","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]},"Attrs":["In"]}
 					,{"Name":"ppCapability","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
@@ -11901,9 +11964,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"pAddress","Type":{"Kind":"ApiRef","Name":"ITAddress","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pTerminals","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
@@ -11929,9 +11990,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"lButtonID","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"pButtonMode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PHONE_BUTTON_MODE","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","RetVal"]}
@@ -11944,9 +12003,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"lButtonID","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"ButtonMode","Type":{"Kind":"ApiRef","Name":"PHONE_BUTTON_MODE","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]},"Attrs":["In"]}
@@ -11959,9 +12016,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"lButtonID","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"pButtonFunction","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PHONE_BUTTON_FUNCTION","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","RetVal"]}
@@ -11974,9 +12029,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"lButtonID","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"ButtonFunction","Type":{"Kind":"ApiRef","Name":"PHONE_BUTTON_FUNCTION","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]},"Attrs":["In"]}
@@ -11989,9 +12042,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"lButtonID","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"ppButtonText","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
@@ -12004,9 +12055,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"lButtonID","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"bstrButtonText","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
@@ -12019,9 +12068,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"lButtonID","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"pButtonState","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PHONE_BUTTON_STATE","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","RetVal"]}
@@ -12034,9 +12081,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"HookSwitchDevice","Type":{"Kind":"ApiRef","Name":"PHONE_HOOK_SWITCH_DEVICE","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pHookSwitchState","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PHONE_HOOK_SWITCH_STATE","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","RetVal"]}
@@ -12049,9 +12094,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"HookSwitchDevice","Type":{"Kind":"ApiRef","Name":"PHONE_HOOK_SWITCH_DEVICE","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]},"Attrs":["In"]}
 					,{"Name":"HookSwitchState","Type":{"Kind":"ApiRef","Name":"PHONE_HOOK_SWITCH_STATE","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]},"Attrs":["In"]}
@@ -12148,9 +12191,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"pcbCaps","Type":{"Kind":"ApiRef","Name":"PHONECAPS_BUFFER","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pVarBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
@@ -12163,9 +12204,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"lLampID","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"pLampMode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PHONE_LAMP_MODE","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","RetVal"]}
@@ -12178,9 +12217,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"lLampID","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"LampMode","Type":{"Kind":"ApiRef","Name":"PHONE_LAMP_MODE","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]},"Attrs":["In"]}
@@ -13023,9 +13060,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"CallInfoLong","Type":{"Kind":"ApiRef","Name":"CALLINFO_LONG","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]},"Attrs":["In"]}
 					,{"Name":"plCallInfoLongVal","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["Out","RetVal"]}
@@ -13038,9 +13073,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"CallInfoLong","Type":{"Kind":"ApiRef","Name":"CALLINFO_LONG","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]},"Attrs":["In"]}
 					,{"Name":"lCallInfoLongVal","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
@@ -13053,9 +13086,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"CallInfoString","Type":{"Kind":"ApiRef","Name":"CALLINFO_STRING","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]},"Attrs":["In"]}
 					,{"Name":"ppCallInfoString","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
@@ -13068,9 +13099,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"CallInfoString","Type":{"Kind":"ApiRef","Name":"CALLINFO_STRING","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pCallInfoString","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
@@ -13083,9 +13112,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"CallInfoBuffer","Type":{"Kind":"ApiRef","Name":"CALLINFO_BUFFER","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]},"Attrs":["In"]}
 					,{"Name":"ppCallInfoBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
@@ -13098,9 +13125,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"CallInfoBuffer","Type":{"Kind":"ApiRef","Name":"CALLINFO_BUFFER","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pCallInfoBuffer","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
@@ -13162,9 +13187,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"TapiEvent","Type":{"Kind":"ApiRef","Name":"TAPI_EVENT","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]},"Attrs":["In"]}
 					,{"Name":"lSubEvent","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
@@ -13178,9 +13201,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"TapiEvent","Type":{"Kind":"ApiRef","Name":"TAPI_EVENT","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]},"Attrs":["In"]}
 					,{"Name":"lSubEvent","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
@@ -13422,7 +13443,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"ppmt","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"AM_MEDIA_TYPE","TargetKind":"Default","Api":"Media.DirectShow","Parents":[]}}},"Attrs":["Out","RetVal"]}
+					{"Name":"ppmt","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"AM_MEDIA_TYPE","TargetKind":"Default","Api":"Media.MediaFoundation","Parents":[]}}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -13436,7 +13457,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pmt","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"AM_MEDIA_TYPE","TargetKind":"Default","Api":"Media.DirectShow","Parents":[]}},"Attrs":["In","Const"]}
+					{"Name":"pmt","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"AM_MEDIA_TYPE","TargetKind":"Default","Api":"Media.MediaFoundation","Parents":[]}},"Attrs":["In","Const"]}
 				]
 			}
 			,{
@@ -14253,9 +14274,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"Index","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"plFrequency","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["Out","RetVal"]}
@@ -14268,9 +14287,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"Index","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"lFrequency","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
@@ -16384,9 +16401,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"Index","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"pVariant","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
@@ -16500,9 +16515,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"ForwardType","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"ppDestAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
@@ -16515,9 +16528,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"Forwardtype","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"ppCallerAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
@@ -16597,9 +16608,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"ForwardType","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"pDestAddressType","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["Out","RetVal"]}
@@ -16612,9 +16621,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"Forwardtype","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"pCallerAddressType","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["Out","RetVal"]}
@@ -18112,7 +18119,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppEnumAgentSession","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumAgentSession","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppEnumAgentSession","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumAgentSession","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -18126,7 +18133,7 @@
 				,"Params":[
 					{"Name":"pACDGroup","Type":{"Kind":"ApiRef","Name":"ITACDGroup","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]},"Attrs":["In","Optional"]}
 					,{"Name":"pAddress","Type":{"Kind":"ApiRef","Name":"ITAddress","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]},"Attrs":["In","Optional"]}
-					,{"Name":"ppAgentSession","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITAgentSession","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppAgentSession","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITAgentSession","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -18141,7 +18148,7 @@
 					{"Name":"pACDGroup","Type":{"Kind":"ApiRef","Name":"ITACDGroup","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]},"Attrs":["In","Optional"]}
 					,{"Name":"pAddress","Type":{"Kind":"ApiRef","Name":"ITAddress","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]},"Attrs":["In","Optional"]}
 					,{"Name":"pPIN","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"ppAgentSession","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITAgentSession","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppAgentSession","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITAgentSession","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -18155,7 +18162,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"ppID","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppID","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -18169,7 +18176,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"ppUser","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppUser","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -18361,7 +18368,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"ppAgent","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITAgent","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppAgent","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITAgent","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -18375,7 +18382,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"ppAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITAddress","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITAddress","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -18389,7 +18396,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"ppACDGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITACDGroup","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppACDGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITACDGroup","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -18609,7 +18616,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"ppName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -18621,7 +18628,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppEnumQueue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumQueue","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppEnumQueue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumQueue","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -18813,7 +18820,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"ppName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -18837,7 +18844,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"ppAgent","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITAgent","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppAgent","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITAgent","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -18875,7 +18882,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"ppSession","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITAgentSession","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppSession","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITAgentSession","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -18913,7 +18920,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"ppGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITACDGroup","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITACDGroup","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -18951,7 +18958,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"ppQueue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITQueue","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppQueue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITQueue","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -18989,7 +18996,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"ppAgentHandler","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITAgentHandler","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppAgentHandler","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITAgentHandler","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -19025,7 +19032,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppEnumHandler","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumAgentHandler","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppEnumHandler","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumAgentHandler","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -19063,7 +19070,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"ppName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -19075,7 +19082,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppAgent","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITAgent","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppAgent","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITAgent","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -19089,7 +19096,7 @@
 				,"Params":[
 					{"Name":"pID","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pPIN","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"ppAgent","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITAgent","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppAgent","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITAgent","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -19101,7 +19108,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppEnumACDGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumACDGroup","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppEnumACDGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumACDGroup","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -19113,7 +19120,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppEnumAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumAddress","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppEnumAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumAddress","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -19164,7 +19171,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"celt","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"ppElements","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITAgent","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppElements","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITAgent","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"pceltFetched","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -19200,7 +19207,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumAgent","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumAgent","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -19223,7 +19230,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"celt","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"ppElements","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITAgentSession","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppElements","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITAgentSession","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"pceltFetched","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -19259,7 +19266,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumAgentSession","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumAgentSession","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -19282,7 +19289,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"celt","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"ppElements","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITQueue","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppElements","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITQueue","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"pceltFetched","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -19318,7 +19325,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumQueue","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumQueue","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -19341,7 +19348,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"celt","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"ppElements","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITACDGroup","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppElements","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITACDGroup","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"pceltFetched","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -19377,7 +19384,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumACDGroup","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumACDGroup","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -19400,7 +19407,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"celt","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"ppElements","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITAgentHandler","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppElements","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITAgentHandler","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"pceltFetched","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -19436,7 +19443,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumAgentHandler","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumAgentHandler","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -19460,7 +19467,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"ppmt","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"AM_MEDIA_TYPE","TargetKind":"Default","Api":"Media.DirectShow","Parents":[]}}},"Attrs":["Out","Optional"]}
+					{"Name":"ppmt","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"AM_MEDIA_TYPE","TargetKind":"Default","Api":"Media.MediaFoundation","Parents":[]}}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -19474,7 +19481,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pmt","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"AM_MEDIA_TYPE","TargetKind":"Default","Api":"Media.DirectShow","Parents":[]}},"Attrs":["In","Const"]}
+					{"Name":"pmt","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"AM_MEDIA_TYPE","TargetKind":"Default","Api":"Media.MediaFoundation","Parents":[]}},"Attrs":["In","Const"]}
 				]
 			}
 		]
@@ -19752,20 +19759,6 @@
 						]
 					}
 					,{
-						"Name":"_MSP_TSP_DATA_e__Struct"
-						,"Architectures":[]
-						,"Platform":null
-						,"Kind":"Struct"
-						,"Size":0
-						,"PackingSize":0
-						,"Fields":[
-							{"Name":"dwBufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-							,{"Name":"pBuffer","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
-						]
-						,"NestedTypes":[
-						]
-					}
-					,{
 						"Name":"_MSP_TTS_TERMINAL_EVENT_INFO_e__Struct"
 						,"Architectures":[]
 						,"Platform":null
@@ -19775,6 +19768,20 @@
 						,"Fields":[
 							{"Name":"pTTSTerminal","Type":{"Kind":"ApiRef","Name":"ITTerminal","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]},"Attrs":[]}
 							,{"Name":"hrErrorCode","Type":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+						]
+						,"NestedTypes":[
+						]
+					}
+					,{
+						"Name":"_MSP_TSP_DATA_e__Struct"
+						,"Architectures":[]
+						,"Platform":null
+						,"Kind":"Struct"
+						,"Size":0
+						,"PackingSize":0
+						,"Fields":[
+							{"Name":"dwBufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+							,{"Name":"pBuffer","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]
@@ -19882,7 +19889,7 @@
 					,{"Name":"dwReserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"dwMediaType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pOuterUnknown","Type":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In","Optional"]}
-					,{"Name":"ppStreamControl","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppStreamControl","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -20358,9 +20365,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"dwAddressType","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"pVariant","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
@@ -20678,9 +20683,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"DirectoryObjectType","Type":{"Kind":"ApiRef","Name":"DIRECTORY_OBJECT_TYPE","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pName","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
@@ -20894,7 +20897,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"ppDescription","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppDescription","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -20932,7 +20935,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"ppRequestID","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppRequestID","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -21016,7 +21019,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"ppAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -21056,7 +21059,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppEnumAddresses","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumBstr","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppEnumAddresses","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumBstr","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -21079,7 +21082,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"celt","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"ppScopes","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IMcastScope","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppScopes","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IMcastScope","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"pceltFetched","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out","Optional"]}
 				]
 			}
@@ -21115,7 +21118,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumMcastScope","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumMcastScope","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -21151,7 +21154,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppEnumMcastScope","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumMcastScope","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppEnumMcastScope","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumMcastScope","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -21167,7 +21170,7 @@
 					,{"Name":"LeaseStartTime","Type":{"Kind":"Native","Name":"Double"},"Attrs":["In"]}
 					,{"Name":"LeaseStopTime","Type":{"Kind":"Native","Name":"Double"},"Attrs":["In"]}
 					,{"Name":"NumAddresses","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"ppLeaseResponse","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IMcastLeaseInfo","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppLeaseResponse","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IMcastLeaseInfo","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -21181,7 +21184,7 @@
 				,"Params":[
 					{"Name":"lReserved","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"pRenewRequest","Type":{"Kind":"ApiRef","Name":"IMcastLeaseInfo","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]},"Attrs":["In","Optional"]}
-					,{"Name":"ppRenewResponse","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IMcastLeaseInfo","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppRenewResponse","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IMcastLeaseInfo","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -21208,10 +21211,10 @@
 					{"Name":"LeaseStartTime","Type":{"Kind":"Native","Name":"Double"},"Attrs":["In"]}
 					,{"Name":"LeaseStopTime","Type":{"Kind":"Native","Name":"Double"},"Attrs":["In"]}
 					,{"Name":"dwNumAddresses","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"ppAddresses","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional"]}
+					,{"Name":"ppAddresses","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In"]}
 					,{"Name":"pRequestID","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pServerAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"ppReleaseRequest","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IMcastLeaseInfo","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppReleaseRequest","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IMcastLeaseInfo","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -21228,7 +21231,7 @@
 					,{"Name":"vAddresses","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pRequestID","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pServerAddress","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"ppReleaseRequest","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IMcastLeaseInfo","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppReleaseRequest","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IMcastLeaseInfo","TargetKind":"Com","Api":"Devices.Tapi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -21430,7 +21433,7 @@
 		]
 	}
 	,{
-		"Name":"_renddata"
+		"Name":"RENDDATA"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -21447,7 +21450,7 @@
 		]
 	}
 	,{
-		"Name":"_dtr"
+		"Name":"DTR"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -21466,7 +21469,7 @@
 		]
 	}
 	,{
-		"Name":"_trp"
+		"Name":"TRP"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -21482,7 +21485,7 @@
 		]
 	}
 	,{
-		"Name":"_ADDR_ALIAS"
+		"Name":"ADDRALIAS"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -21521,7 +21524,7 @@
 				,"Size":0
 				,"PackingSize":0
 				,"Fields":[
-					{"Name":"alias","Type":{"Kind":"ApiRef","Name":"_ADDR_ALIAS","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]},"Attrs":[]}
+					{"Name":"alias","Type":{"Kind":"ApiRef","Name":"ADDRALIAS","TargetKind":"Default","Api":"Devices.Tapi","Parents":[]},"Attrs":[]}
 					,{"Name":"rgchInterNet","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 				]
 				,"NestedTypes":[
@@ -21535,7 +21538,7 @@
 	{
 		"Name":"lineAccept"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21550,7 +21553,7 @@
 	,{
 		"Name":"lineAddProvider"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21565,7 +21568,7 @@
 	,{
 		"Name":"lineAddProviderA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21580,7 +21583,7 @@
 	,{
 		"Name":"lineAddProviderW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21595,7 +21598,7 @@
 	,{
 		"Name":"lineAddToConference"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21609,7 +21612,7 @@
 	,{
 		"Name":"lineAgentSpecific"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21626,7 +21629,7 @@
 	,{
 		"Name":"lineAnswer"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21641,7 +21644,7 @@
 	,{
 		"Name":"lineBlindTransfer"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21656,7 +21659,7 @@
 	,{
 		"Name":"lineBlindTransferA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21671,7 +21674,7 @@
 	,{
 		"Name":"lineBlindTransferW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21686,7 +21689,7 @@
 	,{
 		"Name":"lineClose"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21699,7 +21702,7 @@
 	,{
 		"Name":"lineCompleteCall"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21715,7 +21718,7 @@
 	,{
 		"Name":"lineCompleteTransfer"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21731,7 +21734,7 @@
 	,{
 		"Name":"lineConfigDialog"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21746,7 +21749,7 @@
 	,{
 		"Name":"lineConfigDialogA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21761,7 +21764,7 @@
 	,{
 		"Name":"lineConfigDialogW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21776,7 +21779,7 @@
 	,{
 		"Name":"lineConfigDialogEdit"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21794,7 +21797,7 @@
 	,{
 		"Name":"lineConfigDialogEditA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21812,7 +21815,7 @@
 	,{
 		"Name":"lineConfigDialogEditW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21830,7 +21833,7 @@
 	,{
 		"Name":"lineConfigProvider"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21844,7 +21847,7 @@
 	,{
 		"Name":"lineCreateAgentW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21860,7 +21863,7 @@
 	,{
 		"Name":"lineCreateAgentA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21876,7 +21879,7 @@
 	,{
 		"Name":"lineCreateAgentSessionW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21894,7 +21897,7 @@
 	,{
 		"Name":"lineCreateAgentSessionA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21912,7 +21915,7 @@
 	,{
 		"Name":"lineDeallocateCall"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21925,7 +21928,7 @@
 	,{
 		"Name":"lineDevSpecific"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21942,7 +21945,7 @@
 	,{
 		"Name":"lineDevSpecificFeature"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21958,7 +21961,7 @@
 	,{
 		"Name":"lineDial"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21973,7 +21976,7 @@
 	,{
 		"Name":"lineDialA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21988,7 +21991,7 @@
 	,{
 		"Name":"lineDialW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22003,7 +22006,7 @@
 	,{
 		"Name":"lineDrop"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22018,7 +22021,7 @@
 	,{
 		"Name":"lineForward"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22037,7 +22040,7 @@
 	,{
 		"Name":"lineForwardA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22056,7 +22059,7 @@
 	,{
 		"Name":"lineForwardW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22075,7 +22078,7 @@
 	,{
 		"Name":"lineGatherDigits"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22094,7 +22097,7 @@
 	,{
 		"Name":"lineGatherDigitsA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22113,7 +22116,7 @@
 	,{
 		"Name":"lineGatherDigitsW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22132,7 +22135,7 @@
 	,{
 		"Name":"lineGenerateDigits"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22148,7 +22151,7 @@
 	,{
 		"Name":"lineGenerateDigitsA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22164,7 +22167,7 @@
 	,{
 		"Name":"lineGenerateDigitsW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22180,7 +22183,7 @@
 	,{
 		"Name":"lineGenerateTone"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22197,7 +22200,7 @@
 	,{
 		"Name":"lineGetAddressCaps"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22215,7 +22218,7 @@
 	,{
 		"Name":"lineGetAddressCapsA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22233,7 +22236,7 @@
 	,{
 		"Name":"lineGetAddressCapsW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22251,7 +22254,7 @@
 	,{
 		"Name":"lineGetAddressID"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22268,7 +22271,7 @@
 	,{
 		"Name":"lineGetAddressIDA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22285,7 +22288,7 @@
 	,{
 		"Name":"lineGetAddressIDW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22302,7 +22305,7 @@
 	,{
 		"Name":"lineGetAddressStatus"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22317,7 +22320,7 @@
 	,{
 		"Name":"lineGetAddressStatusA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22332,7 +22335,7 @@
 	,{
 		"Name":"lineGetAddressStatusW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22347,7 +22350,7 @@
 	,{
 		"Name":"lineGetAgentActivityListA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22362,7 +22365,7 @@
 	,{
 		"Name":"lineGetAgentActivityListW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22377,7 +22380,7 @@
 	,{
 		"Name":"lineGetAgentCapsA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22394,7 +22397,7 @@
 	,{
 		"Name":"lineGetAgentCapsW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22411,7 +22414,7 @@
 	,{
 		"Name":"lineGetAgentGroupListA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22426,7 +22429,7 @@
 	,{
 		"Name":"lineGetAgentGroupListW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22441,7 +22444,7 @@
 	,{
 		"Name":"lineGetAgentInfo"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22456,7 +22459,7 @@
 	,{
 		"Name":"lineGetAgentSessionInfo"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22471,7 +22474,7 @@
 	,{
 		"Name":"lineGetAgentSessionList"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22486,7 +22489,7 @@
 	,{
 		"Name":"lineGetAgentStatusA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22501,7 +22504,7 @@
 	,{
 		"Name":"lineGetAgentStatusW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22516,7 +22519,7 @@
 	,{
 		"Name":"lineGetAppPriority"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22534,7 +22537,7 @@
 	,{
 		"Name":"lineGetAppPriorityA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22552,7 +22555,7 @@
 	,{
 		"Name":"lineGetAppPriorityW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22570,7 +22573,7 @@
 	,{
 		"Name":"lineGetCallInfo"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22584,7 +22587,7 @@
 	,{
 		"Name":"lineGetCallInfoA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22598,7 +22601,7 @@
 	,{
 		"Name":"lineGetCallInfoW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22612,7 +22615,7 @@
 	,{
 		"Name":"lineGetCallStatus"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22626,7 +22629,7 @@
 	,{
 		"Name":"lineGetConfRelatedCalls"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22640,7 +22643,7 @@
 	,{
 		"Name":"lineGetCountry"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22655,7 +22658,7 @@
 	,{
 		"Name":"lineGetCountryA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22670,7 +22673,7 @@
 	,{
 		"Name":"lineGetCountryW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22685,7 +22688,7 @@
 	,{
 		"Name":"lineGetDevCaps"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22702,7 +22705,7 @@
 	,{
 		"Name":"lineGetDevCapsA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22719,7 +22722,7 @@
 	,{
 		"Name":"lineGetDevCapsW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22736,7 +22739,7 @@
 	,{
 		"Name":"lineGetDevConfig"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22751,7 +22754,7 @@
 	,{
 		"Name":"lineGetDevConfigA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22766,7 +22769,7 @@
 	,{
 		"Name":"lineGetDevConfigW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22781,7 +22784,7 @@
 	,{
 		"Name":"lineGetGroupListA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22795,7 +22798,7 @@
 	,{
 		"Name":"lineGetGroupListW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22809,7 +22812,7 @@
 	,{
 		"Name":"lineGetIcon"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22824,7 +22827,7 @@
 	,{
 		"Name":"lineGetIconA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22839,7 +22842,7 @@
 	,{
 		"Name":"lineGetIconW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22854,7 +22857,7 @@
 	,{
 		"Name":"lineGetID"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22872,7 +22875,7 @@
 	,{
 		"Name":"lineGetIDA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22890,7 +22893,7 @@
 	,{
 		"Name":"lineGetIDW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22908,7 +22911,7 @@
 	,{
 		"Name":"lineGetLineDevStatus"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22922,7 +22925,7 @@
 	,{
 		"Name":"lineGetLineDevStatusA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22936,7 +22939,7 @@
 	,{
 		"Name":"lineGetLineDevStatusW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22950,7 +22953,7 @@
 	,{
 		"Name":"lineGetMessage"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22965,7 +22968,7 @@
 	,{
 		"Name":"lineGetNewCalls"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22981,7 +22984,7 @@
 	,{
 		"Name":"lineGetNumRings"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22996,7 +22999,7 @@
 	,{
 		"Name":"lineGetProviderList"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23010,7 +23013,7 @@
 	,{
 		"Name":"lineGetProviderListA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23024,7 +23027,7 @@
 	,{
 		"Name":"lineGetProviderListW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23038,7 +23041,7 @@
 	,{
 		"Name":"lineGetProxyStatus"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23054,7 +23057,7 @@
 	,{
 		"Name":"lineGetQueueInfo"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23069,7 +23072,7 @@
 	,{
 		"Name":"lineGetQueueListA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23084,7 +23087,7 @@
 	,{
 		"Name":"lineGetQueueListW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23099,7 +23102,7 @@
 	,{
 		"Name":"lineGetRequest"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23114,7 +23117,7 @@
 	,{
 		"Name":"lineGetRequestA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23129,7 +23132,7 @@
 	,{
 		"Name":"lineGetRequestW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23144,7 +23147,7 @@
 	,{
 		"Name":"lineGetStatusMessages"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23159,7 +23162,7 @@
 	,{
 		"Name":"lineGetTranslateCaps"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23174,7 +23177,7 @@
 	,{
 		"Name":"lineGetTranslateCapsA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23189,7 +23192,7 @@
 	,{
 		"Name":"lineGetTranslateCapsW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23204,7 +23207,7 @@
 	,{
 		"Name":"lineHandoff"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23219,7 +23222,7 @@
 	,{
 		"Name":"lineHandoffA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23234,7 +23237,7 @@
 	,{
 		"Name":"lineHandoffW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23249,7 +23252,7 @@
 	,{
 		"Name":"lineHold"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23262,7 +23265,7 @@
 	,{
 		"Name":"lineInitialize"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23279,7 +23282,7 @@
 	,{
 		"Name":"lineInitializeExA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23298,7 +23301,7 @@
 	,{
 		"Name":"lineInitializeExW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23317,7 +23320,7 @@
 	,{
 		"Name":"lineMakeCall"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23334,7 +23337,7 @@
 	,{
 		"Name":"lineMakeCallA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23351,7 +23354,7 @@
 	,{
 		"Name":"lineMakeCallW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23368,7 +23371,7 @@
 	,{
 		"Name":"lineMonitorDigits"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23382,7 +23385,7 @@
 	,{
 		"Name":"lineMonitorMedia"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23396,7 +23399,7 @@
 	,{
 		"Name":"lineMonitorTones"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23411,7 +23414,7 @@
 	,{
 		"Name":"lineNegotiateAPIVersion"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23429,7 +23432,7 @@
 	,{
 		"Name":"lineNegotiateExtVersion"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23447,7 +23450,7 @@
 	,{
 		"Name":"lineOpen"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23468,7 +23471,7 @@
 	,{
 		"Name":"lineOpenA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23489,7 +23492,7 @@
 	,{
 		"Name":"lineOpenW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23510,7 +23513,7 @@
 	,{
 		"Name":"linePark"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23526,7 +23529,7 @@
 	,{
 		"Name":"lineParkA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23542,7 +23545,7 @@
 	,{
 		"Name":"lineParkW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23558,7 +23561,7 @@
 	,{
 		"Name":"linePickup"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23575,7 +23578,7 @@
 	,{
 		"Name":"linePickupA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23592,7 +23595,7 @@
 	,{
 		"Name":"linePickupW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23609,7 +23612,7 @@
 	,{
 		"Name":"linePrepareAddToConference"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23624,7 +23627,7 @@
 	,{
 		"Name":"linePrepareAddToConferenceA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23639,7 +23642,7 @@
 	,{
 		"Name":"linePrepareAddToConferenceW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23654,7 +23657,7 @@
 	,{
 		"Name":"lineProxyMessage"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23672,7 +23675,7 @@
 	,{
 		"Name":"lineProxyResponse"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23687,7 +23690,7 @@
 	,{
 		"Name":"lineRedirect"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23702,7 +23705,7 @@
 	,{
 		"Name":"lineRedirectA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23717,7 +23720,7 @@
 	,{
 		"Name":"lineRedirectW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23732,7 +23735,7 @@
 	,{
 		"Name":"lineRegisterRequestRecipient"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23748,7 +23751,7 @@
 	,{
 		"Name":"lineReleaseUserUserInfo"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23761,7 +23764,7 @@
 	,{
 		"Name":"lineRemoveFromConference"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23774,7 +23777,7 @@
 	,{
 		"Name":"lineRemoveProvider"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23788,7 +23791,7 @@
 	,{
 		"Name":"lineSecureCall"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23801,7 +23804,7 @@
 	,{
 		"Name":"lineSendUserUserInfo"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23816,7 +23819,7 @@
 	,{
 		"Name":"lineSetAgentActivity"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23831,7 +23834,7 @@
 	,{
 		"Name":"lineSetAgentGroup"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23846,7 +23849,7 @@
 	,{
 		"Name":"lineSetAgentMeasurementPeriod"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23861,7 +23864,7 @@
 	,{
 		"Name":"lineSetAgentSessionState"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23877,7 +23880,7 @@
 	,{
 		"Name":"lineSetAgentStateEx"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23893,7 +23896,7 @@
 	,{
 		"Name":"lineSetAgentState"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23909,7 +23912,7 @@
 	,{
 		"Name":"lineSetAppPriority"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23927,7 +23930,7 @@
 	,{
 		"Name":"lineSetAppPriorityA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23945,7 +23948,7 @@
 	,{
 		"Name":"lineSetAppPriorityW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23963,7 +23966,7 @@
 	,{
 		"Name":"lineSetAppSpecific"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23977,7 +23980,7 @@
 	,{
 		"Name":"lineSetCallData"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23992,7 +23995,7 @@
 	,{
 		"Name":"lineSetCallParams"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24009,7 +24012,7 @@
 	,{
 		"Name":"lineSetCallPrivilege"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24023,7 +24026,7 @@
 	,{
 		"Name":"lineSetCallQualityOfService"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24040,7 +24043,7 @@
 	,{
 		"Name":"lineSetCallTreatment"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24054,7 +24057,7 @@
 	,{
 		"Name":"lineSetCurrentLocation"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24068,7 +24071,7 @@
 	,{
 		"Name":"lineSetDevConfig"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24084,7 +24087,7 @@
 	,{
 		"Name":"lineSetDevConfigA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24100,7 +24103,7 @@
 	,{
 		"Name":"lineSetDevConfigW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24116,7 +24119,7 @@
 	,{
 		"Name":"lineSetLineDevStatus"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24131,7 +24134,7 @@
 	,{
 		"Name":"lineSetMediaControl"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24155,7 +24158,7 @@
 	,{
 		"Name":"lineSetMediaMode"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24169,7 +24172,7 @@
 	,{
 		"Name":"lineSetQueueMeasurementPeriod"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24184,7 +24187,7 @@
 	,{
 		"Name":"lineSetNumRings"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24199,7 +24202,7 @@
 	,{
 		"Name":"lineSetStatusMessages"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24214,7 +24217,7 @@
 	,{
 		"Name":"lineSetTerminal"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24233,7 +24236,7 @@
 	,{
 		"Name":"lineSetTollList"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24249,7 +24252,7 @@
 	,{
 		"Name":"lineSetTollListA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24265,7 +24268,7 @@
 	,{
 		"Name":"lineSetTollListW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24281,7 +24284,7 @@
 	,{
 		"Name":"lineSetupConference"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24299,7 +24302,7 @@
 	,{
 		"Name":"lineSetupConferenceA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24317,7 +24320,7 @@
 	,{
 		"Name":"lineSetupConferenceW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24335,7 +24338,7 @@
 	,{
 		"Name":"lineSetupTransfer"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24350,7 +24353,7 @@
 	,{
 		"Name":"lineSetupTransferA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24365,7 +24368,7 @@
 	,{
 		"Name":"lineSetupTransferW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24380,7 +24383,7 @@
 	,{
 		"Name":"lineShutdown"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24393,7 +24396,7 @@
 	,{
 		"Name":"lineSwapHold"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24407,7 +24410,7 @@
 	,{
 		"Name":"lineTranslateAddress"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24426,7 +24429,7 @@
 	,{
 		"Name":"lineTranslateAddressA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24445,7 +24448,7 @@
 	,{
 		"Name":"lineTranslateAddressW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24464,7 +24467,7 @@
 	,{
 		"Name":"lineTranslateDialog"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24481,7 +24484,7 @@
 	,{
 		"Name":"lineTranslateDialogA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24498,7 +24501,7 @@
 	,{
 		"Name":"lineTranslateDialogW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24515,7 +24518,7 @@
 	,{
 		"Name":"lineUncompleteCall"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24529,7 +24532,7 @@
 	,{
 		"Name":"lineUnhold"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24542,7 +24545,7 @@
 	,{
 		"Name":"lineUnpark"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24558,7 +24561,7 @@
 	,{
 		"Name":"lineUnparkA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24574,7 +24577,7 @@
 	,{
 		"Name":"lineUnparkW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24590,7 +24593,7 @@
 	,{
 		"Name":"phoneClose"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24603,7 +24606,7 @@
 	,{
 		"Name":"phoneConfigDialog"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24618,7 +24621,7 @@
 	,{
 		"Name":"phoneConfigDialogA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24633,7 +24636,7 @@
 	,{
 		"Name":"phoneConfigDialogW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24648,7 +24651,7 @@
 	,{
 		"Name":"phoneDevSpecific"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24663,7 +24666,7 @@
 	,{
 		"Name":"phoneGetButtonInfo"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24678,7 +24681,7 @@
 	,{
 		"Name":"phoneGetButtonInfoA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24693,7 +24696,7 @@
 	,{
 		"Name":"phoneGetButtonInfoW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24708,7 +24711,7 @@
 	,{
 		"Name":"phoneGetData"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24724,7 +24727,7 @@
 	,{
 		"Name":"phoneGetDevCaps"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24741,7 +24744,7 @@
 	,{
 		"Name":"phoneGetDevCapsA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24758,7 +24761,7 @@
 	,{
 		"Name":"phoneGetDevCapsW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24775,7 +24778,7 @@
 	,{
 		"Name":"phoneGetDisplay"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24789,7 +24792,7 @@
 	,{
 		"Name":"phoneGetGain"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24804,7 +24807,7 @@
 	,{
 		"Name":"phoneGetHookSwitch"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24818,7 +24821,7 @@
 	,{
 		"Name":"phoneGetIcon"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24833,7 +24836,7 @@
 	,{
 		"Name":"phoneGetIconA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24848,7 +24851,7 @@
 	,{
 		"Name":"phoneGetIconW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24863,7 +24866,7 @@
 	,{
 		"Name":"phoneGetID"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24878,7 +24881,7 @@
 	,{
 		"Name":"phoneGetIDA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24893,7 +24896,7 @@
 	,{
 		"Name":"phoneGetIDW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24908,7 +24911,7 @@
 	,{
 		"Name":"phoneGetLamp"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24923,7 +24926,7 @@
 	,{
 		"Name":"phoneGetMessage"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24938,7 +24941,7 @@
 	,{
 		"Name":"phoneGetRing"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24953,7 +24956,7 @@
 	,{
 		"Name":"phoneGetStatus"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24967,7 +24970,7 @@
 	,{
 		"Name":"phoneGetStatusA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24981,7 +24984,7 @@
 	,{
 		"Name":"phoneGetStatusW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -24995,7 +24998,7 @@
 	,{
 		"Name":"phoneGetStatusMessages"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25011,7 +25014,7 @@
 	,{
 		"Name":"phoneGetVolume"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25026,7 +25029,7 @@
 	,{
 		"Name":"phoneInitialize"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25043,7 +25046,7 @@
 	,{
 		"Name":"phoneInitializeExA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25062,7 +25065,7 @@
 	,{
 		"Name":"phoneInitializeExW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25081,7 +25084,7 @@
 	,{
 		"Name":"phoneNegotiateAPIVersion"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25099,7 +25102,7 @@
 	,{
 		"Name":"phoneNegotiateExtVersion"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25117,7 +25120,7 @@
 	,{
 		"Name":"phoneOpen"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25136,7 +25139,7 @@
 	,{
 		"Name":"phoneSetButtonInfo"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25151,7 +25154,7 @@
 	,{
 		"Name":"phoneSetButtonInfoA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25166,7 +25169,7 @@
 	,{
 		"Name":"phoneSetButtonInfoW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25181,7 +25184,7 @@
 	,{
 		"Name":"phoneSetData"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25197,7 +25200,7 @@
 	,{
 		"Name":"phoneSetDisplay"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25214,7 +25217,7 @@
 	,{
 		"Name":"phoneSetGain"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25229,7 +25232,7 @@
 	,{
 		"Name":"phoneSetHookSwitch"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25244,7 +25247,7 @@
 	,{
 		"Name":"phoneSetLamp"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25259,7 +25262,7 @@
 	,{
 		"Name":"phoneSetRing"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25274,7 +25277,7 @@
 	,{
 		"Name":"phoneSetStatusMessages"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25290,7 +25293,7 @@
 	,{
 		"Name":"phoneSetVolume"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25305,7 +25308,7 @@
 	,{
 		"Name":"phoneShutdown"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25318,7 +25321,7 @@
 	,{
 		"Name":"tapiGetLocationInfo"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25332,7 +25335,7 @@
 	,{
 		"Name":"tapiGetLocationInfoA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25346,7 +25349,7 @@
 	,{
 		"Name":"tapiGetLocationInfoW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25360,7 +25363,7 @@
 	,{
 		"Name":"tapiRequestDrop"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25374,7 +25377,7 @@
 	,{
 		"Name":"tapiRequestMakeCall"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25390,7 +25393,7 @@
 	,{
 		"Name":"tapiRequestMakeCallA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25406,7 +25409,7 @@
 	,{
 		"Name":"tapiRequestMakeCallW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25422,7 +25425,7 @@
 	,{
 		"Name":"tapiRequestMediaCall"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25444,7 +25447,7 @@
 	,{
 		"Name":"tapiRequestMediaCallA"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25466,7 +25469,7 @@
 	,{
 		"Name":"tapiRequestMediaCallW"
 		,"SetLastError":false
-		,"DllImport":"TAPI32"
+		,"DllImport":"TAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25488,7 +25491,7 @@
 	,{
 		"Name":"OpenTnefStream"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25507,7 +25510,7 @@
 	,{
 		"Name":"OpenTnefStreamEx"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -25527,7 +25530,7 @@
 	,{
 		"Name":"GetTnefStreamCodepage"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

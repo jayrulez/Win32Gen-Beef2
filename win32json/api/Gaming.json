@@ -1,6 +1,20 @@
 {
 
 "Constants":[
+	{
+		"Name":"ID_GDF_XML_STR"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"__GDF_XML"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"ID_GDF_THUMBNAIL_STR"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"__GDF_THUMBNAIL"
+		,"Attrs":[]
+	}
 ]
 
 ,"Types":[
@@ -211,7 +225,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"categoryIndex","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":["In"]}
-					,{"Name":"pTitle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"pTitle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -302,7 +316,7 @@
 					{"Name":"GDFBinaryPath","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 					,{"Name":"openType","Type":{"Kind":"ApiRef","Name":"GAMESTATS_OPEN_TYPE","TargetKind":"Default","Api":"Gaming","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pOpenResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"GAMESTATS_OPEN_RESULT","TargetKind":"Default","Api":"Gaming","Parents":[]}},"Attrs":["Out"]}
-					,{"Name":"ppiStats","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IGameStatistics","TargetKind":"Com","Api":"Gaming","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppiStats","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IGameStatistics","TargetKind":"Com","Api":"Gaming","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -905,7 +919,7 @@
 	{
 		"Name":"HasExpandedResources"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-gaming-expandedresources-l1-1-0"
+		,"DllImport":"api-ms-win-gaming-expandedresources-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -918,7 +932,7 @@
 	,{
 		"Name":"GetExpandedResourceExclusiveCpuCount"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-gaming-expandedresources-l1-1-0"
+		,"DllImport":"api-ms-win-gaming-expandedresources-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -931,7 +945,7 @@
 	,{
 		"Name":"ReleaseExclusiveCpuSets"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-gaming-expandedresources-l1-1-0"
+		,"DllImport":"api-ms-win-gaming-expandedresources-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -943,7 +957,7 @@
 	,{
 		"Name":"GetGamingDeviceModelInformation"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-gaming-deviceinformation-l1-1-0"
+		,"DllImport":"api-ms-win-gaming-deviceinformation-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -956,7 +970,7 @@
 	,{
 		"Name":"ShowGameInviteUI"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-gaming-tcui-l1-1-0"
+		,"DllImport":"api-ms-win-gaming-tcui-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -974,7 +988,7 @@
 	,{
 		"Name":"ShowPlayerPickerUI"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-gaming-tcui-l1-1-0"
+		,"DllImport":"api-ms-win-gaming-tcui-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -995,7 +1009,7 @@
 	,{
 		"Name":"ShowProfileCardUI"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-gaming-tcui-l1-1-0"
+		,"DllImport":"api-ms-win-gaming-tcui-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1010,7 +1024,7 @@
 	,{
 		"Name":"ShowChangeFriendRelationshipUI"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-gaming-tcui-l1-1-0"
+		,"DllImport":"api-ms-win-gaming-tcui-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1025,7 +1039,7 @@
 	,{
 		"Name":"ShowTitleAchievementsUI"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-gaming-tcui-l1-1-0"
+		,"DllImport":"api-ms-win-gaming-tcui-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1040,7 +1054,7 @@
 	,{
 		"Name":"ProcessPendingGameUI"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-gaming-tcui-l1-1-0"
+		,"DllImport":"api-ms-win-gaming-tcui-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1053,7 +1067,7 @@
 	,{
 		"Name":"TryCancelPendingGameUI"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-gaming-tcui-l1-1-0"
+		,"DllImport":"api-ms-win-gaming-tcui-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1065,7 +1079,7 @@
 	,{
 		"Name":"CheckGamingPrivilegeWithUI"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-gaming-tcui-l1-1-1"
+		,"DllImport":"api-ms-win-gaming-tcui-l1-1-1.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1083,7 +1097,7 @@
 	,{
 		"Name":"CheckGamingPrivilegeSilently"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-gaming-tcui-l1-1-1"
+		,"DllImport":"api-ms-win-gaming-tcui-l1-1-1.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1099,7 +1113,7 @@
 	,{
 		"Name":"ShowGameInviteUIForUser"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-gaming-tcui-l1-1-2"
+		,"DllImport":"api-ms-win-gaming-tcui-l1-1-2.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1118,7 +1132,7 @@
 	,{
 		"Name":"ShowPlayerPickerUIForUser"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-gaming-tcui-l1-1-2"
+		,"DllImport":"api-ms-win-gaming-tcui-l1-1-2.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1140,7 +1154,7 @@
 	,{
 		"Name":"ShowProfileCardUIForUser"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-gaming-tcui-l1-1-2"
+		,"DllImport":"api-ms-win-gaming-tcui-l1-1-2.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1156,7 +1170,7 @@
 	,{
 		"Name":"ShowChangeFriendRelationshipUIForUser"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-gaming-tcui-l1-1-2"
+		,"DllImport":"api-ms-win-gaming-tcui-l1-1-2.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1172,7 +1186,7 @@
 	,{
 		"Name":"ShowTitleAchievementsUIForUser"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-gaming-tcui-l1-1-2"
+		,"DllImport":"api-ms-win-gaming-tcui-l1-1-2.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1188,7 +1202,7 @@
 	,{
 		"Name":"CheckGamingPrivilegeWithUIForUser"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-gaming-tcui-l1-1-2"
+		,"DllImport":"api-ms-win-gaming-tcui-l1-1-2.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1207,7 +1221,7 @@
 	,{
 		"Name":"CheckGamingPrivilegeSilentlyForUser"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-gaming-tcui-l1-1-2"
+		,"DllImport":"api-ms-win-gaming-tcui-l1-1-2.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1224,7 +1238,7 @@
 	,{
 		"Name":"ShowGameInviteUIWithContext"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-gaming-tcui-l1-1-3"
+		,"DllImport":"api-ms-win-gaming-tcui-l1-1-3.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1243,7 +1257,7 @@
 	,{
 		"Name":"ShowGameInviteUIWithContextForUser"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-gaming-tcui-l1-1-3"
+		,"DllImport":"api-ms-win-gaming-tcui-l1-1-3.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1263,7 +1277,7 @@
 	,{
 		"Name":"ShowGameInfoUI"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-gaming-tcui-l1-1-4"
+		,"DllImport":"api-ms-win-gaming-tcui-l1-1-4.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1278,7 +1292,7 @@
 	,{
 		"Name":"ShowGameInfoUIForUser"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-gaming-tcui-l1-1-4"
+		,"DllImport":"api-ms-win-gaming-tcui-l1-1-4.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1294,7 +1308,7 @@
 	,{
 		"Name":"ShowFindFriendsUI"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-gaming-tcui-l1-1-4"
+		,"DllImport":"api-ms-win-gaming-tcui-l1-1-4.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1308,7 +1322,7 @@
 	,{
 		"Name":"ShowFindFriendsUIForUser"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-gaming-tcui-l1-1-4"
+		,"DllImport":"api-ms-win-gaming-tcui-l1-1-4.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1323,7 +1337,7 @@
 	,{
 		"Name":"ShowCustomizeUserProfileUI"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-gaming-tcui-l1-1-4"
+		,"DllImport":"api-ms-win-gaming-tcui-l1-1-4.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1337,7 +1351,7 @@
 	,{
 		"Name":"ShowCustomizeUserProfileUIForUser"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-gaming-tcui-l1-1-4"
+		,"DllImport":"api-ms-win-gaming-tcui-l1-1-4.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1352,7 +1366,7 @@
 	,{
 		"Name":"ShowUserSettingsUI"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-gaming-tcui-l1-1-4"
+		,"DllImport":"api-ms-win-gaming-tcui-l1-1-4.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1366,7 +1380,7 @@
 	,{
 		"Name":"ShowUserSettingsUIForUser"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-gaming-tcui-l1-1-4"
+		,"DllImport":"api-ms-win-gaming-tcui-l1-1-4.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

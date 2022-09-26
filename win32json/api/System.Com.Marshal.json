@@ -155,7 +155,7 @@
 	{
 		"Name":"BSTR_UserSize"
 		,"SetLastError":false
-		,"DllImport":"OLEAUT32"
+		,"DllImport":"OLEAUT32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -170,7 +170,7 @@
 	,{
 		"Name":"BSTR_UserMarshal"
 		,"SetLastError":false
-		,"DllImport":"OLEAUT32"
+		,"DllImport":"OLEAUT32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -185,7 +185,7 @@
 	,{
 		"Name":"BSTR_UserUnmarshal"
 		,"SetLastError":false
-		,"DllImport":"OLEAUT32"
+		,"DllImport":"OLEAUT32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -193,14 +193,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":0,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"BSTR_UserFree"
 		,"SetLastError":false
-		,"DllImport":"OLEAUT32"
+		,"DllImport":"OLEAUT32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -214,7 +214,7 @@
 	,{
 		"Name":"HWND_UserSize"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -229,7 +229,7 @@
 	,{
 		"Name":"HWND_UserMarshal"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -244,7 +244,7 @@
 	,{
 		"Name":"HWND_UserUnmarshal"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -252,14 +252,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":0,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"HWND_UserFree"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -273,7 +273,7 @@
 	,{
 		"Name":"VARIANT_UserSize"
 		,"SetLastError":false
-		,"DllImport":"OLEAUT32"
+		,"DllImport":"OLEAUT32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -288,7 +288,7 @@
 	,{
 		"Name":"VARIANT_UserMarshal"
 		,"SetLastError":false
-		,"DllImport":"OLEAUT32"
+		,"DllImport":"OLEAUT32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -303,7 +303,7 @@
 	,{
 		"Name":"VARIANT_UserUnmarshal"
 		,"SetLastError":false
-		,"DllImport":"OLEAUT32"
+		,"DllImport":"OLEAUT32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -311,14 +311,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":0,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"VARIANT_UserFree"
 		,"SetLastError":false
-		,"DllImport":"OLEAUT32"
+		,"DllImport":"OLEAUT32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -332,7 +332,7 @@
 	,{
 		"Name":"BSTR_UserSize64"
 		,"SetLastError":false
-		,"DllImport":"OLEAUT32"
+		,"DllImport":"OLEAUT32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -347,7 +347,7 @@
 	,{
 		"Name":"BSTR_UserMarshal64"
 		,"SetLastError":false
-		,"DllImport":"OLEAUT32"
+		,"DllImport":"OLEAUT32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -362,7 +362,7 @@
 	,{
 		"Name":"BSTR_UserUnmarshal64"
 		,"SetLastError":false
-		,"DllImport":"OLEAUT32"
+		,"DllImport":"OLEAUT32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -370,14 +370,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":0,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"BSTR_UserFree64"
 		,"SetLastError":false
-		,"DllImport":"OLEAUT32"
+		,"DllImport":"OLEAUT32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -391,7 +391,7 @@
 	,{
 		"Name":"HWND_UserSize64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -406,7 +406,7 @@
 	,{
 		"Name":"HWND_UserMarshal64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -421,7 +421,7 @@
 	,{
 		"Name":"HWND_UserUnmarshal64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -429,14 +429,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":0,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"HWND_UserFree64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -450,7 +450,7 @@
 	,{
 		"Name":"VARIANT_UserSize64"
 		,"SetLastError":false
-		,"DllImport":"OLEAUT32"
+		,"DllImport":"OLEAUT32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -465,7 +465,7 @@
 	,{
 		"Name":"VARIANT_UserMarshal64"
 		,"SetLastError":false
-		,"DllImport":"OLEAUT32"
+		,"DllImport":"OLEAUT32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -480,7 +480,7 @@
 	,{
 		"Name":"VARIANT_UserUnmarshal64"
 		,"SetLastError":false
-		,"DllImport":"OLEAUT32"
+		,"DllImport":"OLEAUT32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -488,14 +488,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":0,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"VARIANT_UserFree64"
 		,"SetLastError":false
-		,"DllImport":"OLEAUT32"
+		,"DllImport":"OLEAUT32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -509,7 +509,7 @@
 	,{
 		"Name":"CLIPFORMAT_UserSize"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -524,7 +524,7 @@
 	,{
 		"Name":"CLIPFORMAT_UserMarshal"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -539,7 +539,7 @@
 	,{
 		"Name":"CLIPFORMAT_UserUnmarshal"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -547,14 +547,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":0,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"CLIPFORMAT_UserFree"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -568,7 +568,7 @@
 	,{
 		"Name":"HBITMAP_UserSize"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -583,7 +583,7 @@
 	,{
 		"Name":"HBITMAP_UserMarshal"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -598,7 +598,7 @@
 	,{
 		"Name":"HBITMAP_UserUnmarshal"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -606,14 +606,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":0,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HBITMAP","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"HBITMAP_UserFree"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -627,7 +627,7 @@
 	,{
 		"Name":"HDC_UserSize"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -642,7 +642,7 @@
 	,{
 		"Name":"HDC_UserMarshal"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -657,7 +657,7 @@
 	,{
 		"Name":"HDC_UserUnmarshal"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -665,14 +665,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":0,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HDC","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"HDC_UserFree"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -686,7 +686,7 @@
 	,{
 		"Name":"HICON_UserSize"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -701,7 +701,7 @@
 	,{
 		"Name":"HICON_UserMarshal"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -716,7 +716,7 @@
 	,{
 		"Name":"HICON_UserUnmarshal"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -724,14 +724,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":0,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HICON","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"HICON_UserFree"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -745,7 +745,7 @@
 	,{
 		"Name":"SNB_UserSize"
 		,"SetLastError":false
-		,"DllImport":"ole32"
+		,"DllImport":"ole32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -760,7 +760,7 @@
 	,{
 		"Name":"SNB_UserMarshal"
 		,"SetLastError":false
-		,"DllImport":"ole32"
+		,"DllImport":"ole32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -775,7 +775,7 @@
 	,{
 		"Name":"SNB_UserUnmarshal"
 		,"SetLastError":false
-		,"DllImport":"ole32"
+		,"DllImport":"ole32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -783,14 +783,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":0,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt16"}}}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"SNB_UserFree"
 		,"SetLastError":false
-		,"DllImport":"ole32"
+		,"DllImport":"ole32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -804,7 +804,7 @@
 	,{
 		"Name":"STGMEDIUM_UserSize"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -819,7 +819,7 @@
 	,{
 		"Name":"STGMEDIUM_UserMarshal"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -834,7 +834,7 @@
 	,{
 		"Name":"STGMEDIUM_UserUnmarshal"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -842,14 +842,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":0,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"STGMEDIUM","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"STGMEDIUM_UserFree"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -863,7 +863,7 @@
 	,{
 		"Name":"CLIPFORMAT_UserSize64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -878,7 +878,7 @@
 	,{
 		"Name":"CLIPFORMAT_UserMarshal64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -893,7 +893,7 @@
 	,{
 		"Name":"CLIPFORMAT_UserUnmarshal64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -901,14 +901,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":0,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"CLIPFORMAT_UserFree64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -922,7 +922,7 @@
 	,{
 		"Name":"HBITMAP_UserSize64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -937,7 +937,7 @@
 	,{
 		"Name":"HBITMAP_UserMarshal64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -952,7 +952,7 @@
 	,{
 		"Name":"HBITMAP_UserUnmarshal64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -960,14 +960,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":0,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HBITMAP","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"HBITMAP_UserFree64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -981,7 +981,7 @@
 	,{
 		"Name":"HDC_UserSize64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -996,7 +996,7 @@
 	,{
 		"Name":"HDC_UserMarshal64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1011,7 +1011,7 @@
 	,{
 		"Name":"HDC_UserUnmarshal64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1019,14 +1019,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":0,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HDC","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"HDC_UserFree64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1040,7 +1040,7 @@
 	,{
 		"Name":"HICON_UserSize64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1055,7 +1055,7 @@
 	,{
 		"Name":"HICON_UserMarshal64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1070,7 +1070,7 @@
 	,{
 		"Name":"HICON_UserUnmarshal64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1078,14 +1078,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":0,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HICON","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"HICON_UserFree64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1099,7 +1099,7 @@
 	,{
 		"Name":"SNB_UserSize64"
 		,"SetLastError":false
-		,"DllImport":"ole32"
+		,"DllImport":"ole32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1114,7 +1114,7 @@
 	,{
 		"Name":"SNB_UserMarshal64"
 		,"SetLastError":false
-		,"DllImport":"ole32"
+		,"DllImport":"ole32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1129,7 +1129,7 @@
 	,{
 		"Name":"SNB_UserUnmarshal64"
 		,"SetLastError":false
-		,"DllImport":"ole32"
+		,"DllImport":"ole32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1137,14 +1137,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":0,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt16"}}}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"SNB_UserFree64"
 		,"SetLastError":false
-		,"DllImport":"ole32"
+		,"DllImport":"ole32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1158,7 +1158,7 @@
 	,{
 		"Name":"STGMEDIUM_UserSize64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1173,7 +1173,7 @@
 	,{
 		"Name":"STGMEDIUM_UserMarshal64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1188,7 +1188,7 @@
 	,{
 		"Name":"STGMEDIUM_UserUnmarshal64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1196,14 +1196,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":0,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"STGMEDIUM","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"STGMEDIUM_UserFree64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1217,7 +1217,7 @@
 	,{
 		"Name":"CoGetMarshalSizeMax"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1235,7 +1235,7 @@
 	,{
 		"Name":"CoMarshalInterface"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1253,7 +1253,7 @@
 	,{
 		"Name":"CoUnmarshalInterface"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1268,7 +1268,7 @@
 	,{
 		"Name":"CoMarshalHresult"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1282,7 +1282,7 @@
 	,{
 		"Name":"CoUnmarshalHresult"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1296,7 +1296,7 @@
 	,{
 		"Name":"CoReleaseMarshalData"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1309,7 +1309,7 @@
 	,{
 		"Name":"CoGetStandardMarshal"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1327,7 +1327,7 @@
 	,{
 		"Name":"CoGetStdMarshalEx"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1342,7 +1342,7 @@
 	,{
 		"Name":"CoMarshalInterThreadInterfaceInStream"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1357,7 +1357,7 @@
 	,{
 		"Name":"LPSAFEARRAY_UserSize"
 		,"SetLastError":false
-		,"DllImport":"OLEAUT32"
+		,"DllImport":"OLEAUT32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1372,7 +1372,7 @@
 	,{
 		"Name":"LPSAFEARRAY_UserMarshal"
 		,"SetLastError":false
-		,"DllImport":"OLEAUT32"
+		,"DllImport":"OLEAUT32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1387,7 +1387,7 @@
 	,{
 		"Name":"LPSAFEARRAY_UserUnmarshal"
 		,"SetLastError":false
-		,"DllImport":"OLEAUT32"
+		,"DllImport":"OLEAUT32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1395,14 +1395,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":0,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SAFEARRAY","TargetKind":"Default","Api":"System.Com","Parents":[]}}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"LPSAFEARRAY_UserFree"
 		,"SetLastError":false
-		,"DllImport":"OLEAUT32"
+		,"DllImport":"OLEAUT32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1416,7 +1416,7 @@
 	,{
 		"Name":"LPSAFEARRAY_UserSize64"
 		,"SetLastError":false
-		,"DllImport":"OLEAUT32"
+		,"DllImport":"OLEAUT32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1431,7 +1431,7 @@
 	,{
 		"Name":"LPSAFEARRAY_UserMarshal64"
 		,"SetLastError":false
-		,"DllImport":"OLEAUT32"
+		,"DllImport":"OLEAUT32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1446,7 +1446,7 @@
 	,{
 		"Name":"LPSAFEARRAY_UserUnmarshal64"
 		,"SetLastError":false
-		,"DllImport":"OLEAUT32"
+		,"DllImport":"OLEAUT32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1454,14 +1454,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":0,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SAFEARRAY","TargetKind":"Default","Api":"System.Com","Parents":[]}}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"LPSAFEARRAY_UserFree64"
 		,"SetLastError":false
-		,"DllImport":"OLEAUT32"
+		,"DllImport":"OLEAUT32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1475,7 +1475,7 @@
 	,{
 		"Name":"HACCEL_UserSize"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1490,7 +1490,7 @@
 	,{
 		"Name":"HACCEL_UserMarshal"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1505,7 +1505,7 @@
 	,{
 		"Name":"HACCEL_UserUnmarshal"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1513,14 +1513,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":0,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HACCEL","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"HACCEL_UserFree"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1534,7 +1534,7 @@
 	,{
 		"Name":"HGLOBAL_UserSize"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1549,7 +1549,7 @@
 	,{
 		"Name":"HGLOBAL_UserMarshal"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1564,7 +1564,7 @@
 	,{
 		"Name":"HGLOBAL_UserUnmarshal"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1572,14 +1572,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":0,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"IntPtr"}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"HGLOBAL_UserFree"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1593,7 +1593,7 @@
 	,{
 		"Name":"HMENU_UserSize"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1608,7 +1608,7 @@
 	,{
 		"Name":"HMENU_UserMarshal"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1623,7 +1623,7 @@
 	,{
 		"Name":"HMENU_UserUnmarshal"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1631,14 +1631,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":0,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HMENU","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"HMENU_UserFree"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1652,7 +1652,7 @@
 	,{
 		"Name":"HACCEL_UserSize64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1667,7 +1667,7 @@
 	,{
 		"Name":"HACCEL_UserMarshal64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1682,7 +1682,7 @@
 	,{
 		"Name":"HACCEL_UserUnmarshal64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1690,14 +1690,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":0,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HACCEL","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"HACCEL_UserFree64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1711,7 +1711,7 @@
 	,{
 		"Name":"HGLOBAL_UserSize64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1726,7 +1726,7 @@
 	,{
 		"Name":"HGLOBAL_UserMarshal64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1741,7 +1741,7 @@
 	,{
 		"Name":"HGLOBAL_UserUnmarshal64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1749,14 +1749,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":0,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"IntPtr"}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"HGLOBAL_UserFree64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1770,7 +1770,7 @@
 	,{
 		"Name":"HMENU_UserSize64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1785,7 +1785,7 @@
 	,{
 		"Name":"HMENU_UserMarshal64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1800,7 +1800,7 @@
 	,{
 		"Name":"HMENU_UserUnmarshal64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1808,14 +1808,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":0,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HMENU","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"HMENU_UserFree64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1829,7 +1829,7 @@
 	,{
 		"Name":"HPALETTE_UserSize"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1844,7 +1844,7 @@
 	,{
 		"Name":"HPALETTE_UserMarshal"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1859,7 +1859,7 @@
 	,{
 		"Name":"HPALETTE_UserUnmarshal"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1867,14 +1867,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":0,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HPALETTE","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"HPALETTE_UserFree"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1888,7 +1888,7 @@
 	,{
 		"Name":"HPALETTE_UserSize64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1903,7 +1903,7 @@
 	,{
 		"Name":"HPALETTE_UserMarshal64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1918,7 +1918,7 @@
 	,{
 		"Name":"HPALETTE_UserUnmarshal64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1926,14 +1926,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":0,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HPALETTE","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"HPALETTE_UserFree64"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

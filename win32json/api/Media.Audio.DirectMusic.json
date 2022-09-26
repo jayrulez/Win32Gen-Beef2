@@ -1500,6 +1500,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"REGSTR_PATH_SOFTWARESYNTHS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Software\\Microsoft\\DirectMusic\\SoftwareSynths"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"REFRESH_F_LASTBUFFER"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -1832,7 +1839,7 @@
 		]
 	}
 	,{
-		"Name":"_rwsmp"
+		"Name":"WSMPL"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -1850,7 +1857,7 @@
 		]
 	}
 	,{
-		"Name":"_rloop"
+		"Name":"WLOOP"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -1928,8 +1935,8 @@
 			,{"Name":"ulNextRegionIdx","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ulFirstExtCkIdx","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"WaveLink","Type":{"Kind":"ApiRef","Name":"WAVELINK","TargetKind":"Default","Api":"Media.Audio.DirectMusic","Parents":[]},"Attrs":[]}
-			,{"Name":"WSMP","Type":{"Kind":"ApiRef","Name":"_rwsmp","TargetKind":"Default","Api":"Media.Audio.DirectMusic","Parents":[]},"Attrs":[]}
-			,{"Name":"WLOOP","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"_rloop","TargetKind":"Default","Api":"Media.Audio.DirectMusic","Parents":[]}},"Attrs":[]}
+			,{"Name":"WSMP","Type":{"Kind":"ApiRef","Name":"WSMPL","TargetKind":"Default","Api":"Media.Audio.DirectMusic","Parents":[]},"Attrs":[]}
+			,{"Name":"WLOOP","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"WLOOP","TargetKind":"Default","Api":"Media.Audio.DirectMusic","Parents":[]}},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -2207,7 +2214,7 @@
 		]
 	}
 	,{
-		"Name":"_DMUS_PORTPARAMS"
+		"Name":"DMUS_PORTPARAMS7"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -3771,7 +3778,7 @@
 		]
 	}
 	,{
-		"Name":"Tag_DVAudInfo"
+		"Name":"DVAudInfo"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"

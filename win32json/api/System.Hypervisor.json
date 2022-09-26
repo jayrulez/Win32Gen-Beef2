@@ -100,6 +100,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"VM_GENCOUNTER_SYMBOLIC_LINK_NAME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"\\VmGenerationCounter"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"IOCTL_VMGENCOUNTER_READ"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -979,7 +986,6 @@
 			{"Name":"WHvCacheTypeUncached","Value":0}
 			,{"Name":"WHvCacheTypeWriteCombining","Value":1}
 			,{"Name":"WHvCacheTypeWriteThrough","Value":4}
-			,{"Name":"WHvCacheTypeWriteProtected","Value":5}
 			,{"Name":"WHvCacheTypeWriteBack","Value":6}
 		]
 		,"IntegerBase":"Int32"
@@ -3976,7 +3982,7 @@
 	{
 		"Name":"WHvGetCapability"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3992,7 +3998,7 @@
 	,{
 		"Name":"WHvCreatePartition"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4005,7 +4011,7 @@
 	,{
 		"Name":"WHvSetupPartition"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4018,7 +4024,7 @@
 	,{
 		"Name":"WHvResetPartition"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4031,7 +4037,7 @@
 	,{
 		"Name":"WHvDeletePartition"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4044,7 +4050,7 @@
 	,{
 		"Name":"WHvGetPartitionProperty"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4061,7 +4067,7 @@
 	,{
 		"Name":"WHvSetPartitionProperty"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4077,7 +4083,7 @@
 	,{
 		"Name":"WHvSuspendPartitionTime"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4090,7 +4096,7 @@
 	,{
 		"Name":"WHvResumePartitionTime"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4103,7 +4109,7 @@
 	,{
 		"Name":"WHvMapGpaRange"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4120,7 +4126,7 @@
 	,{
 		"Name":"WHvMapGpaRange2"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4138,7 +4144,7 @@
 	,{
 		"Name":"WHvUnmapGpaRange"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4153,7 +4159,7 @@
 	,{
 		"Name":"WHvTranslateGva"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4171,7 +4177,7 @@
 	,{
 		"Name":"WHvCreateVirtualProcessor"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4186,7 +4192,7 @@
 	,{
 		"Name":"WHvCreateVirtualProcessor2"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4202,7 +4208,7 @@
 	,{
 		"Name":"WHvDeleteVirtualProcessor"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4216,7 +4222,7 @@
 	,{
 		"Name":"WHvRunVirtualProcessor"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4232,7 +4238,7 @@
 	,{
 		"Name":"WHvCancelRunVirtualProcessor"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4247,7 +4253,7 @@
 	,{
 		"Name":"WHvGetVirtualProcessorRegisters"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4264,7 +4270,7 @@
 	,{
 		"Name":"WHvSetVirtualProcessorRegisters"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4281,7 +4287,7 @@
 	,{
 		"Name":"WHvGetVirtualProcessorInterruptControllerState"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4298,7 +4304,7 @@
 	,{
 		"Name":"WHvSetVirtualProcessorInterruptControllerState"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4314,7 +4320,7 @@
 	,{
 		"Name":"WHvRequestInterrupt"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4329,7 +4335,7 @@
 	,{
 		"Name":"WHvGetVirtualProcessorXsaveState"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4346,7 +4352,7 @@
 	,{
 		"Name":"WHvSetVirtualProcessorXsaveState"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4362,7 +4368,7 @@
 	,{
 		"Name":"WHvQueryGpaRangeDirtyBitmap"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4379,7 +4385,7 @@
 	,{
 		"Name":"WHvGetPartitionCounters"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4396,7 +4402,7 @@
 	,{
 		"Name":"WHvGetVirtualProcessorCounters"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4414,7 +4420,7 @@
 	,{
 		"Name":"WHvGetVirtualProcessorInterruptControllerState2"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4431,7 +4437,7 @@
 	,{
 		"Name":"WHvSetVirtualProcessorInterruptControllerState2"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4447,7 +4453,7 @@
 	,{
 		"Name":"WHvRegisterPartitionDoorbellEvent"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4462,7 +4468,7 @@
 	,{
 		"Name":"WHvUnregisterPartitionDoorbellEvent"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4476,7 +4482,7 @@
 	,{
 		"Name":"WHvAdviseGpaRange"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4494,7 +4500,7 @@
 	,{
 		"Name":"WHvReadGpaRange"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4512,7 +4518,7 @@
 	,{
 		"Name":"WHvWriteGpaRange"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4530,7 +4536,7 @@
 	,{
 		"Name":"WHvSignalVirtualProcessorSynicEvent"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4545,7 +4551,7 @@
 	,{
 		"Name":"WHvGetVirtualProcessorState"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4563,7 +4569,7 @@
 	,{
 		"Name":"WHvSetVirtualProcessorState"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4580,7 +4586,7 @@
 	,{
 		"Name":"WHvAllocateVpciResource"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4597,7 +4603,7 @@
 	,{
 		"Name":"WHvCreateVpciDevice"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4614,7 +4620,7 @@
 	,{
 		"Name":"WHvDeleteVpciDevice"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4628,7 +4634,7 @@
 	,{
 		"Name":"WHvGetVpciDeviceProperty"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4646,7 +4652,7 @@
 	,{
 		"Name":"WHvGetVpciDeviceNotification"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4662,7 +4668,7 @@
 	,{
 		"Name":"WHvMapVpciDeviceMmioRanges"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4678,7 +4684,7 @@
 	,{
 		"Name":"WHvUnmapVpciDeviceMmioRanges"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4692,7 +4698,7 @@
 	,{
 		"Name":"WHvSetVpciDevicePowerState"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4707,7 +4713,7 @@
 	,{
 		"Name":"WHvReadVpciDeviceRegister"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4723,7 +4729,7 @@
 	,{
 		"Name":"WHvWriteVpciDeviceRegister"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4739,7 +4745,7 @@
 	,{
 		"Name":"WHvMapVpciDeviceInterrupt"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4758,7 +4764,7 @@
 	,{
 		"Name":"WHvUnmapVpciDeviceInterrupt"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4773,7 +4779,7 @@
 	,{
 		"Name":"WHvRetargetVpciDeviceInterrupt"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4790,7 +4796,7 @@
 	,{
 		"Name":"WHvRequestVpciDeviceInterrupt"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4806,7 +4812,7 @@
 	,{
 		"Name":"WHvGetVpciDeviceInterruptTarget"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4825,7 +4831,7 @@
 	,{
 		"Name":"WHvCreateTrigger"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4841,7 +4847,7 @@
 	,{
 		"Name":"WHvUpdateTriggerParameters"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4856,7 +4862,7 @@
 	,{
 		"Name":"WHvDeleteTrigger"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4870,7 +4876,7 @@
 	,{
 		"Name":"WHvCreateNotificationPort"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4886,7 +4892,7 @@
 	,{
 		"Name":"WHvSetNotificationPortProperty"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4902,7 +4908,7 @@
 	,{
 		"Name":"WHvDeleteNotificationPort"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4916,7 +4922,7 @@
 	,{
 		"Name":"WHvPostVirtualProcessorSynicMessage"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4933,7 +4939,7 @@
 	,{
 		"Name":"WHvGetVirtualProcessorCpuidOutput"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4950,7 +4956,7 @@
 	,{
 		"Name":"WHvGetInterruptTargetVpSet"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4968,7 +4974,7 @@
 	,{
 		"Name":"WHvStartPartitionMigration"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4982,7 +4988,7 @@
 	,{
 		"Name":"WHvCancelPartitionMigration"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4995,7 +5001,7 @@
 	,{
 		"Name":"WHvCompletePartitionMigration"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5008,7 +5014,7 @@
 	,{
 		"Name":"WHvAcceptPartitionMigration"
 		,"SetLastError":false
-		,"DllImport":"WinHvPlatform"
+		,"DllImport":"WinHvPlatform.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5022,7 +5028,7 @@
 	,{
 		"Name":"WHvEmulatorCreateEmulator"
 		,"SetLastError":false
-		,"DllImport":"WinHvEmulation"
+		,"DllImport":"WinHvEmulation.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5036,7 +5042,7 @@
 	,{
 		"Name":"WHvEmulatorDestroyEmulator"
 		,"SetLastError":false
-		,"DllImport":"WinHvEmulation"
+		,"DllImport":"WinHvEmulation.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5049,7 +5055,7 @@
 	,{
 		"Name":"WHvEmulatorTryIoEmulation"
 		,"SetLastError":false
-		,"DllImport":"WinHvEmulation"
+		,"DllImport":"WinHvEmulation.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5066,7 +5072,7 @@
 	,{
 		"Name":"WHvEmulatorTryMmioEmulation"
 		,"SetLastError":false
-		,"DllImport":"WinHvEmulation"
+		,"DllImport":"WinHvEmulation.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5083,7 +5089,7 @@
 	,{
 		"Name":"HdvInitializeDeviceHost"
 		,"SetLastError":false
-		,"DllImport":"vmdevicehost"
+		,"DllImport":"vmdevicehost.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5097,7 +5103,7 @@
 	,{
 		"Name":"HdvTeardownDeviceHost"
 		,"SetLastError":false
-		,"DllImport":"vmdevicehost"
+		,"DllImport":"vmdevicehost.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5110,7 +5116,7 @@
 	,{
 		"Name":"HdvCreateDeviceInstance"
 		,"SetLastError":false
-		,"DllImport":"vmdevicehost"
+		,"DllImport":"vmdevicehost.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5129,7 +5135,7 @@
 	,{
 		"Name":"HdvReadGuestMemory"
 		,"SetLastError":false
-		,"DllImport":"vmdevicehost"
+		,"DllImport":"vmdevicehost.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5145,7 +5151,7 @@
 	,{
 		"Name":"HdvWriteGuestMemory"
 		,"SetLastError":false
-		,"DllImport":"vmdevicehost"
+		,"DllImport":"vmdevicehost.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5161,7 +5167,7 @@
 	,{
 		"Name":"HdvCreateGuestMemoryAperture"
 		,"SetLastError":false
-		,"DllImport":"vmdevicehost"
+		,"DllImport":"vmdevicehost.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5178,7 +5184,7 @@
 	,{
 		"Name":"HdvDestroyGuestMemoryAperture"
 		,"SetLastError":false
-		,"DllImport":"vmdevicehost"
+		,"DllImport":"vmdevicehost.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5192,7 +5198,7 @@
 	,{
 		"Name":"HdvDeliverGuestInterrupt"
 		,"SetLastError":false
-		,"DllImport":"vmdevicehost"
+		,"DllImport":"vmdevicehost.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5207,7 +5213,7 @@
 	,{
 		"Name":"HdvRegisterDoorbell"
 		,"SetLastError":false
-		,"DllImport":"vmdevicehost"
+		,"DllImport":"vmdevicehost.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5225,7 +5231,7 @@
 	,{
 		"Name":"HdvUnregisterDoorbell"
 		,"SetLastError":false
-		,"DllImport":"vmdevicehost"
+		,"DllImport":"vmdevicehost.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5242,7 +5248,7 @@
 	,{
 		"Name":"HdvCreateSectionBackedMmioRange"
 		,"SetLastError":false
-		,"DllImport":"vmdevicehost"
+		,"DllImport":"vmdevicehost.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5261,7 +5267,7 @@
 	,{
 		"Name":"HdvDestroySectionBackedMmioRange"
 		,"SetLastError":false
-		,"DllImport":"vmdevicehost"
+		,"DllImport":"vmdevicehost.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5276,7 +5282,7 @@
 	,{
 		"Name":"LocateSavedStateFiles"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5293,7 +5299,7 @@
 	,{
 		"Name":"LoadSavedStateFile"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5307,7 +5313,7 @@
 	,{
 		"Name":"ApplyPendingSavedStateFileReplayLog"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5320,7 +5326,7 @@
 	,{
 		"Name":"LoadSavedStateFiles"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5335,7 +5341,7 @@
 	,{
 		"Name":"ReleaseSavedStateFiles"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5348,7 +5354,7 @@
 	,{
 		"Name":"GetGuestEnabledVirtualTrustLevels"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5362,7 +5368,7 @@
 	,{
 		"Name":"GetGuestOsInfo"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5377,7 +5383,7 @@
 	,{
 		"Name":"GetVpCount"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5391,7 +5397,7 @@
 	,{
 		"Name":"GetArchitecture"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5406,7 +5412,7 @@
 	,{
 		"Name":"ForceArchitecture"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5421,7 +5427,7 @@
 	,{
 		"Name":"GetActiveVirtualTrustLevel"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5436,7 +5442,7 @@
 	,{
 		"Name":"GetEnabledVirtualTrustLevels"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5451,7 +5457,7 @@
 	,{
 		"Name":"ForceActiveVirtualTrustLevel"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5466,7 +5472,7 @@
 	,{
 		"Name":"IsActiveVirtualTrustLevelEnabled"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5481,7 +5487,7 @@
 	,{
 		"Name":"IsNestedVirtualizationEnabled"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5495,7 +5501,7 @@
 	,{
 		"Name":"GetNestedVirtualizationMode"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5510,7 +5516,7 @@
 	,{
 		"Name":"ForceNestedHostMode"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5526,7 +5532,7 @@
 	,{
 		"Name":"InKernelSpace"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5541,7 +5547,7 @@
 	,{
 		"Name":"GetRegisterValue"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5557,7 +5563,7 @@
 	,{
 		"Name":"GetPagingMode"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5572,7 +5578,7 @@
 	,{
 		"Name":"ForcePagingMode"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5587,7 +5593,7 @@
 	,{
 		"Name":"ReadGuestPhysicalAddress"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5604,7 +5610,7 @@
 	,{
 		"Name":"GuestVirtualAddressToPhysicalAddress"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5621,7 +5627,7 @@
 	,{
 		"Name":"GetGuestPhysicalMemoryChunks"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5637,7 +5643,7 @@
 	,{
 		"Name":"GuestPhysicalAddressToRawSavedMemoryOffset"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5652,7 +5658,7 @@
 	,{
 		"Name":"ReadGuestRawSavedMemory"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5669,7 +5675,7 @@
 	,{
 		"Name":"GetGuestRawSavedMemorySize"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5683,7 +5689,7 @@
 	,{
 		"Name":"SetMemoryBlockCacheLimit"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5697,7 +5703,7 @@
 	,{
 		"Name":"GetMemoryBlockCacheLimit"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5711,7 +5717,7 @@
 	,{
 		"Name":"ApplyGuestMemoryFix"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5728,7 +5734,7 @@
 	,{
 		"Name":"LoadSavedStateSymbolProvider"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5743,7 +5749,7 @@
 	,{
 		"Name":"ReleaseSavedStateSymbolProvider"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5756,7 +5762,7 @@
 	,{
 		"Name":"GetSavedStateSymbolProviderHandle"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5769,7 +5775,7 @@
 	,{
 		"Name":"SetSavedStateSymbolProviderDebugInfoCallback"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5783,7 +5789,7 @@
 	,{
 		"Name":"LoadSavedStateModuleSymbols"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5800,7 +5806,7 @@
 	,{
 		"Name":"LoadSavedStateModuleSymbolsEx"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5818,7 +5824,7 @@
 	,{
 		"Name":"ResolveSavedStateGlobalVariableAddress"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5835,7 +5841,7 @@
 	,{
 		"Name":"ReadSavedStateGlobalVariable"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5852,7 +5858,7 @@
 	,{
 		"Name":"GetSavedStateSymbolTypeSize"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5868,7 +5874,7 @@
 	,{
 		"Name":"FindSavedStateSymbolFieldInType"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5886,7 +5892,7 @@
 	,{
 		"Name":"GetSavedStateSymbolFieldInfo"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5902,7 +5908,7 @@
 	,{
 		"Name":"ScanMemoryForDosImages"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5922,7 +5928,7 @@
 	,{
 		"Name":"CallStackUnwind"
 		,"SetLastError":false
-		,"DllImport":"VmSavedStateDumpProvider"
+		,"DllImport":"VmSavedStateDumpProvider.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

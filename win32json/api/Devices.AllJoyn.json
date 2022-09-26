@@ -100,6 +100,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"ALLJOYN_NAMED_PIPE_CONNECT_SPEC"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"npipe:"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"ALLJOYN_READ_READY"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -2164,7 +2171,7 @@
 	{
 		"Name":"AllJoynConnectToBus"
 		,"SetLastError":true
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2177,7 +2184,7 @@
 	,{
 		"Name":"AllJoynCloseBusHandle"
 		,"SetLastError":true
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2190,7 +2197,7 @@
 	,{
 		"Name":"AllJoynSendToBus"
 		,"SetLastError":true
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2207,7 +2214,7 @@
 	,{
 		"Name":"AllJoynReceiveFromBus"
 		,"SetLastError":true
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2224,7 +2231,7 @@
 	,{
 		"Name":"AllJoynEventSelect"
 		,"SetLastError":true
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2239,7 +2246,7 @@
 	,{
 		"Name":"AllJoynEnumEvents"
 		,"SetLastError":true
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2254,7 +2261,7 @@
 	,{
 		"Name":"AllJoynCreateBus"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2269,7 +2276,7 @@
 	,{
 		"Name":"AllJoynAcceptBusConnection"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2283,7 +2290,7 @@
 	,{
 		"Name":"alljoyn_unity_deferred_callbacks_process"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2295,7 +2302,7 @@
 	,{
 		"Name":"alljoyn_unity_set_deferred_callback_mainthread_only"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2308,7 +2315,7 @@
 	,{
 		"Name":"QCC_StatusText"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2321,7 +2328,7 @@
 	,{
 		"Name":"alljoyn_msgarg_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_msgarg","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2333,7 +2340,7 @@
 	,{
 		"Name":"alljoyn_msgarg_create_and_set"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_msgarg","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2346,7 +2353,7 @@
 	,{
 		"Name":"alljoyn_msgarg_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2359,7 +2366,7 @@
 	,{
 		"Name":"alljoyn_msgarg_array_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_msgarg","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2372,7 +2379,7 @@
 	,{
 		"Name":"alljoyn_msgarg_array_element"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_msgarg","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2386,7 +2393,7 @@
 	,{
 		"Name":"alljoyn_msgarg_set"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2400,7 +2407,7 @@
 	,{
 		"Name":"alljoyn_msgarg_get"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2414,7 +2421,7 @@
 	,{
 		"Name":"alljoyn_msgarg_copy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_msgarg","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2427,7 +2434,7 @@
 	,{
 		"Name":"alljoyn_msgarg_clone"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2441,7 +2448,7 @@
 	,{
 		"Name":"alljoyn_msgarg_equal"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2455,7 +2462,7 @@
 	,{
 		"Name":"alljoyn_msgarg_array_set"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2470,7 +2477,7 @@
 	,{
 		"Name":"alljoyn_msgarg_array_get"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2485,7 +2492,7 @@
 	,{
 		"Name":"alljoyn_msgarg_tostring"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2501,7 +2508,7 @@
 	,{
 		"Name":"alljoyn_msgarg_array_tostring"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2518,7 +2525,7 @@
 	,{
 		"Name":"alljoyn_msgarg_signature"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2533,7 +2540,7 @@
 	,{
 		"Name":"alljoyn_msgarg_array_signature"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2549,7 +2556,7 @@
 	,{
 		"Name":"alljoyn_msgarg_hassignature"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2563,7 +2570,7 @@
 	,{
 		"Name":"alljoyn_msgarg_getdictelement"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2577,7 +2584,7 @@
 	,{
 		"Name":"alljoyn_msgarg_gettype"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_typeid","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2590,7 +2597,7 @@
 	,{
 		"Name":"alljoyn_msgarg_clear"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2603,7 +2610,7 @@
 	,{
 		"Name":"alljoyn_msgarg_stabilize"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2616,7 +2623,7 @@
 	,{
 		"Name":"alljoyn_msgarg_array_set_offset"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2632,7 +2639,7 @@
 	,{
 		"Name":"alljoyn_msgarg_set_and_stabilize"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2646,7 +2653,7 @@
 	,{
 		"Name":"alljoyn_msgarg_set_uint8"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2660,7 +2667,7 @@
 	,{
 		"Name":"alljoyn_msgarg_set_bool"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2674,7 +2681,7 @@
 	,{
 		"Name":"alljoyn_msgarg_set_int16"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2688,7 +2695,7 @@
 	,{
 		"Name":"alljoyn_msgarg_set_uint16"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2702,7 +2709,7 @@
 	,{
 		"Name":"alljoyn_msgarg_set_int32"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2716,7 +2723,7 @@
 	,{
 		"Name":"alljoyn_msgarg_set_uint32"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2730,7 +2737,7 @@
 	,{
 		"Name":"alljoyn_msgarg_set_int64"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2744,7 +2751,7 @@
 	,{
 		"Name":"alljoyn_msgarg_set_uint64"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2758,7 +2765,7 @@
 	,{
 		"Name":"alljoyn_msgarg_set_double"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2772,7 +2779,7 @@
 	,{
 		"Name":"alljoyn_msgarg_set_string"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2786,7 +2793,7 @@
 	,{
 		"Name":"alljoyn_msgarg_set_objectpath"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2800,7 +2807,7 @@
 	,{
 		"Name":"alljoyn_msgarg_set_signature"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2814,7 +2821,7 @@
 	,{
 		"Name":"alljoyn_msgarg_get_uint8"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2828,7 +2835,7 @@
 	,{
 		"Name":"alljoyn_msgarg_get_bool"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2842,7 +2849,7 @@
 	,{
 		"Name":"alljoyn_msgarg_get_int16"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2856,7 +2863,7 @@
 	,{
 		"Name":"alljoyn_msgarg_get_uint16"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2870,7 +2877,7 @@
 	,{
 		"Name":"alljoyn_msgarg_get_int32"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2884,7 +2891,7 @@
 	,{
 		"Name":"alljoyn_msgarg_get_uint32"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2898,7 +2905,7 @@
 	,{
 		"Name":"alljoyn_msgarg_get_int64"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2912,7 +2919,7 @@
 	,{
 		"Name":"alljoyn_msgarg_get_uint64"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2926,7 +2933,7 @@
 	,{
 		"Name":"alljoyn_msgarg_get_double"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2940,7 +2947,7 @@
 	,{
 		"Name":"alljoyn_msgarg_get_string"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2954,7 +2961,7 @@
 	,{
 		"Name":"alljoyn_msgarg_get_objectpath"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2968,7 +2975,7 @@
 	,{
 		"Name":"alljoyn_msgarg_get_signature"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2982,7 +2989,7 @@
 	,{
 		"Name":"alljoyn_msgarg_get_variant"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2996,7 +3003,7 @@
 	,{
 		"Name":"alljoyn_msgarg_set_uint8_array"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3011,7 +3018,7 @@
 	,{
 		"Name":"alljoyn_msgarg_set_bool_array"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3026,7 +3033,7 @@
 	,{
 		"Name":"alljoyn_msgarg_set_int16_array"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3041,7 +3048,7 @@
 	,{
 		"Name":"alljoyn_msgarg_set_uint16_array"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3056,7 +3063,7 @@
 	,{
 		"Name":"alljoyn_msgarg_set_int32_array"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3071,7 +3078,7 @@
 	,{
 		"Name":"alljoyn_msgarg_set_uint32_array"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3086,7 +3093,7 @@
 	,{
 		"Name":"alljoyn_msgarg_set_int64_array"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3101,7 +3108,7 @@
 	,{
 		"Name":"alljoyn_msgarg_set_uint64_array"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3116,7 +3123,7 @@
 	,{
 		"Name":"alljoyn_msgarg_set_double_array"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3131,7 +3138,7 @@
 	,{
 		"Name":"alljoyn_msgarg_set_string_array"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3146,7 +3153,7 @@
 	,{
 		"Name":"alljoyn_msgarg_set_objectpath_array"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3161,7 +3168,7 @@
 	,{
 		"Name":"alljoyn_msgarg_set_signature_array"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3176,7 +3183,7 @@
 	,{
 		"Name":"alljoyn_msgarg_get_uint8_array"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3191,7 +3198,7 @@
 	,{
 		"Name":"alljoyn_msgarg_get_bool_array"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3206,7 +3213,7 @@
 	,{
 		"Name":"alljoyn_msgarg_get_int16_array"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3221,7 +3228,7 @@
 	,{
 		"Name":"alljoyn_msgarg_get_uint16_array"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3236,7 +3243,7 @@
 	,{
 		"Name":"alljoyn_msgarg_get_int32_array"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3251,7 +3258,7 @@
 	,{
 		"Name":"alljoyn_msgarg_get_uint32_array"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3266,7 +3273,7 @@
 	,{
 		"Name":"alljoyn_msgarg_get_int64_array"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3281,7 +3288,7 @@
 	,{
 		"Name":"alljoyn_msgarg_get_uint64_array"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3296,7 +3303,7 @@
 	,{
 		"Name":"alljoyn_msgarg_get_double_array"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3311,7 +3318,7 @@
 	,{
 		"Name":"alljoyn_msgarg_get_variant_array"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3327,7 +3334,7 @@
 	,{
 		"Name":"alljoyn_msgarg_get_array_numberofelements"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3340,7 +3347,7 @@
 	,{
 		"Name":"alljoyn_msgarg_get_array_element"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3355,7 +3362,7 @@
 	,{
 		"Name":"alljoyn_msgarg_get_array_elementsignature"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3369,7 +3376,7 @@
 	,{
 		"Name":"alljoyn_msgarg_getkey"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_msgarg","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3382,7 +3389,7 @@
 	,{
 		"Name":"alljoyn_msgarg_getvalue"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_msgarg","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3395,7 +3402,7 @@
 	,{
 		"Name":"alljoyn_msgarg_setdictentry"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3410,7 +3417,7 @@
 	,{
 		"Name":"alljoyn_msgarg_setstruct"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3425,7 +3432,7 @@
 	,{
 		"Name":"alljoyn_msgarg_getnummembers"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3438,7 +3445,7 @@
 	,{
 		"Name":"alljoyn_msgarg_getmember"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_msgarg","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3452,7 +3459,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_create_empty"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_aboutdata","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3464,7 +3471,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_aboutdata","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3477,7 +3484,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_create_full"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_aboutdata","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3491,7 +3498,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3504,7 +3511,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_createfromxml"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3518,7 +3525,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_isvalid"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Byte"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3532,7 +3539,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_createfrommsgarg"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3547,7 +3554,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_setappid"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3562,7 +3569,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_setappid_fromstring"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3576,7 +3583,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_getappid"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3591,7 +3598,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_setdefaultlanguage"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3605,7 +3612,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_getdefaultlanguage"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3619,7 +3626,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_setdevicename"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3634,7 +3641,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_getdevicename"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3649,7 +3656,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_setdeviceid"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3663,7 +3670,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_getdeviceid"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3677,7 +3684,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_setappname"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3692,7 +3699,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_getappname"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3707,7 +3714,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_setmanufacturer"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3722,7 +3729,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_getmanufacturer"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3737,7 +3744,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_setmodelnumber"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3751,7 +3758,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_getmodelnumber"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3765,7 +3772,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_setsupportedlanguage"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3779,7 +3786,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_getsupportedlanguages"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3794,7 +3801,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_setdescription"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3809,7 +3816,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_getdescription"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3824,7 +3831,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_setdateofmanufacture"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3838,7 +3845,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_getdateofmanufacture"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3852,7 +3859,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_setsoftwareversion"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3866,7 +3873,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_getsoftwareversion"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3880,7 +3887,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_getajsoftwareversion"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3894,7 +3901,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_sethardwareversion"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3908,7 +3915,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_gethardwareversion"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3922,7 +3929,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_setsupporturl"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3936,7 +3943,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_getsupporturl"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3950,7 +3957,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_setfield"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3966,7 +3973,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_getfield"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3982,7 +3989,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_getfields"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3997,7 +4004,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_getaboutdata"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4012,7 +4019,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_getannouncedaboutdata"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4026,7 +4033,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_isfieldrequired"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Byte"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4040,7 +4047,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_isfieldannounced"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Byte"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4054,7 +4061,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_isfieldlocalized"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Byte"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4068,7 +4075,7 @@
 	,{
 		"Name":"alljoyn_aboutdata_getfieldsignature"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4082,7 +4089,7 @@
 	,{
 		"Name":"alljoyn_abouticon_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_alljoyn_abouticon_handle","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4094,7 +4101,7 @@
 	,{
 		"Name":"alljoyn_abouticon_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4107,7 +4114,7 @@
 	,{
 		"Name":"alljoyn_abouticon_getcontent"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4122,7 +4129,7 @@
 	,{
 		"Name":"alljoyn_abouticon_setcontent"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4139,7 +4146,7 @@
 	,{
 		"Name":"alljoyn_abouticon_geturl"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4154,7 +4161,7 @@
 	,{
 		"Name":"alljoyn_abouticon_seturl"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4169,7 +4176,7 @@
 	,{
 		"Name":"alljoyn_abouticon_clear"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4182,7 +4189,7 @@
 	,{
 		"Name":"alljoyn_abouticon_setcontent_frommsgarg"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4196,7 +4203,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_getdefaultclaimcapabilities"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt16"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4208,7 +4215,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_getapplicationstate"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4222,7 +4229,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_setapplicationstate"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4236,7 +4243,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_getpublickey"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4250,7 +4257,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_publickey_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4263,7 +4270,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_getmanifesttemplate"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4277,7 +4284,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_manifesttemplate_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4290,7 +4297,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_setmanifesttemplatefromxml"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4304,7 +4311,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_getclaimcapabilities"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4318,7 +4325,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_setclaimcapabilities"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4332,7 +4339,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_getclaimcapabilitiesadditionalinfo"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4346,7 +4353,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_setclaimcapabilitiesadditionalinfo"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4360,7 +4367,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_reset"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4373,7 +4380,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_claim"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4393,7 +4400,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_updateidentity"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4409,7 +4416,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_getidentity"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4423,7 +4430,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_certificatechain_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4436,7 +4443,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_getmanifests"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4450,7 +4457,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_manifestarray_cleanup"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4463,7 +4470,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_installmanifests"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4479,7 +4486,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_getidentitycertificateid"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4493,7 +4500,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_certificateid_cleanup"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4506,7 +4513,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_updatepolicy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4520,7 +4527,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_getpolicy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4534,7 +4541,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_getdefaultpolicy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4548,7 +4555,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_policy_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4561,7 +4568,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_resetpolicy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4574,7 +4581,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_getmembershipsummaries"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4588,7 +4595,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_certificateidarray_cleanup"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4601,7 +4608,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_installmembership"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4615,7 +4622,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_removemembership"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4633,7 +4640,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_startmanagement"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4646,7 +4653,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurator_endmanagement"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4659,7 +4666,7 @@
 	,{
 		"Name":"alljoyn_applicationstatelistener_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_applicationstatelistener","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4673,7 +4680,7 @@
 	,{
 		"Name":"alljoyn_applicationstatelistener_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4686,7 +4693,7 @@
 	,{
 		"Name":"alljoyn_keystorelistener_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_keystorelistener","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4700,7 +4707,7 @@
 	,{
 		"Name":"alljoyn_keystorelistener_with_synchronization_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_keystorelistener","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4714,7 +4721,7 @@
 	,{
 		"Name":"alljoyn_keystorelistener_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4727,7 +4734,7 @@
 	,{
 		"Name":"alljoyn_keystorelistener_putkeys"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4743,7 +4750,7 @@
 	,{
 		"Name":"alljoyn_keystorelistener_getkeys"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4759,7 +4766,7 @@
 	,{
 		"Name":"alljoyn_sessionopts_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_sessionopts","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4775,7 +4782,7 @@
 	,{
 		"Name":"alljoyn_sessionopts_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4788,7 +4795,7 @@
 	,{
 		"Name":"alljoyn_sessionopts_get_traffic"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Byte"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4801,7 +4808,7 @@
 	,{
 		"Name":"alljoyn_sessionopts_set_traffic"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4815,7 +4822,7 @@
 	,{
 		"Name":"alljoyn_sessionopts_get_multipoint"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4828,7 +4835,7 @@
 	,{
 		"Name":"alljoyn_sessionopts_set_multipoint"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4842,7 +4849,7 @@
 	,{
 		"Name":"alljoyn_sessionopts_get_proximity"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Byte"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4855,7 +4862,7 @@
 	,{
 		"Name":"alljoyn_sessionopts_set_proximity"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4869,7 +4876,7 @@
 	,{
 		"Name":"alljoyn_sessionopts_get_transports"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt16"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4882,7 +4889,7 @@
 	,{
 		"Name":"alljoyn_sessionopts_set_transports"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4896,7 +4903,7 @@
 	,{
 		"Name":"alljoyn_sessionopts_iscompatible"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4910,7 +4917,7 @@
 	,{
 		"Name":"alljoyn_sessionopts_cmp"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4924,7 +4931,7 @@
 	,{
 		"Name":"alljoyn_message_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_message","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4937,7 +4944,7 @@
 	,{
 		"Name":"alljoyn_message_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4950,7 +4957,7 @@
 	,{
 		"Name":"alljoyn_message_isbroadcastsignal"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4963,7 +4970,7 @@
 	,{
 		"Name":"alljoyn_message_isglobalbroadcast"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4976,7 +4983,7 @@
 	,{
 		"Name":"alljoyn_message_issessionless"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4989,7 +4996,7 @@
 	,{
 		"Name":"alljoyn_message_getflags"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Byte"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5002,7 +5009,7 @@
 	,{
 		"Name":"alljoyn_message_isexpired"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5016,7 +5023,7 @@
 	,{
 		"Name":"alljoyn_message_isunreliable"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5029,7 +5036,7 @@
 	,{
 		"Name":"alljoyn_message_isencrypted"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5042,7 +5049,7 @@
 	,{
 		"Name":"alljoyn_message_getauthmechanism"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5055,7 +5062,7 @@
 	,{
 		"Name":"alljoyn_message_gettype"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_messagetype","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5068,7 +5075,7 @@
 	,{
 		"Name":"alljoyn_message_getargs"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5083,7 +5090,7 @@
 	,{
 		"Name":"alljoyn_message_getarg"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_msgarg","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5097,7 +5104,7 @@
 	,{
 		"Name":"alljoyn_message_parseargs"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5111,7 +5118,7 @@
 	,{
 		"Name":"alljoyn_message_getcallserial"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5124,7 +5131,7 @@
 	,{
 		"Name":"alljoyn_message_getsignature"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5137,7 +5144,7 @@
 	,{
 		"Name":"alljoyn_message_getobjectpath"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5150,7 +5157,7 @@
 	,{
 		"Name":"alljoyn_message_getinterface"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5163,7 +5170,7 @@
 	,{
 		"Name":"alljoyn_message_getmembername"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5176,7 +5183,7 @@
 	,{
 		"Name":"alljoyn_message_getreplyserial"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5189,7 +5196,7 @@
 	,{
 		"Name":"alljoyn_message_getsender"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5202,7 +5209,7 @@
 	,{
 		"Name":"alljoyn_message_getreceiveendpointname"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5215,7 +5222,7 @@
 	,{
 		"Name":"alljoyn_message_getdestination"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5228,7 +5235,8 @@
 	,{
 		"Name":"alljoyn_message_getcompressiontoken"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"Obsolete":true
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5241,7 +5249,7 @@
 	,{
 		"Name":"alljoyn_message_getsessionid"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5254,7 +5262,7 @@
 	,{
 		"Name":"alljoyn_message_geterrorname"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5269,7 +5277,7 @@
 	,{
 		"Name":"alljoyn_message_tostring"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5284,7 +5292,7 @@
 	,{
 		"Name":"alljoyn_message_description"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5299,7 +5307,7 @@
 	,{
 		"Name":"alljoyn_message_gettimestamp"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5312,7 +5320,7 @@
 	,{
 		"Name":"alljoyn_message_eql"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5326,7 +5334,7 @@
 	,{
 		"Name":"alljoyn_message_setendianess"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5339,7 +5347,7 @@
 	,{
 		"Name":"alljoyn_authlistener_requestcredentialsresponse"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5355,7 +5363,7 @@
 	,{
 		"Name":"alljoyn_authlistener_verifycredentialsresponse"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5370,7 +5378,7 @@
 	,{
 		"Name":"alljoyn_authlistener_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_authlistener","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5384,7 +5392,7 @@
 	,{
 		"Name":"alljoyn_authlistenerasync_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_authlistener","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5398,7 +5406,7 @@
 	,{
 		"Name":"alljoyn_authlistener_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5411,7 +5419,7 @@
 	,{
 		"Name":"alljoyn_authlistenerasync_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5424,7 +5432,7 @@
 	,{
 		"Name":"alljoyn_authlistener_setsharedsecret"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5439,7 +5447,7 @@
 	,{
 		"Name":"alljoyn_credentials_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_credentials","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5451,7 +5459,7 @@
 	,{
 		"Name":"alljoyn_credentials_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5464,7 +5472,7 @@
 	,{
 		"Name":"alljoyn_credentials_isset"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5478,7 +5486,7 @@
 	,{
 		"Name":"alljoyn_credentials_setpassword"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5492,7 +5500,7 @@
 	,{
 		"Name":"alljoyn_credentials_setusername"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5506,7 +5514,7 @@
 	,{
 		"Name":"alljoyn_credentials_setcertchain"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5520,7 +5528,7 @@
 	,{
 		"Name":"alljoyn_credentials_setprivatekey"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5534,7 +5542,7 @@
 	,{
 		"Name":"alljoyn_credentials_setlogonentry"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5548,7 +5556,7 @@
 	,{
 		"Name":"alljoyn_credentials_setexpiration"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5562,7 +5570,7 @@
 	,{
 		"Name":"alljoyn_credentials_getpassword"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5575,7 +5583,7 @@
 	,{
 		"Name":"alljoyn_credentials_getusername"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5588,7 +5596,7 @@
 	,{
 		"Name":"alljoyn_credentials_getcertchain"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5601,7 +5609,7 @@
 	,{
 		"Name":"alljoyn_credentials_getprivateKey"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5614,7 +5622,7 @@
 	,{
 		"Name":"alljoyn_credentials_getlogonentry"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5627,7 +5635,7 @@
 	,{
 		"Name":"alljoyn_credentials_getexpiration"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5640,7 +5648,7 @@
 	,{
 		"Name":"alljoyn_credentials_clear"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5653,7 +5661,7 @@
 	,{
 		"Name":"alljoyn_buslistener_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_buslistener","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5667,7 +5675,7 @@
 	,{
 		"Name":"alljoyn_buslistener_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5680,7 +5688,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_member_getannotationscount"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5693,7 +5701,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_member_getannotationatindex"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5711,7 +5719,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_member_getannotation"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5727,7 +5735,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_member_getargannotationscount"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5741,7 +5749,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_member_getargannotationatindex"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5760,7 +5768,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_member_getargannotation"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5777,7 +5785,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_property_getannotationscount"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5790,7 +5798,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_property_getannotationatindex"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5808,7 +5816,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_property_getannotation"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5824,7 +5832,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_activate"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5837,7 +5845,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_addannotation"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5852,7 +5860,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_getannotation"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5868,7 +5876,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_getannotationscount"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5881,7 +5889,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_getannotationatindex"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5899,7 +5907,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_getmember"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5914,7 +5922,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_addmember"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5933,7 +5941,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_addmemberannotation"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5949,7 +5957,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_getmemberannotation"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5966,7 +5974,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_getmembers"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5981,7 +5989,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_hasmember"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5997,7 +6005,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_addmethod"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6016,7 +6024,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_getmethod"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6031,7 +6039,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_addsignal"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6049,7 +6057,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_getsignal"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6064,7 +6072,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_getproperty"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6079,7 +6087,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_getproperties"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6094,7 +6102,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_addproperty"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6110,7 +6118,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_addpropertyannotation"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6126,7 +6134,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_getpropertyannotation"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6143,7 +6151,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_hasproperty"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6157,7 +6165,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_hasproperties"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6170,7 +6178,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_getname"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6183,7 +6191,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_introspect"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6199,7 +6207,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_issecure"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6212,7 +6220,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_getsecuritypolicy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_interfacedescription_securitypolicy","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6225,7 +6233,8 @@
 	,{
 		"Name":"alljoyn_interfacedescription_setdescriptionlanguage"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"Obsolete":true
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6239,7 +6248,8 @@
 	,{
 		"Name":"alljoyn_interfacedescription_getdescriptionlanguages"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"Obsolete":true
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6254,7 +6264,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_getdescriptionlanguages2"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6269,7 +6279,8 @@
 	,{
 		"Name":"alljoyn_interfacedescription_setdescription"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"Obsolete":true
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6283,7 +6294,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_setdescriptionforlanguage"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6298,7 +6309,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_getdescriptionforlanguage"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6314,7 +6325,8 @@
 	,{
 		"Name":"alljoyn_interfacedescription_setmemberdescription"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"Obsolete":true
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6329,7 +6341,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_setmemberdescriptionforlanguage"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6345,7 +6357,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_getmemberdescriptionforlanguage"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6362,7 +6374,8 @@
 	,{
 		"Name":"alljoyn_interfacedescription_setargdescription"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"Obsolete":true
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6378,7 +6391,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_setargdescriptionforlanguage"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6395,7 +6408,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_getargdescriptionforlanguage"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6413,7 +6426,8 @@
 	,{
 		"Name":"alljoyn_interfacedescription_setpropertydescription"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"Obsolete":true
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6428,7 +6442,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_setpropertydescriptionforlanguage"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6444,7 +6458,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_getpropertydescriptionforlanguage"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6461,7 +6475,8 @@
 	,{
 		"Name":"alljoyn_interfacedescription_setdescriptiontranslationcallback"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"Obsolete":true
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6475,7 +6490,8 @@
 	,{
 		"Name":"alljoyn_interfacedescription_getdescriptiontranslationcallback"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"Obsolete":true
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_interfacedescription_translation_callback_ptr","TargetKind":"FunctionPointer","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6488,7 +6504,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_hasdescription"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6501,7 +6517,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_addargannotation"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6518,7 +6534,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_getmemberargannotation"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6536,7 +6552,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_eql"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6550,7 +6566,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_member_eql"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6564,7 +6580,7 @@
 	,{
 		"Name":"alljoyn_interfacedescription_property_eql"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6578,7 +6594,7 @@
 	,{
 		"Name":"alljoyn_busobject_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_busobject","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6594,7 +6610,7 @@
 	,{
 		"Name":"alljoyn_busobject_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6607,7 +6623,7 @@
 	,{
 		"Name":"alljoyn_busobject_getpath"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6620,7 +6636,7 @@
 	,{
 		"Name":"alljoyn_busobject_emitpropertychanged"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6637,7 +6653,7 @@
 	,{
 		"Name":"alljoyn_busobject_emitpropertieschanged"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6654,7 +6670,7 @@
 	,{
 		"Name":"alljoyn_busobject_getname"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6669,7 +6685,7 @@
 	,{
 		"Name":"alljoyn_busobject_addinterface"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6683,7 +6699,7 @@
 	,{
 		"Name":"alljoyn_busobject_addmethodhandler"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6699,7 +6715,7 @@
 	,{
 		"Name":"alljoyn_busobject_addmethodhandlers"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6714,7 +6730,7 @@
 	,{
 		"Name":"alljoyn_busobject_methodreply_args"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6730,7 +6746,7 @@
 	,{
 		"Name":"alljoyn_busobject_methodreply_err"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6746,7 +6762,7 @@
 	,{
 		"Name":"alljoyn_busobject_methodreply_status"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6761,7 +6777,7 @@
 	,{
 		"Name":"alljoyn_busobject_getbusattachment"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_busattachment","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6774,7 +6790,7 @@
 	,{
 		"Name":"alljoyn_busobject_signal"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6795,7 +6811,7 @@
 	,{
 		"Name":"alljoyn_busobject_cancelsessionlessmessage_serial"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6809,7 +6825,7 @@
 	,{
 		"Name":"alljoyn_busobject_cancelsessionlessmessage"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6823,7 +6839,7 @@
 	,{
 		"Name":"alljoyn_busobject_issecure"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6836,7 +6852,7 @@
 	,{
 		"Name":"alljoyn_busobject_getannouncedinterfacenames"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6851,7 +6867,7 @@
 	,{
 		"Name":"alljoyn_busobject_setannounceflag"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6866,7 +6882,7 @@
 	,{
 		"Name":"alljoyn_busobject_addinterface_announced"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6880,7 +6896,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_proxybusobject","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6896,7 +6912,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_create_secure"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_proxybusobject","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6912,7 +6928,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6925,7 +6941,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_addinterface"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6939,7 +6955,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_addinterface_by_name"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6953,7 +6969,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_getchildren"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6968,7 +6984,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_getchild"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_proxybusobject","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6982,7 +6998,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_addchild"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6996,7 +7012,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_removechild"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7010,7 +7026,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_introspectremoteobject"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7023,7 +7039,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_introspectremoteobjectasync"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7038,7 +7054,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_getproperty"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7054,7 +7070,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_getpropertyasync"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7072,7 +7088,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_getallproperties"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7087,7 +7103,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_getallpropertiesasync"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7104,7 +7120,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_setproperty"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7120,7 +7136,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_registerpropertieschangedlistener"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7138,7 +7154,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_unregisterpropertieschangedlistener"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7153,7 +7169,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_setpropertyasync"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7172,7 +7188,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_methodcall"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7192,7 +7208,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_methodcall_member"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7211,7 +7227,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_methodcall_noreply"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7229,7 +7245,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_methodcall_member_noreply"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7246,7 +7262,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_methodcallasync"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7267,7 +7283,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_methodcallasync_member"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7287,7 +7303,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_parsexml"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7302,7 +7318,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_secureconnection"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7316,7 +7332,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_secureconnectionasync"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7330,7 +7346,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_getinterface"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_interfacedescription","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7344,7 +7360,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_getinterfaces"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7359,7 +7375,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_getpath"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7372,7 +7388,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_getservicename"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7385,7 +7401,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_getuniquename"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7398,7 +7414,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_getsessionid"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7411,7 +7427,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_implementsinterface"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7425,7 +7441,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_copy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_proxybusobject","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7438,7 +7454,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_isvalid"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7451,7 +7467,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_issecure"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7464,7 +7480,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_enablepropertycaching"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7477,7 +7493,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurationlistener_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_permissionconfigurationlistener","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7491,7 +7507,7 @@
 	,{
 		"Name":"alljoyn_permissionconfigurationlistener_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7504,7 +7520,7 @@
 	,{
 		"Name":"alljoyn_sessionlistener_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_sessionlistener","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7518,7 +7534,7 @@
 	,{
 		"Name":"alljoyn_sessionlistener_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7531,7 +7547,7 @@
 	,{
 		"Name":"alljoyn_sessionportlistener_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_sessionportlistener","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7545,7 +7561,7 @@
 	,{
 		"Name":"alljoyn_sessionportlistener_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7558,7 +7574,7 @@
 	,{
 		"Name":"alljoyn_aboutlistener_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_aboutlistener","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7572,7 +7588,7 @@
 	,{
 		"Name":"alljoyn_aboutlistener_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7585,7 +7601,7 @@
 	,{
 		"Name":"alljoyn_busattachment_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_busattachment","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7599,7 +7615,7 @@
 	,{
 		"Name":"alljoyn_busattachment_create_concurrency"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_busattachment","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7614,7 +7630,7 @@
 	,{
 		"Name":"alljoyn_busattachment_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7627,7 +7643,7 @@
 	,{
 		"Name":"alljoyn_busattachment_start"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7640,7 +7656,7 @@
 	,{
 		"Name":"alljoyn_busattachment_stop"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7653,7 +7669,7 @@
 	,{
 		"Name":"alljoyn_busattachment_join"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7666,7 +7682,7 @@
 	,{
 		"Name":"alljoyn_busattachment_getconcurrency"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7679,7 +7695,7 @@
 	,{
 		"Name":"alljoyn_busattachment_getconnectspec"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7692,7 +7708,7 @@
 	,{
 		"Name":"alljoyn_busattachment_enableconcurrentcallbacks"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7705,7 +7721,7 @@
 	,{
 		"Name":"alljoyn_busattachment_createinterface"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7720,7 +7736,7 @@
 	,{
 		"Name":"alljoyn_busattachment_createinterface_secure"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7736,7 +7752,7 @@
 	,{
 		"Name":"alljoyn_busattachment_connect"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7750,7 +7766,7 @@
 	,{
 		"Name":"alljoyn_busattachment_registerbuslistener"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7764,7 +7780,7 @@
 	,{
 		"Name":"alljoyn_busattachment_unregisterbuslistener"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7778,7 +7794,7 @@
 	,{
 		"Name":"alljoyn_busattachment_findadvertisedname"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7792,7 +7808,7 @@
 	,{
 		"Name":"alljoyn_busattachment_findadvertisednamebytransport"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7807,7 +7823,7 @@
 	,{
 		"Name":"alljoyn_busattachment_cancelfindadvertisedname"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7821,7 +7837,7 @@
 	,{
 		"Name":"alljoyn_busattachment_cancelfindadvertisednamebytransport"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7836,7 +7852,7 @@
 	,{
 		"Name":"alljoyn_busattachment_advertisename"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7851,7 +7867,7 @@
 	,{
 		"Name":"alljoyn_busattachment_canceladvertisename"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7866,7 +7882,7 @@
 	,{
 		"Name":"alljoyn_busattachment_getinterface"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_interfacedescription","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7880,7 +7896,7 @@
 	,{
 		"Name":"alljoyn_busattachment_joinsession"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7898,7 +7914,7 @@
 	,{
 		"Name":"alljoyn_busattachment_joinsessionasync"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7917,7 +7933,7 @@
 	,{
 		"Name":"alljoyn_busattachment_registerbusobject"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7931,7 +7947,7 @@
 	,{
 		"Name":"alljoyn_busattachment_registerbusobject_secure"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7945,7 +7961,7 @@
 	,{
 		"Name":"alljoyn_busattachment_unregisterbusobject"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7959,7 +7975,7 @@
 	,{
 		"Name":"alljoyn_busattachment_requestname"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7974,7 +7990,7 @@
 	,{
 		"Name":"alljoyn_busattachment_releasename"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7988,7 +8004,7 @@
 	,{
 		"Name":"alljoyn_busattachment_bindsessionport"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8004,7 +8020,7 @@
 	,{
 		"Name":"alljoyn_busattachment_unbindsessionport"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8018,7 +8034,7 @@
 	,{
 		"Name":"alljoyn_busattachment_enablepeersecurity"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8035,7 +8051,7 @@
 	,{
 		"Name":"alljoyn_busattachment_enablepeersecuritywithpermissionconfigurationlistener"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8053,7 +8069,7 @@
 	,{
 		"Name":"alljoyn_busattachment_ispeersecurityenabled"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8066,7 +8082,7 @@
 	,{
 		"Name":"alljoyn_busattachment_createinterfacesfromxml"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8080,7 +8096,7 @@
 	,{
 		"Name":"alljoyn_busattachment_getinterfaces"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8095,7 +8111,7 @@
 	,{
 		"Name":"alljoyn_busattachment_deleteinterface"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8109,7 +8125,7 @@
 	,{
 		"Name":"alljoyn_busattachment_isstarted"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8122,7 +8138,7 @@
 	,{
 		"Name":"alljoyn_busattachment_isstopping"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8135,7 +8151,7 @@
 	,{
 		"Name":"alljoyn_busattachment_isconnected"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8148,7 +8164,7 @@
 	,{
 		"Name":"alljoyn_busattachment_disconnect"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8162,7 +8178,7 @@
 	,{
 		"Name":"alljoyn_busattachment_getdbusproxyobj"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_proxybusobject","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8175,7 +8191,7 @@
 	,{
 		"Name":"alljoyn_busattachment_getalljoynproxyobj"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_proxybusobject","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8188,7 +8204,7 @@
 	,{
 		"Name":"alljoyn_busattachment_getalljoyndebugobj"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_proxybusobject","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8201,7 +8217,7 @@
 	,{
 		"Name":"alljoyn_busattachment_getuniquename"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8214,7 +8230,7 @@
 	,{
 		"Name":"alljoyn_busattachment_getglobalguidstring"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8227,7 +8243,7 @@
 	,{
 		"Name":"alljoyn_busattachment_registersignalhandler"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8243,7 +8259,7 @@
 	,{
 		"Name":"alljoyn_busattachment_registersignalhandlerwithrule"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8259,7 +8275,7 @@
 	,{
 		"Name":"alljoyn_busattachment_unregistersignalhandler"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8275,7 +8291,7 @@
 	,{
 		"Name":"alljoyn_busattachment_unregistersignalhandlerwithrule"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8291,7 +8307,7 @@
 	,{
 		"Name":"alljoyn_busattachment_unregisterallhandlers"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8304,7 +8320,7 @@
 	,{
 		"Name":"alljoyn_busattachment_registerkeystorelistener"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8318,7 +8334,7 @@
 	,{
 		"Name":"alljoyn_busattachment_reloadkeystore"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8331,7 +8347,7 @@
 	,{
 		"Name":"alljoyn_busattachment_clearkeystore"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8344,7 +8360,7 @@
 	,{
 		"Name":"alljoyn_busattachment_clearkeys"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8358,7 +8374,7 @@
 	,{
 		"Name":"alljoyn_busattachment_setkeyexpiration"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8373,7 +8389,7 @@
 	,{
 		"Name":"alljoyn_busattachment_getkeyexpiration"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8388,7 +8404,7 @@
 	,{
 		"Name":"alljoyn_busattachment_addlogonentry"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8404,7 +8420,7 @@
 	,{
 		"Name":"alljoyn_busattachment_addmatch"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8418,7 +8434,7 @@
 	,{
 		"Name":"alljoyn_busattachment_removematch"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8432,7 +8448,7 @@
 	,{
 		"Name":"alljoyn_busattachment_setsessionlistener"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8447,7 +8463,7 @@
 	,{
 		"Name":"alljoyn_busattachment_leavesession"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8461,7 +8477,7 @@
 	,{
 		"Name":"alljoyn_busattachment_secureconnection"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8476,7 +8492,7 @@
 	,{
 		"Name":"alljoyn_busattachment_secureconnectionasync"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8491,7 +8507,7 @@
 	,{
 		"Name":"alljoyn_busattachment_removesessionmember"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8506,7 +8522,7 @@
 	,{
 		"Name":"alljoyn_busattachment_setlinktimeout"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8521,7 +8537,7 @@
 	,{
 		"Name":"alljoyn_busattachment_setlinktimeoutasync"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8538,7 +8554,7 @@
 	,{
 		"Name":"alljoyn_busattachment_namehasowner"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8553,7 +8569,7 @@
 	,{
 		"Name":"alljoyn_busattachment_getpeerguid"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8569,7 +8585,7 @@
 	,{
 		"Name":"alljoyn_busattachment_setdaemondebug"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8584,7 +8600,7 @@
 	,{
 		"Name":"alljoyn_busattachment_gettimestamp"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8596,7 +8612,7 @@
 	,{
 		"Name":"alljoyn_busattachment_ping"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8611,7 +8627,7 @@
 	,{
 		"Name":"alljoyn_busattachment_registeraboutlistener"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8625,7 +8641,7 @@
 	,{
 		"Name":"alljoyn_busattachment_unregisteraboutlistener"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8639,7 +8655,7 @@
 	,{
 		"Name":"alljoyn_busattachment_unregisterallaboutlisteners"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8652,7 +8668,7 @@
 	,{
 		"Name":"alljoyn_busattachment_whoimplements_interfaces"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8667,7 +8683,7 @@
 	,{
 		"Name":"alljoyn_busattachment_whoimplements_interface"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8681,7 +8697,7 @@
 	,{
 		"Name":"alljoyn_busattachment_cancelwhoimplements_interfaces"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8696,7 +8712,7 @@
 	,{
 		"Name":"alljoyn_busattachment_cancelwhoimplements_interface"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8710,7 +8726,7 @@
 	,{
 		"Name":"alljoyn_busattachment_getpermissionconfigurator"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_permissionconfigurator","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8723,7 +8739,7 @@
 	,{
 		"Name":"alljoyn_busattachment_registerapplicationstatelistener"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8737,7 +8753,7 @@
 	,{
 		"Name":"alljoyn_busattachment_unregisterapplicationstatelistener"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8751,7 +8767,7 @@
 	,{
 		"Name":"alljoyn_busattachment_deletedefaultkeystore"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8764,7 +8780,7 @@
 	,{
 		"Name":"alljoyn_abouticonobj_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_alljoyn_abouticonobj_handle","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8778,7 +8794,7 @@
 	,{
 		"Name":"alljoyn_abouticonobj_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8791,7 +8807,7 @@
 	,{
 		"Name":"alljoyn_abouticonproxy_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_alljoyn_abouticonproxy_handle","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8806,7 +8822,7 @@
 	,{
 		"Name":"alljoyn_abouticonproxy_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8819,7 +8835,7 @@
 	,{
 		"Name":"alljoyn_abouticonproxy_geticon"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8833,7 +8849,7 @@
 	,{
 		"Name":"alljoyn_abouticonproxy_getversion"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8847,7 +8863,7 @@
 	,{
 		"Name":"alljoyn_aboutdatalistener_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_aboutdatalistener","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8861,7 +8877,7 @@
 	,{
 		"Name":"alljoyn_aboutdatalistener_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8874,7 +8890,7 @@
 	,{
 		"Name":"alljoyn_aboutobj_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_aboutobj","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8888,7 +8904,7 @@
 	,{
 		"Name":"alljoyn_aboutobj_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8901,7 +8917,7 @@
 	,{
 		"Name":"alljoyn_aboutobj_announce"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8916,7 +8932,7 @@
 	,{
 		"Name":"alljoyn_aboutobj_announce_using_datalistener"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8931,7 +8947,7 @@
 	,{
 		"Name":"alljoyn_aboutobj_unannounce"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8944,7 +8960,7 @@
 	,{
 		"Name":"alljoyn_aboutobjectdescription_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_aboutobjectdescription","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8956,7 +8972,7 @@
 	,{
 		"Name":"alljoyn_aboutobjectdescription_create_full"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_aboutobjectdescription","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8969,7 +8985,7 @@
 	,{
 		"Name":"alljoyn_aboutobjectdescription_createfrommsgarg"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8983,7 +8999,7 @@
 	,{
 		"Name":"alljoyn_aboutobjectdescription_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8996,7 +9012,7 @@
 	,{
 		"Name":"alljoyn_aboutobjectdescription_getpaths"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9011,7 +9027,7 @@
 	,{
 		"Name":"alljoyn_aboutobjectdescription_getinterfaces"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9027,7 +9043,7 @@
 	,{
 		"Name":"alljoyn_aboutobjectdescription_getinterfacepaths"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9043,7 +9059,7 @@
 	,{
 		"Name":"alljoyn_aboutobjectdescription_clear"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9056,7 +9072,7 @@
 	,{
 		"Name":"alljoyn_aboutobjectdescription_haspath"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Byte"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9070,7 +9086,7 @@
 	,{
 		"Name":"alljoyn_aboutobjectdescription_hasinterface"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Byte"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9084,7 +9100,7 @@
 	,{
 		"Name":"alljoyn_aboutobjectdescription_hasinterfaceatpath"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Byte"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9099,7 +9115,7 @@
 	,{
 		"Name":"alljoyn_aboutobjectdescription_getmsgarg"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9113,7 +9129,7 @@
 	,{
 		"Name":"alljoyn_aboutproxy_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_aboutproxy","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9128,7 +9144,7 @@
 	,{
 		"Name":"alljoyn_aboutproxy_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9141,7 +9157,7 @@
 	,{
 		"Name":"alljoyn_aboutproxy_getobjectdescription"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9155,7 +9171,7 @@
 	,{
 		"Name":"alljoyn_aboutproxy_getaboutdata"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9170,7 +9186,7 @@
 	,{
 		"Name":"alljoyn_aboutproxy_getversion"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9184,7 +9200,7 @@
 	,{
 		"Name":"alljoyn_pinglistener_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_pinglistener","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9198,7 +9214,7 @@
 	,{
 		"Name":"alljoyn_pinglistener_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9211,7 +9227,7 @@
 	,{
 		"Name":"alljoyn_autopinger_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_autopinger","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9224,7 +9240,7 @@
 	,{
 		"Name":"alljoyn_autopinger_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9237,7 +9253,7 @@
 	,{
 		"Name":"alljoyn_autopinger_pause"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9250,7 +9266,7 @@
 	,{
 		"Name":"alljoyn_autopinger_resume"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9263,7 +9279,7 @@
 	,{
 		"Name":"alljoyn_autopinger_addpinggroup"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9279,7 +9295,7 @@
 	,{
 		"Name":"alljoyn_autopinger_removepinggroup"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9293,7 +9309,7 @@
 	,{
 		"Name":"alljoyn_autopinger_setpinginterval"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9308,7 +9324,7 @@
 	,{
 		"Name":"alljoyn_autopinger_adddestination"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9323,7 +9339,7 @@
 	,{
 		"Name":"alljoyn_autopinger_removedestination"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9339,7 +9355,7 @@
 	,{
 		"Name":"alljoyn_getversion"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9351,7 +9367,7 @@
 	,{
 		"Name":"alljoyn_getbuildinfo"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9363,7 +9379,7 @@
 	,{
 		"Name":"alljoyn_getnumericversion"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9375,7 +9391,7 @@
 	,{
 		"Name":"alljoyn_init"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9387,7 +9403,7 @@
 	,{
 		"Name":"alljoyn_shutdown"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9399,7 +9415,7 @@
 	,{
 		"Name":"alljoyn_routerinit"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9411,7 +9427,7 @@
 	,{
 		"Name":"alljoyn_routerinitwithconfig"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9424,7 +9440,7 @@
 	,{
 		"Name":"alljoyn_routershutdown"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9436,7 +9452,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_ref_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_proxybusobject_ref","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9449,7 +9465,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_ref_get"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_proxybusobject","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9462,7 +9478,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_ref_incref"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9475,7 +9491,7 @@
 	,{
 		"Name":"alljoyn_proxybusobject_ref_decref"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9488,7 +9504,7 @@
 	,{
 		"Name":"alljoyn_observerlistener_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_observerlistener","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9502,7 +9518,7 @@
 	,{
 		"Name":"alljoyn_observerlistener_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9515,7 +9531,7 @@
 	,{
 		"Name":"alljoyn_observer_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_observer","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9530,7 +9546,7 @@
 	,{
 		"Name":"alljoyn_observer_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9543,7 +9559,7 @@
 	,{
 		"Name":"alljoyn_observer_registerlistener"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9558,7 +9574,7 @@
 	,{
 		"Name":"alljoyn_observer_unregisterlistener"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9572,7 +9588,7 @@
 	,{
 		"Name":"alljoyn_observer_unregisteralllisteners"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9585,7 +9601,7 @@
 	,{
 		"Name":"alljoyn_observer_get"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_proxybusobject_ref","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9600,7 +9616,7 @@
 	,{
 		"Name":"alljoyn_observer_getfirst"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_proxybusobject_ref","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9613,7 +9629,7 @@
 	,{
 		"Name":"alljoyn_observer_getnext"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_proxybusobject_ref","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9627,7 +9643,7 @@
 	,{
 		"Name":"alljoyn_passwordmanager_setcredentials"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9641,7 +9657,7 @@
 	,{
 		"Name":"alljoyn_securityapplicationproxy_getpermissionmanagementsessionport"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt16"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9653,7 +9669,7 @@
 	,{
 		"Name":"alljoyn_securityapplicationproxy_create"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_securityapplicationproxy","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9668,7 +9684,7 @@
 	,{
 		"Name":"alljoyn_securityapplicationproxy_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9681,7 +9697,7 @@
 	,{
 		"Name":"alljoyn_securityapplicationproxy_claim"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9701,7 +9717,7 @@
 	,{
 		"Name":"alljoyn_securityapplicationproxy_getmanifesttemplate"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9715,7 +9731,7 @@
 	,{
 		"Name":"alljoyn_securityapplicationproxy_manifesttemplate_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9728,7 +9744,7 @@
 	,{
 		"Name":"alljoyn_securityapplicationproxy_getapplicationstate"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9742,7 +9758,7 @@
 	,{
 		"Name":"alljoyn_securityapplicationproxy_getclaimcapabilities"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9756,7 +9772,7 @@
 	,{
 		"Name":"alljoyn_securityapplicationproxy_getclaimcapabilitiesadditionalinfo"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9770,7 +9786,7 @@
 	,{
 		"Name":"alljoyn_securityapplicationproxy_getpolicy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9784,7 +9800,7 @@
 	,{
 		"Name":"alljoyn_securityapplicationproxy_getdefaultpolicy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9798,7 +9814,7 @@
 	,{
 		"Name":"alljoyn_securityapplicationproxy_policy_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9811,7 +9827,7 @@
 	,{
 		"Name":"alljoyn_securityapplicationproxy_updatepolicy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9825,7 +9841,7 @@
 	,{
 		"Name":"alljoyn_securityapplicationproxy_updateidentity"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9841,7 +9857,7 @@
 	,{
 		"Name":"alljoyn_securityapplicationproxy_installmembership"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9855,7 +9871,7 @@
 	,{
 		"Name":"alljoyn_securityapplicationproxy_reset"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9868,7 +9884,7 @@
 	,{
 		"Name":"alljoyn_securityapplicationproxy_resetpolicy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9881,7 +9897,7 @@
 	,{
 		"Name":"alljoyn_securityapplicationproxy_startmanagement"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9894,7 +9910,7 @@
 	,{
 		"Name":"alljoyn_securityapplicationproxy_endmanagement"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9907,7 +9923,7 @@
 	,{
 		"Name":"alljoyn_securityapplicationproxy_geteccpublickey"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9921,7 +9937,7 @@
 	,{
 		"Name":"alljoyn_securityapplicationproxy_eccpublickey_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9934,7 +9950,7 @@
 	,{
 		"Name":"alljoyn_securityapplicationproxy_signmanifest"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9950,7 +9966,7 @@
 	,{
 		"Name":"alljoyn_securityapplicationproxy_manifest_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9963,7 +9979,7 @@
 	,{
 		"Name":"alljoyn_securityapplicationproxy_computemanifestdigest"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9979,7 +9995,7 @@
 	,{
 		"Name":"alljoyn_securityapplicationproxy_digest_destroy"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9992,7 +10008,7 @@
 	,{
 		"Name":"alljoyn_securityapplicationproxy_setmanifestsignature"
 		,"SetLastError":false
-		,"DllImport":"MSAJApi"
+		,"DllImport":"MSAJApi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"QStatus","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

@@ -3283,7 +3283,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pv","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out"]}
+					{"Name":"pv","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out"]}
 					,{"Name":"cb","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pcbRead","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
@@ -4327,7 +4327,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"dwAction","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"pPolicy","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out"]}
+					,{"Name":"pPolicy","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out"]}
 					,{"Name":"cbPolicy","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pContext","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":4,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Optional"]}
 					,{"Name":"cbContext","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -5191,7 +5191,7 @@
 	{
 		"Name":"CreateURLMoniker"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5206,7 +5206,7 @@
 	,{
 		"Name":"CreateURLMonikerEx"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5222,7 +5222,7 @@
 	,{
 		"Name":"GetClassURL"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5236,7 +5236,7 @@
 	,{
 		"Name":"CreateAsyncBindCtx"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5252,7 +5252,7 @@
 	,{
 		"Name":"CreateURLMonikerEx2"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5268,7 +5268,7 @@
 	,{
 		"Name":"CreateAsyncBindCtxEx"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5286,7 +5286,7 @@
 	,{
 		"Name":"MkParseDisplayNameEx"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5302,7 +5302,7 @@
 	,{
 		"Name":"RegisterBindStatusCallback"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5318,7 +5318,7 @@
 	,{
 		"Name":"RevokeBindStatusCallback"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5332,7 +5332,7 @@
 	,{
 		"Name":"GetClassFileOrMime"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5351,7 +5351,7 @@
 	,{
 		"Name":"IsValidURL"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5366,7 +5366,7 @@
 	,{
 		"Name":"CoGetClassObjectFromURL"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5388,7 +5388,7 @@
 	,{
 		"Name":"IEInstallScope"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5401,7 +5401,7 @@
 	,{
 		"Name":"FaultInIEFeature"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5417,7 +5417,7 @@
 	,{
 		"Name":"GetComponentIDFromCLSSPEC"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5431,7 +5431,7 @@
 	,{
 		"Name":"IsAsyncMoniker"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5444,7 +5444,7 @@
 	,{
 		"Name":"RegisterMediaTypes"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5459,7 +5459,7 @@
 	,{
 		"Name":"FindMediaType"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5473,7 +5473,7 @@
 	,{
 		"Name":"CreateFormatEnumerator"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5488,7 +5488,7 @@
 	,{
 		"Name":"RegisterFormatEnumerator"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5503,7 +5503,7 @@
 	,{
 		"Name":"RevokeFormatEnumerator"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5517,7 +5517,7 @@
 	,{
 		"Name":"RegisterMediaTypeClass"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5534,7 +5534,7 @@
 	,{
 		"Name":"FindMediaTypeClass"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5550,7 +5550,7 @@
 	,{
 		"Name":"UrlMkSetSessionOption"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5566,7 +5566,7 @@
 	,{
 		"Name":"UrlMkGetSessionOption"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5583,7 +5583,7 @@
 	,{
 		"Name":"FindMimeFromData"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5603,7 +5603,7 @@
 	,{
 		"Name":"ObtainUserAgentString"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5618,7 +5618,7 @@
 	,{
 		"Name":"CompareSecurityIds"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5635,7 +5635,7 @@
 	,{
 		"Name":"CompatFlagsFromClsid"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5650,7 +5650,7 @@
 	,{
 		"Name":"SetAccessForIEAppContainer"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5665,7 +5665,7 @@
 	,{
 		"Name":"HlinkSimpleNavigateToString"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5685,7 +5685,7 @@
 	,{
 		"Name":"HlinkSimpleNavigateToMoniker"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5705,7 +5705,7 @@
 	,{
 		"Name":"URLOpenStreamA"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5721,7 +5721,7 @@
 	,{
 		"Name":"URLOpenStreamW"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5737,7 +5737,7 @@
 	,{
 		"Name":"URLOpenPullStreamA"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5753,7 +5753,7 @@
 	,{
 		"Name":"URLOpenPullStreamW"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5769,7 +5769,7 @@
 	,{
 		"Name":"URLDownloadToFileA"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5786,7 +5786,7 @@
 	,{
 		"Name":"URLDownloadToFileW"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5803,7 +5803,7 @@
 	,{
 		"Name":"URLDownloadToCacheFileA"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5821,7 +5821,7 @@
 	,{
 		"Name":"URLDownloadToCacheFileW"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5839,7 +5839,7 @@
 	,{
 		"Name":"URLOpenBlockingStreamA"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5856,7 +5856,7 @@
 	,{
 		"Name":"URLOpenBlockingStreamW"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5873,7 +5873,7 @@
 	,{
 		"Name":"HlinkGoBack"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5886,7 +5886,7 @@
 	,{
 		"Name":"HlinkGoForward"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5899,7 +5899,7 @@
 	,{
 		"Name":"HlinkNavigateString"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5913,7 +5913,7 @@
 	,{
 		"Name":"HlinkNavigateMoniker"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5927,7 +5927,7 @@
 	,{
 		"Name":"CoInternetParseUrl"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5946,7 +5946,7 @@
 	,{
 		"Name":"CoInternetParseIUri"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5965,7 +5965,7 @@
 	,{
 		"Name":"CoInternetCombineUrl"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5984,7 +5984,7 @@
 	,{
 		"Name":"CoInternetCombineUrlEx"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6001,7 +6001,7 @@
 	,{
 		"Name":"CoInternetCombineIUri"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6018,7 +6018,7 @@
 	,{
 		"Name":"CoInternetCompareUrl"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6033,7 +6033,7 @@
 	,{
 		"Name":"CoInternetGetProtocolFlags"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6048,7 +6048,7 @@
 	,{
 		"Name":"CoInternetQueryInfo"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6067,7 +6067,7 @@
 	,{
 		"Name":"CoInternetGetSession"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6082,7 +6082,7 @@
 	,{
 		"Name":"CoInternetGetSecurityUrl"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6098,7 +6098,7 @@
 	,{
 		"Name":"CoInternetGetSecurityUrlEx"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6114,7 +6114,7 @@
 	,{
 		"Name":"CoInternetSetFeatureEnabled"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6129,7 +6129,7 @@
 	,{
 		"Name":"CoInternetIsFeatureEnabled"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6143,7 +6143,7 @@
 	,{
 		"Name":"CoInternetIsFeatureEnabledForUrl"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6159,7 +6159,7 @@
 	,{
 		"Name":"CoInternetIsFeatureEnabledForIUri"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6175,7 +6175,7 @@
 	,{
 		"Name":"CoInternetIsFeatureZoneElevationEnabled"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6191,7 +6191,7 @@
 	,{
 		"Name":"CopyStgMedium"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6205,7 +6205,7 @@
 	,{
 		"Name":"CopyBindInfo"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6219,7 +6219,7 @@
 	,{
 		"Name":"ReleaseBindInfo"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6232,7 +6232,7 @@
 	,{
 		"Name":"IEGetUserPrivateNamespaceName"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6244,7 +6244,7 @@
 	,{
 		"Name":"CoInternetCreateSecurityManager"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6259,7 +6259,7 @@
 	,{
 		"Name":"CoInternetCreateZoneManager"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6274,7 +6274,7 @@
 	,{
 		"Name":"GetSoftwareUpdateInfo"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6288,7 +6288,7 @@
 	,{
 		"Name":"SetSoftwareUpdateAdvertisementState"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6304,7 +6304,7 @@
 	,{
 		"Name":"IsLoggingEnabledA"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6317,7 +6317,7 @@
 	,{
 		"Name":"IsLoggingEnabledW"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6330,7 +6330,7 @@
 	,{
 		"Name":"WriteHitLogging"
 		,"SetLastError":false
-		,"DllImport":"urlmon"
+		,"DllImport":"urlmon.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

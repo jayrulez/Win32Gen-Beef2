@@ -2,6 +2,27 @@
 
 "Constants":[
 	{
+		"Name":"WSD_DEFAULT_HOSTING_ADDRESS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"http://*:5357/"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WSD_DEFAULT_SECURE_HOSTING_ADDRESS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"https://*:5358/"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WSD_DEFAULT_EVENTING_ADDRESS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"http://*:5357/"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"WSDAPI_OPTION_MAX_INBOUND_MESSAGE_SIZE"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -151,8 +172,8 @@
 		,"Fields":[
 			{"Name":"certMatchArray","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CERT_CONTEXT","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":[]}
 			,{"Name":"dwCertMatchArrayCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"hCertMatchStore","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-			,{"Name":"hCertIssuerStore","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+			,{"Name":"hCertMatchStore","Type":{"Kind":"ApiRef","Name":"HCERTSTORE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
+			,{"Name":"hCertIssuerStore","Type":{"Kind":"ApiRef","Name":"HCERTSTORE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
 			,{"Name":"dwCertCheckOptions","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
@@ -168,8 +189,8 @@
 		,"Fields":[
 			{"Name":"certMatchArray","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CERT_CONTEXT","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":[]}
 			,{"Name":"dwCertMatchArrayCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"hCertMatchStore","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-			,{"Name":"hCertIssuerStore","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+			,{"Name":"hCertMatchStore","Type":{"Kind":"ApiRef","Name":"HCERTSTORE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
+			,{"Name":"hCertIssuerStore","Type":{"Kind":"ApiRef","Name":"HCERTSTORE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
 			,{"Name":"dwCertCheckOptions","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pszCNGHashAlgId","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"pbCertHash","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -188,7 +209,7 @@
 		,"Fields":[
 			{"Name":"signingCertArray","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CERT_CONTEXT","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":[]}
 			,{"Name":"dwSigningCertArrayCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"hSigningCertStore","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+			,{"Name":"hSigningCertStore","Type":{"Kind":"ApiRef","Name":"HCERTSTORE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
@@ -3745,7 +3766,7 @@
 	{
 		"Name":"WSDCreateUdpMessageParameters"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3758,7 +3779,7 @@
 	,{
 		"Name":"WSDCreateUdpAddress"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3771,7 +3792,7 @@
 	,{
 		"Name":"WSDCreateHttpMessageParameters"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3784,7 +3805,7 @@
 	,{
 		"Name":"WSDCreateHttpAddress"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3797,7 +3818,7 @@
 	,{
 		"Name":"WSDCreateOutboundAttachment"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3810,7 +3831,7 @@
 	,{
 		"Name":"WSDXMLGetNameFromBuiltinNamespace"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3825,7 +3846,7 @@
 	,{
 		"Name":"WSDXMLCreateContext"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3838,7 +3859,7 @@
 	,{
 		"Name":"WSDCreateDiscoveryProvider"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3852,7 +3873,7 @@
 	,{
 		"Name":"WSDCreateDiscoveryProvider2"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3868,7 +3889,7 @@
 	,{
 		"Name":"WSDCreateDiscoveryPublisher"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3882,7 +3903,7 @@
 	,{
 		"Name":"WSDCreateDiscoveryPublisher2"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3898,7 +3919,7 @@
 	,{
 		"Name":"WSDCreateDeviceProxy"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3914,7 +3935,7 @@
 	,{
 		"Name":"WSDCreateDeviceProxyAdvanced"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3931,7 +3952,7 @@
 	,{
 		"Name":"WSDCreateDeviceProxy2"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3949,7 +3970,7 @@
 	,{
 		"Name":"WSDCreateDeviceHost"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3964,7 +3985,7 @@
 	,{
 		"Name":"WSDCreateDeviceHostAdvanced"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3981,7 +4002,7 @@
 	,{
 		"Name":"WSDCreateDeviceHost2"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3998,7 +4019,7 @@
 	,{
 		"Name":"WSDSetConfigurationOption"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4013,7 +4034,7 @@
 	,{
 		"Name":"WSDGetConfigurationOption"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4028,7 +4049,7 @@
 	,{
 		"Name":"WSDAllocateLinkedMemory"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4042,7 +4063,7 @@
 	,{
 		"Name":"WSDFreeLinkedMemory"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4055,7 +4076,7 @@
 	,{
 		"Name":"WSDAttachLinkedMemory"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4069,7 +4090,7 @@
 	,{
 		"Name":"WSDDetachLinkedMemory"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4082,7 +4103,7 @@
 	,{
 		"Name":"WSDXMLBuildAnyForSingleElement"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4097,7 +4118,7 @@
 	,{
 		"Name":"WSDXMLGetValueFromAny"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4113,7 +4134,7 @@
 	,{
 		"Name":"WSDXMLAddSibling"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4127,7 +4148,7 @@
 	,{
 		"Name":"WSDXMLAddChild"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4141,7 +4162,7 @@
 	,{
 		"Name":"WSDXMLCleanupElement"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4154,7 +4175,7 @@
 	,{
 		"Name":"WSDGenerateFault"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4172,7 +4193,7 @@
 	,{
 		"Name":"WSDGenerateFaultEx"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4189,7 +4210,7 @@
 	,{
 		"Name":"WSDUriEncode"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4205,7 +4226,7 @@
 	,{
 		"Name":"WSDUriDecode"
 		,"SetLastError":false
-		,"DllImport":"wsdapi"
+		,"DllImport":"wsdapi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

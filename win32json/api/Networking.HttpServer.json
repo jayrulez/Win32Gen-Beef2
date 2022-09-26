@@ -666,6 +666,13 @@
 		,"Value":2
 		,"Attrs":[]
 	}
+	,{
+		"Name":"HTTP_VERSION"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"HTTP/1.0"
+		,"Attrs":[]
+	}
 ]
 
 ,"Types":[
@@ -1154,7 +1161,7 @@
 			,{"Name":"MaxRecordSize","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"RolloverType","Type":{"Kind":"ApiRef","Name":"HTTP_LOGGING_ROLLOVER_TYPE","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"RolloverSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"pSecurityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":[]}
+			,{"Name":"pSecurityDescriptor","Type":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -1900,7 +1907,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"AuthStatus","Type":{"Kind":"ApiRef","Name":"HTTP_AUTH_STATUS","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
-			,{"Name":"SecStatus","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+			,{"Name":"SecStatus","Type":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"AuthType","Type":{"Kind":"ApiRef","Name":"HTTP_REQUEST_AUTH_TYPE","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"AccessToken","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -1954,7 +1961,7 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"__AnonymousBase_http_L1861_C35","Type":{"Kind":"ApiRef","Name":"HTTP_REQUEST_V1","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
+			{"Name":"Base","Type":{"Kind":"ApiRef","Name":"HTTP_REQUEST_V1","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"RequestInfoCount","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"pRequestInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HTTP_REQUEST_INFO","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]}},"Attrs":[]}
 		]
@@ -2035,7 +2042,7 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"__AnonymousBase_http_L2050_C36","Type":{"Kind":"ApiRef","Name":"HTTP_RESPONSE_V1","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
+			{"Name":"Base","Type":{"Kind":"ApiRef","Name":"HTTP_RESPONSE_V1","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"ResponseInfoCount","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"pResponseInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HTTP_RESPONSE_INFO","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]}},"Attrs":[]}
 		]
@@ -2828,7 +2835,7 @@
 	{
 		"Name":"HttpInitialize"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2843,7 +2850,7 @@
 	,{
 		"Name":"HttpTerminate"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2857,7 +2864,7 @@
 	,{
 		"Name":"HttpCreateHttpHandle"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2871,7 +2878,7 @@
 	,{
 		"Name":"HttpCreateRequestQueue"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2888,7 +2895,7 @@
 	,{
 		"Name":"HttpCloseRequestQueue"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2901,7 +2908,7 @@
 	,{
 		"Name":"HttpSetRequestQueueProperty"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2919,7 +2926,7 @@
 	,{
 		"Name":"HttpQueryRequestQueueProperty"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2938,7 +2945,7 @@
 	,{
 		"Name":"HttpSetRequestProperty"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2956,7 +2963,7 @@
 	,{
 		"Name":"HttpShutdownRequestQueue"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2969,7 +2976,7 @@
 	,{
 		"Name":"HttpReceiveClientCertificate"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2988,7 +2995,7 @@
 	,{
 		"Name":"HttpCreateServerSession"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3003,7 +3010,7 @@
 	,{
 		"Name":"HttpCloseServerSession"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3016,7 +3023,7 @@
 	,{
 		"Name":"HttpQueryServerSessionProperty"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3033,7 +3040,7 @@
 	,{
 		"Name":"HttpSetServerSessionProperty"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3049,7 +3056,7 @@
 	,{
 		"Name":"HttpAddUrl"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3064,7 +3071,7 @@
 	,{
 		"Name":"HttpRemoveUrl"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3078,7 +3085,7 @@
 	,{
 		"Name":"HttpCreateUrlGroup"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3093,7 +3100,7 @@
 	,{
 		"Name":"HttpCloseUrlGroup"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3106,7 +3113,7 @@
 	,{
 		"Name":"HttpAddUrlToUrlGroup"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3122,7 +3129,7 @@
 	,{
 		"Name":"HttpRemoveUrlFromUrlGroup"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3137,7 +3144,7 @@
 	,{
 		"Name":"HttpSetUrlGroupProperty"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3153,7 +3160,7 @@
 	,{
 		"Name":"HttpQueryUrlGroupProperty"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3170,7 +3177,7 @@
 	,{
 		"Name":"HttpPrepareUrl"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3186,7 +3193,7 @@
 	,{
 		"Name":"HttpReceiveHttpRequest"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3205,7 +3212,7 @@
 	,{
 		"Name":"HttpReceiveRequestEntityBody"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3224,7 +3231,7 @@
 	,{
 		"Name":"HttpSendHttpResponse"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3246,7 +3253,7 @@
 	,{
 		"Name":"HttpSendResponseEntityBody"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3268,7 +3275,7 @@
 	,{
 		"Name":"HttpDeclarePush"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3286,7 +3293,7 @@
 	,{
 		"Name":"HttpWaitForDisconnect"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3301,7 +3308,7 @@
 	,{
 		"Name":"HttpWaitForDisconnectEx"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3317,7 +3324,7 @@
 	,{
 		"Name":"HttpCancelHttpRequest"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3332,7 +3339,7 @@
 	,{
 		"Name":"HttpWaitForDemandStart"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3346,7 +3353,7 @@
 	,{
 		"Name":"HttpIsFeatureSupported"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3359,7 +3366,7 @@
 	,{
 		"Name":"HttpDelegateRequestEx"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3377,7 +3384,7 @@
 	,{
 		"Name":"HttpFindUrlGroupId"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3392,7 +3399,7 @@
 	,{
 		"Name":"HttpFlushResponseCache"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3408,7 +3415,7 @@
 	,{
 		"Name":"HttpAddFragmentToCache"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3425,7 +3432,7 @@
 	,{
 		"Name":"HttpReadFragmentFromCache"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3444,7 +3451,7 @@
 	,{
 		"Name":"HttpSetServiceConfiguration"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3461,7 +3468,7 @@
 	,{
 		"Name":"HttpUpdateServiceConfiguration"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3478,7 +3485,7 @@
 	,{
 		"Name":"HttpDeleteServiceConfiguration"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3495,7 +3502,7 @@
 	,{
 		"Name":"HttpQueryServiceConfiguration"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3515,7 +3522,7 @@
 	,{
 		"Name":"HttpGetExtension"
 		,"SetLastError":false
-		,"DllImport":"HTTPAPI"
+		,"DllImport":"HTTPAPI.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

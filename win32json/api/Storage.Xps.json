@@ -650,7 +650,7 @@
 			,{"Name":"DC_TRUETYPE","Value":15}
 			,{"Name":"DC_VERSION","Value":10}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"UInt16"
 	}
 	,{
 		"Name":"PSINJECT_POINT"
@@ -7525,7 +7525,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"imageResource","Type":{"Kind":"ApiRef","Name":"IXpsOMImageResource","TargetKind":"Com","Api":"Storage.Xps","Parents":[]},"Attrs":["In","Out"]}
+					{"Name":"imageResource","Type":{"Kind":"ApiRef","Name":"IXpsOMImageResource","TargetKind":"Com","Api":"Storage.Xps","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -7537,7 +7537,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"imageResource","Type":{"Kind":"ApiRef","Name":"IXpsOMImageResource","TargetKind":"Com","Api":"Storage.Xps","Parents":[]},"Attrs":["In","Out"]}
+					{"Name":"imageResource","Type":{"Kind":"ApiRef","Name":"IXpsOMImageResource","TargetKind":"Com","Api":"Storage.Xps","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -8867,7 +8867,7 @@
 	{
 		"Name":"DeviceCapabilitiesA"
 		,"SetLastError":false
-		,"DllImport":"WINSPOOL"
+		,"DllImport":"winspool.drv"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8884,7 +8884,7 @@
 	,{
 		"Name":"DeviceCapabilitiesW"
 		,"SetLastError":false
-		,"DllImport":"WINSPOOL"
+		,"DllImport":"winspool.drv"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8901,7 +8901,7 @@
 	,{
 		"Name":"Escape"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8918,7 +8918,7 @@
 	,{
 		"Name":"ExtEscape"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8936,7 +8936,7 @@
 	,{
 		"Name":"StartDocA"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8950,7 +8950,7 @@
 	,{
 		"Name":"StartDocW"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8964,7 +8964,7 @@
 	,{
 		"Name":"EndDoc"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8977,7 +8977,7 @@
 	,{
 		"Name":"StartPage"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8990,7 +8990,7 @@
 	,{
 		"Name":"EndPage"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9003,7 +9003,7 @@
 	,{
 		"Name":"AbortDoc"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9016,7 +9016,7 @@
 	,{
 		"Name":"SetAbortProc"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9030,7 +9030,7 @@
 	,{
 		"Name":"PrintWindow"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

@@ -2,6 +2,27 @@
 
 "Constants":[
 	{
+		"Name":"WC_MAGNIFIERA"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Magnifier"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WC_MAGNIFIERW"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Magnifier"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WC_MAGNIFIER"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Magnifier"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"MS_SHOWMAGNIFIEDCURSOR"
 		,"Type":{"Kind":"Native","Name":"Int32"}
 		,"ValueType":"Int32"
@@ -22,24 +43,23 @@
 		,"Value":4
 		,"Attrs":[]
 	}
-	,{
-		"Name":"MW_FILTERMODE_EXCLUDE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":0
-		,"Attrs":[]
-	}
-	,{
-		"Name":"MW_FILTERMODE_INCLUDE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1
-		,"Attrs":[]
-	}
 ]
 
 ,"Types":[
 	{
+		"Name":"MW_FILTERMODE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"MW_FILTERMODE_EXCLUDE","Value":0}
+			,{"Name":"MW_FILTERMODE_INCLUDE","Value":1}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
 		"Name":"MAGTRANSFORM"
 		,"Architectures":[]
 		,"Platform":null
@@ -109,7 +129,7 @@
 	{
 		"Name":"MagInitialize"
 		,"SetLastError":false
-		,"DllImport":"MAGNIFICATION"
+		,"DllImport":"MAGNIFICATION.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -121,7 +141,7 @@
 	,{
 		"Name":"MagUninitialize"
 		,"SetLastError":false
-		,"DllImport":"MAGNIFICATION"
+		,"DllImport":"MAGNIFICATION.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -133,7 +153,7 @@
 	,{
 		"Name":"MagSetWindowSource"
 		,"SetLastError":false
-		,"DllImport":"MAGNIFICATION"
+		,"DllImport":"MAGNIFICATION.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -147,7 +167,7 @@
 	,{
 		"Name":"MagGetWindowSource"
 		,"SetLastError":false
-		,"DllImport":"MAGNIFICATION"
+		,"DllImport":"MAGNIFICATION.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -161,7 +181,7 @@
 	,{
 		"Name":"MagSetWindowTransform"
 		,"SetLastError":false
-		,"DllImport":"MAGNIFICATION"
+		,"DllImport":"MAGNIFICATION.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -175,7 +195,7 @@
 	,{
 		"Name":"MagGetWindowTransform"
 		,"SetLastError":false
-		,"DllImport":"MAGNIFICATION"
+		,"DllImport":"MAGNIFICATION.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -189,7 +209,7 @@
 	,{
 		"Name":"MagSetWindowFilterList"
 		,"SetLastError":false
-		,"DllImport":"MAGNIFICATION"
+		,"DllImport":"MAGNIFICATION.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -197,7 +217,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hwnd","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"dwFilterMode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"dwFilterMode","Type":{"Kind":"ApiRef","Name":"MW_FILTERMODE","TargetKind":"Default","Api":"UI.Magnification","Parents":[]},"Attrs":["In"]}
 			,{"Name":"count","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"pHWND","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 		]
@@ -205,7 +225,7 @@
 	,{
 		"Name":"MagGetWindowFilterList"
 		,"SetLastError":false
-		,"DllImport":"MAGNIFICATION"
+		,"DllImport":"MAGNIFICATION.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -213,7 +233,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hwnd","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"pdwFilterMode","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
+			,{"Name":"pdwFilterMode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MW_FILTERMODE","TargetKind":"Default","Api":"UI.Magnification","Parents":[]}},"Attrs":["In","Out"]}
 			,{"Name":"count","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"pHWND","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 		]
@@ -221,7 +241,7 @@
 	,{
 		"Name":"MagSetImageScalingCallback"
 		,"SetLastError":false
-		,"DllImport":"MAGNIFICATION"
+		,"DllImport":"MAGNIFICATION.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -235,7 +255,7 @@
 	,{
 		"Name":"MagGetImageScalingCallback"
 		,"SetLastError":false
-		,"DllImport":"MAGNIFICATION"
+		,"DllImport":"MAGNIFICATION.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"MagImageScalingCallback","TargetKind":"FunctionPointer","Api":"UI.Magnification","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -248,7 +268,7 @@
 	,{
 		"Name":"MagSetColorEffect"
 		,"SetLastError":false
-		,"DllImport":"MAGNIFICATION"
+		,"DllImport":"MAGNIFICATION.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -262,7 +282,7 @@
 	,{
 		"Name":"MagGetColorEffect"
 		,"SetLastError":false
-		,"DllImport":"MAGNIFICATION"
+		,"DllImport":"MAGNIFICATION.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -276,7 +296,7 @@
 	,{
 		"Name":"MagSetFullscreenTransform"
 		,"SetLastError":false
-		,"DllImport":"MAGNIFICATION"
+		,"DllImport":"MAGNIFICATION.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -291,7 +311,7 @@
 	,{
 		"Name":"MagGetFullscreenTransform"
 		,"SetLastError":false
-		,"DllImport":"MAGNIFICATION"
+		,"DllImport":"MAGNIFICATION.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -306,7 +326,7 @@
 	,{
 		"Name":"MagSetFullscreenColorEffect"
 		,"SetLastError":false
-		,"DllImport":"MAGNIFICATION"
+		,"DllImport":"MAGNIFICATION.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -319,7 +339,7 @@
 	,{
 		"Name":"MagGetFullscreenColorEffect"
 		,"SetLastError":false
-		,"DllImport":"MAGNIFICATION"
+		,"DllImport":"MAGNIFICATION.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -332,7 +352,7 @@
 	,{
 		"Name":"MagSetInputTransform"
 		,"SetLastError":true
-		,"DllImport":"MAGNIFICATION"
+		,"DllImport":"MAGNIFICATION.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -347,7 +367,7 @@
 	,{
 		"Name":"MagGetInputTransform"
 		,"SetLastError":false
-		,"DllImport":"MAGNIFICATION"
+		,"DllImport":"MAGNIFICATION.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -362,7 +382,7 @@
 	,{
 		"Name":"MagShowSystemCursor"
 		,"SetLastError":false
-		,"DllImport":"MAGNIFICATION"
+		,"DllImport":"MAGNIFICATION.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

@@ -1448,12 +1448,10 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"index","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
-					,{"Name":"ppFolder","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITaskFolder","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppFolder","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITaskFolder","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -1467,7 +1465,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"ppEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -1490,7 +1488,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"path","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
-					,{"Name":"ppFolder","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITaskFolder","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppFolder","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITaskFolder","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -1503,7 +1501,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"flags","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"ppRunningTasks","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IRunningTaskCollection","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppRunningTasks","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IRunningTaskCollection","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -1516,7 +1514,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"ppDefinition","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITaskDefinition","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppDefinition","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITaskDefinition","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -1559,7 +1557,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pServer","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pServer","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -1573,7 +1571,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pUser","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pUser","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -1587,7 +1585,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pDomain","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pDomain","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -1715,7 +1713,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pInput","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pInput","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -1739,7 +1737,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pContext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pContext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -1839,9 +1837,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"index","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"ppPair","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITaskNamedValuePair","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out"]}
@@ -1919,7 +1915,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -1933,7 +1929,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -1947,7 +1943,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pPath","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pPath","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -1975,7 +1971,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -2045,12 +2041,10 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"index","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
-					,{"Name":"ppRunningTask","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IRunningTask","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppRunningTask","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IRunningTask","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -2064,7 +2058,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"ppEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -2088,7 +2082,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -2102,7 +2096,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pPath","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pPath","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -2157,7 +2151,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"params","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
-					,{"Name":"ppRunningTask","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IRunningTask","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppRunningTask","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IRunningTask","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -2173,7 +2167,7 @@
 					,{"Name":"flags","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"sessionID","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"user","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"ppRunningTask","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IRunningTask","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppRunningTask","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IRunningTask","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -2186,7 +2180,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"flags","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"ppRunningTasks","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IRunningTaskCollection","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppRunningTasks","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IRunningTaskCollection","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -2256,7 +2250,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"ppDefinition","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITaskDefinition","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppDefinition","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITaskDefinition","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -2270,7 +2264,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pXml","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pXml","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -2283,7 +2277,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"securityInformation","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"pSddl","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"pSddl","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -2323,7 +2317,7 @@
 					{"Name":"pstStart","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SYSTEMTIME","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Const"]}
 					,{"Name":"pstEnd","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SYSTEMTIME","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Const"]}
 					,{"Name":"pCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
-					,{"Name":"pRunTimes","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SYSTEMTIME","TargetKind":"Default","Api":"Foundation","Parents":[]}}},"Attrs":["Out","Optional"]}
+					,{"Name":"pRunTimes","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SYSTEMTIME","TargetKind":"Default","Api":"Foundation","Parents":[]}}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -3965,9 +3959,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"index","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"ppTrigger","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITrigger","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out"]}
@@ -4054,9 +4046,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"index","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"ppAction","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IAction","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out"]}
@@ -4405,9 +4395,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"index","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"pPrivilege","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
@@ -5788,12 +5776,10 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"index","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
-					,{"Name":"ppRegisteredTask","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IRegisteredTask","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppRegisteredTask","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IRegisteredTask","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -5807,7 +5793,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"ppEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -5831,7 +5817,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -5845,7 +5831,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pPath","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pPath","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -5858,7 +5844,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"path","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"ppFolder","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITaskFolder","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppFolder","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITaskFolder","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -5871,7 +5857,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"flags","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"ppFolders","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITaskFolderCollection","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppFolders","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITaskFolderCollection","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -5885,7 +5871,7 @@
 				,"Params":[
 					{"Name":"subFolderName","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"sddl","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
-					,{"Name":"ppFolder","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITaskFolder","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppFolder","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITaskFolder","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -5911,7 +5897,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"path","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"ppTask","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IRegisteredTask","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppTask","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IRegisteredTask","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -5924,7 +5910,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"flags","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"ppTasks","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IRegisteredTaskCollection","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppTasks","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IRegisteredTaskCollection","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -5956,7 +5942,7 @@
 					,{"Name":"password","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
 					,{"Name":"logonType","Type":{"Kind":"ApiRef","Name":"TASK_LOGON_TYPE","TargetKind":"Default","Api":"System.TaskScheduler","Parents":[]},"Attrs":["In"]}
 					,{"Name":"sddl","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
-					,{"Name":"ppTask","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IRegisteredTask","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppTask","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IRegisteredTask","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -5975,7 +5961,7 @@
 					,{"Name":"password","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
 					,{"Name":"logonType","Type":{"Kind":"ApiRef","Name":"TASK_LOGON_TYPE","TargetKind":"Default","Api":"System.TaskScheduler","Parents":[]},"Attrs":["In"]}
 					,{"Name":"sddl","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
-					,{"Name":"ppTask","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IRegisteredTask","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppTask","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IRegisteredTask","TargetKind":"Com","Api":"System.TaskScheduler","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -5988,7 +5974,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"securityInformation","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"pSddl","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"pSddl","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{

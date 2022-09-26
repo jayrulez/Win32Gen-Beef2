@@ -1943,7 +1943,7 @@
 				,"Params":[
 					{"Name":"NumResources","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"ppResources","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"ApiRef","Name":"IDXGIResource","TargetKind":"Com","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"pDiscarded","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"pDiscarded","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
 				]
 			}
 			,{
@@ -3417,7 +3417,7 @@
 				,"Params":[
 					{"Name":"NumResources","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"ppResources","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"ApiRef","Name":"IDXGIResource","TargetKind":"Com","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"pResults","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_RECLAIM_RESOURCE_RESULTS","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"pResults","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"ApiRef","Name":"DXGI_RECLAIM_RESOURCE_RESULTS","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -4701,7 +4701,7 @@
 	{
 		"Name":"CreateDXGIFactory"
 		,"SetLastError":false
-		,"DllImport":"dxgi"
+		,"DllImport":"dxgi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4715,7 +4715,7 @@
 	,{
 		"Name":"CreateDXGIFactory1"
 		,"SetLastError":false
-		,"DllImport":"dxgi"
+		,"DllImport":"dxgi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4729,7 +4729,7 @@
 	,{
 		"Name":"CreateDXGIFactory2"
 		,"SetLastError":false
-		,"DllImport":"dxgi"
+		,"DllImport":"dxgi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4744,7 +4744,7 @@
 	,{
 		"Name":"DXGIGetDebugInterface1"
 		,"SetLastError":false
-		,"DllImport":"dxgi"
+		,"DllImport":"dxgi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4759,7 +4759,7 @@
 	,{
 		"Name":"DXGIDeclareAdapterRemovalSupport"
 		,"SetLastError":false
-		,"DllImport":"dxgi"
+		,"DllImport":"dxgi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

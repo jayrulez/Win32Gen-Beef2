@@ -3061,6 +3061,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"MS_OS_STRING_SIGNATURE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MSFT100"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"MS_OS_FLAGS_CONTAINERID"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -3072,6 +3079,34 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":256
+		,"Attrs":[]
+	}
+	,{
+		"Name":"KREGUSBFNENUMPATH"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"\\Registry\\Machine\\SYSTEM\\CurrentControlSet\\Control\\USBFN\\"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"UREGUSBFNENUMPATH"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\USBFN\\"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"KREGMANUSBFNENUMPATH"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"\\Registry\\Machine\\SYSTEM\\CurrentControlSet\\Control\\ManufacturingMode\\Current\\USBFN\\"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"UREGMANUSBFNENUMPATH"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\ManufacturingMode\\Current\\USBFN\\"
 		,"Attrs":[]
 	}
 	,{
@@ -5938,7 +5973,7 @@
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":1
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"PacketParameters","Type":{"Kind":"ApiRef","Name":"PACKET_PARAMETERS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -5966,7 +6001,7 @@
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":1
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"Parameters","Type":{"Kind":"ApiRef","Name":"RAW_RESET_PORT_PARAMETERS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -5995,7 +6030,7 @@
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":1
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"Parameters","Type":{"Kind":"ApiRef","Name":"RAW_ROOTPORT_FEATURE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6023,7 +6058,7 @@
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":1
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"Parameters","Type":{"Kind":"ApiRef","Name":"RAW_ROOTPORT_PARAMETERS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6055,7 +6090,7 @@
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":1
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"Info0","Type":{"Kind":"ApiRef","Name":"USB_CONTROLLER_INFO_0","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6083,7 +6118,7 @@
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":1
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"UnicodeName","Type":{"Kind":"ApiRef","Name":"USB_UNICODE_NAME","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6112,7 +6147,7 @@
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":1
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"PassThru","Type":{"Kind":"ApiRef","Name":"USB_PASS_THRU_PARAMETERS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6172,7 +6207,7 @@
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":1
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"PowerInformation","Type":{"Kind":"ApiRef","Name":"USB_POWER_INFO","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6200,7 +6235,7 @@
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":1
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"Parameters","Type":{"Kind":"ApiRef","Name":"USB_OPEN_RAW_DEVICE_PARAMETERS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6227,7 +6262,7 @@
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":1
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"Parameters","Type":{"Kind":"ApiRef","Name":"USB_CLOSE_RAW_DEVICE_PARAMETERS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6264,7 +6299,7 @@
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":1
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"Parameters","Type":{"Kind":"ApiRef","Name":"USB_SEND_RAW_COMMAND_PARAMETERS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6301,7 +6336,7 @@
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":1
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"BandwidthInformation","Type":{"Kind":"ApiRef","Name":"USB_BANDWIDTH_INFO","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6343,7 +6378,7 @@
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":1
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"BusStatistics0","Type":{"Kind":"ApiRef","Name":"USB_BUS_STATISTICS_0","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6375,7 +6410,7 @@
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":1
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"Parameters","Type":{"Kind":"ApiRef","Name":"USB_DRIVER_VERSION_PARAMETERS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6389,7 +6424,7 @@
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":1
 		,"Fields":[
 			{"Name":"Usb2HwRevision","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 		]
@@ -6402,7 +6437,7 @@
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":1
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"Parameters","Type":{"Kind":"ApiRef","Name":"USB_USB2HW_VERSION_PARAMETERS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6965,8 +7000,8 @@
 ,"Functions":[
 	{
 		"Name":"WinUsb_Initialize"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6980,7 +7015,7 @@
 	,{
 		"Name":"WinUsb_Free"
 		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6992,8 +7027,8 @@
 	}
 	,{
 		"Name":"WinUsb_GetAssociatedInterface"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7007,8 +7042,8 @@
 	}
 	,{
 		"Name":"WinUsb_GetDescriptor"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7026,8 +7061,8 @@
 	}
 	,{
 		"Name":"WinUsb_QueryInterfaceSettings"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7041,8 +7076,8 @@
 	}
 	,{
 		"Name":"WinUsb_QueryDeviceInformation"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7057,8 +7092,8 @@
 	}
 	,{
 		"Name":"WinUsb_SetCurrentAlternateSetting"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7071,8 +7106,8 @@
 	}
 	,{
 		"Name":"WinUsb_GetCurrentAlternateSetting"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7085,8 +7120,8 @@
 	}
 	,{
 		"Name":"WinUsb_QueryPipe"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7101,8 +7136,8 @@
 	}
 	,{
 		"Name":"WinUsb_QueryPipeEx"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7117,8 +7152,8 @@
 	}
 	,{
 		"Name":"WinUsb_SetPipePolicy"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7134,8 +7169,8 @@
 	}
 	,{
 		"Name":"WinUsb_GetPipePolicy"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7151,8 +7186,8 @@
 	}
 	,{
 		"Name":"WinUsb_ReadPipe"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7169,8 +7204,8 @@
 	}
 	,{
 		"Name":"WinUsb_WritePipe"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7187,8 +7222,8 @@
 	}
 	,{
 		"Name":"WinUsb_ControlTransfer"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7205,8 +7240,8 @@
 	}
 	,{
 		"Name":"WinUsb_ResetPipe"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7219,8 +7254,8 @@
 	}
 	,{
 		"Name":"WinUsb_AbortPipe"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7233,8 +7268,8 @@
 	}
 	,{
 		"Name":"WinUsb_FlushPipe"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7247,8 +7282,8 @@
 	}
 	,{
 		"Name":"WinUsb_SetPowerPolicy"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7263,8 +7298,8 @@
 	}
 	,{
 		"Name":"WinUsb_GetPowerPolicy"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7279,8 +7314,8 @@
 	}
 	,{
 		"Name":"WinUsb_GetOverlappedResult"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7295,8 +7330,8 @@
 	}
 	,{
 		"Name":"WinUsb_ParseConfigurationDescriptor"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"USB_INTERFACE_DESCRIPTOR","TargetKind":"Default","Api":"Devices.Usb","Parents":[]}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7314,8 +7349,8 @@
 	}
 	,{
 		"Name":"WinUsb_ParseDescriptors"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"USB_COMMON_DESCRIPTOR","TargetKind":"Default","Api":"Devices.Usb","Parents":[]}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7330,8 +7365,8 @@
 	}
 	,{
 		"Name":"WinUsb_GetCurrentFrameNumber"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7345,8 +7380,8 @@
 	}
 	,{
 		"Name":"WinUsb_GetAdjustedFrameNumber"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7359,8 +7394,8 @@
 	}
 	,{
 		"Name":"WinUsb_RegisterIsochBuffer"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7376,8 +7411,8 @@
 	}
 	,{
 		"Name":"WinUsb_UnregisterIsochBuffer"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7389,8 +7424,8 @@
 	}
 	,{
 		"Name":"WinUsb_WriteIsochPipe"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7406,8 +7441,8 @@
 	}
 	,{
 		"Name":"WinUsb_ReadIsochPipe"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7425,8 +7460,8 @@
 	}
 	,{
 		"Name":"WinUsb_WriteIsochPipeAsap"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7442,8 +7477,8 @@
 	}
 	,{
 		"Name":"WinUsb_ReadIsochPipeAsap"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7461,8 +7496,8 @@
 	}
 	,{
 		"Name":"WinUsb_StartTrackingForTimeSync"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7475,8 +7510,8 @@
 	}
 	,{
 		"Name":"WinUsb_GetCurrentFrameNumberAndQpc"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7489,8 +7524,8 @@
 	}
 	,{
 		"Name":"WinUsb_StopTrackingForTimeSync"
-		,"SetLastError":false
-		,"DllImport":"WINUSB"
+		,"SetLastError":true
+		,"DllImport":"WINUSB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

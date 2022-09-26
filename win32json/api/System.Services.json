@@ -16,6 +16,48 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"SERVICES_ACTIVE_DATABASEW"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"ServicesActive"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICES_FAILED_DATABASEW"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"ServicesFailed"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICES_ACTIVE_DATABASEA"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"ServicesActive"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICES_FAILED_DATABASEA"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"ServicesFailed"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICES_ACTIVE_DATABASE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"ServicesActive"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICES_FAILED_DATABASE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"ServicesFailed"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"SERVICE_NO_CHANGE"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -862,6 +904,20 @@
 		,"Value":"2d7a2816-0c5e-45fc-9ce7-570e5ecde9c9"
 		,"Attrs":[]
 	}
+	,{
+		"Name":"SERVICE_TRIGGER_STARTED_ARGUMENT"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"TriggerStarted"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SC_AGGREGATE_STORAGE_KEY"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"System\\CurrentControlSet\\Control\\ServiceAggregatedEvents"
+		,"Attrs":[]
+	}
 ]
 
 ,"Types":[
@@ -924,10 +980,8 @@
 		,"Scoped":false
 		,"Values":[
 			{"Name":"SERVICE_DRIVER","Value":11}
-			,{"Name":"SERVICE_FILE_SYSTEM_DRIVER_","Value":2}
 			,{"Name":"SERVICE_KERNEL_DRIVER","Value":1}
 			,{"Name":"SERVICE_WIN32","Value":48}
-			,{"Name":"SERVICE_WIN32_OWN_PROCESS_","Value":16}
 			,{"Name":"SERVICE_WIN32_SHARE_PROCESS","Value":32}
 			,{"Name":"SERVICE_ADAPTER","Value":4}
 			,{"Name":"SERVICE_FILE_SYSTEM_DRIVER","Value":2}
@@ -1918,7 +1972,7 @@
 	{
 		"Name":"SetServiceBits"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1934,7 +1988,7 @@
 	,{
 		"Name":"ChangeServiceConfigA"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1957,7 +2011,7 @@
 	,{
 		"Name":"ChangeServiceConfigW"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1980,7 +2034,7 @@
 	,{
 		"Name":"ChangeServiceConfig2A"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1995,7 +2049,7 @@
 	,{
 		"Name":"ChangeServiceConfig2W"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2010,7 +2064,7 @@
 	,{
 		"Name":"CloseServiceHandle"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2023,7 +2077,7 @@
 	,{
 		"Name":"ControlService"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2038,7 +2092,7 @@
 	,{
 		"Name":"CreateServiceA"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"SC_HANDLE","TargetKind":"Default","Api":"Security","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2063,7 +2117,7 @@
 	,{
 		"Name":"CreateServiceW"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"SC_HANDLE","TargetKind":"Default","Api":"Security","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2088,7 +2142,7 @@
 	,{
 		"Name":"DeleteService"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2101,7 +2155,7 @@
 	,{
 		"Name":"EnumDependentServicesA"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2119,7 +2173,7 @@
 	,{
 		"Name":"EnumDependentServicesW"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2137,7 +2191,7 @@
 	,{
 		"Name":"EnumServicesStatusA"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2157,7 +2211,7 @@
 	,{
 		"Name":"EnumServicesStatusW"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2177,7 +2231,7 @@
 	,{
 		"Name":"EnumServicesStatusExA"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2199,7 +2253,7 @@
 	,{
 		"Name":"EnumServicesStatusExW"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2221,7 +2275,7 @@
 	,{
 		"Name":"GetServiceKeyNameA"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2237,7 +2291,7 @@
 	,{
 		"Name":"GetServiceKeyNameW"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2253,7 +2307,7 @@
 	,{
 		"Name":"GetServiceDisplayNameA"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2269,7 +2323,7 @@
 	,{
 		"Name":"GetServiceDisplayNameW"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2285,7 +2339,7 @@
 	,{
 		"Name":"LockServiceDatabase"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2298,7 +2352,7 @@
 	,{
 		"Name":"NotifyBootConfigStatus"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2311,7 +2365,7 @@
 	,{
 		"Name":"OpenSCManagerA"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"SC_HANDLE","TargetKind":"Default","Api":"Security","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2326,7 +2380,7 @@
 	,{
 		"Name":"OpenSCManagerW"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"SC_HANDLE","TargetKind":"Default","Api":"Security","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2341,7 +2395,7 @@
 	,{
 		"Name":"OpenServiceA"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"SC_HANDLE","TargetKind":"Default","Api":"Security","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2356,7 +2410,7 @@
 	,{
 		"Name":"OpenServiceW"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"SC_HANDLE","TargetKind":"Default","Api":"Security","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2371,7 +2425,7 @@
 	,{
 		"Name":"QueryServiceConfigA"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2387,7 +2441,7 @@
 	,{
 		"Name":"QueryServiceConfigW"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2403,7 +2457,7 @@
 	,{
 		"Name":"QueryServiceConfig2A"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2420,7 +2474,7 @@
 	,{
 		"Name":"QueryServiceConfig2W"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2437,7 +2491,7 @@
 	,{
 		"Name":"QueryServiceLockStatusA"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2453,7 +2507,7 @@
 	,{
 		"Name":"QueryServiceLockStatusW"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2469,7 +2523,7 @@
 	,{
 		"Name":"QueryServiceObjectSecurity"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2478,7 +2532,7 @@
 		,"Params":[
 			{"Name":"hService","Type":{"Kind":"ApiRef","Name":"SC_HANDLE","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwSecurityInformation","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"lpSecurityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":3},"Optional"]}
+			,{"Name":"lpSecurityDescriptor","Type":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":3},"Optional"]}
 			,{"Name":"cbBufSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pcbBytesNeeded","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 		]
@@ -2486,7 +2540,7 @@
 	,{
 		"Name":"QueryServiceStatus"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2500,7 +2554,7 @@
 	,{
 		"Name":"QueryServiceStatusEx"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2517,7 +2571,7 @@
 	,{
 		"Name":"RegisterServiceCtrlHandlerA"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"SERVICE_STATUS_HANDLE","TargetKind":"Default","Api":"System.Services","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2531,7 +2585,7 @@
 	,{
 		"Name":"RegisterServiceCtrlHandlerW"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"SERVICE_STATUS_HANDLE","TargetKind":"Default","Api":"System.Services","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2545,7 +2599,7 @@
 	,{
 		"Name":"RegisterServiceCtrlHandlerExA"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"SERVICE_STATUS_HANDLE","TargetKind":"Default","Api":"System.Services","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2560,7 +2614,7 @@
 	,{
 		"Name":"RegisterServiceCtrlHandlerExW"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"SERVICE_STATUS_HANDLE","TargetKind":"Default","Api":"System.Services","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2575,7 +2629,7 @@
 	,{
 		"Name":"SetServiceObjectSecurity"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2584,13 +2638,13 @@
 		,"Params":[
 			{"Name":"hService","Type":{"Kind":"ApiRef","Name":"SC_HANDLE","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwSecurityInformation","Type":{"Kind":"ApiRef","Name":"OBJECT_SECURITY_INFORMATION","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["In"]}
-			,{"Name":"lpSecurityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"lpSecurityDescriptor","Type":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"SetServiceStatus"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2604,7 +2658,7 @@
 	,{
 		"Name":"StartServiceCtrlDispatcherA"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2617,7 +2671,7 @@
 	,{
 		"Name":"StartServiceCtrlDispatcherW"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2630,7 +2684,7 @@
 	,{
 		"Name":"StartServiceA"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2645,7 +2699,7 @@
 	,{
 		"Name":"StartServiceW"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2660,7 +2714,7 @@
 	,{
 		"Name":"UnlockServiceDatabase"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2673,7 +2727,7 @@
 	,{
 		"Name":"NotifyServiceStatusChangeA"
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2688,7 +2742,7 @@
 	,{
 		"Name":"NotifyServiceStatusChangeW"
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2703,7 +2757,7 @@
 	,{
 		"Name":"ControlServiceExA"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2719,7 +2773,7 @@
 	,{
 		"Name":"ControlServiceExW"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2735,7 +2789,7 @@
 	,{
 		"Name":"QueryServiceDynamicInformation"
 		,"SetLastError":true
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2750,7 +2804,7 @@
 	,{
 		"Name":"WaitServiceState"
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2766,7 +2820,7 @@
 	,{
 		"Name":"GetServiceRegistryStateKey"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-service-core-l1-1-3"
+		,"DllImport":"api-ms-win-service-core-l1-1-3.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2782,7 +2836,7 @@
 	,{
 		"Name":"GetServiceDirectory"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-service-core-l1-1-4"
+		,"DllImport":"api-ms-win-service-core-l1-1-4.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2799,7 +2853,7 @@
 	,{
 		"Name":"GetSharedServiceRegistryStateKey"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-service-core-l1-1-5"
+		,"DllImport":"api-ms-win-service-core-l1-1-5.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2815,7 +2869,7 @@
 	,{
 		"Name":"GetSharedServiceDirectory"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-service-core-l1-1-5"
+		,"DllImport":"api-ms-win-service-core-l1-1-5.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

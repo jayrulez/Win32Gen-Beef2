@@ -2,24 +2,59 @@
 
 "Constants":[
 	{
-		"Name":"WM_CONTEXTMENU"
+		"Name":"cchTextLimitDefault"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
-		,"Value":123
+		,"Value":32767
 		,"Attrs":[]
 	}
 	,{
-		"Name":"WM_UNICHAR"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":265
+		"Name":"MSFTEDIT_CLASS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"RICHEDIT50W"
 		,"Attrs":[]
 	}
 	,{
-		"Name":"WM_PRINTCLIENT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":792
+		"Name":"CERICHEDIT_CLASSA"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"RichEditCEA"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"CERICHEDIT_CLASSW"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"RichEditCEW"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"RICHEDIT_CLASSA"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"RichEdit20A"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"RICHEDIT_CLASS10A"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"RICHEDIT"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"RICHEDIT_CLASSW"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"RichEdit20W"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"RICHEDIT_CLASS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"RichEdit20W"
 		,"Attrs":[]
 	}
 	,{
@@ -2228,6 +2263,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"yHeightCharPtsMost"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1638
+		,"Attrs":[]
+	}
+	,{
 		"Name":"SCF_SELECTION"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -2417,6 +2459,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"lDefaultTab"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":720
+		,"Attrs":[]
+	}
+	,{
 		"Name":"MAX_TABLE_CELLS"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -2585,48 +2634,6 @@
 		,"Attrs":[]
 	}
 	,{
-		"Name":"PFN_BULLET"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1
-		,"Attrs":[]
-	}
-	,{
-		"Name":"PFN_ARABIC"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2
-		,"Attrs":[]
-	}
-	,{
-		"Name":"PFN_LCLETTER"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":3
-		,"Attrs":[]
-	}
-	,{
-		"Name":"PFN_UCLETTER"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":4
-		,"Attrs":[]
-	}
-	,{
-		"Name":"PFN_LCROMAN"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":5
-		,"Attrs":[]
-	}
-	,{
-		"Name":"PFN_UCROMAN"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":6
-		,"Attrs":[]
-	}
-	,{
 		"Name":"PFA_JUSTIFY"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -2638,13 +2645,6 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":4
-		,"Attrs":[]
-	}
-	,{
-		"Name":"WM_NOTIFY"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":78
 		,"Attrs":[]
 	}
 	,{
@@ -2680,6 +2680,27 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"CF_RTF"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Rich Text Format"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"CF_RTFNOOBJS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Rich Text Format Without Objects"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"CF_RETEXTOBJ"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"RichEdit Text and Objects"
 		,"Attrs":[]
 	}
 	,{
@@ -2841,6 +2862,13 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":2147483648
+		,"Attrs":[]
+	}
+	,{
+		"Name":"RICHEDIT60_CLASS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"RICHEDIT60W"
 		,"Attrs":[]
 	}
 	,{
@@ -3128,41 +3156,6 @@
 		,"Type":{"Kind":"Native","Name":"Int32"}
 		,"ValueType":"Int32"
 		,"Value":2047
-		,"Attrs":[]
-	}
-	,{
-		"Name":"RECO_PASTE"
-		,"Type":{"Kind":"Native","Name":"Int32"}
-		,"ValueType":"Int32"
-		,"Value":0
-		,"Attrs":[]
-	}
-	,{
-		"Name":"RECO_DROP"
-		,"Type":{"Kind":"Native","Name":"Int32"}
-		,"ValueType":"Int32"
-		,"Value":1
-		,"Attrs":[]
-	}
-	,{
-		"Name":"RECO_COPY"
-		,"Type":{"Kind":"Native","Name":"Int32"}
-		,"ValueType":"Int32"
-		,"Value":2
-		,"Attrs":[]
-	}
-	,{
-		"Name":"RECO_CUT"
-		,"Type":{"Kind":"Native","Name":"Int32"}
-		,"ValueType":"Int32"
-		,"Value":3
-		,"Attrs":[]
-	}
-	,{
-		"Name":"RECO_DRAG"
-		,"Type":{"Kind":"Native","Name":"Int32"}
-		,"ValueType":"Int32"
-		,"Value":4
 		,"Attrs":[]
 	}
 ]
@@ -3472,6 +3465,23 @@
 		,"IntegerBase":"UInt16"
 	}
 	,{
+		"Name":"PARAFORMAT_NUMBERING"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":true
+		,"Scoped":false
+		,"Values":[
+			{"Name":"PFN_BULLET","Value":1}
+			,{"Name":"PFN_ARABIC","Value":2}
+			,{"Name":"PFN_LCLETTER","Value":3}
+			,{"Name":"PFN_UCLETTER","Value":4}
+			,{"Name":"PFN_LCROMAN","Value":5}
+			,{"Name":"PFN_UCROMAN","Value":6}
+		]
+		,"IntegerBase":"UInt16"
+	}
+	,{
 		"Name":"TEXTMODE"
 		,"Architectures":[]
 		,"Platform":null
@@ -3540,12 +3550,12 @@
 			,{"Name":"dyBrdrTop","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
 			,{"Name":"dxBrdrRight","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
 			,{"Name":"dyBrdrBottom","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"crBrdrLeft","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"crBrdrTop","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"crBrdrRight","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"crBrdrBottom","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"crBackPat","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"crForePat","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"crBrdrLeft","Type":{"Kind":"ApiRef","Name":"COLORREF","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"crBrdrTop","Type":{"Kind":"ApiRef","Name":"COLORREF","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"crBrdrRight","Type":{"Kind":"ApiRef","Name":"COLORREF","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"crBrdrBottom","Type":{"Kind":"ApiRef","Name":"COLORREF","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"crBackPat","Type":{"Kind":"ApiRef","Name":"COLORREF","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"crForePat","Type":{"Kind":"ApiRef","Name":"COLORREF","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -3628,8 +3638,8 @@
 			,{"Name":"dwEffects","Type":{"Kind":"ApiRef","Name":"CFE_EFFECTS","TargetKind":"Default","Api":"UI.Controls.RichEdit","Parents":[]},"Attrs":[]}
 			,{"Name":"yHeight","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"yOffset","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"crTextColor","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"bCharSet","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"crTextColor","Type":{"Kind":"ApiRef","Name":"COLORREF","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"bCharSet","Type":{"Kind":"ApiRef","Name":"EMBED_FONT_CHARSET","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]},"Attrs":[]}
 			,{"Name":"bPitchAndFamily","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"szFaceName","Type":{"Kind":"Array","Shape":{"Size":32},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 		]
@@ -3649,8 +3659,8 @@
 			,{"Name":"dwEffects","Type":{"Kind":"ApiRef","Name":"CFE_EFFECTS","TargetKind":"Default","Api":"UI.Controls.RichEdit","Parents":[]},"Attrs":[]}
 			,{"Name":"yHeight","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"yOffset","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"crTextColor","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"bCharSet","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"crTextColor","Type":{"Kind":"ApiRef","Name":"COLORREF","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"bCharSet","Type":{"Kind":"ApiRef","Name":"EMBED_FONT_CHARSET","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]},"Attrs":[]}
 			,{"Name":"bPitchAndFamily","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"szFaceName","Type":{"Kind":"Array","Shape":{"Size":32},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 		]
@@ -3665,10 +3675,10 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"__AnonymousBase_richedit_L711_C23","Type":{"Kind":"ApiRef","Name":"CHARFORMATW","TargetKind":"Default","Api":"UI.Controls.RichEdit","Parents":[]},"Attrs":[]}
+			{"Name":"Base","Type":{"Kind":"ApiRef","Name":"CHARFORMATW","TargetKind":"Default","Api":"UI.Controls.RichEdit","Parents":[]},"Attrs":[]}
 			,{"Name":"wWeight","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"sSpacing","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"crBackColor","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"crBackColor","Type":{"Kind":"ApiRef","Name":"COLORREF","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"lcid","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"UI.Controls.RichEdit","Parents":[]},"Attrs":[]}
 			,{"Name":"sStyle","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
@@ -3703,10 +3713,10 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"__AnonymousBase_richedit_L736_C23","Type":{"Kind":"ApiRef","Name":"CHARFORMATA","TargetKind":"Default","Api":"UI.Controls.RichEdit","Parents":[]},"Attrs":[]}
+			{"Name":"Base","Type":{"Kind":"ApiRef","Name":"CHARFORMATA","TargetKind":"Default","Api":"UI.Controls.RichEdit","Parents":[]},"Attrs":[]}
 			,{"Name":"wWeight","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"sSpacing","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"crBackColor","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"crBackColor","Type":{"Kind":"ApiRef","Name":"COLORREF","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"lcid","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"UI.Controls.RichEdit","Parents":[]},"Attrs":[]}
 			,{"Name":"sStyle","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
@@ -3891,7 +3901,7 @@
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwMask","Type":{"Kind":"ApiRef","Name":"PARAFORMAT_MASK","TargetKind":"Default","Api":"UI.Controls.RichEdit","Parents":[]},"Attrs":[]}
-			,{"Name":"wNumbering","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"wNumbering","Type":{"Kind":"ApiRef","Name":"PARAFORMAT_NUMBERING","TargetKind":"Default","Api":"UI.Controls.RichEdit","Parents":[]},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"UI.Controls.RichEdit","Parents":[]},"Attrs":[]}
 			,{"Name":"dxStartIndent","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"dxRightIndent","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -3925,7 +3935,7 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"__AnonymousBase_richedit_L1149_C22","Type":{"Kind":"ApiRef","Name":"PARAFORMAT","TargetKind":"Default","Api":"UI.Controls.RichEdit","Parents":[]},"Attrs":[]}
+			{"Name":"Base","Type":{"Kind":"ApiRef","Name":"PARAFORMAT","TargetKind":"Default","Api":"UI.Controls.RichEdit","Parents":[]},"Attrs":[]}
 			,{"Name":"dySpaceBefore","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"dySpaceAfter","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"dyLineSpacing","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -3990,7 +4000,7 @@
 		]
 	}
 	,{
-		"Name":"_grouptypingchange"
+		"Name":"GROUPTYPINGCHANGE"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -4180,8 +4190,8 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"crText","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"crBackground","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			{"Name":"crText","Type":{"Kind":"ApiRef","Name":"COLORREF","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"crBackground","Type":{"Kind":"ApiRef","Name":"COLORREF","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"dwEffects","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
@@ -4298,7 +4308,7 @@
 		,"IntegerBase":"Int32"
 	}
 	,{
-		"Name":"hyphresult"
+		"Name":"HYPHRESULT"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -5045,13 +5055,13 @@
 			,{
 				"Name":"TxGetSysColor"
 				,"SetLastError":false
-				,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+				,"ReturnType":{"Kind":"ApiRef","Name":"COLORREF","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"nIndex","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
+					{"Name":"nIndex","Type":{"Kind":"ApiRef","Name":"SYS_COLOR_INDEX","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -5728,7 +5738,7 @@
 				,"Params":[
 					{"Name":"lplpFrame","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOleInPlaceFrame","TargetKind":"Com","Api":"System.Ole","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"lplpDoc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOleInPlaceUIWindow","TargetKind":"Com","Api":"System.Ole","Parents":[]}},"Attrs":["Out"]}
-					,{"Name":"lpFrameInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OIFI","TargetKind":"Default","Api":"System.Ole","Parents":[]}},"Attrs":["In","Out"]}
+					,{"Name":"lpFrameInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OLEINPLACEFRAMEINFO","TargetKind":"Default","Api":"System.Ole","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -5780,7 +5790,7 @@
 				,"Params":[
 					{"Name":"lpdataobj","Type":{"Kind":"ApiRef","Name":"IDataObject","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
 					,{"Name":"lpcfFormat","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":["In","Out"]}
-					,{"Name":"reco","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"reco","Type":{"Kind":"ApiRef","Name":"RECO_FLAGS","TargetKind":"Default","Api":"System.SystemServices","Parents":[]},"Attrs":["In"]}
 					,{"Name":"fReally","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"hMetaPict","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
 				]
@@ -5821,8 +5831,8 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"fDrag","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"grfKeyState","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"pdwEffect","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
+					,{"Name":"grfKeyState","Type":{"Kind":"ApiRef","Name":"MODIFIERKEYS_FLAGS","TargetKind":"Default","Api":"System.SystemServices","Parents":[]},"Attrs":["In"]}
+					,{"Name":"pdwEffect","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DROPEFFECT","TargetKind":"Default","Api":"System.Ole","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -6523,7 +6533,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -6535,7 +6545,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppSel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextSelection","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppSel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextSelection","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -6559,7 +6569,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppStories","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextStoryRanges","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppStories","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextStoryRanges","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -6631,7 +6641,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pVar","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"Flags","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
+					,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"tomConstants","TargetKind":"Default","Api":"UI.Controls.RichEdit","Parents":[]},"Attrs":["In"]}
 					,{"Name":"CodePage","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 				]
 			}
@@ -6645,7 +6655,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pVar","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"Flags","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
+					,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"tomConstants","TargetKind":"Default","Api":"UI.Controls.RichEdit","Parents":[]},"Attrs":["In"]}
 					,{"Name":"CodePage","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 				]
 			}
@@ -6732,7 +6742,7 @@
 				,"Params":[
 					{"Name":"cpActive","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"cpAnchor","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"ppRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextRange","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextRange","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -6746,7 +6756,7 @@
 				,"Params":[
 					{"Name":"x","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"y","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"ppRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextRange","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextRange","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -6768,7 +6778,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pbstr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pbstr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -6816,7 +6826,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextRange","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextRange","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -6828,7 +6838,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextRange","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextRange","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -6900,7 +6910,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppFont","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextFont","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppFont","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextFont","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -6924,7 +6934,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppPara","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextPara","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppPara","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextPara","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -7243,7 +7253,7 @@
 				,"Params":[
 					{"Name":"bstr","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"Count","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"Flags","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
+					,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"tomConstants","TargetKind":"Default","Api":"UI.Controls.RichEdit","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pLength","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["Out"]}
 				]
 			}
@@ -7258,7 +7268,7 @@
 				,"Params":[
 					{"Name":"bstr","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"Count","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"Flags","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
+					,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"tomConstants","TargetKind":"Default","Api":"UI.Controls.RichEdit","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pLength","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["Out"]}
 				]
 			}
@@ -7273,7 +7283,7 @@
 				,"Params":[
 					{"Name":"bstr","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"Count","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"Flags","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
+					,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"tomConstants","TargetKind":"Default","Api":"UI.Controls.RichEdit","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pLength","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["Out"]}
 				]
 			}
@@ -7363,7 +7373,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"Type","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
+					{"Name":"Type","Type":{"Kind":"ApiRef","Name":"tomConstants","TargetKind":"Default","Api":"UI.Controls.RichEdit","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -7375,7 +7385,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"Type","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
+					{"Name":"Type","Type":{"Kind":"ApiRef","Name":"tomConstants","TargetKind":"Default","Api":"UI.Controls.RichEdit","Parents":[]},"Attrs":["In"]}
 					,{"Name":"px","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["Out"]}
 					,{"Name":"py","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["Out"]}
 				]
@@ -7391,7 +7401,7 @@
 				,"Params":[
 					{"Name":"x","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"y","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"Type","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
+					,{"Name":"Type","Type":{"Kind":"ApiRef","Name":"tomConstants","TargetKind":"Default","Api":"UI.Controls.RichEdit","Parents":[]},"Attrs":["In"]}
 					,{"Name":"Extend","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 				]
 			}
@@ -7416,7 +7426,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppObject","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppObject","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -7584,7 +7594,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppFont","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextFont","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppFont","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextFont","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -7933,7 +7943,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pbstr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pbstr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -8255,7 +8265,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppPara","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextPara","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppPara","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextPara","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -8849,7 +8859,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppunkEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppunkEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -8862,7 +8872,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"Index","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"ppRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextRange","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextRange","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -8920,7 +8930,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppDisplays","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextDisplays","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppDisplays","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextDisplays","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -8932,7 +8942,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppFont","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextFont2","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppFont","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextFont2","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -8956,7 +8966,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppPara","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextPara2","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppPara","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextPara2","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -8992,7 +9002,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pbstr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pbstr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -9040,7 +9050,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppSel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextSelection2","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppSel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextSelection2","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -9052,7 +9062,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppStories","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextStoryRanges2","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppStories","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextStoryRanges2","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -9125,7 +9135,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppVoid","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppVoid","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -9183,7 +9193,7 @@
 					,{"Name":"Options","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"curCharRep","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"curFontSize","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"pbstr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"pbstr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"pPitchAndFamily","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["Out"]}
 					,{"Name":"pNewFontSize","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["Out"]}
 				]
@@ -9210,7 +9220,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppStrs","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextStrings","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppStrs","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextStrings","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -9236,7 +9246,7 @@
 				,"Params":[
 					{"Name":"cpActive","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"cpAnchor","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"ppRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextRange2","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextRange2","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -9251,7 +9261,7 @@
 					{"Name":"x","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"y","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"Type","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"ppRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextRange2","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextRange2","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -9385,7 +9395,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppStory","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextStory","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppStory","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextStory","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -9409,7 +9419,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppStory","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextStory","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppStory","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextStory","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -9421,7 +9431,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppStory","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextStory","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppStory","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextStory","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -9434,7 +9444,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"Index","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"ppStory","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextStory","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppStory","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextStory","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -9468,7 +9478,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppCells","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppCells","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -9480,7 +9490,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppColumn","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppColumn","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -9504,7 +9514,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextRange2","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextRange2","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -9516,7 +9526,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppFont","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextFont2","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppFont","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextFont2","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -9540,7 +9550,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextRange2","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextRange2","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -9588,7 +9598,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppPara","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextPara2","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppPara","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextPara2","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -9612,7 +9622,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppRow","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextRow","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppRow","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextRow","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -9636,7 +9646,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppTable","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppTable","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -9648,7 +9658,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pbstr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pbstr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -9817,7 +9827,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"Flags","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"pbstr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"pbstr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -10202,7 +10212,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppFont","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextFont2","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppFont","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextFont2","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -10569,7 +10579,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppBorders","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppBorders","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -10581,7 +10591,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppPara","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextPara2","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppPara","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextPara2","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -10777,7 +10787,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"Index","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"ppRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextRange2","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextRange2","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -10823,7 +10833,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppDisplay","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppDisplay","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -10886,7 +10896,7 @@
 				,"Params":[
 					{"Name":"cpActive","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"cpAnchor","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"ppRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextRange2","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextRange2","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -10899,7 +10909,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"Flags","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"pbstr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"pbstr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -10960,7 +10970,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"Index","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"ppRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextRange2","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextRange2","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -11789,7 +11799,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"Index","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"cr","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"cr","Type":{"Kind":"ApiRef","Name":"COLORREF","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -11802,7 +11812,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"Index","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"pcr","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+					,{"Name":"pcr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"COLORREF","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -11867,7 +11877,7 @@
 					,{"Name":"Option","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"CharRepCur","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"curFontSize","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"pbstr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"pbstr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"pPitchAndFamily","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["Out"]}
 					,{"Name":"pNewFontSize","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["Out"]}
 				]
@@ -11921,7 +11931,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppSel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextSelection","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppSel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextSelection","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -12028,7 +12038,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppITextFont","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextFont","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppITextFont","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextFont","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -12040,7 +12050,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppITextPara","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextPara","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppITextPara","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextPara","TargetKind":"Com","Api":"UI.Controls.RichEdit","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -12052,7 +12062,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppVoid","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppVoid","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{

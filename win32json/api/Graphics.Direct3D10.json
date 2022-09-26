@@ -1766,6 +1766,111 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"D3D10_REGKEY_PATH"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Software\\Microsoft\\Direct3D"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D10_MUTE_DEBUG_OUTPUT"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MuteDebugOutput"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D10_ENABLE_BREAK_ON_MESSAGE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"EnableBreakOnMessage"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D10_INFOQUEUE_STORAGE_FILTER_OVERRIDE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"InfoQueueStorageFilterOverride"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D10_MUTE_CATEGORY"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Mute_CATEGORY_%s"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D10_MUTE_SEVERITY"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Mute_SEVERITY_%s"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D10_MUTE_ID_STRING"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Mute_ID_%s"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D10_MUTE_ID_DECIMAL"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Mute_ID_%d"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D10_UNMUTE_SEVERITY_INFO"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Unmute_SEVERITY_INFO"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D10_BREAKON_CATEGORY"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"BreakOn_CATEGORY_%s"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D10_BREAKON_SEVERITY"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"BreakOn_SEVERITY_%s"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D10_BREAKON_ID_STRING"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"BreakOn_ID_%s"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D10_BREAKON_ID_DECIMAL"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"BreakOn_ID_%d"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D10_APPSIZE_STRING"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Size"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D10_APPNAME_STRING"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Name"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"D3D10_INFO_QUEUE_DEFAULT_MESSAGE_COUNT_LIMIT"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -9630,7 +9735,7 @@
 	{
 		"Name":"D3D10CreateDevice"
 		,"SetLastError":false
-		,"DllImport":"d3d10"
+		,"DllImport":"d3d10.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9648,7 +9753,7 @@
 	,{
 		"Name":"D3D10CreateDeviceAndSwapChain"
 		,"SetLastError":false
-		,"DllImport":"d3d10"
+		,"DllImport":"d3d10.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9668,7 +9773,7 @@
 	,{
 		"Name":"D3D10CreateBlob"
 		,"SetLastError":false
-		,"DllImport":"d3d10"
+		,"DllImport":"d3d10.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9682,7 +9787,7 @@
 	,{
 		"Name":"D3D10CompileShader"
 		,"SetLastError":false
-		,"DllImport":"d3d10"
+		,"DllImport":"d3d10.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9704,7 +9809,7 @@
 	,{
 		"Name":"D3D10DisassembleShader"
 		,"SetLastError":false
-		,"DllImport":"d3d10"
+		,"DllImport":"d3d10.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9721,7 +9826,7 @@
 	,{
 		"Name":"D3D10GetPixelShaderProfile"
 		,"SetLastError":false
-		,"DllImport":"d3d10"
+		,"DllImport":"d3d10.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9734,7 +9839,7 @@
 	,{
 		"Name":"D3D10GetVertexShaderProfile"
 		,"SetLastError":false
-		,"DllImport":"d3d10"
+		,"DllImport":"d3d10.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9747,7 +9852,7 @@
 	,{
 		"Name":"D3D10GetGeometryShaderProfile"
 		,"SetLastError":false
-		,"DllImport":"d3d10"
+		,"DllImport":"d3d10.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9760,7 +9865,7 @@
 	,{
 		"Name":"D3D10ReflectShader"
 		,"SetLastError":false
-		,"DllImport":"d3d10"
+		,"DllImport":"d3d10.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9775,7 +9880,7 @@
 	,{
 		"Name":"D3D10PreprocessShader"
 		,"SetLastError":false
-		,"DllImport":"d3d10"
+		,"DllImport":"d3d10.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9794,7 +9899,7 @@
 	,{
 		"Name":"D3D10GetInputSignatureBlob"
 		,"SetLastError":false
-		,"DllImport":"d3d10"
+		,"DllImport":"d3d10.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9809,7 +9914,7 @@
 	,{
 		"Name":"D3D10GetOutputSignatureBlob"
 		,"SetLastError":false
-		,"DllImport":"d3d10"
+		,"DllImport":"d3d10.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9824,7 +9929,7 @@
 	,{
 		"Name":"D3D10GetInputAndOutputSignatureBlob"
 		,"SetLastError":false
-		,"DllImport":"d3d10"
+		,"DllImport":"d3d10.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9839,7 +9944,7 @@
 	,{
 		"Name":"D3D10GetShaderDebugInfo"
 		,"SetLastError":false
-		,"DllImport":"d3d10"
+		,"DllImport":"d3d10.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9854,7 +9959,7 @@
 	,{
 		"Name":"D3D10StateBlockMaskUnion"
 		,"SetLastError":false
-		,"DllImport":"d3d10"
+		,"DllImport":"d3d10.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9869,7 +9974,7 @@
 	,{
 		"Name":"D3D10StateBlockMaskIntersect"
 		,"SetLastError":false
-		,"DllImport":"d3d10"
+		,"DllImport":"d3d10.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9884,7 +9989,7 @@
 	,{
 		"Name":"D3D10StateBlockMaskDifference"
 		,"SetLastError":false
-		,"DllImport":"d3d10"
+		,"DllImport":"d3d10.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9899,7 +10004,7 @@
 	,{
 		"Name":"D3D10StateBlockMaskEnableCapture"
 		,"SetLastError":false
-		,"DllImport":"d3d10"
+		,"DllImport":"d3d10.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9915,7 +10020,7 @@
 	,{
 		"Name":"D3D10StateBlockMaskDisableCapture"
 		,"SetLastError":false
-		,"DllImport":"d3d10"
+		,"DllImport":"d3d10.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9931,7 +10036,7 @@
 	,{
 		"Name":"D3D10StateBlockMaskEnableAll"
 		,"SetLastError":false
-		,"DllImport":"d3d10"
+		,"DllImport":"d3d10.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9944,7 +10049,7 @@
 	,{
 		"Name":"D3D10StateBlockMaskDisableAll"
 		,"SetLastError":false
-		,"DllImport":"d3d10"
+		,"DllImport":"d3d10.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9957,7 +10062,7 @@
 	,{
 		"Name":"D3D10StateBlockMaskGetSetting"
 		,"SetLastError":false
-		,"DllImport":"d3d10"
+		,"DllImport":"d3d10.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9972,7 +10077,7 @@
 	,{
 		"Name":"D3D10CreateStateBlock"
 		,"SetLastError":false
-		,"DllImport":"d3d10"
+		,"DllImport":"d3d10.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9987,7 +10092,7 @@
 	,{
 		"Name":"D3D10CompileEffectFromMemory"
 		,"SetLastError":false
-		,"DllImport":"d3d10"
+		,"DllImport":"d3d10.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10008,7 +10113,7 @@
 	,{
 		"Name":"D3D10CreateEffectFromMemory"
 		,"SetLastError":false
-		,"DllImport":"d3d10"
+		,"DllImport":"d3d10.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10026,7 +10131,7 @@
 	,{
 		"Name":"D3D10CreateEffectPoolFromMemory"
 		,"SetLastError":false
-		,"DllImport":"d3d10"
+		,"DllImport":"d3d10.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10043,7 +10148,7 @@
 	,{
 		"Name":"D3D10DisassembleEffect"
 		,"SetLastError":false
-		,"DllImport":"d3d10"
+		,"DllImport":"d3d10.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10058,7 +10163,7 @@
 	,{
 		"Name":"D3D10CreateDevice1"
 		,"SetLastError":false
-		,"DllImport":"d3d10_1"
+		,"DllImport":"d3d10_1.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10077,7 +10182,7 @@
 	,{
 		"Name":"D3D10CreateDeviceAndSwapChain1"
 		,"SetLastError":false
-		,"DllImport":"d3d10_1"
+		,"DllImport":"d3d10_1.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

@@ -1382,7 +1382,7 @@
 		,"Fields":[
 			{"Name":"name","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"type","Type":{"Kind":"ApiRef","Name":"MLOperatorAttributeType","TargetKind":"Default","Api":"AI.MachineLearning.WinML","Parents":[]},"Attrs":[]}
-			,{"Name":"required","Type":{"Kind":"Native","Name":"Boolean"},"Attrs":[]}
+			,{"Name":"required","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -1576,7 +1576,7 @@
 	{
 		"Name":"WinMLCreateRuntime"
 		,"SetLastError":false
-		,"DllImport":"winml"
+		,"DllImport":"winml.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1589,7 +1589,7 @@
 	,{
 		"Name":"MLCreateOperatorRegistry"
 		,"SetLastError":false
-		,"DllImport":"windows.ai.machinelearning"
+		,"DllImport":"windows.ai.machinelearning.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

@@ -23,6 +23,20 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"fMapiUnicode"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":0
+		,"Attrs":[]
+	}
+	,{
+		"Name":"hrSuccess"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":0
+		,"Attrs":[]
+	}
+	,{
 		"Name":"MAPI_P1"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -76,6 +90,20 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":128
+		,"Attrs":[]
+	}
+	,{
+		"Name":"cchProfileNameMax"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":64
+		,"Attrs":[]
+	}
+	,{
+		"Name":"cchProfilePassMax"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":64
 		,"Attrs":[]
 	}
 	,{
@@ -167,6 +195,13 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":9
+		,"Attrs":[]
+	}
+	,{
+		"Name":"szMAPINotificationMsg"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MAPI Notify window message"
 		,"Attrs":[]
 	}
 	,{
@@ -321,6 +356,20 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":4
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WAB_DLL_NAME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"WAB32.DLL"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WAB_DLL_PATH_KEY"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Software\\Microsoft\\WAB\\DLLPath"
 		,"Attrs":[]
 	}
 	,{
@@ -1457,6 +1506,27 @@
 		,"Value":0
 		,"Attrs":[]
 	}
+	,{
+		"Name":"OPENSTREAMONFILE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"OpenStreamOnFile"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"szHrDispatchNotifications"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"HrDispatchNotifications"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"szScCreateConversationIndex"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"ScCreateConversationIndex"
+		,"Attrs":[]
+	}
 ]
 
 ,"Types":[
@@ -1684,7 +1754,7 @@
 		]
 	}
 	,{
-		"Name":"_PV"
+		"Name":"__UPV"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Union"
@@ -1733,7 +1803,7 @@
 		,"Fields":[
 			{"Name":"ulPropTag","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwAlignPad","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Value","Type":{"Kind":"ApiRef","Name":"_PV","TargetKind":"Default","Api":"System.AddressBook","Parents":[]},"Attrs":[]}
+			,{"Name":"Value","Type":{"Kind":"ApiRef","Name":"__UPV","TargetKind":"Default","Api":"System.AddressBook","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -3106,7 +3176,7 @@
 		]
 	}
 	,{
-		"Name":"_flaglist"
+		"Name":"FlagList"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -3182,7 +3252,7 @@
 					{"Name":"lpPropTagArray","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SPropTagArray","TargetKind":"Default","Api":"System.AddressBook","Parents":[]}},"Attrs":["In","Optional"]}
 					,{"Name":"ulFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"lpAdrList","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ADRLIST","TargetKind":"Default","Api":"System.AddressBook","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"lpFlagList","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_flaglist","TargetKind":"Default","Api":"System.AddressBook","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"lpFlagList","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FlagList","TargetKind":"Default","Api":"System.AddressBook","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -3260,7 +3330,7 @@
 					{"Name":"lpPropTagArray","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SPropTagArray","TargetKind":"Default","Api":"System.AddressBook","Parents":[]}},"Attrs":["In","Optional"]}
 					,{"Name":"ulFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"lpAdrList","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ADRLIST","TargetKind":"Default","Api":"System.AddressBook","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"lpFlagList","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_flaglist","TargetKind":"Default","Api":"System.AddressBook","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"lpFlagList","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FlagList","TargetKind":"Default","Api":"System.AddressBook","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -4378,19 +4448,6 @@
 		]
 	}
 	,{
-		"Name":"FNIDLE"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"FunctionPointer"
-		,"SetLastError":false
-		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ReturnAttrs":[]
-		,"Attrs":[]
-		,"Params":[
-			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out"]}
-		]
-	}
-	,{
 		"Name":"PFNIDLE"
 		,"Architectures":[]
 		,"Platform":null
@@ -4400,6 +4457,7 @@
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
+			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out"]}
 		]
 	}
 	,{
@@ -4668,7 +4726,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"lpulUIParam","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UIntPtr"}},"Attrs":["In","Out"]}
-					,{"Name":"lpfnDismiss","Type":{"Kind":"ApiRef","Name":"LPFNDISMISS","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In","Out"]}
+					,{"Name":"lpfnDismiss","Type":{"Kind":"ApiRef","Name":"LPFNDISMISS","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In"]}
 					,{"Name":"lpvDismissContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out"]}
 					,{"Name":"cbEntryID","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"lpEntryID","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ENTRYID","TargetKind":"Default","Api":"System.AddressBook","Parents":[]}},"Attrs":["In","Out"]}
@@ -5509,9 +5567,9 @@
 			,{"Name":"lppWABObject","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IWABObject","TargetKind":"Com","Api":"System.AddressBook","Parents":[]}},"Attrs":["Out"]}
 			,{"Name":"lpWP","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WAB_PARAM","TargetKind":"Default","Api":"System.AddressBook","Parents":[]}},"Attrs":["In","Out"]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"fnAllocateBuffer","Type":{"Kind":"ApiRef","Name":"LPALLOCATEBUFFER","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In","Out"]}
-			,{"Name":"fnAllocateMore","Type":{"Kind":"ApiRef","Name":"LPALLOCATEMORE","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In","Out"]}
-			,{"Name":"fnFreeBuffer","Type":{"Kind":"ApiRef","Name":"LPFREEBUFFER","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In","Out"]}
+			,{"Name":"fnAllocateBuffer","Type":{"Kind":"ApiRef","Name":"LPALLOCATEBUFFER","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In"]}
+			,{"Name":"fnAllocateMore","Type":{"Kind":"ApiRef","Name":"LPALLOCATEMORE","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In"]}
+			,{"Name":"fnFreeBuffer","Type":{"Kind":"ApiRef","Name":"LPFREEBUFFER","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -5639,7 +5697,7 @@
 	{
 		"Name":"CreateTable"
 		,"SetLastError":false
-		,"DllImport":"rtm"
+		,"DllImport":"rtm.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5647,9 +5705,9 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"lpInterface","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Out"]}
-			,{"Name":"lpAllocateBuffer","Type":{"Kind":"ApiRef","Name":"LPALLOCATEBUFFER","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In","Out"]}
-			,{"Name":"lpAllocateMore","Type":{"Kind":"ApiRef","Name":"LPALLOCATEMORE","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In","Out"]}
-			,{"Name":"lpFreeBuffer","Type":{"Kind":"ApiRef","Name":"LPFREEBUFFER","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In","Out"]}
+			,{"Name":"lpAllocateBuffer","Type":{"Kind":"ApiRef","Name":"LPALLOCATEBUFFER","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In"]}
+			,{"Name":"lpAllocateMore","Type":{"Kind":"ApiRef","Name":"LPALLOCATEMORE","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In"]}
+			,{"Name":"lpFreeBuffer","Type":{"Kind":"ApiRef","Name":"LPFREEBUFFER","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out"]}
 			,{"Name":"ulTableType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"ulPropTagIndexColumn","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -5660,7 +5718,7 @@
 	,{
 		"Name":"CreateIProp"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5668,9 +5726,9 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"lpInterface","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Out"]}
-			,{"Name":"lpAllocateBuffer","Type":{"Kind":"ApiRef","Name":"LPALLOCATEBUFFER","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In","Out"]}
-			,{"Name":"lpAllocateMore","Type":{"Kind":"ApiRef","Name":"LPALLOCATEMORE","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In","Out"]}
-			,{"Name":"lpFreeBuffer","Type":{"Kind":"ApiRef","Name":"LPFREEBUFFER","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In","Out"]}
+			,{"Name":"lpAllocateBuffer","Type":{"Kind":"ApiRef","Name":"LPALLOCATEBUFFER","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In"]}
+			,{"Name":"lpAllocateMore","Type":{"Kind":"ApiRef","Name":"LPALLOCATEMORE","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In"]}
+			,{"Name":"lpFreeBuffer","Type":{"Kind":"ApiRef","Name":"LPFREEBUFFER","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out"]}
 			,{"Name":"lppPropData","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPropData","TargetKind":"Com","Api":"System.AddressBook","Parents":[]}},"Attrs":["Out"]}
 		]
@@ -5678,7 +5736,7 @@
 	,{
 		"Name":"MAPIInitIdle"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5691,7 +5749,7 @@
 	,{
 		"Name":"MAPIDeinitIdle"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5703,7 +5761,7 @@
 	,{
 		"Name":"FtgRegisterIdleRoutine"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5720,7 +5778,7 @@
 	,{
 		"Name":"DeregisterIdleRoutine"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5733,7 +5791,7 @@
 	,{
 		"Name":"EnableIdleRoutine"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5747,7 +5805,7 @@
 	,{
 		"Name":"ChangeIdleRoutine"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5766,7 +5824,7 @@
 	,{
 		"Name":"MAPIGetDefaultMalloc"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"IMalloc","TargetKind":"Com","Api":"System.Com","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5778,7 +5836,7 @@
 	,{
 		"Name":"OpenStreamOnFile"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5796,7 +5854,7 @@
 	,{
 		"Name":"PropCopyMore"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5805,14 +5863,14 @@
 		,"Params":[
 			{"Name":"lpSPropValueDest","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SPropValue","TargetKind":"Default","Api":"System.AddressBook","Parents":[]}},"Attrs":["In","Out"]}
 			,{"Name":"lpSPropValueSrc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SPropValue","TargetKind":"Default","Api":"System.AddressBook","Parents":[]}},"Attrs":["In","Out"]}
-			,{"Name":"lpfAllocMore","Type":{"Kind":"ApiRef","Name":"LPALLOCATEMORE","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In","Out"]}
+			,{"Name":"lpfAllocMore","Type":{"Kind":"ApiRef","Name":"LPALLOCATEMORE","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpvObject","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out"]}
 		]
 	}
 	,{
 		"Name":"UlPropSize"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5825,7 +5883,7 @@
 	,{
 		"Name":"FEqualNames"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5839,7 +5897,7 @@
 	,{
 		"Name":"FPropContainsProp"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5854,7 +5912,7 @@
 	,{
 		"Name":"FPropCompareProp"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5869,7 +5927,7 @@
 	,{
 		"Name":"LPropCompareProp"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5883,7 +5941,7 @@
 	,{
 		"Name":"HrAddColumns"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5892,14 +5950,14 @@
 		,"Params":[
 			{"Name":"lptbl","Type":{"Kind":"ApiRef","Name":"IMAPITable","TargetKind":"Com","Api":"System.AddressBook","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpproptagColumnsNew","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SPropTagArray","TargetKind":"Default","Api":"System.AddressBook","Parents":[]}},"Attrs":["In","Out"]}
-			,{"Name":"lpAllocateBuffer","Type":{"Kind":"ApiRef","Name":"LPALLOCATEBUFFER","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In","Out"]}
-			,{"Name":"lpFreeBuffer","Type":{"Kind":"ApiRef","Name":"LPFREEBUFFER","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In","Out"]}
+			,{"Name":"lpAllocateBuffer","Type":{"Kind":"ApiRef","Name":"LPALLOCATEBUFFER","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In"]}
+			,{"Name":"lpFreeBuffer","Type":{"Kind":"ApiRef","Name":"LPFREEBUFFER","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"HrAddColumnsEx"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5908,22 +5966,22 @@
 		,"Params":[
 			{"Name":"lptbl","Type":{"Kind":"ApiRef","Name":"IMAPITable","TargetKind":"Com","Api":"System.AddressBook","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpproptagColumnsNew","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SPropTagArray","TargetKind":"Default","Api":"System.AddressBook","Parents":[]}},"Attrs":["In","Out"]}
-			,{"Name":"lpAllocateBuffer","Type":{"Kind":"ApiRef","Name":"LPALLOCATEBUFFER","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In","Out"]}
-			,{"Name":"lpFreeBuffer","Type":{"Kind":"ApiRef","Name":"LPFREEBUFFER","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In","Out"]}
+			,{"Name":"lpAllocateBuffer","Type":{"Kind":"ApiRef","Name":"LPALLOCATEBUFFER","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In"]}
+			,{"Name":"lpFreeBuffer","Type":{"Kind":"ApiRef","Name":"LPFREEBUFFER","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpfnFilterColumns","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"HrAllocAdviseSink"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"lpfnCallback","Type":{"Kind":"ApiRef","Name":"LPNOTIFCALLBACK","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In","Out"]}
+			{"Name":"lpfnCallback","Type":{"Kind":"ApiRef","Name":"LPNOTIFCALLBACK","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpvContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out"]}
 			,{"Name":"lppAdviseSink","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IMAPIAdviseSink","TargetKind":"Com","Api":"System.AddressBook","Parents":[]}},"Attrs":["Out"]}
 		]
@@ -5931,7 +5989,7 @@
 	,{
 		"Name":"HrThisThreadAdviseSink"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5945,7 +6003,7 @@
 	,{
 		"Name":"HrDispatchNotifications"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5958,16 +6016,16 @@
 	,{
 		"Name":"BuildDisplayTable"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"lpAllocateBuffer","Type":{"Kind":"ApiRef","Name":"LPALLOCATEBUFFER","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In","Out"]}
-			,{"Name":"lpAllocateMore","Type":{"Kind":"ApiRef","Name":"LPALLOCATEMORE","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In","Out"]}
-			,{"Name":"lpFreeBuffer","Type":{"Kind":"ApiRef","Name":"LPFREEBUFFER","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In","Out"]}
+			{"Name":"lpAllocateBuffer","Type":{"Kind":"ApiRef","Name":"LPALLOCATEBUFFER","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In"]}
+			,{"Name":"lpAllocateMore","Type":{"Kind":"ApiRef","Name":"LPALLOCATEMORE","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In"]}
+			,{"Name":"lpFreeBuffer","Type":{"Kind":"ApiRef","Name":"LPFREEBUFFER","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpMalloc","Type":{"Kind":"ApiRef","Name":"IMalloc","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
 			,{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"cPages","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -5980,7 +6038,7 @@
 	,{
 		"Name":"ScCountNotifications"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5995,7 +6053,7 @@
 	,{
 		"Name":"ScCopyNotifications"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6011,7 +6069,7 @@
 	,{
 		"Name":"ScRelocNotifications"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6028,7 +6086,7 @@
 	,{
 		"Name":"ScCountProps"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6043,7 +6101,7 @@
 	,{
 		"Name":"LpValFindProp"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SPropValue","TargetKind":"Default","Api":"System.AddressBook","Parents":[]}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6058,7 +6116,7 @@
 	,{
 		"Name":"ScCopyProps"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6074,7 +6132,7 @@
 	,{
 		"Name":"ScRelocProps"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6091,7 +6149,7 @@
 	,{
 		"Name":"ScDupPropset"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6100,14 +6158,14 @@
 		,"Params":[
 			{"Name":"cValues","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"lpPropArray","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SPropValue","TargetKind":"Default","Api":"System.AddressBook","Parents":[]}},"Attrs":["In","Out"]}
-			,{"Name":"lpAllocateBuffer","Type":{"Kind":"ApiRef","Name":"LPALLOCATEBUFFER","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In","Out"]}
+			,{"Name":"lpAllocateBuffer","Type":{"Kind":"ApiRef","Name":"LPALLOCATEBUFFER","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lppPropArray","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SPropValue","TargetKind":"Default","Api":"System.AddressBook","Parents":[]}}},"Attrs":["In","Out"]}
 		]
 	}
 	,{
 		"Name":"UlAddRef"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6120,7 +6178,7 @@
 	,{
 		"Name":"UlRelease"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6133,7 +6191,7 @@
 	,{
 		"Name":"HrGetOneProp"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6148,7 +6206,7 @@
 	,{
 		"Name":"HrSetOneProp"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6162,7 +6220,7 @@
 	,{
 		"Name":"FPropExists"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6176,7 +6234,7 @@
 	,{
 		"Name":"PpropFindProp"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SPropValue","TargetKind":"Default","Api":"System.AddressBook","Parents":[]}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6191,7 +6249,7 @@
 	,{
 		"Name":"FreePadrlist"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6204,7 +6262,7 @@
 	,{
 		"Name":"FreeProws"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6217,7 +6275,7 @@
 	,{
 		"Name":"HrQueryAllRows"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6235,7 +6293,7 @@
 	,{
 		"Name":"SzFindCh"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"SByte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6249,7 +6307,7 @@
 	,{
 		"Name":"SzFindLastCh"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"SByte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6263,7 +6321,7 @@
 	,{
 		"Name":"SzFindSz"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"SByte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6277,7 +6335,7 @@
 	,{
 		"Name":"UFromSz"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6290,7 +6348,7 @@
 	,{
 		"Name":"ScUNCFromLocalPath"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6305,7 +6363,7 @@
 	,{
 		"Name":"ScLocalPathFromUNC"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6320,7 +6378,7 @@
 	,{
 		"Name":"FtAddFt"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"FILETIME","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6334,7 +6392,7 @@
 	,{
 		"Name":"FtMulDwDw"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"FILETIME","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6348,7 +6406,7 @@
 	,{
 		"Name":"FtMulDw"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"FILETIME","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6362,7 +6420,7 @@
 	,{
 		"Name":"FtSubFt"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"FILETIME","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6376,7 +6434,7 @@
 	,{
 		"Name":"FtNegFt"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"FILETIME","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6389,7 +6447,7 @@
 	,{
 		"Name":"ScCreateConversationIndex"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6405,7 +6463,7 @@
 	,{
 		"Name":"WrapStoreEntryID"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6423,7 +6481,7 @@
 	,{
 		"Name":"RTFSync"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6438,7 +6496,7 @@
 	,{
 		"Name":"WrapCompressedRTFStream"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6453,7 +6511,7 @@
 	,{
 		"Name":"HrIStorageFromStream"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6469,7 +6527,7 @@
 	,{
 		"Name":"ScInitMapiUtil"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6482,7 +6540,7 @@
 	,{
 		"Name":"DeinitMapiUtil"
 		,"SetLastError":false
-		,"DllImport":"MAPI32"
+		,"DllImport":"MAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

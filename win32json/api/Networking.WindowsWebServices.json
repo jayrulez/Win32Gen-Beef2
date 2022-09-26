@@ -51,10 +51,38 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"WEBAUTHN_HASH_ALGORITHM_SHA_256"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"SHA-256"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WEBAUTHN_HASH_ALGORITHM_SHA_384"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"SHA-384"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WEBAUTHN_HASH_ALGORITHM_SHA_512"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"SHA-512"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"WEBAUTHN_CLIENT_DATA_CURRENT_VERSION"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WEBAUTHN_CREDENTIAL_TYPE_PUBLIC_KEY"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"public-key"
 		,"Attrs":[]
 	}
 	,{
@@ -184,6 +212,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"WEBAUTHN_EXTENSIONS_IDENTIFIER_HMAC_SECRET"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"hmac-secret"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"WEBAUTHN_USER_VERIFICATION_ANY"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -209,6 +244,27 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":3
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WEBAUTHN_EXTENSIONS_IDENTIFIER_CRED_PROTECT"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"credProtect"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WEBAUTHN_EXTENSIONS_IDENTIFIER_CRED_BLOB"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"credBlob"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WEBAUTHN_EXTENSIONS_IDENTIFIER_MIN_PIN_LENGTH"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"minPinLength"
 		,"Attrs":[]
 	}
 	,{
@@ -457,10 +513,45 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"WEBAUTHN_ATTESTATION_VER_TPM_2_0"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"2.0"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"WEBAUTHN_COMMON_ATTESTATION_CURRENT_VERSION"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WEBAUTHN_ATTESTATION_TYPE_PACKED"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"packed"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WEBAUTHN_ATTESTATION_TYPE_U2F"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"fido-u2f"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WEBAUTHN_ATTESTATION_TYPE_TPM"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"tpm"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WEBAUTHN_ATTESTATION_TYPE_NONE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"none"
 		,"Attrs":[]
 	}
 	,{
@@ -5586,7 +5677,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"keyHandle","Type":{"Kind":"ApiRef","Name":"WS_SECURITY_KEY_HANDLE","TargetKind":"Default","Api":"Networking.WindowsWebServices","Parents":[]},"Attrs":[]}
-			,{"Name":"asymmetricKey","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
+			,{"Name":"asymmetricKey","Type":{"Kind":"ApiRef","Name":"NCRYPT_KEY_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -8266,7 +8357,7 @@
 	{
 		"Name":"WsStartReaderCanonicalization"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8284,7 +8375,7 @@
 	,{
 		"Name":"WsEndReaderCanonicalization"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8298,7 +8389,7 @@
 	,{
 		"Name":"WsStartWriterCanonicalization"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8316,7 +8407,7 @@
 	,{
 		"Name":"WsEndWriterCanonicalization"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8330,7 +8421,7 @@
 	,{
 		"Name":"WsCreateXmlBuffer"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8347,7 +8438,7 @@
 	,{
 		"Name":"WsRemoveNode"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8361,7 +8452,7 @@
 	,{
 		"Name":"WsCreateReader"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8377,7 +8468,7 @@
 	,{
 		"Name":"WsSetInput"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8395,7 +8486,7 @@
 	,{
 		"Name":"WsSetInputToBuffer"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8412,7 +8503,7 @@
 	,{
 		"Name":"WsFreeReader"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8425,7 +8516,7 @@
 	,{
 		"Name":"WsGetReaderProperty"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8442,7 +8533,7 @@
 	,{
 		"Name":"WsGetReaderNode"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8457,7 +8548,7 @@
 	,{
 		"Name":"WsFillReader"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8473,7 +8564,7 @@
 	,{
 		"Name":"WsReadStartElement"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8487,7 +8578,7 @@
 	,{
 		"Name":"WsReadToStartElement"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8504,7 +8595,7 @@
 	,{
 		"Name":"WsReadStartAttribute"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8519,7 +8610,7 @@
 	,{
 		"Name":"WsReadEndAttribute"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8533,7 +8624,7 @@
 	,{
 		"Name":"WsReadNode"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8547,7 +8638,7 @@
 	,{
 		"Name":"WsSkipNode"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8561,7 +8652,7 @@
 	,{
 		"Name":"WsReadEndElement"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8575,7 +8666,7 @@
 	,{
 		"Name":"WsFindAttribute"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8593,7 +8684,7 @@
 	,{
 		"Name":"WsReadValue"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8610,7 +8701,7 @@
 	,{
 		"Name":"WsReadChars"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8627,7 +8718,7 @@
 	,{
 		"Name":"WsReadCharsUtf8"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8644,7 +8735,7 @@
 	,{
 		"Name":"WsReadBytes"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8661,7 +8752,7 @@
 	,{
 		"Name":"WsReadArray"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8683,7 +8774,7 @@
 	,{
 		"Name":"WsGetReaderPosition"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8698,7 +8789,7 @@
 	,{
 		"Name":"WsSetReaderPosition"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8713,7 +8804,7 @@
 	,{
 		"Name":"WsMoveReader"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8729,7 +8820,7 @@
 	,{
 		"Name":"WsCreateWriter"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8745,7 +8836,7 @@
 	,{
 		"Name":"WsFreeWriter"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8758,7 +8849,7 @@
 	,{
 		"Name":"WsSetOutput"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8776,7 +8867,7 @@
 	,{
 		"Name":"WsSetOutputToBuffer"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8793,7 +8884,7 @@
 	,{
 		"Name":"WsGetWriterProperty"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8810,7 +8901,7 @@
 	,{
 		"Name":"WsFlushWriter"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8826,7 +8917,7 @@
 	,{
 		"Name":"WsWriteStartElement"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8843,7 +8934,7 @@
 	,{
 		"Name":"WsWriteEndStartElement"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8857,7 +8948,7 @@
 	,{
 		"Name":"WsWriteXmlnsAttribute"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8874,7 +8965,7 @@
 	,{
 		"Name":"WsWriteStartAttribute"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8892,7 +8983,7 @@
 	,{
 		"Name":"WsWriteEndAttribute"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8906,7 +8997,7 @@
 	,{
 		"Name":"WsWriteValue"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8923,7 +9014,7 @@
 	,{
 		"Name":"WsWriteXmlBuffer"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8938,7 +9029,7 @@
 	,{
 		"Name":"WsReadXmlBuffer"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8954,7 +9045,7 @@
 	,{
 		"Name":"WsWriteXmlBufferToBytes"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8975,7 +9066,7 @@
 	,{
 		"Name":"WsReadXmlBufferFromBytes"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8996,7 +9087,7 @@
 	,{
 		"Name":"WsWriteArray"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9017,7 +9108,7 @@
 	,{
 		"Name":"WsWriteQualifiedName"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9034,7 +9125,7 @@
 	,{
 		"Name":"WsWriteChars"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9050,7 +9141,7 @@
 	,{
 		"Name":"WsWriteCharsUtf8"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9066,7 +9157,7 @@
 	,{
 		"Name":"WsWriteBytes"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9082,7 +9173,7 @@
 	,{
 		"Name":"WsPushBytes"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9098,7 +9189,7 @@
 	,{
 		"Name":"WsPullBytes"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9114,7 +9205,7 @@
 	,{
 		"Name":"WsWriteEndElement"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9128,7 +9219,7 @@
 	,{
 		"Name":"WsWriteText"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9143,7 +9234,7 @@
 	,{
 		"Name":"WsWriteStartCData"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9157,7 +9248,7 @@
 	,{
 		"Name":"WsWriteEndCData"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9171,7 +9262,7 @@
 	,{
 		"Name":"WsWriteNode"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9186,7 +9277,7 @@
 	,{
 		"Name":"WsGetPrefixFromNamespace"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9203,7 +9294,7 @@
 	,{
 		"Name":"WsGetWriterPosition"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9218,7 +9309,7 @@
 	,{
 		"Name":"WsSetWriterPosition"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9233,7 +9324,7 @@
 	,{
 		"Name":"WsMoveWriter"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9249,7 +9340,7 @@
 	,{
 		"Name":"WsTrimXmlWhitespace"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9266,7 +9357,7 @@
 	,{
 		"Name":"WsVerifyXmlNCName"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9281,7 +9372,7 @@
 	,{
 		"Name":"WsXmlStringEquals"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9296,7 +9387,7 @@
 	,{
 		"Name":"WsGetNamespaceFromPrefix"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9313,7 +9404,7 @@
 	,{
 		"Name":"WsReadQualifiedName"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9331,7 +9422,7 @@
 	,{
 		"Name":"WsGetXmlAttribute"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9349,7 +9440,7 @@
 	,{
 		"Name":"WsCopyNode"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9364,7 +9455,7 @@
 	,{
 		"Name":"WsAsyncExecute"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9382,7 +9473,7 @@
 	,{
 		"Name":"WsCreateChannel"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9401,7 +9492,7 @@
 	,{
 		"Name":"WsOpenChannel"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9417,7 +9508,7 @@
 	,{
 		"Name":"WsSendMessage"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9437,7 +9528,7 @@
 	,{
 		"Name":"WsReceiveMessage"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9461,7 +9552,7 @@
 	,{
 		"Name":"WsRequestReply"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9487,7 +9578,7 @@
 	,{
 		"Name":"WsSendReplyMessage"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9508,7 +9599,7 @@
 	,{
 		"Name":"WsSendFaultMessageForError"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9528,7 +9619,7 @@
 	,{
 		"Name":"WsGetChannelProperty"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9545,7 +9636,7 @@
 	,{
 		"Name":"WsSetChannelProperty"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9562,7 +9653,7 @@
 	,{
 		"Name":"WsWriteMessageStart"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9578,7 +9669,7 @@
 	,{
 		"Name":"WsWriteMessageEnd"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9594,7 +9685,7 @@
 	,{
 		"Name":"WsReadMessageStart"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9610,7 +9701,7 @@
 	,{
 		"Name":"WsReadMessageEnd"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9626,7 +9717,7 @@
 	,{
 		"Name":"WsCloseChannel"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9641,7 +9732,7 @@
 	,{
 		"Name":"WsAbortChannel"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9655,7 +9746,7 @@
 	,{
 		"Name":"WsFreeChannel"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9668,7 +9759,7 @@
 	,{
 		"Name":"WsResetChannel"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9682,7 +9773,7 @@
 	,{
 		"Name":"WsAbandonMessage"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9697,7 +9788,7 @@
 	,{
 		"Name":"WsShutdownSessionChannel"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9712,7 +9803,7 @@
 	,{
 		"Name":"WsGetOperationContextProperty"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9729,7 +9820,7 @@
 	,{
 		"Name":"WsGetDictionary"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9744,7 +9835,7 @@
 	,{
 		"Name":"WsReadEndpointAddressExtension"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9764,7 +9855,7 @@
 	,{
 		"Name":"WsCreateError"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9779,7 +9870,7 @@
 	,{
 		"Name":"WsAddErrorString"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9793,7 +9884,7 @@
 	,{
 		"Name":"WsGetErrorString"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9808,7 +9899,7 @@
 	,{
 		"Name":"WsCopyError"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9822,7 +9913,7 @@
 	,{
 		"Name":"WsGetErrorProperty"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9838,7 +9929,7 @@
 	,{
 		"Name":"WsSetErrorProperty"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9854,7 +9945,7 @@
 	,{
 		"Name":"WsResetError"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9867,7 +9958,7 @@
 	,{
 		"Name":"WsFreeError"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9880,7 +9971,7 @@
 	,{
 		"Name":"WsGetFaultErrorProperty"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9896,7 +9987,7 @@
 	,{
 		"Name":"WsSetFaultErrorProperty"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9912,7 +10003,7 @@
 	,{
 		"Name":"WsCreateFaultFromError"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9929,7 +10020,7 @@
 	,{
 		"Name":"WsSetFaultErrorDetail"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9946,7 +10037,7 @@
 	,{
 		"Name":"WsGetFaultErrorDetail"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9964,7 +10055,7 @@
 	,{
 		"Name":"WsCreateHeap"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9982,7 +10073,7 @@
 	,{
 		"Name":"WsAlloc"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9998,7 +10089,7 @@
 	,{
 		"Name":"WsGetHeapProperty"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10015,7 +10106,7 @@
 	,{
 		"Name":"WsResetHeap"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10029,7 +10120,7 @@
 	,{
 		"Name":"WsFreeHeap"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10042,7 +10133,7 @@
 	,{
 		"Name":"WsCreateListener"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10061,7 +10152,7 @@
 	,{
 		"Name":"WsOpenListener"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10077,7 +10168,7 @@
 	,{
 		"Name":"WsAcceptChannel"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10093,7 +10184,7 @@
 	,{
 		"Name":"WsCloseListener"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10108,7 +10199,7 @@
 	,{
 		"Name":"WsAbortListener"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10122,7 +10213,7 @@
 	,{
 		"Name":"WsResetListener"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10136,7 +10227,7 @@
 	,{
 		"Name":"WsFreeListener"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10149,7 +10240,7 @@
 	,{
 		"Name":"WsGetListenerProperty"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10166,7 +10257,7 @@
 	,{
 		"Name":"WsSetListenerProperty"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10183,7 +10274,7 @@
 	,{
 		"Name":"WsCreateChannelForListener"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10200,7 +10291,7 @@
 	,{
 		"Name":"WsCreateMessage"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10218,7 +10309,7 @@
 	,{
 		"Name":"WsCreateMessageForChannel"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10235,7 +10326,7 @@
 	,{
 		"Name":"WsInitializeMessage"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10251,7 +10342,7 @@
 	,{
 		"Name":"WsResetMessage"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10265,7 +10356,7 @@
 	,{
 		"Name":"WsFreeMessage"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10278,7 +10369,7 @@
 	,{
 		"Name":"WsGetHeaderAttributes"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10294,7 +10385,7 @@
 	,{
 		"Name":"WsGetHeader"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10314,7 +10405,7 @@
 	,{
 		"Name":"WsGetCustomHeader"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10336,7 +10427,7 @@
 	,{
 		"Name":"WsRemoveHeader"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10351,7 +10442,7 @@
 	,{
 		"Name":"WsSetHeader"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10370,7 +10461,7 @@
 	,{
 		"Name":"WsRemoveCustomHeader"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10386,7 +10477,7 @@
 	,{
 		"Name":"WsAddCustomHeader"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10405,7 +10496,7 @@
 	,{
 		"Name":"WsAddMappedHeader"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10424,7 +10515,7 @@
 	,{
 		"Name":"WsRemoveMappedHeader"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10439,7 +10530,7 @@
 	,{
 		"Name":"WsGetMappedHeader"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10461,7 +10552,7 @@
 	,{
 		"Name":"WsWriteBody"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10479,7 +10570,7 @@
 	,{
 		"Name":"WsReadBody"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10498,7 +10589,7 @@
 	,{
 		"Name":"WsWriteEnvelopeStart"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10515,7 +10606,7 @@
 	,{
 		"Name":"WsWriteEnvelopeEnd"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10529,7 +10620,7 @@
 	,{
 		"Name":"WsReadEnvelopeStart"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10546,7 +10637,7 @@
 	,{
 		"Name":"WsReadEnvelopeEnd"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10560,7 +10651,7 @@
 	,{
 		"Name":"WsGetMessageProperty"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10577,7 +10668,7 @@
 	,{
 		"Name":"WsSetMessageProperty"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10594,7 +10685,7 @@
 	,{
 		"Name":"WsAddressMessage"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10609,7 +10700,7 @@
 	,{
 		"Name":"WsCheckMustUnderstandHeaders"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10623,7 +10714,7 @@
 	,{
 		"Name":"WsMarkHeaderAsUnderstood"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10638,7 +10729,7 @@
 	,{
 		"Name":"WsFillBody"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10654,7 +10745,7 @@
 	,{
 		"Name":"WsFlushBody"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10670,7 +10761,7 @@
 	,{
 		"Name":"WsRequestSecurityToken"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10688,7 +10779,7 @@
 	,{
 		"Name":"WsGetSecurityTokenProperty"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10706,7 +10797,7 @@
 	,{
 		"Name":"WsCreateXmlSecurityToken"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10724,7 +10815,7 @@
 	,{
 		"Name":"WsFreeSecurityToken"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10737,7 +10828,7 @@
 	,{
 		"Name":"WsRevokeSecurityContext"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10751,7 +10842,7 @@
 	,{
 		"Name":"WsGetSecurityContextProperty"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10768,7 +10859,7 @@
 	,{
 		"Name":"WsReadElement"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10787,7 +10878,7 @@
 	,{
 		"Name":"WsReadAttribute"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10806,7 +10897,7 @@
 	,{
 		"Name":"WsReadType"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10827,7 +10918,7 @@
 	,{
 		"Name":"WsWriteElement"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10845,7 +10936,7 @@
 	,{
 		"Name":"WsWriteAttribute"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10863,7 +10954,7 @@
 	,{
 		"Name":"WsWriteType"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10883,7 +10974,7 @@
 	,{
 		"Name":"WsRegisterOperationForCancel"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10900,7 +10991,7 @@
 	,{
 		"Name":"WsGetServiceHostProperty"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10917,7 +11008,7 @@
 	,{
 		"Name":"WsCreateServiceHost"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10935,7 +11026,7 @@
 	,{
 		"Name":"WsOpenServiceHost"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10950,7 +11041,7 @@
 	,{
 		"Name":"WsCloseServiceHost"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10965,7 +11056,7 @@
 	,{
 		"Name":"WsAbortServiceHost"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10979,7 +11070,7 @@
 	,{
 		"Name":"WsFreeServiceHost"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10992,7 +11083,7 @@
 	,{
 		"Name":"WsResetServiceHost"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11006,7 +11097,7 @@
 	,{
 		"Name":"WsGetServiceProxyProperty"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11023,7 +11114,7 @@
 	,{
 		"Name":"WsCreateServiceProxy"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11044,7 +11135,7 @@
 	,{
 		"Name":"WsOpenServiceProxy"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11060,7 +11151,7 @@
 	,{
 		"Name":"WsCloseServiceProxy"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11075,7 +11166,7 @@
 	,{
 		"Name":"WsAbortServiceProxy"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11089,7 +11180,7 @@
 	,{
 		"Name":"WsFreeServiceProxy"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11102,7 +11193,7 @@
 	,{
 		"Name":"WsResetServiceProxy"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11116,7 +11207,7 @@
 	,{
 		"Name":"WsAbandonCall"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11131,7 +11222,7 @@
 	,{
 		"Name":"WsCall"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11151,7 +11242,7 @@
 	,{
 		"Name":"WsDecodeUrl"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11168,7 +11259,7 @@
 	,{
 		"Name":"WsEncodeUrl"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11185,7 +11276,7 @@
 	,{
 		"Name":"WsCombineUrl"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11203,7 +11294,7 @@
 	,{
 		"Name":"WsDateTimeToFileTime"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11218,7 +11309,7 @@
 	,{
 		"Name":"WsFileTimeToDateTime"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11233,7 +11324,7 @@
 	,{
 		"Name":"WsCreateMetadata"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11249,7 +11340,7 @@
 	,{
 		"Name":"WsReadMetadata"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11265,7 +11356,7 @@
 	,{
 		"Name":"WsFreeMetadata"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11278,7 +11369,7 @@
 	,{
 		"Name":"WsResetMetadata"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11292,7 +11383,7 @@
 	,{
 		"Name":"WsGetMetadataProperty"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11309,7 +11400,7 @@
 	,{
 		"Name":"WsGetMissingMetadataDocumentAddress"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11324,7 +11415,7 @@
 	,{
 		"Name":"WsGetMetadataEndpoints"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11339,7 +11430,7 @@
 	,{
 		"Name":"WsMatchPolicyAlternative"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11357,7 +11448,7 @@
 	,{
 		"Name":"WsGetPolicyProperty"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11374,7 +11465,7 @@
 	,{
 		"Name":"WsGetPolicyAlternativeCount"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11389,7 +11480,7 @@
 	,{
 		"Name":"WsCreateServiceProxyFromTemplate"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11411,7 +11502,7 @@
 	,{
 		"Name":"WsCreateServiceEndpointFromTemplate"
 		,"SetLastError":false
-		,"DllImport":"webservices"
+		,"DllImport":"webservices.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11437,7 +11528,7 @@
 	,{
 		"Name":"WebAuthNGetApiVersionNumber"
 		,"SetLastError":false
-		,"DllImport":"webauthn"
+		,"DllImport":"webauthn.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11449,7 +11540,7 @@
 	,{
 		"Name":"WebAuthNIsUserVerifyingPlatformAuthenticatorAvailable"
 		,"SetLastError":false
-		,"DllImport":"webauthn"
+		,"DllImport":"webauthn.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11462,7 +11553,7 @@
 	,{
 		"Name":"WebAuthNAuthenticatorMakeCredential"
 		,"SetLastError":false
-		,"DllImport":"webauthn"
+		,"DllImport":"webauthn.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11481,7 +11572,7 @@
 	,{
 		"Name":"WebAuthNAuthenticatorGetAssertion"
 		,"SetLastError":false
-		,"DllImport":"webauthn"
+		,"DllImport":"webauthn.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11498,7 +11589,7 @@
 	,{
 		"Name":"WebAuthNFreeCredentialAttestation"
 		,"SetLastError":false
-		,"DllImport":"webauthn"
+		,"DllImport":"webauthn.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11511,7 +11602,7 @@
 	,{
 		"Name":"WebAuthNFreeAssertion"
 		,"SetLastError":false
-		,"DllImport":"webauthn"
+		,"DllImport":"webauthn.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11524,7 +11615,7 @@
 	,{
 		"Name":"WebAuthNGetCancellationId"
 		,"SetLastError":false
-		,"DllImport":"webauthn"
+		,"DllImport":"webauthn.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11537,7 +11628,7 @@
 	,{
 		"Name":"WebAuthNCancelCurrentOperation"
 		,"SetLastError":false
-		,"DllImport":"webauthn"
+		,"DllImport":"webauthn.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11550,7 +11641,7 @@
 	,{
 		"Name":"WebAuthNGetErrorName"
 		,"SetLastError":false
-		,"DllImport":"webauthn"
+		,"DllImport":"webauthn.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11563,7 +11654,7 @@
 	,{
 		"Name":"WebAuthNGetW3CExceptionDOMError"
 		,"SetLastError":false
-		,"DllImport":"webauthn"
+		,"DllImport":"webauthn.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

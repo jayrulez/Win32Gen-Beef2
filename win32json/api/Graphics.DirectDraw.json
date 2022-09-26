@@ -58,6 +58,27 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"REGSTR_KEY_DDHW_DESCRIPTION"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Description"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"REGSTR_KEY_DDHW_DRIVERNAME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"DriverName"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"REGSTR_PATH_DDHW"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Hardware\\DirectDrawDrivers"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"DDCREATE_HARDWAREONLY"
 		,"Type":{"Kind":"Native","Name":"Int32"}
 		,"ValueType":"Int32"
@@ -3436,6 +3457,20 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":13
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DDHAL_DRIVER_DLLNAME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"DDRAW16.DLL"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DDHAL_APP_DLLNAME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"DDRAW.DLL"
 		,"Attrs":[]
 	}
 	,{
@@ -11717,42 +11752,6 @@
 		]
 	}
 	,{
-		"Name":"IDDVideoPortContainerVtbl"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"IDirectDrawVideoPortVtbl"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"IDirectDrawVideoPortNotifyVtbl"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
 		"Name":"LPDDENUMVIDEOCALLBACK"
 		,"Architectures":[]
 		,"Platform":null
@@ -12509,186 +12508,6 @@
 			,{"Name":"ModeReserved1","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"ModeReserved2","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"ModeReserved3","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"IDirectDrawClipperVtbl"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"IDirectDrawPaletteVtbl"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"IDirectDrawSurfaceVtbl"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"IDirectDrawSurface2Vtbl"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"IDirectDrawSurface3Vtbl"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"IDirectDrawSurface4Vtbl"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"IDirectDrawSurface7Vtbl"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"IDirectDrawColorControlVtbl"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"IDirectDrawVtbl"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"IDirectDraw2Vtbl"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"IDirectDraw4Vtbl"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"IDirectDraw7Vtbl"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"IDirectDrawKernelVtbl"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"IDirectDrawSurfaceKernelVtbl"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"IDirectDrawGammaControlVtbl"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
 		]
 		,"NestedTypes":[
 		]
@@ -19376,7 +19195,7 @@
 	{
 		"Name":"DirectDrawEnumerateW"
 		,"SetLastError":false
-		,"DllImport":"DDRAW"
+		,"DllImport":"DDRAW.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -19390,7 +19209,7 @@
 	,{
 		"Name":"DirectDrawEnumerateA"
 		,"SetLastError":false
-		,"DllImport":"DDRAW"
+		,"DllImport":"DDRAW.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -19404,7 +19223,7 @@
 	,{
 		"Name":"DirectDrawEnumerateExW"
 		,"SetLastError":false
-		,"DllImport":"DDRAW"
+		,"DllImport":"DDRAW.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -19419,7 +19238,7 @@
 	,{
 		"Name":"DirectDrawEnumerateExA"
 		,"SetLastError":false
-		,"DllImport":"DDRAW"
+		,"DllImport":"DDRAW.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -19434,7 +19253,7 @@
 	,{
 		"Name":"DirectDrawCreate"
 		,"SetLastError":false
-		,"DllImport":"DDRAW"
+		,"DllImport":"DDRAW.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -19449,7 +19268,7 @@
 	,{
 		"Name":"DirectDrawCreateEx"
 		,"SetLastError":false
-		,"DllImport":"DDRAW"
+		,"DllImport":"DDRAW.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -19465,7 +19284,7 @@
 	,{
 		"Name":"DirectDrawCreateClipper"
 		,"SetLastError":false
-		,"DllImport":"DDRAW"
+		,"DllImport":"DDRAW.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

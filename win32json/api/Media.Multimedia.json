@@ -16858,6 +16858,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"MCIWND_WINDOW_CLASS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MCIWndClass"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"MCIWNDOPENF_NEW"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -19805,6 +19812,20 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"DRIVERS_SECTION"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"DRIVERS32"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"MCI_SECTION"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MCI32"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"DCB_NOSWITCH"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -20698,6 +20719,13 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":2068
+		,"Attrs":[]
+	}
+	,{
+		"Name":"JOY_CONFIGCHANGED_MSGSTRING"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MSJSTICK_VJOYD_MSGSTR"
 		,"Attrs":[]
 	}
 	,{
@@ -30284,6 +30312,20 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"TARGET_DEVICE_FRIENDLY_NAME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"TargetDeviceFriendlyName"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"TARGET_DEVICE_OPEN_EXCLUSIVELY"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"TargetDeviceOpenExclusively"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"MCIERR_INVALID_DEVICE_ID"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -35451,7 +35493,7 @@
 				,"Params":[
 					{"Name":"plPos","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["In","Out"]}
 					,{"Name":"plLength","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["In","Out"]}
-					,{"Name":"pstream","Type":{"Kind":"ApiRef","Name":"IAVIStream","TargetKind":"Com","Api":"Media.Multimedia","Parents":[]},"Attrs":["In","Out"]}
+					,{"Name":"pstream","Type":{"Kind":"ApiRef","Name":"IAVIStream","TargetKind":"Com","Api":"Media.Multimedia","Parents":[]},"Attrs":["In"]}
 					,{"Name":"lStart","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"lEnd","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 				]
@@ -36081,7 +36123,7 @@
 	{
 		"Name":"mciSendCommandA"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36097,7 +36139,7 @@
 	,{
 		"Name":"mciSendCommandW"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36113,7 +36155,7 @@
 	,{
 		"Name":"mciSendStringA"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36129,7 +36171,7 @@
 	,{
 		"Name":"mciSendStringW"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36145,7 +36187,7 @@
 	,{
 		"Name":"mciGetDeviceIDA"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36158,7 +36200,7 @@
 	,{
 		"Name":"mciGetDeviceIDW"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36171,7 +36213,7 @@
 	,{
 		"Name":"mciGetDeviceIDFromElementIDA"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36185,7 +36227,7 @@
 	,{
 		"Name":"mciGetDeviceIDFromElementIDW"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36199,7 +36241,7 @@
 	,{
 		"Name":"mciGetErrorStringA"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36214,7 +36256,7 @@
 	,{
 		"Name":"mciGetErrorStringW"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36229,7 +36271,7 @@
 	,{
 		"Name":"mciSetYieldProc"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36244,7 +36286,7 @@
 	,{
 		"Name":"mciGetCreatorTask"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HTASK","TargetKind":"Default","Api":"Media","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36257,7 +36299,7 @@
 	,{
 		"Name":"mciGetYieldProc"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"YIELDPROC","TargetKind":"FunctionPointer","Api":"Media.Multimedia","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36271,7 +36313,7 @@
 	,{
 		"Name":"mciGetDriverData"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36284,7 +36326,7 @@
 	,{
 		"Name":"mciLoadCommandResource"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36299,7 +36341,7 @@
 	,{
 		"Name":"mciSetDriverData"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36313,7 +36355,7 @@
 	,{
 		"Name":"mciDriverYield"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36326,7 +36368,7 @@
 	,{
 		"Name":"mciDriverNotify"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36341,7 +36383,7 @@
 	,{
 		"Name":"mciFreeCommandResource"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36354,7 +36396,7 @@
 	,{
 		"Name":"CloseDriver"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"LRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36369,7 +36411,7 @@
 	,{
 		"Name":"OpenDriver"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HDRVR","TargetKind":"Default","Api":"Media.Multimedia","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36384,7 +36426,7 @@
 	,{
 		"Name":"SendDriverMessage"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"LRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36400,7 +36442,7 @@
 	,{
 		"Name":"DrvGetModuleHandle"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36413,7 +36455,7 @@
 	,{
 		"Name":"GetDriverModuleHandle"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36426,7 +36468,7 @@
 	,{
 		"Name":"DefDriverProc"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"LRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36443,7 +36485,7 @@
 	,{
 		"Name":"DriverCallback"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36462,7 +36504,7 @@
 	,{
 		"Name":"sndOpenSound"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-mm-misc-l1-1-1"
+		,"DllImport":"api-ms-win-mm-misc-l1-1-1.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36478,7 +36520,7 @@
 	,{
 		"Name":"mmDrvInstall"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36494,7 +36536,7 @@
 	,{
 		"Name":"mmioStringToFOURCCA"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36508,7 +36550,7 @@
 	,{
 		"Name":"mmioStringToFOURCCW"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36522,7 +36564,7 @@
 	,{
 		"Name":"mmioInstallIOProcA"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"LPMMIOPROC","TargetKind":"FunctionPointer","Api":"Media.Multimedia","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36537,7 +36579,7 @@
 	,{
 		"Name":"mmioInstallIOProcW"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"LPMMIOPROC","TargetKind":"FunctionPointer","Api":"Media.Multimedia","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36552,7 +36594,7 @@
 	,{
 		"Name":"mmioOpenA"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HMMIO","TargetKind":"Default","Api":"Media.Multimedia","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36567,7 +36609,7 @@
 	,{
 		"Name":"mmioOpenW"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HMMIO","TargetKind":"Default","Api":"Media.Multimedia","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36582,7 +36624,7 @@
 	,{
 		"Name":"mmioRenameA"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36598,7 +36640,7 @@
 	,{
 		"Name":"mmioRenameW"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36614,7 +36656,7 @@
 	,{
 		"Name":"mmioClose"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36628,7 +36670,7 @@
 	,{
 		"Name":"mmioRead"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36643,7 +36685,7 @@
 	,{
 		"Name":"mmioWrite"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36658,7 +36700,7 @@
 	,{
 		"Name":"mmioSeek"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36673,7 +36715,7 @@
 	,{
 		"Name":"mmioGetInfo"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36688,7 +36730,7 @@
 	,{
 		"Name":"mmioSetInfo"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36703,7 +36745,7 @@
 	,{
 		"Name":"mmioSetBuffer"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36719,7 +36761,7 @@
 	,{
 		"Name":"mmioFlush"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36733,7 +36775,7 @@
 	,{
 		"Name":"mmioAdvance"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36748,7 +36790,7 @@
 	,{
 		"Name":"mmioSendMessage"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"LRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36764,7 +36806,7 @@
 	,{
 		"Name":"mmioDescend"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36780,7 +36822,7 @@
 	,{
 		"Name":"mmioAscend"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36795,7 +36837,7 @@
 	,{
 		"Name":"mmioCreateChunk"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36810,7 +36852,7 @@
 	,{
 		"Name":"joyGetPosEx"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36824,7 +36866,7 @@
 	,{
 		"Name":"joyGetNumDevs"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36836,7 +36878,7 @@
 	,{
 		"Name":"joyGetDevCapsA"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36851,7 +36893,7 @@
 	,{
 		"Name":"joyGetDevCapsW"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36866,7 +36908,7 @@
 	,{
 		"Name":"joyGetPos"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36880,7 +36922,7 @@
 	,{
 		"Name":"joyGetThreshold"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36894,7 +36936,7 @@
 	,{
 		"Name":"joyReleaseCapture"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36907,7 +36949,7 @@
 	,{
 		"Name":"joySetCapture"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36923,7 +36965,7 @@
 	,{
 		"Name":"joySetThreshold"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36937,7 +36979,7 @@
 	,{
 		"Name":"VideoForWindowsVersion"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36949,7 +36991,7 @@
 	,{
 		"Name":"ICInfo"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36964,7 +37006,7 @@
 	,{
 		"Name":"ICInstall"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36981,7 +37023,7 @@
 	,{
 		"Name":"ICRemove"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -36996,7 +37038,7 @@
 	,{
 		"Name":"ICGetInfo"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"LRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37011,7 +37053,7 @@
 	,{
 		"Name":"ICOpen"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HIC","TargetKind":"Default","Api":"Media.Multimedia","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37026,7 +37068,7 @@
 	,{
 		"Name":"ICOpenFunction"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HIC","TargetKind":"Default","Api":"Media.Multimedia","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37042,7 +37084,7 @@
 	,{
 		"Name":"ICClose"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"LRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37055,7 +37097,7 @@
 	,{
 		"Name":"ICSendMessage"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"LRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37071,7 +37113,7 @@
 	,{
 		"Name":"ICCompress"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37096,7 +37138,7 @@
 	,{
 		"Name":"ICDecompress"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37114,7 +37156,7 @@
 	,{
 		"Name":"ICDrawBegin"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37142,7 +37184,7 @@
 	,{
 		"Name":"ICDraw"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37160,7 +37202,7 @@
 	,{
 		"Name":"ICLocate"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HIC","TargetKind":"Default","Api":"Media.Multimedia","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37177,7 +37219,7 @@
 	,{
 		"Name":"ICGetDisplayFormat"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HIC","TargetKind":"Default","Api":"Media.Multimedia","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37195,7 +37237,7 @@
 	,{
 		"Name":"ICImageCompress"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37214,7 +37256,7 @@
 	,{
 		"Name":"ICImageDecompress"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37231,7 +37273,7 @@
 	,{
 		"Name":"ICCompressorChoose"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37249,7 +37291,7 @@
 	,{
 		"Name":"ICSeqCompressFrameStart"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37263,7 +37305,7 @@
 	,{
 		"Name":"ICSeqCompressFrameEnd"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37276,7 +37318,7 @@
 	,{
 		"Name":"ICSeqCompressFrame"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37293,7 +37335,7 @@
 	,{
 		"Name":"ICCompressorFree"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37306,7 +37348,7 @@
 	,{
 		"Name":"DrawDibOpen"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37318,7 +37360,7 @@
 	,{
 		"Name":"DrawDibClose"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37331,7 +37373,7 @@
 	,{
 		"Name":"DrawDibGetBuffer"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37347,7 +37389,7 @@
 	,{
 		"Name":"DrawDibGetPalette"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HPALETTE","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37360,7 +37402,7 @@
 	,{
 		"Name":"DrawDibSetPalette"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37374,7 +37416,7 @@
 	,{
 		"Name":"DrawDibChangePalette"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37390,7 +37432,7 @@
 	,{
 		"Name":"DrawDibRealize"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37405,7 +37447,7 @@
 	,{
 		"Name":"DrawDibStart"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37419,7 +37461,7 @@
 	,{
 		"Name":"DrawDibStop"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37432,7 +37474,7 @@
 	,{
 		"Name":"DrawDibBegin"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37452,7 +37494,7 @@
 	,{
 		"Name":"DrawDibDraw"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37477,7 +37519,7 @@
 	,{
 		"Name":"DrawDibEnd"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37490,7 +37532,7 @@
 	,{
 		"Name":"DrawDibTime"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37504,7 +37546,7 @@
 	,{
 		"Name":"DrawDibProfileDisplay"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"LRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37517,7 +37559,7 @@
 	,{
 		"Name":"AVIFileInit"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37529,7 +37571,7 @@
 	,{
 		"Name":"AVIFileExit"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37541,7 +37583,7 @@
 	,{
 		"Name":"AVIFileAddRef"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37554,7 +37596,7 @@
 	,{
 		"Name":"AVIFileRelease"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37567,7 +37609,7 @@
 	,{
 		"Name":"AVIFileOpenA"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37583,7 +37625,7 @@
 	,{
 		"Name":"AVIFileOpenW"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37599,7 +37641,7 @@
 	,{
 		"Name":"AVIFileInfoW"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37614,7 +37656,7 @@
 	,{
 		"Name":"AVIFileInfoA"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37629,7 +37671,7 @@
 	,{
 		"Name":"AVIFileGetStream"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37645,7 +37687,7 @@
 	,{
 		"Name":"AVIFileCreateStreamW"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37660,7 +37702,7 @@
 	,{
 		"Name":"AVIFileCreateStreamA"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37675,7 +37717,7 @@
 	,{
 		"Name":"AVIFileWriteData"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37691,7 +37733,7 @@
 	,{
 		"Name":"AVIFileReadData"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37707,7 +37749,7 @@
 	,{
 		"Name":"AVIFileEndRecord"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37720,7 +37762,7 @@
 	,{
 		"Name":"AVIStreamAddRef"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37733,7 +37775,7 @@
 	,{
 		"Name":"AVIStreamRelease"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37746,7 +37788,7 @@
 	,{
 		"Name":"AVIStreamInfoW"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37761,7 +37803,7 @@
 	,{
 		"Name":"AVIStreamInfoA"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37776,7 +37818,7 @@
 	,{
 		"Name":"AVIStreamFindSample"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37791,7 +37833,7 @@
 	,{
 		"Name":"AVIStreamReadFormat"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37807,7 +37849,7 @@
 	,{
 		"Name":"AVIStreamSetFormat"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37823,7 +37865,7 @@
 	,{
 		"Name":"AVIStreamReadData"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37839,7 +37881,7 @@
 	,{
 		"Name":"AVIStreamWriteData"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37855,7 +37897,7 @@
 	,{
 		"Name":"AVIStreamRead"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37874,7 +37916,7 @@
 	,{
 		"Name":"AVIStreamWrite"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37894,7 +37936,7 @@
 	,{
 		"Name":"AVIStreamStart"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37907,7 +37949,7 @@
 	,{
 		"Name":"AVIStreamLength"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37920,7 +37962,7 @@
 	,{
 		"Name":"AVIStreamTimeToSample"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37934,7 +37976,7 @@
 	,{
 		"Name":"AVIStreamSampleToTime"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37948,7 +37990,7 @@
 	,{
 		"Name":"AVIStreamBeginStreaming"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37964,7 +38006,7 @@
 	,{
 		"Name":"AVIStreamEndStreaming"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37977,7 +38019,7 @@
 	,{
 		"Name":"AVIStreamGetFrameOpen"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"IGetFrame","TargetKind":"Com","Api":"Media.Multimedia","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -37991,7 +38033,7 @@
 	,{
 		"Name":"AVIStreamGetFrame"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38005,7 +38047,7 @@
 	,{
 		"Name":"AVIStreamGetFrameClose"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38018,7 +38060,7 @@
 	,{
 		"Name":"AVIStreamOpenFromFileA"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38036,7 +38078,7 @@
 	,{
 		"Name":"AVIStreamOpenFromFileW"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38054,7 +38096,7 @@
 	,{
 		"Name":"AVIStreamCreate"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38070,7 +38112,7 @@
 	,{
 		"Name":"AVIMakeCompressedStream"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38086,7 +38128,7 @@
 	,{
 		"Name":"AVISaveA"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38104,7 +38146,7 @@
 	,{
 		"Name":"AVISaveVA"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38122,7 +38164,7 @@
 	,{
 		"Name":"AVISaveW"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38140,7 +38182,7 @@
 	,{
 		"Name":"AVISaveVW"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38158,7 +38200,7 @@
 	,{
 		"Name":"AVISaveOptions"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38175,7 +38217,7 @@
 	,{
 		"Name":"AVISaveOptionsFree"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38189,7 +38231,7 @@
 	,{
 		"Name":"AVIBuildFilterW"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38204,7 +38246,7 @@
 	,{
 		"Name":"AVIBuildFilterA"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38219,7 +38261,7 @@
 	,{
 		"Name":"AVIMakeFileFromStreams"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38234,7 +38276,7 @@
 	,{
 		"Name":"AVIMakeStreamFromClipboard"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38249,7 +38291,7 @@
 	,{
 		"Name":"AVIPutFileOnClipboard"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38262,7 +38304,7 @@
 	,{
 		"Name":"AVIGetFromClipboard"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38275,7 +38317,7 @@
 	,{
 		"Name":"AVIClearClipboard"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38287,7 +38329,7 @@
 	,{
 		"Name":"CreateEditableStream"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38301,7 +38343,7 @@
 	,{
 		"Name":"EditStreamCut"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38317,7 +38359,7 @@
 	,{
 		"Name":"EditStreamCopy"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38333,7 +38375,7 @@
 	,{
 		"Name":"EditStreamPaste"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38351,7 +38393,7 @@
 	,{
 		"Name":"EditStreamClone"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38365,7 +38407,7 @@
 	,{
 		"Name":"EditStreamSetNameA"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38379,7 +38421,7 @@
 	,{
 		"Name":"EditStreamSetNameW"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38393,7 +38435,7 @@
 	,{
 		"Name":"EditStreamSetInfoW"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38408,7 +38450,7 @@
 	,{
 		"Name":"EditStreamSetInfoA"
 		,"SetLastError":false
-		,"DllImport":"AVIFIL32"
+		,"DllImport":"AVIFIL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38423,7 +38465,7 @@
 	,{
 		"Name":"MCIWndCreateA"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38439,7 +38481,7 @@
 	,{
 		"Name":"MCIWndCreateW"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38455,7 +38497,7 @@
 	,{
 		"Name":"MCIWndRegisterClass"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38467,7 +38509,7 @@
 	,{
 		"Name":"capCreateCaptureWindowA"
 		,"SetLastError":false
-		,"DllImport":"AVICAP32"
+		,"DllImport":"AVICAP32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38487,7 +38529,7 @@
 	,{
 		"Name":"capGetDriverDescriptionA"
 		,"SetLastError":false
-		,"DllImport":"AVICAP32"
+		,"DllImport":"AVICAP32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38504,7 +38546,7 @@
 	,{
 		"Name":"capCreateCaptureWindowW"
 		,"SetLastError":false
-		,"DllImport":"AVICAP32"
+		,"DllImport":"AVICAP32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38524,7 +38566,7 @@
 	,{
 		"Name":"capGetDriverDescriptionW"
 		,"SetLastError":false
-		,"DllImport":"AVICAP32"
+		,"DllImport":"AVICAP32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38541,7 +38583,7 @@
 	,{
 		"Name":"GetOpenFileNamePreviewA"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38554,7 +38596,7 @@
 	,{
 		"Name":"GetSaveFileNamePreviewA"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38567,7 +38609,7 @@
 	,{
 		"Name":"GetOpenFileNamePreviewW"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38580,7 +38622,7 @@
 	,{
 		"Name":"GetSaveFileNamePreviewW"
 		,"SetLastError":false
-		,"DllImport":"MSVFW32"
+		,"DllImport":"MSVFW32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38593,14 +38635,14 @@
 	,{
 		"Name":"mmTaskCreate"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"lpfn","Type":{"Kind":"ApiRef","Name":"LPTASKCALLBACK","TargetKind":"FunctionPointer","Api":"Media.Multimedia","Parents":[]},"Attrs":["In","Out"]}
+			{"Name":"lpfn","Type":{"Kind":"ApiRef","Name":"LPTASKCALLBACK","TargetKind":"FunctionPointer","Api":"Media.Multimedia","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lph","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 			,{"Name":"dwInst","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":["In"]}
 		]
@@ -38608,7 +38650,7 @@
 	,{
 		"Name":"mmTaskBlock"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38621,7 +38663,7 @@
 	,{
 		"Name":"mmTaskSignal"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38634,7 +38676,7 @@
 	,{
 		"Name":"mmTaskYield"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -38646,7 +38688,7 @@
 	,{
 		"Name":"mmGetCurrentTask"
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

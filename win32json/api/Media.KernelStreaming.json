@@ -471,6 +471,48 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"KSSTRING_Filter"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"{9B365890-165F-11D0-A195-0020AFD156E4}"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"KSSTRING_Pin"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"{146F1A80-4791-11D0-A5D6-28DB04C10000}"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"KSSTRING_Clock"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"{53172480-4791-11D0-A5D6-28DB04C10000}"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"KSSTRING_Allocator"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"{642F5D00-4791-11D0-A5D6-28DB04C10000}"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"KSSTRING_AllocatorEx"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"{091BB63B-603F-11D1-B067-00A0C9062802}"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"KSSTRING_TopologyNode"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"{0621061A-EE75-11D0-B915-00A0C9223196}"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"KSALLOCATOR_REQUIREMENTF_INPLACE_MODIFIER"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -1263,21 +1305,21 @@
 	}
 	,{
 		"Name":"DEVPKEY_KsAudio_PacketSize_Constraints"
-		,"Type":{"Kind":"ApiRef","Name":"PROPERTYKEY","TargetKind":"Default","Api":"UI.Shell.PropertiesSystem","Parents":[]}
+		,"Type":{"Kind":"ApiRef","Name":"DEVPROPKEY","TargetKind":"Default","Api":"Devices.Properties","Parents":[]}
 		,"ValueType":"PropertyKey"
 		,"Value":{"Fmtid":"13e004d6-b066-43bd-913b-a415cd13da87","Pid":2}
 		,"Attrs":[]
 	}
 	,{
 		"Name":"DEVPKEY_KsAudio_Controller_DeviceInterface_Path"
-		,"Type":{"Kind":"ApiRef","Name":"PROPERTYKEY","TargetKind":"Default","Api":"UI.Shell.PropertiesSystem","Parents":[]}
+		,"Type":{"Kind":"ApiRef","Name":"DEVPROPKEY","TargetKind":"Default","Api":"Devices.Properties","Parents":[]}
 		,"ValueType":"PropertyKey"
 		,"Value":{"Fmtid":"13e004d6-b066-43bd-913b-a415cd13da87","Pid":3}
 		,"Attrs":[]
 	}
 	,{
 		"Name":"DEVPKEY_KsAudio_PacketSize_Constraints2"
-		,"Type":{"Kind":"ApiRef","Name":"PROPERTYKEY","TargetKind":"Default","Api":"UI.Shell.PropertiesSystem","Parents":[]}
+		,"Type":{"Kind":"ApiRef","Name":"DEVPROPKEY","TargetKind":"Default","Api":"Devices.Properties","Parents":[]}
 		,"ValueType":"PropertyKey"
 		,"Value":{"Fmtid":"9404f781-7191-409b-8b0b-80bf6ec229ae","Pid":2}
 		,"Attrs":[]
@@ -4479,6 +4521,56 @@
 		]
 	}
 	,{
+		"Name":"KSSTREAM_HEADER"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"TypeSpecificFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"PresentationTime","Type":{"Kind":"ApiRef","Name":"KSTIME","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":[]}
+			,{"Name":"Duration","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"FrameExtent","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"DataUsed","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Data","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+			,{"Name":"OptionsFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"KSNODEPROPERTY_AUDIO_3D_LISTENER"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"NodeProperty","Type":{"Kind":"ApiRef","Name":"KSNODEPROPERTY","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":[]}
+			,{"Name":"ListenerId","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"KSNODEPROPERTY_AUDIO_PROPERTY"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"NodeProperty","Type":{"Kind":"ApiRef","Name":"KSNODEPROPERTY","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":[]}
+			,{"Name":"AppContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
 		"Name":"IKsControl"
 		,"Architectures":[]
 		,"Platform":null
@@ -5015,21 +5107,6 @@
 				]
 				,"NestedTypes":[
 					{
-						"Name":"_SemaphoreHandle_e__Struct"
-						,"Architectures":[]
-						,"Platform":null
-						,"Kind":"Struct"
-						,"Size":0
-						,"PackingSize":0
-						,"Fields":[
-							{"Name":"Semaphore","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-							,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-							,{"Name":"Adjustment","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-						]
-						,"NestedTypes":[
-						]
-					}
-					,{
 						"Name":"_Alignment_e__Struct"
 						,"Architectures":[]
 						,"Platform":null
@@ -5053,6 +5130,21 @@
 						,"Fields":[
 							{"Name":"Event","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 							,{"Name":"Reserved","Type":{"Kind":"Array","Shape":{"Size":2},"Child":{"Kind":"Native","Name":"UIntPtr"}},"Attrs":[]}
+						]
+						,"NestedTypes":[
+						]
+					}
+					,{
+						"Name":"_SemaphoreHandle_e__Struct"
+						,"Architectures":[]
+						,"Platform":null
+						,"Kind":"Struct"
+						,"Size":0
+						,"PackingSize":0
+						,"Fields":[
+							{"Name":"Semaphore","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+							,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+							,{"Name":"Adjustment","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]
@@ -6312,7 +6404,7 @@
 	}
 	,{
 		"Name":"KSSTREAM_HEADER"
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
@@ -6326,7 +6418,6 @@
 			,{"Name":"DataUsed","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Data","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 			,{"Name":"OptionsFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -7550,7 +7641,7 @@
 		,"IntegerBase":"Int32"
 	}
 	,{
-		"Name":"_KSAUDIO_PACKETSIZE_SIGNALPROCESSINGMODE_CONSTRAINT"
+		"Name":"KSAUDIO_PACKETSIZE_PROCESSINGMODE_CONSTRAINT"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -7576,7 +7667,7 @@
 			,{"Name":"PacketSizeFileAlignment","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NumProcessingModeConstraints","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"ProcessingModeConstraints","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"_KSAUDIO_PACKETSIZE_SIGNALPROCESSINGMODE_CONSTRAINT","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":[]}
+			,{"Name":"ProcessingModeConstraints","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"KSAUDIO_PACKETSIZE_PROCESSINGMODE_CONSTRAINT","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -7593,7 +7684,7 @@
 			,{"Name":"PacketSizeFileAlignment","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"MaxPacketSizeInBytes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NumProcessingModeConstraints","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"ProcessingModeConstraints","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"_KSAUDIO_PACKETSIZE_SIGNALPROCESSINGMODE_CONSTRAINT","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":[]}
+			,{"Name":"ProcessingModeConstraints","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"KSAUDIO_PACKETSIZE_PROCESSINGMODE_CONSTRAINT","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -7698,20 +7789,6 @@
 				]
 			}
 			,{
-				"Name":"_Anonymous1_e__Union"
-				,"Architectures":[]
-				,"Platform":null
-				,"Kind":"Union"
-				,"Size":0
-				,"PackingSize":0
-				,"Fields":[
-					{"Name":"x","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-					,{"Name":"dvX","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-				]
-				,"NestedTypes":[
-				]
-			}
-			,{
 				"Name":"_Anonymous3_e__Union"
 				,"Architectures":[]
 				,"Platform":null
@@ -7721,6 +7798,20 @@
 				,"Fields":[
 					{"Name":"z","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 					,{"Name":"dvZ","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+			,{
+				"Name":"_Anonymous1_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"Fields":[
+					{"Name":"x","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+					,{"Name":"dvX","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]
@@ -9907,7 +9998,7 @@
 	}
 	,{
 		"Name":"KSNODEPROPERTY_AUDIO_3D_LISTENER"
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
@@ -9915,13 +10006,14 @@
 		,"Fields":[
 			{"Name":"NodeProperty","Type":{"Kind":"ApiRef","Name":"KSNODEPROPERTY","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":[]}
 			,{"Name":"ListenerId","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
 	}
 	,{
 		"Name":"KSNODEPROPERTY_AUDIO_PROPERTY"
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
@@ -9930,6 +10022,7 @@
 			{"Name":"NodeProperty","Type":{"Kind":"ApiRef","Name":"KSNODEPROPERTY","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":[]}
 			,{"Name":"AppContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -11165,7 +11258,7 @@
 		]
 	}
 	,{
-		"Name":"KS_AnalogVideoInfo"
+		"Name":"KS_ANALOGVIDEOINFO"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -11352,7 +11445,7 @@
 		]
 	}
 	,{
-		"Name":"KS_MPEAUDIOINFO"
+		"Name":"KS_MPEGAUDIOINFO"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -11655,7 +11748,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"DataRange","Type":{"Kind":"ApiRef","Name":"KSDATAFORMAT","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":[]}
-			,{"Name":"AnalogVideoInfo","Type":{"Kind":"ApiRef","Name":"KS_AnalogVideoInfo","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":[]}
+			,{"Name":"AnalogVideoInfo","Type":{"Kind":"ApiRef","Name":"KS_ANALOGVIDEOINFO","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -12916,7 +13009,7 @@
 		]
 	}
 	,{
-		"Name":"_TunerDecoderLockType"
+		"Name":"TunerLockType"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
@@ -13011,7 +13104,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"Property","Type":{"Kind":"ApiRef","Name":"KSIDENTIFIER","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":[]}
-			,{"Name":"LockStatus","Type":{"Kind":"ApiRef","Name":"_TunerDecoderLockType","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":[]}
+			,{"Name":"LockStatus","Type":{"Kind":"ApiRef","Name":"TunerLockType","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":[]}
 			,{"Name":"CurrentFrequency","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
@@ -14692,7 +14785,7 @@
 		,"Values":[
 			{"Name":"KSPROPERTY_NETWORKCAMERACONTROL_NTPINFO_TYPE_DISABLE","Value":0}
 			,{"Name":"KSPROPERTY_NETWORKCAMERACONTROL_NTPINFO_TYPE_HOSTNTP","Value":1}
-			,{"Name":"KSPROPERYT_NETWORKCAMERACONTROL_NTPINFO_TYPE_CUSTOM","Value":2}
+			,{"Name":"KSPROPERTY_NETWORKCAMERACONTROL_NTPINFO_TYPE_CUSTOM","Value":2}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -15053,20 +15146,6 @@
 				]
 				,"NestedTypes":[
 					{
-						"Name":"_RawAVC_e__Struct"
-						,"Architectures":[]
-						,"Platform":null
-						,"Kind":"Struct"
-						,"Size":0
-						,"PackingSize":0
-						,"Fields":[
-							{"Name":"PayloadSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-							,{"Name":"Payload","Type":{"Kind":"Array","Shape":{"Size":512},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
-						]
-						,"NestedTypes":[
-						]
-					}
-					,{
 						"Name":"_Timecode_e__Struct"
 						,"Architectures":[]
 						,"Platform":null
@@ -15078,6 +15157,20 @@
 							,{"Name":"second","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 							,{"Name":"minute","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 							,{"Name":"hour","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+						]
+						,"NestedTypes":[
+						]
+					}
+					,{
+						"Name":"_RawAVC_e__Struct"
+						,"Architectures":[]
+						,"Platform":null
+						,"Kind":"Struct"
+						,"Size":0
+						,"PackingSize":0
+						,"Fields":[
+							{"Name":"PayloadSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+							,{"Name":"Payload","Type":{"Kind":"Array","Shape":{"Size":512},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]
@@ -15118,20 +15211,6 @@
 				]
 				,"NestedTypes":[
 					{
-						"Name":"_RawAVC_e__Struct"
-						,"Architectures":[]
-						,"Platform":null
-						,"Kind":"Struct"
-						,"Size":0
-						,"PackingSize":0
-						,"Fields":[
-							{"Name":"PayloadSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-							,{"Name":"Payload","Type":{"Kind":"Array","Shape":{"Size":512},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
-						]
-						,"NestedTypes":[
-						]
-					}
-					,{
 						"Name":"_Timecode_e__Struct"
 						,"Architectures":[]
 						,"Platform":null
@@ -15143,6 +15222,20 @@
 							,{"Name":"second","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 							,{"Name":"minute","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 							,{"Name":"hour","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+						]
+						,"NestedTypes":[
+						]
+					}
+					,{
+						"Name":"_RawAVC_e__Struct"
+						,"Architectures":[]
+						,"Platform":null
+						,"Kind":"Struct"
+						,"Size":0
+						,"PackingSize":0
+						,"Fields":[
+							{"Name":"PayloadSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+							,{"Name":"Payload","Type":{"Kind":"Array","Shape":{"Size":512},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]
@@ -16107,76 +16200,6 @@
 		,"Platform":null
 		,"Kind":"ComClassID"
 		,"Guid":"7a5de1d3-01a1-452c-b481-4fa2b96271e8"
-	}
-	,{
-		"Name":"ENCAPIPARAM_BITRATE"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"49cc4c43-ca83-4ad4-a9af-f3696af666df"
-	}
-	,{
-		"Name":"ENCAPIPARAM_PEAK_BITRATE"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"703f16a9-3d48-44a1-b077-018dff915d19"
-	}
-	,{
-		"Name":"ENCAPIPARAM_BITRATE_MODE"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"ee5fb25c-c713-40d1-9d58-c0d7241e250f"
-	}
-	,{
-		"Name":"CODECAPI_CHANGELISTS"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"62b12acf-f6b0-47d9-9456-96f22c4e0b9d"
-	}
-	,{
-		"Name":"CODECAPI_VIDEO_ENCODER"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"7112e8e1-3d03-47ef-8e60-03f1cf537301"
-	}
-	,{
-		"Name":"CODECAPI_AUDIO_ENCODER"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"b9d19a3e-f897-429c-bc46-8138b7272b2d"
-	}
-	,{
-		"Name":"CODECAPI_SETALLDEFAULTS"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"6c5e6a7c-acf8-4f55-a999-1a628109051b"
-	}
-	,{
-		"Name":"CODECAPI_ALLSETTINGS"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"6a577e92-83e1-4113-adc2-4fcec32f83a1"
-	}
-	,{
-		"Name":"CODECAPI_SUPPORTSEVENTS"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"0581af97-7693-4dbd-9dca-3f9ebd6585a1"
-	}
-	,{
-		"Name":"CODECAPI_CURRENTCHANGELIST"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"1cb14e83-7d72-4657-83fd-47a2c5b9d13d"
 	}
 	,{
 		"Name":"KSPROPSETID_Jack"
@@ -17166,64 +17189,13 @@
 			}
 		]
 	}
-	,{
-		"Name":"KSSTREAM_HEADER"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"TypeSpecificFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"PresentationTime","Type":{"Kind":"ApiRef","Name":"KSTIME","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":[]}
-			,{"Name":"Duration","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
-			,{"Name":"FrameExtent","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"DataUsed","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Data","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-			,{"Name":"OptionsFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"KSNODEPROPERTY_AUDIO_3D_LISTENER"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"NodeProperty","Type":{"Kind":"ApiRef","Name":"KSNODEPROPERTY","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":[]}
-			,{"Name":"ListenerId","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"KSNODEPROPERTY_AUDIO_PROPERTY"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"NodeProperty","Type":{"Kind":"ApiRef","Name":"KSNODEPROPERTY","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":[]}
-			,{"Name":"AppContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
 ]
 
 ,"Functions":[
 	{
 		"Name":"KsCreateAllocator"
 		,"SetLastError":false
-		,"DllImport":"ksuser"
+		,"DllImport":"ksuser.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -17238,7 +17210,7 @@
 	,{
 		"Name":"KsCreateClock"
 		,"SetLastError":false
-		,"DllImport":"ksuser"
+		,"DllImport":"ksuser.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -17253,7 +17225,7 @@
 	,{
 		"Name":"KsCreatePin"
 		,"SetLastError":false
-		,"DllImport":"ksuser"
+		,"DllImport":"ksuser.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -17269,7 +17241,7 @@
 	,{
 		"Name":"KsCreateTopologyNode"
 		,"SetLastError":false
-		,"DllImport":"ksuser"
+		,"DllImport":"ksuser.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -17285,7 +17257,7 @@
 	,{
 		"Name":"KsCreateAllocator2"
 		,"SetLastError":false
-		,"DllImport":"ksuser"
+		,"DllImport":"ksuser.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -17300,7 +17272,7 @@
 	,{
 		"Name":"KsCreateClock2"
 		,"SetLastError":false
-		,"DllImport":"ksuser"
+		,"DllImport":"ksuser.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -17315,7 +17287,7 @@
 	,{
 		"Name":"KsCreatePin2"
 		,"SetLastError":false
-		,"DllImport":"ksuser"
+		,"DllImport":"ksuser.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -17331,7 +17303,7 @@
 	,{
 		"Name":"KsCreateTopologyNode2"
 		,"SetLastError":false
-		,"DllImport":"ksuser"
+		,"DllImport":"ksuser.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

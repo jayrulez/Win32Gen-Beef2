@@ -37,6 +37,62 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"WSMAN_STREAM_ID_STDIN"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"stdin"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WSMAN_STREAM_ID_STDOUT"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"stdout"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WSMAN_STREAM_ID_STDERR"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"stderr"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WSMAN_SHELL_NS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"http://schemas.microsoft.com/wbem/wsman/1/windows/shell"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WSMAN_CMDSHELL_OPTION_CODEPAGE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"WINRS_CODEPAGE"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WSMAN_SHELL_OPTION_NOPROFILE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"WINRS_NOPROFILE"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WSMAN_CMDSHELL_OPTION_CONSOLEMODE_STDIN"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"WINRS_CONSOLEMODE_STDIN"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WSMAN_CMDSHELL_OPTION_SKIP_CMD_SHELL"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"WINRS_SKIP_CMD_SHELL"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"WSMAN_FLAG_RECEIVE_RESULT_NO_MORE_DATA"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -4270,7 +4326,7 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"__AnonymousBase_wsman_L665_C48","Type":{"Kind":"ApiRef","Name":"WSMAN_SHELL_STARTUP_INFO_V10","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":[]}
+			{"Name":"Base","Type":{"Kind":"ApiRef","Name":"WSMAN_SHELL_STARTUP_INFO_V10","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":[]}
 			,{"Name":"name","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 		]
 		,"NestedTypes":[
@@ -5880,7 +5936,7 @@
 	{
 		"Name":"WSManInitialize"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5894,7 +5950,7 @@
 	,{
 		"Name":"WSManDeinitialize"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5908,7 +5964,7 @@
 	,{
 		"Name":"WSManGetErrorMessage"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5927,7 +5983,7 @@
 	,{
 		"Name":"WSManCreateSession"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5945,7 +6001,7 @@
 	,{
 		"Name":"WSManCloseSession"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5959,7 +6015,7 @@
 	,{
 		"Name":"WSManSetSessionOption"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5974,7 +6030,7 @@
 	,{
 		"Name":"WSManGetSessionOptionAsDword"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5989,7 +6045,7 @@
 	,{
 		"Name":"WSManGetSessionOptionAsString"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6006,7 +6062,7 @@
 	,{
 		"Name":"WSManCloseOperation"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6020,7 +6076,7 @@
 	,{
 		"Name":"WSManCreateShell"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6040,7 +6096,7 @@
 	,{
 		"Name":"WSManRunShellCommand"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6059,7 +6115,7 @@
 	,{
 		"Name":"WSManSignalShell"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6077,7 +6133,7 @@
 	,{
 		"Name":"WSManReceiveShellOutput"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6095,7 +6151,7 @@
 	,{
 		"Name":"WSManSendShellInput"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6115,7 +6171,7 @@
 	,{
 		"Name":"WSManCloseCommand"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6130,7 +6186,7 @@
 	,{
 		"Name":"WSManCloseShell"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6145,7 +6201,7 @@
 	,{
 		"Name":"WSManCreateShellEx"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6166,7 +6222,7 @@
 	,{
 		"Name":"WSManRunShellCommandEx"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6186,7 +6242,7 @@
 	,{
 		"Name":"WSManDisconnectShell"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6202,7 +6258,7 @@
 	,{
 		"Name":"WSManReconnectShell"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6217,7 +6273,7 @@
 	,{
 		"Name":"WSManReconnectShellCommand"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6232,7 +6288,7 @@
 	,{
 		"Name":"WSManConnectShell"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6252,7 +6308,7 @@
 	,{
 		"Name":"WSManConnectShellCommand"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6271,7 +6327,7 @@
 	,{
 		"Name":"WSManPluginReportContext"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6286,7 +6342,7 @@
 	,{
 		"Name":"WSManPluginReceiveResult"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6304,7 +6360,7 @@
 	,{
 		"Name":"WSManPluginOperationComplete"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6320,7 +6376,7 @@
 	,{
 		"Name":"WSManPluginGetOperationParameters"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6335,7 +6391,7 @@
 	,{
 		"Name":"WSManPluginGetConfiguration"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6350,7 +6406,7 @@
 	,{
 		"Name":"WSManPluginReportCompletion"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6364,7 +6420,7 @@
 	,{
 		"Name":"WSManPluginFreeRequestDetails"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6377,7 +6433,7 @@
 	,{
 		"Name":"WSManPluginAuthzUserComplete"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6396,7 +6452,7 @@
 	,{
 		"Name":"WSManPluginAuthzOperationComplete"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6413,7 +6469,7 @@
 	,{
 		"Name":"WSManPluginAuthzQueryQuotaComplete"
 		,"SetLastError":false
-		,"DllImport":"WsmSvc"
+		,"DllImport":"WsmSvc.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

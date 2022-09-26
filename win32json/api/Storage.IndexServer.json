@@ -23,6 +23,20 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"CINULLCATALOG"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"::_noindex_::"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"CIADMIN"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"::_nodocstore_::"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"LIFF_LOAD_DEFINED_FILTER"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -1182,6 +1196,49 @@
 		]
 	}
 	,{
+		"Name":"DBID"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"uGuid","Type":{"Kind":"ApiRef","Name":"_uGuid_e__Union","TargetKind":"Default","Api":"Storage.IndexServer","Parents":[]},"Attrs":[]}
+			,{"Name":"eKind","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"uName","Type":{"Kind":"ApiRef","Name":"_uName_e__Union","TargetKind":"Default","Api":"Storage.IndexServer","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+			{
+				"Name":"_uGuid_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"Fields":[
+					{"Name":"guid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
+					,{"Name":"pguid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+			,{
+				"Name":"_uName_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"Fields":[
+					{"Name":"pwszName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+					,{"Name":"ulPropid","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+		]
+	}
+	,{
 		"Name":"IPhraseSink"
 		,"Architectures":[]
 		,"Platform":"windows5.0"
@@ -1255,49 +1312,6 @@
 	}
 	,{
 		"Name":"DBID"
-		,"Architectures":["X64","Arm64"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"uGuid","Type":{"Kind":"ApiRef","Name":"_uGuid_e__Union","TargetKind":"Default","Api":"Storage.IndexServer","Parents":[]},"Attrs":[]}
-			,{"Name":"eKind","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"uName","Type":{"Kind":"ApiRef","Name":"_uName_e__Union","TargetKind":"Default","Api":"Storage.IndexServer","Parents":[]},"Attrs":[]}
-		]
-		,"NestedTypes":[
-			{
-				"Name":"_uName_e__Union"
-				,"Architectures":[]
-				,"Platform":null
-				,"Kind":"Union"
-				,"Size":0
-				,"PackingSize":0
-				,"Fields":[
-					{"Name":"pwszName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-					,{"Name":"ulPropid","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-				]
-				,"NestedTypes":[
-				]
-			}
-			,{
-				"Name":"_uGuid_e__Union"
-				,"Architectures":[]
-				,"Platform":null
-				,"Kind":"Union"
-				,"Size":0
-				,"PackingSize":0
-				,"Fields":[
-					{"Name":"guid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
-					,{"Name":"pguid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":[]}
-				]
-				,"NestedTypes":[
-				]
-			}
-		]
-	}
-	,{
-		"Name":"DBID"
 		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -1345,7 +1359,7 @@
 	{
 		"Name":"LoadIFilter"
 		,"SetLastError":false
-		,"DllImport":"query"
+		,"DllImport":"query.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1360,7 +1374,7 @@
 	,{
 		"Name":"LoadIFilterEx"
 		,"SetLastError":false
-		,"DllImport":"query"
+		,"DllImport":"query.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1376,7 +1390,7 @@
 	,{
 		"Name":"BindIFilterFromStorage"
 		,"SetLastError":false
-		,"DllImport":"query"
+		,"DllImport":"query.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1391,7 +1405,7 @@
 	,{
 		"Name":"BindIFilterFromStream"
 		,"SetLastError":false
-		,"DllImport":"query"
+		,"DllImport":"query.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

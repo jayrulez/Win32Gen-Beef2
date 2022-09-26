@@ -94,7 +94,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -136,7 +136,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -150,7 +150,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -164,7 +164,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -342,12 +342,10 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"index","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IWscProduct","TargetKind":"Com","Api":"System.SecurityCenter","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IWscProduct","TargetKind":"Com","Api":"System.SecurityCenter","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -416,7 +414,7 @@
 	{
 		"Name":"WscRegisterForChanges"
 		,"SetLastError":false
-		,"DllImport":"WSCAPI"
+		,"DllImport":"WSCAPI.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -432,7 +430,7 @@
 	,{
 		"Name":"WscUnRegisterChanges"
 		,"SetLastError":false
-		,"DllImport":"WSCAPI"
+		,"DllImport":"WSCAPI.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -445,7 +443,7 @@
 	,{
 		"Name":"WscRegisterForUserNotifications"
 		,"SetLastError":false
-		,"DllImport":"WSCAPI"
+		,"DllImport":"WSCAPI.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -457,7 +455,7 @@
 	,{
 		"Name":"WscGetSecurityProviderHealth"
 		,"SetLastError":false
-		,"DllImport":"WSCAPI"
+		,"DllImport":"WSCAPI.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -471,7 +469,7 @@
 	,{
 		"Name":"WscQueryAntiMalwareUri"
 		,"SetLastError":false
-		,"DllImport":"WSCAPI"
+		,"DllImport":"WSCAPI.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -483,7 +481,7 @@
 	,{
 		"Name":"WscGetAntiMalwareUri"
 		,"SetLastError":false
-		,"DllImport":"WSCAPI"
+		,"DllImport":"WSCAPI.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

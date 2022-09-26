@@ -31,28 +31,28 @@
 	}
 	,{
 		"Name":"DEVPKEY_IndirectDisplay"
-		,"Type":{"Kind":"ApiRef","Name":"PROPERTYKEY","TargetKind":"Default","Api":"UI.Shell.PropertiesSystem","Parents":[]}
+		,"Type":{"Kind":"ApiRef","Name":"DEVPROPKEY","TargetKind":"Default","Api":"Devices.Properties","Parents":[]}
 		,"ValueType":"PropertyKey"
 		,"Value":{"Fmtid":"c50a3f10-aa5c-4247-b830-d6a6f8eaa310","Pid":1}
 		,"Attrs":[]
 	}
 	,{
 		"Name":"DEVPKEY_Device_TerminalLuid"
-		,"Type":{"Kind":"ApiRef","Name":"PROPERTYKEY","TargetKind":"Default","Api":"UI.Shell.PropertiesSystem","Parents":[]}
+		,"Type":{"Kind":"ApiRef","Name":"DEVPROPKEY","TargetKind":"Default","Api":"Devices.Properties","Parents":[]}
 		,"ValueType":"PropertyKey"
 		,"Value":{"Fmtid":"c50a3f10-aa5c-4247-b830-d6a6f8eaa310","Pid":2}
 		,"Attrs":[]
 	}
 	,{
 		"Name":"DEVPKEY_Device_AdapterLuid"
-		,"Type":{"Kind":"ApiRef","Name":"PROPERTYKEY","TargetKind":"Default","Api":"UI.Shell.PropertiesSystem","Parents":[]}
+		,"Type":{"Kind":"ApiRef","Name":"DEVPROPKEY","TargetKind":"Default","Api":"Devices.Properties","Parents":[]}
 		,"ValueType":"PropertyKey"
 		,"Value":{"Fmtid":"c50a3f10-aa5c-4247-b830-d6a6f8eaa310","Pid":3}
 		,"Attrs":[]
 	}
 	,{
 		"Name":"DEVPKEY_Device_ActivityId"
-		,"Type":{"Kind":"ApiRef","Name":"PROPERTYKEY","TargetKind":"Default","Api":"UI.Shell.PropertiesSystem","Parents":[]}
+		,"Type":{"Kind":"ApiRef","Name":"DEVPROPKEY","TargetKind":"Default","Api":"Devices.Properties","Parents":[]}
 		,"ValueType":"PropertyKey"
 		,"Value":{"Fmtid":"c50a3f10-aa5c-4247-b830-d6a6f8eaa310","Pid":4}
 		,"Attrs":[]
@@ -62,6 +62,20 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"VIDEO_DEVICE_NAME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"DISPLAY%d"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WVIDEO_DEVICE_NAME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"DISPLAY%d"
 		,"Attrs":[]
 	}
 	,{
@@ -860,6 +874,13 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DD_FULLSCREEN_VIDEO_DEVICE_NAME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"\\Device\\FSVideo"
 		,"Attrs":[]
 	}
 	,{
@@ -6475,6 +6496,178 @@
 		]
 	}
 	,{
+		"Name":"FD_XFORM"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"eXX","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+			,{"Name":"eXY","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+			,{"Name":"eYX","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+			,{"Name":"eYY","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"IFIMETRICS"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cjThis","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"cjIfiExtra","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dpwszFamilyName","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+			,{"Name":"dpwszStyleName","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+			,{"Name":"dpwszFaceName","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+			,{"Name":"dpwszUniqueName","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+			,{"Name":"dpFontSim","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+			,{"Name":"lEmbedId","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+			,{"Name":"lItalicAngle","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+			,{"Name":"lCharBias","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+			,{"Name":"dpCharSets","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+			,{"Name":"jWinCharSet","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"jWinPitchAndFamily","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"usWinWeight","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"flInfo","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"fsSelection","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"fsType","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"fwdUnitsPerEm","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
+			,{"Name":"fwdLowestPPEm","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
+			,{"Name":"fwdWinAscender","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
+			,{"Name":"fwdWinDescender","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
+			,{"Name":"fwdMacAscender","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
+			,{"Name":"fwdMacDescender","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
+			,{"Name":"fwdMacLineGap","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
+			,{"Name":"fwdTypoAscender","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
+			,{"Name":"fwdTypoDescender","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
+			,{"Name":"fwdTypoLineGap","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
+			,{"Name":"fwdAveCharWidth","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
+			,{"Name":"fwdMaxCharInc","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
+			,{"Name":"fwdCapHeight","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
+			,{"Name":"fwdXHeight","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
+			,{"Name":"fwdSubscriptXSize","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
+			,{"Name":"fwdSubscriptYSize","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
+			,{"Name":"fwdSubscriptXOffset","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
+			,{"Name":"fwdSubscriptYOffset","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
+			,{"Name":"fwdSuperscriptXSize","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
+			,{"Name":"fwdSuperscriptYSize","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
+			,{"Name":"fwdSuperscriptXOffset","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
+			,{"Name":"fwdSuperscriptYOffset","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
+			,{"Name":"fwdUnderscoreSize","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
+			,{"Name":"fwdUnderscorePosition","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
+			,{"Name":"fwdStrikeoutSize","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
+			,{"Name":"fwdStrikeoutPosition","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
+			,{"Name":"chFirstChar","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"chLastChar","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"chDefaultChar","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"chBreakChar","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"wcFirstChar","Type":{"Kind":"Native","Name":"Char"},"Attrs":[]}
+			,{"Name":"wcLastChar","Type":{"Kind":"Native","Name":"Char"},"Attrs":[]}
+			,{"Name":"wcDefaultChar","Type":{"Kind":"Native","Name":"Char"},"Attrs":[]}
+			,{"Name":"wcBreakChar","Type":{"Kind":"Native","Name":"Char"},"Attrs":[]}
+			,{"Name":"ptlBaseline","Type":{"Kind":"ApiRef","Name":"POINTL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"ptlAspect","Type":{"Kind":"ApiRef","Name":"POINTL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"ptlCaret","Type":{"Kind":"ApiRef","Name":"POINTL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"rclFontBox","Type":{"Kind":"ApiRef","Name":"RECTL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"achVendId","Type":{"Kind":"Array","Shape":{"Size":4},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"cKerningPairs","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ulPanoseCulture","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"panose","Type":{"Kind":"ApiRef","Name":"PANOSE","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]},"Attrs":[]}
+			,{"Name":"Align","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"LINEATTRS"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"fl","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"iJoin","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"iEndCap","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"elWidth","Type":{"Kind":"ApiRef","Name":"FLOAT_LONG","TargetKind":"Default","Api":"Devices.Display","Parents":[]},"Attrs":[]}
+			,{"Name":"eMiterLimit","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+			,{"Name":"cstyle","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"pstyle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FLOAT_LONG","TargetKind":"Default","Api":"Devices.Display","Parents":[]}},"Attrs":[]}
+			,{"Name":"elStyleState","Type":{"Kind":"ApiRef","Name":"FLOAT_LONG","TargetKind":"Default","Api":"Devices.Display","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"XFORML"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"eM11","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+			,{"Name":"eM12","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+			,{"Name":"eM21","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+			,{"Name":"eM22","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+			,{"Name":"eDx","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+			,{"Name":"eDy","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"FLOATOBJ_XFORM"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"eM11","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+			,{"Name":"eM12","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+			,{"Name":"eM21","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+			,{"Name":"eM22","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+			,{"Name":"eDx","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+			,{"Name":"eDy","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"POINTE"
+		,"Architectures":["X86"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"x","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"y","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"FLOAT_LONG"
+		,"Architectures":["X86"]
+		,"Platform":null
+		,"Kind":"Union"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"e","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"l","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
 		"Name":"POINTFIX"
 		,"Architectures":[]
 		,"Platform":null
@@ -6506,16 +6699,16 @@
 	}
 	,{
 		"Name":"FD_XFORM"
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"eXX","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-			,{"Name":"eXY","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-			,{"Name":"eYX","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-			,{"Name":"eYY","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+			{"Name":"eXX","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"eXY","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"eYX","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"eYY","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -6701,7 +6894,7 @@
 	}
 	,{
 		"Name":"IFIMETRICS"
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
@@ -6766,7 +6959,6 @@
 			,{"Name":"cKerningPairs","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ulPanoseCulture","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"panose","Type":{"Kind":"ApiRef","Name":"PANOSE","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]},"Attrs":[]}
-			,{"Name":"Align","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -6854,7 +7046,7 @@
 	}
 	,{
 		"Name":"LINEATTRS"
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
@@ -6864,7 +7056,7 @@
 			,{"Name":"iJoin","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"iEndCap","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"elWidth","Type":{"Kind":"ApiRef","Name":"FLOAT_LONG","TargetKind":"Default","Api":"Devices.Display","Parents":[]},"Attrs":[]}
-			,{"Name":"eMiterLimit","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+			,{"Name":"eMiterLimit","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"cstyle","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pstyle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FLOAT_LONG","TargetKind":"Default","Api":"Devices.Display","Parents":[]}},"Attrs":[]}
 			,{"Name":"elStyleState","Type":{"Kind":"ApiRef","Name":"FLOAT_LONG","TargetKind":"Default","Api":"Devices.Display","Parents":[]},"Attrs":[]}
@@ -6874,18 +7066,18 @@
 	}
 	,{
 		"Name":"XFORML"
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"eM11","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-			,{"Name":"eM12","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-			,{"Name":"eM21","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-			,{"Name":"eM22","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-			,{"Name":"eDx","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-			,{"Name":"eDy","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+			{"Name":"eM11","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"eM12","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"eM21","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"eM22","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"eDx","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"eDy","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -7473,19 +7665,33 @@
 		]
 	}
 	,{
-		"Name":"FLOATOBJ_XFORM"
-		,"Architectures":["X64","Arm64"]
+		"Name":"FLOATOBJ"
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"eM11","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-			,{"Name":"eM12","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-			,{"Name":"eM21","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-			,{"Name":"eM22","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-			,{"Name":"eDx","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-			,{"Name":"eDy","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+			{"Name":"ul1","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ul2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"FLOATOBJ_XFORM"
+		,"Architectures":["X86"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"eM11","Type":{"Kind":"ApiRef","Name":"FLOATOBJ","TargetKind":"Default","Api":"Devices.Display","Parents":[]},"Attrs":[]}
+			,{"Name":"eM12","Type":{"Kind":"ApiRef","Name":"FLOATOBJ","TargetKind":"Default","Api":"Devices.Display","Parents":[]},"Attrs":[]}
+			,{"Name":"eM21","Type":{"Kind":"ApiRef","Name":"FLOATOBJ","TargetKind":"Default","Api":"Devices.Display","Parents":[]},"Attrs":[]}
+			,{"Name":"eM22","Type":{"Kind":"ApiRef","Name":"FLOATOBJ","TargetKind":"Default","Api":"Devices.Display","Parents":[]},"Attrs":[]}
+			,{"Name":"eDx","Type":{"Kind":"ApiRef","Name":"FLOATOBJ","TargetKind":"Default","Api":"Devices.Display","Parents":[]},"Attrs":[]}
+			,{"Name":"eDy","Type":{"Kind":"ApiRef","Name":"FLOATOBJ","TargetKind":"Default","Api":"Devices.Display","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -10996,198 +11202,13 @@
 		]
 		,"IntegerBase":"Int32"
 	}
-	,{
-		"Name":"POINTE"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"x","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"y","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"FLOAT_LONG"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Union"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"e","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"l","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"FD_XFORM"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"eXX","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"eXY","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"eYX","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"eYY","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"IFIMETRICS"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"cjThis","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"cjIfiExtra","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"dpwszFamilyName","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"dpwszStyleName","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"dpwszFaceName","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"dpwszUniqueName","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"dpFontSim","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"lEmbedId","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"lItalicAngle","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"lCharBias","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"dpCharSets","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"jWinCharSet","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"jWinPitchAndFamily","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"usWinWeight","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"flInfo","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"fsSelection","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"fsType","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"fwdUnitsPerEm","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"fwdLowestPPEm","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"fwdWinAscender","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"fwdWinDescender","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"fwdMacAscender","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"fwdMacDescender","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"fwdMacLineGap","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"fwdTypoAscender","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"fwdTypoDescender","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"fwdTypoLineGap","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"fwdAveCharWidth","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"fwdMaxCharInc","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"fwdCapHeight","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"fwdXHeight","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"fwdSubscriptXSize","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"fwdSubscriptYSize","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"fwdSubscriptXOffset","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"fwdSubscriptYOffset","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"fwdSuperscriptXSize","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"fwdSuperscriptYSize","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"fwdSuperscriptXOffset","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"fwdSuperscriptYOffset","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"fwdUnderscoreSize","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"fwdUnderscorePosition","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"fwdStrikeoutSize","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"fwdStrikeoutPosition","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"chFirstChar","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"chLastChar","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"chDefaultChar","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"chBreakChar","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"wcFirstChar","Type":{"Kind":"Native","Name":"Char"},"Attrs":[]}
-			,{"Name":"wcLastChar","Type":{"Kind":"Native","Name":"Char"},"Attrs":[]}
-			,{"Name":"wcDefaultChar","Type":{"Kind":"Native","Name":"Char"},"Attrs":[]}
-			,{"Name":"wcBreakChar","Type":{"Kind":"Native","Name":"Char"},"Attrs":[]}
-			,{"Name":"ptlBaseline","Type":{"Kind":"ApiRef","Name":"POINTL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"ptlAspect","Type":{"Kind":"ApiRef","Name":"POINTL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"ptlCaret","Type":{"Kind":"ApiRef","Name":"POINTL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"rclFontBox","Type":{"Kind":"ApiRef","Name":"RECTL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"achVendId","Type":{"Kind":"Array","Shape":{"Size":4},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
-			,{"Name":"cKerningPairs","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"ulPanoseCulture","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"panose","Type":{"Kind":"ApiRef","Name":"PANOSE","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"LINEATTRS"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"fl","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"iJoin","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"iEndCap","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"elWidth","Type":{"Kind":"ApiRef","Name":"FLOAT_LONG","TargetKind":"Default","Api":"Devices.Display","Parents":[]},"Attrs":[]}
-			,{"Name":"eMiterLimit","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"cstyle","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"pstyle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FLOAT_LONG","TargetKind":"Default","Api":"Devices.Display","Parents":[]}},"Attrs":[]}
-			,{"Name":"elStyleState","Type":{"Kind":"ApiRef","Name":"FLOAT_LONG","TargetKind":"Default","Api":"Devices.Display","Parents":[]},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"XFORML"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"eM11","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"eM12","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"eM21","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"eM22","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"eDx","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"eDy","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"FLOATOBJ"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"ul1","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"ul2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"FLOATOBJ_XFORM"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"eM11","Type":{"Kind":"ApiRef","Name":"FLOATOBJ","TargetKind":"Default","Api":"Devices.Display","Parents":[]},"Attrs":[]}
-			,{"Name":"eM12","Type":{"Kind":"ApiRef","Name":"FLOATOBJ","TargetKind":"Default","Api":"Devices.Display","Parents":[]},"Attrs":[]}
-			,{"Name":"eM21","Type":{"Kind":"ApiRef","Name":"FLOATOBJ","TargetKind":"Default","Api":"Devices.Display","Parents":[]},"Attrs":[]}
-			,{"Name":"eM22","Type":{"Kind":"ApiRef","Name":"FLOATOBJ","TargetKind":"Default","Api":"Devices.Display","Parents":[]},"Attrs":[]}
-			,{"Name":"eDx","Type":{"Kind":"ApiRef","Name":"FLOATOBJ","TargetKind":"Default","Api":"Devices.Display","Parents":[]},"Attrs":[]}
-			,{"Name":"eDy","Type":{"Kind":"ApiRef","Name":"FLOATOBJ","TargetKind":"Default","Api":"Devices.Display","Parents":[]},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
 ]
 
 ,"Functions":[
 	{
 		"Name":"GetNumberOfPhysicalMonitorsFromHMONITOR"
 		,"SetLastError":true
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11201,7 +11222,7 @@
 	,{
 		"Name":"GetNumberOfPhysicalMonitorsFromIDirect3DDevice9"
 		,"SetLastError":false
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11215,7 +11236,7 @@
 	,{
 		"Name":"GetPhysicalMonitorsFromHMONITOR"
 		,"SetLastError":true
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11230,7 +11251,7 @@
 	,{
 		"Name":"GetPhysicalMonitorsFromIDirect3DDevice9"
 		,"SetLastError":false
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11245,7 +11266,7 @@
 	,{
 		"Name":"DestroyPhysicalMonitor"
 		,"SetLastError":true
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11258,7 +11279,7 @@
 	,{
 		"Name":"DestroyPhysicalMonitors"
 		,"SetLastError":true
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11272,7 +11293,7 @@
 	,{
 		"Name":"GetVCPFeatureAndVCPFeatureReply"
 		,"SetLastError":true
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11289,7 +11310,7 @@
 	,{
 		"Name":"SetVCPFeature"
 		,"SetLastError":false
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11304,7 +11325,7 @@
 	,{
 		"Name":"SaveCurrentSettings"
 		,"SetLastError":true
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11317,7 +11338,7 @@
 	,{
 		"Name":"GetCapabilitiesStringLength"
 		,"SetLastError":true
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11331,7 +11352,7 @@
 	,{
 		"Name":"CapabilitiesRequestAndCapabilitiesReply"
 		,"SetLastError":true
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11346,7 +11367,7 @@
 	,{
 		"Name":"GetTimingReport"
 		,"SetLastError":true
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11360,7 +11381,7 @@
 	,{
 		"Name":"GetMonitorCapabilities"
 		,"SetLastError":false
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11375,7 +11396,7 @@
 	,{
 		"Name":"SaveCurrentMonitorSettings"
 		,"SetLastError":true
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11388,7 +11409,7 @@
 	,{
 		"Name":"GetMonitorTechnologyType"
 		,"SetLastError":true
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11402,7 +11423,7 @@
 	,{
 		"Name":"GetMonitorBrightness"
 		,"SetLastError":true
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11418,7 +11439,7 @@
 	,{
 		"Name":"GetMonitorContrast"
 		,"SetLastError":true
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11434,7 +11455,7 @@
 	,{
 		"Name":"GetMonitorColorTemperature"
 		,"SetLastError":true
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11448,7 +11469,7 @@
 	,{
 		"Name":"GetMonitorRedGreenOrBlueDrive"
 		,"SetLastError":true
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11465,7 +11486,7 @@
 	,{
 		"Name":"GetMonitorRedGreenOrBlueGain"
 		,"SetLastError":true
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11482,7 +11503,7 @@
 	,{
 		"Name":"SetMonitorBrightness"
 		,"SetLastError":true
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11496,7 +11517,7 @@
 	,{
 		"Name":"SetMonitorContrast"
 		,"SetLastError":true
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11510,7 +11531,7 @@
 	,{
 		"Name":"SetMonitorColorTemperature"
 		,"SetLastError":true
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11524,7 +11545,7 @@
 	,{
 		"Name":"SetMonitorRedGreenOrBlueDrive"
 		,"SetLastError":false
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11539,7 +11560,7 @@
 	,{
 		"Name":"SetMonitorRedGreenOrBlueGain"
 		,"SetLastError":false
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11554,7 +11575,7 @@
 	,{
 		"Name":"DegaussMonitor"
 		,"SetLastError":true
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11567,7 +11588,7 @@
 	,{
 		"Name":"GetMonitorDisplayAreaSize"
 		,"SetLastError":true
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11584,7 +11605,7 @@
 	,{
 		"Name":"GetMonitorDisplayAreaPosition"
 		,"SetLastError":true
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11601,7 +11622,7 @@
 	,{
 		"Name":"SetMonitorDisplayAreaSize"
 		,"SetLastError":true
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11616,7 +11637,7 @@
 	,{
 		"Name":"SetMonitorDisplayAreaPosition"
 		,"SetLastError":true
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11631,7 +11652,7 @@
 	,{
 		"Name":"RestoreMonitorFactoryColorDefaults"
 		,"SetLastError":true
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11644,7 +11665,7 @@
 	,{
 		"Name":"RestoreMonitorFactoryDefaults"
 		,"SetLastError":true
-		,"DllImport":"dxva2"
+		,"DllImport":"dxva2.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11657,7 +11678,7 @@
 	,{
 		"Name":"BRUSHOBJ_pvAllocRbrush"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11671,7 +11692,7 @@
 	,{
 		"Name":"BRUSHOBJ_pvGetRbrush"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11684,7 +11705,7 @@
 	,{
 		"Name":"BRUSHOBJ_ulGetBrushColor"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11697,7 +11718,7 @@
 	,{
 		"Name":"BRUSHOBJ_hGetColorTransform"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11710,7 +11731,7 @@
 	,{
 		"Name":"CLIPOBJ_cEnumStart"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11727,7 +11748,7 @@
 	,{
 		"Name":"CLIPOBJ_bEnum"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11742,7 +11763,7 @@
 	,{
 		"Name":"CLIPOBJ_ppoGetPath"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PATHOBJ","TargetKind":"Default","Api":"Devices.Display","Parents":[]}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11755,7 +11776,7 @@
 	,{
 		"Name":"FONTOBJ_cGetAllGlyphHandles"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11769,7 +11790,7 @@
 	,{
 		"Name":"FONTOBJ_vGetInfo"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11784,7 +11805,7 @@
 	,{
 		"Name":"FONTOBJ_cGetGlyphs"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11801,7 +11822,7 @@
 	,{
 		"Name":"FONTOBJ_pxoGetXform"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"XFORMOBJ","TargetKind":"Default","Api":"Devices.Display","Parents":[]}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11814,7 +11835,7 @@
 	,{
 		"Name":"FONTOBJ_pifi"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IFIMETRICS","TargetKind":"Default","Api":"Devices.Display","Parents":[]}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11827,7 +11848,7 @@
 	,{
 		"Name":"FONTOBJ_pfdg"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FD_GLYPHSET","TargetKind":"Default","Api":"Devices.Display","Parents":[]}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11840,7 +11861,7 @@
 	,{
 		"Name":"FONTOBJ_pvTrueTypeFontFile"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11854,7 +11875,7 @@
 	,{
 		"Name":"FONTOBJ_pQueryGlyphAttrs"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FD_GLYPHATTR","TargetKind":"Default","Api":"Devices.Display","Parents":[]}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11868,7 +11889,7 @@
 	,{
 		"Name":"PATHOBJ_vEnumStart"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11881,7 +11902,7 @@
 	,{
 		"Name":"PATHOBJ_bEnum"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11895,7 +11916,7 @@
 	,{
 		"Name":"PATHOBJ_vEnumStartClipLines"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11911,7 +11932,7 @@
 	,{
 		"Name":"PATHOBJ_bEnumClipLines"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11926,7 +11947,7 @@
 	,{
 		"Name":"PATHOBJ_vGetBounds"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11940,7 +11961,7 @@
 	,{
 		"Name":"STROBJ_vEnumStart"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11953,7 +11974,7 @@
 	,{
 		"Name":"STROBJ_bEnum"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11968,7 +11989,7 @@
 	,{
 		"Name":"STROBJ_bEnumPositionsOnly"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11983,7 +12004,7 @@
 	,{
 		"Name":"STROBJ_dwGetCodePage"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11996,7 +12017,7 @@
 	,{
 		"Name":"STROBJ_bGetAdvanceWidths"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12012,7 +12033,7 @@
 	,{
 		"Name":"XFORMOBJ_iGetXform"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12026,7 +12047,7 @@
 	,{
 		"Name":"XFORMOBJ_bApplyXform"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12043,7 +12064,7 @@
 	,{
 		"Name":"XLATEOBJ_iXlate"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12057,7 +12078,7 @@
 	,{
 		"Name":"XLATEOBJ_piVector"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12070,7 +12091,7 @@
 	,{
 		"Name":"XLATEOBJ_cGetPalette"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12086,7 +12107,7 @@
 	,{
 		"Name":"XLATEOBJ_hGetColorTransform"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12099,7 +12120,7 @@
 	,{
 		"Name":"EngCreateBitmap"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HBITMAP","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12116,7 +12137,7 @@
 	,{
 		"Name":"EngCreateDeviceSurface"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HSURF","TargetKind":"Default","Api":"Devices.Display","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12131,7 +12152,7 @@
 	,{
 		"Name":"EngCreateDeviceBitmap"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HBITMAP","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12146,7 +12167,7 @@
 	,{
 		"Name":"EngDeleteSurface"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12159,7 +12180,7 @@
 	,{
 		"Name":"EngLockSurface"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SURFOBJ","TargetKind":"Default","Api":"Devices.Display","Parents":[]}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12172,7 +12193,7 @@
 	,{
 		"Name":"EngUnlockSurface"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12185,7 +12206,7 @@
 	,{
 		"Name":"EngEraseSurface"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12200,7 +12221,7 @@
 	,{
 		"Name":"EngAssociateSurface"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12215,7 +12236,7 @@
 	,{
 		"Name":"EngMarkBandingSurface"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12228,7 +12249,7 @@
 	,{
 		"Name":"EngCheckAbort"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12241,7 +12262,7 @@
 	,{
 		"Name":"EngDeletePath"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12254,7 +12275,7 @@
 	,{
 		"Name":"EngCreatePalette"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HPALETTE","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12272,7 +12293,7 @@
 	,{
 		"Name":"EngDeletePalette"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12285,7 +12306,7 @@
 	,{
 		"Name":"EngCreateClip"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CLIPOBJ","TargetKind":"Default","Api":"Devices.Display","Parents":[]}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12297,7 +12318,7 @@
 	,{
 		"Name":"EngDeleteClip"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12310,7 +12331,7 @@
 	,{
 		"Name":"EngBitBlt"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12333,7 +12354,7 @@
 	,{
 		"Name":"EngLineTo"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12354,7 +12375,7 @@
 	,{
 		"Name":"EngStretchBlt"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12377,7 +12398,7 @@
 	,{
 		"Name":"EngStretchBltROP"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12402,7 +12423,7 @@
 	,{
 		"Name":"EngAlphaBlend"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12421,7 +12442,7 @@
 	,{
 		"Name":"EngGradientFill"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12443,7 +12464,7 @@
 	,{
 		"Name":"EngTransparentBlt"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12463,7 +12484,7 @@
 	,{
 		"Name":"EngTextOut"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12485,7 +12506,7 @@
 	,{
 		"Name":"EngStrokePath"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12505,7 +12526,7 @@
 	,{
 		"Name":"EngFillPath"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12524,7 +12545,7 @@
 	,{
 		"Name":"EngStrokeAndFillPath"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12546,7 +12567,7 @@
 	,{
 		"Name":"EngPaint"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12563,7 +12584,7 @@
 	,{
 		"Name":"EngCopyBits"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12581,7 +12602,7 @@
 	,{
 		"Name":"EngPlgBlt"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12604,7 +12625,7 @@
 	,{
 		"Name":"HT_Get8BPPFormatPalette"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12620,7 +12641,7 @@
 	,{
 		"Name":"HT_Get8BPPMaskPalette"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12638,7 +12659,7 @@
 	,{
 		"Name":"EngGetPrinterDataFileName"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12651,7 +12672,7 @@
 	,{
 		"Name":"EngGetDriverName"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12664,7 +12685,7 @@
 	,{
 		"Name":"EngLoadModule"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12677,7 +12698,7 @@
 	,{
 		"Name":"EngFindResource"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12693,7 +12714,7 @@
 	,{
 		"Name":"EngFreeModule"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12706,7 +12727,7 @@
 	,{
 		"Name":"EngCreateSemaphore"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HSEMAPHORE","TargetKind":"Default","Api":"Devices.Display","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12718,7 +12739,7 @@
 	,{
 		"Name":"EngAcquireSemaphore"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12731,7 +12752,7 @@
 	,{
 		"Name":"EngReleaseSemaphore"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12744,7 +12765,7 @@
 	,{
 		"Name":"EngDeleteSemaphore"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12757,7 +12778,7 @@
 	,{
 		"Name":"EngMultiByteToUnicodeN"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12774,7 +12795,7 @@
 	,{
 		"Name":"EngUnicodeToMultiByteN"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12791,7 +12812,7 @@
 	,{
 		"Name":"EngQueryLocalTime"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12804,7 +12825,7 @@
 	,{
 		"Name":"EngComputeGlyphSet"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FD_GLYPHSET","TargetKind":"Default","Api":"Devices.Display","Parents":[]}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12819,7 +12840,7 @@
 	,{
 		"Name":"EngMultiByteToWideChar"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12836,7 +12857,7 @@
 	,{
 		"Name":"EngWideCharToMultiByte"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12853,7 +12874,7 @@
 	,{
 		"Name":"EngGetCurrentCodePage"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12867,7 +12888,7 @@
 	,{
 		"Name":"EngQueryEMFInfo"
 		,"SetLastError":false
-		,"DllImport":"GDI32"
+		,"DllImport":"GDI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12881,7 +12902,7 @@
 	,{
 		"Name":"GetDisplayConfigBufferSizes"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12896,7 +12917,7 @@
 	,{
 		"Name":"SetDisplayConfig"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12913,7 +12934,7 @@
 	,{
 		"Name":"QueryDisplayConfig"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12931,7 +12952,7 @@
 	,{
 		"Name":"DisplayConfigGetDeviceInfo"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12944,7 +12965,7 @@
 	,{
 		"Name":"DisplayConfigSetDeviceInfo"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12957,7 +12978,7 @@
 	,{
 		"Name":"GetAutoRotationState"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12970,7 +12991,7 @@
 	,{
 		"Name":"GetDisplayAutoRotationPreferences"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12983,7 +13004,7 @@
 	,{
 		"Name":"SetDisplayAutoRotationPreferences"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

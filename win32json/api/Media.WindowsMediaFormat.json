@@ -2399,53 +2399,6 @@
 
 ,"Types":[
 	{
-		"Name":"IAMWMBufferPass"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Com"
-		,"Guid":"6dd816d7-e740-4123-9e24-2444412644d8"
-		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
-		,"Methods":[
-			{
-				"Name":"SetNotify"
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-					{"Name":"pCallback","Type":{"Kind":"ApiRef","Name":"IAMWMBufferPassCallback","TargetKind":"Com","Api":"Media.WindowsMediaFormat","Parents":[]},"Attrs":["In"]}
-				]
-			}
-		]
-	}
-	,{
-		"Name":"IAMWMBufferPassCallback"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Com"
-		,"Guid":"b25b8372-d2d2-44b2-8653-1b8dae332489"
-		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
-		,"Methods":[
-			{
-				"Name":"Notify"
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-					{"Name":"pNSSBuffer3","Type":{"Kind":"ApiRef","Name":"INSSBuffer3","TargetKind":"Com","Api":"Media.WindowsMediaFormat","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pPin","Type":{"Kind":"ApiRef","Name":"IPin","TargetKind":"Com","Api":"Media.DirectShow","Parents":[]},"Attrs":["In"]}
-					,{"Name":"prtStart","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int64"}},"Attrs":["In"]}
-					,{"Name":"prtEnd","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int64"}},"Attrs":["In"]}
-				]
-			}
-		]
-	}
-	,{
 		"Name":"_AM_ASFWRITERCONFIG_PARAM"
 		,"Architectures":[]
 		,"Platform":null
@@ -10219,7 +10172,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pbLicenseRequestMsg","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+					{"Name":"pbLicenseRequestMsg","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 					,{"Name":"cbLicenseRequestMsg","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"ppDeviceCert","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"INSSBuffer","TargetKind":"Com","Api":"Media.WindowsMediaFormat","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"pDeviceSerialNumber","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DRM_VAL16","TargetKind":"Default","Api":"Media.WindowsMediaFormat","Parents":[]}},"Attrs":["Out"]}
@@ -11024,87 +10977,6 @@
 		]
 	}
 	,{
-		"Name":"IWMCodecAMVideoAccelerator"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Com"
-		,"Guid":"d98ee251-34e0-4a2d-9312-9b4c788d9fa1"
-		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
-		,"Methods":[
-			{
-				"Name":"SetAcceleratorInterface"
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-					{"Name":"pIAMVA","Type":{"Kind":"ApiRef","Name":"IAMVideoAccelerator","TargetKind":"Com","Api":"Media.DirectShow","Parents":[]},"Attrs":["In"]}
-				]
-			}
-			,{
-				"Name":"NegotiateConnection"
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-					{"Name":"pMediaType","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"AM_MEDIA_TYPE","TargetKind":"Default","Api":"Media.DirectShow","Parents":[]}},"Attrs":["In"]}
-				]
-			}
-			,{
-				"Name":"SetPlayerNotify"
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-					{"Name":"pHook","Type":{"Kind":"ApiRef","Name":"IWMPlayerTimestampHook","TargetKind":"Com","Api":"Media.WindowsMediaFormat","Parents":[]},"Attrs":["In"]}
-				]
-			}
-		]
-	}
-	,{
-		"Name":"IWMCodecVideoAccelerator"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Com"
-		,"Guid":"990641b0-739f-4e94-a808-9888da8f75af"
-		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
-		,"Methods":[
-			{
-				"Name":"NegotiateConnection"
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-					{"Name":"pIAMVA","Type":{"Kind":"ApiRef","Name":"IAMVideoAccelerator","TargetKind":"Com","Api":"Media.DirectShow","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pMediaType","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"AM_MEDIA_TYPE","TargetKind":"Default","Api":"Media.DirectShow","Parents":[]}},"Attrs":["In"]}
-				]
-			}
-			,{
-				"Name":"SetPlayerNotify"
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-					{"Name":"pHook","Type":{"Kind":"ApiRef","Name":"IWMPlayerTimestampHook","TargetKind":"Com","Api":"Media.WindowsMediaFormat","Parents":[]},"Attrs":["In"]}
-				]
-			}
-		]
-	}
-	,{
 		"Name":"NETSOURCE_URLCREDPOLICY_SETTINGS"
 		,"Architectures":[]
 		,"Platform":null
@@ -11477,7 +11349,7 @@
 	{
 		"Name":"WMIsContentProtected"
 		,"SetLastError":false
-		,"DllImport":"WMVCore"
+		,"DllImport":"WMVCore.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11491,7 +11363,7 @@
 	,{
 		"Name":"WMCreateWriter"
 		,"SetLastError":false
-		,"DllImport":"WMVCore"
+		,"DllImport":"WMVCore.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11505,7 +11377,7 @@
 	,{
 		"Name":"WMCreateReader"
 		,"SetLastError":false
-		,"DllImport":"WMVCore"
+		,"DllImport":"WMVCore.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11520,7 +11392,7 @@
 	,{
 		"Name":"WMCreateSyncReader"
 		,"SetLastError":false
-		,"DllImport":"WMVCore"
+		,"DllImport":"WMVCore.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11535,7 +11407,7 @@
 	,{
 		"Name":"WMCreateEditor"
 		,"SetLastError":false
-		,"DllImport":"WMVCore"
+		,"DllImport":"WMVCore.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11548,7 +11420,7 @@
 	,{
 		"Name":"WMCreateIndexer"
 		,"SetLastError":false
-		,"DllImport":"WMVCore"
+		,"DllImport":"WMVCore.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11561,7 +11433,7 @@
 	,{
 		"Name":"WMCreateBackupRestorer"
 		,"SetLastError":false
-		,"DllImport":"WMVCore"
+		,"DllImport":"WMVCore.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11575,7 +11447,7 @@
 	,{
 		"Name":"WMCreateProfileManager"
 		,"SetLastError":false
-		,"DllImport":"WMVCore"
+		,"DllImport":"WMVCore.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11588,7 +11460,7 @@
 	,{
 		"Name":"WMCreateWriterFileSink"
 		,"SetLastError":false
-		,"DllImport":"WMVCore"
+		,"DllImport":"WMVCore.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11601,7 +11473,7 @@
 	,{
 		"Name":"WMCreateWriterNetworkSink"
 		,"SetLastError":false
-		,"DllImport":"WMVCore"
+		,"DllImport":"WMVCore.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11614,7 +11486,7 @@
 	,{
 		"Name":"WMCreateWriterPushSink"
 		,"SetLastError":false
-		,"DllImport":"WMVCore"
+		,"DllImport":"WMVCore.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

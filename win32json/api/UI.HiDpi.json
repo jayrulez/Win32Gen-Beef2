@@ -141,7 +141,7 @@
 	{
 		"Name":"OpenThemeDataForDpi"
 		,"SetLastError":false
-		,"DllImport":"UxTheme"
+		,"DllImport":"UxTheme.dll"
 		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -156,7 +156,7 @@
 	,{
 		"Name":"SetDialogControlDpiChangeBehavior"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -171,7 +171,7 @@
 	,{
 		"Name":"GetDialogControlDpiChangeBehavior"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"DIALOG_CONTROL_DPI_CHANGE_BEHAVIORS","TargetKind":"Default","Api":"UI.HiDpi","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -184,7 +184,7 @@
 	,{
 		"Name":"SetDialogDpiChangeBehavior"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -199,7 +199,7 @@
 	,{
 		"Name":"GetDialogDpiChangeBehavior"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"DIALOG_DPI_CHANGE_BEHAVIORS","TargetKind":"Default","Api":"UI.HiDpi","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -212,21 +212,21 @@
 	,{
 		"Name":"GetSystemMetricsForDpi"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows10.0.14393"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"nIndex","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
+			{"Name":"nIndex","Type":{"Kind":"ApiRef","Name":"SYSTEM_METRICS_INDEX","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dpi","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"AdjustWindowRectExForDpi"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -234,16 +234,16 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"lpRect","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
-			,{"Name":"dwStyle","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"dwStyle","Type":{"Kind":"ApiRef","Name":"WINDOW_STYLE","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In"]}
 			,{"Name":"bMenu","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"dwExStyle","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"dwExStyle","Type":{"Kind":"ApiRef","Name":"WINDOW_EX_STYLE","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dpi","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"LogicalToPhysicalPointForPerMonitorDPI"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -257,7 +257,7 @@
 	,{
 		"Name":"PhysicalToLogicalPointForPerMonitorDPI"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -271,7 +271,7 @@
 	,{
 		"Name":"SystemParametersInfoForDpi"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -288,7 +288,7 @@
 	,{
 		"Name":"SetThreadDpiAwarenessContext"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"DPI_AWARENESS_CONTEXT","TargetKind":"Default","Api":"UI.HiDpi","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -301,7 +301,7 @@
 	,{
 		"Name":"GetThreadDpiAwarenessContext"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"DPI_AWARENESS_CONTEXT","TargetKind":"Default","Api":"UI.HiDpi","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -313,7 +313,7 @@
 	,{
 		"Name":"GetWindowDpiAwarenessContext"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"DPI_AWARENESS_CONTEXT","TargetKind":"Default","Api":"UI.HiDpi","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -326,7 +326,7 @@
 	,{
 		"Name":"GetAwarenessFromDpiAwarenessContext"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"DPI_AWARENESS","TargetKind":"Default","Api":"UI.HiDpi","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -339,7 +339,7 @@
 	,{
 		"Name":"GetDpiFromDpiAwarenessContext"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -352,7 +352,7 @@
 	,{
 		"Name":"AreDpiAwarenessContextsEqual"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -366,7 +366,7 @@
 	,{
 		"Name":"IsValidDpiAwarenessContext"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -379,7 +379,7 @@
 	,{
 		"Name":"GetDpiForWindow"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -392,7 +392,7 @@
 	,{
 		"Name":"GetDpiForSystem"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -404,7 +404,7 @@
 	,{
 		"Name":"GetSystemDpiForProcess"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -417,7 +417,7 @@
 	,{
 		"Name":"EnableNonClientDpiScaling"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -430,7 +430,7 @@
 	,{
 		"Name":"SetProcessDpiAwarenessContext"
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -443,7 +443,7 @@
 	,{
 		"Name":"GetDpiAwarenessContextForProcess"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"DPI_AWARENESS_CONTEXT","TargetKind":"Default","Api":"UI.HiDpi","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -456,7 +456,7 @@
 	,{
 		"Name":"SetThreadDpiHostingBehavior"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"DPI_HOSTING_BEHAVIOR","TargetKind":"Default","Api":"UI.HiDpi","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -469,7 +469,7 @@
 	,{
 		"Name":"GetThreadDpiHostingBehavior"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"DPI_HOSTING_BEHAVIOR","TargetKind":"Default","Api":"UI.HiDpi","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -481,7 +481,7 @@
 	,{
 		"Name":"GetWindowDpiHostingBehavior"
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"DPI_HOSTING_BEHAVIOR","TargetKind":"Default","Api":"UI.HiDpi","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -494,7 +494,7 @@
 	,{
 		"Name":"SetProcessDpiAwareness"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-shcore-scaling-l1-1-1"
+		,"DllImport":"api-ms-win-shcore-scaling-l1-1-1.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -507,7 +507,7 @@
 	,{
 		"Name":"GetProcessDpiAwareness"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-shcore-scaling-l1-1-1"
+		,"DllImport":"api-ms-win-shcore-scaling-l1-1-1.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -521,7 +521,7 @@
 	,{
 		"Name":"GetDpiForMonitor"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-shcore-scaling-l1-1-1"
+		,"DllImport":"api-ms-win-shcore-scaling-l1-1-1.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

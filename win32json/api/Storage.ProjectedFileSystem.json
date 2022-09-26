@@ -486,19 +486,6 @@
 				]
 			}
 			,{
-				"Name":"_FileDeletedOnHandleClose_e__Struct"
-				,"Architectures":[]
-				,"Platform":null
-				,"Kind":"Struct"
-				,"Size":0
-				,"PackingSize":0
-				,"Fields":[
-					{"Name":"IsFileModified","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-				]
-				,"NestedTypes":[
-				]
-			}
-			,{
 				"Name":"_PostCreate_e__Struct"
 				,"Architectures":[]
 				,"Platform":null
@@ -507,6 +494,19 @@
 				,"PackingSize":0
 				,"Fields":[
 					{"Name":"NotificationMask","Type":{"Kind":"ApiRef","Name":"PRJ_NOTIFY_TYPES","TargetKind":"Default","Api":"Storage.ProjectedFileSystem","Parents":[]},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+			,{
+				"Name":"_FileDeletedOnHandleClose_e__Struct"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Struct"
+				,"Size":0
+				,"PackingSize":0
+				,"Fields":[
+					{"Name":"IsFileModified","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]
@@ -601,19 +601,6 @@
 				]
 				,"NestedTypes":[
 					{
-						"Name":"_Enumeration_e__Struct"
-						,"Architectures":[]
-						,"Platform":null
-						,"Kind":"Struct"
-						,"Size":0
-						,"PackingSize":0
-						,"Fields":[
-							{"Name":"DirEntryBufferHandle","Type":{"Kind":"ApiRef","Name":"PRJ_DIR_ENTRY_BUFFER_HANDLE","TargetKind":"Default","Api":"Storage.ProjectedFileSystem","Parents":[]},"Attrs":[]}
-						]
-						,"NestedTypes":[
-						]
-					}
-					,{
 						"Name":"_Notification_e__Struct"
 						,"Architectures":[]
 						,"Platform":null
@@ -622,6 +609,19 @@
 						,"PackingSize":0
 						,"Fields":[
 							{"Name":"NotificationMask","Type":{"Kind":"ApiRef","Name":"PRJ_NOTIFY_TYPES","TargetKind":"Default","Api":"Storage.ProjectedFileSystem","Parents":[]},"Attrs":[]}
+						]
+						,"NestedTypes":[
+						]
+					}
+					,{
+						"Name":"_Enumeration_e__Struct"
+						,"Architectures":[]
+						,"Platform":null
+						,"Kind":"Struct"
+						,"Size":0
+						,"PackingSize":0
+						,"Fields":[
+							{"Name":"DirEntryBufferHandle","Type":{"Kind":"ApiRef","Name":"PRJ_DIR_ENTRY_BUFFER_HANDLE","TargetKind":"Default","Api":"Storage.ProjectedFileSystem","Parents":[]},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]
@@ -636,7 +636,7 @@
 	{
 		"Name":"PrjStartVirtualizing"
 		,"SetLastError":false
-		,"DllImport":"PROJECTEDFSLIB"
+		,"DllImport":"PROJECTEDFSLIB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -653,7 +653,7 @@
 	,{
 		"Name":"PrjStopVirtualizing"
 		,"SetLastError":false
-		,"DllImport":"PROJECTEDFSLIB"
+		,"DllImport":"PROJECTEDFSLIB.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -666,7 +666,7 @@
 	,{
 		"Name":"PrjClearNegativePathCache"
 		,"SetLastError":false
-		,"DllImport":"PROJECTEDFSLIB"
+		,"DllImport":"PROJECTEDFSLIB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -680,7 +680,7 @@
 	,{
 		"Name":"PrjGetVirtualizationInstanceInfo"
 		,"SetLastError":false
-		,"DllImport":"PROJECTEDFSLIB"
+		,"DllImport":"PROJECTEDFSLIB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -694,7 +694,7 @@
 	,{
 		"Name":"PrjMarkDirectoryAsPlaceholder"
 		,"SetLastError":false
-		,"DllImport":"PROJECTEDFSLIB"
+		,"DllImport":"PROJECTEDFSLIB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -710,7 +710,7 @@
 	,{
 		"Name":"PrjWritePlaceholderInfo"
 		,"SetLastError":false
-		,"DllImport":"PROJECTEDFSLIB"
+		,"DllImport":"PROJECTEDFSLIB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -726,7 +726,7 @@
 	,{
 		"Name":"PrjWritePlaceholderInfo2"
 		,"SetLastError":false
-		,"DllImport":"PROJECTEDFSLIB"
+		,"DllImport":"PROJECTEDFSLIB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -743,7 +743,7 @@
 	,{
 		"Name":"PrjUpdateFileIfNeeded"
 		,"SetLastError":false
-		,"DllImport":"PROJECTEDFSLIB"
+		,"DllImport":"PROJECTEDFSLIB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -761,7 +761,7 @@
 	,{
 		"Name":"PrjDeleteFile"
 		,"SetLastError":false
-		,"DllImport":"PROJECTEDFSLIB"
+		,"DllImport":"PROJECTEDFSLIB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -777,7 +777,7 @@
 	,{
 		"Name":"PrjWriteFileData"
 		,"SetLastError":false
-		,"DllImport":"PROJECTEDFSLIB"
+		,"DllImport":"PROJECTEDFSLIB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -794,7 +794,7 @@
 	,{
 		"Name":"PrjGetOnDiskFileState"
 		,"SetLastError":false
-		,"DllImport":"PROJECTEDFSLIB"
+		,"DllImport":"PROJECTEDFSLIB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -808,7 +808,7 @@
 	,{
 		"Name":"PrjAllocateAlignedBuffer"
 		,"SetLastError":false
-		,"DllImport":"PROJECTEDFSLIB"
+		,"DllImport":"PROJECTEDFSLIB.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -822,7 +822,7 @@
 	,{
 		"Name":"PrjFreeAlignedBuffer"
 		,"SetLastError":false
-		,"DllImport":"PROJECTEDFSLIB"
+		,"DllImport":"PROJECTEDFSLIB.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -835,7 +835,7 @@
 	,{
 		"Name":"PrjCompleteCommand"
 		,"SetLastError":false
-		,"DllImport":"PROJECTEDFSLIB"
+		,"DllImport":"PROJECTEDFSLIB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -851,7 +851,7 @@
 	,{
 		"Name":"PrjFillDirEntryBuffer"
 		,"SetLastError":false
-		,"DllImport":"PROJECTEDFSLIB"
+		,"DllImport":"PROJECTEDFSLIB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -866,7 +866,7 @@
 	,{
 		"Name":"PrjFillDirEntryBuffer2"
 		,"SetLastError":false
-		,"DllImport":"PROJECTEDFSLIB"
+		,"DllImport":"PROJECTEDFSLIB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -882,7 +882,7 @@
 	,{
 		"Name":"PrjFileNameMatch"
 		,"SetLastError":false
-		,"DllImport":"PROJECTEDFSLIB"
+		,"DllImport":"PROJECTEDFSLIB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -896,7 +896,7 @@
 	,{
 		"Name":"PrjFileNameCompare"
 		,"SetLastError":false
-		,"DllImport":"PROJECTEDFSLIB"
+		,"DllImport":"PROJECTEDFSLIB.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -910,7 +910,7 @@
 	,{
 		"Name":"PrjDoesNameContainWildCards"
 		,"SetLastError":false
-		,"DllImport":"PROJECTEDFSLIB"
+		,"DllImport":"PROJECTEDFSLIB.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

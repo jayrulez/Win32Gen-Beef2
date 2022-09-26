@@ -3261,7 +3261,7 @@
 					,{"Name":"measuringMode","Type":{"Kind":"ApiRef","Name":"DWRITE_MEASURING_MODE","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":["In"]}
 					,{"Name":"glyphRun","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DWRITE_GLYPH_RUN","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]}},"Attrs":["In","Const"]}
 					,{"Name":"renderingParams","Type":{"Kind":"ApiRef","Name":"IDWriteRenderingParams","TargetKind":"Com","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":["In"]}
-					,{"Name":"textColor","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"textColor","Type":{"Kind":"ApiRef","Name":"COLORREF","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"blackBoxRect","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
 				]
 			}
@@ -4436,7 +4436,7 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"__AnonymousBase_DWrite_1_L627_C38","Type":{"Kind":"ApiRef","Name":"DWRITE_FONT_METRICS","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":[]}
+			{"Name":"Base","Type":{"Kind":"ApiRef","Name":"DWRITE_FONT_METRICS","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":[]}
 			,{"Name":"glyphBoxLeft","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
 			,{"Name":"glyphBoxTop","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
 			,{"Name":"glyphBoxRight","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
@@ -9080,7 +9080,7 @@
 	{
 		"Name":"DWriteCreateFactory"
 		,"SetLastError":false
-		,"DllImport":"DWrite"
+		,"DllImport":"DWrite.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

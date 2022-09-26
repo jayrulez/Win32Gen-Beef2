@@ -46,6 +46,23 @@
 		]
 	}
 	,{
+		"Name":"HSTRING_HEADER"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"padding1","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"padding2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"data","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
 		"Name":"HSTRING"
 		,"Architectures":[]
 		,"Platform":null
@@ -116,7 +133,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"riid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
-					,{"Name":"ppvObjectReference","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["In","Out"]}
+					,{"Name":"ppvObjectReference","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","ComOutPtr"]}
 				]
 			}
 		]
@@ -220,33 +237,6 @@
 		]
 	}
 	,{
-		"Name":"HSTRING_HEADER"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"Reserved","Type":{"Kind":"ApiRef","Name":"_Reserved_e__Union","TargetKind":"Default","Api":"System.WinRT","Parents":[]},"Attrs":[]}
-		]
-		,"NestedTypes":[
-			{
-				"Name":"_Reserved_e__Union"
-				,"Architectures":[]
-				,"Platform":null
-				,"Kind":"Union"
-				,"Size":0
-				,"PackingSize":0
-				,"Fields":[
-					{"Name":"Reserved1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-					,{"Name":"Reserved2","Type":{"Kind":"Array","Shape":{"Size":24},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
-				]
-				,"NestedTypes":[
-				]
-			}
-		]
-	}
-	,{
 		"Name":"TrustLevel"
 		,"Architectures":[]
 		,"Platform":null
@@ -278,7 +268,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"iidCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-					,{"Name":"iids","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}}},"Attrs":["Out","Optional"]}
+					,{"Name":"iids","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -290,7 +280,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"className","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HSTRING","TargetKind":"Default","Api":"System.WinRT","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"className","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HSTRING","TargetKind":"Default","Api":"System.WinRT","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -1117,7 +1107,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"instance","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IInspectable","TargetKind":"Com","Api":"System.WinRT","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"instance","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IInspectable","TargetKind":"Com","Api":"System.WinRT","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -1443,7 +1433,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"weakReference","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IWeakReference","TargetKind":"Com","Api":"System.WinRT","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"weakReference","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IWeakReference","TargetKind":"Com","Api":"System.WinRT","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -1539,13 +1529,243 @@
 			}
 		]
 	}
+	,{
+		"Name":"ICoreWindowInterop"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"45d64a29-a63e-4cb6-b498-5781d298cb4f"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"get_WindowHandle"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[
+					"SpecialName"
+				]
+				,"Params":[
+					{"Name":"hwnd","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"put_MessageHandled"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[
+					"SpecialName"
+				]
+				,"Params":[
+					{"Name":"value","Type":{"Kind":"Native","Name":"Byte"},"Attrs":["In"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"ICoreInputInterop"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"40bfe3e3-b75a-4479-ac96-475365749bb8"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"SetInputSource"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"value","Type":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In","Optional"]}
+				]
+			}
+			,{
+				"Name":"put_MessageHandled"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[
+					"SpecialName"
+				]
+				,"Params":[
+					{"Name":"value","Type":{"Kind":"Native","Name":"Byte"},"Attrs":["In"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"ICoreWindowComponentInterop"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"0576ab31-a310-4c40-ba31-fd37e0298dfa"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"ConfigureComponentInput"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"hostViewInstanceId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"hwndHost","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+					,{"Name":"inputSourceVisual","Type":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In","Optional"]}
+				]
+			}
+			,{
+				"Name":"GetViewInstanceId"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"componentViewInstanceId","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"ICoreWindowAdapterInterop"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"7a5b6fd1-cd73-4b6c-9cf4-2e869eaf470a"
+		,"Interface":{"Kind":"ApiRef","Name":"IInspectable","TargetKind":"Com","Api":"System.WinRT","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"get_AppActivationClientAdapter"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[
+					"SpecialName"
+				]
+				,"Params":[
+					{"Name":"value","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"get_ApplicationViewClientAdapter"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[
+					"SpecialName"
+				]
+				,"Params":[
+					{"Name":"value","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"get_CoreApplicationViewClientAdapter"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[
+					"SpecialName"
+				]
+				,"Params":[
+					{"Name":"value","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"get_HoloViewClientAdapter"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[
+					"SpecialName"
+				]
+				,"Params":[
+					{"Name":"value","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"get_PositionerClientAdapter"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[
+					"SpecialName"
+				]
+				,"Params":[
+					{"Name":"value","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"get_SystemNavigationClientAdapter"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[
+					"SpecialName"
+				]
+				,"Params":[
+					{"Name":"value","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"get_TitleBarClientAdapter"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[
+					"SpecialName"
+				]
+				,"Params":[
+					{"Name":"value","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"SetWindowClientAdapter"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"value","Type":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In","Optional"]}
+				]
+			}
+		]
+	}
 ]
 
 ,"Functions":[
 	{
 		"Name":"CoDecodeProxy"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1560,7 +1780,7 @@
 	,{
 		"Name":"RoGetAgileReference"
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1576,7 +1796,7 @@
 	,{
 		"Name":"HSTRING_UserSize"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1591,7 +1811,7 @@
 	,{
 		"Name":"HSTRING_UserMarshal"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1606,7 +1826,7 @@
 	,{
 		"Name":"HSTRING_UserUnmarshal"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1614,14 +1834,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":0,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HSTRING","TargetKind":"Default","Api":"System.WinRT","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"HSTRING_UserFree"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1635,7 +1855,7 @@
 	,{
 		"Name":"HSTRING_UserSize64"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1650,7 +1870,7 @@
 	,{
 		"Name":"HSTRING_UserMarshal64"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1665,7 +1885,7 @@
 	,{
 		"Name":"HSTRING_UserUnmarshal64"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1673,14 +1893,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":0,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HSTRING","TargetKind":"Default","Api":"System.WinRT","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"HSTRING_UserFree64"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1694,7 +1914,7 @@
 	,{
 		"Name":"WindowsCreateString"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1709,7 +1929,7 @@
 	,{
 		"Name":"WindowsCreateStringReference"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1725,7 +1945,7 @@
 	,{
 		"Name":"WindowsDeleteString"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1738,7 +1958,7 @@
 	,{
 		"Name":"WindowsDuplicateString"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1752,7 +1972,7 @@
 	,{
 		"Name":"WindowsGetStringLen"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1765,7 +1985,7 @@
 	,{
 		"Name":"WindowsGetStringRawBuffer"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1779,7 +1999,7 @@
 	,{
 		"Name":"WindowsIsStringEmpty"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1792,7 +2012,7 @@
 	,{
 		"Name":"WindowsStringHasEmbeddedNull"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1806,7 +2026,7 @@
 	,{
 		"Name":"WindowsCompareStringOrdinal"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1821,7 +2041,7 @@
 	,{
 		"Name":"WindowsSubstring"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1836,7 +2056,7 @@
 	,{
 		"Name":"WindowsSubstringWithSpecifiedLength"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1852,7 +2072,7 @@
 	,{
 		"Name":"WindowsConcatString"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1867,7 +2087,7 @@
 	,{
 		"Name":"WindowsReplaceString"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1883,7 +2103,7 @@
 	,{
 		"Name":"WindowsTrimStringStart"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1898,7 +2118,7 @@
 	,{
 		"Name":"WindowsTrimStringEnd"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1913,7 +2133,7 @@
 	,{
 		"Name":"WindowsPreallocateStringBuffer"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1928,7 +2148,7 @@
 	,{
 		"Name":"WindowsPromoteStringBuffer"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1942,7 +2162,7 @@
 	,{
 		"Name":"WindowsDeleteStringBuffer"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1955,7 +2175,7 @@
 	,{
 		"Name":"WindowsInspectString"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1973,7 +2193,7 @@
 	,{
 		"Name":"WindowsInspectString2"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-string-l1-1-1"
+		,"DllImport":"api-ms-win-core-winrt-string-l1-1-1.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1991,7 +2211,7 @@
 	,{
 		"Name":"CreateDispatcherQueueController"
 		,"SetLastError":false
-		,"DllImport":"CoreMessaging"
+		,"DllImport":"CoreMessaging.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2005,7 +2225,7 @@
 	,{
 		"Name":"RoInitialize"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2018,7 +2238,7 @@
 	,{
 		"Name":"RoUninitialize"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-l1-1-0.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2030,7 +2250,7 @@
 	,{
 		"Name":"RoActivateInstance"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2044,7 +2264,7 @@
 	,{
 		"Name":"RoRegisterActivationFactories"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2060,7 +2280,7 @@
 	,{
 		"Name":"RoRevokeActivationFactories"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-l1-1-0.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2073,7 +2293,7 @@
 	,{
 		"Name":"RoGetActivationFactory"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2088,7 +2308,7 @@
 	,{
 		"Name":"RoRegisterForApartmentShutdown"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2103,7 +2323,7 @@
 	,{
 		"Name":"RoUnregisterForApartmentShutdown"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2116,7 +2336,7 @@
 	,{
 		"Name":"RoGetApartmentIdentifier"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2129,7 +2349,7 @@
 	,{
 		"Name":"RoGetBufferMarshaler"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-robuffer-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-robuffer-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2142,7 +2362,7 @@
 	,{
 		"Name":"RoGetErrorReportingFlags"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2155,7 +2375,7 @@
 	,{
 		"Name":"RoSetErrorReportingFlags"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2168,7 +2388,7 @@
 	,{
 		"Name":"RoResolveRestrictedErrorInfoReference"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2182,7 +2402,7 @@
 	,{
 		"Name":"SetRestrictedErrorInfo"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2195,7 +2415,7 @@
 	,{
 		"Name":"GetRestrictedErrorInfo"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2208,7 +2428,7 @@
 	,{
 		"Name":"RoOriginateErrorW"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2223,7 +2443,7 @@
 	,{
 		"Name":"RoOriginateError"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2237,7 +2457,7 @@
 	,{
 		"Name":"RoTransformErrorW"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2253,7 +2473,7 @@
 	,{
 		"Name":"RoTransformError"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2268,7 +2488,7 @@
 	,{
 		"Name":"RoCaptureErrorContext"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2281,7 +2501,7 @@
 	,{
 		"Name":"RoFailFastWithErrorContext"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2294,7 +2514,7 @@
 	,{
 		"Name":"RoOriginateLanguageException"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-error-l1-1-1"
+		,"DllImport":"api-ms-win-core-winrt-error-l1-1-1.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2309,7 +2529,7 @@
 	,{
 		"Name":"RoClearError"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-error-l1-1-1"
+		,"DllImport":"api-ms-win-core-winrt-error-l1-1-1.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2321,7 +2541,7 @@
 	,{
 		"Name":"RoReportUnhandledError"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-error-l1-1-1"
+		,"DllImport":"api-ms-win-core-winrt-error-l1-1-1.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2334,7 +2554,7 @@
 	,{
 		"Name":"RoInspectThreadErrorInfo"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-error-l1-1-1"
+		,"DllImport":"api-ms-win-core-winrt-error-l1-1-1.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2351,7 +2571,7 @@
 	,{
 		"Name":"RoInspectCapturedStackBackTrace"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-error-l1-1-1"
+		,"DllImport":"api-ms-win-core-winrt-error-l1-1-1.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2369,7 +2589,7 @@
 	,{
 		"Name":"RoGetMatchingRestrictedErrorInfo"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-error-l1-1-1"
+		,"DllImport":"api-ms-win-core-winrt-error-l1-1-1.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2383,7 +2603,7 @@
 	,{
 		"Name":"RoReportFailedDelegate"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-error-l1-1-1"
+		,"DllImport":"api-ms-win-core-winrt-error-l1-1-1.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2397,7 +2617,7 @@
 	,{
 		"Name":"IsErrorPropagationEnabled"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-error-l1-1-1"
+		,"DllImport":"api-ms-win-core-winrt-error-l1-1-1.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2409,7 +2629,7 @@
 	,{
 		"Name":"MetaDataGetDispenser"
 		,"SetLastError":false
-		,"DllImport":"RoMetadata"
+		,"DllImport":"RoMetadata.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2424,7 +2644,7 @@
 	,{
 		"Name":"RoGetParameterizedTypeInstanceIID"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-roparameterizediid-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-roparameterizediid-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2441,7 +2661,7 @@
 	,{
 		"Name":"RoFreeParameterizedTypeExtra"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-roparameterizediid-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-roparameterizediid-l1-1-0.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2454,7 +2674,7 @@
 	,{
 		"Name":"RoParameterizedTypeExtraGetTypeSignature"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-roparameterizediid-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-roparameterizediid-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2467,7 +2687,7 @@
 	,{
 		"Name":"RoGetServerActivatableClasses"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-winrt-registration-l1-1-0"
+		,"DllImport":"api-ms-win-core-winrt-registration-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2482,7 +2702,7 @@
 	,{
 		"Name":"CreateRandomAccessStreamOnFile"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-shcore-stream-winrt-l1-1-0"
+		,"DllImport":"api-ms-win-shcore-stream-winrt-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2498,7 +2718,7 @@
 	,{
 		"Name":"CreateRandomAccessStreamOverStream"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-shcore-stream-winrt-l1-1-0"
+		,"DllImport":"api-ms-win-shcore-stream-winrt-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2514,7 +2734,7 @@
 	,{
 		"Name":"CreateStreamOverRandomAccessStream"
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-shcore-stream-winrt-l1-1-0"
+		,"DllImport":"api-ms-win-shcore-stream-winrt-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -2522,6 +2742,35 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"randomAccessStream","Type":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+			,{"Name":"riid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
+			,{"Name":"ppv","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","ComOutPtr"]}
+		]
+	}
+	,{
+		"Name":"CreateControlInput"
+		,"SetLastError":false
+		,"DllImport":"Windows.UI.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"riid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
+			,{"Name":"ppv","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","ComOutPtr"]}
+		]
+	}
+	,{
+		"Name":"CreateControlInputEx"
+		,"SetLastError":false
+		,"DllImport":"Windows.UI.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"pCoreWindow","Type":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
 			,{"Name":"riid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
 			,{"Name":"ppv","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","ComOutPtr"]}
 		]

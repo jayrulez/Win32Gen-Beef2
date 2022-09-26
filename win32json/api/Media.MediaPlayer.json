@@ -121,6 +121,41 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"PLUGIN_INSTALLREGKEY"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Software\\Microsoft\\MediaPlayer\\UIPlugins"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"PLUGIN_INSTALLREGKEY_FRIENDLYNAME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"FriendlyName"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"PLUGIN_INSTALLREGKEY_DESCRIPTION"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Description"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"PLUGIN_INSTALLREGKEY_CAPABILITIES"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Capabilities"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"PLUGIN_INSTALLREGKEY_UNINSTALL"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"UninstallPath"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"PLUGIN_TYPE_BACKGROUND"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -205,6 +240,97 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"PLUGIN_MISC_PRESETCOUNT"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"PresetCount"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"PLUGIN_MISC_PRESETNAMES"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"PresetNames"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"PLUGIN_MISC_CURRENTPRESET"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"CurrentPreset"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"PLUGIN_SEPARATEWINDOW_RESIZABLE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Resizable"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"PLUGIN_SEPARATEWINDOW_DEFAULTWIDTH"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"DefaultWidth"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"PLUGIN_SEPARATEWINDOW_DEFAULTHEIGHT"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"DefaultHeight"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"PLUGIN_SEPARATEWINDOW_MINWIDTH"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MinWidth"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"PLUGIN_SEPARATEWINDOW_MINHEIGHT"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MinHeight"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"PLUGIN_SEPARATEWINDOW_MAXWIDTH"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MaxWidth"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"PLUGIN_SEPARATEWINDOW_MAXHEIGHT"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MaxHeight"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"PLUGIN_MISC_QUERYDESTROY"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"QueryDestroy"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"PLUGIN_ALL_MEDIASENDTO"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MediaSendTo"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"PLUGIN_ALL_PLAYLISTSENDTO"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"PlaylistSendTo"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"SUBSCRIPTION_CAP_DEVICEAVAILABLE"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -272,6 +398,20 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":256
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WMP_SUBSCR_DL_TYPE_BACKGROUND"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"background"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WMP_SUBSCR_DL_TYPE_REALTIME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"real time"
 		,"Attrs":[]
 	}
 	,{
@@ -4957,9 +5097,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"dwIndex","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"ppErrorItem","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IWMPErrorItem","TargetKind":"Com","Api":"Media.MediaPlayer","Parents":[]}},"Attrs":["Out"]}
@@ -4993,9 +5131,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"pIWMPMedia","Type":{"Kind":"ApiRef","Name":"IWMPMedia","TargetKind":"Com","Api":"Media.MediaPlayer","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pvbool","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
@@ -5248,9 +5384,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"bstrItem","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pIsAvailable","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
@@ -5460,9 +5594,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"bstrItem","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pIsAvailable","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
@@ -5969,9 +6101,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"lIndex","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"pbstrAttributeName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
@@ -5984,9 +6114,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"lIndex","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"ppIWMPMedia","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IWMPMedia","TargetKind":"Com","Api":"Media.MediaPlayer","Parents":[]}},"Attrs":["Out"]}
@@ -6025,9 +6153,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"pIWMPPlaylist","Type":{"Kind":"ApiRef","Name":"IWMPPlaylist","TargetKind":"Com","Api":"Media.MediaPlayer","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pvbool","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
@@ -7587,9 +7713,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"bstrItem","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pIsAvailable","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
@@ -16009,7 +16133,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pbstrPrice","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pbstrPrice","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -16021,7 +16145,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pbstrType","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pbstrType","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -16046,7 +16170,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"idxContent","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"pbstrPrice","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"pbstrPrice","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -16120,7 +16244,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"idxContainer","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"ppContent","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IWMPContentContainer","TargetKind":"Com","Api":"Media.MediaPlayer","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppContent","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IWMPContentContainer","TargetKind":"Com","Api":"Media.MediaPlayer","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -16309,7 +16433,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pcContentIDs","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-					,{"Name":"pprgIDs","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}}},"Attrs":["Out","Optional"]}
+					,{"Name":"pprgIDs","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -16430,7 +16554,7 @@
 					,{"Name":"cItemIDs","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"prgItemIDs","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
 					,{"Name":"pcItemIDs","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-					,{"Name":"pprgItems","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":5,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WMPContextMenuInfo","TargetKind":"Default","Api":"Media.MediaPlayer","Parents":[]}}},"Attrs":["Out","Optional"]}
+					,{"Name":"pprgItems","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":5,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WMPContextMenuInfo","TargetKind":"Default","Api":"Media.MediaPlayer","Parents":[]}}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -16460,7 +16584,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pInfo","Type":{"Kind":"ApiRef","Name":"IWMPContentContainerList","TargetKind":"Com","Api":"Media.MediaPlayer","Parents":[]},"Attrs":["In","Optional"]}
-					,{"Name":"pbstrTotalPrice","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"pbstrTotalPrice","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"pSilentOK","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out"]}
 				]
 			}
@@ -16488,7 +16612,7 @@
 				,"Params":[
 					{"Name":"st","Type":{"Kind":"ApiRef","Name":"WMPStreamingType","TargetKind":"Default","Api":"Media.MediaPlayer","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pStreamContext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"pbstrURL","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"pbstrURL","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -16549,7 +16673,7 @@
 					,{"Name":"dwCatalogSchemaVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"catalogLCID","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pdwNewCatalogVersion","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-					,{"Name":"pbstrCatalogURL","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"pbstrCatalogURL","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"pExpirationDate","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
@@ -16569,7 +16693,7 @@
 					,{"Name":"pClickContext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
 					,{"Name":"bstrFilter","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"bstrViewParams","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pbstrTemplateURL","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"pbstrTemplateURL","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"pTemplateSize","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WMPTemplateSize","TargetKind":"Default","Api":"Media.MediaPlayer","Parents":[]}},"Attrs":["Out"]}
 				]
 			}

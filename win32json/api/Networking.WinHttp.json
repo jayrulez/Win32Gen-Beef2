@@ -3371,6 +3371,83 @@
 		,"IntegerBase":"UInt32"
 	}
 	,{
+		"Name":"WINHTTP_CONNECTION_INFO"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"LocalAddress","Type":{"Kind":"ApiRef","Name":"SOCKADDR_STORAGE","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":[]}
+			,{"Name":"RemoteAddress","Type":{"Kind":"ApiRef","Name":"SOCKADDR_STORAGE","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"WINHTTP_REQUEST_TIMES"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cTimes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"rgullTimes","Type":{"Kind":"Array","Shape":{"Size":64},"Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"WINHTTP_REQUEST_STATS"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"ullFlags","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"ulIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"cStats","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"rgullStats","Type":{"Kind":"Array","Shape":{"Size":32},"Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"WINHTTP_MATCH_CONNECTION_GUID"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"ConnectionGuid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
+			,{"Name":"ullFlags","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"WINHTTP_RESOLVER_CACHE_CONFIG"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"ulMaxResolverCacheEntries","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ulMaxCacheEntryAge","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ulMinCacheEntryTtl","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"SecureDnsSetting","Type":{"Kind":"ApiRef","Name":"WINHTTP_SECURE_DNS_SETTING","TargetKind":"Default","Api":"Networking.WinHttp","Parents":[]},"Attrs":[]}
+			,{"Name":"ullConnResolutionWaitTime","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"ullFlags","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
 		"Name":"WINHTTP_ASYNC_RESULT"
 		,"Architectures":[]
 		,"Platform":null
@@ -3506,7 +3583,7 @@
 		]
 	}
 	,{
-		"Name":"_WinHttpProxyNetworkKey"
+		"Name":"WINHTTP_PROXY_NETWORKING_KEY"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -3541,7 +3618,7 @@
 			,{"Name":"dwDetectedInterfaceIpCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pdwDetectedInterfaceIp","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
 			,{"Name":"cNetworkKeys","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"pNetworkKeys","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_WinHttpProxyNetworkKey","TargetKind":"Default","Api":"Networking.WinHttp","Parents":[]}},"Attrs":[]}
+			,{"Name":"pNetworkKeys","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WINHTTP_PROXY_NETWORKING_KEY","TargetKind":"Default","Api":"Networking.WinHttp","Parents":[]}},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -3568,11 +3645,11 @@
 	}
 	,{
 		"Name":"WINHTTP_CONNECTION_INFO"
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":4
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"LocalAddress","Type":{"Kind":"ApiRef","Name":"SOCKADDR_STORAGE","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":[]}
@@ -3632,11 +3709,11 @@
 	}
 	,{
 		"Name":"WINHTTP_REQUEST_TIMES"
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":4
 		,"Fields":[
 			{"Name":"cTimes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"rgullTimes","Type":{"Kind":"Array","Shape":{"Size":64},"Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":[]}
@@ -3675,11 +3752,11 @@
 	}
 	,{
 		"Name":"WINHTTP_REQUEST_STATS"
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":4
 		,"Fields":[
 			{"Name":"ullFlags","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"ulIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3691,11 +3768,11 @@
 	}
 	,{
 		"Name":"WINHTTP_MATCH_CONNECTION_GUID"
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":4
 		,"Fields":[
 			{"Name":"ConnectionGuid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"ullFlags","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -3777,11 +3854,11 @@
 	}
 	,{
 		"Name":"WINHTTP_RESOLVER_CACHE_CONFIG"
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":4
 		,"Fields":[
 			{"Name":"ulMaxResolverCacheEntries","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ulMaxCacheEntryAge","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3919,18 +3996,6 @@
 		]
 	}
 	,{
-		"Name":"LPWINHTTP_STATUS_CALLBACK"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"FunctionPointer"
-		,"SetLastError":false
-		,"ReturnType":{"Kind":"Native","Name":"Void"}
-		,"ReturnAttrs":[]
-		,"Attrs":[]
-		,"Params":[
-		]
-	}
-	,{
 		"Name":"WINHTTP_CURRENT_USER_IE_PROXY_CONFIG"
 		,"Architectures":[]
 		,"Platform":null
@@ -4028,90 +4093,13 @@
 		,"NestedTypes":[
 		]
 	}
-	,{
-		"Name":"WINHTTP_CONNECTION_INFO"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":4
-		,"Fields":[
-			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"LocalAddress","Type":{"Kind":"ApiRef","Name":"SOCKADDR_STORAGE","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":[]}
-			,{"Name":"RemoteAddress","Type":{"Kind":"ApiRef","Name":"SOCKADDR_STORAGE","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"WINHTTP_REQUEST_TIMES"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":4
-		,"Fields":[
-			{"Name":"cTimes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"rgullTimes","Type":{"Kind":"Array","Shape":{"Size":64},"Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"WINHTTP_REQUEST_STATS"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":4
-		,"Fields":[
-			{"Name":"ullFlags","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"ulIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"cStats","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"rgullStats","Type":{"Kind":"Array","Shape":{"Size":32},"Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"WINHTTP_MATCH_CONNECTION_GUID"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":4
-		,"Fields":[
-			{"Name":"ConnectionGuid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
-			,{"Name":"ullFlags","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"WINHTTP_RESOLVER_CACHE_CONFIG"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":4
-		,"Fields":[
-			{"Name":"ulMaxResolverCacheEntries","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"ulMaxCacheEntryAge","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"ulMinCacheEntryTtl","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"SecureDnsSetting","Type":{"Kind":"ApiRef","Name":"WINHTTP_SECURE_DNS_SETTING","TargetKind":"Default","Api":"Networking.WinHttp","Parents":[]},"Attrs":[]}
-			,{"Name":"ullConnResolutionWaitTime","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"ullFlags","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
 ]
 
 ,"Functions":[
 	{
 		"Name":"WinHttpSetStatusCallback"
 		,"SetLastError":true
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WINHTTP_STATUS_CALLBACK","TargetKind":"FunctionPointer","Api":"Networking.WinHttp","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4127,7 +4115,7 @@
 	,{
 		"Name":"WinHttpTimeFromSystemTime"
 		,"SetLastError":true
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4141,7 +4129,7 @@
 	,{
 		"Name":"WinHttpTimeToSystemTime"
 		,"SetLastError":true
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4155,7 +4143,7 @@
 	,{
 		"Name":"WinHttpCrackUrl"
 		,"SetLastError":true
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4171,7 +4159,7 @@
 	,{
 		"Name":"WinHttpCreateUrl"
 		,"SetLastError":true
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4187,7 +4175,7 @@
 	,{
 		"Name":"WinHttpCheckPlatform"
 		,"SetLastError":true
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4199,7 +4187,7 @@
 	,{
 		"Name":"WinHttpGetDefaultProxyConfiguration"
 		,"SetLastError":true
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4212,7 +4200,7 @@
 	,{
 		"Name":"WinHttpSetDefaultProxyConfiguration"
 		,"SetLastError":true
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4225,7 +4213,7 @@
 	,{
 		"Name":"WinHttpOpen"
 		,"SetLastError":true
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4242,7 +4230,7 @@
 	,{
 		"Name":"WinHttpCloseHandle"
 		,"SetLastError":true
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4255,7 +4243,7 @@
 	,{
 		"Name":"WinHttpConnect"
 		,"SetLastError":true
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4271,7 +4259,7 @@
 	,{
 		"Name":"WinHttpReadData"
 		,"SetLastError":true
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4287,7 +4275,7 @@
 	,{
 		"Name":"WinHttpReadDataEx"
 		,"SetLastError":false
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4306,7 +4294,7 @@
 	,{
 		"Name":"WinHttpWriteData"
 		,"SetLastError":true
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4322,7 +4310,7 @@
 	,{
 		"Name":"WinHttpQueryDataAvailable"
 		,"SetLastError":true
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4336,7 +4324,7 @@
 	,{
 		"Name":"WinHttpQueryOption"
 		,"SetLastError":true
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4352,7 +4340,7 @@
 	,{
 		"Name":"WinHttpSetOption"
 		,"SetLastError":true
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4368,7 +4356,7 @@
 	,{
 		"Name":"WinHttpSetTimeouts"
 		,"SetLastError":true
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4385,7 +4373,7 @@
 	,{
 		"Name":"WinHttpOpenRequest"
 		,"SetLastError":true
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4404,7 +4392,7 @@
 	,{
 		"Name":"WinHttpAddRequestHeaders"
 		,"SetLastError":true
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4420,7 +4408,7 @@
 	,{
 		"Name":"WinHttpAddRequestHeadersEx"
 		,"SetLastError":false
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4438,7 +4426,7 @@
 	,{
 		"Name":"WinHttpSendRequest"
 		,"SetLastError":true
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4457,7 +4445,7 @@
 	,{
 		"Name":"WinHttpSetCredentials"
 		,"SetLastError":true
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4475,7 +4463,7 @@
 	,{
 		"Name":"WinHttpQueryAuthSchemes"
 		,"SetLastError":true
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4491,7 +4479,7 @@
 	,{
 		"Name":"WinHttpReceiveResponse"
 		,"SetLastError":true
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4505,7 +4493,7 @@
 	,{
 		"Name":"WinHttpQueryHeaders"
 		,"SetLastError":true
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4523,7 +4511,7 @@
 	,{
 		"Name":"WinHttpQueryHeadersEx"
 		,"SetLastError":false
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4545,7 +4533,7 @@
 	,{
 		"Name":"WinHttpQueryConnectionGroup"
 		,"SetLastError":false
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4561,7 +4549,7 @@
 	,{
 		"Name":"WinHttpFreeQueryConnectionGroupResult"
 		,"SetLastError":false
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4574,7 +4562,7 @@
 	,{
 		"Name":"WinHttpDetectAutoProxyConfigUrl"
 		,"SetLastError":true
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4588,7 +4576,7 @@
 	,{
 		"Name":"WinHttpGetProxyForUrl"
 		,"SetLastError":true
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4604,7 +4592,7 @@
 	,{
 		"Name":"WinHttpCreateProxyResolver"
 		,"SetLastError":false
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4618,7 +4606,7 @@
 	,{
 		"Name":"WinHttpGetProxyForUrlEx"
 		,"SetLastError":false
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4634,7 +4622,7 @@
 	,{
 		"Name":"WinHttpGetProxyForUrlEx2"
 		,"SetLastError":false
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4652,7 +4640,7 @@
 	,{
 		"Name":"WinHttpGetProxyResult"
 		,"SetLastError":false
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4666,7 +4654,7 @@
 	,{
 		"Name":"WinHttpGetProxyResultEx"
 		,"SetLastError":false
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4680,7 +4668,7 @@
 	,{
 		"Name":"WinHttpFreeProxyResult"
 		,"SetLastError":false
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4693,7 +4681,7 @@
 	,{
 		"Name":"WinHttpFreeProxyResultEx"
 		,"SetLastError":false
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4706,7 +4694,7 @@
 	,{
 		"Name":"WinHttpResetAutoProxy"
 		,"SetLastError":false
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4720,7 +4708,7 @@
 	,{
 		"Name":"WinHttpGetIEProxyConfigForCurrentUser"
 		,"SetLastError":true
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4733,7 +4721,7 @@
 	,{
 		"Name":"WinHttpWriteProxySettings"
 		,"SetLastError":false
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4748,7 +4736,7 @@
 	,{
 		"Name":"WinHttpReadProxySettings"
 		,"SetLastError":false
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4767,7 +4755,7 @@
 	,{
 		"Name":"WinHttpFreeProxySettings"
 		,"SetLastError":false
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4780,7 +4768,7 @@
 	,{
 		"Name":"WinHttpGetProxySettingsVersion"
 		,"SetLastError":false
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4794,7 +4782,7 @@
 	,{
 		"Name":"WinHttpSetProxySettingsPerUser"
 		,"SetLastError":false
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4807,7 +4795,7 @@
 	,{
 		"Name":"WinHttpWebSocketCompleteUpgrade"
 		,"SetLastError":true
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4821,7 +4809,7 @@
 	,{
 		"Name":"WinHttpWebSocketSend"
 		,"SetLastError":false
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4837,7 +4825,7 @@
 	,{
 		"Name":"WinHttpWebSocketReceive"
 		,"SetLastError":false
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4854,7 +4842,7 @@
 	,{
 		"Name":"WinHttpWebSocketShutdown"
 		,"SetLastError":false
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4870,7 +4858,7 @@
 	,{
 		"Name":"WinHttpWebSocketClose"
 		,"SetLastError":false
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4886,7 +4874,7 @@
 	,{
 		"Name":"WinHttpWebSocketQueryCloseStatus"
 		,"SetLastError":false
-		,"DllImport":"WINHTTP"
+		,"DllImport":"WINHTTP.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

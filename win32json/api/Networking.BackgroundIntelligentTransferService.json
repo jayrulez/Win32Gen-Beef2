@@ -1682,7 +1682,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"LanguageId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"pErrorDescription","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"pErrorDescription","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -1695,7 +1695,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"LanguageId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"pContextDescription","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"pContextDescription","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -1707,7 +1707,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pProtocol","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pProtocol","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -1992,7 +1992,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out",{"Kind":"FreeWith","Func":"CoTaskMemFree"}]}
 				]
 			}
 			,{
@@ -2016,7 +2016,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out",{"Kind":"FreeWith","Func":"CoTaskMemFree"}]}
 				]
 			}
 			,{
@@ -2040,7 +2040,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out",{"Kind":"FreeWith","Func":"CoTaskMemFree"}]}
 				]
 			}
 			,{
@@ -2199,8 +2199,8 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pProxyUsage","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BG_JOB_PROXY_USAGE","TargetKind":"Default","Api":"Networking.BackgroundIntelligentTransferService","Parents":[]}},"Attrs":["Out"]}
-					,{"Name":"pProxyList","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
-					,{"Name":"pProxyBypassList","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"pProxyList","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out",{"Kind":"FreeWith","Func":"CoTaskMemFree"}]}
+					,{"Name":"pProxyBypassList","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out",{"Kind":"FreeWith","Func":"CoTaskMemFree"}]}
 				]
 			}
 			,{
@@ -2476,7 +2476,7 @@
 				,"Params":[
 					{"Name":"hResult","Type":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"LanguageId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"pErrorDescription","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"pErrorDescription","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out",{"Kind":"FreeWith","Func":"CoTaskMemFree"}]}
 				]
 			}
 		]
@@ -2628,7 +2628,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out","Optional"]}
+					{"Name":"ppBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out"]}
 					,{"Name":"pLength","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":["In","Out"]}
 				]
 			}
@@ -2784,7 +2784,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"RangeCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
-					,{"Name":"Ranges","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BG_FILE_RANGE","TargetKind":"Default","Api":"Networking.BackgroundIntelligentTransferService","Parents":[]}}},"Attrs":["Out"]}
+					,{"Name":"Ranges","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BG_FILE_RANGE","TargetKind":"Default","Api":"Networking.BackgroundIntelligentTransferService","Parents":[]}}},"Attrs":["Out",{"Kind":"FreeWith","Func":"CoTaskMemFree"}]}
 				]
 			}
 			,{
@@ -2884,9 +2884,9 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pStoreLocation","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BG_CERT_STORE_LOCATION","TargetKind":"Default","Api":"Networking.BackgroundIntelligentTransferService","Parents":[]}},"Attrs":["Out"]}
-					,{"Name":"pStoreName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
-					,{"Name":"ppCertHashBlob","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":20,"CountParamIndex":-1,"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out","Optional"]}
-					,{"Name":"pSubjectName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"pStoreName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"ppCertHashBlob","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":20,"CountParamIndex":-1,"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out",{"Kind":"FreeWith","Func":"CoTaskMemFree"}]}
+					,{"Name":"pSubjectName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out",{"Kind":"FreeWith","Func":"CoTaskMemFree"}]}
 				]
 			}
 			,{
@@ -2910,7 +2910,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pRequestHeaders","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pRequestHeaders","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out",{"Kind":"FreeWith","Func":"CoTaskMemFree"}]}
 				]
 			}
 			,{
@@ -3128,7 +3128,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -3377,7 +3377,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumBitsPeers","TargetKind":"Com","Api":"Networking.BackgroundIntelligentTransferService","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumBitsPeers","TargetKind":"Com","Api":"Networking.BackgroundIntelligentTransferService","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -3503,7 +3503,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pFilename","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"pFilename","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out",{"Kind":"FreeWith","Func":"CoTaskMemFree"}]}
 				]
 			}
 			,{
@@ -3937,7 +3937,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"method","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"method","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out",{"Kind":"FreeWith","Func":"CoTaskMemFree"}]}
 				]
 			}
 		]

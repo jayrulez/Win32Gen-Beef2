@@ -23,6 +23,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"MI_CHAR_TYPE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2
+		,"Attrs":[]
+	}
+	,{
 		"Name":"MI_FLAG_CLASS"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -370,6 +377,20 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":512
+		,"Attrs":[]
+	}
+	,{
+		"Name":"MI_SUBSCRIBE_BOOKMARK_OLDEST"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MI_SUBSCRIBE_BOOKMARK_OLDEST"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"MI_SUBSCRIBE_BOOKMARK_NEWEST"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MI_SUBSCRIBE_BOOKMARK_NEWEST"
 		,"Attrs":[]
 	}
 	,{
@@ -4606,7 +4627,7 @@
 		,"IntegerBase":"Int32"
 	}
 	,{
-		"Name":"WMIQ_RPNQ_FEATURE"
+		"Name":"WMIQ_RPNF_FEATURE"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
@@ -5001,7 +5022,7 @@
 		,"IntegerBase":"Int32"
 	}
 	,{
-		"Name":"WBEM_LOCKING"
+		"Name":"WBEM_LOCKING_FLAG_TYPE"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
@@ -6129,7 +6150,7 @@
 					{"Name":"strFilter","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 					,{"Name":"lFlags","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"pCtx","Type":{"Kind":"ApiRef","Name":"IWbemContext","TargetKind":"Com","Api":"System.Wmi","Parents":[]},"Attrs":["In"]}
-					,{"Name":"ppEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumWbemClassObject","TargetKind":"Com","Api":"System.Wmi","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"ppEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumWbemClassObject","TargetKind":"Com","Api":"System.Wmi","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
 				]
 			}
 			,{
@@ -7520,7 +7541,7 @@
 					,{"Name":"wszClass","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"lFlags","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"pCtx","Type":{"Kind":"ApiRef","Name":"IWbemContext","TargetKind":"Com","Api":"System.Wmi","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pSink","Type":{"Kind":"ApiRef","Name":"IWbemObjectSink","TargetKind":"Com","Api":"System.Wmi","Parents":[]},"Attrs":["Out"]}
+					,{"Name":"pSink","Type":{"Kind":"ApiRef","Name":"IWbemObjectSink","TargetKind":"Com","Api":"System.Wmi","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -11592,7 +11613,7 @@
 		,"Guid":"f7ce2e13-8c90-11d1-9e7b-00c04fc324a8"
 	}
 	,{
-		"Name":"tag_WBEM_LOGIN_TYPE"
+		"Name":"WBEM_LOGIN_TYPE"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
@@ -11918,7 +11939,7 @@
 	{
 		"Name":"MI_Application_InitializeV1"
 		,"SetLastError":false
-		,"DllImport":"mi"
+		,"DllImport":"mi.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"MI_Result","TargetKind":"Default","Api":"System.Wmi","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

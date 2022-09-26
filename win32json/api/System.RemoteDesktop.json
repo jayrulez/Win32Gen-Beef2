@@ -1437,6 +1437,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"WTS_PROPERTY_DEFAULT_CONFIG"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"DefaultConfig"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"TS_VC_LISTENER_STATIC_CHANNEL"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -2218,7 +2225,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -2246,7 +2253,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -2274,7 +2281,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -2582,7 +2589,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -2610,7 +2617,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -3465,7 +3472,7 @@
 		]
 	}
 	,{
-		"Name":"_WTS_PRODUCT_INFOA"
+		"Name":"PRODUCT_INFOA"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -3479,7 +3486,7 @@
 		]
 	}
 	,{
-		"Name":"_WTS_PRODUCT_INFOW"
+		"Name":"PRODUCT_INFOW"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -3500,7 +3507,7 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"ProductInfo","Type":{"Kind":"ApiRef","Name":"_WTS_PRODUCT_INFOA","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
+			{"Name":"ProductInfo","Type":{"Kind":"ApiRef","Name":"PRODUCT_INFOA","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
 			,{"Name":"License","Type":{"Kind":"Array","Shape":{"Size":16384},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"LicenseLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"HardwareID","Type":{"Kind":"Array","Shape":{"Size":20},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -3517,7 +3524,7 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"ProductInfo","Type":{"Kind":"ApiRef","Name":"_WTS_PRODUCT_INFOW","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
+			{"Name":"ProductInfo","Type":{"Kind":"ApiRef","Name":"PRODUCT_INFOW","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
 			,{"Name":"License","Type":{"Kind":"Array","Shape":{"Size":16384},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"LicenseLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"HardwareID","Type":{"Kind":"Array","Shape":{"Size":20},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -4162,7 +4169,7 @@
 			,{"Name":"pChannel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CHANNEL_DEF","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]}},"Attrs":["In","Out"]}
 			,{"Name":"channelCount","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"versionRequested","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"pChannelInitEventProc","Type":{"Kind":"ApiRef","Name":"PCHANNEL_INIT_EVENT_FN","TargetKind":"FunctionPointer","Api":"System.RemoteDesktop","Parents":[]},"Attrs":["In","Out"]}
+			,{"Name":"pChannelInitEventProc","Type":{"Kind":"ApiRef","Name":"PCHANNEL_INIT_EVENT_FN","TargetKind":"FunctionPointer","Api":"System.RemoteDesktop","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -4178,7 +4185,7 @@
 			{"Name":"pInitHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out"]}
 			,{"Name":"pOpenHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
 			,{"Name":"pChannelName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","NotNullTerminated"]}
-			,{"Name":"pChannelOpenEventProc","Type":{"Kind":"ApiRef","Name":"PCHANNEL_OPEN_EVENT_FN","TargetKind":"FunctionPointer","Api":"System.RemoteDesktop","Parents":[]},"Attrs":["In","Out"]}
+			,{"Name":"pChannelOpenEventProc","Type":{"Kind":"ApiRef","Name":"PCHANNEL_OPEN_EVENT_FN","TargetKind":"FunctionPointer","Api":"System.RemoteDesktop","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -5434,9 +5441,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"SOCKADDR","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"TSSD_ConnectionPoint","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"numAddresses","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
@@ -5449,9 +5454,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"SOCKADDR","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"TSSD_ConnectionPoint","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]}},"Attrs":["In"]}
 					,{"Name":"numAddresses","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -6490,9 +6493,7 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 				]
 			}
@@ -7778,7 +7779,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"fMachineWide","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
-					,{"Name":"psaFileExtensions","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SAFEARRAY","TargetKind":"Default","Api":"System.Com","Parents":[]}}},"Attrs":["Out","Optional"]}
+					,{"Name":"psaFileExtensions","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SAFEARRAY","TargetKind":"Default","Api":"System.Com","Parents":[]}}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -7792,7 +7793,7 @@
 				,"Params":[
 					{"Name":"fMachineWide","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
 					,{"Name":"bstrFileExtension","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pbstrLauncher","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"pbstrLauncher","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -11001,7 +11002,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"rdpFileContents","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"rdpFileContents","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -11129,7 +11130,7 @@
 					,{"Name":"snapshotFormat","Type":{"Kind":"ApiRef","Name":"SnapshotFormatType","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":["In"]}
 					,{"Name":"snapshotWidth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"snapshotHeight","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"snapshotData","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"snapshotData","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -11299,7 +11300,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"settings","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IRemoteDesktopClientSettings","TargetKind":"Com","Api":"System.RemoteDesktop","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"settings","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IRemoteDesktopClientSettings","TargetKind":"Com","Api":"System.RemoteDesktop","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -11313,7 +11314,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"actions","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IRemoteDesktopClientActions","TargetKind":"Com","Api":"System.RemoteDesktop","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"actions","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IRemoteDesktopClientActions","TargetKind":"Com","Api":"System.RemoteDesktop","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -11327,7 +11328,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"touchPointer","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IRemoteDesktopClientTouchPointer","TargetKind":"Com","Api":"System.RemoteDesktop","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"touchPointer","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IRemoteDesktopClientTouchPointer","TargetKind":"Com","Api":"System.RemoteDesktop","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -11427,7 +11428,7 @@
 	{
 		"Name":"WTSStopRemoteControlSession"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11440,7 +11441,7 @@
 	,{
 		"Name":"WTSStartRemoteControlSessionW"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11456,7 +11457,7 @@
 	,{
 		"Name":"WTSStartRemoteControlSessionA"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11472,7 +11473,7 @@
 	,{
 		"Name":"WTSConnectSessionA"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11488,7 +11489,7 @@
 	,{
 		"Name":"WTSConnectSessionW"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11504,7 +11505,7 @@
 	,{
 		"Name":"WTSEnumerateServersW"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11521,7 +11522,7 @@
 	,{
 		"Name":"WTSEnumerateServersA"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11538,7 +11539,7 @@
 	,{
 		"Name":"WTSOpenServerW"
 		,"SetLastError":false
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11551,7 +11552,7 @@
 	,{
 		"Name":"WTSOpenServerA"
 		,"SetLastError":false
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11564,7 +11565,7 @@
 	,{
 		"Name":"WTSOpenServerExW"
 		,"SetLastError":false
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11577,7 +11578,7 @@
 	,{
 		"Name":"WTSOpenServerExA"
 		,"SetLastError":false
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11590,7 +11591,7 @@
 	,{
 		"Name":"WTSCloseServer"
 		,"SetLastError":false
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11603,7 +11604,7 @@
 	,{
 		"Name":"WTSEnumerateSessionsW"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11620,7 +11621,7 @@
 	,{
 		"Name":"WTSEnumerateSessionsA"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11637,7 +11638,7 @@
 	,{
 		"Name":"WTSEnumerateSessionsExW"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11654,7 +11655,7 @@
 	,{
 		"Name":"WTSEnumerateSessionsExA"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11671,7 +11672,7 @@
 	,{
 		"Name":"WTSEnumerateProcessesW"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11688,7 +11689,7 @@
 	,{
 		"Name":"WTSEnumerateProcessesA"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11705,7 +11706,7 @@
 	,{
 		"Name":"WTSTerminateProcess"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11720,7 +11721,7 @@
 	,{
 		"Name":"WTSQuerySessionInformationW"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11737,7 +11738,7 @@
 	,{
 		"Name":"WTSQuerySessionInformationA"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11754,7 +11755,7 @@
 	,{
 		"Name":"WTSQueryUserConfigW"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11771,7 +11772,7 @@
 	,{
 		"Name":"WTSQueryUserConfigA"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11788,7 +11789,7 @@
 	,{
 		"Name":"WTSSetUserConfigW"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11805,7 +11806,7 @@
 	,{
 		"Name":"WTSSetUserConfigA"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11822,7 +11823,7 @@
 	,{
 		"Name":"WTSSendMessageW"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11844,7 +11845,7 @@
 	,{
 		"Name":"WTSSendMessageA"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11866,7 +11867,7 @@
 	,{
 		"Name":"WTSDisconnectSession"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11881,7 +11882,7 @@
 	,{
 		"Name":"WTSLogoffSession"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11896,7 +11897,7 @@
 	,{
 		"Name":"WTSShutdownSystem"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11910,7 +11911,7 @@
 	,{
 		"Name":"WTSWaitSystemEvent"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11925,7 +11926,7 @@
 	,{
 		"Name":"WTSVirtualChannelOpen"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HwtsVirtualChannelHandle","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11940,7 +11941,7 @@
 	,{
 		"Name":"WTSVirtualChannelOpenEx"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HwtsVirtualChannelHandle","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11955,7 +11956,7 @@
 	,{
 		"Name":"WTSVirtualChannelClose"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11968,7 +11969,7 @@
 	,{
 		"Name":"WTSVirtualChannelRead"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11985,7 +11986,7 @@
 	,{
 		"Name":"WTSVirtualChannelWrite"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12001,7 +12002,7 @@
 	,{
 		"Name":"WTSVirtualChannelPurgeInput"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12014,7 +12015,7 @@
 	,{
 		"Name":"WTSVirtualChannelPurgeOutput"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12027,7 +12028,7 @@
 	,{
 		"Name":"WTSVirtualChannelQuery"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12043,7 +12044,7 @@
 	,{
 		"Name":"WTSFreeMemory"
 		,"SetLastError":false
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12056,7 +12057,7 @@
 	,{
 		"Name":"WTSRegisterSessionNotification"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12070,7 +12071,7 @@
 	,{
 		"Name":"WTSUnRegisterSessionNotification"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12083,7 +12084,7 @@
 	,{
 		"Name":"WTSRegisterSessionNotificationEx"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12098,7 +12099,7 @@
 	,{
 		"Name":"WTSUnRegisterSessionNotificationEx"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12112,7 +12113,7 @@
 	,{
 		"Name":"WTSQueryUserToken"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12126,7 +12127,7 @@
 	,{
 		"Name":"WTSFreeMemoryExW"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12141,7 +12142,7 @@
 	,{
 		"Name":"WTSFreeMemoryExA"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12156,7 +12157,7 @@
 	,{
 		"Name":"WTSEnumerateProcessesExW"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12173,7 +12174,7 @@
 	,{
 		"Name":"WTSEnumerateProcessesExA"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12190,7 +12191,7 @@
 	,{
 		"Name":"WTSEnumerateListenersW"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12207,7 +12208,7 @@
 	,{
 		"Name":"WTSEnumerateListenersA"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12224,7 +12225,7 @@
 	,{
 		"Name":"WTSQueryListenerConfigW"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12241,7 +12242,7 @@
 	,{
 		"Name":"WTSQueryListenerConfigA"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12258,7 +12259,7 @@
 	,{
 		"Name":"WTSCreateListenerW"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12276,7 +12277,7 @@
 	,{
 		"Name":"WTSCreateListenerA"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12294,7 +12295,7 @@
 	,{
 		"Name":"WTSSetListenerSecurityW"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12306,13 +12307,13 @@
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pListenerName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"SecurityInformation","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"pSecurityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pSecurityDescriptor","Type":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"WTSSetListenerSecurityA"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12324,13 +12325,13 @@
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pListenerName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"SecurityInformation","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"pSecurityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pSecurityDescriptor","Type":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"WTSGetListenerSecurityW"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12342,7 +12343,7 @@
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pListenerName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"SecurityInformation","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"pSecurityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["Out","Optional"]}
+			,{"Name":"pSecurityDescriptor","Type":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["Out","Optional"]}
 			,{"Name":"nLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"lpnLengthNeeded","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 		]
@@ -12350,7 +12351,7 @@
 	,{
 		"Name":"WTSGetListenerSecurityA"
 		,"SetLastError":true
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12362,7 +12363,7 @@
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pListenerName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"SecurityInformation","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"pSecurityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["Out","Optional"]}
+			,{"Name":"pSecurityDescriptor","Type":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["Out","Optional"]}
 			,{"Name":"nLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"lpnLengthNeeded","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 		]
@@ -12370,7 +12371,7 @@
 	,{
 		"Name":"WTSEnableChildSessions"
 		,"SetLastError":false
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12383,7 +12384,7 @@
 	,{
 		"Name":"WTSIsChildSessionsEnabled"
 		,"SetLastError":false
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12396,7 +12397,7 @@
 	,{
 		"Name":"WTSGetChildSessionId"
 		,"SetLastError":false
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12409,7 +12410,7 @@
 	,{
 		"Name":"WTSSetRenderHint"
 		,"SetLastError":false
-		,"DllImport":"WTSAPI32"
+		,"DllImport":"WTSAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12426,7 +12427,7 @@
 	,{
 		"Name":"ProcessIdToSessionId"
 		,"SetLastError":true
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12440,7 +12441,7 @@
 	,{
 		"Name":"WTSGetActiveConsoleSessionId"
 		,"SetLastError":false
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12462,7 +12463,7 @@
 	,"WTSINFOEX_LEVEL_"
 	,"WTSINFOEX"
 	,"WTSCLIENT"
-	,"_WTS_PRODUCT_INFO"
+	,"PRODUCT_INFO"
 	,"WTS_VALIDATION_INFORMATION"
 	,"WTSUSERCONFIG"
 	,"WTS_PROCESS_INFO_EX"

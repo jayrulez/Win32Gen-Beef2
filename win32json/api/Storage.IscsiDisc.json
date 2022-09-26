@@ -30,6 +30,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"DD_SCSI_DEVICE_NAME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"\\Device\\ScsiPort"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"IOCTL_SCSI_PASS_THROUGH"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -209,6 +216,83 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":32
+		,"Attrs":[]
+	}
+	,{
+		"Name":"IOCTL_MINIPORT_SIGNATURE_SCSIDISK"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"SCSIDISK"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"IOCTL_MINIPORT_SIGNATURE_HYBRDISK"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"HYBRDISK"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"IOCTL_MINIPORT_SIGNATURE_DSM_NOTIFICATION"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MPDSM   "
+		,"Attrs":[]
+	}
+	,{
+		"Name":"IOCTL_MINIPORT_SIGNATURE_DSM_GENERAL"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MPDSMGEN"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"IOCTL_MINIPORT_SIGNATURE_FIRMWARE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"FIRMWARE"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"IOCTL_MINIPORT_SIGNATURE_QUERY_PROTOCOL"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"PROTOCOL"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"IOCTL_MINIPORT_SIGNATURE_SET_PROTOCOL"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"SETPROTO"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"IOCTL_MINIPORT_SIGNATURE_QUERY_TEMPERATURE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"TEMPERAT"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"IOCTL_MINIPORT_SIGNATURE_SET_TEMPERATURE_THRESHOLD"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"SETTEMPT"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"IOCTL_MINIPORT_SIGNATURE_QUERY_PHYSICAL_TOPOLOGY"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"TOPOLOGY"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"IOCTL_MINIPORT_SIGNATURE_ENDURANCE_INFO"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"ENDURINF"
 		,"Attrs":[]
 	}
 	,{
@@ -990,51 +1074,135 @@
 	}
 	,{
 		"Name":"ISCSI_SECURITY_FLAG_TUNNEL_MODE_PREFERRED"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":64
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"0x00000040"
 		,"Attrs":[]
 	}
 	,{
 		"Name":"ISCSI_SECURITY_FLAG_TRANSPORT_MODE_PREFERRED"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":32
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"0x00000020"
 		,"Attrs":[]
 	}
 	,{
 		"Name":"ISCSI_SECURITY_FLAG_PFS_ENABLED"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":16
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"0x00000010"
 		,"Attrs":[]
 	}
 	,{
 		"Name":"ISCSI_SECURITY_FLAG_AGGRESSIVE_MODE_ENABLED"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":8
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"0x00000008"
 		,"Attrs":[]
 	}
 	,{
 		"Name":"ISCSI_SECURITY_FLAG_MAIN_MODE_ENABLED"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":4
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"0x00000004"
 		,"Attrs":[]
 	}
 	,{
 		"Name":"ISCSI_SECURITY_FLAG_IKE_IPSEC_ENABLED"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"0x00000002"
 		,"Attrs":[]
 	}
 	,{
 		"Name":"ISCSI_SECURITY_FLAG_VALID"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"0x00000001"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"ISCSI_LOGIN_OPTIONS_HEADER_DIGEST"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"0x00000001"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"ISCSI_LOGIN_OPTIONS_DATA_DIGEST"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"0x00000002"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"ISCSI_LOGIN_OPTIONS_MAXIMUM_CONNECTIONS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"0x00000004"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"ISCSI_LOGIN_OPTIONS_DEFAULT_TIME_2_WAIT"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"0x00000008"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"ISCSI_LOGIN_OPTIONS_DEFAULT_TIME_2_RETAIN"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"0x00000010"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"ISCSI_LOGIN_OPTIONS_USERNAME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"0x00000020"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"ISCSI_LOGIN_OPTIONS_PASSWORD"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"0x00000040"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"ISCSI_LOGIN_OPTIONS_AUTH_TYPE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"0x00000080"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"ID_IPV4_ADDR"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"1"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"ID_FQDN"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"2"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"ID_USER_FQDN"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"3"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"ID_IPV6_ADDR"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"5"
 		,"Attrs":[]
 	}
 	,{
@@ -1080,62 +1248,6 @@
 		,"Attrs":[]
 	}
 	,{
-		"Name":"ISCSI_LOGIN_OPTIONS_HEADER_DIGEST"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1
-		,"Attrs":[]
-	}
-	,{
-		"Name":"ISCSI_LOGIN_OPTIONS_DATA_DIGEST"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2
-		,"Attrs":[]
-	}
-	,{
-		"Name":"ISCSI_LOGIN_OPTIONS_MAXIMUM_CONNECTIONS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":4
-		,"Attrs":[]
-	}
-	,{
-		"Name":"ISCSI_LOGIN_OPTIONS_DEFAULT_TIME_2_WAIT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":8
-		,"Attrs":[]
-	}
-	,{
-		"Name":"ISCSI_LOGIN_OPTIONS_DEFAULT_TIME_2_RETAIN"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":16
-		,"Attrs":[]
-	}
-	,{
-		"Name":"ISCSI_LOGIN_OPTIONS_USERNAME"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":32
-		,"Attrs":[]
-	}
-	,{
-		"Name":"ISCSI_LOGIN_OPTIONS_PASSWORD"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":64
-		,"Attrs":[]
-	}
-	,{
-		"Name":"ISCSI_LOGIN_OPTIONS_AUTH_TYPE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":128
-		,"Attrs":[]
-	}
-	,{
 		"Name":"ISCSI_LOGIN_OPTIONS_VERSION"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -1156,34 +1268,6 @@
 		,"Value":4
 		,"Attrs":[]
 	}
-	,{
-		"Name":"ID_IPV4_ADDR"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1
-		,"Attrs":[]
-	}
-	,{
-		"Name":"ID_FQDN"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2
-		,"Attrs":[]
-	}
-	,{
-		"Name":"ID_USER_FQDN"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":3
-		,"Attrs":[]
-	}
-	,{
-		"Name":"ID_IPV6_ADDR"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":5
-		,"Attrs":[]
-	}
 ]
 
 ,"Types":[
@@ -1195,56 +1279,6 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"SCSI_PASS_THROUGH"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"Length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"ScsiStatus","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"PathId","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"TargetId","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"Lun","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"CdbLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"SenseInfoLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"DataIn","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"DataTransferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"TimeOutValue","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"DataBufferOffset","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
-			,{"Name":"SenseInfoOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Cdb","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"SCSI_PASS_THROUGH_DIRECT"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"Length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"ScsiStatus","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"PathId","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"TargetId","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"Lun","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"CdbLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"SenseInfoLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"DataIn","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"DataTransferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"TimeOutValue","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"DataBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-			,{"Name":"SenseInfoOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Cdb","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -1277,6 +1311,232 @@
 	,{
 		"Name":"SCSI_PASS_THROUGH_DIRECT32"
 		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"Length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"ScsiStatus","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"PathId","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"TargetId","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"Lun","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"CdbLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"SenseInfoLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"DataIn","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"DataTransferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"TimeOutValue","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"DataBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+			,{"Name":"SenseInfoOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Cdb","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"SCSI_PASS_THROUGH32_EX"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"CdbLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"StorAddressLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ScsiStatus","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"SenseInfoLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"DataDirection","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"TimeOutValue","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"StorAddressOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"SenseInfoOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"DataOutTransferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"DataInTransferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"DataOutBufferOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"DataInBufferOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Cdb","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"SCSI_PASS_THROUGH_DIRECT32_EX"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"CdbLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"StorAddressLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ScsiStatus","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"SenseInfoLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"DataDirection","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"TimeOutValue","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"StorAddressOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"SenseInfoOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"DataOutTransferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"DataInTransferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"DataOutBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+			,{"Name":"DataInBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+			,{"Name":"Cdb","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"ATA_PASS_THROUGH_EX32"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"Length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"AtaFlags","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"PathId","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"TargetId","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"Lun","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"ReservedAsUchar","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"DataTransferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"TimeOutValue","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ReservedAsUlong","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"DataBufferOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"PreviousTaskFile","Type":{"Kind":"Array","Shape":{"Size":8},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"CurrentTaskFile","Type":{"Kind":"Array","Shape":{"Size":8},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"ATA_PASS_THROUGH_DIRECT32"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"Length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"AtaFlags","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"PathId","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"TargetId","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"Lun","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"ReservedAsUchar","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"DataTransferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"TimeOutValue","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ReservedAsUlong","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"DataBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+			,{"Name":"PreviousTaskFile","Type":{"Kind":"Array","Shape":{"Size":8},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"CurrentTaskFile","Type":{"Kind":"Array","Shape":{"Size":8},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"MPIO_PASS_THROUGH_PATH32"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"PassThrough","Type":{"Kind":"ApiRef","Name":"SCSI_PASS_THROUGH32","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]},"Attrs":[]}
+			,{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"Flags","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"PortNumber","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"MpioPathId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"MPIO_PASS_THROUGH_PATH_DIRECT32"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"PassThrough","Type":{"Kind":"ApiRef","Name":"SCSI_PASS_THROUGH_DIRECT32","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]},"Attrs":[]}
+			,{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"Flags","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"PortNumber","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"MpioPathId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"MPIO_PASS_THROUGH_PATH32_EX"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"PassThroughOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"Flags","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"PortNumber","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"MpioPathId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"MPIO_PASS_THROUGH_PATH_DIRECT32_EX"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"PassThroughOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"Flags","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"PortNumber","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"MpioPathId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"SCSI_PASS_THROUGH"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"Length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"ScsiStatus","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"PathId","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"TargetId","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"Lun","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"CdbLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"SenseInfoLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"DataIn","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"DataTransferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"TimeOutValue","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"DataBufferOffset","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
+			,{"Name":"SenseInfoOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Cdb","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"SCSI_PASS_THROUGH_DIRECT"
+		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
@@ -1356,62 +1616,6 @@
 		]
 	}
 	,{
-		"Name":"SCSI_PASS_THROUGH32_EX"
-		,"Architectures":["X64","Arm64"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"CdbLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"StorAddressLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"ScsiStatus","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"SenseInfoLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"DataDirection","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"TimeOutValue","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"StorAddressOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"SenseInfoOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"DataOutTransferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"DataInTransferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"DataOutBufferOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"DataInBufferOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Cdb","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"SCSI_PASS_THROUGH_DIRECT32_EX"
-		,"Architectures":["X64","Arm64"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"CdbLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"StorAddressLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"ScsiStatus","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"SenseInfoLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"DataDirection","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"TimeOutValue","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"StorAddressOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"SenseInfoOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"DataOutTransferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"DataInTransferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"DataOutBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-			,{"Name":"DataInBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-			,{"Name":"Cdb","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
 		"Name":"ATA_PASS_THROUGH_EX"
 		,"Architectures":[]
 		,"Platform":null
@@ -1438,54 +1642,6 @@
 	,{
 		"Name":"ATA_PASS_THROUGH_DIRECT"
 		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"Length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"AtaFlags","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"PathId","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"TargetId","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"Lun","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"ReservedAsUchar","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"DataTransferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"TimeOutValue","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"ReservedAsUlong","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"DataBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-			,{"Name":"PreviousTaskFile","Type":{"Kind":"Array","Shape":{"Size":8},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
-			,{"Name":"CurrentTaskFile","Type":{"Kind":"Array","Shape":{"Size":8},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"ATA_PASS_THROUGH_EX32"
-		,"Architectures":["X64","Arm64"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"Length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"AtaFlags","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"PathId","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"TargetId","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"Lun","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"ReservedAsUchar","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"DataTransferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"TimeOutValue","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"ReservedAsUlong","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"DataBufferOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"PreviousTaskFile","Type":{"Kind":"Array","Shape":{"Size":8},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
-			,{"Name":"CurrentTaskFile","Type":{"Kind":"Array","Shape":{"Size":8},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"ATA_PASS_THROUGH_DIRECT32"
-		,"Architectures":["X64","Arm64"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
@@ -1582,78 +1738,6 @@
 	,{
 		"Name":"MPIO_PASS_THROUGH_PATH_DIRECT_EX"
 		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"PassThroughOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"Flags","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"PortNumber","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"MpioPathId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"MPIO_PASS_THROUGH_PATH32"
-		,"Architectures":["X64","Arm64"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"PassThrough","Type":{"Kind":"ApiRef","Name":"SCSI_PASS_THROUGH32","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]},"Attrs":[]}
-			,{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"Flags","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"PortNumber","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"MpioPathId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"MPIO_PASS_THROUGH_PATH_DIRECT32"
-		,"Architectures":["X64","Arm64"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"PassThrough","Type":{"Kind":"ApiRef","Name":"SCSI_PASS_THROUGH_DIRECT32","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]},"Attrs":[]}
-			,{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"Flags","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"PortNumber","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"MpioPathId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"MPIO_PASS_THROUGH_PATH32_EX"
-		,"Architectures":["X64","Arm64"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"PassThroughOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"Flags","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"PortNumber","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"MpioPathId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"MPIO_PASS_THROUGH_PATH_DIRECT32_EX"
-		,"Architectures":["X64","Arm64"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
@@ -2315,19 +2399,6 @@
 		]
 	}
 	,{
-		"Name":"DUMP_DEVICE_POWERON_ROUTINE"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"FunctionPointer"
-		,"SetLastError":false
-		,"ReturnType":{"Kind":"Native","Name":"Int32"}
-		,"ReturnAttrs":[]
-		,"Attrs":[]
-		,"Params":[
-			{"Name":"Context","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
-		]
-	}
-	,{
 		"Name":"PDUMP_DEVICE_POWERON_ROUTINE"
 		,"Architectures":[]
 		,"Platform":null
@@ -2337,6 +2408,7 @@
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
+			{"Name":"Context","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -3056,7 +3128,7 @@
 	{
 		"Name":"GetIScsiVersionInformation"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3069,7 +3141,7 @@
 	,{
 		"Name":"GetIScsiTargetInformationW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3086,7 +3158,7 @@
 	,{
 		"Name":"GetIScsiTargetInformationA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3103,7 +3175,7 @@
 	,{
 		"Name":"AddIScsiConnectionW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3124,7 +3196,7 @@
 	,{
 		"Name":"AddIScsiConnectionA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3145,7 +3217,7 @@
 	,{
 		"Name":"RemoveIScsiConnection"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3159,7 +3231,7 @@
 	,{
 		"Name":"ReportIScsiTargetsW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3174,7 +3246,7 @@
 	,{
 		"Name":"ReportIScsiTargetsA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3189,7 +3261,7 @@
 	,{
 		"Name":"AddIScsiStaticTargetW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3208,7 +3280,7 @@
 	,{
 		"Name":"AddIScsiStaticTargetA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3227,7 +3299,7 @@
 	,{
 		"Name":"RemoveIScsiStaticTargetW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3240,7 +3312,7 @@
 	,{
 		"Name":"RemoveIScsiStaticTargetA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3253,7 +3325,7 @@
 	,{
 		"Name":"AddIScsiSendTargetPortalW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3270,7 +3342,7 @@
 	,{
 		"Name":"AddIScsiSendTargetPortalA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3287,7 +3359,7 @@
 	,{
 		"Name":"RemoveIScsiSendTargetPortalW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3302,7 +3374,7 @@
 	,{
 		"Name":"RemoveIScsiSendTargetPortalA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3317,7 +3389,7 @@
 	,{
 		"Name":"RefreshIScsiSendTargetPortalW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3332,7 +3404,7 @@
 	,{
 		"Name":"RefreshIScsiSendTargetPortalA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3347,7 +3419,7 @@
 	,{
 		"Name":"ReportIScsiSendTargetPortalsW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3361,7 +3433,7 @@
 	,{
 		"Name":"ReportIScsiSendTargetPortalsA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3375,7 +3447,7 @@
 	,{
 		"Name":"ReportIScsiSendTargetPortalsExW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3390,7 +3462,7 @@
 	,{
 		"Name":"ReportIScsiSendTargetPortalsExA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3405,7 +3477,7 @@
 	,{
 		"Name":"LoginIScsiTargetW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3430,7 +3502,7 @@
 	,{
 		"Name":"LoginIScsiTargetA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3455,7 +3527,7 @@
 	,{
 		"Name":"ReportIScsiPersistentLoginsW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3470,7 +3542,7 @@
 	,{
 		"Name":"ReportIScsiPersistentLoginsA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3485,7 +3557,7 @@
 	,{
 		"Name":"LogoutIScsiTarget"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3498,7 +3570,7 @@
 	,{
 		"Name":"RemoveIScsiPersistentTargetW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3514,7 +3586,7 @@
 	,{
 		"Name":"RemoveIScsiPersistentTargetA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3530,7 +3602,7 @@
 	,{
 		"Name":"SendScsiInquiry"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3551,7 +3623,7 @@
 	,{
 		"Name":"SendScsiReadCapacity"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3570,7 +3642,7 @@
 	,{
 		"Name":"SendScsiReportLuns"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3588,7 +3660,7 @@
 	,{
 		"Name":"ReportIScsiInitiatorListW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3602,7 +3674,7 @@
 	,{
 		"Name":"ReportIScsiInitiatorListA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3616,7 +3688,7 @@
 	,{
 		"Name":"ReportActiveIScsiTargetMappingsW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3631,7 +3703,7 @@
 	,{
 		"Name":"ReportActiveIScsiTargetMappingsA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3646,7 +3718,7 @@
 	,{
 		"Name":"SetIScsiTunnelModeOuterAddressW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3663,7 +3735,7 @@
 	,{
 		"Name":"SetIScsiTunnelModeOuterAddressA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3680,7 +3752,7 @@
 	,{
 		"Name":"SetIScsiIKEInfoW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3696,7 +3768,7 @@
 	,{
 		"Name":"SetIScsiIKEInfoA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3712,7 +3784,7 @@
 	,{
 		"Name":"GetIScsiIKEInfoW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3728,7 +3800,7 @@
 	,{
 		"Name":"GetIScsiIKEInfoA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3744,7 +3816,7 @@
 	,{
 		"Name":"SetIScsiGroupPresharedKey"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3759,7 +3831,7 @@
 	,{
 		"Name":"SetIScsiInitiatorCHAPSharedSecret"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3773,7 +3845,7 @@
 	,{
 		"Name":"SetIScsiInitiatorRADIUSSharedSecret"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3787,7 +3859,7 @@
 	,{
 		"Name":"SetIScsiInitiatorNodeNameW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3800,7 +3872,7 @@
 	,{
 		"Name":"SetIScsiInitiatorNodeNameA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3813,7 +3885,7 @@
 	,{
 		"Name":"GetIScsiInitiatorNodeNameW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3826,7 +3898,7 @@
 	,{
 		"Name":"GetIScsiInitiatorNodeNameA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3839,7 +3911,7 @@
 	,{
 		"Name":"AddISNSServerW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3852,7 +3924,7 @@
 	,{
 		"Name":"AddISNSServerA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3865,7 +3937,7 @@
 	,{
 		"Name":"RemoveISNSServerW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3878,7 +3950,7 @@
 	,{
 		"Name":"RemoveISNSServerA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3891,7 +3963,7 @@
 	,{
 		"Name":"RefreshISNSServerW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3904,7 +3976,7 @@
 	,{
 		"Name":"RefreshISNSServerA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3917,7 +3989,7 @@
 	,{
 		"Name":"ReportISNSServerListW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3931,7 +4003,7 @@
 	,{
 		"Name":"ReportISNSServerListA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3945,7 +4017,7 @@
 	,{
 		"Name":"GetIScsiSessionListW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3960,7 +4032,7 @@
 	,{
 		"Name":"GetIScsiSessionListA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3975,7 +4047,7 @@
 	,{
 		"Name":"GetIScsiSessionListEx"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3990,7 +4062,7 @@
 	,{
 		"Name":"GetDevicesForIScsiSessionW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4005,7 +4077,7 @@
 	,{
 		"Name":"GetDevicesForIScsiSessionA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4020,7 +4092,7 @@
 	,{
 		"Name":"SetupPersistentIScsiVolumes"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4032,7 +4104,7 @@
 	,{
 		"Name":"SetupPersistentIScsiDevices"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4044,7 +4116,7 @@
 	,{
 		"Name":"AddPersistentIScsiDeviceW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4057,7 +4129,7 @@
 	,{
 		"Name":"AddPersistentIScsiDeviceA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4070,7 +4142,7 @@
 	,{
 		"Name":"RemovePersistentIScsiDeviceW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4083,7 +4155,7 @@
 	,{
 		"Name":"RemovePersistentIScsiDeviceA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4096,7 +4168,7 @@
 	,{
 		"Name":"ClearPersistentIScsiDevices"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4108,7 +4180,7 @@
 	,{
 		"Name":"ReportPersistentIScsiDevicesW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4122,7 +4194,7 @@
 	,{
 		"Name":"ReportPersistentIScsiDevicesA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4136,7 +4208,7 @@
 	,{
 		"Name":"ReportIScsiTargetPortalsW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4153,7 +4225,7 @@
 	,{
 		"Name":"ReportIScsiTargetPortalsA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4170,7 +4242,7 @@
 	,{
 		"Name":"AddRadiusServerW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4183,7 +4255,7 @@
 	,{
 		"Name":"AddRadiusServerA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4196,7 +4268,7 @@
 	,{
 		"Name":"RemoveRadiusServerW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4209,7 +4281,7 @@
 	,{
 		"Name":"RemoveRadiusServerA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4222,7 +4294,7 @@
 	,{
 		"Name":"ReportRadiusServerListW"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -4236,7 +4308,7 @@
 	,{
 		"Name":"ReportRadiusServerListA"
 		,"SetLastError":false
-		,"DllImport":"ISCSIDSC"
+		,"DllImport":"ISCSIDSC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

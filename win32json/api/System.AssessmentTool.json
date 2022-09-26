@@ -47,7 +47,7 @@
 		,"Guid":"c47a41b7-b729-424f-9af9-5cb3934f2dfa"
 	}
 	,{
-		"Name":"WINSAT_OEM_DATA_TYPE"
+		"Name":"WINSAT_OEM_CUSTOMIZATION_STATE"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
@@ -141,7 +141,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"title","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"title","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -155,7 +155,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"description","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"description","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -178,7 +178,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"assessment","Type":{"Kind":"ApiRef","Name":"WINSAT_ASSESSMENT_TYPE","TargetKind":"Default","Api":"System.AssessmentTool","Parents":[]},"Attrs":["In"]}
-					,{"Name":"ppinfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IProvideWinSATAssessmentInfo","TargetKind":"Com","Api":"System.AssessmentTool","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppinfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IProvideWinSATAssessmentInfo","TargetKind":"Com","Api":"System.AssessmentTool","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -234,7 +234,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"description","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"description","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -254,13 +254,11 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"xPath","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"namespaces","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"ppDomNodeList","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IXMLDOMNodeList","TargetKind":"Com","Api":"Data.Xml.MsXml","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppDomNodeList","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IXMLDOMNodeList","TargetKind":"Com","Api":"Data.Xml.MsXml","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -274,7 +272,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"ppWinSATAssessmentInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IProvideWinSATResultsInfo","TargetKind":"Com","Api":"System.AssessmentTool","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppWinSATAssessmentInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IProvideWinSATResultsInfo","TargetKind":"Com","Api":"System.AssessmentTool","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -294,14 +292,12 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"bitmapSize","Type":{"Kind":"ApiRef","Name":"WINSAT_BITMAP_SIZE","TargetKind":"Default","Api":"System.AssessmentTool","Parents":[]},"Attrs":["In"]}
 					,{"Name":"state","Type":{"Kind":"ApiRef","Name":"WINSAT_ASSESSMENT_STATE","TargetKind":"Default","Api":"System.AssessmentTool","Parents":[]},"Attrs":["In"]}
 					,{"Name":"rating","Type":{"Kind":"Native","Name":"Single"},"Attrs":["In"]}
-					,{"Name":"pBitmap","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HBITMAP","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"pBitmap","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HBITMAP","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -321,13 +317,11 @@
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
+				,"Attrs":[]
 				,"Params":[
 					{"Name":"xPath","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"namespaces","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"ppDomNodeList","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IXMLDOMNodeList","TargetKind":"Com","Api":"Data.Xml.MsXml","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppDomNodeList","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IXMLDOMNodeList","TargetKind":"Com","Api":"Data.Xml.MsXml","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -458,7 +452,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"state","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WINSAT_OEM_DATA_TYPE","TargetKind":"Default","Api":"System.AssessmentTool","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"state","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WINSAT_OEM_CUSTOMIZATION_STATE","TargetKind":"Default","Api":"System.AssessmentTool","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]

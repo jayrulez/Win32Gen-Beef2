@@ -2224,6 +2224,91 @@
 
 ,"Types":[
 	{
+		"Name":"D3DADAPTER_IDENTIFIER9"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"Driver","Type":{"Kind":"Array","Shape":{"Size":512},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+			,{"Name":"Description","Type":{"Kind":"Array","Shape":{"Size":512},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+			,{"Name":"DeviceName","Type":{"Kind":"Array","Shape":{"Size":32},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+			,{"Name":"DriverVersion","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"VendorId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"DeviceId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"SubSysId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Revision","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"DeviceIdentifier","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
+			,{"Name":"WHQLLevel","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"D3DMEMORYPRESSURE"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"BytesEvictedFromProcess","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"SizeOfInefficientAllocation","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"LevelOfEfficiency","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"D3DPRESENTSTATS"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"PresentCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"PresentRefreshCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"SyncRefreshCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"SyncQPCTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"SyncGPUTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"D3DAUTHENTICATEDCHANNEL_QUERYOUTPUTID_OUTPUT"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"Output","Type":{"Kind":"ApiRef","Name":"D3DAUTHENTICATEDCHANNEL_QUERY_OUTPUT","TargetKind":"Default","Api":"Graphics.Direct3D9","Parents":[]},"Attrs":[]}
+			,{"Name":"DeviceHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"CryptoSessionHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"OutputIDIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"OutputID","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"D3DAES_CTR_IV"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"IV","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"Count","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
 		"Name":"D3DCOLORVALUE"
 		,"Architectures":[]
 		,"Platform":null
@@ -2560,6 +2645,10 @@
 			,{"Name":"D3DTS_TEXTURE6","Value":22}
 			,{"Name":"D3DTS_TEXTURE7","Value":23}
 			,{"Name":"D3DTS_FORCE_DWORD","Value":2147483647}
+			,{"Name":"D3DTS_WORLD","Value":256}
+			,{"Name":"D3DTS_WORLD1","Value":257}
+			,{"Name":"D3DTS_WORLD2","Value":258}
+			,{"Name":"D3DTS_WORLD3","Value":259}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -3705,11 +3794,11 @@
 	}
 	,{
 		"Name":"D3DADAPTER_IDENTIFIER9"
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":4
 		,"Fields":[
 			{"Name":"Driver","Type":{"Kind":"Array","Shape":{"Size":512},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 			,{"Name":"Description","Type":{"Kind":"Array","Shape":{"Size":512},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
@@ -3925,11 +4014,11 @@
 	}
 	,{
 		"Name":"D3DMEMORYPRESSURE"
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":4
 		,"Fields":[
 			{"Name":"BytesEvictedFromProcess","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"SizeOfInefficientAllocation","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -3988,11 +4077,11 @@
 	}
 	,{
 		"Name":"D3DPRESENTSTATS"
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":4
 		,"Fields":[
 			{"Name":"PresentCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"PresentRefreshCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4357,11 +4446,11 @@
 	}
 	,{
 		"Name":"D3DAUTHENTICATEDCHANNEL_QUERYOUTPUTID_OUTPUT"
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":4
 		,"Fields":[
 			{"Name":"Output","Type":{"Kind":"ApiRef","Name":"D3DAUTHENTICATEDCHANNEL_QUERY_OUTPUT","TargetKind":"Default","Api":"Graphics.Direct3D9","Parents":[]},"Attrs":[]}
 			,{"Name":"DeviceHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -4592,11 +4681,11 @@
 	}
 	,{
 		"Name":"D3DAES_CTR_IV"
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":4
 		,"Fields":[
 			{"Name":"IV","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"Count","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -7882,98 +7971,13 @@
 			}
 		]
 	}
-	,{
-		"Name":"D3DADAPTER_IDENTIFIER9"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":4
-		,"Fields":[
-			{"Name":"Driver","Type":{"Kind":"Array","Shape":{"Size":512},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
-			,{"Name":"Description","Type":{"Kind":"Array","Shape":{"Size":512},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
-			,{"Name":"DeviceName","Type":{"Kind":"Array","Shape":{"Size":32},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
-			,{"Name":"DriverVersion","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"VendorId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"DeviceId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"SubSysId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Revision","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"DeviceIdentifier","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
-			,{"Name":"WHQLLevel","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"D3DMEMORYPRESSURE"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":4
-		,"Fields":[
-			{"Name":"BytesEvictedFromProcess","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"SizeOfInefficientAllocation","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"LevelOfEfficiency","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"D3DPRESENTSTATS"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":4
-		,"Fields":[
-			{"Name":"PresentCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"PresentRefreshCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"SyncRefreshCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"SyncQPCTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"SyncGPUTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"D3DAUTHENTICATEDCHANNEL_QUERYOUTPUTID_OUTPUT"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":4
-		,"Fields":[
-			{"Name":"Output","Type":{"Kind":"ApiRef","Name":"D3DAUTHENTICATEDCHANNEL_QUERY_OUTPUT","TargetKind":"Default","Api":"Graphics.Direct3D9","Parents":[]},"Attrs":[]}
-			,{"Name":"DeviceHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"CryptoSessionHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"OutputIDIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"OutputID","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"D3DAES_CTR_IV"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":4
-		,"Fields":[
-			{"Name":"IV","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"Count","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
 ]
 
 ,"Functions":[
 	{
 		"Name":"Direct3DCreate9"
 		,"SetLastError":false
-		,"DllImport":"d3d9"
+		,"DllImport":"d3d9.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"IDirect3D9","TargetKind":"Com","Api":"Graphics.Direct3D9","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7986,7 +7990,7 @@
 	,{
 		"Name":"D3DPERF_BeginEvent"
 		,"SetLastError":false
-		,"DllImport":"d3d9"
+		,"DllImport":"d3d9.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8000,7 +8004,7 @@
 	,{
 		"Name":"D3DPERF_EndEvent"
 		,"SetLastError":false
-		,"DllImport":"d3d9"
+		,"DllImport":"d3d9.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8012,7 +8016,7 @@
 	,{
 		"Name":"D3DPERF_SetMarker"
 		,"SetLastError":false
-		,"DllImport":"d3d9"
+		,"DllImport":"d3d9.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8026,7 +8030,7 @@
 	,{
 		"Name":"D3DPERF_SetRegion"
 		,"SetLastError":false
-		,"DllImport":"d3d9"
+		,"DllImport":"d3d9.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8040,7 +8044,7 @@
 	,{
 		"Name":"D3DPERF_QueryRepeatFrame"
 		,"SetLastError":false
-		,"DllImport":"d3d9"
+		,"DllImport":"d3d9.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8052,7 +8056,7 @@
 	,{
 		"Name":"D3DPERF_SetOptions"
 		,"SetLastError":false
-		,"DllImport":"d3d9"
+		,"DllImport":"d3d9.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8065,7 +8069,7 @@
 	,{
 		"Name":"D3DPERF_GetStatus"
 		,"SetLastError":false
-		,"DllImport":"d3d9"
+		,"DllImport":"d3d9.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8077,7 +8081,7 @@
 	,{
 		"Name":"Direct3DCreate9Ex"
 		,"SetLastError":false
-		,"DllImport":"d3d9"
+		,"DllImport":"d3d9.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

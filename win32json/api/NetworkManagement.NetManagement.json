@@ -296,6 +296,34 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"MESSAGE_FILENAME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"NETMSG"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"OS2MSG_FILENAME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"BASE"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"HELP_MSG_FILENAME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"NETH"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"BACKUP_MSG_FILENAME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"BAK.MSG"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"PLATFORM_ID_DOS"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -2935,6 +2963,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"NULL_USERSETINFO_PASSWD"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"              "
+		,"Attrs":[]
+	}
+	,{
 		"Name":"UNITS_PER_DAY"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -3100,6 +3135,34 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":32768
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GROUP_SPECIALGRP_USERS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"USERS"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GROUP_SPECIALGRP_ADMINS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"ADMINS"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GROUP_SPECIALGRP_GUESTS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"GUESTS"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GROUP_SPECIALGRP_LOCAL"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"LOCAL"
 		,"Attrs":[]
 	}
 	,{
@@ -3275,6 +3338,13 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":4
+		,"Attrs":[]
+	}
+	,{
+		"Name":"ACCESS_LETTERS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"RWCXDAP         "
 		,"Attrs":[]
 	}
 	,{
@@ -3502,6 +3572,20 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"SERVICE_ACCOUNT_PASSWORD"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"_SA_{262E99C9-6160-4871-ACEC-4E61736B6F21}"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_ACCOUNT_SECRET_PREFIX"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"_SC_{262E99C9-6160-4871-ACEC-4E61736B6F21}_"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"ServiceAccountPasswordGUID"
 		,"Type":{"Kind":"Native","Name":"Guid"}
 		,"ValueType":"String"
@@ -3534,6 +3618,48 @@
 		,"Type":{"Kind":"Native","Name":"Int32"}
 		,"ValueType":"Int32"
 		,"Value":2
+		,"Attrs":[]
+	}
+	,{
+		"Name":"ALERTER_MAILSLOT"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"\\\\.\\MAILSLOT\\Alerter"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"ALERT_PRINT_EVENT"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"PRINTING"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"ALERT_MESSAGE_EVENT"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MESSAGE"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"ALERT_ERRORLOG_EVENT"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"ERRORLOG"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"ALERT_ADMIN_EVENT"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"ADMIN"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"ALERT_USER_EVENT"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"USER"
 		,"Attrs":[]
 	}
 	,{
@@ -7349,6 +7475,13 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":1024
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_DOS_ENCRYPTION"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"ENCRYPT"
 		,"Attrs":[]
 	}
 	,{
@@ -12875,6 +13008,503 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"SERVICE_WORKSTATION"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"LanmanWorkstation"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_WORKSTATION"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"WORKSTATION"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WORKSTATION_DISPLAY_NAME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Workstation"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_SERVER"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"LanmanServer"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_SERVER"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"SERVER"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVER_DISPLAY_NAME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Server"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_BROWSER"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"BROWSER"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_BROWSER"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"BROWSER"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_MESSENGER"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MESSENGER"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_MESSENGER"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MESSENGER"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_NETRUN"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"NETRUN"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_NETRUN"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"NETRUN"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_SPOOLER"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"SPOOLER"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_SPOOLER"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"SPOOLER"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_ALERTER"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"ALERTER"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_ALERTER"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"ALERTER"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_NETLOGON"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"NETLOGON"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_NETLOGON"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"NETLOGON"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_NETPOPUP"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"NETPOPUP"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_NETPOPUP"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"NETPOPUP"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_SQLSERVER"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"SQLSERVER"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_SQLSERVER"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"SQLSERVER"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_REPL"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"REPLICATOR"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_REPL"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"REPLICATOR"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_RIPL"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"REMOTEBOOT"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_RIPL"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"REMOTEBOOT"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_TIMESOURCE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"TIMESOURCE"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_TIMESOURCE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"TIMESOURCE"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_AFP"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"AFP"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_AFP"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"AFP"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_UPS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"UPS"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_UPS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"UPS"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_XACTSRV"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"XACTSRV"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_XACTSRV"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"XACTSRV"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_TCPIP"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"TCPIP"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_TCPIP"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"TCPIP"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_NBT"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"NBT"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_NBT"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"NBT"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LMHOSTS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"LMHOSTS"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_LMHOSTS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"LMHOSTS"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_TELNET"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Telnet"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_TELNET"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Telnet"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_SCHEDULE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Schedule"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_SCHEDULE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Schedule"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_NTLMSSP"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"NtLmSsp"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_DHCP"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"DHCP"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_DHCP"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"DHCP"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_NWSAP"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"NwSapAgent"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_NWSAP"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"NwSapAgent"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"NWSAP_DISPLAY_NAME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"NW Sap Agent"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_NWCS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"NWCWorkstation"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_DNS_CACHE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"DnsCache"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_W32TIME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"w32time"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVCE_LM20_W32TIME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"w32time"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_KDC"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"kdc"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_KDC"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"kdc"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_RPCLOCATOR"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"RPCLOCATOR"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_RPCLOCATOR"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"RPCLOCATOR"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_TRKSVR"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"TrkSvr"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_TRKSVR"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"TrkSvr"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_TRKWKS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"TrkWks"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_TRKWKS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"TrkWks"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_NTFRS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"NtFrs"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_NTFRS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"NtFrs"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_ISMSERV"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"IsmServ"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_ISMSERV"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"IsmServ"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_NTDS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"NTDS"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_NTDS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"NTDS"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_ADWS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"ADWS"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_DSROLE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"DsRoleSvc"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SERVICE_LM20_DSROLE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"DsRoleSvc"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"NETCFG_E_ALREADY_INITIALIZED"
 		,"Type":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ValueType":"Int32"
@@ -12984,6 +13614,83 @@
 		,"Type":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ValueType":"Int32"
 		,"Value":303141
+		,"Attrs":[]
+	}
+	,{
+		"Name":"NETCFG_CLIENT_CID_MS_MSClient"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"ms_msclient"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"NETCFG_SERVICE_CID_MS_SERVER"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"ms_server"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"NETCFG_SERVICE_CID_MS_NETBIOS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"ms_netbios"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"NETCFG_SERVICE_CID_MS_PSCHED"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"ms_pschedpc"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"NETCFG_SERVICE_CID_MS_WLBS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"ms_wlbs"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"NETCFG_TRANS_CID_MS_APPLETALK"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"ms_appletalk"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"NETCFG_TRANS_CID_MS_NETBEUI"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"ms_netbeui"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"NETCFG_TRANS_CID_MS_NETMON"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"ms_netmon"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"NETCFG_TRANS_CID_MS_NWIPX"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"ms_nwipx"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"NETCFG_TRANS_CID_MS_NWSPX"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"ms_nwspx"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"NETCFG_TRANS_CID_MS_TCPIP"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"ms_tcpip"
 		,"Attrs":[]
 	}
 	,{
@@ -13663,6 +14370,13 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":13
+		,"Attrs":[]
+	}
+	,{
+		"Name":"REGISTER_PROTOCOL_ENTRY_POINT_STRING"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"RegisterProtocol"
 		,"Attrs":[]
 	}
 	,{
@@ -20240,7 +20954,7 @@
 		]
 	}
 	,{
-		"Name":"tagRASCON_IPUI_FLAGS"
+		"Name":"RASCON_UIINFO_FLAGS"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
@@ -20488,7 +21202,7 @@
 	{
 		"Name":"NetUserAdd"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -20504,7 +21218,7 @@
 	,{
 		"Name":"NetUserEnum"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -20524,7 +21238,7 @@
 	,{
 		"Name":"NetUserGetInfo"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -20540,7 +21254,7 @@
 	,{
 		"Name":"NetUserSetInfo"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -20557,7 +21271,7 @@
 	,{
 		"Name":"NetUserDel"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -20571,7 +21285,7 @@
 	,{
 		"Name":"NetUserGetGroups"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -20590,7 +21304,7 @@
 	,{
 		"Name":"NetUserSetGroups"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -20607,7 +21321,7 @@
 	,{
 		"Name":"NetUserGetLocalGroups"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -20627,7 +21341,7 @@
 	,{
 		"Name":"NetUserModalsGet"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -20642,7 +21356,7 @@
 	,{
 		"Name":"NetUserModalsSet"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -20658,7 +21372,7 @@
 	,{
 		"Name":"NetUserChangePassword"
 		,"SetLastError":true
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -20674,7 +21388,7 @@
 	,{
 		"Name":"NetGroupAdd"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -20690,7 +21404,7 @@
 	,{
 		"Name":"NetGroupAddUser"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -20705,7 +21419,7 @@
 	,{
 		"Name":"NetGroupEnum"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -20724,7 +21438,7 @@
 	,{
 		"Name":"NetGroupGetInfo"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -20740,7 +21454,7 @@
 	,{
 		"Name":"NetGroupSetInfo"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -20757,7 +21471,7 @@
 	,{
 		"Name":"NetGroupDel"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -20771,7 +21485,7 @@
 	,{
 		"Name":"NetGroupDelUser"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -20786,7 +21500,7 @@
 	,{
 		"Name":"NetGroupGetUsers"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -20806,7 +21520,7 @@
 	,{
 		"Name":"NetGroupSetUsers"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -20823,7 +21537,7 @@
 	,{
 		"Name":"NetLocalGroupAdd"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -20839,7 +21553,7 @@
 	,{
 		"Name":"NetLocalGroupAddMember"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -20854,7 +21568,7 @@
 	,{
 		"Name":"NetLocalGroupEnum"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -20873,7 +21587,7 @@
 	,{
 		"Name":"NetLocalGroupGetInfo"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -20889,7 +21603,7 @@
 	,{
 		"Name":"NetLocalGroupSetInfo"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -20906,7 +21620,7 @@
 	,{
 		"Name":"NetLocalGroupDel"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -20920,7 +21634,7 @@
 	,{
 		"Name":"NetLocalGroupDelMember"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -20935,7 +21649,7 @@
 	,{
 		"Name":"NetLocalGroupGetMembers"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -20955,7 +21669,7 @@
 	,{
 		"Name":"NetLocalGroupSetMembers"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -20972,7 +21686,7 @@
 	,{
 		"Name":"NetLocalGroupAddMembers"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -20989,7 +21703,7 @@
 	,{
 		"Name":"NetLocalGroupDelMembers"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21006,7 +21720,7 @@
 	,{
 		"Name":"NetQueryDisplayInformation"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21025,7 +21739,7 @@
 	,{
 		"Name":"NetGetDisplayInformationIndex"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21041,7 +21755,7 @@
 	,{
 		"Name":"NetAccessAdd"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21057,7 +21771,7 @@
 	,{
 		"Name":"NetAccessEnum"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21078,7 +21792,7 @@
 	,{
 		"Name":"NetAccessGetInfo"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21094,7 +21808,7 @@
 	,{
 		"Name":"NetAccessSetInfo"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21111,7 +21825,7 @@
 	,{
 		"Name":"NetAccessDel"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21125,7 +21839,7 @@
 	,{
 		"Name":"NetAccessGetUserPerms"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21141,7 +21855,7 @@
 	,{
 		"Name":"NetValidatePasswordPolicy"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21158,7 +21872,7 @@
 	,{
 		"Name":"NetValidatePasswordPolicyFree"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21171,7 +21885,7 @@
 	,{
 		"Name":"NetGetDCName"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21186,7 +21900,7 @@
 	,{
 		"Name":"NetGetAnyDCName"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21201,7 +21915,7 @@
 	,{
 		"Name":"I_NetLogonControl2"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21218,7 +21932,7 @@
 	,{
 		"Name":"NetAddServiceAccount"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21234,7 +21948,7 @@
 	,{
 		"Name":"NetRemoveServiceAccount"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21249,7 +21963,7 @@
 	,{
 		"Name":"NetEnumerateServiceAccounts"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21265,7 +21979,7 @@
 	,{
 		"Name":"NetIsServiceAccount"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21280,7 +21994,7 @@
 	,{
 		"Name":"NetQueryServiceAccount"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21296,7 +22010,7 @@
 	,{
 		"Name":"NetAlertRaise"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21311,7 +22025,7 @@
 	,{
 		"Name":"NetAlertRaiseEx"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21327,7 +22041,7 @@
 	,{
 		"Name":"NetMessageNameAdd"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21341,7 +22055,7 @@
 	,{
 		"Name":"NetMessageNameEnum"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21360,7 +22074,7 @@
 	,{
 		"Name":"NetMessageNameGetInfo"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21376,7 +22090,7 @@
 	,{
 		"Name":"NetMessageNameDel"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21390,7 +22104,7 @@
 	,{
 		"Name":"NetMessageBufferSend"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21407,7 +22121,7 @@
 	,{
 		"Name":"NetRemoteTOD"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21421,7 +22135,7 @@
 	,{
 		"Name":"NetRemoteComputerSupports"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21436,7 +22150,7 @@
 	,{
 		"Name":"NetReplGetInfo"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21451,7 +22165,7 @@
 	,{
 		"Name":"NetReplSetInfo"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21467,7 +22181,7 @@
 	,{
 		"Name":"NetReplExportDirAdd"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21483,7 +22197,7 @@
 	,{
 		"Name":"NetReplExportDirDel"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21497,7 +22211,7 @@
 	,{
 		"Name":"NetReplExportDirEnum"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21516,7 +22230,7 @@
 	,{
 		"Name":"NetReplExportDirGetInfo"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21532,7 +22246,7 @@
 	,{
 		"Name":"NetReplExportDirSetInfo"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21549,7 +22263,7 @@
 	,{
 		"Name":"NetReplExportDirLock"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21563,7 +22277,7 @@
 	,{
 		"Name":"NetReplExportDirUnlock"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21578,7 +22292,7 @@
 	,{
 		"Name":"NetReplImportDirAdd"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21594,7 +22308,7 @@
 	,{
 		"Name":"NetReplImportDirDel"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21608,7 +22322,7 @@
 	,{
 		"Name":"NetReplImportDirEnum"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21627,7 +22341,7 @@
 	,{
 		"Name":"NetReplImportDirGetInfo"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21643,7 +22357,7 @@
 	,{
 		"Name":"NetReplImportDirLock"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21657,7 +22371,7 @@
 	,{
 		"Name":"NetReplImportDirUnlock"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21672,7 +22386,7 @@
 	,{
 		"Name":"NetServerEnum"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21693,7 +22407,7 @@
 	,{
 		"Name":"NetServerGetInfo"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21708,7 +22422,7 @@
 	,{
 		"Name":"NetServerSetInfo"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21724,7 +22438,7 @@
 	,{
 		"Name":"NetServerDiskEnum"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21743,7 +22457,7 @@
 	,{
 		"Name":"NetServerComputerNameAdd"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21758,7 +22472,7 @@
 	,{
 		"Name":"NetServerComputerNameDel"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21772,7 +22486,7 @@
 	,{
 		"Name":"NetServerTransportAdd"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21787,7 +22501,7 @@
 	,{
 		"Name":"NetServerTransportAddEx"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21802,7 +22516,7 @@
 	,{
 		"Name":"NetServerTransportDel"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21817,7 +22531,7 @@
 	,{
 		"Name":"NetServerTransportEnum"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21836,7 +22550,7 @@
 	,{
 		"Name":"NetServiceControl"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21853,7 +22567,7 @@
 	,{
 		"Name":"NetServiceEnum"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21872,7 +22586,7 @@
 	,{
 		"Name":"NetServiceGetInfo"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21888,7 +22602,7 @@
 	,{
 		"Name":"NetServiceInstall"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21905,7 +22619,7 @@
 	,{
 		"Name":"NetUseAdd"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21921,7 +22635,7 @@
 	,{
 		"Name":"NetUseDel"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21936,7 +22650,7 @@
 	,{
 		"Name":"NetUseEnum"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21955,7 +22669,7 @@
 	,{
 		"Name":"NetUseGetInfo"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21971,7 +22685,7 @@
 	,{
 		"Name":"NetWkstaGetInfo"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -21986,7 +22700,7 @@
 	,{
 		"Name":"NetWkstaSetInfo"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22002,7 +22716,7 @@
 	,{
 		"Name":"NetWkstaUserGetInfo"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22017,7 +22731,7 @@
 	,{
 		"Name":"NetWkstaUserSetInfo"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22033,7 +22747,7 @@
 	,{
 		"Name":"NetWkstaUserEnum"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22052,7 +22766,7 @@
 	,{
 		"Name":"NetWkstaTransportAdd"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22068,7 +22782,7 @@
 	,{
 		"Name":"NetWkstaTransportDel"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22083,7 +22797,7 @@
 	,{
 		"Name":"NetWkstaTransportEnum"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22102,7 +22816,7 @@
 	,{
 		"Name":"NetApiBufferAllocate"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22116,7 +22830,7 @@
 	,{
 		"Name":"NetApiBufferFree"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22129,7 +22843,7 @@
 	,{
 		"Name":"NetApiBufferReallocate"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22144,7 +22858,7 @@
 	,{
 		"Name":"NetApiBufferSize"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22158,7 +22872,7 @@
 	,{
 		"Name":"NetErrorLogClear"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22173,7 +22887,7 @@
 	,{
 		"Name":"NetErrorLogRead"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22196,7 +22910,7 @@
 	,{
 		"Name":"NetErrorLogWrite"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22216,7 +22930,7 @@
 	,{
 		"Name":"NetConfigGet"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22232,7 +22946,7 @@
 	,{
 		"Name":"NetConfigGetAll"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22247,7 +22961,7 @@
 	,{
 		"Name":"NetConfigSet"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22266,7 +22980,7 @@
 	,{
 		"Name":"NetAuditClear"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22281,7 +22995,7 @@
 	,{
 		"Name":"NetAuditRead"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22304,7 +23018,7 @@
 	,{
 		"Name":"NetAuditWrite"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22321,7 +23035,7 @@
 	,{
 		"Name":"NetJoinDomain"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22339,7 +23053,7 @@
 	,{
 		"Name":"NetUnjoinDomain"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22355,7 +23069,7 @@
 	,{
 		"Name":"NetRenameMachineInDomain"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22372,7 +23086,7 @@
 	,{
 		"Name":"NetValidateName"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22389,7 +23103,7 @@
 	,{
 		"Name":"NetGetJoinableOUs"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22407,7 +23121,7 @@
 	,{
 		"Name":"NetAddAlternateComputerName"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22424,7 +23138,7 @@
 	,{
 		"Name":"NetRemoveAlternateComputerName"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22441,7 +23155,7 @@
 	,{
 		"Name":"NetSetPrimaryComputerName"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22458,7 +23172,7 @@
 	,{
 		"Name":"NetEnumerateComputerNames"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22475,7 +23189,7 @@
 	,{
 		"Name":"NetProvisionComputerAccount"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22495,7 +23209,7 @@
 	,{
 		"Name":"NetRequestOfflineDomainJoin"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22511,7 +23225,7 @@
 	,{
 		"Name":"NetCreateProvisioningPackage"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22527,7 +23241,7 @@
 	,{
 		"Name":"NetRequestProvisioningPackageInstall"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22544,7 +23258,7 @@
 	,{
 		"Name":"NetGetAadJoinInformation"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22558,7 +23272,7 @@
 	,{
 		"Name":"NetFreeAadJoinInformation"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22571,7 +23285,7 @@
 	,{
 		"Name":"NetGetJoinInformation"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22586,7 +23300,7 @@
 	,{
 		"Name":"GetNetScheduleAccountInformation"
 		,"SetLastError":false
-		,"DllImport":"mstask"
+		,"DllImport":"mstask.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22601,7 +23315,7 @@
 	,{
 		"Name":"SetNetScheduleAccountInformation"
 		,"SetLastError":false
-		,"DllImport":"mstask"
+		,"DllImport":"mstask.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22616,7 +23330,7 @@
 	,{
 		"Name":"NetScheduleJobAdd"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22631,7 +23345,7 @@
 	,{
 		"Name":"NetScheduleJobDel"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22646,7 +23360,7 @@
 	,{
 		"Name":"NetScheduleJobEnum"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22664,7 +23378,7 @@
 	,{
 		"Name":"NetScheduleJobGetInfo"
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22679,7 +23393,7 @@
 	,{
 		"Name":"TraceRegisterExA"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22693,7 +23407,7 @@
 	,{
 		"Name":"TraceDeregisterA"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22706,7 +23420,7 @@
 	,{
 		"Name":"TraceDeregisterExA"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22720,7 +23434,7 @@
 	,{
 		"Name":"TraceGetConsoleA"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22734,7 +23448,7 @@
 	,{
 		"Name":"TracePrintfA"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22748,7 +23462,7 @@
 	,{
 		"Name":"TracePrintfExA"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22763,7 +23477,7 @@
 	,{
 		"Name":"TraceVprintfExA"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22779,7 +23493,7 @@
 	,{
 		"Name":"TracePutsExA"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22794,7 +23508,7 @@
 	,{
 		"Name":"TraceDumpExA"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22813,7 +23527,7 @@
 	,{
 		"Name":"TraceRegisterExW"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22827,7 +23541,7 @@
 	,{
 		"Name":"TraceDeregisterW"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22840,7 +23554,7 @@
 	,{
 		"Name":"TraceDeregisterExW"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22854,7 +23568,7 @@
 	,{
 		"Name":"TraceGetConsoleW"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22868,7 +23582,7 @@
 	,{
 		"Name":"TracePrintfW"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22882,7 +23596,7 @@
 	,{
 		"Name":"TracePrintfExW"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22897,7 +23611,7 @@
 	,{
 		"Name":"TraceVprintfExW"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22913,7 +23627,7 @@
 	,{
 		"Name":"TracePutsExW"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22928,7 +23642,7 @@
 	,{
 		"Name":"TraceDumpExW"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22947,7 +23661,7 @@
 	,{
 		"Name":"LogErrorA"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22963,7 +23677,7 @@
 	,{
 		"Name":"LogEventA"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22979,7 +23693,7 @@
 	,{
 		"Name":"LogErrorW"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -22995,7 +23709,7 @@
 	,{
 		"Name":"LogEventW"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23011,7 +23725,7 @@
 	,{
 		"Name":"RouterLogRegisterA"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23024,7 +23738,7 @@
 	,{
 		"Name":"RouterLogDeregisterA"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23037,7 +23751,7 @@
 	,{
 		"Name":"RouterLogEventA"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23055,7 +23769,7 @@
 	,{
 		"Name":"RouterLogEventDataA"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23074,7 +23788,7 @@
 	,{
 		"Name":"RouterLogEventStringA"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23093,7 +23807,7 @@
 	,{
 		"Name":"RouterLogEventExA"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23110,7 +23824,7 @@
 	,{
 		"Name":"RouterLogEventValistExA"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23128,7 +23842,7 @@
 	,{
 		"Name":"RouterGetErrorStringA"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23142,7 +23856,7 @@
 	,{
 		"Name":"RouterLogRegisterW"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23155,7 +23869,7 @@
 	,{
 		"Name":"RouterLogDeregisterW"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23168,7 +23882,7 @@
 	,{
 		"Name":"RouterLogEventW"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23186,7 +23900,7 @@
 	,{
 		"Name":"RouterLogEventDataW"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23205,7 +23919,7 @@
 	,{
 		"Name":"RouterLogEventStringW"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23224,7 +23938,7 @@
 	,{
 		"Name":"RouterLogEventExW"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23241,7 +23955,7 @@
 	,{
 		"Name":"RouterLogEventValistExW"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23259,7 +23973,7 @@
 	,{
 		"Name":"RouterGetErrorStringW"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23273,7 +23987,7 @@
 	,{
 		"Name":"RouterAssert"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23289,7 +24003,7 @@
 	,{
 		"Name":"MprSetupProtocolEnum"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -23304,7 +24018,7 @@
 	,{
 		"Name":"MprSetupProtocolFree"
 		,"SetLastError":false
-		,"DllImport":"rtutils"
+		,"DllImport":"rtutils.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
