@@ -289,10 +289,10 @@ namespace Win32Generator
 
             		public static mixin FOURCC(char8 ch0, char8 ch1, char8 ch2, char8 ch3)
             		{
-            			((uint32)(uint8)(ch0) | ((uint32)(uint8)(ch1) << 8) | ((uint32)(uint8)(ch2) << 16) | ((uint32)(uint8)(ch3) << 24 ))
+            			((uint32)(uint8)(ch0) | ((uint32)(uint8)(ch1) << 8) | ((uint32)(uint8)(ch2) << 16) | ((uint32)(uint8)(ch3) << 24))
             		}
 
-            		[Comptime(ConstEval=true)]
+            		[Comptime(ConstEval = true)]
             		public static uint32 FOURCC(String str)
             		{
             			Runtime.Assert(str.Length == 4);
@@ -305,7 +305,17 @@ namespace Win32Generator
             {
             	extension WIN32_ERROR
             	{
-            		public static implicit operator uint64(Self self) => self;
+            		public static implicit operator uint64(Self self) => (uint64)self.Underlying;
+            	}
+            }
+
+            namespace Win32.Networking.WinSock
+            {
+            	public static
+            	{
+            		public const uint32 INADDR_ANY       = (.)0x00000000;
+            		public const uint32 ADDR_ANY         = INADDR_ANY;
+            		public const uint32 INADDR_BROADCAST = (.)0xffffffff;
             	}
             }
 
@@ -546,6 +556,11 @@ namespace Win32Generator
                 var value = constantObject!["Value"]!.ToString();
                 var valueType = constantObject!["ValueType"]!.ToString();
 
+                if(name == "INVALID_SOCKET")
+                {
+                    int x = 1;
+                }
+
                 if (valueType == "PropertyKey")
                 {
                     var valueObject = constantObject!["Value"]!.ToObject<JObject>();
@@ -595,6 +610,9 @@ namespace Win32Generator
                     //catch (Exception)
                     //{
                         AddTabs(indentLevel + 1, ref outputContent);
+                    if(name == "INVALID_SOCKET" && typeName == "SOCKET")
+                        outputContent.Append($"public const {GetType(typeName)} {name} = {typeName}.MaxValue;");
+                    else
                         outputContent.Append($"public const {GetType(typeName)} {name} = {GetValue(typeName, value)};");
                     //}
                     outputContent.AppendLine($"");
