@@ -1,8 +1,10 @@
 ﻿using CommandLine;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -330,6 +332,18 @@ namespace Win32Generator
             		}
             	}
             }
+            
+            namespace Win32.Devices.Properties
+            {
+            	extension DEVPROPKEY
+            	{
+            		public this(System.Guid fmtid, uint32 pid)
+            		{
+            			this.fmtid = fmtid;
+            			this.pid = pid;
+            		}
+            	}
+            }
             """;
 
             extrasStringBuilder.Append(win32Extras);
@@ -399,7 +413,12 @@ namespace Win32Generator
                 outputContent.AppendLine("public static");
                 outputContent.AppendLine("{");
 
-                outputContent.Append(constantsContent.ToString());
+                if (apiFile.Api.Contains("Globalization"))
+                {
+                    int v = 1;
+                }
+
+                outputContent.Append(constantsContent);
 
                 outputContent.AppendLine("}");
                 outputContent.AppendLine("#endregion");
@@ -522,7 +541,7 @@ namespace Win32Generator
                 AddTabs(indentLevel + 1, ref outputContent);
                 if (importDll.Equals("XAudio2_8"))
                     importDll = "XAudio2";
-                outputContent.AppendLine($"[Import(\"{importDll}.lib\"), CLink, CallingConvention(.Stdcall)]");
+                outputContent.AppendLine($"[Import(\"{importDll.Replace(".dll",".lib").Replace(".cpl",".lib")}\"), CLink, CallingConvention(.Stdcall)]");
                 AddTabs(indentLevel + 1, ref outputContent);
                 outputContent.AppendLine($"public static extern {func.ReturnType.TypeName} {func.Name}({func.GetParamsString()});");
 
@@ -556,7 +575,7 @@ namespace Win32Generator
                 var value = constantObject!["Value"]!.ToString();
                 var valueType = constantObject!["ValueType"]!.ToString();
 
-                if(name == "INVALID_SOCKET")
+                if(name == "U8_LEAD4_T1_BITS")
                 {
                     int x = 1;
                 }
@@ -1244,7 +1263,7 @@ namespace Win32Generator
             if (typeObject["Name"] != null)
                 name = typeObject["Name"].ToString();
 
-            if (name.Contains("IImageList"))
+            if (name.Contains("IImageList") || name.Contains("D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE"))
             {
                 var paramTypeApi = string.Empty;
                 var typeChildObject = typeObject["Child"]?.ToObject<JObject>();
@@ -1258,7 +1277,7 @@ namespace Win32Generator
                 }
                 if (!string.IsNullOrEmpty(paramTypeApi))
                 {
-                    name = $"{paramTypeApi}.{name}";
+                    name = $"{RootNamespace}.{paramTypeApi}.{name}";
                 }
             }
 
@@ -1360,12 +1379,39 @@ namespace Win32Generator
 
             if (type == "String")
             {
+                //var strObject = $"{{\"value\":\"{value}\"}}";
+                //var x = JObject.Parse(strObject);
+                //string stringValue = x["value"].ToObject<string>();
+
+                //stringValue = stringValue.Replace("\\", "\\\\");
+
+                //if (value.Contains("\\u"))
+                //{
+                //    var occurences = new Regex(@"\\u([a-fA-F_0-9..]{4})");
+
+                //    MatchCollection matches = occurences.Matches(value);
+
+                //    foreach (var match in matches)
+                //    {
+                //        var referencedApi = match.ToString();
+                //    }
+
+
+                //    int p = 1;
+                //}
+
+                value = Regex.Replace(value, @"\\u([a-fA-F_0-9..]{4})", "\\u{$1}");
                 return $"\"{value}\"";
             }
 
             if (type == "PWSTR")
             {
                 return $"(PWSTR)(void*){value}";
+            }
+
+            if (type == "PSTR")
+            {
+                return $"(PSTR)(void*){value}";
             }
 
             if (type == "float" || type == "Single")
