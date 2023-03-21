@@ -332,7 +332,7 @@ namespace Win32Generator
             //		}
             //	}
             //}
-            
+
             //namespace Win32.Devices.Properties
             //{
             //	extension DEVPROPKEY
@@ -541,7 +541,12 @@ namespace Win32Generator
                 AddTabs(indentLevel + 1, ref outputContent);
                 if (importDll.Equals("XAudio2_8"))
                     importDll = "XAudio2";
-                outputContent.AppendLine($"[Import(\"{importDll.Replace(".dll",".lib").Replace(".cpl",".lib")}\"), CLink, CallingConvention(.Stdcall)]");
+
+                string importDllName = importDll;
+                if (!importDll.Equals("D3DCOMPILER_47.dll"))
+                    importDllName = importDll.Replace(".dll", ".lib").Replace(".cpl", ".lib");
+
+                outputContent.AppendLine($"[Import(\"{importDllName}\"), CLink, CallingConvention(.Stdcall)]");
                 AddTabs(indentLevel + 1, ref outputContent);
                 outputContent.AppendLine($"public static extern {func.ReturnType.TypeName} {func.Name}({func.GetParamsString()});");
 
@@ -575,7 +580,7 @@ namespace Win32Generator
                 var value = constantObject!["Value"]!.ToString();
                 var valueType = constantObject!["ValueType"]!.ToString();
 
-                if(name == "U8_LEAD4_T1_BITS")
+                if (name == "U8_LEAD4_T1_BITS")
                 {
                     int x = 1;
                 }
@@ -628,8 +633,8 @@ namespace Win32Generator
                     //}
                     //catch (Exception)
                     //{
-                        AddTabs(indentLevel + 1, ref outputContent);
-                    if(name == "INVALID_SOCKET" && typeName == "SOCKET")
+                    AddTabs(indentLevel + 1, ref outputContent);
+                    if (name == "INVALID_SOCKET" && typeName == "SOCKET")
                         outputContent.Append($"public const {GetType(typeName)} {name} = {typeName}.MaxValue;");
                     else
                         outputContent.Append($"public const {GetType(typeName)} {name} = {GetValue(typeName, value)};");
@@ -1038,7 +1043,7 @@ namespace Win32Generator
                 bool returnIsOutputParam = false;
                 if (func.ReturnType.Kind == "ApiRef" && !NativeTypeDefsAndEnums.Contains(func.ReturnType.TypeName))
                 {
-                    if(func.ReturnType.TargetKind != "Com")
+                    if (func.ReturnType.TargetKind != "Com")
                     {
                         returnIsOutputParam = true;
                     }
