@@ -893,7 +893,7 @@ namespace Win32Generator
                         }
                     }
                     AddTabs(indentLevel + 1, ref membersWriter);
-                    if (fieldTypeInfo.type.Contains("_Anonymous_") && fieldName.Contains("Anonymous"))
+                    if (fieldTypeInfo.type.Contains("_Anonymous") && fieldName.Contains("Anonymous"))
                         membersWriter.AppendLine($"{fieldVisibility} using {fieldTypeInfo.type} {finalFieldName};");
                     else
                         membersWriter.AppendLine($"{fieldVisibility} {fieldTypeInfo.type} {finalFieldName};");
