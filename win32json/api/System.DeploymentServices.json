@@ -1432,6 +1432,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"pwszUserName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"pwszDomain","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
@@ -1520,6 +1521,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"OptionType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"OptionLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -1535,6 +1537,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Operation","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"HardwareAddressType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -1561,6 +1564,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":1
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"bMagicCookie","Type":{"Kind":"Array","Shape":{"Size":4},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 					,{"Name":"uMagicCookie","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1577,6 +1581,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"OptionCode","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"DataLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1592,6 +1597,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"MessageType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Message","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -1606,6 +1612,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"MessageType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"TransactionIDByte1","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -1623,6 +1630,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"MessageType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"HopCount","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -1640,6 +1648,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"uSizeOfStruct","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pwszName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -1657,6 +1666,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"uFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"System.DeploymentServices","Parents":[]},"Attrs":[]}
@@ -1671,6 +1681,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"bAddress","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 					,{"Name":"uIpAddress","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1687,6 +1698,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"pRelayMessage","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PXE_DHCPV6_RELAY_MESSAGE","TargetKind":"Default","Api":"System.DeploymentServices","Parents":[]}},"Attrs":[]}
 			,{"Name":"cbRelayMessage","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1727,6 +1739,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ulLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ulMcServerVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1743,6 +1756,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ulLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ulProviderVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1775,9 +1789,10 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ulStructureLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"ullFileSize","Type":{"Kind":"ApiRef","Name":"ULARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"ullFileSize","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"ulBlockSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
@@ -1795,7 +1810,7 @@
 		,"Params":[
 			{"Name":"hSessionKey","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pCallerData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
-			,{"Name":"ullFileSize","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ULARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"ullFileSize","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -1843,7 +1858,7 @@
 			,{"Name":"pCallerData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
 			,{"Name":"pContents","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":3}]}
 			,{"Name":"ulSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"pullContentOffset","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ULARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pullContentOffset","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -1884,6 +1899,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ulLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ulApiVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1906,6 +1922,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SessionStart","Type":{"Kind":"ApiRef","Name":"PFN_WdsTransportClientSessionStart","TargetKind":"FunctionPointer","Api":"System.DeploymentServices","Parents":[]},"Attrs":[]}
 			,{"Name":"SessionStartEx","Type":{"Kind":"ApiRef","Name":"PFN_WdsTransportClientSessionStartEx","TargetKind":"FunctionPointer","Api":"System.DeploymentServices","Parents":[]},"Attrs":[]}
@@ -2236,7 +2253,7 @@
 	,{
 		"Name":"IWdsTransportCacheable"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"46ad894b-0bab-47dc-84b2-7b553f1d8f80"
 		,"Interface":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -2252,7 +2269,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pbDirty","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pbDirty","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2293,7 +2310,7 @@
 	,{
 		"Name":"IWdsTransportCollection"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"b8ba4b1a-2ff4-43ab-996c-b2b10a91a6eb"
 		,"Interface":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -2344,7 +2361,7 @@
 	,{
 		"Name":"IWdsTransportManager"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"5b0d35f5-1b13-4afd-b878-6526dc340b5d"
 		,"Interface":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -2367,7 +2384,7 @@
 	,{
 		"Name":"IWdsTransportServer"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"09ccd093-830d-4344-a30a-73ae8e8fca90"
 		,"Interface":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -2446,7 +2463,7 @@
 	,{
 		"Name":"IWdsTransportServer2"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"256e999f-6df4-4538-81b9-857b9ab8fb47"
 		,"Interface":{"Kind":"ApiRef","Name":"IWdsTransportServer","TargetKind":"Com","Api":"System.DeploymentServices","Parents":[]}
@@ -2470,7 +2487,7 @@
 	,{
 		"Name":"IWdsTransportSetupManager"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"f7238425-efa8-40a4-aef9-c98d969c0b75"
 		,"Interface":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -2549,7 +2566,7 @@
 	,{
 		"Name":"IWdsTransportSetupManager2"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"02be79da-7e9e-4366-8b6e-2aa9a91be47f"
 		,"Interface":{"Kind":"ApiRef","Name":"IWdsTransportSetupManager","TargetKind":"Com","Api":"System.DeploymentServices","Parents":[]}
@@ -2587,7 +2604,7 @@
 	,{
 		"Name":"IWdsTransportConfigurationManager"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"84cc4779-42dd-4792-891e-1321d6d74b44"
 		,"Interface":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -2629,8 +2646,8 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"bRealtimeStatus","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
-					,{"Name":"pbServicesRunning","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"bRealtimeStatus","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+					,{"Name":"pbServicesRunning","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2705,7 +2722,7 @@
 	,{
 		"Name":"IWdsTransportConfigurationManager2"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"d0d85caf-a153-4f1d-a9dd-96f431c50717"
 		,"Interface":{"Kind":"ApiRef","Name":"IWdsTransportConfigurationManager","TargetKind":"Com","Api":"System.DeploymentServices","Parents":[]}
@@ -2729,7 +2746,7 @@
 	,{
 		"Name":"IWdsTransportNamespaceManager"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"3e22d9f6-3777-4d98-83e1-f98696717ba3"
 		,"Interface":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -2774,7 +2791,7 @@
 				,"Params":[
 					{"Name":"bszContentProvider","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"bszNamespaceName","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"bIncludeTombstones","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					,{"Name":"bIncludeTombstones","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"ppWdsTransportNamespaces","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IWdsTransportCollection","TargetKind":"Com","Api":"System.DeploymentServices","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -2783,7 +2800,7 @@
 	,{
 		"Name":"IWdsTransportTftpManager"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"1327a7c8-ae8a-4fb3-8150-136227c37e9a"
 		,"Interface":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -2805,7 +2822,7 @@
 	,{
 		"Name":"IWdsTransportServicePolicy"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"b9468578-9f2b-48cc-b27a-a60799c2750c"
 		,"Interface":{"Kind":"ApiRef","Name":"IWdsTransportCacheable","TargetKind":"Com","Api":"System.DeploymentServices","Parents":[]}
@@ -2977,7 +2994,7 @@
 	,{
 		"Name":"IWdsTransportServicePolicy2"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"65c19e5c-aa7e-4b91-8944-91e0e5572797"
 		,"Interface":{"Kind":"ApiRef","Name":"IWdsTransportServicePolicy","TargetKind":"Com","Api":"System.DeploymentServices","Parents":[]}
@@ -3049,7 +3066,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pbEnableTftpVariableWindowExtension","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pbEnableTftpVariableWindowExtension","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -3063,7 +3080,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"bEnableTftpVariableWindowExtension","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"bEnableTftpVariableWindowExtension","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 		]
@@ -3071,7 +3088,7 @@
 	,{
 		"Name":"IWdsTransportDiagnosticsPolicy"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"13b33efc-7856-4f61-9a59-8de67b6b87b6"
 		,"Interface":{"Kind":"ApiRef","Name":"IWdsTransportCacheable","TargetKind":"Com","Api":"System.DeploymentServices","Parents":[]}
@@ -3087,7 +3104,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pbEnabled","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pbEnabled","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -3101,7 +3118,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"bEnabled","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"bEnabled","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -3137,7 +3154,7 @@
 	,{
 		"Name":"IWdsTransportMulticastSessionPolicy"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"4e5753cf-68ec-4504-a951-4a003266606b"
 		,"Interface":{"Kind":"ApiRef","Name":"IWdsTransportCacheable","TargetKind":"Com","Api":"System.DeploymentServices","Parents":[]}
@@ -3237,7 +3254,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pbClientFallback","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pbClientFallback","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -3251,7 +3268,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"bClientFallback","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"bClientFallback","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 		]
@@ -3259,7 +3276,7 @@
 	,{
 		"Name":"IWdsTransportNamespace"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"fa561f57-fbef-4ed3-b056-127cb1b33b84"
 		,"Interface":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -3443,7 +3460,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pbRegistered","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pbRegistered","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -3457,7 +3474,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pbTombstoned","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pbTombstoned","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -3485,7 +3502,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pbTransmissionStarted","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pbTransmissionStarted","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -3508,7 +3525,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"bTerminateSessions","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"bTerminateSessions","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -3551,7 +3568,7 @@
 	,{
 		"Name":"IWdsTransportNamespaceAutoCast"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"ad931a72-c4bd-4c41-8fbc-59c9c748df9e"
 		,"Interface":{"Kind":"ApiRef","Name":"IWdsTransportNamespace","TargetKind":"Com","Api":"System.DeploymentServices","Parents":[]}
@@ -3561,7 +3578,7 @@
 	,{
 		"Name":"IWdsTransportNamespaceScheduledCast"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"3840cecf-d76c-416e-a4cc-31c741d2874b"
 		,"Interface":{"Kind":"ApiRef","Name":"IWdsTransportNamespace","TargetKind":"Com","Api":"System.DeploymentServices","Parents":[]}
@@ -3582,7 +3599,7 @@
 	,{
 		"Name":"IWdsTransportNamespaceScheduledCastManualStart"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"013e6e4c-e6a7-4fb5-b7ff-d9f5da805c31"
 		,"Interface":{"Kind":"ApiRef","Name":"IWdsTransportNamespaceScheduledCast","TargetKind":"Com","Api":"System.DeploymentServices","Parents":[]}
@@ -3592,7 +3609,7 @@
 	,{
 		"Name":"IWdsTransportNamespaceScheduledCastAutoStart"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"d606af3d-ea9c-4219-961e-7491d618d9b9"
 		,"Interface":{"Kind":"ApiRef","Name":"IWdsTransportNamespaceScheduledCast","TargetKind":"Com","Api":"System.DeploymentServices","Parents":[]}
@@ -3658,7 +3675,7 @@
 	,{
 		"Name":"IWdsTransportContent"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"d405d711-0296-4ab4-a860-ac7d32e65798"
 		,"Interface":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -3733,7 +3750,7 @@
 	,{
 		"Name":"IWdsTransportSession"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"f4efea88-65b1-4f30-a4b9-2793987796fb"
 		,"Interface":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -3850,7 +3867,7 @@
 	,{
 		"Name":"IWdsTransportClient"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"b5dbc93a-cabe-46ca-837f-3e44e93c6545"
 		,"Interface":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -4026,7 +4043,7 @@
 	,{
 		"Name":"IWdsTransportTftpClient"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"b022d3ae-884d-4d85-b146-53320e76ef62"
 		,"Interface":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -4134,7 +4151,7 @@
 	,{
 		"Name":"IWdsTransportContentProvider"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"b9489f24-f219-4acf-aad7-265c7c08a6ae"
 		,"Interface":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -4744,7 +4761,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"pszProviderName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
@@ -4761,7 +4778,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"pszProviderName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
@@ -4774,7 +4791,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"pszProviderName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
@@ -4788,7 +4805,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"phEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
@@ -4801,7 +4818,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hEnum","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
@@ -4815,7 +4832,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hEnum","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
@@ -4828,7 +4845,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"pProvider","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PXE_PROVIDER","TargetKind":"Default","Api":"System.DeploymentServices","Parents":[]}},"Attrs":["In"]}
@@ -4841,7 +4858,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hProvider","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
@@ -4857,7 +4874,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hClientRequest","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
@@ -4873,7 +4890,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hClientRequest","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
@@ -4887,7 +4904,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hProvider","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
@@ -4918,7 +4935,7 @@
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hProvider","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
@@ -4933,7 +4950,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hProvider","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
@@ -4948,7 +4965,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hProvider","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
@@ -4964,7 +4981,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"pRecvPacket","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":1}]}
@@ -4998,7 +5015,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"pReplyPacket","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out",{"Kind":"MemorySize","BytesParamIndex":1}]}
@@ -5034,7 +5051,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"pReplyPacket","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out",{"Kind":"MemorySize","BytesParamIndex":1}]}
@@ -5068,7 +5085,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"pPacket","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":1}]}
@@ -5100,7 +5117,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"pPacket","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":1}]}
@@ -5136,7 +5153,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"pPacket","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":1}]}
@@ -5211,7 +5228,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"uInfoType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -5242,7 +5259,7 @@
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hProvider","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
@@ -5257,7 +5274,7 @@
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hProvider","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
@@ -5273,7 +5290,7 @@
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hProvider","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
@@ -5288,7 +5305,7 @@
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hProvider","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
@@ -5304,7 +5321,7 @@
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hProvider","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
@@ -5318,7 +5335,7 @@
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hProvider","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
@@ -5392,7 +5409,7 @@
 		,"Params":[
 			{"Name":"hSessionKey","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"ulSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"pullOffset","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ULARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pullOffset","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":["In"]}
 		]
 	}
 	,{

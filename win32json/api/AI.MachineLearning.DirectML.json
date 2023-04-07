@@ -5,7 +5,7 @@
 		"Name":"DML_TARGET_VERSION"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
-		,"Value":16384
+		,"Value":20480
 		,"Attrs":[]
 	}
 	,{
@@ -93,7 +93,7 @@
 			{"Name":"DML_TENSOR_FLAG_NONE","Value":0}
 			,{"Name":"DML_TENSOR_FLAG_OWNED_BY_DML","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"DML_BUFFER_TENSOR_DESC"
@@ -102,6 +102,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"DataType","Type":{"Kind":"ApiRef","Name":"DML_TENSOR_DATA_TYPE","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"DML_TENSOR_FLAGS","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]},"Attrs":[]}
@@ -121,6 +122,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Type","Type":{"Kind":"ApiRef","Name":"DML_TENSOR_TYPE","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]},"Attrs":[]}
 			,{"Name":"Desc","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Const"]}
@@ -387,6 +389,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Scale","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"Bias","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -401,6 +404,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Width","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Height","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -483,6 +487,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Bytes","Type":{"Kind":"Array","Shape":{"Size":8},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"Int8","Type":{"Kind":"Native","Name":"SByte"},"Attrs":[]}
@@ -518,6 +523,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Type","Type":{"Kind":"ApiRef","Name":"DML_OPERATOR_TYPE","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]},"Attrs":[]}
 			,{"Name":"Desc","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Const"]}
@@ -532,6 +538,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -547,6 +554,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -562,6 +570,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -577,6 +586,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ATensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"BTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -592,6 +602,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ATensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"BTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -608,6 +619,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -623,6 +635,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -638,6 +651,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -653,6 +667,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -670,6 +685,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -685,6 +701,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ATensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"BTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -700,6 +717,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -715,6 +733,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -730,6 +749,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -745,6 +765,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ATensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"BTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -760,6 +781,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ATensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"BTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -775,6 +797,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ATensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"BTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -790,6 +813,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ATensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"BTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -805,6 +829,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -819,6 +844,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ATensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"BTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -834,6 +860,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ATensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"BTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -849,6 +876,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ATensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"BTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -864,6 +892,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ATensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"BTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -879,6 +908,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ATensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"BTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -894,6 +924,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ATensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"BTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -909,6 +940,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"ExponentTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -925,6 +957,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -941,6 +974,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -956,6 +990,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -971,6 +1006,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -986,6 +1022,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ATensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"BTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1001,6 +1038,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1016,6 +1054,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1032,6 +1071,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"ScaleTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1048,6 +1088,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"ScaleTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1064,6 +1105,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1079,6 +1121,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1093,6 +1136,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1109,6 +1153,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1123,6 +1168,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1138,6 +1184,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1154,6 +1201,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1168,6 +1216,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"SlopeTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1183,6 +1232,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1199,6 +1249,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1213,6 +1264,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1229,6 +1281,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1245,6 +1298,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1259,6 +1313,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1273,6 +1328,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1288,6 +1344,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1302,6 +1359,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1316,6 +1374,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1331,6 +1390,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"FilterTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1357,6 +1417,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ATensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"BTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1378,6 +1439,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Function","Type":{"Kind":"ApiRef","Name":"DML_REDUCE_FUNCTION","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]},"Attrs":[]}
 			,{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1395,6 +1457,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1415,6 +1478,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1435,6 +1499,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1454,6 +1519,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"ROITensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1471,6 +1537,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1489,6 +1556,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1503,6 +1571,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1519,6 +1588,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"InputTensors","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1535,6 +1605,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1554,6 +1625,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1571,6 +1643,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1587,6 +1660,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"IndicesTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1604,6 +1678,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1619,6 +1694,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1634,6 +1710,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1650,6 +1727,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputValueTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1667,6 +1745,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"MeanTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1688,6 +1767,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"ScaleTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1708,6 +1788,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1727,6 +1808,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1744,6 +1826,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"WeightTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1767,6 +1850,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"WeightTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1796,6 +1880,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"WeightTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1820,6 +1905,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1834,6 +1920,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1848,6 +1935,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1863,6 +1951,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1878,6 +1967,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1893,6 +1983,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1908,6 +1999,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1923,6 +2015,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1938,6 +2031,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1953,6 +2047,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ConditionTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"ATensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1969,6 +2064,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -1985,6 +2081,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2005,6 +2102,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"IndicesTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2020,6 +2118,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"Offset","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -2035,6 +2134,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"IndicesTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2052,6 +2152,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"IndicesTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"ValuesTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2068,6 +2169,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2085,6 +2187,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ATensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"BTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2100,6 +2203,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ATensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"BTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2115,6 +2219,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2130,6 +2235,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2145,6 +2251,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ATensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"BTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2160,6 +2267,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ATensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"BTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2175,6 +2283,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"ValueDataType","Type":{"Kind":"ApiRef","Name":"DML_TENSOR_DATA_TYPE","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]},"Attrs":[]}
@@ -2190,6 +2299,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"ValueDataType","Type":{"Kind":"ApiRef","Name":"DML_TENSOR_DATA_TYPE","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]},"Attrs":[]}
@@ -2206,6 +2316,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2223,6 +2334,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"SequenceLengthsTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2239,6 +2351,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"IndicesTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2255,6 +2368,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"IndicesTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2272,6 +2386,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"IndicesTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2290,6 +2405,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2311,6 +2427,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2329,6 +2446,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputValueTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2347,6 +2465,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2363,6 +2482,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2379,6 +2499,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"ScaleTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2400,6 +2521,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2419,6 +2541,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ATensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"AZeroPointTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2436,6 +2559,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ATensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"AScaleTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2457,6 +2581,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"InputZeroPointTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2480,6 +2605,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"InputScaleTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2508,6 +2634,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ATensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"BTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2523,6 +2650,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ATensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"BTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2538,6 +2666,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ATensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"BTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2553,6 +2682,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2567,6 +2697,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2581,6 +2712,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ATensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"BTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2596,6 +2728,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ATensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"BTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2611,6 +2744,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2626,6 +2760,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"InputGradientTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2641,6 +2776,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputGradientTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputGradientTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2661,6 +2797,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"InputGradientTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2682,6 +2819,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputStateTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2698,6 +2836,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputCountTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2713,6 +2852,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputGradientTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputGradientTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2732,6 +2872,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputGradientTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputGradientTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2750,6 +2891,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputParametersTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"InputFirstMomentTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2774,6 +2916,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2791,6 +2934,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2808,6 +2952,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"ROITensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2831,6 +2976,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"IndicesTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2849,6 +2995,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ATensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"BTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2864,6 +3011,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"InputGradientTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2881,6 +3029,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ATensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"BTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2896,6 +3045,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"InputGradientTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2916,6 +3066,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2933,6 +3084,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"InputGradientTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2954,6 +3106,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ATensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"AScaleTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2975,6 +3128,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"OutputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -2991,6 +3145,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputTensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"ROITensor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_TENSOR_DESC","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -3024,6 +3179,8 @@
 			,{"Name":"DML_FEATURE_LEVEL_3_0","Value":12288}
 			,{"Name":"DML_FEATURE_LEVEL_3_1","Value":12544}
 			,{"Name":"DML_FEATURE_LEVEL_4_0","Value":16384}
+			,{"Name":"DML_FEATURE_LEVEL_4_1","Value":16640}
+			,{"Name":"DML_FEATURE_LEVEL_5_0","Value":20480}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -3047,6 +3204,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"DataType","Type":{"Kind":"ApiRef","Name":"DML_TENSOR_DATA_TYPE","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]},"Attrs":[]}
 		]
@@ -3060,6 +3218,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"IsSupported","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 		]
@@ -3073,6 +3232,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"RequestedFeatureLevelCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"RequestedFeatureLevels","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_FEATURE_LEVEL","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -3087,6 +3247,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"MaxSupportedFeatureLevel","Type":{"Kind":"ApiRef","Name":"DML_FEATURE_LEVEL","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]},"Attrs":[]}
 		]
@@ -3100,6 +3261,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Dispatchable","Type":{"Kind":"ApiRef","Name":"IDMLDispatchable","TargetKind":"Com","Api":"AI.MachineLearning.DirectML","Parents":[]},"Attrs":[]}
 			,{"Name":"CPUDescriptorHandle","Type":{"Kind":"ApiRef","Name":"D3D12_CPU_DESCRIPTOR_HANDLE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
@@ -3122,7 +3284,7 @@
 			,{"Name":"DML_EXECUTION_FLAG_DISABLE_META_COMMANDS","Value":2}
 			,{"Name":"DML_EXECUTION_FLAG_DESCRIPTORS_VOLATILE","Value":4}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"DML_CREATE_DEVICE_FLAGS"
@@ -3135,7 +3297,7 @@
 			{"Name":"DML_CREATE_DEVICE_FLAG_NONE","Value":0}
 			,{"Name":"DML_CREATE_DEVICE_FLAG_DEBUG","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"IDMLObject"
@@ -3397,6 +3559,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"RequiredDescriptorCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"TemporaryResourceSize","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -3480,6 +3643,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Type","Type":{"Kind":"ApiRef","Name":"DML_BINDING_TYPE","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]},"Attrs":[]}
 			,{"Name":"Desc","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Const"]}
@@ -3494,6 +3658,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Buffer","Type":{"Kind":"ApiRef","Name":"ID3D12Resource","TargetKind":"Com","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
 			,{"Name":"Offset","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -3509,6 +3674,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"BindingCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Bindings","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DML_BUFFER_BINDING","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]}},"Attrs":["Const"]}
@@ -3656,6 +3822,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Type","Type":{"Kind":"ApiRef","Name":"DML_GRAPH_EDGE_TYPE","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]},"Attrs":[]}
 			,{"Name":"Desc","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Const"]}
@@ -3670,6 +3837,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"GraphInputIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ToNodeIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3686,6 +3854,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"FromNodeIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"FromNodeOutputIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3702,6 +3871,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"FromNodeIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"FromNodeOutputIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3732,6 +3902,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Type","Type":{"Kind":"ApiRef","Name":"DML_GRAPH_NODE_TYPE","TargetKind":"Default","Api":"AI.MachineLearning.DirectML","Parents":[]},"Attrs":[]}
 			,{"Name":"Desc","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Const"]}
@@ -3746,6 +3917,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Operator","Type":{"Kind":"ApiRef","Name":"IDMLOperator","TargetKind":"Com","Api":"AI.MachineLearning.DirectML","Parents":[]},"Attrs":[]}
 			,{"Name":"Name","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
@@ -3760,6 +3932,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InputCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"OutputCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}

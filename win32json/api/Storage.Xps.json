@@ -612,7 +612,7 @@
 		,"IntegerBase":"UInt32"
 	}
 	,{
-		"Name":"DEVICE_CAPABILITIES"
+		"Name":"PRINTER_DEVICE_CAPABILITIES"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
@@ -710,6 +710,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ptPosition","Type":{"Kind":"ApiRef","Name":"POINT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"ptSize","Type":{"Kind":"ApiRef","Name":"POINT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -726,6 +727,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"DataBytes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"InjectionPoint","Type":{"Kind":"ApiRef","Name":"PSINJECT_POINT","TargetKind":"Default","Api":"Storage.Xps","Parents":[]},"Attrs":[]}
@@ -741,6 +743,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bPageIndependent","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"bSetPageDevice","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -755,6 +758,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lOrientation","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"lWidth","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -786,6 +790,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"lpszDocName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
@@ -803,6 +808,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"lpszDocName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
@@ -1075,6 +1081,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"x","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"y","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -1089,6 +1096,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"width","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"height","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -1103,6 +1111,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"x","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"y","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -1119,6 +1128,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"length","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"gap","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -1133,6 +1143,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"index","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"advanceWidth","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -1149,6 +1160,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"unicodeStringStart","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"unicodeStringLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1165,6 +1177,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"m11","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"m12","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -1183,6 +1196,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"colorType","Type":{"Kind":"ApiRef","Name":"XPS_COLOR_TYPE","TargetKind":"Default","Api":"Storage.Xps","Parents":[]},"Attrs":[]}
 			,{"Name":"value","Type":{"Kind":"ApiRef","Name":"XPS_COLOR_VALUE","TargetKind":"Default","Api":"Storage.Xps","Parents":[]},"Attrs":[]}
@@ -1195,6 +1209,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"sRGB","Type":{"Kind":"ApiRef","Name":"_sRGB_e__Struct","TargetKind":"Default","Api":"Storage.Xps","Parents":["XPS_COLOR_VALUE"]},"Attrs":[]}
 					,{"Name":"scRGB","Type":{"Kind":"ApiRef","Name":"_scRGB_e__Struct","TargetKind":"Default","Api":"Storage.Xps","Parents":["XPS_COLOR_VALUE"]},"Attrs":[]}
@@ -1208,27 +1223,12 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"alpha","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 							,{"Name":"red","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 							,{"Name":"green","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 							,{"Name":"blue","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-						]
-						,"NestedTypes":[
-						]
-					}
-					,{
-						"Name":"_sRGB_e__Struct"
-						,"Architectures":[]
-						,"Platform":null
-						,"Kind":"Struct"
-						,"Size":0
-						,"PackingSize":0
-						,"Fields":[
-							{"Name":"alpha","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-							,{"Name":"red","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-							,{"Name":"green","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-							,{"Name":"blue","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]
@@ -1240,9 +1240,27 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"channelCount","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 							,{"Name":"channels","Type":{"Kind":"Array","Shape":{"Size":9},"Child":{"Kind":"Native","Name":"Single"}},"Attrs":[]}
+						]
+						,"NestedTypes":[
+						]
+					}
+					,{
+						"Name":"_sRGB_e__Struct"
+						,"Architectures":[]
+						,"Platform":null
+						,"Kind":"Struct"
+						,"Size":0
+						,"PackingSize":0
+						,"SizeField":""
+						,"Fields":[
+							{"Name":"alpha","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+							,{"Name":"red","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+							,{"Name":"green","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+							,{"Name":"blue","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]
@@ -7945,7 +7963,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"XPS_SIGN_POLICY_NONE","Value":0}
@@ -7962,7 +7980,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"XPS_SIGN_FLAGS_NONE","Value":0}
@@ -8876,7 +8894,7 @@
 		,"Params":[
 			{"Name":"pDevice","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"pPort","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
-			,{"Name":"fwCapability","Type":{"Kind":"ApiRef","Name":"DEVICE_CAPABILITIES","TargetKind":"Default","Api":"Storage.Xps","Parents":[]},"Attrs":["In"]}
+			,{"Name":"fwCapability","Type":{"Kind":"ApiRef","Name":"PRINTER_DEVICE_CAPABILITIES","TargetKind":"Default","Api":"Storage.Xps","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pOutput","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Out","Optional"]}
 			,{"Name":"pDevMode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEVMODEA","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["In","Optional","Const"]}
 		]
@@ -8893,7 +8911,7 @@
 		,"Params":[
 			{"Name":"pDevice","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"pPort","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
-			,{"Name":"fwCapability","Type":{"Kind":"ApiRef","Name":"DEVICE_CAPABILITIES","TargetKind":"Default","Api":"Storage.Xps","Parents":[]},"Attrs":["In"]}
+			,{"Name":"fwCapability","Type":{"Kind":"ApiRef","Name":"PRINTER_DEVICE_CAPABILITIES","TargetKind":"Default","Api":"Storage.Xps","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pOutput","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Out","Optional"]}
 			,{"Name":"pDevMode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEVMODEW","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["In","Optional","Const"]}
 		]

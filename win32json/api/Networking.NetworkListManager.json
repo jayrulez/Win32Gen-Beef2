@@ -142,6 +142,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"UsageInMegabytes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"LastSyncTime","Type":{"Kind":"ApiRef","Name":"FILETIME","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -156,6 +157,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InterfaceGuid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"UsageData","Type":{"Kind":"ApiRef","Name":"NLM_USAGE_DATA","TargetKind":"Default","Api":"Networking.NetworkListManager","Parents":[]},"Attrs":[]}
@@ -176,6 +178,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"data","Type":{"Kind":"Array","Shape":{"Size":128},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 		]
@@ -203,6 +206,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ProfileName","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"cost","Type":{"Kind":"ApiRef","Name":"NLM_CONNECTION_COST","TargetKind":"Default","Api":"Networking.NetworkListManager","Parents":[]},"Attrs":[]}
@@ -257,6 +261,20 @@
 			{"Name":"NLM_DOMAIN_TYPE_NON_DOMAIN_NETWORK","Value":0}
 			,{"Name":"NLM_DOMAIN_TYPE_DOMAIN_NETWORK","Value":1}
 			,{"Name":"NLM_DOMAIN_TYPE_DOMAIN_AUTHENTICATED","Value":2}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"NLM_DOMAIN_AUTHENTICATION_KIND"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"NLM_DOMAIN_AUTHENTICATION_KIND_NONE","Value":0}
+			,{"Name":"NLM_DOMAIN_AUTHENTICATION_KIND_LDAP","Value":1}
+			,{"Name":"NLM_DOMAIN_AUTHENTICATION_KIND_TLS","Value":2}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -344,7 +362,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pbIsConnected","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pbIsConnected","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -358,7 +376,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pbIsConnected","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pbIsConnected","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -552,7 +570,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pbIsConnected","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pbIsConnected","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -566,7 +584,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pbIsConnected","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pbIsConnected","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -603,6 +621,29 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"NewCategory","Type":{"Kind":"ApiRef","Name":"NLM_NETWORK_CATEGORY","TargetKind":"Default","Api":"Networking.NetworkListManager","Parents":[]},"Attrs":["In"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"INetwork2"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"b5550abb-3391-4310-804f-25dcc325ed81"
+		,"Interface":{"Kind":"ApiRef","Name":"INetwork","TargetKind":"Com","Api":"Networking.NetworkListManager","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"IsDomainAuthenticatedBy"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"domainAuthenticationKind","Type":{"Kind":"ApiRef","Name":"NLM_DOMAIN_AUTHENTICATION_KIND","TargetKind":"Default","Api":"Networking.NetworkListManager","Parents":[]},"Attrs":["In"]}
+					,{"Name":"pValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -787,7 +828,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pbIsConnected","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pbIsConnected","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -801,7 +842,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pbIsConnected","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pbIsConnected","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -850,6 +891,29 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pDomainType","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"NLM_DOMAIN_TYPE","TargetKind":"Default","Api":"Networking.NetworkListManager","Parents":[]}},"Attrs":["Out","RetVal"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"INetworkConnection2"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"00e676ed-5a35-4738-92eb-8581738d0f0a"
+		,"Interface":{"Kind":"ApiRef","Name":"INetworkConnection","TargetKind":"Com","Api":"Networking.NetworkListManager","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"IsDomainAuthenticatedBy"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"domainAuthenticationKind","Type":{"Kind":"ApiRef","Name":"NLM_DOMAIN_AUTHENTICATION_KIND","TargetKind":"Default","Api":"Networking.NetworkListManager","Parents":[]},"Attrs":["In"]}
+					,{"Name":"pValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -1020,7 +1084,7 @@
 				,"Params":[
 					{"Name":"length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pDestIPAddrList","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"ApiRef","Name":"NLM_SOCKADDR","TargetKind":"Default","Api":"Networking.NetworkListManager","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"bAppend","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					,{"Name":"bAppend","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 		]

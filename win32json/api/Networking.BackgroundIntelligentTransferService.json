@@ -1494,6 +1494,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"BytesTotal","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"BytesTransferred","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -1719,6 +1720,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"RemoteName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"LocalName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -1733,6 +1735,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"BytesTotal","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"BytesTransferred","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -1749,6 +1752,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"CreationTime","Type":{"Kind":"ApiRef","Name":"FILETIME","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"ModificationTime","Type":{"Kind":"ApiRef","Name":"FILETIME","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -2495,6 +2499,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"BytesTotal","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"BytesTransferred","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -2538,6 +2543,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"UserName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"Password","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -2552,6 +2558,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Basic","Type":{"Kind":"ApiRef","Name":"BG_BASIC_CREDENTIALS","TargetKind":"Default","Api":"Networking.BackgroundIntelligentTransferService","Parents":[]},"Attrs":[]}
 		]
@@ -2565,6 +2572,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Target","Type":{"Kind":"ApiRef","Name":"BG_AUTH_TARGET","TargetKind":"Default","Api":"Networking.BackgroundIntelligentTransferService","Parents":[]},"Attrs":[]}
 			,{"Name":"Scheme","Type":{"Kind":"ApiRef","Name":"BG_AUTH_SCHEME","TargetKind":"Default","Api":"Networking.BackgroundIntelligentTransferService","Parents":[]},"Attrs":[]}
@@ -2697,6 +2705,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InitialOffset","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -2885,7 +2894,7 @@
 				,"Params":[
 					{"Name":"pStoreLocation","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BG_CERT_STORE_LOCATION","TargetKind":"Default","Api":"Networking.BackgroundIntelligentTransferService","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"pStoreName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
-					,{"Name":"ppCertHashBlob","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":20,"CountParamIndex":-1,"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out",{"Kind":"FreeWith","Func":"CoTaskMemFree"}]}
+					,{"Name":"ppCertHashBlob","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out",{"Kind":"FreeWith","Func":"CoTaskMemFree"}]}
 					,{"Name":"pSubjectName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out",{"Kind":"FreeWith","Func":"CoTaskMemFree"}]}
 				]
 			}
@@ -3714,6 +3723,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Dword","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ClsID","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
@@ -3743,6 +3753,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"String","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 		]
@@ -4111,6 +4122,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bstrRemoteFile","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"bstrLocalFile","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}

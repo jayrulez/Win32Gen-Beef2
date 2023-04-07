@@ -2339,6 +2339,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ld_sb","Type":{"Kind":"ApiRef","Name":"_ld_sb_e__Struct","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]},"Attrs":[]}
 			,{"Name":"ld_host","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["NotNullTerminated"]}
@@ -2365,6 +2366,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"sb_sd","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 					,{"Name":"Reserved1","Type":{"Kind":"Array","Shape":{"Size":41},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -2383,6 +2385,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"tv_sec","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"tv_usec","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -2397,6 +2400,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bv_len","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"bv_val","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["NotNullTerminated"]}
@@ -2411,6 +2415,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lm_msgid","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"lm_msgtype","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2436,6 +2441,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ldctl_oid","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["NotNullTerminated"]}
 			,{"Name":"ldctl_value","Type":{"Kind":"ApiRef","Name":"LDAP_BERVAL","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]},"Attrs":[]}
@@ -2451,6 +2457,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ldctl_oid","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["NotNullTerminated"]}
 			,{"Name":"ldctl_value","Type":{"Kind":"ApiRef","Name":"LDAP_BERVAL","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]},"Attrs":[]}
@@ -2466,6 +2473,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"mod_op","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"mod_type","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["NotNullTerminated"]}
@@ -2479,6 +2487,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"modv_strvals","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 					,{"Name":"modv_bvals","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAP_BERVAL","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}}},"Attrs":[]}
@@ -2495,6 +2504,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"mod_op","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"mod_type","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["NotNullTerminated"]}
@@ -2508,6 +2518,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"modv_strvals","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 					,{"Name":"modv_bvals","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAP_BERVAL","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}}},"Attrs":[]}
@@ -2524,6 +2535,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"opaque","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["NotNullTerminated"]}
 		]
@@ -2537,6 +2549,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lv_size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"lv_major","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2552,6 +2565,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ldapai_info_version","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"ldapai_api_version","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -2570,6 +2584,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ldapai_info_version","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"ldapai_api_version","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -2588,6 +2603,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ldapaif_info_version","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"ldapaif_name","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -2603,6 +2619,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ldapaif_info_version","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"ldapaif_name","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["NotNullTerminated"]}
@@ -2631,6 +2648,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 		]
 		,"NestedTypes":[
@@ -2643,6 +2661,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"sk_attrtype","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["NotNullTerminated"]}
 			,{"Name":"sk_matchruleoid","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["NotNullTerminated"]}
@@ -2658,6 +2677,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"sk_attrtype","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["NotNullTerminated"]}
 			,{"Name":"sk_matchruleoid","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["NotNullTerminated"]}
@@ -2673,6 +2693,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ldvlv_version","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"ldvlv_before_count","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2748,6 +2769,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SizeOfCallbacks","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"QueryForConnection","Type":{"Kind":"ApiRef","Name":"QUERYFORCONNECTION","TargetKind":"FunctionPointer","Api":"Networking.Ldap","Parents":[]},"Attrs":[]}
@@ -3374,7 +3396,7 @@
 			,{"Name":"filter","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"attrs","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt16"}}},"Attrs":["In"]}
 			,{"Name":"attrsonly","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"res","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPMessage","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}}},"Attrs":["Out","Optional"]}
+			,{"Name":"res","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPMessage","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -3393,7 +3415,7 @@
 			,{"Name":"filter","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"attrs","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"SByte"}}},"Attrs":["In"]}
 			,{"Name":"attrsonly","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"res","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPMessage","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}}},"Attrs":["Out","Optional"]}
+			,{"Name":"res","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPMessage","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -3413,7 +3435,7 @@
 			,{"Name":"attrs","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt16"}}},"Attrs":["In"]}
 			,{"Name":"attrsonly","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"timeout","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAP_TIMEVAL","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}},"Attrs":["In","Out"]}
-			,{"Name":"res","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPMessage","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}}},"Attrs":["Out","Optional"]}
+			,{"Name":"res","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPMessage","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -3433,7 +3455,7 @@
 			,{"Name":"attrs","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"SByte"}}},"Attrs":["In"]}
 			,{"Name":"attrsonly","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"timeout","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAP_TIMEVAL","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}},"Attrs":["In","Out"]}
-			,{"Name":"res","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPMessage","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}}},"Attrs":["Out","Optional"]}
+			,{"Name":"res","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPMessage","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -3502,7 +3524,7 @@
 			,{"Name":"ClientControls","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPControlW","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}}},"Attrs":["In","Optional"]}
 			,{"Name":"timeout","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAP_TIMEVAL","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}},"Attrs":["In","Out"]}
 			,{"Name":"SizeLimit","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"res","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPMessage","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}}},"Attrs":["Out","Optional"]}
+			,{"Name":"res","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPMessage","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -3525,7 +3547,7 @@
 			,{"Name":"ClientControls","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPControlA","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}}},"Attrs":["In","Optional"]}
 			,{"Name":"timeout","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAP_TIMEVAL","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}},"Attrs":["In","Out"]}
 			,{"Name":"SizeLimit","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"res","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPMessage","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}}},"Attrs":["Out","Optional"]}
+			,{"Name":"res","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPMessage","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -3562,7 +3584,7 @@
 			,{"Name":"filter","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"attrs","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"SByte"}}},"Attrs":["In"]}
 			,{"Name":"attrsonly","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"res","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPMessage","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}}},"Attrs":["Out","Optional"]}
+			,{"Name":"res","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPMessage","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -3582,7 +3604,7 @@
 			,{"Name":"attrs","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"SByte"}}},"Attrs":["In"]}
 			,{"Name":"attrsonly","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"timeout","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAP_TIMEVAL","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}},"Attrs":["In","Out"]}
-			,{"Name":"res","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPMessage","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}}},"Attrs":["Out","Optional"]}
+			,{"Name":"res","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPMessage","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -3628,7 +3650,7 @@
 			,{"Name":"ClientControls","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPControlA","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}}},"Attrs":["In","Optional"]}
 			,{"Name":"timeout","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAP_TIMEVAL","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}},"Attrs":["In","Out"]}
 			,{"Name":"SizeLimit","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"res","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPMessage","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}}},"Attrs":["Out","Optional"]}
+			,{"Name":"res","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPMessage","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -4776,7 +4798,7 @@
 			,{"Name":"msgid","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"all","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"timeout","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAP_TIMEVAL","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}},"Attrs":["In","Optional"]}
-			,{"Name":"res","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPMessage","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}}},"Attrs":["Out","Optional"]}
+			,{"Name":"res","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPMessage","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -6431,13 +6453,13 @@
 		"Name":"LdapMapErrorToWin32"
 		,"SetLastError":false
 		,"DllImport":"WLDAP32.dll"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"LdapError","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			{"Name":"LdapError","Type":{"Kind":"ApiRef","Name":"LDAP_RETCODE","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{

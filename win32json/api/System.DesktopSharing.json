@@ -1319,7 +1319,7 @@
 				,"Params":[
 					{"Name":"clipboardFormat","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pAttendee","Type":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pRetVal","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pRetVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -1371,7 +1371,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pRetVal","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pRetVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1385,7 +1385,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"NewVal","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"NewVal","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -1513,7 +1513,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pRetVal","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pRetVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1527,7 +1527,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"NewVal","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"NewVal","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -1644,7 +1644,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pRetVal","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pRetVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1658,7 +1658,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"NewVal","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"NewVal","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 		]
@@ -1788,7 +1788,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pRetVal","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pRetVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1802,7 +1802,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"NewVal","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"NewVal","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 		]
@@ -2393,7 +2393,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"vbSmartSizing","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"vbSmartSizing","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -2407,7 +2407,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pvbSmartSizing","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pvbSmartSizing","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2511,7 +2511,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"buttonType","Type":{"Kind":"ApiRef","Name":"RDPSRAPI_MOUSE_BUTTON_TYPE","TargetKind":"Default","Api":"System.DesktopSharing","Parents":[]},"Attrs":["In"]}
-					,{"Name":"vbButtonDown","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					,{"Name":"vbButtonDown","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"xPos","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"yPos","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 				]
@@ -2552,9 +2552,9 @@
 				,"Params":[
 					{"Name":"codeType","Type":{"Kind":"ApiRef","Name":"RDPSRAPI_KBD_CODE_TYPE","TargetKind":"Default","Api":"System.DesktopSharing","Parents":[]},"Attrs":["In"]}
 					,{"Name":"keycode","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":["In"]}
-					,{"Name":"vbKeyUp","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
-					,{"Name":"vbRepeat","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
-					,{"Name":"vbExtended","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					,{"Name":"vbKeyUp","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+					,{"Name":"vbRepeat","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+					,{"Name":"vbExtended","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -3225,6 +3225,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"__ctrlLevel__","Type":{"Kind":"ApiRef","Name":"CTRL_LEVEL","TargetKind":"Default","Api":"System.DesktopSharing","Parents":[]},"Attrs":[]}
 			,{"Name":"__attendeeDisconnectReason__","Type":{"Kind":"ApiRef","Name":"ATTENDEE_DISCONNECT_REASON","TargetKind":"Default","Api":"System.DesktopSharing","Parents":[]},"Attrs":[]}

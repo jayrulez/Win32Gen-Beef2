@@ -1503,7 +1503,7 @@
 		"Name":"REGSTR_PATH_SOFTWARESYNTHS"
 		,"Type":{"Kind":"Native","Name":"String"}
 		,"ValueType":"String"
-		,"Value":"Software\\\\Microsoft\\\\DirectMusic\\\\SoftwareSynths"
+		,"Value":"Software\\Microsoft\\DirectMusic\\SoftwareSynths"
 		,"Attrs":[]
 	}
 	,{
@@ -1670,6 +1670,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ulData1","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"usData2","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1686,6 +1687,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwVersionMS","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwVersionLS","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1700,6 +1702,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"usSource","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"usControl","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1717,6 +1720,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"cConnections","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1731,6 +1735,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"usLow","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"usHigh","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1745,6 +1750,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ulBank","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ulInstrument","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1759,6 +1765,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"RangeKey","Type":{"Kind":"ApiRef","Name":"RGNRANGE","TargetKind":"Default","Api":"Media.Audio.DirectMusic","Parents":[]},"Attrs":[]}
 			,{"Name":"RangeVelocity","Type":{"Kind":"ApiRef","Name":"RGNRANGE","TargetKind":"Default","Api":"Media.Audio.DirectMusic","Parents":[]},"Attrs":[]}
@@ -1775,6 +1782,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"cRegions","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Locale","Type":{"Kind":"ApiRef","Name":"MIDILOCALE","TargetKind":"Default","Api":"Media.Audio.DirectMusic","Parents":[]},"Attrs":[]}
@@ -1789,6 +1797,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"cInstruments","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -1802,6 +1811,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"fusOptions","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"usPhaseGroup","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1818,6 +1828,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ulOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -1831,6 +1842,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"cCues","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1845,6 +1857,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"usUnityNote","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1863,6 +1876,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ulType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1879,6 +1893,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"dwDLType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwDLId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1895,6 +1910,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ulOffsetTable","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
 		]
@@ -1908,6 +1924,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ulPatch","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ulFirstRegionIdx","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1926,6 +1943,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"RangeKey","Type":{"Kind":"ApiRef","Name":"RGNRANGE","TargetKind":"Default","Api":"Media.Audio.DirectMusic","Parents":[]},"Attrs":[]}
 			,{"Name":"RangeVelocity","Type":{"Kind":"ApiRef","Name":"RGNRANGE","TargetKind":"Default","Api":"Media.Audio.DirectMusic","Parents":[]},"Attrs":[]}
@@ -1948,6 +1966,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"pcFrequency","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"tcDelay","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -1966,6 +1985,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"tcAttack","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"tcDecay","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -1984,6 +2004,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"tcAttack","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"tcDecay","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -2003,6 +2024,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ptDefaultPan","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 		]
@@ -2016,6 +2038,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"LFO","Type":{"Kind":"ApiRef","Name":"DMUS_LFOPARAMS","TargetKind":"Default","Api":"Media.Audio.DirectMusic","Parents":[]},"Attrs":[]}
 			,{"Name":"VolEG","Type":{"Kind":"ApiRef","Name":"DMUS_VEGPARAMS","TargetKind":"Default","Api":"Media.Audio.DirectMusic","Parents":[]},"Attrs":[]}
@@ -2032,6 +2055,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ulArt1Idx","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ulFirstExtCkIdx","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2046,6 +2070,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ulArtIdx","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ulFirstExtCkIdx","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2061,6 +2086,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ulNextExtCkIdx","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2077,6 +2103,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"byCopyright","Type":{"Kind":"Array","Shape":{"Size":4},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -2091,6 +2118,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"byData","Type":{"Kind":"Array","Shape":{"Size":4},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -2105,6 +2133,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ulFirstExtCkIdx","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ulCopyrightIdx","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2121,6 +2150,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwLowNote","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwHighNote","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2135,6 +2165,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ulDownloadIdIdx","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ulBus","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2152,6 +2183,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"cbWaveData","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -2165,6 +2197,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":4
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"cbEvent","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwChannelGroup","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2181,6 +2214,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2197,6 +2231,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2220,6 +2255,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwValidParams","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2240,6 +2276,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwValidParams","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2261,6 +2298,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwValidStats","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2281,6 +2319,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwValidStats","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2302,6 +2341,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"fInGain","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"fReverbMix","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -2331,6 +2371,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ctType","Type":{"Kind":"ApiRef","Name":"DMUS_CLOCKTYPE","TargetKind":"Default","Api":"Media.Audio.DirectMusic","Parents":[]},"Attrs":[]}
@@ -2347,6 +2388,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ctType","Type":{"Kind":"ApiRef","Name":"DMUS_CLOCKTYPE","TargetKind":"Default","Api":"Media.Audio.DirectMusic","Parents":[]},"Attrs":[]}
@@ -3130,6 +3172,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bExists","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"spPosition","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -3611,6 +3654,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"DeviceName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"DataFlow","Type":{"Kind":"ApiRef","Name":"DIRECTSOUNDDEVICE_DATAFLOW","TargetKind":"Default","Api":"Media.Audio.DirectMusic","Parents":[]},"Attrs":[]}
@@ -3626,6 +3670,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"DeviceName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"DataFlow","Type":{"Kind":"ApiRef","Name":"DIRECTSOUNDDEVICE_DATAFLOW","TargetKind":"Default","Api":"Media.Audio.DirectMusic","Parents":[]},"Attrs":[]}
@@ -3641,6 +3686,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"DeviceId","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"DescriptionA","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
@@ -3662,6 +3708,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Type","Type":{"Kind":"ApiRef","Name":"DIRECTSOUNDDEVICE_TYPE","TargetKind":"Default","Api":"Media.Audio.DirectMusic","Parents":[]},"Attrs":[]}
 			,{"Name":"DataFlow","Type":{"Kind":"ApiRef","Name":"DIRECTSOUNDDEVICE_DATAFLOW","TargetKind":"Default","Api":"Media.Audio.DirectMusic","Parents":[]},"Attrs":[]}
@@ -3681,6 +3728,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Type","Type":{"Kind":"ApiRef","Name":"DIRECTSOUNDDEVICE_TYPE","TargetKind":"Default","Api":"Media.Audio.DirectMusic","Parents":[]},"Attrs":[]}
 			,{"Name":"DataFlow","Type":{"Kind":"ApiRef","Name":"DIRECTSOUNDDEVICE_DATAFLOW","TargetKind":"Default","Api":"Media.Audio.DirectMusic","Parents":[]},"Attrs":[]}
@@ -3742,6 +3790,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Callback","Type":{"Kind":"ApiRef","Name":"LPFNDIRECTSOUNDDEVICEENUMERATECALLBACK1","TargetKind":"FunctionPointer","Api":"Media.Audio.DirectMusic","Parents":[]},"Attrs":[]}
 			,{"Name":"Context","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -3756,6 +3805,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Callback","Type":{"Kind":"ApiRef","Name":"LPFNDIRECTSOUNDDEVICEENUMERATECALLBACKA","TargetKind":"FunctionPointer","Api":"Media.Audio.DirectMusic","Parents":[]},"Attrs":[]}
 			,{"Name":"Context","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -3770,6 +3820,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Callback","Type":{"Kind":"ApiRef","Name":"LPFNDIRECTSOUNDDEVICEENUMERATECALLBACKW","TargetKind":"FunctionPointer","Api":"Media.Audio.DirectMusic","Parents":[]},"Attrs":[]}
 			,{"Name":"Context","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -3784,6 +3835,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bAudStyle","Type":{"Kind":"Array","Shape":{"Size":2},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"bAudQu","Type":{"Kind":"Array","Shape":{"Size":2},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -3803,6 +3855,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pCaps","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -3817,6 +3870,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"hMidi","Type":{"Kind":"ApiRef","Name":"HMIDI","TargetKind":"Default","Api":"Media.Audio","Parents":[]},"Attrs":[]}
 			,{"Name":"dwCallback","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}

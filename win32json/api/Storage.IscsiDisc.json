@@ -33,7 +33,7 @@
 		"Name":"DD_SCSI_DEVICE_NAME"
 		,"Type":{"Kind":"Native","Name":"String"}
 		,"ValueType":"String"
-		,"Value":"\\\\Device\\\\ScsiPort"
+		,"Value":"\\Device\\ScsiPort"
 		,"Attrs":[]
 	}
 	,{
@@ -842,6 +842,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"FIRMWARE_REQUEST_FLAG_REPLACE_EXISTING_IMAGE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1073741824
+		,"Attrs":[]
+	}
+	,{
 		"Name":"FIRMWARE_REQUEST_FLAG_SWITCH_TO_EXISTING_FIRMWARE"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -1278,6 +1285,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 		]
 		,"NestedTypes":[
@@ -1290,6 +1298,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"ScsiStatus","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -1315,6 +1324,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"ScsiStatus","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -1340,6 +1350,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1368,6 +1379,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1396,6 +1408,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"AtaFlags","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1420,6 +1433,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"AtaFlags","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1444,6 +1458,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"PassThrough","Type":{"Kind":"ApiRef","Name":"SCSI_PASS_THROUGH32","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]},"Attrs":[]}
 			,{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1462,6 +1477,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"PassThrough","Type":{"Kind":"ApiRef","Name":"SCSI_PASS_THROUGH_DIRECT32","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]},"Attrs":[]}
 			,{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1480,6 +1496,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"PassThroughOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1498,6 +1515,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"PassThroughOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1516,6 +1534,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"ScsiStatus","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -1541,6 +1560,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"ScsiStatus","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -1566,6 +1586,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1594,6 +1615,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1622,6 +1644,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"AtaFlags","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1646,6 +1669,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"AtaFlags","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1670,6 +1694,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"HeaderLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Signature","Type":{"Kind":"Array","Shape":{"Size":8},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -1688,6 +1713,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"PassThrough","Type":{"Kind":"ApiRef","Name":"SCSI_PASS_THROUGH","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]},"Attrs":[]}
 			,{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1706,6 +1732,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"PassThrough","Type":{"Kind":"ApiRef","Name":"SCSI_PASS_THROUGH_DIRECT","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]},"Attrs":[]}
 			,{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1724,6 +1751,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"PassThroughOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1742,6 +1770,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"PassThroughOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1760,6 +1789,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumberOfLogicalUnits","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"InitiatorBusId","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -1775,6 +1805,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumberOfBuses","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"BusData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"SCSI_BUS_DATA","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]}},"Attrs":[]}
@@ -1789,6 +1820,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"PathId","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"TargetId","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -1808,6 +1840,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"HeaderLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Signature","Type":{"Kind":"Array","Shape":{"Size":8},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -1826,6 +1859,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NRBSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Function","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1847,6 +1881,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NVPowerModeEnabled","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"NVParameterReserv1","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1869,6 +1904,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Command","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Feature7_0","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -1894,6 +1930,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1910,6 +1947,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"CacheFlags","Type":{"Kind":"ApiRef","Name":"_CacheFlags_e__Struct","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":["_Flags_e__Union"]},"Attrs":[]}
 					,{"Name":"CacheFlagsSet","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -1922,6 +1960,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"_bitfield","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 						]
@@ -1982,6 +2021,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2002,6 +2042,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"StartingOffset","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"LengthInBytes","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -2016,6 +2057,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2035,6 +2077,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2083,6 +2126,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"PriorityLevel","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Reserved0","Type":{"Kind":"Array","Shape":{"Size":3},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -2102,6 +2146,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2122,6 +2167,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"PriorityLevelCount","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 					,{"Name":"MaxPriorityBehavior","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -2140,6 +2186,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"MaxEvictCommands","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2158,6 +2205,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 				]
@@ -2173,6 +2221,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2189,6 +2238,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2208,6 +2258,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2226,6 +2277,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SlotNumber","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"ReadOnly","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -2240,6 +2292,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Info","Type":{"Kind":"Array","Shape":{"Size":8},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 					,{"Name":"AsUlonglong","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -2256,6 +2309,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SlotNumber","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"ReadOnly","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -2272,6 +2326,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2292,6 +2347,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2315,6 +2371,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2332,6 +2389,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2352,6 +2410,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2368,6 +2427,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"MaximumTransferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2388,6 +2448,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"PortNumber","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -2418,6 +2479,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2432,12 +2494,13 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AdapterObject","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_ADAPTER_OBJECT","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]}},"Attrs":[]}
 			,{"Name":"MappedRegisterBase","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 			,{"Name":"DumpData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 			,{"Name":"CommonBufferVa","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-			,{"Name":"CommonBufferPa","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"CommonBufferPa","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"CommonBufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"AllocateCommonBuffers","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"UseDiskDump","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -2454,6 +2517,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"DUMP_POINTERS_VERSION","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]},"Attrs":[]}
 			,{"Name":"DumpData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -2482,6 +2546,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"DumpDriverList","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 			,{"Name":"DriverName","Type":{"Kind":"Array","Shape":{"Size":15},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
@@ -2497,6 +2562,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"MaximumLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -2512,6 +2578,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"DumpDriverList","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 			,{"Name":"DriverName","Type":{"Kind":"Array","Shape":{"Size":15},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
@@ -2528,6 +2595,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ValidFields","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"GroupId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2544,6 +2612,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 				]
@@ -2559,6 +2628,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2601,6 +2671,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"InformationSpecified","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2638,6 +2709,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SecurityFlags","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"IdType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -2656,6 +2728,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AuthMethod","Type":{"Kind":"ApiRef","Name":"IKE_AUTHENTICATION_METHOD","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]},"Attrs":[]}
@@ -2668,6 +2741,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"PsKey","Type":{"Kind":"ApiRef","Name":"IKE_AUTHENTICATION_PRESHARED_KEY","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]},"Attrs":[]}
 				]
@@ -2683,6 +2757,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AdapterUnique","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"AdapterSpecific","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -2697,6 +2772,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"OSLUN","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"TargetLUN","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -2711,6 +2787,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InitiatorName","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"TargetName","Type":{"Kind":"Array","Shape":{"Size":224},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
@@ -2731,6 +2808,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InitiatorName","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 			,{"Name":"TargetName","Type":{"Kind":"Array","Shape":{"Size":224},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
@@ -2751,6 +2829,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SymbolicName","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"Address","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
@@ -2766,6 +2845,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SymbolicName","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 			,{"Name":"Address","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
@@ -2781,6 +2861,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InitiatorName","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"InitiatorPortNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2798,6 +2879,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InitiatorName","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 			,{"Name":"InitiatorPortNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2815,6 +2897,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InitiatorName","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"InitiatorPortNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2834,6 +2917,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InitiatorName","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 			,{"Name":"InitiatorPortNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2853,6 +2937,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Count","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Portals","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"ISCSI_TARGET_PORTALW","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]}},"Attrs":[]}
@@ -2867,6 +2952,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Count","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Portals","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"ISCSI_TARGET_PORTALA","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]}},"Attrs":[]}
@@ -2881,6 +2967,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ConnectionId","Type":{"Kind":"ApiRef","Name":"ISCSI_UNIQUE_SESSION_ID","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]},"Attrs":[]}
 			,{"Name":"InitiatorAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["NotNullTerminated"]}
@@ -2899,6 +2986,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SessionId","Type":{"Kind":"ApiRef","Name":"ISCSI_UNIQUE_SESSION_ID","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]},"Attrs":[]}
 			,{"Name":"InitiatorName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["NotNullTerminated"]}
@@ -2919,6 +3007,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ConnectionId","Type":{"Kind":"ApiRef","Name":"ISCSI_UNIQUE_SESSION_ID","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]},"Attrs":[]}
 			,{"Name":"InitiatorAddress","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["NotNullTerminated"]}
@@ -2937,6 +3026,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SessionId","Type":{"Kind":"ApiRef","Name":"ISCSI_UNIQUE_SESSION_ID","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]},"Attrs":[]}
 			,{"Name":"InitiatorName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["NotNullTerminated"]}
@@ -2957,6 +3047,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ConnectionId","Type":{"Kind":"ApiRef","Name":"ISCSI_UNIQUE_SESSION_ID","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]},"Attrs":[]}
 			,{"Name":"State","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -2978,6 +3069,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SessionId","Type":{"Kind":"ApiRef","Name":"ISCSI_UNIQUE_SESSION_ID","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]},"Attrs":[]}
 			,{"Name":"InitialR2t","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -3003,6 +3095,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InitiatorName","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"TargetName","Type":{"Kind":"Array","Shape":{"Size":224},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
@@ -3023,6 +3116,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InitiatorName","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 			,{"Name":"TargetName","Type":{"Kind":"Array","Shape":{"Size":224},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
@@ -3043,6 +3137,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"TargetName","Type":{"Kind":"Array","Shape":{"Size":224},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"IsInformationalSession","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -3063,6 +3158,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"TargetName","Type":{"Kind":"Array","Shape":{"Size":224},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 			,{"Name":"IsInformationalSession","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -3114,6 +3210,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"MajorVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"MinorVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}

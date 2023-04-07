@@ -365,6 +365,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pszInstanceId","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
@@ -1102,7 +1103,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pvarb","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pvarb","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1144,7 +1145,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pvarb","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pvarb","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2014,7 +2015,7 @@
 			,{"Name":"cPropertyCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pProperties","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"ApiRef","Name":"DEVPROPERTY","TargetKind":"Default","Api":"Devices.Properties","Parents":[]}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"fEnabled","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"ppszDeviceInterfaceId","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+			,{"Name":"ppszDeviceInterfaceId","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{

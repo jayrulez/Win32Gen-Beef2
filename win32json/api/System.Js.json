@@ -215,7 +215,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"runtime","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
-			,{"Name":"debugApplication","Type":{"Kind":"ApiRef","Name":"IDebugApplication64","TargetKind":"Com","Api":"System.Diagnostics.Debug","Parents":[]},"Attrs":["In"]}
+			,{"Name":"debugApplication","Type":{"Kind":"ApiRef","Name":"IDebugApplication64","TargetKind":"Com","Api":"System.Diagnostics.Debug.ActiveScript","Parents":[]},"Attrs":["In"]}
 			,{"Name":"newContext","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out"]}
 		]
 	}
@@ -229,7 +229,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"debugApplication","Type":{"Kind":"ApiRef","Name":"IDebugApplication64","TargetKind":"Com","Api":"System.Diagnostics.Debug","Parents":[]},"Attrs":["In"]}
+			{"Name":"debugApplication","Type":{"Kind":"ApiRef","Name":"IDebugApplication64","TargetKind":"Com","Api":"System.Diagnostics.Debug.ActiveScript","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -385,7 +385,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"runtime","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
-			,{"Name":"debugApplication","Type":{"Kind":"ApiRef","Name":"IDebugApplication32","TargetKind":"Com","Api":"System.Diagnostics.Debug","Parents":[]},"Attrs":["In"]}
+			,{"Name":"debugApplication","Type":{"Kind":"ApiRef","Name":"IDebugApplication32","TargetKind":"Com","Api":"System.Diagnostics.Debug.ActiveScript","Parents":[]},"Attrs":["In"]}
 			,{"Name":"newContext","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out"]}
 		]
 	}
@@ -439,7 +439,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"debugApplication","Type":{"Kind":"ApiRef","Name":"IDebugApplication32","TargetKind":"Com","Api":"System.Diagnostics.Debug","Parents":[]},"Attrs":["In"]}
+			{"Name":"debugApplication","Type":{"Kind":"ApiRef","Name":"IDebugApplication32","TargetKind":"Com","Api":"System.Diagnostics.Debug.ActiveScript","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -1396,8 +1396,8 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"callback","Type":{"Kind":"ApiRef","Name":"IActiveScriptProfilerCallback","TargetKind":"Com","Api":"System.Diagnostics.Debug","Parents":[]},"Attrs":["In"]}
-			,{"Name":"eventMask","Type":{"Kind":"ApiRef","Name":"PROFILER_EVENT_MASK","TargetKind":"Default","Api":"System.Diagnostics.Debug","Parents":[]},"Attrs":["In"]}
+			{"Name":"callback","Type":{"Kind":"ApiRef","Name":"IActiveScriptProfilerCallback","TargetKind":"Com","Api":"System.Diagnostics.Debug.ActiveScript","Parents":[]},"Attrs":["In"]}
+			,{"Name":"eventMask","Type":{"Kind":"ApiRef","Name":"PROFILER_EVENT_MASK","TargetKind":"Default","Api":"System.Diagnostics.Debug.ActiveScript","Parents":[]},"Attrs":["In"]}
 			,{"Name":"context","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
@@ -1424,7 +1424,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"enumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IActiveScriptProfilerHeapEnum","TargetKind":"Com","Api":"System.Diagnostics.Debug","Parents":[]}},"Attrs":["Out"]}
+			{"Name":"enumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IActiveScriptProfilerHeapEnum","TargetKind":"Com","Api":"System.Diagnostics.Debug.ActiveScript","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{

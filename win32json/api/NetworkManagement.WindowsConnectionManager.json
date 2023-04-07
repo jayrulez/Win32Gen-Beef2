@@ -88,6 +88,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"fValue","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"fIsGroupPolicy","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -102,6 +103,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"strProfileName","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"AdapterGUID","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
@@ -117,6 +119,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwNumberOfItems","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ProfileInfo","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"WCM_PROFILE_INFO","TargetKind":"Default","Api":"NetworkManagement.WindowsConnectionManager","Parents":[]}},"Attrs":[]}
@@ -165,6 +168,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ConnectionCost","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"CostSource","Type":{"Kind":"ApiRef","Name":"WCM_CONNECTION_COST_SOURCE","TargetKind":"Default","Api":"NetworkManagement.WindowsConnectionManager","Parents":[]},"Attrs":[]}
@@ -179,6 +183,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"wYear","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"wMonth","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -198,6 +203,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"UsageInMegabytes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"LastSyncTime","Type":{"Kind":"ApiRef","Name":"FILETIME","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -212,6 +218,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"StartDate","Type":{"Kind":"ApiRef","Name":"FILETIME","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"Duration","Type":{"Kind":"ApiRef","Name":"WCM_TIME_INTERVAL","TargetKind":"Default","Api":"NetworkManagement.WindowsConnectionManager","Parents":[]},"Attrs":[]}
@@ -227,6 +234,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"UsageData","Type":{"Kind":"ApiRef","Name":"WCM_USAGE_DATA","TargetKind":"Default","Api":"NetworkManagement.WindowsConnectionManager","Parents":[]},"Attrs":[]}
 			,{"Name":"DataLimitInMegabytes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -259,6 +267,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InterfaceIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ConfigurationName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -273,6 +282,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InterfaceContextHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"NumberOfEntries","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -297,9 +307,9 @@
 			{"Name":"pInterface","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"strProfileName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 			,{"Name":"Property","Type":{"Kind":"ApiRef","Name":"WCM_PROPERTY","TargetKind":"Default","Api":"NetworkManagement.WindowsConnectionManager","Parents":[]},"Attrs":["In"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"pdwDataSize","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-			,{"Name":"ppData","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out","Optional"]}
+			,{"Name":"ppData","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -315,7 +325,7 @@
 			{"Name":"pInterface","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"strProfileName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 			,{"Name":"Property","Type":{"Kind":"ApiRef","Name":"WCM_PROPERTY","TargetKind":"Default","Api":"NetworkManagement.WindowsConnectionManager","Parents":[]},"Attrs":["In"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"dwDataSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pbData","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":4,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Optional","Const"]}
 		]
@@ -330,7 +340,7 @@
 		,"Platform":"windows8.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"ppProfileList","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WCM_PROFILE_INFO_LIST","TargetKind":"Default","Api":"NetworkManagement.WindowsConnectionManager","Parents":[]}}},"Attrs":["Out"]}
 		]
 	}
@@ -347,7 +357,7 @@
 			{"Name":"pProfileList","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WCM_PROFILE_INFO_LIST","TargetKind":"Default","Api":"NetworkManagement.WindowsConnectionManager","Parents":[]}},"Attrs":["In"]}
 			,{"Name":"dwPosition","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"fIgnoreUnknownProfiles","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{

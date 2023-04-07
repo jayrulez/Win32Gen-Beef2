@@ -934,6 +934,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"m_SnapshotId","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"m_SnapshotSetId","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
@@ -959,6 +960,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"m_ProviderId","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"m_pwszProviderName","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":[]}
@@ -977,6 +979,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Snap","Type":{"Kind":"ApiRef","Name":"VSS_SNAPSHOT_PROP","TargetKind":"Default","Api":"Storage.Vss","Parents":[]},"Attrs":[]}
 			,{"Name":"Prov","Type":{"Kind":"ApiRef","Name":"VSS_PROVIDER_PROP","TargetKind":"Default","Api":"Storage.Vss","Parents":[]},"Attrs":[]}
@@ -991,6 +994,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Type","Type":{"Kind":"ApiRef","Name":"VSS_OBJECT_TYPE","TargetKind":"Default","Api":"Storage.Vss","Parents":[]},"Attrs":[]}
 			,{"Name":"Obj","Type":{"Kind":"ApiRef","Name":"VSS_OBJECT_UNION","TargetKind":"Default","Api":"Storage.Vss","Parents":[]},"Attrs":[]}
@@ -1266,6 +1270,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 		]
 		,"NestedTypes":[
@@ -1976,7 +1981,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pbstrFailureMsg","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pbstrFailureMsg","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -1988,7 +1993,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pbstrFailureMsg","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pbstrFailureMsg","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -2013,7 +2018,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pRollType","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VSS_ROLLFORWARD_TYPE","TargetKind":"Default","Api":"Storage.Vss","Parents":[]}},"Attrs":["Out"]}
-					,{"Name":"pbstrPoint","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"pbstrPoint","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -2025,7 +2030,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pbstrName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"pbstrName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -2361,7 +2366,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"wszOriginalVolume","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-					,{"Name":"ppwszSnapshotDevice","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppwszSnapshotDevice","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Const"]}
 				]
 			}
 			,{
@@ -2752,6 +2757,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"m_pwszVolumeName","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":[]}
 			,{"Name":"m_pwszVolumeDisplayName","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":[]}
@@ -2766,6 +2772,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"m_pwszVolumeName","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":[]}
 			,{"Name":"m_pwszVolumeDisplayName","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":[]}
@@ -2782,6 +2789,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"m_pwszVolumeName","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":[]}
 			,{"Name":"m_pwszDiffAreaVolumeName","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":[]}
@@ -2799,6 +2807,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Vol","Type":{"Kind":"ApiRef","Name":"VSS_VOLUME_PROP","TargetKind":"Default","Api":"Storage.Vss","Parents":[]},"Attrs":[]}
 			,{"Name":"DiffVol","Type":{"Kind":"ApiRef","Name":"VSS_DIFF_VOLUME_PROP","TargetKind":"Default","Api":"Storage.Vss","Parents":[]},"Attrs":[]}
@@ -2814,6 +2823,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Type","Type":{"Kind":"ApiRef","Name":"VSS_MGMT_OBJECT_TYPE","TargetKind":"Default","Api":"Storage.Vss","Parents":[]},"Attrs":[]}
 			,{"Name":"Obj","Type":{"Kind":"ApiRef","Name":"VSS_MGMT_OBJECT_UNION","TargetKind":"Default","Api":"Storage.Vss","Parents":[]},"Attrs":[]}
@@ -2869,6 +2879,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"m_protectionLevel","Type":{"Kind":"ApiRef","Name":"VSS_PROTECTION_LEVEL","TargetKind":"Default","Api":"Storage.Vss","Parents":[]},"Attrs":[]}
 			,{"Name":"m_volumeIsOfflineForProtection","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -3642,7 +3653,7 @@
 	,{
 		"Name":"IVssHardwareSnapshotProvider"
 		,"Architectures":[]
-		,"Platform":"windowsServer2003"
+		,"Platform":"windowsserver2003"
 		,"Kind":"Com"
 		,"Guid":"9593a157-44e9-4344-bbeb-44fbf9b06b10"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -3740,7 +3751,7 @@
 	,{
 		"Name":"IVssHardwareSnapshotProviderEx"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"7f5ba925-cdb1-4d11-a71f-339eb7e709fd"
 		,"Interface":{"Kind":"ApiRef","Name":"IVssHardwareSnapshotProvider","TargetKind":"Com","Api":"Storage.Vss","Parents":[]}

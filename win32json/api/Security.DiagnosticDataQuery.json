@@ -25,6 +25,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"rowId","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"timestamp","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -51,8 +52,9 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
-			{"Name":"producerNames","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+			{"Name":"producerNames","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"producerNameCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"textToMatch","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"categoryIds","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["Const"]}
@@ -71,6 +73,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"privacyTag","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"name","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -86,6 +89,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"name","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 		]
@@ -99,6 +103,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"id","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"name","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -113,6 +118,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"privacyTag","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"eventCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -127,6 +133,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"moduleName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"friendlyModuleName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -143,6 +150,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"optInLevel","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"transcriptSizeBytes","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -160,6 +168,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"hoursOfHistoryToKeep","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"maxStoreMegabytes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -175,6 +184,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"name","Type":{"Kind":"Array","Shape":{"Size":129},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"value","Type":{"Kind":"Array","Shape":{"Size":260},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
@@ -189,6 +199,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"eventName","Type":{"Kind":"Array","Shape":{"Size":65},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"parameters","Type":{"Kind":"Array","Shape":{"Size":10},"Child":{"Kind":"ApiRef","Name":"DIAGNOSTIC_REPORT_PARAMETER","TargetKind":"Default","Api":"Security.DiagnosticDataQuery","Parents":[]}},"Attrs":[]}
@@ -203,6 +214,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"signature","Type":{"Kind":"ApiRef","Name":"DIAGNOSTIC_REPORT_SIGNATURE","TargetKind":"Default","Api":"Security.DiagnosticDataQuery","Parents":[]},"Attrs":[]}
 			,{"Name":"bucketId","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
@@ -311,7 +323,7 @@
 		,"Params":[
 			{"Name":"hSession","Type":{"Kind":"ApiRef","Name":"HDIAGNOSTIC_DATA_QUERY_SESSION","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["In"]}
 			,{"Name":"rowId","Type":{"Kind":"Native","Name":"Int64"},"Attrs":["In"]}
-			,{"Name":"payload","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"payload","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Const"]}
 		]
 	}
 	,{
@@ -677,7 +689,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hSession","Type":{"Kind":"ApiRef","Name":"HDIAGNOSTIC_DATA_QUERY_SESSION","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["In"]}
-			,{"Name":"producerNames","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"producerNames","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Const"]}
 			,{"Name":"producerNameCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"tagStats","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":4,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DIAGNOSTIC_DATA_EVENT_TAG_STATS","TargetKind":"Default","Api":"Security.DiagnosticDataQuery","Parents":[]}}},"Attrs":["Out"]}
 			,{"Name":"statCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
@@ -694,7 +706,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hSession","Type":{"Kind":"ApiRef","Name":"HDIAGNOSTIC_DATA_QUERY_SESSION","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["In"]}
-			,{"Name":"producerNames","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"producerNames","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Const"]}
 			,{"Name":"producerNameCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"topNBinaries","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"binaryStats","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":5,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DIAGNOSTIC_DATA_EVENT_BINARY_STATS","TargetKind":"Default","Api":"Security.DiagnosticDataQuery","Parents":[]}}},"Attrs":["Out"]}

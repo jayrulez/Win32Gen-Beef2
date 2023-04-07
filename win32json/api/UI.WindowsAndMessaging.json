@@ -2,34 +2,6 @@
 
 "Constants":[
 	{
-		"Name":"WM_DEVICECHANGE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":537
-		,"Attrs":[]
-	}
-	,{
-		"Name":"BSM_VXDS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1
-		,"Attrs":[]
-	}
-	,{
-		"Name":"BSM_NETDRIVER"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2
-		,"Attrs":[]
-	}
-	,{
-		"Name":"BSM_INSTALLABLEDRIVERS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":4
-		,"Attrs":[]
-	}
-	,{
 		"Name":"WM_CONTEXTMENU"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -58,65 +30,821 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"GUID_IO_VOLUME_CHANGE"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"7373654a-812a-11d0-bec7-08002be2092f"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_VOLUME_DISMOUNT"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"d16a55e8-1059-11d2-8ffd-00a0c9a06d32"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_VOLUME_DISMOUNT_FAILED"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"e3c5b178-105d-11d2-8ffd-00a0c9a06d32"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_VOLUME_MOUNT"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"b5804878-1a96-11d2-8ffd-00a0c9a06d32"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_VOLUME_LOCK"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"50708874-c9af-11d1-8fef-00a0c9a06d32"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_VOLUME_LOCK_FAILED"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"ae2eed10-0ba8-11d2-8ffb-00a0c9a06d32"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_VOLUME_UNLOCK"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"9a8c3d68-d0cb-11d1-8fef-00a0c9a06d32"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_VOLUME_NAME_CHANGE"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"2de97f83-4c06-11d2-a532-00609713055a"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_VOLUME_NEED_CHKDSK"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"799a0960-0a0b-4e03-ad88-2fa7c6ce748a"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_VOLUME_WORM_NEAR_FULL"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"f3bfff82-f3de-48d2-af95-457f80b763f2"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_VOLUME_WEARING_OUT"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"873113ca-1486-4508-82ac-c3b2e5297aaa"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_VOLUME_FORCE_CLOSED"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"411ad84f-433e-4dc2-a5ae-4a2d1a2de654"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_VOLUME_INFO_MAKE_COMPAT"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"3ab9a0d2-ef80-45cf-8cdc-cbe02a212906"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_VOLUME_PREPARING_EJECT"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"c79eb16e-0dac-4e7a-a86c-b25ceeaa88f6"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_VOLUME_BACKGROUND_FORMAT"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"a2e5fc86-d5cd-4038-b2e3-4445065c2377"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_VOLUME_PHYSICAL_CONFIGURATION_CHANGE"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"2de97f84-4c06-11d2-a532-00609713055a"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_VOLUME_UNIQUE_ID_CHANGE"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"af39da42-6622-41f5-970b-139d092fa3d9"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_VOLUME_FVE_STATUS_CHANGE"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"062998b2-ee1f-4b6a-b857-e76cbbe9a6da"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_VOLUME_DEVICE_INTERFACE"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"53f5630d-b6bf-11d0-94f2-00a0c91efb8b"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_VOLUME_CHANGE_SIZE"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"3a1625be-ad03-49f1-8ef8-6bbac182d1fd"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_MEDIA_ARRIVAL"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"d07433c0-a98e-11d2-917a-00a0c9068ff3"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_MEDIA_REMOVAL"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"d07433c1-a98e-11d2-917a-00a0c9068ff3"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_CDROM_EXCLUSIVE_LOCK"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"bc56c139-7a10-47ee-a294-4c6a38f0149a"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_CDROM_EXCLUSIVE_UNLOCK"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"a3b6d27d-5e35-4885-81e5-ee18c00ed779"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_DEVICE_BECOMING_READY"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"d07433f0-a98e-11d2-917a-00a0c9068ff3"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_DEVICE_EXTERNAL_REQUEST"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"d07433d0-a98e-11d2-917a-00a0c9068ff3"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_MEDIA_EJECT_REQUEST"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"d07433d1-a98e-11d2-917a-00a0c9068ff3"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_DRIVE_REQUIRES_CLEANING"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"7207877c-90ed-44e5-a000-81428d4c79bb"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_TAPE_ERASE"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"852d11eb-4bb8-4507-9d9b-417cc2b1b438"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_DEVICE_EVENT_RBC"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"d0744792-a98e-11d2-917a-00a0c9068ff3"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_DISK_CLONE_ARRIVAL"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"6a61885b-7c39-43dd-9b56-b8ac22a549aa"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_DISK_LAYOUT_CHANGE"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"11dff54c-8469-41f9-b3de-ef836487c54a"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_IO_DISK_HEALTH_NOTIFICATION"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"0f1bd644-3916-49c5-b063-991940118fb2"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"STRSAFE_USE_SECURE_CRT"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":0
+		,"Attrs":[]
+	}
+	,{
+		"Name":"STRSAFE_MAX_CCH"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2147483647
+		,"Attrs":[]
+	}
+	,{
+		"Name":"STRSAFE_MAX_LENGTH"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2147483646
+		,"Attrs":[]
+	}
+	,{
+		"Name":"STRSAFE_IGNORE_NULLS"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":256
+		,"Attrs":[]
+	}
+	,{
+		"Name":"STRSAFE_FILL_BEHIND_NULL"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":512
+		,"Attrs":[]
+	}
+	,{
+		"Name":"STRSAFE_FILL_ON_FAILURE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1024
+		,"Attrs":[]
+	}
+	,{
+		"Name":"STRSAFE_NULL_ON_FAILURE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2048
+		,"Attrs":[]
+	}
+	,{
+		"Name":"STRSAFE_NO_TRUNCATION"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":4096
+		,"Attrs":[]
+	}
+	,{
+		"Name":"STRSAFE_E_INSUFFICIENT_BUFFER"
+		,"Type":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ValueType":"Int32"
+		,"Value":-2147024774
+		,"Attrs":[]
+	}
+	,{
+		"Name":"STRSAFE_E_INVALID_PARAMETER"
+		,"Type":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ValueType":"Int32"
+		,"Value":-2147024809
+		,"Attrs":[]
+	}
+	,{
+		"Name":"STRSAFE_E_END_OF_FILE"
+		,"Type":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ValueType":"Int32"
+		,"Value":-2147024858
+		,"Attrs":[]
+	}
+	,{
+		"Name":"__WARNING_CYCLOMATIC_COMPLEXITY"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":28734
+		,"Attrs":[]
+	}
+	,{
+		"Name":"__WARNING_USING_UNINIT_VAR"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":6001
+		,"Attrs":[]
+	}
+	,{
+		"Name":"__WARNING_RETURN_UNINIT_VAR"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":6101
+		,"Attrs":[]
+	}
+	,{
+		"Name":"__WARNING_DEREF_NULL_PTR"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":6011
+		,"Attrs":[]
+	}
+	,{
+		"Name":"__WARNING_MISSING_ZERO_TERMINATION2"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":6054
+		,"Attrs":[]
+	}
+	,{
+		"Name":"__WARNING_INVALID_PARAM_VALUE_1"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":6387
+		,"Attrs":[]
+	}
+	,{
+		"Name":"__WARNING_INCORRECT_ANNOTATION"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":26007
+		,"Attrs":[]
+	}
+	,{
+		"Name":"__WARNING_POTENTIAL_BUFFER_OVERFLOW_HIGH_PRIORITY"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":26015
+		,"Attrs":[]
+	}
+	,{
+		"Name":"__WARNING_PRECONDITION_NULLTERMINATION_VIOLATION"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":26035
+		,"Attrs":[]
+	}
+	,{
+		"Name":"__WARNING_POSTCONDITION_NULLTERMINATION_VIOLATION"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":26036
+		,"Attrs":[]
+	}
+	,{
+		"Name":"__WARNING_HIGH_PRIORITY_OVERFLOW_POSTCONDITION"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":26045
+		,"Attrs":[]
+	}
+	,{
+		"Name":"__WARNING_RANGE_POSTCONDITION_VIOLATION"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":26061
+		,"Attrs":[]
+	}
+	,{
+		"Name":"__WARNING_POTENTIAL_RANGE_POSTCONDITION_VIOLATION"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":26071
+		,"Attrs":[]
+	}
+	,{
+		"Name":"__WARNING_INVALID_PARAM_VALUE_3"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":28183
+		,"Attrs":[]
+	}
+	,{
+		"Name":"__WARNING_RETURNING_BAD_RESULT"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":28196
+		,"Attrs":[]
+	}
+	,{
+		"Name":"__WARNING_BANNED_API_USAGE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":28719
+		,"Attrs":[]
+	}
+	,{
+		"Name":"__WARNING_POST_EXPECTED"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":28210
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WM_DEVICECHANGE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":537
+		,"Attrs":[]
+	}
+	,{
+		"Name":"BSF_MSGSRV32ISOK"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2147483648
+		,"Attrs":[]
+	}
+	,{
+		"Name":"BSF_MSGSRV32ISOK_BIT"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":31
+		,"Attrs":[]
+	}
+	,{
+		"Name":"BSM_VXDS"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"BSM_NETDRIVER"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2
+		,"Attrs":[]
+	}
+	,{
+		"Name":"BSM_INSTALLABLEDRIVERS"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":4
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBT_APPYBEGIN"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":0
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBT_APPYEND"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBT_DEVNODES_CHANGED"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":7
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBT_QUERYCHANGECONFIG"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":23
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBT_CONFIGCHANGED"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":24
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBT_CONFIGCHANGECANCELED"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":25
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBT_MONITORCHANGE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":27
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBT_SHELLLOGGEDON"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":32
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBT_CONFIGMGAPI32"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":34
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBT_VXDINITCOMPLETE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":35
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBT_VOLLOCKQUERYLOCK"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":32833
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBT_VOLLOCKLOCKTAKEN"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":32834
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBT_VOLLOCKLOCKFAILED"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":32835
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBT_VOLLOCKQUERYUNLOCK"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":32836
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBT_VOLLOCKLOCKRELEASED"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":32837
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBT_VOLLOCKUNLOCKFAILED"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":32838
+		,"Attrs":[]
+	}
+	,{
+		"Name":"LOCKP_ALLOW_WRITES"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"LOCKP_FAIL_WRITES"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":0
+		,"Attrs":[]
+	}
+	,{
+		"Name":"LOCKP_FAIL_MEM_MAPPING"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2
+		,"Attrs":[]
+	}
+	,{
+		"Name":"LOCKP_ALLOW_MEM_MAPPING"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":0
+		,"Attrs":[]
+	}
+	,{
+		"Name":"LOCKP_USER_MASK"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":3
+		,"Attrs":[]
+	}
+	,{
+		"Name":"LOCKP_LOCK_FOR_FORMAT"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":4
+		,"Attrs":[]
+	}
+	,{
+		"Name":"LOCKF_LOGICAL_LOCK"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":0
+		,"Attrs":[]
+	}
+	,{
+		"Name":"LOCKF_PHYSICAL_LOCK"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBT_NO_DISK_SPACE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":71
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBT_LOW_DISK_SPACE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":72
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBT_CONFIGMGPRIVATE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":32767
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBT_DEVICEARRIVAL"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":32768
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBT_DEVICEQUERYREMOVE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":32769
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBT_DEVICEQUERYREMOVEFAILED"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":32770
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBT_DEVICEREMOVEPENDING"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":32771
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBT_DEVICEREMOVECOMPLETE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":32772
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBT_DEVICETYPESPECIFIC"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":32773
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBT_CUSTOMEVENT"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":32774
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBT_DEVTYP_DEVNODE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBT_DEVTYP_NET"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":4
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBTF_RESOURCE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBTF_XPORT"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBTF_SLOWNET"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":4
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBT_VPOWERDAPI"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":33024
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBT_USERDEFINED"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":65535
+		,"Attrs":[]
+	}
+	,{
 		"Name":"RT_CURSOR"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":1
 		,"Attrs":[]
 	}
 	,{
 		"Name":"RT_BITMAP"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":2
 		,"Attrs":[]
 	}
 	,{
 		"Name":"RT_ICON"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":3
 		,"Attrs":[]
 	}
 	,{
 		"Name":"RT_MENU"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":4
 		,"Attrs":[]
 	}
 	,{
 		"Name":"RT_DIALOG"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":5
 		,"Attrs":[]
 	}
 	,{
 		"Name":"RT_FONTDIR"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":7
 		,"Attrs":[]
 	}
 	,{
 		"Name":"RT_FONT"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":8
 		,"Attrs":[]
 	}
 	,{
 		"Name":"RT_ACCELERATOR"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":9
 		,"Attrs":[]
 	}
 	,{
 		"Name":"RT_MESSAGETABLE"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":11
 		,"Attrs":[]
 	}
@@ -130,49 +858,49 @@
 	,{
 		"Name":"RT_VERSION"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":16
 		,"Attrs":[]
 	}
 	,{
 		"Name":"RT_DLGINCLUDE"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":17
 		,"Attrs":[]
 	}
 	,{
 		"Name":"RT_PLUGPLAY"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":19
 		,"Attrs":[]
 	}
 	,{
 		"Name":"RT_VXD"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":20
 		,"Attrs":[]
 	}
 	,{
 		"Name":"RT_ANICURSOR"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":21
 		,"Attrs":[]
 	}
 	,{
 		"Name":"RT_ANIICON"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":22
 		,"Attrs":[]
 	}
 	,{
 		"Name":"RT_HTML"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":23
 		,"Attrs":[]
 	}
@@ -2067,6 +2795,20 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"XBUTTON1"
+		,"Type":{"Kind":"Native","Name":"UInt16"}
+		,"ValueType":"UInt16"
+		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"XBUTTON2"
+		,"Type":{"Kind":"Native","Name":"UInt16"}
+		,"ValueType":"UInt16"
+		,"Value":2
+		,"Attrs":[]
+	}
+	,{
 		"Name":"WM_PARENTNOTIFY"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -3446,13 +4188,6 @@
 		,"Attrs":[]
 	}
 	,{
-		"Name":"DEVICE_NOTIFY_ALL_INTERFACE_CLASSES"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":4
-		,"Attrs":[]
-	}
-	,{
 		"Name":"HWND_MESSAGE"
 		,"Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ValueType":"Int32"
@@ -3793,41 +4528,6 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":1
-		,"Attrs":[]
-	}
-	,{
-		"Name":"MAPVK_VK_TO_VSC"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":0
-		,"Attrs":[]
-	}
-	,{
-		"Name":"MAPVK_VSC_TO_VK"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1
-		,"Attrs":[]
-	}
-	,{
-		"Name":"MAPVK_VK_TO_CHAR"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2
-		,"Attrs":[]
-	}
-	,{
-		"Name":"MAPVK_VSC_TO_VK_EX"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":3
-		,"Attrs":[]
-	}
-	,{
-		"Name":"MAPVK_VK_TO_VSC_EX"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":4
 		,"Attrs":[]
 	}
 	,{
@@ -4281,126 +4981,126 @@
 	,{
 		"Name":"IDC_ARROW"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":32512
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IDC_IBEAM"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":32513
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IDC_WAIT"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":32514
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IDC_CROSS"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":32515
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IDC_UPARROW"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":32516
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IDC_SIZE"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":32640
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IDC_ICON"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":32641
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IDC_SIZENWSE"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":32642
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IDC_SIZENESW"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":32643
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IDC_SIZEWE"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":32644
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IDC_SIZENS"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":32645
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IDC_SIZEALL"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":32646
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IDC_NO"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":32648
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IDC_HAND"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":32649
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IDC_APPSTARTING"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":32650
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IDC_HELP"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":32651
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IDC_PIN"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":32671
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IDC_PERSON"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":32672
 		,"Attrs":[]
 	}
@@ -7338,20 +8038,6 @@
 		,"Attrs":[]
 	}
 	,{
-		"Name":"EDS_RAWMODE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2
-		,"Attrs":[]
-	}
-	,{
-		"Name":"EDS_ROTATEDMODE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":4
-		,"Attrs":[]
-	}
-	,{
 		"Name":"EDD_GET_DEVICE_INTERFACE_NAME"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -8948,192 +9634,10 @@
 		,"Attrs":[]
 	}
 	,{
-		"Name":"STRSAFE_USE_SECURE_CRT"
+		"Name":"WM_TOOLTIPDISMISS"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
-		,"Value":0
-		,"Attrs":[]
-	}
-	,{
-		"Name":"STRSAFE_MAX_CCH"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2147483647
-		,"Attrs":[]
-	}
-	,{
-		"Name":"STRSAFE_IGNORE_NULLS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":256
-		,"Attrs":[]
-	}
-	,{
-		"Name":"STRSAFE_FILL_BEHIND_NULL"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":512
-		,"Attrs":[]
-	}
-	,{
-		"Name":"STRSAFE_FILL_ON_FAILURE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1024
-		,"Attrs":[]
-	}
-	,{
-		"Name":"STRSAFE_NULL_ON_FAILURE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2048
-		,"Attrs":[]
-	}
-	,{
-		"Name":"STRSAFE_NO_TRUNCATION"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":4096
-		,"Attrs":[]
-	}
-	,{
-		"Name":"STRSAFE_E_INSUFFICIENT_BUFFER"
-		,"Type":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
-		,"Value":-2147024774
-		,"Attrs":[]
-	}
-	,{
-		"Name":"STRSAFE_E_INVALID_PARAMETER"
-		,"Type":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
-		,"Value":-2147024809
-		,"Attrs":[]
-	}
-	,{
-		"Name":"STRSAFE_E_END_OF_FILE"
-		,"Type":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
-		,"Value":-2147024858
-		,"Attrs":[]
-	}
-	,{
-		"Name":"__WARNING_CYCLOMATIC_COMPLEXITY"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":28734
-		,"Attrs":[]
-	}
-	,{
-		"Name":"__WARNING_USING_UNINIT_VAR"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":6001
-		,"Attrs":[]
-	}
-	,{
-		"Name":"__WARNING_RETURN_UNINIT_VAR"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":6101
-		,"Attrs":[]
-	}
-	,{
-		"Name":"__WARNING_DEREF_NULL_PTR"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":6011
-		,"Attrs":[]
-	}
-	,{
-		"Name":"__WARNING_MISSING_ZERO_TERMINATION2"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":6054
-		,"Attrs":[]
-	}
-	,{
-		"Name":"__WARNING_INVALID_PARAM_VALUE_1"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":6387
-		,"Attrs":[]
-	}
-	,{
-		"Name":"__WARNING_INCORRECT_ANNOTATION"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":26007
-		,"Attrs":[]
-	}
-	,{
-		"Name":"__WARNING_POTENTIAL_BUFFER_OVERFLOW_HIGH_PRIORITY"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":26015
-		,"Attrs":[]
-	}
-	,{
-		"Name":"__WARNING_PRECONDITION_NULLTERMINATION_VIOLATION"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":26035
-		,"Attrs":[]
-	}
-	,{
-		"Name":"__WARNING_POSTCONDITION_NULLTERMINATION_VIOLATION"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":26036
-		,"Attrs":[]
-	}
-	,{
-		"Name":"__WARNING_HIGH_PRIORITY_OVERFLOW_POSTCONDITION"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":26045
-		,"Attrs":[]
-	}
-	,{
-		"Name":"__WARNING_RANGE_POSTCONDITION_VIOLATION"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":26061
-		,"Attrs":[]
-	}
-	,{
-		"Name":"__WARNING_POTENTIAL_RANGE_POSTCONDITION_VIOLATION"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":26071
-		,"Attrs":[]
-	}
-	,{
-		"Name":"__WARNING_INVALID_PARAM_VALUE_3"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":28183
-		,"Attrs":[]
-	}
-	,{
-		"Name":"__WARNING_RETURNING_BAD_RESULT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":28196
-		,"Attrs":[]
-	}
-	,{
-		"Name":"__WARNING_BANNED_API_USAGE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":28719
-		,"Attrs":[]
-	}
-	,{
-		"Name":"__WARNING_POST_EXPECTED"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":28210
+		,"Value":837
 		,"Attrs":[]
 	}
 	,{
@@ -9361,29 +9865,51 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":true
+		,"Flags":false
 		,"Scoped":false
 		,"Values":[
-			{"Name":"SW_FORCEMINIMIZE","Value":11}
-			,{"Name":"SW_HIDE","Value":0}
-			,{"Name":"SW_MAXIMIZE","Value":3}
-			,{"Name":"SW_MINIMIZE","Value":6}
-			,{"Name":"SW_RESTORE","Value":9}
-			,{"Name":"SW_SHOW","Value":5}
-			,{"Name":"SW_SHOWDEFAULT","Value":10}
-			,{"Name":"SW_SHOWMAXIMIZED","Value":3}
-			,{"Name":"SW_SHOWMINIMIZED","Value":2}
-			,{"Name":"SW_SHOWMINNOACTIVE","Value":7}
-			,{"Name":"SW_SHOWNA","Value":8}
-			,{"Name":"SW_SHOWNOACTIVATE","Value":4}
+			{"Name":"SW_HIDE","Value":0}
 			,{"Name":"SW_SHOWNORMAL","Value":1}
 			,{"Name":"SW_NORMAL","Value":1}
+			,{"Name":"SW_SHOWMINIMIZED","Value":2}
+			,{"Name":"SW_SHOWMAXIMIZED","Value":3}
+			,{"Name":"SW_MAXIMIZE","Value":3}
+			,{"Name":"SW_SHOWNOACTIVATE","Value":4}
+			,{"Name":"SW_SHOW","Value":5}
+			,{"Name":"SW_MINIMIZE","Value":6}
+			,{"Name":"SW_SHOWMINNOACTIVE","Value":7}
+			,{"Name":"SW_SHOWNA","Value":8}
+			,{"Name":"SW_RESTORE","Value":9}
+			,{"Name":"SW_SHOWDEFAULT","Value":10}
+			,{"Name":"SW_FORCEMINIMIZE","Value":11}
 			,{"Name":"SW_MAX","Value":11}
-			,{"Name":"SW_PARENTCLOSING","Value":1}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
+		"Name":"SHOW_WINDOW_STATUS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"SW_PARENTCLOSING","Value":1}
 			,{"Name":"SW_OTHERZOOM","Value":2}
 			,{"Name":"SW_PARENTOPENING","Value":3}
 			,{"Name":"SW_OTHERUNZOOM","Value":4}
-			,{"Name":"SW_SCROLLCHILDREN","Value":1}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
+		"Name":"SCROLL_WINDOW_FLAGS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":true
+		,"Scoped":false
+		,"Values":[
+			{"Name":"SW_SCROLLCHILDREN","Value":1}
 			,{"Name":"SW_INVALIDATE","Value":2}
 			,{"Name":"SW_ERASE","Value":4}
 			,{"Name":"SW_SMOOTHSCROLL","Value":16}
@@ -10097,6 +10623,21 @@
 		,"IntegerBase":"UInt32"
 	}
 	,{
+		"Name":"REGISTER_NOTIFICATION_FLAGS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"DEVICE_NOTIFY_SERVICE_HANDLE","Value":1}
+			,{"Name":"DEVICE_NOTIFY_CALLBACK","Value":2}
+			,{"Name":"DEVICE_NOTIFY_WINDOW_HANDLE","Value":0}
+			,{"Name":"DEVICE_NOTIFY_ALL_INTERFACE_CLASSES","Value":4}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
 		"Name":"SYSTEM_CURSOR_ID"
 		,"Architectures":[]
 		,"Platform":null
@@ -10402,19 +10943,6 @@
 		,"IntegerBase":"UInt32"
 	}
 	,{
-		"Name":"MOUSEHOOKSTRUCTEX_MOUSE_DATA"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Enum"
-		,"Flags":true
-		,"Scoped":false
-		,"Values":[
-			{"Name":"XBUTTON1","Value":1}
-			,{"Name":"XBUTTON2","Value":2}
-		]
-		,"IntegerBase":"UInt32"
-	}
-	,{
 		"Name":"MENU_ITEM_MASK"
 		,"Architectures":[]
 		,"Platform":null
@@ -10513,6 +11041,22 @@
 		,"IntegerBase":"UInt32"
 	}
 	,{
+		"Name":"DEV_BROADCAST_HDR_DEVICE_TYPE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"DBT_DEVTYP_DEVICEINTERFACE","Value":5}
+			,{"Name":"DBT_DEVTYP_HANDLE","Value":6}
+			,{"Name":"DBT_DEVTYP_OEM","Value":0}
+			,{"Name":"DBT_DEVTYP_PORT","Value":3}
+			,{"Name":"DBT_DEVTYP_VOLUME","Value":2}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
 		"Name":"MINIMIZEDMETRICS_ARRANGE"
 		,"Architectures":[]
 		,"Platform":null
@@ -10526,6 +11070,19 @@
 			,{"Name":"ARW_TOPRIGHT","Value":3}
 		]
 		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"DEV_BROADCAST_VOLUME_FLAGS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"DBTF_MEDIA","Value":1}
+			,{"Name":"DBTF_NET","Value":2}
+		]
+		,"IntegerBase":"UInt16"
 	}
 	,{
 		"Name":"SCROLLINFO_MASK"
@@ -10694,12 +11251,40 @@
 		,"FreeFunc":"DestroyAcceleratorTable"
 	}
 	,{
+		"Name":"HDEVNOTIFY"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
+		,"FreeFunc":"UnregisterDeviceNotification"
+	}
+	,{
+		"Name":"HDWP"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
+		"Name":"LOADIMAGE_HANDLE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
 		"Name":"MESSAGE_RESOURCE_ENTRY"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -10715,6 +11300,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"LowId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"HighId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -10730,6 +11316,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumberOfBlocks","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Blocks","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"MESSAGE_RESOURCE_BLOCK","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]}},"Attrs":[]}
@@ -10927,6 +11514,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpcs","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CREATESTRUCTA","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]}},"Attrs":[]}
 			,{"Name":"hwndInsertAfter","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -10941,6 +11529,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpcs","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CREATESTRUCTW","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]}},"Attrs":[]}
 			,{"Name":"hwndInsertAfter","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -10955,6 +11544,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"fMouse","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"hWndActive","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -10969,6 +11559,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"hwnd","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"rc","Type":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -10983,6 +11574,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"message","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"paramL","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -11000,6 +11592,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lParam","Type":{"Kind":"ApiRef","Name":"LPARAM","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"wParam","Type":{"Kind":"ApiRef","Name":"WPARAM","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -11016,6 +11609,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lResult","Type":{"Kind":"ApiRef","Name":"LRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"lParam","Type":{"Kind":"ApiRef","Name":"LPARAM","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -11033,6 +11627,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"vkCode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"scanCode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -11050,9 +11645,10 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"pt","Type":{"Kind":"ApiRef","Name":"POINT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"mouseData","Type":{"Kind":"ApiRef","Name":"MOUSEHOOKSTRUCTEX_MOUSE_DATA","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
+			,{"Name":"mouseData","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"time","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwExtraInfo","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
@@ -11067,6 +11663,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"idThread","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"idThreadInstaller","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -11084,6 +11681,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"pt","Type":{"Kind":"ApiRef","Name":"POINT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"hwnd","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -11100,9 +11698,10 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Base","Type":{"Kind":"ApiRef","Name":"MOUSEHOOKSTRUCT","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
-			,{"Name":"mouseData","Type":{"Kind":"ApiRef","Name":"MOUSEHOOKSTRUCTEX_MOUSE_DATA","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
+			,{"Name":"mouseData","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -11114,6 +11713,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"hwnd","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"message","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -11130,13 +11730,14 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"style","Type":{"Kind":"ApiRef","Name":"WNDCLASS_STYLES","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
 			,{"Name":"lpfnWndProc","Type":{"Kind":"ApiRef","Name":"WNDPROC","TargetKind":"FunctionPointer","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
 			,{"Name":"cbClsExtra","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"cbWndExtra","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"hIcon","Type":{"Kind":"ApiRef","Name":"HICON","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
 			,{"Name":"hCursor","Type":{"Kind":"ApiRef","Name":"HCURSOR","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
 			,{"Name":"hbrBackground","Type":{"Kind":"ApiRef","Name":"HBRUSH","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]},"Attrs":[]}
@@ -11154,13 +11755,14 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"style","Type":{"Kind":"ApiRef","Name":"WNDCLASS_STYLES","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
 			,{"Name":"lpfnWndProc","Type":{"Kind":"ApiRef","Name":"WNDPROC","TargetKind":"FunctionPointer","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
 			,{"Name":"cbClsExtra","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"cbWndExtra","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"hIcon","Type":{"Kind":"ApiRef","Name":"HICON","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
 			,{"Name":"hCursor","Type":{"Kind":"ApiRef","Name":"HCURSOR","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
 			,{"Name":"hbrBackground","Type":{"Kind":"ApiRef","Name":"HBRUSH","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]},"Attrs":[]}
@@ -11178,12 +11780,13 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"style","Type":{"Kind":"ApiRef","Name":"WNDCLASS_STYLES","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
 			,{"Name":"lpfnWndProc","Type":{"Kind":"ApiRef","Name":"WNDPROC","TargetKind":"FunctionPointer","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
 			,{"Name":"cbClsExtra","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"cbWndExtra","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"hIcon","Type":{"Kind":"ApiRef","Name":"HICON","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["Optional"]}
 			,{"Name":"hCursor","Type":{"Kind":"ApiRef","Name":"HCURSOR","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["Optional"]}
 			,{"Name":"hbrBackground","Type":{"Kind":"ApiRef","Name":"HBRUSH","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]},"Attrs":["Optional"]}
@@ -11200,12 +11803,13 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"style","Type":{"Kind":"ApiRef","Name":"WNDCLASS_STYLES","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
 			,{"Name":"lpfnWndProc","Type":{"Kind":"ApiRef","Name":"WNDPROC","TargetKind":"FunctionPointer","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
 			,{"Name":"cbClsExtra","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"cbWndExtra","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"hIcon","Type":{"Kind":"ApiRef","Name":"HICON","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["Optional"]}
 			,{"Name":"hCursor","Type":{"Kind":"ApiRef","Name":"HCURSOR","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["Optional"]}
 			,{"Name":"hbrBackground","Type":{"Kind":"ApiRef","Name":"HBRUSH","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]},"Attrs":["Optional"]}
@@ -11222,6 +11826,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"hwnd","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"message","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -11240,6 +11845,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ptReserved","Type":{"Kind":"ApiRef","Name":"POINT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"ptMaxSize","Type":{"Kind":"ApiRef","Name":"POINT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -11257,6 +11863,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"hmenuIn","Type":{"Kind":"ApiRef","Name":"HMENU","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
 			,{"Name":"hmenuNext","Type":{"Kind":"ApiRef","Name":"HMENU","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
@@ -11272,6 +11879,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"hwnd","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"hwndInsertAfter","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -11291,6 +11899,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"rgrc","Type":{"Kind":"Array","Shape":{"Size":3},"Child":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 			,{"Name":"lppos","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WINDOWPOS","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]}},"Attrs":[]}
@@ -11305,6 +11914,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"fVirt","Type":{"Kind":"ApiRef","Name":"ACCEL_VIRT_FLAGS","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
 			,{"Name":"key","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -11320,9 +11930,10 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpCreateParams","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-			,{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"hMenu","Type":{"Kind":"ApiRef","Name":"HMENU","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
 			,{"Name":"hwndParent","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"cy","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -11344,9 +11955,10 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpCreateParams","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-			,{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"hMenu","Type":{"Kind":"ApiRef","Name":"HMENU","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
 			,{"Name":"hwndParent","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"cy","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -11368,6 +11980,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"flags","Type":{"Kind":"ApiRef","Name":"WINDOWPLACEMENT_FLAGS","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
@@ -11386,6 +11999,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"styleOld","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"styleNew","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -11413,6 +12027,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"hdcDst","Type":{"Kind":"ApiRef","Name":"HDC","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]},"Attrs":[]}
@@ -11435,6 +12050,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"hwnd","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -11452,6 +12068,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":2
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"style","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwExtendedStyle","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -11471,6 +12088,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":2
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"style","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwExtendedStyle","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -11479,6 +12097,22 @@
 			,{"Name":"cx","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
 			,{"Name":"cy","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
 			,{"Name":"id","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"GETCLIPBMETADATA"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"IsDelayRendered","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"IsSynthetic","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -11506,6 +12140,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"rcExclude","Type":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -11520,6 +12155,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"fMask","Type":{"Kind":"ApiRef","Name":"MENUINFO_MASK","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
@@ -11539,6 +12175,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"MENUGETOBJECTINFO_FLAGS","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
 			,{"Name":"uPos","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -11556,6 +12193,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"fMask","Type":{"Kind":"ApiRef","Name":"MENU_ITEM_MASK","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
@@ -11580,6 +12218,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"fMask","Type":{"Kind":"ApiRef","Name":"MENU_ITEM_MASK","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
@@ -11604,6 +12243,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"hwndSource","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"hwndSink","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -11635,10 +12275,11 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"hwndOwner","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"lpszText","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"lpszCaption","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"dwStyle","Type":{"Kind":"ApiRef","Name":"MESSAGEBOX_STYLE","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
@@ -11657,10 +12298,11 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"hwndOwner","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"lpszText","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"lpszCaption","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"dwStyle","Type":{"Kind":"ApiRef","Name":"MESSAGEBOX_STYLE","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
@@ -11679,6 +12321,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"versionNumber","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"offset","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -11693,6 +12336,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"mtOption","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"mtID","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -11708,6 +12352,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"fIcon","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"xHotspot","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -11725,6 +12370,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"xHotSpot","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"yHotSpot","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -11744,6 +12390,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"fIcon","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -11765,6 +12412,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"fIcon","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -11799,6 +12447,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"fMask","Type":{"Kind":"ApiRef","Name":"SCROLLINFO_MASK","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
@@ -11818,6 +12467,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"szClass","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"szTitle","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
@@ -11839,6 +12489,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"szClass","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"szTitle","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
@@ -11860,6 +12511,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"hWindowMenu","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"idFirstChild","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -11874,6 +12526,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwLatency","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -11903,6 +12556,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"iBorderWidth","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -11931,6 +12585,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"iBorderWidth","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -11959,6 +12614,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"iWidth","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -11976,6 +12632,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"iHorzSpacing","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -11993,6 +12650,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"iHorzSpacing","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -12010,6 +12668,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"iMinAnimate","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -12024,6 +12683,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Enabled","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -12039,6 +12699,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"flags","Type":{"Kind":"ApiRef","Name":"GUITHREADINFO_FLAGS","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
@@ -12060,6 +12721,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"flags","Type":{"Kind":"ApiRef","Name":"CURSORINFO_FLAGS","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
@@ -12076,12 +12738,13 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"rcWindow","Type":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"rcClient","Type":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"dwStyle","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"dwExStyle","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dwStyle","Type":{"Kind":"ApiRef","Name":"WINDOW_STYLE","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
+			,{"Name":"dwExStyle","Type":{"Kind":"ApiRef","Name":"WINDOW_EX_STYLE","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
 			,{"Name":"dwWindowStatus","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"cxWindowBorders","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"cyWindowBorders","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -12098,6 +12761,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"rcTitleBar","Type":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -12113,6 +12777,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"rcTitleBar","Type":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -12129,6 +12794,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"rcBar","Type":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -12146,6 +12812,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"rcScrollBar","Type":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -12165,6 +12832,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"cItems","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -12186,6 +12854,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ExtStatus","Type":{"Kind":"ApiRef","Name":"MSGFLTINFO_STATUS","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
@@ -12194,12 +12863,26 @@
 		]
 	}
 	,{
+		"Name":"TOOLTIP_DISMISS_FLAGS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"TDF_REGISTER","Value":1}
+			,{"Name":"TDF_UNREGISTER","Value":2}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
 		"Name":"IndexedResourceQualifier"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"name","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"value","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -12228,6 +12911,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"handle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 		]
@@ -12312,10 +12996,393 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"severity","Type":{"Kind":"ApiRef","Name":"MrmResourceIndexerMessageSeverity","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
 			,{"Name":"id","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"text","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DEV_BROADCAST_HDR"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"dbch_size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbch_devicetype","Type":{"Kind":"ApiRef","Name":"DEV_BROADCAST_HDR_DEVICE_TYPE","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
+			,{"Name":"dbch_reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"VolLockBroadcast"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"vlb_dbh","Type":{"Kind":"ApiRef","Name":"DEV_BROADCAST_HDR","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
+			,{"Name":"vlb_owner","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"vlb_perms","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"vlb_lockType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"vlb_drive","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"vlb_flags","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"_DEV_BROADCAST_HEADER"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"dbcd_size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbcd_devicetype","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbcd_reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DEV_BROADCAST_OEM"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"dbco_size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbco_devicetype","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbco_reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbco_identifier","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbco_suppfunc","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DEV_BROADCAST_DEVNODE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"dbcd_size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbcd_devicetype","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbcd_reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbcd_devnode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DEV_BROADCAST_VOLUME"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"dbcv_size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbcv_devicetype","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbcv_reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbcv_unitmask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbcv_flags","Type":{"Kind":"ApiRef","Name":"DEV_BROADCAST_VOLUME_FLAGS","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DEV_BROADCAST_PORT_A"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"dbcp_size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbcp_devicetype","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbcp_reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbcp_name","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DEV_BROADCAST_PORT_W"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"dbcp_size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbcp_devicetype","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbcp_reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbcp_name","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DEV_BROADCAST_NET"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"dbcn_size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbcn_devicetype","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbcn_reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbcn_resource","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbcn_flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DEV_BROADCAST_DEVICEINTERFACE_A"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"dbcc_size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbcc_devicetype","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbcc_reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbcc_classguid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
+			,{"Name":"dbcc_name","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DEV_BROADCAST_DEVICEINTERFACE_W"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"dbcc_size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbcc_devicetype","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbcc_reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbcc_classguid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
+			,{"Name":"dbcc_name","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DEV_BROADCAST_HANDLE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"dbch_size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbch_devicetype","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbch_reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbch_handle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"dbch_hdevnotify","Type":{"Kind":"ApiRef","Name":"HDEVNOTIFY","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
+			,{"Name":"dbch_eventguid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
+			,{"Name":"dbch_nameoffset","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+			,{"Name":"dbch_data","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DEV_BROADCAST_HANDLE32"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"dbch_size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbch_devicetype","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbch_reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbch_handle","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbch_hdevnotify","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbch_eventguid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
+			,{"Name":"dbch_nameoffset","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+			,{"Name":"dbch_data","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DEV_BROADCAST_HANDLE64"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"dbch_size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbch_devicetype","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbch_reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dbch_handle","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"dbch_hdevnotify","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"dbch_eventguid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
+			,{"Name":"dbch_nameoffset","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+			,{"Name":"dbch_data","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"_DEV_BROADCAST_USERDEFINED"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"dbud_dbh","Type":{"Kind":"ApiRef","Name":"DEV_BROADCAST_HDR","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":[]}
+			,{"Name":"dbud_szName","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DEVICE_EVENT_MOUNT"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"FileSystemNameLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"FileSystemNameOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DEVICE_EVENT_BECOMING_READY"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Reason","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Estimated100msToReady","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DEVICE_EVENT_EXTERNAL_REQUEST"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"DeviceClass","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ButtonStatus","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"Request","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"SystemTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DEVICE_EVENT_GENERIC_DATA"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"EventNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DEVICE_EVENT_RBC_DATA"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"EventNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"SenseQualifier","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"SenseCode","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"SenseKey","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"Information","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"GUID_IO_DISK_CLONE_ARRIVAL_INFORMATION"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"DiskNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DISK_HEALTH_NOTIFICATION_DATA"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"DeviceGuid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -12333,7 +13400,7 @@
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"uID","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"lpBuffer","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Out"]}
 			,{"Name":"cchBufferMax","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
@@ -12349,7 +13416,7 @@
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"uID","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"lpBuffer","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Out"]}
 			,{"Name":"cchBufferMax","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
@@ -12771,8 +13838,8 @@
 		,"Params":[
 			{"Name":"hWnd","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Msg","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"wParam","Type":{"Kind":"ApiRef","Name":"WPARAM","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Optional"]}
-			,{"Name":"lParam","Type":{"Kind":"ApiRef","Name":"LPARAM","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Optional"]}
+			,{"Name":"wParam","Type":{"Kind":"ApiRef","Name":"WPARAM","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"lParam","Type":{"Kind":"ApiRef","Name":"LPARAM","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -12787,8 +13854,8 @@
 		,"Params":[
 			{"Name":"hWnd","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Msg","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"wParam","Type":{"Kind":"ApiRef","Name":"WPARAM","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Optional"]}
-			,{"Name":"lParam","Type":{"Kind":"ApiRef","Name":"LPARAM","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Optional"]}
+			,{"Name":"wParam","Type":{"Kind":"ApiRef","Name":"WPARAM","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"lParam","Type":{"Kind":"ApiRef","Name":"LPARAM","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 		]
 	}
 	,{
@@ -12901,7 +13968,7 @@
 		"Name":"RegisterDeviceNotificationA"
 		,"SetLastError":true
 		,"DllImport":"USER32.dll"
-		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
+		,"ReturnType":{"Kind":"ApiRef","Name":"HDEVNOTIFY","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows5.1.2600"
@@ -12909,14 +13976,14 @@
 		,"Params":[
 			{"Name":"hRecipient","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"NotificationFilter","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
-			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"POWER_SETTING_REGISTER_NOTIFICATION_FLAGS","TargetKind":"Default","Api":"System.Power","Parents":[]},"Attrs":["In"]}
+			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"REGISTER_NOTIFICATION_FLAGS","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"RegisterDeviceNotificationW"
 		,"SetLastError":true
 		,"DllImport":"USER32.dll"
-		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
+		,"ReturnType":{"Kind":"ApiRef","Name":"HDEVNOTIFY","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows5.1.2600"
@@ -12924,7 +13991,20 @@
 		,"Params":[
 			{"Name":"hRecipient","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"NotificationFilter","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
-			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"POWER_SETTING_REGISTER_NOTIFICATION_FLAGS","TargetKind":"Default","Api":"System.Power","Parents":[]},"Attrs":["In"]}
+			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"REGISTER_NOTIFICATION_FLAGS","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"UnregisterDeviceNotification"
+		,"SetLastError":true
+		,"DllImport":"USER32.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows5.1.2600"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"Handle","Type":{"Kind":"ApiRef","Name":"HDEVNOTIFY","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -13117,7 +14197,7 @@
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"lpReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			{"Name":"lpReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
@@ -13157,7 +14237,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"lpClassName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 		]
 	}
 	,{
@@ -13171,7 +14251,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"lpClassName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 		]
 	}
 	,{
@@ -13184,7 +14264,7 @@
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpClassName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"lpWndClass","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WNDCLASSA","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]}},"Attrs":["Out"]}
 		]
@@ -13199,7 +14279,7 @@
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpClassName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"lpWndClass","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WNDCLASSW","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]}},"Attrs":["Out"]}
 		]
@@ -13240,7 +14320,7 @@
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpszClass","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"lpwcx","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WNDCLASSEXA","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]}},"Attrs":["Out"]}
 		]
@@ -13255,7 +14335,7 @@
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpszClass","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"lpwcx","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WNDCLASSEXW","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]}},"Attrs":["Out"]}
 		]
@@ -13280,7 +14360,7 @@
 			,{"Name":"nHeight","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"hWndParent","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"hMenu","Type":{"Kind":"ApiRef","Name":"HMENU","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In","Optional"]}
-			,{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpParam","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
 		]
 	}
@@ -13304,7 +14384,7 @@
 			,{"Name":"nHeight","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"hWndParent","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"hMenu","Type":{"Kind":"ApiRef","Name":"HMENU","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In","Optional"]}
-			,{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpParam","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
 		]
 	}
@@ -13635,7 +14715,7 @@
 		"Name":"BeginDeferWindowPos"
 		,"SetLastError":true
 		,"DllImport":"USER32.dll"
-		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"HDWP","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows5.0"
@@ -13648,13 +14728,13 @@
 		"Name":"DeferWindowPos"
 		,"SetLastError":true
 		,"DllImport":"USER32.dll"
-		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"HDWP","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hWinPosInfo","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+			{"Name":"hWinPosInfo","Type":{"Kind":"ApiRef","Name":"HDWP","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In"]}
 			,{"Name":"hWnd","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"hWndInsertAfter","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"x","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
@@ -13674,7 +14754,7 @@
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hWinPosInfo","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+			{"Name":"hWinPosInfo","Type":{"Kind":"ApiRef","Name":"HDWP","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -13751,7 +14831,7 @@
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpTemplateName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"hWndParent","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpDialogFunc","Type":{"Kind":"ApiRef","Name":"DLGPROC","TargetKind":"FunctionPointer","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In","Optional"]}
@@ -13768,7 +14848,7 @@
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpTemplateName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"hWndParent","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpDialogFunc","Type":{"Kind":"ApiRef","Name":"DLGPROC","TargetKind":"FunctionPointer","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In","Optional"]}
@@ -13785,7 +14865,7 @@
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpTemplate","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DLGTEMPLATE","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]}},"Attrs":["In"]}
 			,{"Name":"hWndParent","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpDialogFunc","Type":{"Kind":"ApiRef","Name":"DLGPROC","TargetKind":"FunctionPointer","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In","Optional"]}
@@ -13802,7 +14882,7 @@
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpTemplate","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DLGTEMPLATE","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]}},"Attrs":["In"]}
 			,{"Name":"hWndParent","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpDialogFunc","Type":{"Kind":"ApiRef","Name":"DLGPROC","TargetKind":"FunctionPointer","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In","Optional"]}
@@ -13819,7 +14899,7 @@
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpTemplateName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"hWndParent","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpDialogFunc","Type":{"Kind":"ApiRef","Name":"DLGPROC","TargetKind":"FunctionPointer","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In","Optional"]}
@@ -13836,7 +14916,7 @@
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpTemplateName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"hWndParent","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpDialogFunc","Type":{"Kind":"ApiRef","Name":"DLGPROC","TargetKind":"FunctionPointer","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In","Optional"]}
@@ -13853,7 +14933,7 @@
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"hDialogTemplate","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DLGTEMPLATE","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]}},"Attrs":["In"]}
 			,{"Name":"hWndParent","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpDialogFunc","Type":{"Kind":"ApiRef","Name":"DLGPROC","TargetKind":"FunctionPointer","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In","Optional"]}
@@ -13870,7 +14950,7 @@
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"hDialogTemplate","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DLGTEMPLATE","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]}},"Attrs":["In"]}
 			,{"Name":"hWndParent","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpDialogFunc","Type":{"Kind":"ApiRef","Name":"DLGPROC","TargetKind":"FunctionPointer","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In","Optional"]}
@@ -14677,7 +15757,7 @@
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpTableName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 		]
 	}
@@ -14691,7 +15771,7 @@
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpTableName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 		]
 	}
@@ -14819,7 +15899,7 @@
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpMenuName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 		]
 	}
@@ -14833,7 +15913,7 @@
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpMenuName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 		]
 	}
@@ -15297,9 +16377,9 @@
 			,{"Name":"uFlags","Type":{"Kind":"ApiRef","Name":"TRACK_POPUP_MENU_FLAGS","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In"]}
 			,{"Name":"x","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"y","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-			,{"Name":"nReserved","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In","Reserved"]}
+			,{"Name":"nReserved","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["Reserved","Optional"]}
 			,{"Name":"hWnd","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"prcRect","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Reserved","Const"]}
+			,{"Name":"prcRect","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional","Const"]}
 		]
 	}
 	,{
@@ -15685,7 +16765,7 @@
 			,{"Name":"prcClip","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"hrgnUpdate","Type":{"Kind":"ApiRef","Name":"HRGN","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"prcUpdate","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"flags","Type":{"Kind":"ApiRef","Name":"SHOW_WINDOW_CMD","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In"]}
+			,{"Name":"flags","Type":{"Kind":"ApiRef","Name":"SCROLL_WINDOW_FLAGS","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -16936,7 +18016,7 @@
 		,"Params":[
 			{"Name":"idHook","Type":{"Kind":"ApiRef","Name":"WINDOWS_HOOK_ID","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpfn","Type":{"Kind":"ApiRef","Name":"HOOKPROC","TargetKind":"FunctionPointer","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In"]}
-			,{"Name":"hmod","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"hmod","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"dwThreadId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
@@ -16952,7 +18032,7 @@
 		,"Params":[
 			{"Name":"idHook","Type":{"Kind":"ApiRef","Name":"WINDOWS_HOOK_ID","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpfn","Type":{"Kind":"ApiRef","Name":"HOOKPROC","TargetKind":"FunctionPointer","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In"]}
-			,{"Name":"hmod","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"hmod","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"dwThreadId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
@@ -17012,7 +18092,7 @@
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpCursorName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 		]
 	}
@@ -17026,7 +18106,7 @@
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpCursorName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 		]
 	}
@@ -17066,7 +18146,7 @@
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hInst","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			{"Name":"hInst","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"xHotSpot","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"yHotSpot","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"nWidth","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
@@ -17112,7 +18192,7 @@
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpIconName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 		]
 	}
@@ -17126,7 +18206,7 @@
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpIconName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 		]
 	}
@@ -17145,7 +18225,7 @@
 			,{"Name":"cxIcon","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"cyIcon","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"phicon","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":6,"Child":{"Kind":"ApiRef","Name":"HICON","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"piconid","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":6,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
+			,{"Name":"piconid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
 			,{"Name":"nIcons","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
@@ -17165,7 +18245,7 @@
 			,{"Name":"cxIcon","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"cyIcon","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"phicon","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":6,"Child":{"Kind":"ApiRef","Name":"HICON","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"piconid","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":6,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
+			,{"Name":"piconid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
 			,{"Name":"nIcons","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
@@ -17180,7 +18260,7 @@
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"nWidth","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"nHeight","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"cPlanes","Type":{"Kind":"Native","Name":"Byte"},"Attrs":["In"]}
@@ -17272,13 +18352,13 @@
 		"Name":"LoadImageA"
 		,"SetLastError":true
 		,"DllImport":"USER32.dll"
-		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnType":{"Kind":"ApiRef","Name":"LOADIMAGE_HANDLE","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hInst","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			{"Name":"hInst","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"name","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"type","Type":{"Kind":"ApiRef","Name":"GDI_IMAGE_TYPE","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In"]}
 			,{"Name":"cx","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
@@ -17290,13 +18370,13 @@
 		"Name":"LoadImageW"
 		,"SetLastError":true
 		,"DllImport":"USER32.dll"
-		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnType":{"Kind":"ApiRef","Name":"LOADIMAGE_HANDLE","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hInst","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			{"Name":"hInst","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"name","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"type","Type":{"Kind":"ApiRef","Name":"GDI_IMAGE_TYPE","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In"]}
 			,{"Name":"cx","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
@@ -17578,7 +18658,7 @@
 			,{"Name":"nWidth","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"nHeight","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"hWndParent","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
-			,{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lParam","Type":{"Kind":"ApiRef","Name":"LPARAM","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 		]
 	}
@@ -17600,7 +18680,7 @@
 			,{"Name":"nWidth","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"nHeight","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"hWndParent","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
-			,{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"hInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lParam","Type":{"Kind":"ApiRef","Name":"LPARAM","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 		]
 	}
@@ -17650,7 +18730,7 @@
 		,"Params":[
 			{"Name":"uiAction","Type":{"Kind":"ApiRef","Name":"SYSTEM_PARAMETERS_INFO_ACTION","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In"]}
 			,{"Name":"uiParam","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"pvParam","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out","Optional"]}
+			,{"Name":"pvParam","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Optional"]}
 			,{"Name":"fWinIni","Type":{"Kind":"ApiRef","Name":"SYSTEM_PARAMETERS_INFO_UPDATE_FLAGS","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In"]}
 		]
 	}
@@ -17666,7 +18746,7 @@
 		,"Params":[
 			{"Name":"uiAction","Type":{"Kind":"ApiRef","Name":"SYSTEM_PARAMETERS_INFO_ACTION","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In"]}
 			,{"Name":"uiParam","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"pvParam","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out","Optional"]}
+			,{"Name":"pvParam","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Optional"]}
 			,{"Name":"fWinIni","Type":{"Kind":"ApiRef","Name":"SYSTEM_PARAMETERS_INFO_UPDATE_FLAGS","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In"]}
 		]
 	}
@@ -18444,6 +19524,8 @@
 	,"MDICREATESTRUCT"
 	,"NONCLIENTMETRICS"
 	,"ICONMETRICS"
+	,"DEV_BROADCAST_PORT_"
+	,"DEV_BROADCAST_DEVICEINTERFACE_"
 	,"LoadString"
 	,"GetWindowLongPtr"
 	,"SetWindowLongPtr"

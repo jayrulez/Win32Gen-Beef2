@@ -24,7 +24,7 @@
 					{"Name":"riid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
 					,{"Name":"pv","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
 					,{"Name":"dwDestContext","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"pvDestContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+					,{"Name":"pvDestContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 					,{"Name":"mshlflags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pCid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["Out"]}
 				]
@@ -41,7 +41,7 @@
 					{"Name":"riid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
 					,{"Name":"pv","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
 					,{"Name":"dwDestContext","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"pvDestContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+					,{"Name":"pvDestContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 					,{"Name":"mshlflags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pSize","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
@@ -59,7 +59,7 @@
 					,{"Name":"riid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
 					,{"Name":"pv","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
 					,{"Name":"dwDestContext","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"pvDestContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+					,{"Name":"pvDestContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 					,{"Name":"mshlflags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 				]
 			}
@@ -1543,7 +1543,7 @@
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
 			,{"Name":"param1","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"IntPtr"}},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -1558,7 +1558,7 @@
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
 			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
-			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"IntPtr"}},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -1573,7 +1573,7 @@
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
 			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
-			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"IntPtr"}},"Attrs":["Out"]}
+			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -1587,7 +1587,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"IntPtr"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -1720,7 +1720,7 @@
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
 			,{"Name":"param1","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"IntPtr"}},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -1735,7 +1735,7 @@
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
 			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
-			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"IntPtr"}},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -1750,7 +1750,7 @@
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
 			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
-			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"IntPtr"}},"Attrs":["Out"]}
+			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -1764,7 +1764,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"IntPtr"}},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In"]}
 		]
 	}
 	,{

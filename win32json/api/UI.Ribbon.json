@@ -257,7 +257,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"UI_INVALIDATIONS_STATE","Value":1}
@@ -308,7 +308,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"instance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+					{"Name":"instance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"resourceName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 				]
 			}
@@ -400,6 +400,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"CommandID","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"CommandName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
@@ -418,6 +419,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"EventType","Type":{"Kind":"ApiRef","Name":"UI_EVENTTYPE","TargetKind":"Default","Api":"UI.Ribbon","Parents":[]},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"UI.Ribbon","Parents":[]},"Attrs":[]}
@@ -430,6 +432,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Modes","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 					,{"Name":"Params","Type":{"Kind":"ApiRef","Name":"UI_EVENTPARAMS_COMMAND","TargetKind":"Default","Api":"UI.Ribbon","Parents":[]},"Attrs":[]}

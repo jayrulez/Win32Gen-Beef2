@@ -47,6 +47,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"jobId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"currentDocument","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -175,6 +176,41 @@
 		]
 	}
 	,{
+		"Name":"IPrintDocumentPackageTarget2"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"c560298a-535c-48f9-866a-632540660cb4"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"GetIsTargetIppPrinter"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"isIppPrinter","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"GetTargetIppPrintDevice"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"riid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
+					,{"Name":"ppvTarget","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","ComOutPtr"]}
+				]
+			}
+		]
+	}
+	,{
 		"Name":"PrintDocumentPackageCompletion"
 		,"Architectures":[]
 		,"Platform":null
@@ -196,6 +232,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"JobId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"CurrentDocument","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}

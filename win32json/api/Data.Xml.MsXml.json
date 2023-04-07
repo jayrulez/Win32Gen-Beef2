@@ -3910,6 +3910,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"_nLine","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"_pchBuf","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -3984,7 +3985,7 @@
 				,"Params":[
 					{"Name":"feature","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"version","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"hasFeature","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					,{"Name":"hasFeature","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 		]
@@ -4214,7 +4215,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"hasChild","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					{"Name":"hasChild","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -4240,7 +4241,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"deep","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"deep","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"cloneRoot","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IXMLDOMNode","TargetKind":"Com","Api":"Data.Xml.MsXml","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
@@ -4297,7 +4298,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"isSpecified","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					{"Name":"isSpecified","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -4434,7 +4435,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"isParsed","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					{"Name":"isParsed","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -4721,7 +4722,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"xmlSource","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
-					,{"Name":"isSuccessful","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					,{"Name":"isSuccessful","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -4777,7 +4778,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"isAsync","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					{"Name":"isAsync","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -4791,7 +4792,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"isAsync","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"isAsync","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -4815,7 +4816,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"bstrXML","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"isSuccessful","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					,{"Name":"isSuccessful","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -4841,7 +4842,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"isValidating","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					{"Name":"isValidating","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -4855,7 +4856,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"isValidating","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"isValidating","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -4869,7 +4870,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"isResolving","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					{"Name":"isResolving","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -4883,7 +4884,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"isResolving","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"isResolving","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -4897,7 +4898,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"isPreserving","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					{"Name":"isPreserving","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -4911,7 +4912,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"isPreserving","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"isPreserving","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -5968,205 +5969,6 @@
 		]
 	}
 	,{
-		"Name":"IXMLHttpRequest"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Com"
-		,"Guid":"ed8c108d-4349-11d2-91a4-00c04f7969e8"
-		,"Interface":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}
-		,"Methods":[
-			{
-				"Name":"open"
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-					{"Name":"bstrMethod","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"bstrUrl","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"varAsync","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
-					,{"Name":"bstrUser","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
-					,{"Name":"bstrPassword","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
-				]
-			}
-			,{
-				"Name":"setRequestHeader"
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-					{"Name":"bstrHeader","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"bstrValue","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-				]
-			}
-			,{
-				"Name":"getResponseHeader"
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-					{"Name":"bstrHeader","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pbstrValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
-				]
-			}
-			,{
-				"Name":"getAllResponseHeaders"
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-					{"Name":"pbstrHeaders","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
-				]
-			}
-			,{
-				"Name":"send"
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-					{"Name":"varBody","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
-				]
-			}
-			,{
-				"Name":"abort"
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-				]
-			}
-			,{
-				"Name":"get_status"
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
-				,"Params":[
-					{"Name":"plStatus","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["Out"]}
-				]
-			}
-			,{
-				"Name":"get_statusText"
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
-				,"Params":[
-					{"Name":"pbstrStatus","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
-				]
-			}
-			,{
-				"Name":"get_responseXML"
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
-				,"Params":[
-					{"Name":"ppBody","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
-				]
-			}
-			,{
-				"Name":"get_responseText"
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
-				,"Params":[
-					{"Name":"pbstrBody","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
-				]
-			}
-			,{
-				"Name":"get_responseBody"
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
-				,"Params":[
-					{"Name":"pvarBody","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
-				]
-			}
-			,{
-				"Name":"get_responseStream"
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
-				,"Params":[
-					{"Name":"pvarBody","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
-				]
-			}
-			,{
-				"Name":"get_readyState"
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
-				,"Params":[
-					{"Name":"plState","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["Out"]}
-				]
-			}
-			,{
-				"Name":"put_onreadystatechange"
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[
-					"SpecialName"
-				]
-				,"Params":[
-					{"Name":"pReadyStateSink","Type":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In","Optional"]}
-				]
-			}
-		]
-	}
-	,{
 		"Name":"IXMLDSOControl"
 		,"Architectures":[]
 		,"Platform":null
@@ -6733,7 +6535,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pf","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pf","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -6747,7 +6549,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"f","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"f","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 		]
@@ -7373,7 +7175,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"node","Type":{"Kind":"ApiRef","Name":"IXMLDOMNode","TargetKind":"Com","Api":"Data.Xml.MsXml","Parents":[]},"Attrs":["In"]}
-					,{"Name":"deep","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					,{"Name":"deep","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"clone","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IXMLDOMNode","TargetKind":"Com","Api":"Data.Xml.MsXml","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -7899,7 +7701,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pDone","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pDone","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -8297,7 +8099,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"timeoutInSeconds","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
-					,{"Name":"isSuccessful","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					,{"Name":"isSuccessful","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -8383,7 +8185,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pwchName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-					,{"Name":"pvfValue","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pvfValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -8396,7 +8198,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pwchName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-					,{"Name":"vfValue","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					,{"Name":"vfValue","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -9369,7 +9171,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"strName","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"fValue","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					,{"Name":"fValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -9382,7 +9184,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"strName","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"fValue","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					,{"Name":"fValue","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -10365,7 +10167,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"fWriteByteOrderMark","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"fWriteByteOrderMark","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -10379,7 +10181,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"fWriteByteOrderMark","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"fWriteByteOrderMark","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -10393,7 +10195,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"fIndentMode","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"fIndentMode","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -10407,7 +10209,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"fIndentMode","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"fIndentMode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -10421,7 +10223,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"fValue","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"fValue","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -10435,7 +10237,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"fValue","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"fValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -10449,7 +10251,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"fValue","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"fValue","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -10463,7 +10265,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"fValue","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"fValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -10505,7 +10307,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"fValue","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"fValue","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -10519,7 +10321,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"fValue","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"fValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -10826,7 +10628,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"fOverride","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"fOverride","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -10840,7 +10642,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"fOverride","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"fOverride","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -10875,7 +10677,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"contextNode","Type":{"Kind":"ApiRef","Name":"IXMLDOMNode","TargetKind":"Com","Api":"Data.Xml.MsXml","Parents":[]},"Attrs":["In"]}
-					,{"Name":"fDeep","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					,{"Name":"fDeep","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -10973,7 +10775,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"fOverride","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"fOverride","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -10985,7 +10787,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"fOverride","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"fOverride","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -11020,7 +10822,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"contextNode","Type":{"Kind":"ApiRef","Name":"IXMLDOMNode","TargetKind":"Com","Api":"Data.Xml.MsXml","Parents":[]},"Attrs":["In"]}
-					,{"Name":"fDeep","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					,{"Name":"fDeep","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -11111,7 +10913,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"strName","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"fValue","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					,{"Name":"fValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -11124,7 +10926,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"strName","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"fValue","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					,{"Name":"fValue","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -11466,7 +11268,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"validateOnLoad","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"validateOnLoad","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -11480,7 +11282,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"validateOnLoad","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"validateOnLoad","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -11742,7 +11544,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"annotationSink","Type":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
-					,{"Name":"isWritten","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					,{"Name":"isWritten","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -12010,7 +11812,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"reference","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"reference","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -12090,7 +11892,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"nillable","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"nillable","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -12160,7 +11962,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"abstract","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"abstract","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -12174,7 +11976,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"reference","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"reference","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -12253,7 +12055,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"data","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"valid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					,{"Name":"valid","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -12445,7 +12247,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"abstract","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"abstract","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -12717,6 +12519,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"__tagDomNodeType__","Type":{"Kind":"ApiRef","Name":"DOMNodeType","TargetKind":"Default","Api":"Data.Xml.MsXml","Parents":[]},"Attrs":[]}
 			,{"Name":"__domNodeType__","Type":{"Kind":"ApiRef","Name":"DOMNodeType","TargetKind":"Default","Api":"Data.Xml.MsXml","Parents":[]},"Attrs":[]}
@@ -12874,6 +12677,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"pwszUrl","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"pwszName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -13112,6 +12916,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"cbCert","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pbCert","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}

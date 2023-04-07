@@ -114,6 +114,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwProcessId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ProcessStartTime","Type":{"Kind":"ApiRef","Name":"FILETIME","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -128,6 +129,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Process","Type":{"Kind":"ApiRef","Name":"RM_UNIQUE_PROCESS","TargetKind":"Default","Api":"System.RestartManager","Parents":[]},"Attrs":[]}
 			,{"Name":"strAppName","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
@@ -176,6 +178,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"FilterAction","Type":{"Kind":"ApiRef","Name":"RM_FILTER_ACTION","TargetKind":"Default","Api":"System.RestartManager","Parents":[]},"Attrs":[]}
 			,{"Name":"FilterTrigger","Type":{"Kind":"ApiRef","Name":"RM_FILTER_TRIGGER","TargetKind":"Default","Api":"System.RestartManager","Parents":[]},"Attrs":[]}
@@ -190,6 +193,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"strFilename","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 					,{"Name":"Process","Type":{"Kind":"ApiRef","Name":"RM_UNIQUE_PROCESS","TargetKind":"Default","Api":"System.RestartManager","Parents":[]},"Attrs":[]}
@@ -227,7 +231,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"pSessionHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-			,{"Name":"dwSessionFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"dwSessionFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 			,{"Name":"strSessionKey","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Out"]}
 		]
 	}
@@ -270,11 +274,11 @@
 		,"Params":[
 			{"Name":"dwSessionHandle","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"nFiles","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"rgsFileNames","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"rgsFileNames","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"nApplications","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"rgApplications","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"ApiRef","Name":"RM_UNIQUE_PROCESS","TargetKind":"Default","Api":"System.RestartManager","Parents":[]}},"Attrs":["In","Optional"]}
 			,{"Name":"nServices","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"rgsServiceNames","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":5,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"rgsServiceNames","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":5,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional","Const"]}
 		]
 	}
 	,{
@@ -320,7 +324,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"dwSessionHandle","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"dwRestartFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"dwRestartFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 			,{"Name":"fnStatus","Type":{"Kind":"ApiRef","Name":"RM_WRITE_STATUS_CALLBACK","TargetKind":"FunctionPointer","Api":"System.RestartManager","Parents":[]},"Attrs":["In","Optional"]}
 		]
 	}

@@ -408,6 +408,9 @@
 			,{"Name":"GAMING_DEVICE_DEVICE_ID_XBOX_ONE_S","Value":712204761}
 			,{"Name":"GAMING_DEVICE_DEVICE_ID_XBOX_ONE_X","Value":1523980231}
 			,{"Name":"GAMING_DEVICE_DEVICE_ID_XBOX_ONE_X_DEVKIT","Value":284675555}
+			,{"Name":"GAMING_DEVICE_DEVICE_ID_XBOX_SERIES_S","Value":489159355}
+			,{"Name":"GAMING_DEVICE_DEVICE_ID_XBOX_SERIES_X","Value":796540415}
+			,{"Name":"GAMING_DEVICE_DEVICE_ID_XBOX_SERIES_X_DEVKIT","Value":-561359263}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -418,6 +421,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"vendorId","Type":{"Kind":"ApiRef","Name":"GAMING_DEVICE_VENDOR_ID","TargetKind":"Default","Api":"Gaming","Parents":[]},"Attrs":[]}
 			,{"Name":"deviceId","Type":{"Kind":"ApiRef","Name":"GAMING_DEVICE_DEVICE_ID","TargetKind":"Default","Api":"Gaming","Parents":[]},"Attrs":[]}
@@ -610,6 +614,37 @@
 					,{"Name":"uri","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 					,{"Name":"headers","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 					,{"Name":"body","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":8,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+					,{"Name":"bodySize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"forceRefresh","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+					,{"Name":"result","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IXblIdpAuthTokenResult","TargetKind":"Com","Api":"Gaming","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"IXblIdpAuthManager2"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"bf8c0950-8389-43dd-9a76-a19728ec5dc5"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"GetUserlessTokenAndSignatureWithTokenResult"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"appSid","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+					,{"Name":"msaTarget","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+					,{"Name":"msaPolicy","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+					,{"Name":"httpMethod","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+					,{"Name":"uri","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+					,{"Name":"headers","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+					,{"Name":"body","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":7,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 					,{"Name":"bodySize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"forceRefresh","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"result","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IXblIdpAuthTokenResult","TargetKind":"Com","Api":"Gaming","Parents":[]}},"Attrs":["Out"]}

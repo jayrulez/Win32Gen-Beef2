@@ -96,7 +96,7 @@
 			,{"Name":"BATTERY_TYPE_NIMH","Value":3}
 			,{"Name":"BATTERY_TYPE_UNKNOWN","Value":255}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Byte"
 	}
 	,{
 		"Name":"BATTERY_LEVEL"
@@ -111,7 +111,7 @@
 			,{"Name":"BATTERY_LEVEL_MEDIUM","Value":2}
 			,{"Name":"BATTERY_LEVEL_FULL","Value":3}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Byte"
 	}
 	,{
 		"Name":"BATTERY_DEVTYPE"
@@ -124,7 +124,7 @@
 			{"Name":"BATTERY_DEVTYPE_GAMEPAD","Value":0}
 			,{"Name":"BATTERY_DEVTYPE_HEADSET","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Byte"
 	}
 	,{
 		"Name":"XINPUT_DEVTYPE"
@@ -136,7 +136,7 @@
 		,"Values":[
 			{"Name":"XINPUT_DEVTYPE_GAMEPAD","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Byte"
 	}
 	,{
 		"Name":"XINPUT_DEVSUBTYPE"
@@ -158,7 +158,7 @@
 			,{"Name":"XINPUT_DEVSUBTYPE_GUITAR_BASS","Value":11}
 			,{"Name":"XINPUT_DEVSUBTYPE_ARCADE_PAD","Value":19}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Byte"
 	}
 	,{
 		"Name":"XINPUT_CAPABILITIES_FLAGS"
@@ -238,6 +238,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"wButtons","Type":{"Kind":"ApiRef","Name":"XINPUT_GAMEPAD_BUTTON_FLAGS","TargetKind":"Default","Api":"UI.Input.XboxController","Parents":[]},"Attrs":[]}
 			,{"Name":"bLeftTrigger","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -257,6 +258,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwPacketNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Gamepad","Type":{"Kind":"ApiRef","Name":"XINPUT_GAMEPAD","TargetKind":"Default","Api":"UI.Input.XboxController","Parents":[]},"Attrs":[]}
@@ -271,6 +273,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"wLeftMotorSpeed","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"wRightMotorSpeed","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -285,6 +288,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Type","Type":{"Kind":"ApiRef","Name":"XINPUT_DEVTYPE","TargetKind":"Default","Api":"UI.Input.XboxController","Parents":[]},"Attrs":[]}
 			,{"Name":"SubType","Type":{"Kind":"ApiRef","Name":"XINPUT_DEVSUBTYPE","TargetKind":"Default","Api":"UI.Input.XboxController","Parents":[]},"Attrs":[]}
@@ -302,6 +306,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"BatteryType","Type":{"Kind":"ApiRef","Name":"BATTERY_TYPE","TargetKind":"Default","Api":"UI.Input.XboxController","Parents":[]},"Attrs":[]}
 			,{"Name":"BatteryLevel","Type":{"Kind":"ApiRef","Name":"BATTERY_LEVEL","TargetKind":"Default","Api":"UI.Input.XboxController","Parents":[]},"Attrs":[]}
@@ -316,6 +321,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"VirtualKey","Type":{"Kind":"ApiRef","Name":"XINPUT_VIRTUAL_KEY","TargetKind":"Default","Api":"UI.Input.XboxController","Parents":[]},"Attrs":[]}
 			,{"Name":"Unicode","Type":{"Kind":"Native","Name":"Char"},"Attrs":[]}
@@ -332,7 +338,7 @@
 	{
 		"Name":"XInputGetState"
 		,"SetLastError":false
-		,"DllImport":"XINPUTUAP.dll"
+		,"DllImport":"xinput1_4.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -346,7 +352,7 @@
 	,{
 		"Name":"XInputSetState"
 		,"SetLastError":false
-		,"DllImport":"XINPUTUAP.dll"
+		,"DllImport":"xinput1_4.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -360,7 +366,7 @@
 	,{
 		"Name":"XInputGetCapabilities"
 		,"SetLastError":false
-		,"DllImport":"XINPUTUAP.dll"
+		,"DllImport":"xinput1_4.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -375,7 +381,7 @@
 	,{
 		"Name":"XInputEnable"
 		,"SetLastError":false
-		,"DllImport":"XINPUTUAP.dll"
+		,"DllImport":"xinput1_4.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -388,7 +394,7 @@
 	,{
 		"Name":"XInputGetAudioDeviceIds"
 		,"SetLastError":false
-		,"DllImport":"XINPUTUAP.dll"
+		,"DllImport":"xinput1_4.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -405,7 +411,7 @@
 	,{
 		"Name":"XInputGetBatteryInformation"
 		,"SetLastError":false
-		,"DllImport":"XINPUTUAP.dll"
+		,"DllImport":"xinput1_4.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -420,7 +426,7 @@
 	,{
 		"Name":"XInputGetKeystroke"
 		,"SetLastError":false
-		,"DllImport":"XINPUTUAP.dll"
+		,"DllImport":"xinput1_4.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -428,7 +434,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"dwUserIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"dwReserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"dwReserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 			,{"Name":"pKeystroke","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"XINPUT_KEYSTROKE","TargetKind":"Default","Api":"UI.Input.XboxController","Parents":[]}},"Attrs":["Out"]}
 		]
 	}

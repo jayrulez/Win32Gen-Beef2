@@ -179,6 +179,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pgSubjectType","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":[]}
@@ -207,6 +208,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"psFlat","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MS_ADDINFO_FLAT","TargetKind":"Default","Api":"Security.Cryptography.Sip","Parents":[]}},"Attrs":[]}
 					,{"Name":"psCatMember","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MS_ADDINFO_CATALOGMEMBER","TargetKind":"Default","Api":"Security.Cryptography.Catalog","Parents":[]}},"Attrs":[]}
@@ -224,6 +226,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"cbStruct","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pIndirectData","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIP_INDIRECT_DATA","TargetKind":"Default","Api":"Security.Cryptography.Sip","Parents":[]}},"Attrs":[]}
@@ -238,6 +241,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"cbStruct","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"cbMemObject","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -255,6 +259,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -271,6 +276,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -285,6 +291,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"dwReserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -301,10 +308,11 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Data","Type":{"Kind":"ApiRef","Name":"CRYPT_ATTRIBUTE_TYPE_VALUE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
 			,{"Name":"DigestAlgorithm","Type":{"Kind":"ApiRef","Name":"CRYPT_ALGORITHM_IDENTIFIER","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
-			,{"Name":"Digest","Type":{"Kind":"ApiRef","Name":"CRYPTOAPI_BLOB","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
+			,{"Name":"Digest","Type":{"Kind":"ApiRef","Name":"CRYPT_INTEGER_BLOB","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -393,6 +401,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"hSIP","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -440,6 +449,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"cbStruct","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pgSubject","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":[]}

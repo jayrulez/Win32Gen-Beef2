@@ -835,6 +835,20 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"MQ_QTYPE_REPORT"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"55ee8f32-cce9-11cf-b108-0020afd61ce9"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"MQ_QTYPE_TEST"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"55ee8f33-cce9-11cf-b108-0020afd61ce9"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"PROPID_QM_BASE"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -1423,55 +1437,6 @@
 		,"Attrs":[]
 	}
 	,{
-		"Name":"MQSEC_DELETE_MESSAGE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1
-		,"Attrs":[]
-	}
-	,{
-		"Name":"MQSEC_PEEK_MESSAGE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2
-		,"Attrs":[]
-	}
-	,{
-		"Name":"MQSEC_WRITE_MESSAGE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":4
-		,"Attrs":[]
-	}
-	,{
-		"Name":"MQSEC_DELETE_JOURNAL_MESSAGE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":8
-		,"Attrs":[]
-	}
-	,{
-		"Name":"MQSEC_SET_QUEUE_PROPERTIES"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":16
-		,"Attrs":[]
-	}
-	,{
-		"Name":"MQSEC_GET_QUEUE_PROPERTIES"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":32
-		,"Attrs":[]
-	}
-	,{
-		"Name":"MQSEC_QUEUE_GENERIC_EXECUTE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":0
-		,"Attrs":[]
-	}
-	,{
 		"Name":"MQ_OK"
 		,"Type":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ValueType":"Int32"
@@ -1510,6 +1475,33 @@
 
 ,"Types":[
 	{
+		"Name":"MQQUEUEACCESSMASK"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":true
+		,"Scoped":false
+		,"Values":[
+			{"Name":"MQSEC_DELETE_QUEUE","Value":65536}
+			,{"Name":"MQSEC_GET_QUEUE_PERMISSIONS","Value":131072}
+			,{"Name":"MQSEC_CHANGE_QUEUE_PERMISSIONS","Value":262144}
+			,{"Name":"MQSEC_TAKE_QUEUE_OWNERSHIP","Value":524288}
+			,{"Name":"MQSEC_RECEIVE_MESSAGE","Value":3}
+			,{"Name":"MQSEC_RECEIVE_JOURNAL_MESSAGE","Value":10}
+			,{"Name":"MQSEC_QUEUE_GENERIC_READ","Value":131115}
+			,{"Name":"MQSEC_QUEUE_GENERIC_WRITE","Value":131108}
+			,{"Name":"MQSEC_QUEUE_GENERIC_ALL","Value":983103}
+			,{"Name":"MQSEC_DELETE_MESSAGE","Value":1}
+			,{"Name":"MQSEC_PEEK_MESSAGE","Value":2}
+			,{"Name":"MQSEC_WRITE_MESSAGE","Value":4}
+			,{"Name":"MQSEC_DELETE_JOURNAL_MESSAGE","Value":8}
+			,{"Name":"MQSEC_SET_QUEUE_PROPERTIES","Value":16}
+			,{"Name":"MQSEC_GET_QUEUE_PROPERTIES","Value":32}
+			,{"Name":"MQSEC_QUEUE_GENERIC_EXECUTE","Value":0}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
 		"Name":"MSMQQuery"
 		,"Architectures":[]
 		,"Platform":null
@@ -3653,7 +3645,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pisTransactional","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out"]}
+					{"Name":"pisTransactional","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -3667,7 +3659,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pisWorldReadable","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out"]}
+					{"Name":"pisWorldReadable","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -4199,7 +4191,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pisTransactional","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out"]}
+					{"Name":"pisTransactional","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -4213,7 +4205,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pisWorldReadable","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out"]}
+					{"Name":"pisWorldReadable","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -5226,7 +5218,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pisOpen","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out"]}
+					{"Name":"pisOpen","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -5715,7 +5707,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pisOpen","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out"]}
+					{"Name":"pisOpen","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -9130,7 +9122,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pisAuthenticated","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out"]}
+					{"Name":"pisAuthenticated","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -9144,7 +9136,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pisFirstInXact","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out"]}
+					{"Name":"pisFirstInXact","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -9158,7 +9150,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pisLastInXact","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out"]}
+					{"Name":"pisLastInXact","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -10393,7 +10385,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pisAuthenticated","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out"]}
+					{"Name":"pisAuthenticated","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -10407,7 +10399,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pisFirstInXact","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out"]}
+					{"Name":"pisFirstInXact","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -10421,7 +10413,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pisLastInXact","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out"]}
+					{"Name":"pisLastInXact","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -10868,7 +10860,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pfIsDsEnabled","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out"]}
+					{"Name":"pfIsDsEnabled","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -10948,7 +10940,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pfIsConnected","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out"]}
+					{"Name":"pfIsConnected","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -11069,7 +11061,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pfIsOpen","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out"]}
+					{"Name":"pfIsOpen","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -11414,7 +11406,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pfIsLocal","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out"]}
+					{"Name":"pfIsLocal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -11580,9 +11572,736 @@
 			}
 		]
 	}
+	,{
+		"Name":"MQPROPERTYRESTRICTION"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"rel","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"prop","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"prval","Type":{"Kind":"ApiRef","Name":"PROPVARIANT","TargetKind":"Default","Api":"System.Com.StructuredStorage","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"MQRESTRICTION"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"cRes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"paPropRes","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MQPROPERTYRESTRICTION","TargetKind":"Default","Api":"System.MessageQueuing","Parents":[]}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"MQCOLUMNSET"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"cCol","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"aCol","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"MQSORTKEY"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"propColumn","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dwOrder","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"MQSORTSET"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"cCol","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"aCol","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MQSORTKEY","TargetKind":"Default","Api":"System.MessageQueuing","Parents":[]}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"MQMSGPROPS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"cProp","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"aPropID","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			,{"Name":"aPropVar","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PROPVARIANT","TargetKind":"Default","Api":"System.Com.StructuredStorage","Parents":[]}},"Attrs":[]}
+			,{"Name":"aStatus","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"MQQUEUEPROPS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"cProp","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"aPropID","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			,{"Name":"aPropVar","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PROPVARIANT","TargetKind":"Default","Api":"System.Com.StructuredStorage","Parents":[]}},"Attrs":[]}
+			,{"Name":"aStatus","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"MQQMPROPS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"cProp","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"aPropID","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			,{"Name":"aPropVar","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PROPVARIANT","TargetKind":"Default","Api":"System.Com.StructuredStorage","Parents":[]}},"Attrs":[]}
+			,{"Name":"aStatus","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"MQPRIVATEPROPS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"cProp","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"aPropID","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			,{"Name":"aPropVar","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PROPVARIANT","TargetKind":"Default","Api":"System.Com.StructuredStorage","Parents":[]}},"Attrs":[]}
+			,{"Name":"aStatus","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"MQMGMTPROPS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"cProp","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"aPropID","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			,{"Name":"aPropVar","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PROPVARIANT","TargetKind":"Default","Api":"System.Com.StructuredStorage","Parents":[]}},"Attrs":[]}
+			,{"Name":"aStatus","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"SEQUENCE_INFO"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"SeqID","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"SeqNo","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"PrevNo","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"MQConnectionState"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"MQCONN_NOFAILURE","Value":0}
+			,{"Name":"MQCONN_ESTABLISH_PACKET_RECEIVED","Value":1}
+			,{"Name":"MQCONN_READY","Value":2}
+			,{"Name":"MQCONN_UNKNOWN_FAILURE","Value":-2147483648}
+			,{"Name":"MQCONN_PING_FAILURE","Value":-2147483647}
+			,{"Name":"MQCONN_CREATE_SOCKET_FAILURE","Value":-2147483646}
+			,{"Name":"MQCONN_BIND_SOCKET_FAILURE","Value":-2147483645}
+			,{"Name":"MQCONN_CONNECT_SOCKET_FAILURE","Value":-2147483644}
+			,{"Name":"MQCONN_TCP_NOT_ENABLED","Value":-2147483643}
+			,{"Name":"MQCONN_SEND_FAILURE","Value":-2147483642}
+			,{"Name":"MQCONN_NOT_READY","Value":-2147483641}
+			,{"Name":"MQCONN_NAME_RESOLUTION_FAILURE","Value":-2147483640}
+			,{"Name":"MQCONN_INVALID_SERVER_CERT","Value":-2147483639}
+			,{"Name":"MQCONN_LIMIT_REACHED","Value":-2147483638}
+			,{"Name":"MQCONN_REFUSED_BY_OTHER_SIDE","Value":-2147483637}
+			,{"Name":"MQCONN_ROUTING_FAILURE","Value":-2147483636}
+			,{"Name":"MQCONN_OUT_OF_MEMORY","Value":-2147483635}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"PMQRECEIVECALLBACK"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"FunctionPointer"
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"Void"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hrStatus","Type":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"hSource","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+			,{"Name":"dwTimeout","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"dwAction","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"pMessageProps","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MQMSGPROPS","TargetKind":"Default","Api":"System.MessageQueuing","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"lpOverlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"hCursor","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+		]
+	}
 ]
 
 ,"Functions":[
+	{
+		"Name":"MQCreateQueue"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"pSecurityDescriptor","Type":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"pQueueProps","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MQQUEUEPROPS","TargetKind":"Default","Api":"System.MessageQueuing","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"lpwcsFormatName","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["Out","Optional"]}
+			,{"Name":"lpdwFormatNameLength","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
+		]
+	}
+	,{
+		"Name":"MQDeleteQueue"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"lpwcsFormatName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+		]
+	}
+	,{
+		"Name":"MQLocateBegin"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"lpwcsContext","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
+			,{"Name":"pRestriction","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MQRESTRICTION","TargetKind":"Default","Api":"System.MessageQueuing","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"pColumns","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MQCOLUMNSET","TargetKind":"Default","Api":"System.MessageQueuing","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pSort","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MQSORTSET","TargetKind":"Default","Api":"System.MessageQueuing","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"phEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"MQLocateNext"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hEnum","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"pcProps","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
+			,{"Name":"aPropVar","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PROPVARIANT","TargetKind":"Default","Api":"System.Com.StructuredStorage","Parents":[]}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"MQLocateEnd"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hEnum","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"MQOpenQueue"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"lpwcsFormatName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+			,{"Name":"dwAccess","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"dwShareMode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"phQueue","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"IntPtr"}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"MQSendMessage"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hDestinationQueue","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+			,{"Name":"pMessageProps","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MQMSGPROPS","TargetKind":"Default","Api":"System.MessageQueuing","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pTransaction","Type":{"Kind":"ApiRef","Name":"ITransaction","TargetKind":"Com","Api":"System.DistributedTransactionCoordinator","Parents":[]},"Attrs":["In","Optional"]}
+		]
+	}
+	,{
+		"Name":"MQReceiveMessage"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hSource","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+			,{"Name":"dwTimeout","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"dwAction","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"pMessageProps","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MQMSGPROPS","TargetKind":"Default","Api":"System.MessageQueuing","Parents":[]}},"Attrs":["In","Out","Optional"]}
+			,{"Name":"lpOverlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Out","Optional"]}
+			,{"Name":"fnReceiveCallback","Type":{"Kind":"ApiRef","Name":"PMQRECEIVECALLBACK","TargetKind":"FunctionPointer","Api":"System.MessageQueuing","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"hCursor","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"pTransaction","Type":{"Kind":"ApiRef","Name":"ITransaction","TargetKind":"Com","Api":"System.DistributedTransactionCoordinator","Parents":[]},"Attrs":["In","Optional"]}
+		]
+	}
+	,{
+		"Name":"MQReceiveMessageByLookupId"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hSource","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+			,{"Name":"ullLookupId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":["In"]}
+			,{"Name":"dwLookupAction","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"pMessageProps","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MQMSGPROPS","TargetKind":"Default","Api":"System.MessageQueuing","Parents":[]}},"Attrs":["In","Out","Optional"]}
+			,{"Name":"lpOverlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Out","Optional"]}
+			,{"Name":"fnReceiveCallback","Type":{"Kind":"ApiRef","Name":"PMQRECEIVECALLBACK","TargetKind":"FunctionPointer","Api":"System.MessageQueuing","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"pTransaction","Type":{"Kind":"ApiRef","Name":"ITransaction","TargetKind":"Com","Api":"System.DistributedTransactionCoordinator","Parents":[]},"Attrs":["In","Optional"]}
+		]
+	}
+	,{
+		"Name":"MQCreateCursor"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hQueue","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+			,{"Name":"phCursor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"MQCloseCursor"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hCursor","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"MQCloseQueue"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hQueue","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"MQSetQueueProperties"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"lpwcsFormatName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+			,{"Name":"pQueueProps","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MQQUEUEPROPS","TargetKind":"Default","Api":"System.MessageQueuing","Parents":[]}},"Attrs":["In","Out"]}
+		]
+	}
+	,{
+		"Name":"MQGetQueueProperties"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"lpwcsFormatName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+			,{"Name":"pQueueProps","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MQQUEUEPROPS","TargetKind":"Default","Api":"System.MessageQueuing","Parents":[]}},"Attrs":["In","Out"]}
+		]
+	}
+	,{
+		"Name":"MQGetQueueSecurity"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"lpwcsFormatName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+			,{"Name":"RequestedInformation","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"pSecurityDescriptor","Type":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":3}]}
+			,{"Name":"nLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"lpnLengthNeeded","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"MQSetQueueSecurity"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"lpwcsFormatName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+			,{"Name":"SecurityInformation","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"pSecurityDescriptor","Type":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["In","Optional"]}
+		]
+	}
+	,{
+		"Name":"MQPathNameToFormatName"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"lpwcsPathName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+			,{"Name":"lpwcsFormatName","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["Out"]}
+			,{"Name":"lpdwFormatNameLength","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
+		]
+	}
+	,{
+		"Name":"MQHandleToFormatName"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hQueue","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+			,{"Name":"lpwcsFormatName","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["Out"]}
+			,{"Name":"lpdwFormatNameLength","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
+		]
+	}
+	,{
+		"Name":"MQInstanceToFormatName"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"pGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In"]}
+			,{"Name":"lpwcsFormatName","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["Out"]}
+			,{"Name":"lpdwFormatNameLength","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
+		]
+	}
+	,{
+		"Name":"MQADsPathToFormatName"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"lpwcsADsPath","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+			,{"Name":"lpwcsFormatName","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["Out"]}
+			,{"Name":"lpdwFormatNameLength","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
+		]
+	}
+	,{
+		"Name":"MQFreeMemory"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"Native","Name":"Void"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"pvMemory","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"MQGetMachineProperties"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"lpwcsMachineName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
+			,{"Name":"pguidMachineId","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Optional","Const"]}
+			,{"Name":"pQMProps","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MQQMPROPS","TargetKind":"Default","Api":"System.MessageQueuing","Parents":[]}},"Attrs":["In","Out"]}
+		]
+	}
+	,{
+		"Name":"MQGetSecurityContext"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"lpCertBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":1},"Optional"]}
+			,{"Name":"dwCertBufferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"phSecurityContext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"MQGetSecurityContextEx"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"lpCertBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":1},"Optional"]}
+			,{"Name":"dwCertBufferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"phSecurityContext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"MQFreeSecurityContext"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"Native","Name":"Void"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hSecurityContext","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"MQRegisterCertificate"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"lpCertBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			,{"Name":"dwCertBufferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"MQBeginTransaction"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"ppTransaction","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITransaction","TargetKind":"Com","Api":"System.DistributedTransactionCoordinator","Parents":[]}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"MQGetOverlappedResult"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"lpOverlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"MQGetPrivateComputerInformation"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"lpwcsComputerName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
+			,{"Name":"pPrivateProps","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MQPRIVATEPROPS","TargetKind":"Default","Api":"System.MessageQueuing","Parents":[]}},"Attrs":["In","Out"]}
+		]
+	}
+	,{
+		"Name":"MQPurgeQueue"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hQueue","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"MQMgmtGetInfo"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"pComputerName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
+			,{"Name":"pObjectName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+			,{"Name":"pMgmtProps","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MQMGMTPROPS","TargetKind":"Default","Api":"System.MessageQueuing","Parents":[]}},"Attrs":["In","Out"]}
+		]
+	}
+	,{
+		"Name":"MQMgmtAction"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"pComputerName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
+			,{"Name":"pObjectName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+			,{"Name":"pAction","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+		]
+	}
+	,{
+		"Name":"MQMarkMessageRejected"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hQueue","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"ullLookupId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"MQMoveMessage"
+		,"SetLastError":false
+		,"DllImport":"mqrt.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hSourceQueue","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+			,{"Name":"hDestinationQueue","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+			,{"Name":"ullLookupId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":["In"]}
+			,{"Name":"pTransaction","Type":{"Kind":"ApiRef","Name":"ITransaction","TargetKind":"Com","Api":"System.DistributedTransactionCoordinator","Parents":[]},"Attrs":["In","Optional"]}
+		]
+	}
 ]
 
 ,"UnicodeAliases":[

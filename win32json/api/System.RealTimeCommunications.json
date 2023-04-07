@@ -2488,7 +2488,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"lMediaTypes","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"fPersistent","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					,{"Name":"fPersistent","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -2572,8 +2572,8 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"fTCP","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
-					,{"Name":"fExternal","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"fTCP","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+					,{"Name":"fExternal","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pvAddresses","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -2613,7 +2613,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"enDevice","Type":{"Kind":"ApiRef","Name":"RTC_AUDIO_DEVICE","TargetKind":"Default","Api":"System.RealTimeCommunications","Parents":[]},"Attrs":["In"]}
-					,{"Name":"fMuted","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					,{"Name":"fMuted","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -2626,7 +2626,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"enDevice","Type":{"Kind":"ApiRef","Name":"RTC_AUDIO_DEVICE","TargetKind":"Default","Api":"System.RealTimeCommunications","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pfMuted","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pfMuted","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2705,7 +2705,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"bEnable","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"bEnable","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -2719,7 +2719,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pbEnabled","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pbEnabled","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2867,7 +2867,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"enApplet","Type":{"Kind":"ApiRef","Name":"RTC_T120_APPLET","TargetKind":"Default","Api":"System.RealTimeCommunications","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pfRunning","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pfRunning","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2936,7 +2936,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"enType","Type":{"Kind":"ApiRef","Name":"RTC_RING_TYPE","TargetKind":"Default","Api":"System.RealTimeCommunications","Parents":[]},"Attrs":["In"]}
-					,{"Name":"bPlay","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					,{"Name":"bPlay","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -2974,7 +2974,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pfTuned","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pfTuned","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -3023,8 +3023,8 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"hwndParent","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
-					,{"Name":"fAllowAudio","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
-					,{"Name":"fAllowVideo","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					,{"Name":"fAllowAudio","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+					,{"Name":"fAllowVideo","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -3180,7 +3180,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"fUseStorage","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"fUseStorage","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"varStorage","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
 				]
 			}
@@ -3206,7 +3206,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"varStorage","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
-					,{"Name":"fReplaceAll","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					,{"Name":"fReplaceAll","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -3260,7 +3260,7 @@
 					{"Name":"bstrPresentityURI","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"bstrUserName","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"bstrData","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"fPersistent","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					,{"Name":"fPersistent","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pProfile","Type":{"Kind":"ApiRef","Name":"IRTCProfile","TargetKind":"Com","Api":"System.RealTimeCommunications","Parents":[]},"Attrs":["In"]}
 					,{"Name":"lFlags","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"ppBuddy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IRTCBuddy","TargetKind":"Com","Api":"System.RealTimeCommunications","Parents":[]}},"Attrs":["Out","RetVal"]}
@@ -3329,8 +3329,8 @@
 					{"Name":"bstrPresentityURI","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"bstrUserName","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"bstrData","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"fBlocked","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
-					,{"Name":"fPersistent","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					,{"Name":"fBlocked","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+					,{"Name":"fPersistent","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"ppWatcher","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IRTCWatcher","TargetKind":"Com","Api":"System.RealTimeCommunications","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -3530,7 +3530,7 @@
 					,{"Name":"bstrUserName","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"bstrData","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"enState","Type":{"Kind":"ApiRef","Name":"RTC_WATCHER_STATE","TargetKind":"Default","Api":"System.RealTimeCommunications","Parents":[]},"Attrs":["In"]}
-					,{"Name":"fPersistent","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					,{"Name":"fPersistent","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"enScope","Type":{"Kind":"ApiRef","Name":"RTC_ACE_SCOPE","TargetKind":"Default","Api":"System.RealTimeCommunications","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pProfile","Type":{"Kind":"ApiRef","Name":"IRTCProfile","TargetKind":"Com","Api":"System.RealTimeCommunications","Parents":[]},"Attrs":["In"]}
 					,{"Name":"lFlags","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
@@ -3628,7 +3628,7 @@
 					{"Name":"bstrPresentityURI","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"bstrUserName","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"bstrData","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"fPersistent","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					,{"Name":"fPersistent","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"enSubscriptionType","Type":{"Kind":"ApiRef","Name":"RTC_BUDDY_SUBSCRIPTION_TYPE","TargetKind":"Default","Api":"System.RealTimeCommunications","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pProfile","Type":{"Kind":"ApiRef","Name":"IRTCProfile","TargetKind":"Com","Api":"System.RealTimeCommunications","Parents":[]},"Attrs":["In"]}
 					,{"Name":"lFlags","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
@@ -3882,7 +3882,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pfBanner","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pfBanner","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -4258,7 +4258,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pfCanAdd","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pfCanAdd","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -4426,7 +4426,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"enSecurityType","Type":{"Kind":"ApiRef","Name":"RTC_SECURITY_TYPE","TargetKind":"Default","Api":"System.RealTimeCommunications","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pfSecurityEnabled","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pfSecurityEnabled","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -4582,7 +4582,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pfIsReferred","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pfIsReferred","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -4634,7 +4634,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pfRemovable","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pfRemovable","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -5025,7 +5025,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pfIsForked","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pfIsForked","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -6474,7 +6474,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pfPersistent","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pfPersistent","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -6488,7 +6488,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"fPersistent","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"fPersistent","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 		]
@@ -7327,7 +7327,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pfMoreAvailable","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pfMoreAvailable","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -7517,7 +7517,7 @@
 				,"Params":[
 					{"Name":"bstrContentType","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"bstrSessionDescription","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pfApplicationSession","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					,{"Name":"pfApplicationSession","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 		]
@@ -7662,6 +7662,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SettingId","Type":{"Kind":"ApiRef","Name":"TRANSPORT_SETTING_ID","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":[]}
 			,{"Name":"Length","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}

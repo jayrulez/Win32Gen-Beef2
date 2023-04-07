@@ -16,17 +16,17 @@
 		,"Attrs":[]
 	}
 	,{
-		"Name":"HVSOCKET_CONTAINER_PASSTHRU"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2
-		,"Attrs":[]
-	}
-	,{
 		"Name":"HVSOCKET_CONNECTED_SUSPEND"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":4
+		,"Attrs":[]
+	}
+	,{
+		"Name":"HVSOCKET_HIGH_VTL"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":8
 		,"Attrs":[]
 	}
 	,{
@@ -103,7 +103,7 @@
 		"Name":"VM_GENCOUNTER_SYMBOLIC_LINK_NAME"
 		,"Type":{"Kind":"Native","Name":"String"}
 		,"ValueType":"String"
-		,"Value":"\\\\VmGenerationCounter"
+		,"Value":"\\VmGenerationCounter"
 		,"Attrs":[]
 	}
 	,{
@@ -223,6 +223,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"AsUINT64","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -235,6 +236,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 				]
@@ -250,6 +252,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"AsUINT64","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -262,6 +265,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 				]
@@ -291,6 +295,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"AsUINT64","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -303,6 +308,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 				]
@@ -318,6 +324,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"AsUINT64","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -330,6 +337,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 				]
@@ -345,6 +353,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"BanksCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Reserved0","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -358,6 +367,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":["_Anonymous_e__Union"]},"Attrs":[]}
 					,{"Name":"AsUINT64","Type":{"Kind":"Array","Shape":{"Size":2},"Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":[]}
@@ -370,6 +380,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"Bank0","Type":{"Kind":"ApiRef","Name":"WHV_PROCESSOR_FEATURES","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 							,{"Name":"Bank1","Type":{"Kind":"ApiRef","Name":"WHV_PROCESSOR_FEATURES1","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
@@ -388,6 +399,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"AsUINT64","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -400,6 +412,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 				]
@@ -415,6 +428,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"BanksCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Reserved0","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -428,6 +442,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":["_Anonymous_e__Union"]},"Attrs":[]}
 					,{"Name":"AsUINT64","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":[]}
@@ -440,6 +455,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"Bank0","Type":{"Kind":"ApiRef","Name":"WHV_SYNTHETIC_PROCESSOR_FEATURES","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 						]
@@ -498,6 +514,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"AsUINT64","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -510,6 +527,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 				]
@@ -525,6 +543,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"AsUINT64","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -537,6 +556,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 				]
@@ -552,6 +572,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AsUINT64","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
@@ -564,6 +585,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 				]
@@ -579,6 +601,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"GuestAddress","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"SizeInBytes","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -593,6 +616,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AsUINT32","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
@@ -605,6 +629,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 				]
@@ -634,6 +659,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"WHV_ADVISE_GPA_RANGE_POPULATE_FLAGS","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"AccessType","Type":{"Kind":"ApiRef","Name":"WHV_MEMORY_ACCESS_TYPE","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
@@ -648,6 +674,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"HighestFrequencyMhz","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -665,6 +692,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"AsUINT64","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -677,6 +705,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 				]
@@ -692,6 +721,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"HypervisorPresent","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"Features","Type":{"Kind":"ApiRef","Name":"WHV_CAPABILITY_FEATURES","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
@@ -721,6 +751,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Function","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Array","Shape":{"Size":3},"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
@@ -743,7 +774,7 @@
 			{"Name":"WHvX64CpuidResult2FlagSubleafSpecific","Value":1}
 			,{"Name":"WHvX64CpuidResult2FlagVpSpecific","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WHV_CPUID_OUTPUT"
@@ -752,6 +783,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Eax","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Ebx","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -768,6 +800,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Function","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Index","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -786,6 +819,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Index","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ReadAction","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -858,6 +892,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ExtendedVmExits","Type":{"Kind":"ApiRef","Name":"WHV_EXTENDED_VM_EXITS","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"ProcessorFeatures","Type":{"Kind":"ApiRef","Name":"WHV_PROCESSOR_FEATURES","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
@@ -907,7 +942,7 @@
 			,{"Name":"WHvMapGpaRangeFlagExecute","Value":4}
 			,{"Name":"WHvMapGpaRangeFlagTrackDirtyPages","Value":8}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WHV_TRANSLATE_GVA_FLAGS"
@@ -926,7 +961,7 @@
 			,{"Name":"WHvTranslateGvaFlagEnforceSmap","Value":256}
 			,{"Name":"WHvTranslateGvaFlagOverrideSmap","Value":512}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WHV_TRANSLATE_GVA_RESULT_CODE"
@@ -955,6 +990,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ResultCode","Type":{"Kind":"ApiRef","Name":"WHV_TRANSLATE_GVA_RESULT_CODE","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -969,6 +1005,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Populate","Type":{"Kind":"ApiRef","Name":"WHV_ADVISE_GPA_RANGE_POPULATE","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 		]
@@ -997,6 +1034,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AsUINT64","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
@@ -1009,6 +1047,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"CacheType","Type":{"Kind":"ApiRef","Name":"WHV_CACHE_TYPE","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 					,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1262,6 +1301,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"Dword","Type":{"Kind":"Array","Shape":{"Size":4},"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
@@ -1274,6 +1314,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Low64","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 					,{"Name":"High64","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -1290,6 +1331,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"AsUINT128","Type":{"Kind":"ApiRef","Name":"WHV_UINT128","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
@@ -1302,6 +1344,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Mantissa","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 					,{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -1318,6 +1361,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"AsUINT128","Type":{"Kind":"ApiRef","Name":"WHV_UINT128","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
@@ -1330,6 +1374,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"FpControl","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 					,{"Name":"FpStatus","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1346,6 +1391,7 @@
 						,"Kind":"Union"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"LastFpRip","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 							,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":["_Anonymous_e__Struct","_Anonymous_e__Union"]},"Attrs":[]}
@@ -1358,6 +1404,7 @@
 								,"Kind":"Struct"
 								,"Size":0
 								,"PackingSize":0
+								,"SizeField":""
 								,"Fields":[
 									{"Name":"LastFpEip","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 									,{"Name":"LastFpCs","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1379,6 +1426,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"AsUINT128","Type":{"Kind":"ApiRef","Name":"WHV_UINT128","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
@@ -1391,6 +1439,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"System.Hypervisor","Parents":["_Anonymous_e__Struct"]},"Attrs":[]}
 					,{"Name":"XmmStatusControl","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1404,6 +1453,7 @@
 						,"Kind":"Union"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"LastFpRdp","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 							,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":["_Anonymous_e__Struct","_Anonymous_e__Union"]},"Attrs":[]}
@@ -1416,6 +1466,7 @@
 								,"Kind":"Struct"
 								,"Size":0
 								,"PackingSize":0
+								,"SizeField":""
 								,"Fields":[
 									{"Name":"LastFpDp","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 									,{"Name":"LastFpDs","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1437,6 +1488,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Base","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"Limit","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1451,6 +1503,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":["_Anonymous_e__Union"]},"Attrs":[]}
 					,{"Name":"Attributes","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1463,6 +1516,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 						]
@@ -1480,6 +1534,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Pad","Type":{"Kind":"Array","Shape":{"Size":3},"Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":[]}
 			,{"Name":"Limit","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1495,6 +1550,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"AsUINT64","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -1507,6 +1563,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 				]
@@ -1522,6 +1579,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"AsUINT64","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -1534,6 +1592,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"ErrorCode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1550,6 +1609,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"AsUINT64","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -1562,6 +1622,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 				]
@@ -1590,6 +1651,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"AsUINT128","Type":{"Kind":"ApiRef","Name":"WHV_UINT128","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
@@ -1602,6 +1664,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"ErrorCode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1619,6 +1682,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"AsUINT128","Type":{"Kind":"ApiRef","Name":"WHV_UINT128","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
@@ -1631,6 +1695,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 					,{"Name":"Reserved2","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -1647,6 +1712,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"AsUINT64","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -1659,6 +1725,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 				]
@@ -1674,6 +1741,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AsUINT64","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
@@ -1686,6 +1754,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 				]
@@ -1701,6 +1770,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"DeliverableSints","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"Reserved1","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1716,6 +1786,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Reg128","Type":{"Kind":"ApiRef","Name":"WHV_UINT128","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"Reg64","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -1775,6 +1846,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"AsUINT16","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1787,6 +1859,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 				]
@@ -1802,6 +1875,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ExecutionState","Type":{"Kind":"ApiRef","Name":"WHV_X64_VP_EXECUTION_STATE","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"_bitfield","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -1821,6 +1895,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"AsUINT32","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1833,6 +1908,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 				]
@@ -1848,6 +1924,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InstructionByteCount","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Array","Shape":{"Size":3},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -1866,6 +1943,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"AsUINT32","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1878,6 +1956,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 				]
@@ -1893,6 +1972,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InstructionByteCount","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Array","Shape":{"Size":3},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -1917,6 +1997,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"AsUINT32","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1929,6 +2010,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 				]
@@ -1944,6 +2026,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AccessInfo","Type":{"Kind":"ApiRef","Name":"WHV_X64_MSR_ACCESS_INFO","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"MsrNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1960,6 +2043,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Rax","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"Rcx","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -1980,6 +2064,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"AsUINT32","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1992,6 +2077,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 				]
@@ -2007,6 +2093,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InstructionByteCount","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Array","Shape":{"Size":3},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -2040,6 +2127,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"FeatureCode","Type":{"Kind":"ApiRef","Name":"WHV_X64_UNSUPPORTED_FEATURE_CODE","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2067,6 +2155,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"CancelReason","Type":{"Kind":"ApiRef","Name":"WHV_RUN_VP_CANCEL_REASON","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 		]
@@ -2094,6 +2183,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"DeliverableType","Type":{"Kind":"ApiRef","Name":"WHV_X64_PENDING_INTERRUPTION_TYPE","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 		]
@@ -2107,6 +2197,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InterruptVector","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -2120,6 +2211,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"AsUINT64","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -2132,6 +2224,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 				]
@@ -2147,6 +2240,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"TscAux","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"VirtualOffset","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -2164,6 +2258,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ApicIcr","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 		]
@@ -2177,6 +2272,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Rax","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"Rbx","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -2199,6 +2295,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ApicIcr","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 		]
@@ -2228,6 +2325,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Type","Type":{"Kind":"ApiRef","Name":"WHV_X64_APIC_WRITE_TYPE","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2243,6 +2341,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ExitReason","Type":{"Kind":"ApiRef","Name":"WHV_RUN_VP_EXIT_REASON","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2257,6 +2356,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"MemoryAccess","Type":{"Kind":"ApiRef","Name":"WHV_MEMORY_ACCESS_CONTEXT","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 					,{"Name":"IoPortAccess","Type":{"Kind":"ApiRef","Name":"WHV_X64_IO_PORT_ACCESS_CONTEXT","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
@@ -2329,6 +2429,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"Destination","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2344,6 +2445,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"GuestAddress","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"Value","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -2372,6 +2474,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Mapped4KPageCount","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"Mapped2MPageCount","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -2403,6 +2506,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"TotalRuntime100ns","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"HypervisorRuntime100ns","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -2417,6 +2521,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Count","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"Time100ns","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -2431,6 +2536,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"PageInvalidations","Type":{"Kind":"ApiRef","Name":"WHV_PROCESSOR_INTERCEPT_COUNTER","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"ControlRegisterAccesses","Type":{"Kind":"ApiRef","Name":"WHV_PROCESSOR_INTERCEPT_COUNTER","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
@@ -2457,6 +2563,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"PageFaultCount","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"ExceptionCount","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -2472,6 +2579,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"MmioAccessCount","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"EoiAccessCount","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -2489,6 +2597,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SyntheticInterruptsCount","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"LongSpinWaitHypercallsCount","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -2537,6 +2646,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"VpIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"TargetSint","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -2557,7 +2667,7 @@
 			{"Name":"WHvAllocateVpciResourceFlagNone","Value":0}
 			,{"Name":"WHvAllocateVpciResourceFlagAllowDirectP2P","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WHV_SRIOV_RESOURCE_DESCRIPTOR"
@@ -2566,6 +2676,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"PnpInstanceId","Type":{"Kind":"Array","Shape":{"Size":200},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"VirtualFunctionId","Type":{"Kind":"ApiRef","Name":"LUID","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -2596,6 +2707,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NotificationType","Type":{"Kind":"ApiRef","Name":"WHV_VPCI_DEVICE_NOTIFICATION_TYPE","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"Reserved1","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2609,6 +2721,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Reserved2","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 				]
@@ -2629,7 +2742,7 @@
 			,{"Name":"WHvCreateVpciDeviceFlagPhysicallyBacked","Value":1}
 			,{"Name":"WHvCreateVpciDeviceFlagUseLogicalInterrupts","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WHV_VPCI_DEVICE_PROPERTY_CODE"
@@ -2652,6 +2765,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"VendorID","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"DeviceID","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -2672,6 +2786,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Value","Type":{"Kind":"Array","Shape":{"Size":6},"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
 		]
@@ -2689,7 +2804,7 @@
 			{"Name":"WHvVpciMmioRangeFlagReadAccess","Value":1}
 			,{"Name":"WHvVpciMmioRangeFlagWriteAccess","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WHV_VPCI_DEVICE_REGISTER_SPACE"
@@ -2716,6 +2831,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Location","Type":{"Kind":"ApiRef","Name":"WHV_VPCI_DEVICE_REGISTER_SPACE","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"WHV_VPCI_MMIO_RANGE_FLAGS","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
@@ -2733,6 +2849,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Location","Type":{"Kind":"ApiRef","Name":"WHV_VPCI_DEVICE_REGISTER_SPACE","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"SizeInBytes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2752,7 +2869,7 @@
 			{"Name":"WHvVpciInterruptTargetFlagNone","Value":0}
 			,{"Name":"WHvVpciInterruptTargetFlagMulticast","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WHV_VPCI_INTERRUPT_TARGET"
@@ -2761,6 +2878,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Vector","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"WHV_VPCI_INTERRUPT_TARGET_FLAGS","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
@@ -2791,6 +2909,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"TriggerType","Type":{"Kind":"ApiRef","Name":"WHV_TRIGGER_TYPE","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2804,6 +2923,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Interrupt","Type":{"Kind":"ApiRef","Name":"WHV_INTERRUPT_CONTROL","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 					,{"Name":"SynicEvent","Type":{"Kind":"ApiRef","Name":"WHV_SYNIC_EVENT_PARAMETERS","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
@@ -2817,6 +2937,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"LogicalDeviceId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 							,{"Name":"MsiAddress","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -2849,6 +2970,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"PropertyCode","Type":{"Kind":"ApiRef","Name":"WHV_VIRTUAL_PROCESSOR_PROPERTY_CODE","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2862,6 +2984,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"NumaNode","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 					,{"Name":"Padding","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -2891,6 +3014,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NotificationPortType","Type":{"Kind":"ApiRef","Name":"WHV_NOTIFICATION_PORT_TYPE","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2904,6 +3028,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Doorbell","Type":{"Kind":"ApiRef","Name":"WHV_DOORBELL_MATCH_DATA","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 					,{"Name":"Event","Type":{"Kind":"ApiRef","Name":"_Event_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":["_Anonymous_e__Union"]},"Attrs":[]}
@@ -2916,6 +3041,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"ConnectionId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 						]
@@ -2946,6 +3072,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"AsUINT32","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2958,6 +3085,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 				]
@@ -2973,6 +3101,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"GpaAddress","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"Direction","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -2989,6 +3118,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Direction","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Port","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -3082,6 +3212,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3101,8 +3232,9 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
-			{"Name":"Family","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			{"Name":"Family","Type":{"Kind":"ApiRef","Name":"ADDRESS_FAMILY","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"VmId","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"ServiceId","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
@@ -3117,6 +3249,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SystemId","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"VirtualMachineId","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
@@ -3133,6 +3266,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"GenerationCount","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"GenerationCountHigh","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -3154,12 +3288,26 @@
 		,"IntegerBase":"Int32"
 	}
 	,{
+		"Name":"HDV_DEVICE_HOST_FLAGS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":true
+		,"Scoped":false
+		,"Values":[
+			{"Name":"HdvDeviceHostFlagNone","Value":0}
+			,{"Name":"HdvDeviceHostFlagInitializeComSecurity","Value":1}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
 		"Name":"HDV_PCI_PNP_ID"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"VendorID","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"DeviceID","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -3219,7 +3367,7 @@
 			,{"Name":"HdvMmioMappingFlagWriteable","Value":1}
 			,{"Name":"HdvMmioMappingFlagExecutable","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"HDV_PCI_DEVICE_INITIALIZE"
@@ -3388,6 +3536,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Version","Type":{"Kind":"ApiRef","Name":"HDV_PCI_INTERFACE_VERSION","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"Initialize","Type":{"Kind":"ApiRef","Name":"HDV_PCI_DEVICE_INITIALIZE","TargetKind":"FunctionPointer","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
@@ -3428,6 +3577,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"GuestPhysicalStartPageIndex","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"PageCount","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -3521,6 +3671,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AsUINT64","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"ClosedSource","Type":{"Kind":"ApiRef","Name":"_ClosedSource_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
@@ -3534,6 +3685,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 				]
@@ -3547,6 +3699,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 				]
@@ -3732,6 +3885,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Reg64","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"Reg32","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3748,6 +3902,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Segment","Type":{"Kind":"ApiRef","Name":"_Segment_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":["_X64_e__Union"]},"Attrs":[]}
 					,{"Name":"Table","Type":{"Kind":"ApiRef","Name":"_Table_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":["_X64_e__Union"]},"Attrs":[]}
@@ -3762,6 +3917,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"System.Hypervisor","Parents":["_X64_e__Union","_XmmControlStatus_e__Struct"]},"Attrs":[]}
 							,{"Name":"XmmStatusControl","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3775,6 +3931,7 @@
 								,"Kind":"Union"
 								,"Size":0
 								,"PackingSize":0
+								,"SizeField":""
 								,"Fields":[
 									{"Name":"LastFpRdp","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 									,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":["_X64_e__Union","_XmmControlStatus_e__Struct","_Anonymous_e__Union"]},"Attrs":[]}
@@ -3787,6 +3944,7 @@
 										,"Kind":"Struct"
 										,"Size":0
 										,"PackingSize":0
+										,"SizeField":""
 										,"Fields":[
 											{"Name":"LastFpDp","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 											,{"Name":"LastFpDs","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -3805,6 +3963,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"FpControl","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 							,{"Name":"FpStatus","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -3821,6 +3980,7 @@
 								,"Kind":"Union"
 								,"Size":0
 								,"PackingSize":0
+								,"SizeField":""
 								,"Fields":[
 									{"Name":"LastFpRip","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 									,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":["_X64_e__Union","_FpControlStatus_e__Struct","_Anonymous_e__Union"]},"Attrs":[]}
@@ -3833,6 +3993,7 @@
 										,"Kind":"Struct"
 										,"Size":0
 										,"PackingSize":0
+										,"SizeField":""
 										,"Fields":[
 											{"Name":"LastFpEip","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 											,{"Name":"LastFpCs","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -3851,6 +4012,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"Base","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 							,{"Name":"Limit","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3865,6 +4027,7 @@
 								,"Kind":"Union"
 								,"Size":0
 								,"PackingSize":0
+								,"SizeField":""
 								,"Fields":[
 									{"Name":"Attributes","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 									,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":["_X64_e__Union","_Segment_e__Struct","_Anonymous_e__Union"]},"Attrs":[]}
@@ -3877,6 +4040,7 @@
 										,"Kind":"Struct"
 										,"Size":0
 										,"PackingSize":0
+										,"SizeField":""
 										,"Fields":[
 											{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 										]
@@ -3894,6 +4058,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"Limit","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 							,{"Name":"Base","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -3910,6 +4075,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Low64","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 					,{"Name":"High64","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -3926,6 +4092,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"PdbName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"ImageBaseAddress","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -3969,6 +4136,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ProcessImageName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"Image","Type":{"Kind":"ApiRef","Name":"DOS_IMAGE_INFO","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}

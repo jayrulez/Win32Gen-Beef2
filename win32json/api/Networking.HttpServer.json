@@ -331,6 +331,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"HTTP_LOG_FIELD_FAULT_CODE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2147483648
+		,"Attrs":[]
+	}
+	,{
 		"Name":"HTTP_LOGGING_FLAG_LOCAL_TIME_ROLLOVER"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -646,6 +653,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"HTTP_SERVICE_CONFIG_SSL_FLAG_DISABLE_SESSION_ID"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":16384
+		,"Attrs":[]
+	}
+	,{
 		"Name":"HTTP_REQUEST_PROPERTY_SNI_HOST_MAX_LENGTH"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -733,6 +747,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -759,6 +774,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"HTTP_PROPERTY_FLAGS","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"State","Type":{"Kind":"ApiRef","Name":"HTTP_ENABLED_STATE","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
@@ -801,6 +817,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"QosType","Type":{"Kind":"ApiRef","Name":"HTTP_QOS_SETTING_TYPE","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"QosSetting","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -815,6 +832,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"HTTP_PROPERTY_FLAGS","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"MaxConnections","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -829,6 +847,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"HTTP_PROPERTY_FLAGS","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"MaxBandwidth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -843,6 +862,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"HTTP_PROPERTY_FLAGS","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"MaxBandwidth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -872,6 +892,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"KeyDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_TIMEOUT_KEY","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"ParamDesc","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -886,6 +907,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"HTTP_PROPERTY_FLAGS","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"EntityBody","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -918,6 +940,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"KeyDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_SETTING_KEY","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"ParamDesc","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -932,6 +955,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"HTTP_PROPERTY_FLAGS","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"EnableSharing","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -946,6 +970,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"DomainNameLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"DomainName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -962,6 +987,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"RealmLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"Realm","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -976,6 +1002,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"HTTP_PROPERTY_FLAGS","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"AuthSchemes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1010,6 +1037,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Type","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_BINDING_TYPE","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 		]
@@ -1023,6 +1051,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Base","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_BINDING_BASE","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"Buffer","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["NotNullTerminated"]}
@@ -1038,6 +1067,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Base","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_BINDING_BASE","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"Buffer","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["NotNullTerminated"]}
@@ -1067,6 +1097,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Hardening","Type":{"Kind":"ApiRef","Name":"HTTP_AUTHENTICATION_HARDENING_LEVELS","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1083,6 +1114,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ServiceName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HTTP_SERVICE_BINDING_BASE","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]}},"Attrs":[]}
 			,{"Name":"ChannelToken","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -1099,6 +1131,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"TokenBinding","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"TokenBindingSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1147,6 +1180,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"HTTP_PROPERTY_FLAGS","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"LoggingFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1173,6 +1207,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"HTTP_PROPERTY_FLAGS","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"RequestQueueHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -1201,6 +1236,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"HTTP_PROPERTY_FLAGS","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"Level","Type":{"Kind":"ApiRef","Name":"HTTP_PROTECTION_LEVEL_TYPE","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
@@ -1215,9 +1251,10 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
-			{"Name":"StartingOffset","Type":{"Kind":"ApiRef","Name":"ULARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"Length","Type":{"Kind":"ApiRef","Name":"ULARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			{"Name":"StartingOffset","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -1229,6 +1266,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"MajorVersion","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"MinorVersion","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1354,6 +1392,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"RawValueLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"pRawValue","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
@@ -1368,6 +1407,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NameLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"RawValueLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1396,6 +1436,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Type","Type":{"Kind":"ApiRef","Name":"HTTP_LOG_DATA_TYPE","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 		]
@@ -1409,6 +1450,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Base","Type":{"Kind":"ApiRef","Name":"HTTP_LOG_DATA","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"UserNameLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1468,6 +1510,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"DataChunkType","Type":{"Kind":"ApiRef","Name":"HTTP_DATA_CHUNK_TYPE","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
@@ -1480,6 +1523,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"FromMemory","Type":{"Kind":"ApiRef","Name":"_FromMemory_e__Struct","TargetKind":"Default","Api":"Networking.HttpServer","Parents":["_Anonymous_e__Union"]},"Attrs":[]}
 					,{"Name":"FromFileHandle","Type":{"Kind":"ApiRef","Name":"_FromFileHandle_e__Struct","TargetKind":"Default","Api":"Networking.HttpServer","Parents":["_Anonymous_e__Union"]},"Attrs":[]}
@@ -1495,6 +1539,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"ByteRange","Type":{"Kind":"ApiRef","Name":"HTTP_BYTE_RANGE","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 							,{"Name":"pFragmentName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
@@ -1509,6 +1554,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"ByteRange","Type":{"Kind":"ApiRef","Name":"HTTP_BYTE_RANGE","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 							,{"Name":"FileHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -1523,23 +1569,10 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"FragmentNameLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 							,{"Name":"pFragmentName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
-						]
-						,"NestedTypes":[
-						]
-					}
-					,{
-						"Name":"_FromMemory_e__Struct"
-						,"Architectures":[]
-						,"Platform":null
-						,"Kind":"Struct"
-						,"Size":0
-						,"PackingSize":0
-						,"Fields":[
-							{"Name":"pBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-							,{"Name":"BufferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]
@@ -1551,9 +1584,25 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"TrailerCount","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 							,{"Name":"pTrailers","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HTTP_UNKNOWN_HEADER","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]}},"Attrs":[]}
+						]
+						,"NestedTypes":[
+						]
+					}
+					,{
+						"Name":"_FromMemory_e__Struct"
+						,"Architectures":[]
+						,"Platform":null
+						,"Kind":"Struct"
+						,"Size":0
+						,"PackingSize":0
+						,"SizeField":""
+						,"Fields":[
+							{"Name":"pBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+							,{"Name":"BufferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]
@@ -1569,6 +1618,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"UnknownHeaderCount","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"pUnknownHeaders","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HTTP_UNKNOWN_HEADER","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]}},"Attrs":[]}
@@ -1586,6 +1636,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"UnknownHeaderCount","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"pUnknownHeaders","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HTTP_UNKNOWN_HEADER","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]}},"Attrs":[]}
@@ -1616,6 +1667,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"PropertyId","Type":{"Kind":"ApiRef","Name":"HTTP_DELEGATE_REQUEST_PROPERTY_ID","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"PropertyInfoLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1644,6 +1696,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"PropertyId","Type":{"Kind":"ApiRef","Name":"HTTP_CREATE_REQUEST_QUEUE_PROPERTY_ID","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"PropertyInfoLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1659,6 +1712,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"pRemoteAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SOCKADDR","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":[]}
 			,{"Name":"pLocalAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SOCKADDR","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":[]}
@@ -1673,6 +1727,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"FullUrlLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"HostLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1724,6 +1779,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"CertFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"CertEncodedSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1741,6 +1797,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ServerCertKeySize","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"ConnectionKeySize","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1761,6 +1818,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Protocol","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"CipherType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1797,6 +1855,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"RequestIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1855,6 +1914,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"RequestTimingCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"RequestTiming","Type":{"Kind":"Array","Shape":{"Size":30},"Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":[]}
@@ -1890,6 +1950,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InfoType","Type":{"Kind":"ApiRef","Name":"HTTP_REQUEST_INFO_TYPE","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"InfoLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1905,6 +1966,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AuthStatus","Type":{"Kind":"ApiRef","Name":"HTTP_AUTH_STATUS","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"SecStatus","Type":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -1930,6 +1992,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ConnectionId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -1960,6 +2023,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Base","Type":{"Kind":"ApiRef","Name":"HTTP_REQUEST_V1","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"RequestInfoCount","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1975,6 +2039,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Version","Type":{"Kind":"ApiRef","Name":"HTTP_VERSION","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
@@ -2010,6 +2075,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Type","Type":{"Kind":"ApiRef","Name":"HTTP_RESPONSE_INFO_TYPE","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2025,6 +2091,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"HeaderId","Type":{"Kind":"ApiRef","Name":"HTTP_HEADER_ID","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2041,6 +2108,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Base","Type":{"Kind":"ApiRef","Name":"HTTP_RESPONSE_V1","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"ResponseInfoCount","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -2056,6 +2124,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"HttpApiMajorVersion","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"HttpApiMinorVersion","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -2085,6 +2154,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Policy","Type":{"Kind":"ApiRef","Name":"HTTP_CACHE_POLICY_TYPE","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"SecondsToLive","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2138,6 +2208,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"pIpPort","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SOCKADDR","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":[]}
 		]
@@ -2151,6 +2222,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"IpPort","Type":{"Kind":"ApiRef","Name":"SOCKADDR_STORAGE","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":[]}
 		]
@@ -2164,6 +2236,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"IpPort","Type":{"Kind":"ApiRef","Name":"SOCKADDR_STORAGE","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":[]}
 			,{"Name":"Host","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -2178,6 +2251,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"LocalAddress","Type":{"Kind":"ApiRef","Name":"SOCKADDR_STORAGE","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":[]}
 		]
@@ -2191,6 +2265,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SslHashLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pSslHash","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -2231,6 +2306,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Http2ReceiveWindowSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -2244,6 +2320,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Http2MaxSettingsPerFrame","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Http2MaxSettingsPerMinute","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2276,6 +2353,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Type","Type":{"Kind":"ApiRef","Name":"HTTP_PERFORMANCE_PARAM_TYPE","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"BufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2291,6 +2369,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"RestrictionCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"TlsRestrictions","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -2305,6 +2384,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"StatusCode","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"HeaderCount","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -2320,6 +2400,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SessionTicketKeyCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"SessionTicketKeys","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -2334,6 +2415,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ParamType","Type":{"Kind":"ApiRef","Name":"HTTP_SSL_SERVICE_CONFIG_EX_PARAM_TYPE","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -2347,6 +2429,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Http2WindowSizeParam","Type":{"Kind":"ApiRef","Name":"HTTP2_WINDOW_SIZE_PARAM","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 					,{"Name":"Http2SettingsLimitsParam","Type":{"Kind":"ApiRef","Name":"HTTP2_SETTINGS_LIMITS_PARAM","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
@@ -2367,6 +2450,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"KeyDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_SSL_KEY","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"ParamDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_SSL_PARAM","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
@@ -2381,6 +2465,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"KeyDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_SSL_SNI_KEY","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"ParamDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_SSL_PARAM","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
@@ -2395,6 +2480,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"KeyDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_SSL_CCS_KEY","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"ParamDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_SSL_PARAM","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
@@ -2409,6 +2495,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"KeyDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_SSL_KEY_EX","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"ParamDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_SSL_PARAM_EX","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
@@ -2423,6 +2510,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"KeyDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_SSL_SNI_KEY","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"ParamDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_SSL_PARAM_EX","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
@@ -2437,6 +2525,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"KeyDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_SSL_CCS_KEY","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"ParamDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_SSL_PARAM_EX","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
@@ -2451,6 +2540,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"QueryDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_QUERY_TYPE","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"KeyDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_SSL_KEY","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
@@ -2466,6 +2556,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"QueryDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_QUERY_TYPE","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"KeyDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_SSL_SNI_KEY","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
@@ -2481,6 +2572,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"QueryDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_QUERY_TYPE","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"KeyDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_SSL_CCS_KEY","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
@@ -2496,6 +2588,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"QueryDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_QUERY_TYPE","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"KeyDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_SSL_KEY_EX","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
@@ -2512,6 +2605,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"QueryDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_QUERY_TYPE","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"KeyDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_SSL_SNI_KEY","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
@@ -2528,6 +2622,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"QueryDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_QUERY_TYPE","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"KeyDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_SSL_CCS_KEY","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
@@ -2544,6 +2639,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AddrLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"pAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SOCKADDR","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":[]}
@@ -2558,6 +2654,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AddrCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"AddrList","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"SOCKADDR_STORAGE","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":[]}
@@ -2572,6 +2669,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"pUrlPrefix","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 		]
@@ -2585,6 +2683,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"pStringSecurityDescriptor","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 		]
@@ -2598,6 +2697,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"KeyDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_URLACL_KEY","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"ParamDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_URLACL_PARAM","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
@@ -2612,6 +2712,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"QueryDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_QUERY_TYPE","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"KeyDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_URLACL_KEY","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
@@ -2640,6 +2741,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"KeyDesc","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_CACHE_KEY","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"ParamDesc","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2673,6 +2775,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Freshness","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 		]
@@ -2686,6 +2789,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Freshness","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 		]
@@ -2699,6 +2803,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Hostname","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2713,6 +2818,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ErrorCode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -2726,6 +2832,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ConnectCount","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"ConnectSum","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -2750,6 +2857,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"OpenCount","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"OpenSum","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -2780,6 +2888,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"OpenTime","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"CloseTime","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -2805,9 +2914,31 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ConnectionTimings","Type":{"Kind":"ApiRef","Name":"HTTP_QUIC_CONNECTION_API_TIMINGS","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
 			,{"Name":"StreamTimings","Type":{"Kind":"ApiRef","Name":"HTTP_QUIC_STREAM_API_TIMINGS","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"HTTP_QUIC_STREAM_REQUEST_STATS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"StreamWaitStart","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"StreamWaitEnd","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"RequestHeadersCompressionStart","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"RequestHeadersCompressionEnd","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"ResponseHeadersDecompressionStart","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"ResponseHeadersDecompressionEnd","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"RequestHeadersCompressedSize","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"ResponseHeadersCompressedSize","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -2825,6 +2956,7 @@
 			,{"Name":"HttpFeatureApiTimings","Value":2}
 			,{"Name":"HttpFeatureDelegateEx","Value":3}
 			,{"Name":"HttpFeatureHttp3","Value":4}
+			,{"Name":"HttpFeatureLast","Value":5}
 			,{"Name":"HttpFeaturemax","Value":-1}
 		]
 		,"IntegerBase":"Int32"
@@ -2844,7 +2976,7 @@
 		,"Params":[
 			{"Name":"Version","Type":{"Kind":"ApiRef","Name":"HTTPAPI_VERSION","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"HTTP_INITIALIZE","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":["In"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved","Optional"]}
 		]
 	}
 	,{
@@ -2858,7 +2990,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"HTTP_INITIALIZE","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":["In"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved","Optional"]}
 		]
 	}
 	,{
@@ -2871,8 +3003,8 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"RequestQueueHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
-			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			{"Name":"RequestQueueHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
@@ -2886,10 +3018,10 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"Version","Type":{"Kind":"ApiRef","Name":"HTTPAPI_VERSION","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":["In"]}
-			,{"Name":"Name","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"SecurityAttributes","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_ATTRIBUTES","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["In","Out"]}
-			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"RequestQueueHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"Name","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
+			,{"Name":"SecurityAttributes","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_ATTRIBUTES","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Optional"]}
+			,{"Name":"RequestQueueHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -2919,8 +3051,8 @@
 			,{"Name":"Property","Type":{"Kind":"ApiRef","Name":"HTTP_SERVER_PROPERTY","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":["In"]}
 			,{"Name":"PropertyInformation","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":3}]}
 			,{"Name":"PropertyInformationLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"Reserved1","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
-			,{"Name":"Reserved2","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"Reserved1","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
+			,{"Name":"Reserved2","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
@@ -2937,9 +3069,9 @@
 			,{"Name":"Property","Type":{"Kind":"ApiRef","Name":"HTTP_SERVER_PROPERTY","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":["In"]}
 			,{"Name":"PropertyInformation","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":3},"Optional"]}
 			,{"Name":"PropertyInformationLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"Reserved1","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"Reserved1","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 			,{"Name":"ReturnLength","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
-			,{"Name":"Reserved2","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"Reserved2","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
@@ -2989,7 +3121,7 @@
 			,{"Name":"SslClientCertInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HTTP_SSL_CLIENT_CERT_INFO","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":4}]}
 			,{"Name":"SslClientCertInfoSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"BytesReceived","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
-			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Optional"]}
 		]
 	}
 	,{
@@ -3003,8 +3135,8 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"Version","Type":{"Kind":"ApiRef","Name":"HTTPAPI_VERSION","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":["In"]}
-			,{"Name":"ServerSessionId","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":["In","Out"]}
-			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"ServerSessionId","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":["Out"]}
+			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved","Optional"]}
 		]
 	}
 	,{
@@ -3065,7 +3197,7 @@
 		,"Params":[
 			{"Name":"RequestQueueHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"FullyQualifiedUrl","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"Reserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"Reserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
@@ -3093,8 +3225,8 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerSessionId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":["In"]}
-			,{"Name":"pUrlGroupId","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":["In","Out"]}
-			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"pUrlGroupId","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":["Out"]}
+			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved","Optional"]}
 		]
 	}
 	,{
@@ -3123,7 +3255,7 @@
 			{"Name":"UrlGroupId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":["In"]}
 			,{"Name":"pFullyQualifiedUrl","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"UrlContext","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":["In"]}
-			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved","Optional"]}
 		]
 	}
 	,{
@@ -3184,8 +3316,8 @@
 		,"Platform":"windows8.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"Reserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
-			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			{"Name":"Reserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
+			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 			,{"Name":"Url","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"PreparedUrl","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 		]
@@ -3206,7 +3338,7 @@
 			,{"Name":"RequestBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HTTP_REQUEST_V2","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":4}]}
 			,{"Name":"RequestBufferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"BytesReturned","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
-			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Optional"]}
 		]
 	}
 	,{
@@ -3225,7 +3357,7 @@
 			,{"Name":"EntityBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":4}]}
 			,{"Name":"EntityBufferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"BytesReturned","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
-			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Optional"]}
 		]
 	}
 	,{
@@ -3241,13 +3373,13 @@
 			{"Name":"RequestQueueHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"RequestId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":["In"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"HttpResponse","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HTTP_RESPONSE_V2","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]}},"Attrs":["In","Out"]}
-			,{"Name":"CachePolicy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HTTP_CACHE_POLICY","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]}},"Attrs":["In","Out"]}
-			,{"Name":"BytesSent","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
-			,{"Name":"Reserved1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
-			,{"Name":"Reserved2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
-			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Out"]}
-			,{"Name":"LogData","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HTTP_LOG_DATA","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"HttpResponse","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HTTP_RESPONSE_V2","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"CachePolicy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HTTP_CACHE_POLICY","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"BytesSent","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
+			,{"Name":"Reserved1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
+			,{"Name":"Reserved2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
+			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"LogData","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HTTP_LOG_DATA","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]}},"Attrs":["In","Optional"]}
 		]
 	}
 	,{
@@ -3263,13 +3395,13 @@
 			{"Name":"RequestQueueHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"RequestId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":["In"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"EntityChunkCount","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":["In"]}
+			,{"Name":"EntityChunkCount","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":["In","Optional"]}
 			,{"Name":"EntityChunks","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"ApiRef","Name":"HTTP_DATA_CHUNK","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]}},"Attrs":["In","Optional"]}
-			,{"Name":"BytesSent","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
-			,{"Name":"Reserved1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
-			,{"Name":"Reserved2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
-			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Out"]}
-			,{"Name":"LogData","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HTTP_LOG_DATA","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"BytesSent","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
+			,{"Name":"Reserved1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
+			,{"Name":"Reserved2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
+			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"LogData","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HTTP_LOG_DATA","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]}},"Attrs":["In","Optional"]}
 		]
 	}
 	,{
@@ -3302,7 +3434,7 @@
 		,"Params":[
 			{"Name":"RequestQueueHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"ConnectionId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":["In"]}
-			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Optional"]}
 		]
 	}
 	,{
@@ -3317,8 +3449,8 @@
 		,"Params":[
 			{"Name":"RequestQueueHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"ConnectionId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":["In"]}
-			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
-			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved","Optional"]}
+			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Optional"]}
 		]
 	}
 	,{
@@ -3333,7 +3465,7 @@
 		,"Params":[
 			{"Name":"RequestQueueHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"RequestId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":["In"]}
-			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Optional"]}
 		]
 	}
 	,{
@@ -3347,7 +3479,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"RequestQueueHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Optional"]}
 		]
 	}
 	,{
@@ -3409,7 +3541,7 @@
 			{"Name":"RequestQueueHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"UrlPrefix","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Optional"]}
 		]
 	}
 	,{
@@ -3424,9 +3556,9 @@
 		,"Params":[
 			{"Name":"RequestQueueHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"UrlPrefix","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"DataChunk","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HTTP_DATA_CHUNK","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]}},"Attrs":["In","Out"]}
-			,{"Name":"CachePolicy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HTTP_CACHE_POLICY","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]}},"Attrs":["In","Out"]}
-			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"DataChunk","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HTTP_DATA_CHUNK","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"CachePolicy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HTTP_CACHE_POLICY","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Optional"]}
 		]
 	}
 	,{
@@ -3441,11 +3573,11 @@
 		,"Params":[
 			{"Name":"RequestQueueHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"UrlPrefix","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"ByteRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HTTP_BYTE_RANGE","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"ByteRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HTTP_BYTE_RANGE","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]}},"Attrs":["In","Optional"]}
 			,{"Name":"Buffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":4}]}
 			,{"Name":"BufferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"BytesRead","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
-			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Optional"]}
 		]
 	}
 	,{
@@ -3458,11 +3590,11 @@
 		,"Platform":"windows5.1.2600"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"ServiceHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Reserved"]}
+			{"Name":"ServiceHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Reserved","Optional"]}
 			,{"Name":"ConfigId","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_ID","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pConfigInformation","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":3}]}
 			,{"Name":"ConfigInformationLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"pOverlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pOverlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
@@ -3475,11 +3607,11 @@
 		,"Platform":"windows10.0.15063"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"Handle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Reserved"]}
+			{"Name":"Handle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Reserved","Optional"]}
 			,{"Name":"ConfigId","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_ID","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":["In"]}
 			,{"Name":"ConfigInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":3}]}
 			,{"Name":"ConfigInfoLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
@@ -3492,11 +3624,11 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"ServiceHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Reserved"]}
+			{"Name":"ServiceHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Reserved","Optional"]}
 			,{"Name":"ConfigId","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_ID","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pConfigInformation","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":3}]}
 			,{"Name":"ConfigInformationLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"pOverlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pOverlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
@@ -3509,14 +3641,14 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"ServiceHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Reserved"]}
+			{"Name":"ServiceHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Reserved","Optional"]}
 			,{"Name":"ConfigId","Type":{"Kind":"ApiRef","Name":"HTTP_SERVICE_CONFIG_ID","TargetKind":"Default","Api":"Networking.HttpServer","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pInput","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":3},"Optional"]}
 			,{"Name":"InputLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pOutput","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":5},"Optional"]}
 			,{"Name":"OutputLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pReturnLength","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
-			,{"Name":"pOverlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pOverlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{

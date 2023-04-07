@@ -2,10 +2,24 @@
 
 "Constants":[
 	{
+		"Name":"FLS_OUT_OF_INDEXES"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":4294967295
+		,"Attrs":[]
+	}
+	,{
 		"Name":"PRIVATE_NAMESPACE_FLAG_DESTROY"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"TLS_OUT_OF_INDEXES"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":4294967295
 		,"Attrs":[]
 	}
 	,{
@@ -167,6 +181,13 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":4
+		,"Attrs":[]
+	}
+	,{
+		"Name":"INFINITE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":4294967295
 		,"Attrs":[]
 	}
 	,{
@@ -610,6 +631,25 @@
 		,"IntegerBase":"UInt32"
 	}
 	,{
+		"Name":"PROCESS_BASIC_INFORMATION"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"ExitStatus","Type":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"PebBaseAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PEB","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":[]}
+			,{"Name":"AffinityMask","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
+			,{"Name":"BasePriority","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+			,{"Name":"UniqueProcessId","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
+			,{"Name":"InheritedFromUniqueProcessId","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
 		"Name":"PROCESS_CREATION_FLAGS"
 		,"Architectures":[]
 		,"Platform":null
@@ -684,64 +724,141 @@
 		,"IntegerBase":"UInt32"
 	}
 	,{
-		"Name":"TP_CALLBACK_INSTANCE"
+		"Name":"PROCESSINFOCLASS"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"ProcessBasicInformation","Value":0}
+			,{"Name":"ProcessQuotaLimits","Value":1}
+			,{"Name":"ProcessIoCounters","Value":2}
+			,{"Name":"ProcessVmCounters","Value":3}
+			,{"Name":"ProcessTimes","Value":4}
+			,{"Name":"ProcessBasePriority","Value":5}
+			,{"Name":"ProcessRaisePriority","Value":6}
+			,{"Name":"ProcessDebugPort","Value":7}
+			,{"Name":"ProcessExceptionPort","Value":8}
+			,{"Name":"ProcessAccessToken","Value":9}
+			,{"Name":"ProcessLdtInformation","Value":10}
+			,{"Name":"ProcessLdtSize","Value":11}
+			,{"Name":"ProcessDefaultHardErrorMode","Value":12}
+			,{"Name":"ProcessIoPortHandlers","Value":13}
+			,{"Name":"ProcessPooledUsageAndLimits","Value":14}
+			,{"Name":"ProcessWorkingSetWatch","Value":15}
+			,{"Name":"ProcessUserModeIOPL","Value":16}
+			,{"Name":"ProcessEnableAlignmentFaultFixup","Value":17}
+			,{"Name":"ProcessPriorityClass","Value":18}
+			,{"Name":"ProcessWx86Information","Value":19}
+			,{"Name":"ProcessHandleCount","Value":20}
+			,{"Name":"ProcessAffinityMask","Value":21}
+			,{"Name":"ProcessPriorityBoost","Value":22}
+			,{"Name":"ProcessDeviceMap","Value":23}
+			,{"Name":"ProcessSessionInformation","Value":24}
+			,{"Name":"ProcessForegroundInformation","Value":25}
+			,{"Name":"ProcessWow64Information","Value":26}
+			,{"Name":"ProcessImageFileName","Value":27}
+			,{"Name":"ProcessLUIDDeviceMapsEnabled","Value":28}
+			,{"Name":"ProcessBreakOnTermination","Value":29}
+			,{"Name":"ProcessDebugObjectHandle","Value":30}
+			,{"Name":"ProcessDebugFlags","Value":31}
+			,{"Name":"ProcessHandleTracing","Value":32}
+			,{"Name":"ProcessIoPriority","Value":33}
+			,{"Name":"ProcessExecuteFlags","Value":34}
+			,{"Name":"ProcessTlsInformation","Value":35}
+			,{"Name":"ProcessCookie","Value":36}
+			,{"Name":"ProcessImageInformation","Value":37}
+			,{"Name":"ProcessCycleTime","Value":38}
+			,{"Name":"ProcessPagePriority","Value":39}
+			,{"Name":"ProcessInstrumentationCallback","Value":40}
+			,{"Name":"ProcessThreadStackAllocation","Value":41}
+			,{"Name":"ProcessWorkingSetWatchEx","Value":42}
+			,{"Name":"ProcessImageFileNameWin32","Value":43}
+			,{"Name":"ProcessImageFileMapping","Value":44}
+			,{"Name":"ProcessAffinityUpdateMode","Value":45}
+			,{"Name":"ProcessMemoryAllocationMode","Value":46}
+			,{"Name":"ProcessGroupInformation","Value":47}
+			,{"Name":"ProcessTokenVirtualizationEnabled","Value":48}
+			,{"Name":"ProcessOwnerInformation","Value":49}
+			,{"Name":"ProcessWindowInformation","Value":50}
+			,{"Name":"ProcessHandleInformation","Value":51}
+			,{"Name":"ProcessMitigationPolicy","Value":52}
+			,{"Name":"ProcessDynamicFunctionTableInformation","Value":53}
+			,{"Name":"ProcessHandleCheckingMode","Value":54}
+			,{"Name":"ProcessKeepAliveCount","Value":55}
+			,{"Name":"ProcessRevokeFileHandles","Value":56}
+			,{"Name":"ProcessWorkingSetControl","Value":57}
+			,{"Name":"ProcessHandleTable","Value":58}
+			,{"Name":"ProcessCheckStackExtentsMode","Value":59}
+			,{"Name":"ProcessCommandLineInformation","Value":60}
+			,{"Name":"ProcessProtectionInformation","Value":61}
+			,{"Name":"ProcessMemoryExhaustion","Value":62}
+			,{"Name":"ProcessFaultInformation","Value":63}
+			,{"Name":"ProcessTelemetryIdInformation","Value":64}
+			,{"Name":"ProcessCommitReleaseInformation","Value":65}
+			,{"Name":"ProcessReserved1Information","Value":66}
+			,{"Name":"ProcessReserved2Information","Value":67}
+			,{"Name":"ProcessSubsystemProcess","Value":68}
+			,{"Name":"ProcessInPrivate","Value":70}
+			,{"Name":"ProcessRaiseUMExceptionOnInvalidHandleClose","Value":71}
+			,{"Name":"ProcessSubsystemInformation","Value":75}
+			,{"Name":"ProcessWin32kSyscallFilterInformation","Value":79}
+			,{"Name":"ProcessEnergyTrackingState","Value":82}
+			,{"Name":"MaxProcessInfoClass","Value":83}
 		]
-		,"NestedTypes":[
-		]
+		,"IntegerBase":"Int32"
 	}
 	,{
-		"Name":"TP_WORK"
+		"Name":"THREADINFOCLASS"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"ThreadBasicInformation","Value":0}
+			,{"Name":"ThreadTimes","Value":1}
+			,{"Name":"ThreadPriority","Value":2}
+			,{"Name":"ThreadBasePriority","Value":3}
+			,{"Name":"ThreadAffinityMask","Value":4}
+			,{"Name":"ThreadImpersonationToken","Value":5}
+			,{"Name":"ThreadDescriptorTableEntry","Value":6}
+			,{"Name":"ThreadEnableAlignmentFaultFixup","Value":7}
+			,{"Name":"ThreadEventPair_Reusable","Value":8}
+			,{"Name":"ThreadQuerySetWin32StartAddress","Value":9}
+			,{"Name":"ThreadZeroTlsCell","Value":10}
+			,{"Name":"ThreadPerformanceCount","Value":11}
+			,{"Name":"ThreadAmILastThread","Value":12}
+			,{"Name":"ThreadIdealProcessor","Value":13}
+			,{"Name":"ThreadPriorityBoost","Value":14}
+			,{"Name":"ThreadSetTlsArrayAddress","Value":15}
+			,{"Name":"ThreadIsIoPending","Value":16}
+			,{"Name":"ThreadHideFromDebugger","Value":17}
+			,{"Name":"ThreadBreakOnTermination","Value":18}
+			,{"Name":"ThreadSwitchLegacyState","Value":19}
+			,{"Name":"ThreadIsTerminated","Value":20}
+			,{"Name":"ThreadLastSystemCall","Value":21}
+			,{"Name":"ThreadIoPriority","Value":22}
+			,{"Name":"ThreadCycleTime","Value":23}
+			,{"Name":"ThreadPagePriority","Value":24}
+			,{"Name":"ThreadActualBasePriority","Value":25}
+			,{"Name":"ThreadTebInformation","Value":26}
+			,{"Name":"ThreadCSwitchMon","Value":27}
+			,{"Name":"ThreadCSwitchPmu","Value":28}
+			,{"Name":"ThreadWow64Context","Value":29}
+			,{"Name":"ThreadGroupInformation","Value":30}
+			,{"Name":"ThreadUmsInformation","Value":31}
+			,{"Name":"ThreadCounterProfiling","Value":32}
+			,{"Name":"ThreadIdealProcessorEx","Value":33}
+			,{"Name":"ThreadCpuAccountingInformation","Value":34}
+			,{"Name":"ThreadSuspendCount","Value":35}
+			,{"Name":"ThreadActualGroupAffinity","Value":41}
+			,{"Name":"ThreadDynamicCodePolicyInfo","Value":42}
+			,{"Name":"ThreadSubsystemInformation","Value":45}
+			,{"Name":"MaxThreadInfoClass","Value":53}
 		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"TP_TIMER"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"TP_WAIT"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"TP_IO"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"TimerQueueHandle"
@@ -780,6 +897,51 @@
 		,"FreeFunc":"DeleteBoundaryDescriptor"
 	}
 	,{
+		"Name":"PTP_IO"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
+		"Name":"PTP_TIMER"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
+		"Name":"PTP_WAIT"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
+		"Name":"PTP_WORK"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
+		"Name":"PTP_CALLBACK_INSTANCE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
 		"Name":"LPPROC_THREAD_ATTRIBUTE_LIST"
 		,"Architectures":[]
 		,"Platform":null
@@ -795,6 +957,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"POWER_REQUEST_CONTEXT_FLAGS","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":[]}
@@ -808,6 +971,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Detailed","Type":{"Kind":"ApiRef","Name":"_Detailed_e__Struct","TargetKind":"Default","Api":"System.Threading","Parents":["_Reason_e__Union"]},"Attrs":[]}
 					,{"Name":"SimpleReasonString","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -820,8 +984,9 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
-							{"Name":"LocalizedReasonModule","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+							{"Name":"LocalizedReasonModule","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 							,{"Name":"LocalizedReasonId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"ReasonStringCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"ReasonStrings","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
@@ -883,6 +1048,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"hProcess","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"hThread","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -899,6 +1065,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"cb","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"lpReserved","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -929,6 +1096,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"cb","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"lpReserved","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -962,6 +1130,7 @@
 		,"Values":[
 			{"Name":"QUEUE_USER_APC_FLAGS_NONE","Value":0}
 			,{"Name":"QUEUE_USER_APC_FLAGS_SPECIAL_USER_APC","Value":1}
+			,{"Name":"QUEUE_USER_APC_CALLBACK_DATA_CONTEXT","Value":65536}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -988,6 +1157,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"MemoryPriority","Type":{"Kind":"ApiRef","Name":"MEMORY_PRIORITY","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":[]}
 		]
@@ -1001,6 +1171,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ControlMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1038,6 +1209,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AvailableCommit","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"PrivateCommitUsage","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -1059,7 +1231,7 @@
 			,{"Name":"KernelEnabled","Value":2}
 			,{"Name":"Wow64Container","Value":4}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"PROCESS_MACHINE_INFORMATION"
@@ -1068,6 +1240,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ProcessMachine","Type":{"Kind":"ApiRef","Name":"IMAGE_FILE_MACHINE","TargetKind":"Default","Api":"System.SystemInformation","Parents":[]},"Attrs":[]}
 			,{"Name":"Res0","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1096,6 +1269,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1112,6 +1286,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ControlMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1127,6 +1302,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ProtectionLevel","Type":{"Kind":"ApiRef","Name":"PROCESS_PROTECTION_LEVEL","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":[]}
 		]
@@ -1140,6 +1316,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1157,12 +1334,12 @@
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"Instance","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_CALLBACK_INSTANCE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"Instance","Type":{"Kind":"ApiRef","Name":"PTP_CALLBACK_INSTANCE","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Context","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Optional"]}
 			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Optional"]}
 			,{"Name":"IoResult","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"NumberOfBytesTransferred","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":["In"]}
-			,{"Name":"Io","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_IO","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"Io","Type":{"Kind":"ApiRef","Name":"PTP_IO","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -1188,6 +1365,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"TargetAddress","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
@@ -1202,6 +1380,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumberOfTargets","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1218,6 +1397,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"BaseAddress","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 			,{"Name":"Size","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
@@ -1233,6 +1413,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumberOfRanges","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1249,6 +1430,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ReadOperationCount","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"WriteOperationCount","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -1285,7 +1467,9 @@
 			,{"Name":"ProcessSideChannelIsolationPolicy","Value":14}
 			,{"Name":"ProcessUserShadowStackPolicy","Value":15}
 			,{"Name":"ProcessRedirectionTrustPolicy","Value":16}
-			,{"Name":"MaxProcessMitigationPolicy","Value":17}
+			,{"Name":"ProcessUserPointerAuthPolicy","Value":17}
+			,{"Name":"ProcessSEHOPPolicy","Value":18}
+			,{"Name":"MaxProcessMitigationPolicy","Value":19}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -1296,6 +1480,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Ptr","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 		]
@@ -1309,6 +1494,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Reserved1","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Reserved2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1360,6 +1546,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Type","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"CreatorBackTraceIndex","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1369,7 +1556,7 @@
 			,{"Name":"ContentionCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"CreatorBackTraceIndexHigh","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"SpareWORD","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"Identifier","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -1381,6 +1568,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"DebugInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_CRITICAL_SECTION_DEBUG","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":[]}
 			,{"Name":"LockCount","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -1399,6 +1587,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Ptr","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 		]
@@ -1412,6 +1601,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Ptr","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 		]
@@ -1430,6 +1620,34 @@
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out"]}
 			,{"Name":"param1","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"WORKERCALLBACKFUNC"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"FunctionPointer"
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"Void"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out"]}
+		]
+	}
+	,{
+		"Name":"APC_CALLBACK_FUNCTION"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"FunctionPointer"
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"Void"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out"]}
+			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out"]}
 		]
 	}
 	,{
@@ -1455,7 +1673,7 @@
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"Instance","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_CALLBACK_INSTANCE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"Instance","Type":{"Kind":"ApiRef","Name":"PTP_CALLBACK_INSTANCE","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Context","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Optional"]}
 		]
 	}
@@ -1482,6 +1700,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"StackReserve","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 			,{"Name":"StackCommit","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
@@ -1510,6 +1729,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Pool","Type":{"Kind":"ApiRef","Name":"PTP_POOL","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":[]}
@@ -1530,6 +1750,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"s","Type":{"Kind":"ApiRef","Name":"_s_e__Struct","TargetKind":"Default","Api":"System.Threading","Parents":["_u_e__Union"]},"Attrs":[]}
@@ -1542,6 +1763,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 						]
@@ -1557,6 +1779,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 				]
 				,"NestedTypes":[
@@ -1574,9 +1797,9 @@
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"Instance","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_CALLBACK_INSTANCE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"Instance","Type":{"Kind":"ApiRef","Name":"PTP_CALLBACK_INSTANCE","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Context","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Optional"]}
-			,{"Name":"Work","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_WORK","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"Work","Type":{"Kind":"ApiRef","Name":"PTP_WORK","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -1589,9 +1812,9 @@
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"Instance","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_CALLBACK_INSTANCE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"Instance","Type":{"Kind":"ApiRef","Name":"PTP_CALLBACK_INSTANCE","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Context","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Optional"]}
-			,{"Name":"Timer","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_TIMER","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"Timer","Type":{"Kind":"ApiRef","Name":"PTP_TIMER","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -1604,9 +1827,9 @@
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"Instance","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_CALLBACK_INSTANCE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"Instance","Type":{"Kind":"ApiRef","Name":"PTP_CALLBACK_INSTANCE","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Context","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Optional"]}
-			,{"Name":"Wait","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_WAIT","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"Wait","Type":{"Kind":"ApiRef","Name":"PTP_WAIT","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 			,{"Name":"WaitResult","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
@@ -1630,6 +1853,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"UmsVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"CompletionList","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -1646,6 +1870,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"UmsVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":[]}
@@ -1658,6 +1883,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Threading","Parents":["_Anonymous_e__Union"]},"Attrs":[]}
 					,{"Name":"ThreadUmsFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1670,6 +1896,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 						]
@@ -1687,6 +1914,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"StartupInfo","Type":{"Kind":"ApiRef","Name":"STARTUPINFOA","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":[]}
 			,{"Name":"lpAttributeList","Type":{"Kind":"ApiRef","Name":"LPPROC_THREAD_ATTRIBUTE_LIST","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":[]}
@@ -1701,6 +1929,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"StartupInfo","Type":{"Kind":"ApiRef","Name":"STARTUPINFOW","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":[]}
 			,{"Name":"lpAttributeList","Type":{"Kind":"ApiRef","Name":"LPPROC_THREAD_ATTRIBUTE_LIST","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":[]}
@@ -1736,6 +1965,7 @@
 			,{"Name":"ProcThreadAttributeMachineType","Value":25}
 			,{"Name":"ProcThreadAttributeComponentFilter","Value":26}
 			,{"Name":"ProcThreadAttributeEnableOptionalXStateFeatures","Value":27}
+			,{"Name":"ProcThreadAttributeTrustedApp","Value":29}
 		]
 		,"IntegerBase":"UInt32"
 	}
@@ -1746,6 +1976,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Reserved1","Type":{"Kind":"Array","Shape":{"Size":8},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"Reserved2","Type":{"Kind":"Array","Shape":{"Size":3},"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":[]}
@@ -1761,6 +1992,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Reserved1","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"Reserved2","Type":{"Kind":"Array","Shape":{"Size":10},"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":[]}
@@ -1789,6 +2021,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Reserved1","Type":{"Kind":"Array","Shape":{"Size":2},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"BeingDebugged","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -1813,56 +2046,46 @@
 		,"NestedTypes":[
 		]
 	}
-	,{
-		"Name":"PROCESS_BASIC_INFORMATION"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"Reserved1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-			,{"Name":"PebBaseAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PEB","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":[]}
-			,{"Name":"Reserved2","Type":{"Kind":"Array","Shape":{"Size":2},"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":[]}
-			,{"Name":"UniqueProcessId","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
-			,{"Name":"Reserved3","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"PROCESSINFOCLASS"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Enum"
-		,"Flags":false
-		,"Scoped":false
-		,"Values":[
-			{"Name":"ProcessBasicInformation","Value":0}
-			,{"Name":"ProcessDebugPort","Value":7}
-			,{"Name":"ProcessWow64Information","Value":26}
-			,{"Name":"ProcessImageFileName","Value":27}
-			,{"Name":"ProcessBreakOnTermination","Value":29}
-		]
-		,"IntegerBase":"Int32"
-	}
-	,{
-		"Name":"THREADINFOCLASS"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Enum"
-		,"Flags":false
-		,"Scoped":false
-		,"Values":[
-			{"Name":"ThreadIsIoPending","Value":16}
-			,{"Name":"ThreadNameInformation","Value":38}
-		]
-		,"IntegerBase":"Int32"
-	}
 ]
 
 ,"Functions":[
 	{
+		"Name":"GetCurrentProcessToken"
+		,"SetLastError":false
+		,"DllImport":"FORCEINLINE"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+		]
+	}
+	,{
+		"Name":"GetCurrentThreadToken"
+		,"SetLastError":false
+		,"DllImport":"FORCEINLINE"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+		]
+	}
+	,{
+		"Name":"GetCurrentThreadEffectiveToken"
+		,"SetLastError":false
+		,"DllImport":"FORCEINLINE"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+		]
+	}
+	,{
 		"Name":"GetProcessWorkingSetSize"
 		,"SetLastError":true
 		,"DllImport":"KERNEL32.dll"
@@ -2548,7 +2771,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hTimer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"lpDueTime","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Const"]}
+			,{"Name":"lpDueTime","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int64"}},"Attrs":["In","Const"]}
 			,{"Name":"lPeriod","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"pfnCompletionRoutine","Type":{"Kind":"ApiRef","Name":"PTIMERAPCROUTINE","TargetKind":"FunctionPointer","Api":"System.Threading","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpArgToCompletionRoutine","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
@@ -2567,7 +2790,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hTimer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"lpDueTime","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Const"]}
+			,{"Name":"lpDueTime","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int64"}},"Attrs":["In","Const"]}
 			,{"Name":"lPeriod","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"pfnCompletionRoutine","Type":{"Kind":"ApiRef","Name":"PTIMERAPCROUTINE","TargetKind":"FunctionPointer","Api":"System.Threading","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpArgToCompletionRoutine","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
@@ -2665,7 +2888,7 @@
 			,{"Name":"lInitialCount","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"lMaximumCount","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"lpName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
-			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 			,{"Name":"dwDesiredAccess","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
@@ -3388,7 +3611,7 @@
 			,{"Name":"lpProcessAttributes","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_ATTRIBUTES","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["In","Optional"]}
 			,{"Name":"lpThreadAttributes","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_ATTRIBUTES","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["In","Optional"]}
 			,{"Name":"bInheritHandles","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"dwCreationFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"dwCreationFlags","Type":{"Kind":"ApiRef","Name":"PROCESS_CREATION_FLAGS","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpEnvironment","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
 			,{"Name":"lpCurrentDirectory","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 			,{"Name":"lpStartupInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"STARTUPINFOW","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In"]}
@@ -3543,7 +3766,7 @@
 		,"Params":[
 			{"Name":"lpAttributeList","Type":{"Kind":"ApiRef","Name":"LPPROC_THREAD_ATTRIBUTE_LIST","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":3},"Optional"]}
 			,{"Name":"dwAttributeCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 			,{"Name":"lpSize","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UIntPtr"}},"Attrs":["In","Out"]}
 		]
 	}
@@ -4071,7 +4294,7 @@
 			,{"Name":"lpProcessAttributes","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_ATTRIBUTES","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["In","Optional"]}
 			,{"Name":"lpThreadAttributes","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_ATTRIBUTES","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["In","Optional"]}
 			,{"Name":"bInheritHandles","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"dwCreationFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"dwCreationFlags","Type":{"Kind":"ApiRef","Name":"PROCESS_CREATION_FLAGS","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpEnvironment","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
 			,{"Name":"lpCurrentDirectory","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 			,{"Name":"lpStartupInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"STARTUPINFOA","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In"]}
@@ -4324,7 +4547,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"reserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			{"Name":"reserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
@@ -4446,7 +4669,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"pci","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_CALLBACK_INSTANCE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"pci","Type":{"Kind":"ApiRef","Name":"PTP_CALLBACK_INSTANCE","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 			,{"Name":"evt","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 		]
 	}
@@ -4460,7 +4683,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"pci","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_CALLBACK_INSTANCE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"pci","Type":{"Kind":"ApiRef","Name":"PTP_CALLBACK_INSTANCE","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 			,{"Name":"sem","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"crel","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
@@ -4475,7 +4698,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"pci","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_CALLBACK_INSTANCE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"pci","Type":{"Kind":"ApiRef","Name":"PTP_CALLBACK_INSTANCE","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 			,{"Name":"mut","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 		]
 	}
@@ -4489,7 +4712,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"pci","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_CALLBACK_INSTANCE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"pci","Type":{"Kind":"ApiRef","Name":"PTP_CALLBACK_INSTANCE","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pcs","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_CRITICAL_SECTION","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
 		]
 	}
@@ -4503,8 +4726,8 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"pci","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_CALLBACK_INSTANCE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
-			,{"Name":"mod","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"pci","Type":{"Kind":"ApiRef","Name":"PTP_CALLBACK_INSTANCE","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
+			,{"Name":"mod","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -4517,7 +4740,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"pci","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_CALLBACK_INSTANCE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"pci","Type":{"Kind":"ApiRef","Name":"PTP_CALLBACK_INSTANCE","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -4530,7 +4753,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"pci","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_CALLBACK_INSTANCE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"pci","Type":{"Kind":"ApiRef","Name":"PTP_CALLBACK_INSTANCE","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -4552,7 +4775,7 @@
 		"Name":"CreateThreadpoolWork"
 		,"SetLastError":true
 		,"DllImport":"KERNEL32.dll"
-		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_WORK","TargetKind":"Default","Api":"System.Threading","Parents":[]}}
+		,"ReturnType":{"Kind":"ApiRef","Name":"PTP_WORK","TargetKind":"Default","Api":"System.Threading","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.0.6000"
@@ -4573,7 +4796,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"pwk","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_WORK","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"pwk","Type":{"Kind":"ApiRef","Name":"PTP_WORK","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -4586,7 +4809,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"pwk","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_WORK","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"pwk","Type":{"Kind":"ApiRef","Name":"PTP_WORK","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 			,{"Name":"fCancelPendingCallbacks","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 		]
 	}
@@ -4600,14 +4823,14 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"pwk","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_WORK","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"pwk","Type":{"Kind":"ApiRef","Name":"PTP_WORK","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"CreateThreadpoolTimer"
 		,"SetLastError":true
 		,"DllImport":"KERNEL32.dll"
-		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_TIMER","TargetKind":"Default","Api":"System.Threading","Parents":[]}}
+		,"ReturnType":{"Kind":"ApiRef","Name":"PTP_TIMER","TargetKind":"Default","Api":"System.Threading","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.0.6000"
@@ -4628,7 +4851,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"pti","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_TIMER","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"pti","Type":{"Kind":"ApiRef","Name":"PTP_TIMER","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pftDueTime","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FILETIME","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional"]}
 			,{"Name":"msPeriod","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"msWindowLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Optional"]}
@@ -4644,7 +4867,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"pti","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_TIMER","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"pti","Type":{"Kind":"ApiRef","Name":"PTP_TIMER","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -4657,7 +4880,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"pti","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_TIMER","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"pti","Type":{"Kind":"ApiRef","Name":"PTP_TIMER","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 			,{"Name":"fCancelPendingCallbacks","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 		]
 	}
@@ -4671,14 +4894,14 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"pti","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_TIMER","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"pti","Type":{"Kind":"ApiRef","Name":"PTP_TIMER","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"CreateThreadpoolWait"
 		,"SetLastError":true
 		,"DllImport":"KERNEL32.dll"
-		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_WAIT","TargetKind":"Default","Api":"System.Threading","Parents":[]}}
+		,"ReturnType":{"Kind":"ApiRef","Name":"PTP_WAIT","TargetKind":"Default","Api":"System.Threading","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.0.6000"
@@ -4699,7 +4922,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"pwa","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_WAIT","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"pwa","Type":{"Kind":"ApiRef","Name":"PTP_WAIT","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 			,{"Name":"h","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"pftTimeout","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FILETIME","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional"]}
 		]
@@ -4714,7 +4937,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"pwa","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_WAIT","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"pwa","Type":{"Kind":"ApiRef","Name":"PTP_WAIT","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 			,{"Name":"fCancelPendingCallbacks","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 		]
 	}
@@ -4728,14 +4951,14 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"pwa","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_WAIT","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"pwa","Type":{"Kind":"ApiRef","Name":"PTP_WAIT","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"CreateThreadpoolIo"
 		,"SetLastError":true
 		,"DllImport":"KERNEL32.dll"
-		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_IO","TargetKind":"Default","Api":"System.Threading","Parents":[]}}
+		,"ReturnType":{"Kind":"ApiRef","Name":"PTP_IO","TargetKind":"Default","Api":"System.Threading","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.0.6000"
@@ -4757,7 +4980,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"pio","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_IO","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"pio","Type":{"Kind":"ApiRef","Name":"PTP_IO","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -4770,7 +4993,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"pio","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_IO","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"pio","Type":{"Kind":"ApiRef","Name":"PTP_IO","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -4783,7 +5006,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"pio","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_IO","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"pio","Type":{"Kind":"ApiRef","Name":"PTP_IO","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 			,{"Name":"fCancelPendingCallbacks","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 		]
 	}
@@ -4797,7 +5020,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"pio","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_IO","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"pio","Type":{"Kind":"ApiRef","Name":"PTP_IO","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -4810,7 +5033,7 @@
 		,"Platform":"windows8.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"pti","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_TIMER","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"pti","Type":{"Kind":"ApiRef","Name":"PTP_TIMER","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pftDueTime","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FILETIME","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional"]}
 			,{"Name":"msPeriod","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"msWindowLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Optional"]}
@@ -4826,10 +5049,10 @@
 		,"Platform":"windows8.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"pwa","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TP_WAIT","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"pwa","Type":{"Kind":"ApiRef","Name":"PTP_WAIT","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 			,{"Name":"h","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"pftTimeout","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FILETIME","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional"]}
-			,{"Name":"Reserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"Reserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
@@ -5168,9 +5391,9 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"Context","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
-			,{"Name":"Period","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"Period","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int64"}},"Attrs":["In"]}
 			,{"Name":"ThreadOrderingGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Out"]}
-			,{"Name":"Timeout","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"Timeout","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int64"}},"Attrs":["In","Optional"]}
 		]
 	}
 	,{
@@ -5184,9 +5407,9 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"Context","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
-			,{"Name":"Period","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"Period","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int64"}},"Attrs":["In"]}
 			,{"Name":"ThreadOrderingGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Out"]}
-			,{"Name":"Timeout","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"Timeout","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int64"}},"Attrs":["In","Optional"]}
 			,{"Name":"TaskName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 		]
 	}
@@ -5201,9 +5424,9 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"Context","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
-			,{"Name":"Period","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"Period","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int64"}},"Attrs":["In"]}
 			,{"Name":"ThreadOrderingGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Out"]}
-			,{"Name":"Timeout","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"Timeout","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int64"}},"Attrs":["In","Optional"]}
 			,{"Name":"TaskName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 		]
 	}
@@ -5775,7 +5998,7 @@
 			,{"Name":"lInitialCount","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"lMaximumCount","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"lpName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
-			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 			,{"Name":"dwDesiredAccess","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
@@ -5840,7 +6063,7 @@
 			,{"Name":"dwLogonFlags","Type":{"Kind":"ApiRef","Name":"CREATE_PROCESS_LOGON_FLAGS","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpApplicationName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 			,{"Name":"lpCommandLine","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Out","Optional"]}
-			,{"Name":"dwCreationFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"dwCreationFlags","Type":{"Kind":"ApiRef","Name":"PROCESS_CREATION_FLAGS","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpEnvironment","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
 			,{"Name":"lpCurrentDirectory","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 			,{"Name":"lpStartupInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"STARTUPINFOW","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In"]}
@@ -5861,7 +6084,7 @@
 			,{"Name":"dwLogonFlags","Type":{"Kind":"ApiRef","Name":"CREATE_PROCESS_LOGON_FLAGS","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpApplicationName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 			,{"Name":"lpCommandLine","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Out","Optional"]}
-			,{"Name":"dwCreationFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"dwCreationFlags","Type":{"Kind":"ApiRef","Name":"PROCESS_CREATION_FLAGS","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpEnvironment","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
 			,{"Name":"lpCurrentDirectory","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 			,{"Name":"lpStartupInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"STARTUPINFOW","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In"]}

@@ -2,6 +2,27 @@
 
 "Constants":[
 	{
+		"Name":"WTS_CURRENT_SERVER"
+		,"Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ValueType":"Int32"
+		,"Value":0
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WTS_CURRENT_SERVER_HANDLE"
+		,"Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ValueType":"Int32"
+		,"Value":0
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WTS_CURRENT_SERVER_NAME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":""
+		,"Attrs":[]
+	}
+	,{
 		"Name":"WTS_DOMAIN_LENGTH"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -1003,83 +1024,6 @@
 		,"Attrs":[]
 	}
 	,{
-		"Name":"WTS_SECURITY_QUERY_INFORMATION"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1
-		,"Attrs":[]
-	}
-	,{
-		"Name":"WTS_SECURITY_SET_INFORMATION"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2
-		,"Attrs":[]
-	}
-	,{
-		"Name":"WTS_SECURITY_RESET"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":4
-		,"Attrs":[]
-	}
-	,{
-		"Name":"WTS_SECURITY_VIRTUAL_CHANNELS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":8
-		,"Attrs":[]
-	}
-	,{
-		"Name":"WTS_SECURITY_REMOTE_CONTROL"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":16
-		,"Attrs":[]
-	}
-	,{
-		"Name":"WTS_SECURITY_LOGON"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":32
-		,"Attrs":[]
-	}
-	,{
-		"Name":"WTS_SECURITY_LOGOFF"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":64
-		,"Attrs":[]
-	}
-	,{
-		"Name":"WTS_SECURITY_MESSAGE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":128
-		,"Attrs":[]
-	}
-	,{
-		"Name":"WTS_SECURITY_CONNECT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":256
-		,"Attrs":[]
-	}
-	,{
-		"Name":"WTS_SECURITY_DISCONNECT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":512
-		,"Attrs":[]
-	}
-	,{
-		"Name":"WTS_SECURITY_GUEST_ACCESS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":32
-		,"Attrs":[]
-	}
-	,{
 		"Name":"WTS_PROTOCOL_TYPE_CONSOLE"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -1825,6 +1769,32 @@
 
 ,"Types":[
 	{
+		"Name":"WTS_SECURITY_FLAGS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":true
+		,"Scoped":false
+		,"Values":[
+			{"Name":"WTS_SECURITY_CURRENT_GUEST_ACCESS","Value":72}
+			,{"Name":"WTS_SECURITY_USER_ACCESS","Value":329}
+			,{"Name":"WTS_SECURITY_CURRENT_USER_ACCESS","Value":590}
+			,{"Name":"WTS_SECURITY_ALL_ACCESS","Value":983999}
+			,{"Name":"WTS_SECURITY_QUERY_INFORMATION","Value":1}
+			,{"Name":"WTS_SECURITY_SET_INFORMATION","Value":2}
+			,{"Name":"WTS_SECURITY_RESET","Value":4}
+			,{"Name":"WTS_SECURITY_VIRTUAL_CHANNELS","Value":8}
+			,{"Name":"WTS_SECURITY_REMOTE_CONTROL","Value":16}
+			,{"Name":"WTS_SECURITY_LOGON","Value":32}
+			,{"Name":"WTS_SECURITY_LOGOFF","Value":64}
+			,{"Name":"WTS_SECURITY_MESSAGE","Value":128}
+			,{"Name":"WTS_SECURITY_CONNECT","Value":256}
+			,{"Name":"WTS_SECURITY_DISCONNECT","Value":512}
+			,{"Name":"WTS_SECURITY_GUEST_ACCESS","Value":32}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
 		"Name":"AE_POSITION_FLAGS"
 		,"Architectures":[]
 		,"Platform":null
@@ -1846,6 +1816,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"u64DevicePosition","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"u64StreamPosition","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -2682,6 +2653,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"userName","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"clientName","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -3033,6 +3005,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"pServerName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 		]
@@ -3046,6 +3019,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"pServerName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 		]
@@ -3059,6 +3033,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SessionId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pWinStationName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -3074,6 +3049,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SessionId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pWinStationName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -3089,6 +3065,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ExecEnvId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"State","Type":{"Kind":"ApiRef","Name":"WTS_CONNECTSTATE_CLASS","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
@@ -3109,6 +3086,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ExecEnvId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"State","Type":{"Kind":"ApiRef","Name":"WTS_CONNECTSTATE_CLASS","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
@@ -3129,6 +3107,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SessionId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ProcessId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3145,6 +3124,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SessionId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ProcessId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3202,6 +3182,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"fConnectClientDrivesAtLogon","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3225,6 +3206,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"fConnectClientDrivesAtLogon","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3248,6 +3230,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"State","Type":{"Kind":"ApiRef","Name":"WTS_CONNECTSTATE_CLASS","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
 			,{"Name":"SessionId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3260,11 +3243,11 @@
 			,{"Name":"WinStationName","Type":{"Kind":"Array","Shape":{"Size":32},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"Domain","Type":{"Kind":"Array","Shape":{"Size":17},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"UserName","Type":{"Kind":"Array","Shape":{"Size":21},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
-			,{"Name":"ConnectTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"DisconnectTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"LastInputTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"LogonTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"CurrentTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"ConnectTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"DisconnectTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"LastInputTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"LogonTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"CurrentTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -3276,6 +3259,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"State","Type":{"Kind":"ApiRef","Name":"WTS_CONNECTSTATE_CLASS","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
 			,{"Name":"SessionId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3288,11 +3272,11 @@
 			,{"Name":"WinStationName","Type":{"Kind":"Array","Shape":{"Size":32},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 			,{"Name":"Domain","Type":{"Kind":"Array","Shape":{"Size":17},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 			,{"Name":"UserName","Type":{"Kind":"Array","Shape":{"Size":21},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
-			,{"Name":"ConnectTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"DisconnectTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"LastInputTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"LogonTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"CurrentTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"ConnectTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"DisconnectTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"LastInputTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"LogonTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"CurrentTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -3304,6 +3288,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SessionId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"SessionState","Type":{"Kind":"ApiRef","Name":"WTS_CONNECTSTATE_CLASS","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
@@ -3311,11 +3296,11 @@
 			,{"Name":"WinStationName","Type":{"Kind":"Array","Shape":{"Size":33},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"UserName","Type":{"Kind":"Array","Shape":{"Size":21},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"DomainName","Type":{"Kind":"Array","Shape":{"Size":18},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
-			,{"Name":"LogonTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"ConnectTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"DisconnectTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"LastInputTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"CurrentTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"LogonTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"ConnectTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"DisconnectTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"LastInputTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"CurrentTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"IncomingBytes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"OutgoingBytes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"IncomingFrames","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3333,6 +3318,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SessionId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"SessionState","Type":{"Kind":"ApiRef","Name":"WTS_CONNECTSTATE_CLASS","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
@@ -3340,11 +3326,11 @@
 			,{"Name":"WinStationName","Type":{"Kind":"Array","Shape":{"Size":33},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 			,{"Name":"UserName","Type":{"Kind":"Array","Shape":{"Size":21},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 			,{"Name":"DomainName","Type":{"Kind":"Array","Shape":{"Size":18},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
-			,{"Name":"LogonTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"ConnectTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"DisconnectTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"LastInputTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"CurrentTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"LogonTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"ConnectTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"DisconnectTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"LastInputTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"CurrentTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"IncomingBytes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"OutgoingBytes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"IncomingFrames","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3362,6 +3348,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"WTSInfoExLevel1","Type":{"Kind":"ApiRef","Name":"WTSINFOEX_LEVEL1_W","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
 		]
@@ -3375,6 +3362,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"WTSInfoExLevel1","Type":{"Kind":"ApiRef","Name":"WTSINFOEX_LEVEL1_A","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
 		]
@@ -3388,6 +3376,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Level","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Data","Type":{"Kind":"ApiRef","Name":"WTSINFOEX_LEVEL_W","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
@@ -3402,6 +3391,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Level","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Data","Type":{"Kind":"ApiRef","Name":"WTSINFOEX_LEVEL_A","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
@@ -3416,6 +3406,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ClientName","Type":{"Kind":"Array","Shape":{"Size":21},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"Domain","Type":{"Kind":"Array","Shape":{"Size":18},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
@@ -3447,6 +3438,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ClientName","Type":{"Kind":"Array","Shape":{"Size":21},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 			,{"Name":"Domain","Type":{"Kind":"Array","Shape":{"Size":18},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
@@ -3478,6 +3470,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"CompanyName","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 			,{"Name":"ProductID","Type":{"Kind":"Array","Shape":{"Size":4},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
@@ -3492,6 +3485,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"CompanyName","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"ProductID","Type":{"Kind":"Array","Shape":{"Size":4},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
@@ -3506,6 +3500,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ProductInfo","Type":{"Kind":"ApiRef","Name":"PRODUCT_INFOA","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
 			,{"Name":"License","Type":{"Kind":"Array","Shape":{"Size":16384},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -3523,6 +3518,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ProductInfo","Type":{"Kind":"ApiRef","Name":"PRODUCT_INFOW","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
 			,{"Name":"License","Type":{"Kind":"Array","Shape":{"Size":16384},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -3540,6 +3536,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AddressFamily","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Address","Type":{"Kind":"Array","Shape":{"Size":20},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -3554,6 +3551,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"HorizontalResolution","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"VerticalResolution","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3612,6 +3610,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Source","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"InheritInitialProgram","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3642,6 +3641,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Source","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"InheritInitialProgram","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3685,6 +3685,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AddressFamily","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Address","Type":{"Kind":"Array","Shape":{"Size":20},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -3699,6 +3700,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SessionId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ProcessId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3710,8 +3712,8 @@
 			,{"Name":"PeakPagefileUsage","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"WorkingSetSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"PeakWorkingSetSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"UserTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"KernelTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"UserTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"KernelTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -3723,6 +3725,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SessionId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ProcessId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3734,8 +3737,8 @@
 			,{"Name":"PeakPagefileUsage","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"WorkingSetSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"PeakWorkingSetSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"UserTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"KernelTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"UserTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"KernelTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -3761,6 +3764,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"fEnableListener","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3804,6 +3808,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"fEnableListener","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3891,6 +3896,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AddressFamily","Type":{"Kind":"ApiRef","Name":"WTSSBX_ADDRESS_FAMILY","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
 			,{"Name":"Address","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -3921,6 +3927,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"wczMachineFQDN","Type":{"Kind":"Array","Shape":{"Size":257},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"wczMachineNetBiosName","Type":{"Kind":"Array","Shape":{"Size":17},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
@@ -3937,6 +3944,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ClientConnectInfo","Type":{"Kind":"ApiRef","Name":"WTSSBX_MACHINE_CONNECT_INFO","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
 			,{"Name":"wczFarmName","Type":{"Kind":"Array","Shape":{"Size":257},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
@@ -3971,6 +3979,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"wszUserName","Type":{"Kind":"Array","Shape":{"Size":105},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"wszDomainName","Type":{"Kind":"Array","Shape":{"Size":257},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
@@ -4001,7 +4010,7 @@
 	,{
 		"Name":"IWTSSBPlugin"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"dc44be78-b18d-4399-b210-641bf67a002c"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -4100,6 +4109,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"name","Type":{"Kind":"Array","Shape":{"Size":8},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 			,{"Name":"options","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4114,6 +4124,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4224,6 +4235,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"protocolVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4367,7 +4379,7 @@
 					{"Name":"bstrWorkspaceId","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"bstrRequestingAppId","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"bstrRequestingAppFamilyName","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"bLaunchIntoImmersiveClient","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					,{"Name":"bLaunchIntoImmersiveClient","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"bstrImmersiveClientActivationContext","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"psaParams","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SAFEARRAY","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
 				]
@@ -4535,8 +4547,8 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"bstrWorkspaceId","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"bCountUnauthenticatedCredentials","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
-					,{"Name":"pbCredExist","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					,{"Name":"bCountUnauthenticatedCredentials","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+					,{"Name":"pbCredExist","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -4548,7 +4560,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pbSSOEnabled","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pbSSOEnabled","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -4698,7 +4710,7 @@
 					,{"Name":"dwErrorType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"bstrErrorMessageType","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"dwErrorCode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"pfErrorExist","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pfErrorExist","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -4946,6 +4958,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"HorizontalResolution","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"VerticalResolution","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4961,6 +4974,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ServerAddressB","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"AddressType","Type":{"Kind":"ApiRef","Name":"TSSD_AddrV46Type","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
@@ -4993,6 +5007,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"VmName","Type":{"Kind":"Array","Shape":{"Size":128},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"VmHost","Type":{"Kind":"Array","Shape":{"Size":128},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
@@ -5007,6 +5022,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwNumEntries","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pVmNames","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
@@ -5021,6 +5037,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwNumEntries","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ppVmEntries","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VM_NOTIFY_ENTRY","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]}}},"Attrs":[]}
@@ -5080,7 +5097,7 @@
 	,{
 		"Name":"ITsSbPlugin"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"48cd7406-caab-465f-a5d6-baa863b9ea4f"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -5116,7 +5133,7 @@
 	,{
 		"Name":"ITsSbResourcePlugin"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"ea8db42c-98ed-4535-a88b-2a164f35490f"
 		,"Interface":{"Kind":"ApiRef","Name":"ITsSbPlugin","TargetKind":"Com","Api":"System.RemoteDesktop","Parents":[]}
@@ -5126,7 +5143,7 @@
 	,{
 		"Name":"ITsSbServiceNotification"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"86cb68ae-86e0-4f57-8a64-bb7406bc5550"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -5158,7 +5175,7 @@
 	,{
 		"Name":"ITsSbLoadBalancing"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"24329274-9eb7-11dc-ae98-f2b456d89593"
 		,"Interface":{"Kind":"ApiRef","Name":"ITsSbPlugin","TargetKind":"Com","Api":"System.RemoteDesktop","Parents":[]}
@@ -5181,7 +5198,7 @@
 	,{
 		"Name":"ITsSbPlacement"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"daadee5f-6d32-480e-9e36-ddab2329f06d"
 		,"Interface":{"Kind":"ApiRef","Name":"ITsSbPlugin","TargetKind":"Com","Api":"System.RemoteDesktop","Parents":[]}
@@ -5204,7 +5221,7 @@
 	,{
 		"Name":"ITsSbOrchestration"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"64fc1172-9eb7-11dc-8b00-3aba56d89593"
 		,"Interface":{"Kind":"ApiRef","Name":"ITsSbPlugin","TargetKind":"Com","Api":"System.RemoteDesktop","Parents":[]}
@@ -5227,7 +5244,7 @@
 	,{
 		"Name":"ITsSbEnvironment"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"8c87f7f7-bf51-4a5c-87bf-8e94fb6e2256"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -5293,7 +5310,7 @@
 	,{
 		"Name":"ITsSbLoadBalanceResult"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"24fdb7ac-fea6-11dc-9672-9a8956d89593"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -5317,7 +5334,7 @@
 	,{
 		"Name":"ITsSbTarget"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"16616ecc-272d-411d-b324-126893033856"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -5591,7 +5608,7 @@
 	,{
 		"Name":"ITsSbSession"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"d453aac7-b1d8-4c5e-ba34-9afb4c8c5510"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -5839,7 +5856,7 @@
 	,{
 		"Name":"ITsSbResourceNotification"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"65d3e85a-c39b-11dc-b92d-3cd255d89593"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -5888,7 +5905,7 @@
 	,{
 		"Name":"ITsSbResourceNotificationEx"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"a8a47fde-ca91-44d2-b897-3aa28a43b2b7"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -5944,7 +5961,7 @@
 	,{
 		"Name":"ITsSbTaskInfo"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"523d1083-89be-48dd-99ea-04e82ffa7265"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -6080,7 +6097,7 @@
 	,{
 		"Name":"ITsSbTaskPlugin"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"fa22ef0f-8705-41be-93bc-44bdbcf1c9c4"
 		,"Interface":{"Kind":"ApiRef","Name":"ITsSbPlugin","TargetKind":"Com","Api":"System.RemoteDesktop","Parents":[]}
@@ -6116,7 +6133,7 @@
 	,{
 		"Name":"ITsSbPropertySet"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"5c025171-bb1e-4baf-a212-6d5e9774b33b"
 		,"Interface":{"Kind":"ApiRef","Name":"IPropertyBag","TargetKind":"Com","Api":"System.Com.StructuredStorage","Parents":[]}
@@ -6126,7 +6143,7 @@
 	,{
 		"Name":"ITsSbPluginPropertySet"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"95006e34-7eff-4b6c-bb40-49a4fda7cea6"
 		,"Interface":{"Kind":"ApiRef","Name":"ITsSbPropertySet","TargetKind":"Com","Api":"System.RemoteDesktop","Parents":[]}
@@ -6136,7 +6153,7 @@
 	,{
 		"Name":"ITsSbClientConnectionPropertySet"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"e51995b0-46d6-11dd-aa21-cedc55d89593"
 		,"Interface":{"Kind":"ApiRef","Name":"ITsSbPropertySet","TargetKind":"Com","Api":"System.RemoteDesktop","Parents":[]}
@@ -6146,7 +6163,7 @@
 	,{
 		"Name":"ITsSbTargetPropertySet"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"f7bda5d6-994c-4e11-a079-2763b61830ac"
 		,"Interface":{"Kind":"ApiRef","Name":"ITsSbPropertySet","TargetKind":"Com","Api":"System.RemoteDesktop","Parents":[]}
@@ -6156,7 +6173,7 @@
 	,{
 		"Name":"ITsSbEnvironmentPropertySet"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"d0d1bf7e-7acf-11dd-a243-e51156d89593"
 		,"Interface":{"Kind":"ApiRef","Name":"ITsSbPropertySet","TargetKind":"Com","Api":"System.RemoteDesktop","Parents":[]}
@@ -6166,7 +6183,7 @@
 	,{
 		"Name":"ITsSbBaseNotifySink"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"808a6537-1282-4989-9e09-f43938b71722"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -6201,7 +6218,7 @@
 	,{
 		"Name":"ITsSbPluginNotifySink"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"44dfe30b-c3be-40f5-bf82-7a95bb795adf"
 		,"Interface":{"Kind":"ApiRef","Name":"ITsSbBaseNotifySink","TargetKind":"Com","Api":"System.RemoteDesktop","Parents":[]}
@@ -6234,7 +6251,7 @@
 	,{
 		"Name":"ITsSbLoadBalancingNotifySink"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"5f8a8297-3244-4e6a-958a-27c822c1e141"
 		,"Interface":{"Kind":"ApiRef","Name":"ITsSbBaseNotifySink","TargetKind":"Com","Api":"System.RemoteDesktop","Parents":[]}
@@ -6257,7 +6274,7 @@
 	,{
 		"Name":"ITsSbPlacementNotifySink"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"68a0c487-2b4f-46c2-94a1-6ce685183634"
 		,"Interface":{"Kind":"ApiRef","Name":"ITsSbBaseNotifySink","TargetKind":"Com","Api":"System.RemoteDesktop","Parents":[]}
@@ -6279,7 +6296,7 @@
 	,{
 		"Name":"ITsSbOrchestrationNotifySink"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"36c37d61-926b-442f-bca5-118c6d50dcf2"
 		,"Interface":{"Kind":"ApiRef","Name":"ITsSbBaseNotifySink","TargetKind":"Com","Api":"System.RemoteDesktop","Parents":[]}
@@ -6301,7 +6318,7 @@
 	,{
 		"Name":"ITsSbTaskPluginNotifySink"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"6aaf899e-c2ec-45ee-aa37-45e60895261a"
 		,"Interface":{"Kind":"ApiRef","Name":"ITsSbBaseNotifySink","TargetKind":"Com","Api":"System.RemoteDesktop","Parents":[]}
@@ -6370,7 +6387,7 @@
 	,{
 		"Name":"ITsSbClientConnection"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"18857499-ad61-4b1b-b7df-cbcd41fb8338"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -6584,7 +6601,7 @@
 	,{
 		"Name":"ITsSbProvider"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"87a4098f-6d7b-44dd-bc17-8ce44e370d52"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -6750,7 +6767,7 @@
 	,{
 		"Name":"ITsSbResourcePluginStore"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"5c38f65f-bcf1-4036-a6bf-9e3cccae0b63"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -7141,7 +7158,7 @@
 	,{
 		"Name":"ITsSbFilterPluginStore"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"85b44b0f-ed78-413f-9702-fa6d3b5ee755"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -7187,7 +7204,7 @@
 	,{
 		"Name":"ITsSbGlobalStore"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"9ab60f7b-bd72-4d9f-8a3a-a0ea5574e635"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -7305,7 +7322,7 @@
 	,{
 		"Name":"ITsSbProvisioningPluginNotifySink"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"aca87a8e-818b-4581-a032-49c3dfb9c701"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -7393,7 +7410,7 @@
 	,{
 		"Name":"ITsSbProvisioning"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"2f6f0dbb-9e4f-462b-9c3f-fccc3dcb6232"
 		,"Interface":{"Kind":"ApiRef","Name":"ITsSbPlugin","TargetKind":"Com","Api":"System.RemoteDesktop","Parents":[]}
@@ -7458,7 +7475,7 @@
 	,{
 		"Name":"ITsSbGenericNotifySink"
 		,"Architectures":[]
-		,"Platform":"windowsServer2016"
+		,"Platform":"windowsserver2016"
 		,"Kind":"Com"
 		,"Guid":"4c4c8c4f-300b-46ad-9164-8468a7e7568c"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -7496,6 +7513,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"alias","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"name","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
@@ -7515,7 +7533,7 @@
 	,{
 		"Name":"ItsPubPlugin"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"70c04b05-f347-412b-822f-36c99c54ca45"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -7613,6 +7631,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"extName","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"primaryHandler","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -7629,6 +7648,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"resourceV1","Type":{"Kind":"ApiRef","Name":"pluginResource","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
 			,{"Name":"pceFileAssocListSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -7751,7 +7771,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"fMachineWide","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"fMachineWide","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"bstrFileExtension","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"bstrLauncher","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
@@ -7765,7 +7785,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"fMachineWide","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"fMachineWide","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"bstrFileExtension","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
@@ -7778,7 +7798,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"fMachineWide","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"fMachineWide","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"psaFileExtensions","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SAFEARRAY","TargetKind":"Default","Api":"System.Com","Parents":[]}}},"Attrs":["Out"]}
 				]
 			}
@@ -7791,7 +7811,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"fMachineWide","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"fMachineWide","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"bstrFileExtension","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pbstrLauncher","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
@@ -7805,7 +7825,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"fMachineWide","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"fMachineWide","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"bstrFileExtension","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"bstrLauncher","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
@@ -7966,7 +7986,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pszChannelName","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Const"]}
+					{"Name":"pszChannelName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 					,{"Name":"uFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pListenerCallback","Type":{"Kind":"ApiRef","Name":"IWTSListenerCallback","TargetKind":"Com","Api":"System.RemoteDesktop","Parents":[]},"Attrs":["In"]}
 					,{"Name":"ppListener","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IWTSListener","TargetKind":"Com","Api":"System.RemoteDesktop","Parents":[]}},"Attrs":["Out"]}
@@ -8039,6 +8059,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwFramesDelivered","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFramesDropped","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -8310,6 +8331,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"left","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"top","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -8326,6 +8348,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"uMSGType","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -8340,6 +8363,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"left","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"top","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -8360,6 +8384,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"channelHdr","Type":{"Kind":"ApiRef","Name":"RFX_GFX_MSG_HEADER","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
 		]
@@ -8373,6 +8398,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"channelHdr","Type":{"Kind":"ApiRef","Name":"RFX_GFX_MSG_HEADER","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
 			,{"Name":"reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -8390,6 +8416,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"channelHdr","Type":{"Kind":"ApiRef","Name":"RFX_GFX_MSG_HEADER","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
 			,{"Name":"ulWidth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -8407,6 +8434,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"channelHdr","Type":{"Kind":"ApiRef","Name":"RFX_GFX_MSG_HEADER","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
 		]
@@ -8420,6 +8448,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"channelHdr","Type":{"Kind":"ApiRef","Name":"RFX_GFX_MSG_HEADER","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
 			,{"Name":"ulWidth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -8435,6 +8464,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"channelHdr","Type":{"Kind":"ApiRef","Name":"RFX_GFX_MSG_HEADER","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
 			,{"Name":"DisconnectReason","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -8449,6 +8479,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"channelHdr","Type":{"Kind":"ApiRef","Name":"RFX_GFX_MSG_HEADER","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
 			,{"Name":"RedrawRect","Type":{"Kind":"ApiRef","Name":"RFX_GFX_RECT","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
@@ -8463,6 +8494,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"channelHdr","Type":{"Kind":"ApiRef","Name":"RFX_GFX_MSG_HEADER","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
 			,{"Name":"rdpData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -8477,6 +8509,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"sin_family","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"u","Type":{"Kind":"ApiRef","Name":"_u_e__Union","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
@@ -8489,6 +8522,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"ipv4","Type":{"Kind":"ApiRef","Name":"_ipv4_e__Struct","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":["_u_e__Union"]},"Attrs":[]}
 					,{"Name":"ipv6","Type":{"Kind":"ApiRef","Name":"_ipv6_e__Struct","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":["_u_e__Union"]},"Attrs":[]}
@@ -8501,6 +8535,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"sin6_port","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 							,{"Name":"sin6_flowinfo","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -8517,6 +8552,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"sin_port","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 							,{"Name":"IN_ADDR","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -8536,6 +8572,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Left","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
 			,{"Name":"Top","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
@@ -8580,6 +8617,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"RcmServiceState","Type":{"Kind":"ApiRef","Name":"WTS_RCM_SERVICE_STATE","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
 			,{"Name":"RcmDrainState","Type":{"Kind":"ApiRef","Name":"WTS_RCM_DRAIN_STATE","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
@@ -8594,6 +8632,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SessionUniqueGuid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"SessionId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -8608,6 +8647,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"UserName","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"Password","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
@@ -8623,6 +8663,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"wYear","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"wMonth","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -8643,6 +8684,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Bias","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"StandardName","Type":{"Kind":"Array","Shape":{"Size":32},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
@@ -8662,6 +8704,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Bias","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"StandardName","Type":{"Kind":"Array","Shape":{"Size":32},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
@@ -8683,6 +8726,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"fDisableCtrlAltDel","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"fDoubleClickDetect","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -8750,6 +8794,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"WorkDirectory","Type":{"Kind":"Array","Shape":{"Size":257},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"InitialProgram","Type":{"Kind":"Array","Shape":{"Size":257},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
@@ -8765,6 +8810,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"fDisableEncryption","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"fDisableAutoReconnect","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -8787,6 +8833,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"CacheReads","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"CacheHits","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -8801,6 +8848,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ProtocolCache","Type":{"Kind":"Array","Shape":{"Size":4},"Child":{"Kind":"ApiRef","Name":"WTS_PROTOCOL_CACHE","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]}},"Attrs":[]}
 			,{"Name":"TShareCacheStats","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -8816,6 +8864,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Specific","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Data","Type":{"Kind":"ApiRef","Name":"WTS_CACHE_STATS_UN","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
@@ -8832,6 +8881,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"WdBytes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"WdFrames","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -8862,13 +8912,14 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Output","Type":{"Kind":"ApiRef","Name":"WTS_PROTOCOL_COUNTERS","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
 			,{"Name":"Input","Type":{"Kind":"ApiRef","Name":"WTS_PROTOCOL_COUNTERS","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
 			,{"Name":"Cache","Type":{"Kind":"ApiRef","Name":"WTS_CACHE_STATS","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
 			,{"Name":"AsyncSignal","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"AsyncSignalMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Counters","Type":{"Kind":"Array","Shape":{"Size":100},"Child":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+			,{"Name":"Counters","Type":{"Kind":"Array","Shape":{"Size":100},"Child":{"Kind":"Native","Name":"Int64"}},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -8880,6 +8931,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"pDisplayIOCtlData","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"cbDisplayIOCtlData","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -8910,6 +8962,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Type","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"u","Type":{"Kind":"ApiRef","Name":"_u_e__Union","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
@@ -8922,6 +8975,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"ulVal","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"strVal","Type":{"Kind":"ApiRef","Name":"_strVal_e__Struct","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":["_u_e__Union"]},"Attrs":[]}
@@ -8936,6 +8990,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"pbVal","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -8950,6 +9005,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"pstrVal","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -8982,6 +9038,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"KeyExchangeAlg","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ProtocolVer","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -9069,6 +9126,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"MaxProtocolListenerConnectionCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"SecurityDescriptorSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -9084,6 +9142,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"WRdsListenerSettings1","Type":{"Kind":"ApiRef","Name":"WRDS_LISTENER_SETTINGS_1","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
 		]
@@ -9097,6 +9156,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"WRdsListenerSettingLevel","Type":{"Kind":"ApiRef","Name":"WRDS_LISTENER_SETTING_LEVEL","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
 			,{"Name":"WRdsListenerSetting","Type":{"Kind":"ApiRef","Name":"WRDS_LISTENER_SETTING","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
@@ -9111,6 +9171,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"fInheritInitialProgram","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"fInheritColorDepth","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -9188,6 +9249,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"WRdsDisableClipStatus","Type":{"Kind":"ApiRef","Name":"WRDS_SETTING_STATUS","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
 			,{"Name":"WRdsDisableClipValue","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -9231,6 +9293,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"WRdsConnectionSettings1","Type":{"Kind":"ApiRef","Name":"WRDS_CONNECTION_SETTINGS_1","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
 		]
@@ -9244,6 +9307,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"WRdsConnectionSettingLevel","Type":{"Kind":"ApiRef","Name":"WRDS_CONNECTION_SETTING_LEVEL","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
 			,{"Name":"WRdsConnectionSetting","Type":{"Kind":"ApiRef","Name":"WRDS_CONNECTION_SETTING","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
@@ -9258,6 +9322,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"WRdsSettings1","Type":{"Kind":"ApiRef","Name":"WRDS_SETTINGS_1","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
 		]
@@ -9271,6 +9336,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"WRdsSettingType","Type":{"Kind":"ApiRef","Name":"WRDS_SETTING_TYPE","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
 			,{"Name":"WRdsSettingLevel","Type":{"Kind":"ApiRef","Name":"WRDS_SETTING_LEVEL","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":[]}
@@ -9282,7 +9348,7 @@
 	,{
 		"Name":"IWTSProtocolManager"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"f9eaf6cc-ed79-4f01-821d-1f881b9f66cc"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -9354,7 +9420,7 @@
 	,{
 		"Name":"IWTSProtocolListener"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"23083765-45f0-4394-8f69-32b2bc0ef4ca"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -9387,7 +9453,7 @@
 	,{
 		"Name":"IWTSProtocolListenerCallback"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"23083765-1a2d-4de2-97de-4a35f260f0b3"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -9410,7 +9476,7 @@
 	,{
 		"Name":"IWTSProtocolConnection"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"23083765-9095-4648-98bf-ef81c914032d"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -9714,7 +9780,7 @@
 	,{
 		"Name":"IWTSProtocolConnectionCallback"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"23083765-75eb-41fe-b4fb-e086242afa0f"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -9783,7 +9849,7 @@
 	,{
 		"Name":"IWTSProtocolShadowConnection"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"ee3b0c14-37fb-456b-bab3-6d6cd51e13bf"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -9840,7 +9906,7 @@
 	,{
 		"Name":"IWTSProtocolShadowCallback"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"503a2504-aae5-4ab1-93e0-6d1c4bc6f71a"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -9883,7 +9949,7 @@
 	,{
 		"Name":"IWTSProtocolLicenseConnection"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"23083765-178c-4079-8e4a-fea6496a4d70"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -9946,7 +10012,7 @@
 	,{
 		"Name":"IWTSProtocolLogonErrorRedirector"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"fd9b61a7-2916-4627-8dee-4328711ad6cb"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -10012,7 +10078,7 @@
 	,{
 		"Name":"IWRdsProtocolSettings"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"654a5a6a-2550-47eb-b6f7-ebd637475265"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -10050,7 +10116,7 @@
 	,{
 		"Name":"IWRdsProtocolManager"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"dc796967-3abb-40cd-a446-105276b58950"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -10158,7 +10224,7 @@
 	,{
 		"Name":"IWRdsProtocolListener"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"fcbc131b-c686-451d-a773-e279e230f540"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -10204,7 +10270,7 @@
 	,{
 		"Name":"IWRdsProtocolListenerCallback"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"3ab27e5b-4449-4dc1-b74a-91621d4fe984"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -10228,7 +10294,7 @@
 	,{
 		"Name":"IWRdsProtocolConnection"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"324ed94f-fdaf-4ff6-81a8-42abe755830b"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -10544,7 +10610,7 @@
 	,{
 		"Name":"IWRdsProtocolConnectionCallback"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"f1d70332-d070-4ef1-a088-78313536c2d6"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -10613,7 +10679,7 @@
 	,{
 		"Name":"IWRdsProtocolShadowConnection"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"9ae85ce6-cade-4548-8feb-99016597f60a"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -10670,7 +10736,7 @@
 	,{
 		"Name":"IWRdsProtocolShadowCallback"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"e0667ce0-0372-40d6-adb2-a0f3322674d6"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -10713,7 +10779,7 @@
 	,{
 		"Name":"IWRdsProtocolLicenseConnection"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"1d6a145f-d095-4424-957a-407fae822d84"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -10776,7 +10842,7 @@
 	,{
 		"Name":"IWRdsProtocolLogonErrorRedirector"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"519fe83b-142a-4120-a3d5-a405d315281a"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -11154,7 +11220,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"enabled","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"enabled","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -11168,7 +11234,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"enabled","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out"]}
+					{"Name":"enabled","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -11182,7 +11248,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"eventsEnabled","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"eventsEnabled","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -11196,7 +11262,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"eventsEnabled","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out"]}
+					{"Name":"eventsEnabled","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -11415,6 +11481,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwSessionId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -11611,7 +11678,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Optional"]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"ppSessionInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WTS_SESSION_INFOW","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]}}},"Attrs":["Out"]}
@@ -11628,7 +11695,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Optional"]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"ppSessionInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WTS_SESSION_INFOA","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]}}},"Attrs":["Out"]}
@@ -11645,7 +11712,7 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"pLevel","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
 			,{"Name":"Filter","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"ppSessionInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WTS_SESSION_INFO_1W","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]}}},"Attrs":["Out"]}
@@ -11662,7 +11729,7 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"pLevel","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
 			,{"Name":"Filter","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"ppSessionInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WTS_SESSION_INFO_1A","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]}}},"Attrs":["Out"]}
@@ -11679,7 +11746,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Optional"]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"ppProcessInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WTS_PROCESS_INFOW","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]}}},"Attrs":["In","Out"]}
@@ -11696,7 +11763,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Optional"]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"ppProcessInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WTS_PROCESS_INFOA","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]}}},"Attrs":["In","Out"]}
@@ -11713,7 +11780,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Optional"]}
 			,{"Name":"ProcessId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"ExitCode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
@@ -11728,7 +11795,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Optional"]}
 			,{"Name":"SessionId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"WTSInfoClass","Type":{"Kind":"ApiRef","Name":"WTS_INFO_CLASS","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":["In"]}
 			,{"Name":"ppBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
@@ -11745,7 +11812,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Optional"]}
 			,{"Name":"SessionId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"WTSInfoClass","Type":{"Kind":"ApiRef","Name":"WTS_INFO_CLASS","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]},"Attrs":["In"]}
 			,{"Name":"ppBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
@@ -11830,7 +11897,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Optional"]}
 			,{"Name":"SessionId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pTitle","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":3}]}
 			,{"Name":"TitleLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -11852,7 +11919,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Optional"]}
 			,{"Name":"SessionId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pTitle","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":3}]}
 			,{"Name":"TitleLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -11874,7 +11941,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Optional"]}
 			,{"Name":"SessionId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"bWait","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 		]
@@ -11889,7 +11956,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Optional"]}
 			,{"Name":"SessionId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"bWait","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 		]
@@ -11904,7 +11971,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Optional"]}
 			,{"Name":"ShutdownFlag","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
@@ -11918,7 +11985,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Optional"]}
 			,{"Name":"EventMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pEventFlags","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
 		]
@@ -11933,7 +12000,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Reserved","Optional"]}
 			,{"Name":"SessionId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pVirtualName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 		]
@@ -12091,7 +12158,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Optional"]}
 			,{"Name":"hWnd","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
@@ -12106,7 +12173,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Optional"]}
 			,{"Name":"hWnd","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 		]
 	}
@@ -12164,7 +12231,7 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"pLevel","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
 			,{"Name":"SessionId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"ppProcessInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
@@ -12181,7 +12248,7 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"pLevel","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
 			,{"Name":"SessionId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"ppProcessInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
@@ -12198,7 +12265,7 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Reserved","Optional"]}
 			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pListeners","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":4,"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt16"}}},"Attrs":["Out","Optional"]}
@@ -12215,7 +12282,7 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Reserved","Optional"]}
 			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pListeners","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":4,"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"SByte"}}},"Attrs":["Out","Optional"]}
@@ -12232,7 +12299,7 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Reserved","Optional"]}
 			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pListenerName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
@@ -12249,7 +12316,7 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Reserved","Optional"]}
 			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pListenerName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
@@ -12266,7 +12333,7 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Reserved","Optional"]}
 			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pListenerName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
@@ -12284,7 +12351,7 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Reserved","Optional"]}
 			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pListenerName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
@@ -12302,7 +12369,7 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Reserved","Optional"]}
 			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pListenerName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
@@ -12320,7 +12387,7 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Reserved","Optional"]}
 			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pListenerName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
@@ -12338,7 +12405,7 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Reserved","Optional"]}
 			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pListenerName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
@@ -12358,7 +12425,7 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hServer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Reserved","Optional"]}
 			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pListenerName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}

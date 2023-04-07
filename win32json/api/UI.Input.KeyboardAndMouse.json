@@ -870,27 +870,6 @@
 		,"Attrs":[]
 	}
 	,{
-		"Name":"VK__none_"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":255
-		,"Attrs":[]
-	}
-	,{
-		"Name":"VK_ABNT_C1"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":193
-		,"Attrs":[]
-	}
-	,{
-		"Name":"VK_ABNT_C2"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":194
-		,"Attrs":[]
-	}
-	,{
 		"Name":"SCANCODE_LSHIFT"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -951,104 +930,6 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":41
-		,"Attrs":[]
-	}
-	,{
-		"Name":"VK_DBE_ALPHANUMERIC"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":240
-		,"Attrs":[]
-	}
-	,{
-		"Name":"VK_DBE_KATAKANA"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":241
-		,"Attrs":[]
-	}
-	,{
-		"Name":"VK_DBE_HIRAGANA"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":242
-		,"Attrs":[]
-	}
-	,{
-		"Name":"VK_DBE_SBCSCHAR"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":243
-		,"Attrs":[]
-	}
-	,{
-		"Name":"VK_DBE_DBCSCHAR"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":244
-		,"Attrs":[]
-	}
-	,{
-		"Name":"VK_DBE_ROMAN"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":245
-		,"Attrs":[]
-	}
-	,{
-		"Name":"VK_DBE_NOROMAN"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":246
-		,"Attrs":[]
-	}
-	,{
-		"Name":"VK_DBE_ENTERWORDREGISTERMODE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":247
-		,"Attrs":[]
-	}
-	,{
-		"Name":"VK_DBE_ENTERIMECONFIGMODE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":248
-		,"Attrs":[]
-	}
-	,{
-		"Name":"VK_DBE_FLUSHSTRING"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":249
-		,"Attrs":[]
-	}
-	,{
-		"Name":"VK_DBE_CODEINPUT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":250
-		,"Attrs":[]
-	}
-	,{
-		"Name":"VK_DBE_NOCODEINPUT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":251
-		,"Attrs":[]
-	}
-	,{
-		"Name":"VK_DBE_DETERMINESTRING"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":252
-		,"Attrs":[]
-	}
-	,{
-		"Name":"VK_DBE_ENTERDLGCONVERSIONMODE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":253
 		,"Attrs":[]
 	}
 ]
@@ -1216,6 +1097,23 @@
 			,{"Name":"VK_X","Value":88}
 			,{"Name":"VK_Y","Value":89}
 			,{"Name":"VK_Z","Value":90}
+			,{"Name":"VK_ABNT_C1","Value":193}
+			,{"Name":"VK_ABNT_C2","Value":194}
+			,{"Name":"VK_DBE_ALPHANUMERIC","Value":240}
+			,{"Name":"VK_DBE_CODEINPUT","Value":250}
+			,{"Name":"VK_DBE_DBCSCHAR","Value":244}
+			,{"Name":"VK_DBE_DETERMINESTRING","Value":252}
+			,{"Name":"VK_DBE_ENTERDLGCONVERSIONMODE","Value":253}
+			,{"Name":"VK_DBE_ENTERIMECONFIGMODE","Value":248}
+			,{"Name":"VK_DBE_ENTERWORDREGISTERMODE","Value":247}
+			,{"Name":"VK_DBE_FLUSHSTRING","Value":249}
+			,{"Name":"VK_DBE_HIRAGANA","Value":242}
+			,{"Name":"VK_DBE_KATAKANA","Value":241}
+			,{"Name":"VK_DBE_NOCODEINPUT","Value":251}
+			,{"Name":"VK_DBE_NOROMAN","Value":246}
+			,{"Name":"VK_DBE_ROMAN","Value":245}
+			,{"Name":"VK_DBE_SBCSCHAR","Value":243}
+			,{"Name":"VK__none_","Value":255}
 			,{"Name":"VK_LBUTTON","Value":1}
 			,{"Name":"VK_RBUTTON","Value":2}
 			,{"Name":"VK_CANCEL","Value":3}
@@ -1414,12 +1312,29 @@
 		,"IntegerBase":"UInt16"
 	}
 	,{
+		"Name":"MAP_VIRTUAL_KEY_TYPE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"MAPVK_VK_TO_VSC","Value":0}
+			,{"Name":"MAPVK_VSC_TO_VK","Value":1}
+			,{"Name":"MAPVK_VK_TO_CHAR","Value":2}
+			,{"Name":"MAPVK_VSC_TO_VK_EX","Value":3}
+			,{"Name":"MAPVK_VK_TO_VSC_EX","Value":4}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
 		"Name":"VK_TO_BIT"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Vk","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"ModBits","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -1434,6 +1349,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"pVkToBit","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VK_TO_BIT","TargetKind":"Default","Api":"UI.Input.KeyboardAndMouse","Parents":[]}},"Attrs":[]}
 			,{"Name":"wMaxModBits","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1449,6 +1365,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Vsc","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Vk","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1463,6 +1380,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Vk","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Vsc","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -1477,6 +1395,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"VirtualKey","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Attributes","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -1492,6 +1411,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"VirtualKey","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Attributes","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -1507,6 +1427,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"VirtualKey","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Attributes","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -1522,6 +1443,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"VirtualKey","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Attributes","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -1537,6 +1459,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"VirtualKey","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Attributes","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -1552,6 +1475,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"VirtualKey","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Attributes","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -1567,6 +1491,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"VirtualKey","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Attributes","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -1582,6 +1507,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"VirtualKey","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Attributes","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -1597,6 +1523,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"VirtualKey","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Attributes","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -1612,6 +1539,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"VirtualKey","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Attributes","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -1627,6 +1555,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"pVkToWchars","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VK_TO_WCHARS1","TargetKind":"Default","Api":"UI.Input.KeyboardAndMouse","Parents":[]}},"Attrs":[]}
 			,{"Name":"nModifications","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -1642,6 +1571,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwBoth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"wchComposed","Type":{"Kind":"Native","Name":"Char"},"Attrs":[]}
@@ -1657,6 +1587,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"VirtualKey","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"ModificationNumber","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1672,6 +1603,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"VirtualKey","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"ModificationNumber","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1687,6 +1619,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"VirtualKey","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"ModificationNumber","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1702,6 +1635,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"VirtualKey","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"ModificationNumber","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1717,6 +1651,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"VirtualKey","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"ModificationNumber","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1732,6 +1667,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"vsc","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"pwsz","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -1746,6 +1682,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"pCharModifiers","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MODIFIERS","TargetKind":"Default","Api":"UI.Input.KeyboardAndMouse","Parents":[]}},"Attrs":[]}
 			,{"Name":"pVkToWcharTable","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VK_TO_WCHAR_TABLE","TargetKind":"Default","Api":"UI.Input.KeyboardAndMouse","Parents":[]}},"Attrs":[]}
@@ -1774,6 +1711,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NLSFEProcIndex","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"NLSFEProcParam","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1788,6 +1726,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Vk","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"NLSFEProcType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -1806,6 +1745,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"OEMIdentifier","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"LayoutInformation","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1824,6 +1764,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"wszDllName","Type":{"Kind":"Array","Shape":{"Size":32},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"dwType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1839,6 +1780,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"nTables","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"aKbdTables","Type":{"Kind":"Array","Shape":{"Size":8},"Child":{"Kind":"ApiRef","Name":"KBDTABLE_DESC","TargetKind":"Default","Api":"UI.Input.KeyboardAndMouse","Parents":[]}},"Attrs":[]}
@@ -1853,6 +1795,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1868,6 +1811,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"x","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"y","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -1884,6 +1828,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"TRACKMOUSEEVENT_FLAGS","TargetKind":"Default","Api":"UI.Input.KeyboardAndMouse","Parents":[]},"Attrs":[]}
@@ -1900,6 +1845,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dx","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"dy","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -1918,6 +1864,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"wVk","Type":{"Kind":"ApiRef","Name":"VIRTUAL_KEY","TargetKind":"Default","Api":"UI.Input.KeyboardAndMouse","Parents":[]},"Attrs":[]}
 			,{"Name":"wScan","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1935,6 +1882,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"uMsg","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"wParamL","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1950,6 +1898,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"type","Type":{"Kind":"ApiRef","Name":"INPUT_TYPE","TargetKind":"Default","Api":"UI.Input.KeyboardAndMouse","Parents":[]},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"UI.Input.KeyboardAndMouse","Parents":[]},"Attrs":[]}
@@ -1962,6 +1911,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"mi","Type":{"Kind":"ApiRef","Name":"MOUSEINPUT","TargetKind":"Default","Api":"UI.Input.KeyboardAndMouse","Parents":[]},"Attrs":[]}
 					,{"Name":"ki","Type":{"Kind":"ApiRef","Name":"KEYBDINPUT","TargetKind":"Default","Api":"UI.Input.KeyboardAndMouse","Parents":[]},"Attrs":[]}
@@ -1979,6 +1929,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwTime","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2520,7 +2471,7 @@
 			{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"MOUSE_EVENT_FLAGS","TargetKind":"Default","Api":"UI.Input.KeyboardAndMouse","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dx","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"dy","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-			,{"Name":"dwData","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"dwData","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"dwExtraInfo","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":["In"]}
 		]
 	}
@@ -2563,7 +2514,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"uCode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"uMapType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"uMapType","Type":{"Kind":"ApiRef","Name":"MAP_VIRTUAL_KEY_TYPE","TargetKind":"Default","Api":"UI.Input.KeyboardAndMouse","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -2577,7 +2528,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"uCode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"uMapType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"uMapType","Type":{"Kind":"ApiRef","Name":"MAP_VIRTUAL_KEY_TYPE","TargetKind":"Default","Api":"UI.Input.KeyboardAndMouse","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -2591,7 +2542,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"uCode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"uMapType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"uMapType","Type":{"Kind":"ApiRef","Name":"MAP_VIRTUAL_KEY_TYPE","TargetKind":"Default","Api":"UI.Input.KeyboardAndMouse","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwhkl","Type":{"Kind":"ApiRef","Name":"HKL","TargetKind":"Default","Api":"UI.TextServices","Parents":[]},"Attrs":["In","Optional"]}
 		]
 	}
@@ -2606,7 +2557,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"uCode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"uMapType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"uMapType","Type":{"Kind":"ApiRef","Name":"MAP_VIRTUAL_KEY_TYPE","TargetKind":"Default","Api":"UI.Input.KeyboardAndMouse","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwhkl","Type":{"Kind":"ApiRef","Name":"HKL","TargetKind":"Default","Api":"UI.TextServices","Parents":[]},"Attrs":["In","Optional"]}
 		]
 	}

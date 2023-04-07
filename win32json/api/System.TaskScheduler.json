@@ -331,6 +331,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"DaysInterval","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 		]
@@ -344,6 +345,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"WeeksInterval","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"rgfDaysOfTheWeek","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -358,6 +360,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"rgfDays","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"rgfMonths","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -372,6 +375,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"wWhichWeek","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"rgfDaysOfTheWeek","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -387,6 +391,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Daily","Type":{"Kind":"ApiRef","Name":"DAILY","TargetKind":"Default","Api":"System.TaskScheduler","Parents":[]},"Attrs":[]}
 			,{"Name":"Weekly","Type":{"Kind":"ApiRef","Name":"WEEKLY","TargetKind":"Default","Api":"System.TaskScheduler","Parents":[]},"Attrs":[]}
@@ -403,6 +408,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"cbTriggerSize","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"Reserved1","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1543,7 +1549,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pConnected","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out"]}
+					{"Name":"pConnected","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -2124,7 +2130,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pEnabled","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out"]}
+					{"Name":"pEnabled","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -2138,7 +2144,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"enabled","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"enabled","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -2495,7 +2501,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pEnabled","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					{"Name":"pEnabled","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -2509,7 +2515,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"enabled","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"enabled","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 		]
@@ -3051,7 +3057,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pLastDay","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					{"Name":"pLastDay","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -3065,7 +3071,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"lastDay","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"lastDay","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -3201,7 +3207,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pLastWeek","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					{"Name":"pLastWeek","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -3215,7 +3221,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"lastWeek","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"lastWeek","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -3489,7 +3495,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pHideAppWindow","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					{"Name":"pHideAppWindow","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -3503,7 +3509,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"hideAppWindow","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"hideAppWindow","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 		]
@@ -4902,7 +4908,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pAllowDemandStart","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					{"Name":"pAllowDemandStart","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -4916,7 +4922,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"allowDemandStart","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"allowDemandStart","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -5014,7 +5020,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pStopIfOnBatteries","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					{"Name":"pStopIfOnBatteries","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -5028,7 +5034,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"stopIfOnBatteries","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"stopIfOnBatteries","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -5042,7 +5048,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pDisallowStart","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					{"Name":"pDisallowStart","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -5056,7 +5062,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"disallowStart","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"disallowStart","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -5070,7 +5076,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pAllowHardTerminate","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					{"Name":"pAllowHardTerminate","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -5084,7 +5090,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"allowHardTerminate","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"allowHardTerminate","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -5098,7 +5104,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pStartWhenAvailable","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					{"Name":"pStartWhenAvailable","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -5112,7 +5118,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"startWhenAvailable","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"startWhenAvailable","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -5154,7 +5160,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pRunOnlyIfNetworkAvailable","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					{"Name":"pRunOnlyIfNetworkAvailable","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -5168,7 +5174,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"runOnlyIfNetworkAvailable","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"runOnlyIfNetworkAvailable","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -5210,7 +5216,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pEnabled","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					{"Name":"pEnabled","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -5224,7 +5230,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"enabled","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"enabled","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -5322,7 +5328,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pHidden","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					{"Name":"pHidden","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -5336,7 +5342,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"hidden","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"hidden","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -5378,7 +5384,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pRunOnlyIfIdle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					{"Name":"pRunOnlyIfIdle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -5392,7 +5398,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"runOnlyIfIdle","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"runOnlyIfIdle","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -5406,7 +5412,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pWake","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					{"Name":"pWake","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -5420,7 +5426,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"wake","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"wake","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -5472,7 +5478,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pDisallowStart","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					{"Name":"pDisallowStart","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -5486,7 +5492,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"disallowStart","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"disallowStart","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -5500,7 +5506,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pUseUnifiedEngine","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					{"Name":"pUseUnifiedEngine","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -5514,7 +5520,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"useUnifiedEngine","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"useUnifiedEngine","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 		]
@@ -5538,7 +5544,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pDisallowStart","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					{"Name":"pDisallowStart","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -5552,7 +5558,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"disallowStart","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"disallowStart","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -5566,7 +5572,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pUseUnifiedEngine","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					{"Name":"pUseUnifiedEngine","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -5580,7 +5586,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"useUnifiedEngine","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"useUnifiedEngine","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -5634,7 +5640,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pVolatile","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					{"Name":"pVolatile","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -5648,7 +5654,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"Volatile","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"Volatile","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 		]
@@ -5728,7 +5734,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"value","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"value","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -5742,7 +5748,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"target","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					{"Name":"target","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 		]
@@ -6067,7 +6073,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pStop","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					{"Name":"pStop","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -6081,7 +6087,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"stop","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"stop","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -6095,7 +6101,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pRestart","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					{"Name":"pRestart","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -6109,7 +6115,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"restart","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"restart","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 		]
@@ -6255,7 +6261,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pStop","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					{"Name":"pStop","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -6269,7 +6275,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"stop","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"stop","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 		]

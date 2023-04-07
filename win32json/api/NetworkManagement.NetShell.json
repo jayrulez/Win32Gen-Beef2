@@ -300,6 +300,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"pwszToken","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"dwValue","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -424,6 +425,20 @@
 		]
 	}
 	,{
+		"Name":"PFN_CUSTOM_HELP"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"FunctionPointer"
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"Void"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hModule","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"pwszCmdToken","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+		]
+	}
+	,{
 		"Name":"PNS_OSVERSIONCHECK"
 		,"Architectures":[]
 		,"Platform":null
@@ -450,6 +465,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"NetworkManagement.NetShell","Parents":[]},"Attrs":[]}
 			,{"Name":"guidHelper","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
@@ -464,6 +480,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"NetworkManagement.NetShell","Parents":["_Anonymous_e__Union"]},"Attrs":[]}
 					,{"Name":"_ullAlign","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -476,6 +493,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"dwVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"dwReserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -494,6 +512,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"pwszCmdToken","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"pfnCmdHandler","Type":{"Kind":"ApiRef","Name":"PFN_HANDLE_CMD","TargetKind":"FunctionPointer","Api":"NetworkManagement.NetShell","Parents":[]},"Attrs":[]}
@@ -501,6 +520,7 @@
 			,{"Name":"dwCmdHlpToken","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pOsVersionCheck","Type":{"Kind":"ApiRef","Name":"PNS_OSVERSIONCHECK","TargetKind":"FunctionPointer","Api":"NetworkManagement.NetShell","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnCustomHelpFn","Type":{"Kind":"ApiRef","Name":"PFN_CUSTOM_HELP","TargetKind":"FunctionPointer","Api":"NetworkManagement.NetShell","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -512,6 +532,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"pwszCmdGroupToken","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"dwShortCmdHelpToken","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -530,6 +551,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"NetworkManagement.NetShell","Parents":[]},"Attrs":[]}
 			,{"Name":"pwszContext","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -554,6 +576,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"NetworkManagement.NetShell","Parents":["_Anonymous_e__Union"]},"Attrs":[]}
 					,{"Name":"_ullAlign","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -566,6 +589,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"dwVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"dwReserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -584,6 +608,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"pwszTag","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"dwRequired","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}

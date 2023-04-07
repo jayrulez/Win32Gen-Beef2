@@ -200,6 +200,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"forceZip32","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"hashMethod","Type":{"Kind":"ApiRef","Name":"IUri","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":[]}
@@ -230,6 +231,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"inputStream","Type":{"Kind":"ApiRef","Name":"IStream","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":[]}
 			,{"Name":"fileName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
@@ -292,7 +294,7 @@
 			,{"Name":"APPX_CAPABILITY_APPOINTMENTS","Value":1024}
 			,{"Name":"APPX_CAPABILITY_CONTACTS","Value":2048}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"APPX_PACKAGE_ARCHITECTURE"
@@ -510,6 +512,58 @@
 				,"Params":[
 					{"Name":"stream","Type":{"Kind":"ApiRef","Name":"IStream","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
 					,{"Name":"contentGroupMapWriter","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IAppxContentGroupMapWriter","TargetKind":"Com","Api":"Storage.Packaging.Appx","Parents":[]}},"Attrs":["Out","RetVal"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"IAppxFactory3"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"776b2c05-e21d-4e24-ba1a-cd529a8bfdbb"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"CreatePackageReader2"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"inputStream","Type":{"Kind":"ApiRef","Name":"IStream","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"expectedDigest","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+					,{"Name":"packageReader","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IAppxPackageReader","TargetKind":"Com","Api":"Storage.Packaging.Appx","Parents":[]}},"Attrs":["Out","RetVal"]}
+				]
+			}
+			,{
+				"Name":"CreateManifestReader2"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"inputStream","Type":{"Kind":"ApiRef","Name":"IStream","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"expectedDigest","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+					,{"Name":"manifestReader","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IAppxManifestReader","TargetKind":"Com","Api":"Storage.Packaging.Appx","Parents":[]}},"Attrs":["Out","RetVal"]}
+				]
+			}
+			,{
+				"Name":"CreateAppInstallerReader"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"inputStream","Type":{"Kind":"ApiRef","Name":"IStream","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"expectedDigest","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+					,{"Name":"appInstallerReader","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IAppxAppInstallerReader","TargetKind":"Com","Api":"Storage.Packaging.Appx","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -2566,6 +2620,30 @@
 		]
 	}
 	,{
+		"Name":"IAppxBundleFactory2"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"7325b83d-0185-42c4-82ac-be34ab1a2a8a"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"CreateBundleReader2"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"inputStream","Type":{"Kind":"ApiRef","Name":"IStream","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"expectedDigest","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+					,{"Name":"bundleReader","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IAppxBundleReader","TargetKind":"Com","Api":"Storage.Packaging.Appx","Parents":[]}},"Attrs":["Out","RetVal"]}
+				]
+			}
+		]
+	}
+	,{
 		"Name":"IAppxBundleWriter"
 		,"Architectures":[]
 		,"Platform":"windows8.1"
@@ -3459,12 +3537,57 @@
 		]
 	}
 	,{
+		"Name":"IAppxAppInstallerReader"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"f35bc38c-1d2f-43db-a1f4-586430d1fed2"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"GetXmlDom"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"dom","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IXMLDOMDocument","TargetKind":"Com","Api":"Data.Xml.MsXml","Parents":[]}},"Attrs":["Out","RetVal"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"IAppxDigestProvider"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"9fe2702b-7640-4659-8e6c-349e43c4cdbd"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"GetDigest"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"digest","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
+				]
+			}
+		]
+	}
+	,{
 		"Name":"APPX_ENCRYPTED_PACKAGE_SETTINGS"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"keyLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"encryptionAlgorithm","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
@@ -3486,7 +3609,7 @@
 			,{"Name":"APPX_ENCRYPTED_PACKAGE_OPTION_DIFFUSION","Value":1}
 			,{"Name":"APPX_ENCRYPTED_PACKAGE_OPTION_PAGE_HASHING","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"APPX_ENCRYPTED_PACKAGE_SETTINGS2"
@@ -3495,6 +3618,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"keyLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"encryptionAlgorithm","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
@@ -3511,6 +3635,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"keyLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"keyIdLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3527,9 +3652,10 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"count","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"plainTextFiles","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+			,{"Name":"plainTextFiles","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Const"]}
 		]
 		,"NestedTypes":[
 		]
@@ -3799,6 +3925,46 @@
 		]
 	}
 	,{
+		"Name":"IAppxEncryptionFactory5"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"68d6e77a-f446-480f-b0f0-d91a24c60746"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"CreateEncryptedPackageReader2"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"inputStream","Type":{"Kind":"ApiRef","Name":"IStream","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"keyInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"APPX_KEY_INFO","TargetKind":"Default","Api":"Storage.Packaging.Appx","Parents":[]}},"Attrs":["In","Const"]}
+					,{"Name":"expectedDigest","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+					,{"Name":"packageReader","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IAppxPackageReader","TargetKind":"Com","Api":"Storage.Packaging.Appx","Parents":[]}},"Attrs":["Out","RetVal"]}
+				]
+			}
+			,{
+				"Name":"CreateEncryptedBundleReader2"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"inputStream","Type":{"Kind":"ApiRef","Name":"IStream","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"keyInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"APPX_KEY_INFO","TargetKind":"Default","Api":"Storage.Packaging.Appx","Parents":[]}},"Attrs":["In","Const"]}
+					,{"Name":"expectedDigest","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+					,{"Name":"bundleReader","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IAppxBundleReader","TargetKind":"Com","Api":"Storage.Packaging.Appx","Parents":[]}},"Attrs":["Out","RetVal"]}
+				]
+			}
+		]
+	}
+	,{
 		"Name":"IAppxEncryptedPackageWriter"
 		,"Architectures":[]
 		,"Platform":"windows10.0.14393"
@@ -3938,7 +4104,7 @@
 			,{"Name":"APPX_PACKAGE_EDITOR_UPDATE_PACKAGE_MANIFEST_OPTION_SKIP_VALIDATION","Value":1}
 			,{"Name":"APPX_PACKAGE_EDITOR_UPDATE_PACKAGE_MANIFEST_OPTION_LOCALIZED","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"IAppxEncryptedBundleWriter3"
@@ -4081,6 +4247,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"Storage.Packaging.Appx","Parents":[]},"Attrs":[]}
 		]
@@ -4092,6 +4259,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":4
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Version","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 					,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Storage.Packaging.Appx","Parents":["_Anonymous_e__Union"]},"Attrs":[]}
@@ -4104,6 +4272,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"Revision","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 							,{"Name":"Build","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -4124,6 +4293,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":4
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"processorArchitecture","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4178,6 +4348,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"reserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 		]
@@ -4191,6 +4362,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":4
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4207,7 +4379,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"CreatePackageDependencyOptions_None","Value":0}
@@ -4235,7 +4407,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"AddPackageDependencyOptions_None","Value":0}
@@ -4248,7 +4420,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"PackageDependencyProcessorArchitectures_None","Value":0}
@@ -4268,6 +4440,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"unused","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 		]
@@ -4389,6 +4562,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"unused","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 		]
@@ -4540,7 +4714,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"packageId","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PACKAGE_ID","TargetKind":"Default","Api":"Storage.Packaging.Appx","Parents":[]}},"Attrs":["In","Const"]}
-			,{"Name":"reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved","Const"]}
+			,{"Name":"reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional","Const"]}
 			,{"Name":"pathLength","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
 			,{"Name":"path","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["Out","Optional"]}
 		]
@@ -4936,7 +5110,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"packageFullName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved","Const"]}
+			,{"Name":"reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional","Const"]}
 			,{"Name":"packageInfoReference","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_PACKAGE_INFO_REFERENCE","TargetKind":"Default","Api":"Storage.Packaging.Appx","Parents":[]}}},"Attrs":["Out"]}
 		]
 	}
@@ -4952,7 +5126,7 @@
 		,"Params":[
 			{"Name":"userSid","Type":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"packageFullName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved","Const"]}
+			,{"Name":"reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional","Const"]}
 			,{"Name":"packageInfoReference","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_PACKAGE_INFO_REFERENCE","TargetKind":"Default","Api":"Storage.Packaging.Appx","Parents":[]}}},"Attrs":["Out"]}
 		]
 	}
@@ -5051,7 +5225,7 @@
 			,{"Name":"lifetimeKind","Type":{"Kind":"ApiRef","Name":"PackageDependencyLifetimeKind","TargetKind":"Default","Api":"Storage.Packaging.Appx","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lifetimeArtifact","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"options","Type":{"Kind":"ApiRef","Name":"CreatePackageDependencyOptions","TargetKind":"Default","Api":"Storage.Packaging.Appx","Parents":[]},"Attrs":["In"]}
-			,{"Name":"packageDependencyId","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+			,{"Name":"packageDependencyId","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -5108,7 +5282,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"packageDependencyId","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"packageFullName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+			,{"Name":"packageFullName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -5122,7 +5296,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"packageDependencyContext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PACKAGEDEPENDENCY_CONTEXT__","TargetKind":"Default","Api":"Storage.Packaging.Appx","Parents":[]}},"Attrs":["In"]}
-			,{"Name":"packageDependencyId","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+			,{"Name":"packageDependencyId","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{

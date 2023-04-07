@@ -1923,7 +1923,7 @@
 		"Name":"DHCP_CALLOUT_LIST_KEY"
 		,"Type":{"Kind":"Native","Name":"String"}
 		,"ValueType":"String"
-		,"Value":"System\\\\CurrentControlSet\\\\Services\\\\DHCPServer\\\\Parameters"
+		,"Value":"System\\CurrentControlSet\\Services\\DHCPServer\\Parameters"
 		,"Attrs":[]
 	}
 	,{
@@ -2272,6 +2272,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"OptionId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2289,6 +2290,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"nParams","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Params","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCPV6CAPI_PARAMS","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -2303,6 +2305,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Data","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -2333,6 +2336,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"prefix","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"prefixLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2350,6 +2354,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"nPrefixes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"prefixArray","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCPV6Prefix","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -2372,6 +2377,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"OptionId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2389,6 +2395,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"nParams","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Params","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCPAPI_PARAMS","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -2403,6 +2410,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Data","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -2418,6 +2426,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"MessageType","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"SubnetMask","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
@@ -2579,6 +2588,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"DhcpControlHook","Type":{"Kind":"ApiRef","Name":"LPDHCP_CONTROL","TargetKind":"FunctionPointer","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
 			,{"Name":"DhcpNewPktHook","Type":{"Kind":"ApiRef","Name":"LPDHCP_NEWPKT","TargetKind":"FunctionPointer","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
@@ -2616,6 +2626,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwLowDateTime","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwHighDateTime","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2630,6 +2641,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"StartAddress","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"EndAddress","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2644,6 +2656,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"DataLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Data","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -2658,6 +2671,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"IpAddress","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NetBiosName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -2687,6 +2701,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"DWord1","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"DWord2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2717,6 +2732,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SubnetAddress","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"SubnetMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2735,6 +2751,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SubnetAddress","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"SubnetMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2758,6 +2775,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Elements","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
@@ -2772,6 +2790,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ClusterAddress","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ClusterMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2786,6 +2805,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ReservedIpAddress","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ReservedForClient","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_BINARY_DATA","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -2819,6 +2839,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ElementType","Type":{"Kind":"ApiRef","Name":"DHCP_SUBNET_ELEMENT_TYPE","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
 			,{"Name":"Element","Type":{"Kind":"ApiRef","Name":"DHCP_SUBNET_ELEMENT_UNION","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
@@ -2831,6 +2852,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"IpRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_IP_RANGE","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
 					,{"Name":"SecondaryHost","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_HOST_INFO","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -2850,6 +2872,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 		]
 		,"NestedTypes":[
@@ -2862,6 +2885,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Elements","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_SUBNET_ELEMENT_DATA","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -2876,6 +2900,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"HighOrderBits","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"LowOrderBits","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -2903,6 +2928,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"MatchHWType","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"HWType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -2920,6 +2946,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AddrPatt","Type":{"Kind":"ApiRef","Name":"DHCP_ADDR_PATTERN","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
 			,{"Name":"Comment","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -2935,6 +2962,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"EnforceAllowList","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"EnforceDenyList","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -2949,6 +2977,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AddrPatt","Type":{"Kind":"ApiRef","Name":"DHCP_ADDR_PATTERN","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
 			,{"Name":"Comment","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -2963,6 +2992,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pEnumRecords","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_FILTER_RECORD","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -2997,6 +3027,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"OptionType","Type":{"Kind":"ApiRef","Name":"DHCP_OPTION_DATA_TYPE","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
 			,{"Name":"Element","Type":{"Kind":"ApiRef","Name":"DHCP_OPTION_ELEMENT_UNION","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
@@ -3009,6 +3040,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"ByteOption","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 					,{"Name":"WordOption","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -3032,6 +3064,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 		]
 		,"NestedTypes":[
@@ -3044,6 +3077,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Elements","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_OPTION_DATA_ELEMENT","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -3071,6 +3105,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"OptionID","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"OptionName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -3088,6 +3123,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Options","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_OPTION","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -3102,6 +3138,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"OptionID","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Value","Type":{"Kind":"ApiRef","Name":"DHCP_OPTION_DATA","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
@@ -3116,6 +3153,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Values","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_OPTION_VALUE","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -3146,6 +3184,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ReservedIpAddress","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ReservedIpSubnetAddress","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3160,6 +3199,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ScopeType","Type":{"Kind":"ApiRef","Name":"DHCP_OPTION_SCOPE_TYPE","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
 			,{"Name":"ScopeInfo","Type":{"Kind":"ApiRef","Name":"_DHCP_OPTION_SCOPE_UNION","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
@@ -3172,6 +3212,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"DefaultScopeInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 					,{"Name":"GlobalScopeInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -3206,6 +3247,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ReservedIpAddress","Type":{"Kind":"ApiRef","Name":"DHCP_IPV6_ADDRESS","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
 			,{"Name":"ReservedIpSubnetAddress","Type":{"Kind":"ApiRef","Name":"DHCP_IPV6_ADDRESS","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
@@ -3220,6 +3262,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ScopeType","Type":{"Kind":"ApiRef","Name":"DHCP_OPTION_SCOPE_TYPE6","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
 			,{"Name":"ScopeInfo","Type":{"Kind":"ApiRef","Name":"DHCP_OPTION_SCOPE_UNION6","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
@@ -3232,6 +3275,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"DefaultScopeInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 					,{"Name":"SubnetScopeInfo","Type":{"Kind":"ApiRef","Name":"DHCP_IPV6_ADDRESS","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
@@ -3249,6 +3293,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 		]
 		,"NestedTypes":[
@@ -3261,6 +3306,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumOptions","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Options","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_OPTION_VALUE","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -3275,6 +3321,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ClientIpAddress","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"SubnetMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3294,6 +3341,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Clients","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_CLIENT_INFO","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}}},"Attrs":[]}
@@ -3326,6 +3374,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ClientIpAddress","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"SubnetMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3350,6 +3399,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Clients","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_CLIENT_INFO_VQ","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}}},"Attrs":[]}
@@ -3364,6 +3414,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ClientIpAddress","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"SubnetMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3389,6 +3440,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Clients","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_CLIENT_FILTER_STATUS_INFO","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}}},"Attrs":[]}
@@ -3403,6 +3455,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ClientIpAddress","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"SubnetMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3429,6 +3482,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Clients","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_CLIENT_INFO_PB","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}}},"Attrs":[]}
@@ -3457,6 +3511,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SearchType","Type":{"Kind":"ApiRef","Name":"DHCP_SEARCH_INFO_TYPE","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
 			,{"Name":"SearchInfo","Type":{"Kind":"ApiRef","Name":"DHCP_CLIENT_SEARCH_UNION","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
@@ -3469,6 +3524,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"ClientIpAddress","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"ClientHardwareAddress","Type":{"Kind":"ApiRef","Name":"DHCP_BINARY_DATA","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
@@ -3486,6 +3542,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 		]
 		,"NestedTypes":[
@@ -3527,6 +3584,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ID","Type":{"Kind":"ApiRef","Name":"DHCP_PROPERTY_ID","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
 			,{"Name":"Type","Type":{"Kind":"ApiRef","Name":"DHCP_PROPERTY_TYPE","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
@@ -3540,6 +3598,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"ByteValue","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 					,{"Name":"WordValue","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -3559,6 +3618,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Elements","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_PROPERTY","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -3573,6 +3633,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ClientIpAddress","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"SubnetMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3600,6 +3661,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Clients","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_CLIENT_INFO_EX","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}}},"Attrs":[]}
@@ -3614,6 +3676,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Subnet","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NumAddressesInuse","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3630,6 +3693,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Discovers","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Offers","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3652,6 +3716,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Subnet","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NumAddressesInuse","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3674,6 +3739,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Discovers","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Offers","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3703,6 +3769,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Subnet","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NumAddressesInuse","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3719,6 +3786,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Discovers","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Offers","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3750,6 +3818,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"APIProtocolSupport","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"DatabaseName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -3784,6 +3853,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"IpAddress","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ScanFlag","Type":{"Kind":"ApiRef","Name":"DHCP_SCAN_FLAG","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
@@ -3798,6 +3868,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumScanItems","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ScanItems","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_SCAN_ITEM","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -3812,6 +3883,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ClassName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"ClassComment","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -3830,6 +3902,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Classes","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_CLASS_INFO","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -3844,6 +3917,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ClassName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"ClassComment","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -3863,6 +3937,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Classes","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_CLASS_INFO_V6","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -3877,6 +3952,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"DefaultVendorClassName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"DefaultUserClassName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -3891,6 +3967,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ReservedIpAddress","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ReservedForClient","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_BINARY_DATA","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -3906,6 +3983,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ReservedIpAddress","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ReservedForClient","Type":{"Kind":"ApiRef","Name":"DHCP_BINARY_DATA","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
@@ -3924,6 +4002,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Elements","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_IP_RESERVATION_INFO","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}}},"Attrs":[]}
@@ -3938,6 +4017,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ElementType","Type":{"Kind":"ApiRef","Name":"DHCP_SUBNET_ELEMENT_TYPE","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
 			,{"Name":"Element","Type":{"Kind":"ApiRef","Name":"DHCP_SUBNET_ELEMENT_UNION_V4","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
@@ -3950,6 +4030,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"IpRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_IP_RANGE","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
 					,{"Name":"SecondaryHost","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_HOST_INFO","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -3969,6 +4050,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 		]
 		,"NestedTypes":[
@@ -3981,6 +4063,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Elements","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_SUBNET_ELEMENT_DATA_V4","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -3995,6 +4078,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ClientIpAddress","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"SubnetMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4015,6 +4099,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Clients","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_CLIENT_INFO_V4","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}}},"Attrs":[]}
@@ -4029,6 +4114,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"APIProtocolSupport","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"DatabaseName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -4054,6 +4140,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"APIProtocolSupport","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"DatabaseName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -4082,6 +4169,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"UnicastFlag","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"RapidCommitFlag","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -4103,6 +4191,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SubnetAddress","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"SuperScopeNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4119,6 +4208,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"cEntries","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pEntries","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_SUPER_SCOPE_TABLE_ENTRY","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -4133,6 +4223,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ClientIpAddress","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"SubnetMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4154,6 +4245,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Clients","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_CLIENT_INFO_V5","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}}},"Attrs":[]}
@@ -4168,6 +4260,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NonVendorOptions","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_OPTION_ARRAY","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -4182,6 +4275,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Option","Type":{"Kind":"ApiRef","Name":"DHCP_OPTION","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
 					,{"Name":"VendorName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -4199,6 +4293,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4212,6 +4307,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"ClassName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 					,{"Name":"VendorName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -4230,6 +4326,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4243,6 +4340,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"PolicyName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 					,{"Name":"VendorName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -4261,6 +4359,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ServerName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -4280,6 +4379,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4295,6 +4395,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"DhcpAttribId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"DhcpAttribType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4308,6 +4409,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"DhcpAttribBool","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 					,{"Name":"DhcpAttribUlong","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4324,6 +4426,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"DhcpAttribs","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_ATTRIB","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -4338,6 +4441,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"StartAddress","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"EndAddress","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4354,6 +4458,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ElementType","Type":{"Kind":"ApiRef","Name":"DHCP_SUBNET_ELEMENT_TYPE","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
 			,{"Name":"Element","Type":{"Kind":"ApiRef","Name":"_DHCP_SUBNET_ELEMENT_UNION_V5","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
@@ -4366,6 +4471,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"IpRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_BOOTP_IP_RANGE","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
 					,{"Name":"SecondaryHost","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_HOST_INFO","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -4385,6 +4491,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Elements","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_SUBNET_ELEMENT_DATA_V5","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -4399,6 +4506,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwNumPacketsReceived","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwNumPacketsDuplicate","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4430,6 +4538,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"fBoundToDHCPServer","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -4449,6 +4558,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Elements","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_BIND_ELEMENT","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -4463,6 +4573,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"fBoundToDHCPServer","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -4483,6 +4594,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Elements","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCPV6_BIND_ELEMENT","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -4497,6 +4609,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"StartAddress","Type":{"Kind":"ApiRef","Name":"DHCP_IPV6_ADDRESS","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
 			,{"Name":"EndAddress","Type":{"Kind":"ApiRef","Name":"DHCP_IPV6_ADDRESS","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
@@ -4511,6 +4624,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"IpAddress","Type":{"Kind":"ApiRef","Name":"DHCP_IPV6_ADDRESS","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
 			,{"Name":"NetBiosName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -4526,6 +4640,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SubnetAddress","Type":{"Kind":"ApiRef","Name":"DHCP_IPV6_ADDRESS","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
 			,{"Name":"Prefix","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4545,6 +4660,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Subnet","Type":{"Kind":"ApiRef","Name":"DHCP_IPV6_ADDRESS","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
 			,{"Name":"NumAddressesInuse","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -4561,6 +4677,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Solicits","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Advertises","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4586,6 +4703,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ReservedIpAddress","Type":{"Kind":"ApiRef","Name":"DHCP_IPV6_ADDRESS","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
 			,{"Name":"ReservedForClient","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_BINARY_DATA","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -4615,6 +4733,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ElementType","Type":{"Kind":"ApiRef","Name":"DHCP_SUBNET_ELEMENT_TYPE_V6","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
 			,{"Name":"Element","Type":{"Kind":"ApiRef","Name":"DHCP_SUBNET_ELEMENT_UNION_V6","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
@@ -4627,6 +4746,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"IpRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_IP_RANGE_V6","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
 					,{"Name":"ReservedIp","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_IP_RESERVATION_V6","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -4644,6 +4764,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 		]
 		,"NestedTypes":[
@@ -4656,6 +4777,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Elements","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_SUBNET_ELEMENT_DATA_V6","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -4670,6 +4792,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ClientIpAddress","Type":{"Kind":"ApiRef","Name":"DHCP_IPV6_ADDRESS","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
 			,{"Name":"ClientDUID","Type":{"Kind":"ApiRef","Name":"DHCP_BINARY_DATA","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
@@ -4691,6 +4814,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Elements","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_IPV6_ADDRESS","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -4705,6 +4829,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Clients","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_CLIENT_INFO_V6","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}}},"Attrs":[]}
@@ -4733,6 +4858,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SearchType","Type":{"Kind":"ApiRef","Name":"DHCP_SEARCH_INFO_TYPE_V6","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
 			,{"Name":"SearchInfo","Type":{"Kind":"ApiRef","Name":"_DHCP_CLIENT_SEARCH_UNION_V6","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
@@ -4745,6 +4871,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"ClientIpAddress","Type":{"Kind":"ApiRef","Name":"DHCP_IPV6_ADDRESS","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
 					,{"Name":"ClientDUID","Type":{"Kind":"ApiRef","Name":"DHCP_BINARY_DATA","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
@@ -4826,6 +4953,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ParentExpr","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Type","Type":{"Kind":"ApiRef","Name":"DHCP_POL_ATTR_TYPE","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
@@ -4846,6 +4974,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Elements","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_POL_COND","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -4860,6 +4989,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ParentExpr","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Operator","Type":{"Kind":"ApiRef","Name":"DHCP_POL_LOGIC_OPER","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
@@ -4874,6 +5004,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Elements","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_POL_EXPR","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -4888,6 +5019,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Elements","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_IP_RANGE","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -4902,6 +5034,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"PolicyName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"IsGlobalPolicy","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -4923,6 +5056,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Elements","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_POLICY","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -4937,6 +5071,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"PolicyName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"IsGlobalPolicy","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -4959,6 +5094,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Elements","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_POLICY_EX","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -4986,6 +5122,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Status","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"PurgeInterval","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5000,6 +5137,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SubnetAddress","Type":{"Kind":"ApiRef","Name":"DHCP_IPV6_ADDRESS","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":[]}
 			,{"Name":"NumStatelessClientsAdded","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -5015,6 +5153,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumScopes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ScopeStats","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCPV6_STATELESS_SCOPE_STATS","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -5080,6 +5219,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"PrimaryServer","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"SecondaryServer","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5106,6 +5246,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pRelationships","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_FAILOVER_RELATIONSHIP","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":[]}
@@ -5120,6 +5261,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ClientIpAddress","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"SubnetMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5153,6 +5295,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Clients","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCPV4_FAILOVER_CLIENT_INFO","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}}},"Attrs":[]}
@@ -5167,6 +5310,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ClientIpAddress","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"SubnetMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5201,6 +5345,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumAddr","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"AddrFree","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5364,8 +5509,8 @@
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
-			,{"Name":"Reserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
+			,{"Name":"Reserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"AdapterName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"RequestIdStr","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 		]
@@ -5381,7 +5526,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"Reserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"Reserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"AdapterName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"ClassId","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCPCAPI_CLASSID","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":["In","Out"]}
 			,{"Name":"Params","Type":{"Kind":"ApiRef","Name":"DHCPCAPI_PARAMS_ARRAY","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]},"Attrs":["In"]}
@@ -5436,7 +5581,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5451,7 +5596,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5465,7 +5610,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5479,7 +5624,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5493,7 +5638,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5512,7 +5657,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2000"
+		,"Platform":"windowsserver2000"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5527,7 +5672,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2000"
+		,"Platform":"windowsserver2000"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5542,7 +5687,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2000"
+		,"Platform":"windowsserver2000"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5557,13 +5702,13 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2000"
+		,"Platform":"windowsserver2000"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 			,{"Name":"ResumeHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
 			,{"Name":"PreferredMaximum","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"EnumInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_IP_ARRAY","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}}},"Attrs":["In","Out"]}
+			,{"Name":"EnumInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_IP_ARRAY","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}}},"Attrs":["Out"]}
 			,{"Name":"ElementsRead","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 			,{"Name":"ElementsTotal","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 		]
@@ -5575,7 +5720,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5590,7 +5735,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2000"
+		,"Platform":"windowsserver2000"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5610,7 +5755,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5626,7 +5771,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2000"
+		,"Platform":"windowsserver2000"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5641,7 +5786,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5656,7 +5801,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5671,7 +5816,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5686,7 +5831,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5704,7 +5849,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5718,7 +5863,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5734,7 +5879,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5749,7 +5894,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2000"
+		,"Platform":"windowsserver2000"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5765,7 +5910,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5784,7 +5929,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5799,7 +5944,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5813,7 +5958,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5827,7 +5972,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5842,7 +5987,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5861,7 +6006,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5880,7 +6025,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2000"
+		,"Platform":"windowsserver2000"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5894,7 +6039,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2000"
+		,"Platform":"windowsserver2000"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5908,7 +6053,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2000"
+		,"Platform":"windowsserver2000"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5923,7 +6068,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2000"
+		,"Platform":"windowsserver2000"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5937,7 +6082,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2000"
+		,"Platform":"windowsserver2000"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5956,7 +6101,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -5986,7 +6131,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -6001,7 +6146,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -6015,7 +6160,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -6031,7 +6176,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2000"
+		,"Platform":"windowsserver2000"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"BufferPointer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out"]}
@@ -6044,7 +6189,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2000"
+		,"Platform":"windowsserver2000"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -6059,7 +6204,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -6074,7 +6219,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2000"
+		,"Platform":"windowsserver2000"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -6094,7 +6239,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -6110,7 +6255,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -6124,7 +6269,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -6138,7 +6283,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -6153,7 +6298,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -6172,7 +6317,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -6187,7 +6332,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -6201,7 +6346,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -6217,7 +6362,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -6231,7 +6376,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -6245,7 +6390,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -6264,7 +6409,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -6282,7 +6427,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -6300,7 +6445,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -6318,7 +6463,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -6339,7 +6484,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -6356,7 +6501,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2000"
+		,"Platform":"windowsserver2000"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -6375,7 +6520,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -6393,7 +6538,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -6412,7 +6557,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -6431,7 +6576,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -6453,7 +6598,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2000"
+		,"Platform":"windowsserver2000"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -6471,7 +6616,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -6486,7 +6631,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -6501,7 +6646,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -6516,7 +6661,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -6532,7 +6677,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -6551,7 +6696,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -6566,7 +6711,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -6581,7 +6726,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -6597,7 +6742,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -6613,7 +6758,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2000"
+		,"Platform":"windowsserver2000"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -6630,7 +6775,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2000"
+		,"Platform":"windowsserver2000"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -6647,7 +6792,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2000"
+		,"Platform":"windowsserver2000"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -6664,7 +6809,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2000"
+		,"Platform":"windowsserver2000"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -6679,7 +6824,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2000"
+		,"Platform":"windowsserver2000"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -6694,7 +6839,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2000"
+		,"Platform":"windowsserver2000"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -6709,7 +6854,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2000"
+		,"Platform":"windowsserver2000"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -6729,7 +6874,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2000"
+		,"Platform":"windowsserver2000"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -6745,7 +6890,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -6764,7 +6909,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -6782,7 +6927,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -6799,7 +6944,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -6820,7 +6965,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -6838,7 +6983,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -6856,7 +7001,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -6874,7 +7019,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -6893,7 +7038,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -6908,7 +7053,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -6923,7 +7068,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -6938,7 +7083,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -6960,7 +7105,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2000"
+		,"Platform":"windowsserver2000"
 		,"Attrs":[]
 		,"Params":[
 		]
@@ -6972,7 +7117,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2000"
+		,"Platform":"windowsserver2000"
 		,"Attrs":[]
 		,"Params":[
 		]
@@ -6984,7 +7129,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -6998,7 +7143,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"pFlags","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
@@ -7012,7 +7157,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddr","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7028,7 +7173,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddr","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7045,7 +7190,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2000"
+		,"Platform":"windowsserver2000"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddr","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7059,7 +7204,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7077,12 +7222,12 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"AuditLogDir","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+			,{"Name":"AuditLogDir","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 			,{"Name":"DiskCheckInterval","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
 			,{"Name":"MaxLogFilesSize","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
 			,{"Name":"MinSpaceOnDisk","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
@@ -7095,7 +7240,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7128,7 +7273,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7144,7 +7289,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7158,7 +7303,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7172,7 +7317,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -7187,7 +7332,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -7201,7 +7346,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -7228,7 +7373,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7243,7 +7388,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7258,7 +7403,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -7276,7 +7421,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7291,7 +7436,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7307,7 +7452,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7327,7 +7472,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7342,7 +7487,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -7361,7 +7506,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -7376,7 +7521,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -7392,7 +7537,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -7407,7 +7552,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -7421,7 +7566,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -7436,7 +7581,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -7451,7 +7596,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -7465,7 +7610,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -7480,7 +7625,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -7494,7 +7639,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7509,7 +7654,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7524,7 +7669,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7539,7 +7684,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7558,7 +7703,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7573,7 +7718,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7588,7 +7733,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -7615,7 +7760,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7634,7 +7779,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7653,7 +7798,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7671,7 +7816,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7689,7 +7834,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7705,7 +7850,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7719,7 +7864,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7734,7 +7879,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7748,7 +7893,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7763,7 +7908,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7781,7 +7926,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7795,7 +7940,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7809,7 +7954,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7824,7 +7969,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7839,7 +7984,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7854,7 +7999,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7869,7 +8014,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7884,7 +8029,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -7898,7 +8043,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"PolicyName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
@@ -7938,7 +8083,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"Policy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_POLICY","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":["In","Out"]}
@@ -7954,7 +8099,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"Policy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_POLICY","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":["In","Out"]}
@@ -7976,7 +8121,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"Policy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_POLICY","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":["In","Out"]}
@@ -7990,7 +8135,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"Policy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_POLICY","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":["In","Out"]}
@@ -8003,7 +8148,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"Policy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_POLICY","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":["In","Out"]}
@@ -8017,7 +8162,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"Policy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_POLICY","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":["In","Out"]}
@@ -8110,7 +8255,7 @@
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"Policy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_POLICY","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":["In"]}
@@ -8123,7 +8268,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -8139,7 +8284,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -8155,7 +8300,7 @@
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"pPolicy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_POLICY","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":["In"]}
@@ -8168,7 +8313,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"pPolicy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DHCP_POLICY","TargetKind":"Default","Api":"NetworkManagement.Dhcp","Parents":[]}},"Attrs":["In"]}
@@ -8181,7 +8326,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -8195,7 +8340,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -8212,7 +8357,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -8230,7 +8375,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -8246,7 +8391,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -8266,7 +8411,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -8282,7 +8427,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -8298,7 +8443,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -8315,7 +8460,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -8331,7 +8476,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -8345,7 +8490,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -8359,7 +8504,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -8378,7 +8523,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -8393,7 +8538,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -8407,7 +8552,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
@@ -8425,7 +8570,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerIpAddress","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}

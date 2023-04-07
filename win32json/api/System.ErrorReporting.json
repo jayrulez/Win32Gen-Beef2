@@ -496,6 +496,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"hProcess","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -516,6 +517,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"hProcess","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -538,6 +540,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -561,6 +564,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -586,6 +590,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"hProcess","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -611,6 +616,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"hProcess","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -637,6 +643,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -665,6 +672,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"pExceptionPointers","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"EXCEPTION_POINTERS","TargetKind":"Default","Api":"System.Diagnostics.Debug","Parents":[]}},"Attrs":[]}
 			,{"Name":"bClientPointers","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -712,6 +720,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"hProcess","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -803,6 +812,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Name","Type":{"Kind":"Array","Shape":{"Size":129},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"Value","Type":{"Kind":"Array","Shape":{"Size":260},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
@@ -817,6 +827,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"EventName","Type":{"Kind":"Array","Shape":{"Size":65},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"Parameters","Type":{"Kind":"Array","Shape":{"Size":10},"Child":{"Kind":"ApiRef","Name":"WER_REPORT_PARAMETER","TargetKind":"Default","Api":"System.ErrorReporting","Parents":[]}},"Attrs":[]}
@@ -831,6 +842,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Signature","Type":{"Kind":"ApiRef","Name":"WER_REPORT_SIGNATURE","TargetKind":"Default","Api":"System.ErrorReporting","Parents":[]},"Attrs":[]}
 			,{"Name":"BucketId","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
@@ -854,6 +866,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Signature","Type":{"Kind":"ApiRef","Name":"WER_REPORT_SIGNATURE","TargetKind":"Default","Api":"System.ErrorReporting","Parents":[]},"Attrs":[]}
 			,{"Name":"BucketId","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
@@ -883,6 +896,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Signature","Type":{"Kind":"ApiRef","Name":"WER_REPORT_SIGNATURE","TargetKind":"Default","Api":"System.ErrorReporting","Parents":[]},"Attrs":[]}
 			,{"Name":"BucketId","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
@@ -1351,7 +1365,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hReportStore","Type":{"Kind":"ApiRef","Name":"HREPORTSTORE","TargetKind":"Default","Api":"System.ErrorReporting","Parents":[]},"Attrs":["In"]}
-			,{"Name":"ppszReportKey","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+			,{"Name":"ppszReportKey","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional","Const"]}
 		]
 	}
 	,{
@@ -1365,7 +1379,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hReportStore","Type":{"Kind":"ApiRef","Name":"HREPORTSTORE","TargetKind":"Default","Api":"System.ErrorReporting","Parents":[]},"Attrs":["In"]}
-			,{"Name":"ppszReportKey","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+			,{"Name":"ppszReportKey","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional","Const"]}
 		]
 	}
 	,{

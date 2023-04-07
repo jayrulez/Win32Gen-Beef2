@@ -40,7 +40,7 @@
 		"Name":"AUTHSRV_PARAMETERS_KEY_W"
 		,"Type":{"Kind":"Native","Name":"String"}
 		,"ValueType":"String"
-		,"Value":"System\\\\CurrentControlSet\\\\Services\\\\AuthSrv\\\\Parameters"
+		,"Value":"System\\CurrentControlSet\\Services\\AuthSrv\\Parameters"
 		,"Attrs":[]
 	}
 	,{
@@ -333,6 +333,7 @@
 			,{"Name":"IAS_ATTRIBUTE_SERVER_IPv6_ADDRESS","Value":8170}
 			,{"Name":"IAS_ATTRIBUTE_RADIUS_USERNAME_ENCODING_ASCII","Value":8171}
 			,{"Name":"MS_ATTRIBUTE_RAS_ROUTING_DOMAIN_ID","Value":8172}
+			,{"Name":"MS_ATTRIBUTE_AZURE_POLICY_ID","Value":8173}
 			,{"Name":"IAS_ATTRIBUTE_CERTIFICATE_THUMBPRINT","Value":8250}
 			,{"Name":"RAS_ATTRIBUTE_ENCRYPTION_TYPE","Value":4294967206}
 			,{"Name":"RAS_ATTRIBUTE_ENCRYPTION_POLICY","Value":4294967207}
@@ -1004,7 +1005,7 @@
 	,{
 		"Name":"ISdoMachine"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"479f6e75-49a2-11d2-8eca-00c04fc2f519"
 		,"Interface":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -1094,7 +1095,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"boolDirectoryAvailable","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"boolDirectoryAvailable","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1167,7 +1168,7 @@
 					{"Name":"bstrServiceName","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"ppConfigRoot","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["In","Out"]}
 					,{"Name":"ppTemplatesRoot","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["In","Out"]}
-					,{"Name":"bForcedSync","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					,{"Name":"bForcedSync","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -1199,7 +1200,7 @@
 	,{
 		"Name":"ISdoServiceControl"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"479f6e74-49a2-11d2-8eca-00c04fc2f519"
 		,"Interface":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -1254,7 +1255,7 @@
 	,{
 		"Name":"ISdo"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"56bc53de-96db-11d1-bf3f-000000000000"
 		,"Interface":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -1351,7 +1352,7 @@
 	,{
 		"Name":"ISdoCollection"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"56bc53e2-96db-11d1-bf3f-000000000000"
 		,"Interface":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -1427,7 +1428,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"bstrName","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pBool","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pBool","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1513,7 +1514,7 @@
 	,{
 		"Name":"ISdoDictionaryOld"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"d432e5f4-53d8-11d2-9a3a-00c04fb998ac"
 		,"Interface":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -1754,6 +1755,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwAttrType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"fDataType","Type":{"Kind":"ApiRef","Name":"RADIUS_DATA_TYPE","TargetKind":"Default","Api":"NetworkManagement.NetworkPolicyServer","Parents":[]},"Attrs":[]}
@@ -1768,6 +1770,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"dwValue","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"lpValue","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Const"]}
@@ -1784,6 +1787,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"VendorId","Type":{"Kind":"Array","Shape":{"Size":4},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"VendorType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -1893,6 +1897,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Add","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
@@ -1912,6 +1917,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}

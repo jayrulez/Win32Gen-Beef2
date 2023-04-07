@@ -70,6 +70,31 @@
 		,"IntegerBase":"UInt32"
 	}
 	,{
+		"Name":"DESKTOP_ACCESS_FLAGS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"DESKTOP_DELETE","Value":65536}
+			,{"Name":"DESKTOP_READ_CONTROL","Value":131072}
+			,{"Name":"DESKTOP_WRITE_DAC","Value":262144}
+			,{"Name":"DESKTOP_WRITE_OWNER","Value":524288}
+			,{"Name":"DESKTOP_SYNCHRONIZE","Value":1048576}
+			,{"Name":"DESKTOP_READOBJECTS","Value":1}
+			,{"Name":"DESKTOP_CREATEWINDOW","Value":2}
+			,{"Name":"DESKTOP_CREATEMENU","Value":4}
+			,{"Name":"DESKTOP_HOOKCONTROL","Value":8}
+			,{"Name":"DESKTOP_JOURNALRECORD","Value":16}
+			,{"Name":"DESKTOP_JOURNALPLAYBACK","Value":32}
+			,{"Name":"DESKTOP_ENUMERATE","Value":64}
+			,{"Name":"DESKTOP_WRITEOBJECTS","Value":128}
+			,{"Name":"DESKTOP_SWITCHDESKTOP","Value":256}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
 		"Name":"WINSTAENUMPROCA"
 		,"Architectures":[]
 		,"Platform":null
@@ -150,6 +175,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"fInherit","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"fReserved","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -165,6 +191,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"hdesk","Type":{"Kind":"ApiRef","Name":"HDESK","TargetKind":"Default","Api":"System.StationsAndDesktops","Parents":[]},"Attrs":[]}
@@ -188,8 +215,8 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"lpszDesktop","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"lpszDevice","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Reserved","Const"]}
-			,{"Name":"pDevmode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEVMODEA","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"lpszDevice","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Reserved","Optional","Const"]}
+			,{"Name":"pDevmode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEVMODEA","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"DESKTOP_CONTROL_FLAGS","TargetKind":"Default","Api":"System.StationsAndDesktops","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwDesiredAccess","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"lpsa","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_ATTRIBUTES","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["In","Optional"]}
@@ -206,8 +233,8 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"lpszDesktop","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"lpszDevice","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Reserved","Const"]}
-			,{"Name":"pDevmode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEVMODEW","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"lpszDevice","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Reserved","Optional","Const"]}
+			,{"Name":"pDevmode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEVMODEW","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"DESKTOP_CONTROL_FLAGS","TargetKind":"Default","Api":"System.StationsAndDesktops","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwDesiredAccess","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"lpsa","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_ATTRIBUTES","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["In","Optional"]}
@@ -224,13 +251,13 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"lpszDesktop","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"lpszDevice","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Reserved","Const"]}
-			,{"Name":"pDevmode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEVMODEA","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"lpszDevice","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Reserved","Optional","Const"]}
+			,{"Name":"pDevmode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEVMODEA","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"DESKTOP_CONTROL_FLAGS","TargetKind":"Default","Api":"System.StationsAndDesktops","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwDesiredAccess","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"lpsa","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_ATTRIBUTES","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["In","Optional"]}
 			,{"Name":"ulHeapSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"pvoid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pvoid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
@@ -244,13 +271,13 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"lpszDesktop","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"lpszDevice","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Reserved","Const"]}
-			,{"Name":"pDevmode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEVMODEW","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"lpszDevice","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Reserved","Optional","Const"]}
+			,{"Name":"pDevmode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEVMODEW","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"DESKTOP_CONTROL_FLAGS","TargetKind":"Default","Api":"System.StationsAndDesktops","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwDesiredAccess","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"lpsa","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_ATTRIBUTES","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["In","Optional"]}
 			,{"Name":"ulHeapSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"pvoid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pvoid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
@@ -297,7 +324,7 @@
 		,"Params":[
 			{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"DESKTOP_CONTROL_FLAGS","TargetKind":"Default","Api":"System.StationsAndDesktops","Parents":[]},"Attrs":["In"]}
 			,{"Name":"fInherit","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"dwDesiredAccess","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"dwDesiredAccess","Type":{"Kind":"ApiRef","Name":"DESKTOP_ACCESS_FLAGS","TargetKind":"Default","Api":"System.StationsAndDesktops","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{

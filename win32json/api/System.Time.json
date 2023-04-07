@@ -5,14 +5,14 @@
 		"Name":"wszW32TimeRegKeyTimeProviders"
 		,"Type":{"Kind":"Native","Name":"String"}
 		,"ValueType":"String"
-		,"Value":"System\\\\CurrentControlSet\\\\Services\\\\W32Time\\\\TimeProviders"
+		,"Value":"System\\CurrentControlSet\\Services\\W32Time\\TimeProviders"
 		,"Attrs":[]
 	}
 	,{
 		"Name":"wszW32TimeRegKeyPolicyTimeProviders"
 		,"Type":{"Kind":"Native","Name":"String"}
 		,"ValueType":"String"
-		,"Value":"Software\\\\Policies\\\\Microsoft\\\\W32Time\\\\TimeProviders"
+		,"Value":"Software\\Policies\\Microsoft\\W32Time\\TimeProviders"
 		,"Attrs":[]
 	}
 	,{
@@ -71,6 +71,13 @@
 		,"Value":8
 		,"Attrs":[]
 	}
+	,{
+		"Name":"TIME_ZONE_ID_INVALID"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":4294967295
+		,"Attrs":[]
+	}
 ]
 
 ,"Types":[
@@ -81,6 +88,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Bias","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"StandardName","Type":{"Kind":"Array","Shape":{"Size":32},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
@@ -100,6 +108,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Bias","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"StandardName","Type":{"Kind":"Array","Shape":{"Size":32},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}

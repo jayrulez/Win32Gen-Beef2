@@ -825,6 +825,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":4
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"stream","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -840,6 +841,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":4
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"idLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ids","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
@@ -854,6 +856,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":4
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"asnType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"asnValue","Type":{"Kind":"ApiRef","Name":"_asnValue_e__Union","TargetKind":"Default","Api":"NetworkManagement.Snmp","Parents":[]},"Attrs":[]}
@@ -866,10 +869,11 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":4
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"number","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 					,{"Name":"unsigned32","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-					,{"Name":"counter64","Type":{"Kind":"ApiRef","Name":"ULARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+					,{"Name":"counter64","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 					,{"Name":"string","Type":{"Kind":"ApiRef","Name":"AsnOctetString","TargetKind":"Default","Api":"NetworkManagement.Snmp","Parents":[]},"Attrs":[]}
 					,{"Name":"bits","Type":{"Kind":"ApiRef","Name":"AsnOctetString","TargetKind":"Default","Api":"NetworkManagement.Snmp","Parents":[]},"Attrs":[]}
 					,{"Name":"object","Type":{"Kind":"ApiRef","Name":"AsnObjectIdentifier","TargetKind":"Default","Api":"NetworkManagement.Snmp","Parents":[]},"Attrs":[]}
@@ -892,6 +896,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":4
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"name","Type":{"Kind":"ApiRef","Name":"AsnObjectIdentifier","TargetKind":"Default","Api":"NetworkManagement.Snmp","Parents":[]},"Attrs":[]}
 			,{"Name":"value","Type":{"Kind":"ApiRef","Name":"AsnAny","TargetKind":"Default","Api":"NetworkManagement.Snmp","Parents":[]},"Attrs":[]}
@@ -906,6 +911,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":4
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"list","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SnmpVarBind","TargetKind":"Default","Api":"NetworkManagement.Snmp","Parents":[]}},"Attrs":[]}
 			,{"Name":"len","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1024,6 +1030,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"len","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ptr","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -1038,6 +1045,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"len","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ptr","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
@@ -1052,6 +1060,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"hipart","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"lopart","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1066,6 +1075,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"syntax","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"value","Type":{"Kind":"ApiRef","Name":"_value_e__Union","TargetKind":"Default","Api":"NetworkManagement.Snmp","Parents":[]},"Attrs":[]}
@@ -1078,6 +1088,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"sNumber","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 					,{"Name":"uNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1098,6 +1109,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"vendorName","Type":{"Kind":"Array","Shape":{"Size":64},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 			,{"Name":"vendorContact","Type":{"Kind":"Array","Shape":{"Size":64},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}

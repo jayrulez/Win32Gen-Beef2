@@ -60,6 +60,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"left","Type":{"Kind":"Native","Name":"Double"},"Attrs":[]}
 			,{"Name":"top","Type":{"Kind":"Native","Name":"Double"},"Attrs":[]}
@@ -76,6 +77,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"X","Type":{"Kind":"Native","Name":"Double"},"Attrs":[]}
 			,{"Name":"Y","Type":{"Kind":"Native","Name":"Double"},"Attrs":[]}
@@ -90,6 +92,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"_11","Type":{"Kind":"Native","Name":"Double"},"Attrs":[]}
 			,{"Name":"_12","Type":{"Kind":"Native","Name":"Double"},"Attrs":[]}
@@ -333,7 +336,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pOutputConnector","Type":{"Kind":"ApiRef","Name":"IMILBitmapEffectOutputConnector","TargetKind":"Com","Api":"UI.Wpf","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pfModifyInPlace","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out"]}
+					,{"Name":"pfModifyInPlace","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -385,7 +388,7 @@
 				,"Params":[
 					{"Name":"uiIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pRenderContext","Type":{"Kind":"ApiRef","Name":"IMILBitmapEffectRenderContext","TargetKind":"Com","Api":"UI.Wpf","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pfModifyInPlace","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					,{"Name":"pfModifyInPlace","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 					,{"Name":"ppBitmapSource","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IWICBitmapSource","TargetKind":"Com","Api":"Graphics.Imaging","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -400,7 +403,7 @@
 				,"Params":[
 					{"Name":"uiIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pRenderContext","Type":{"Kind":"ApiRef","Name":"IMILBitmapEffectRenderContext","TargetKind":"Com","Api":"UI.Wpf","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pfModifyInPlace","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					,{"Name":"pfModifyInPlace","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 					,{"Name":"ppBitmapSource","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IWICBitmapSource","TargetKind":"Com","Api":"Graphics.Imaging","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -553,7 +556,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"fSoftware","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					{"Name":"fSoftware","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -637,7 +640,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pfSoftware","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pfSoftware","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -756,7 +759,7 @@
 				,"Params":[
 					{"Name":"uiIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pContext","Type":{"Kind":"ApiRef","Name":"IMILBitmapEffectRenderContext","TargetKind":"Com","Api":"UI.Wpf","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pfModifyInPlace","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["In","Out"]}
+					,{"Name":"pfModifyInPlace","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
 					,{"Name":"ppBitmapSource","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IWICBitmapSource","TargetKind":"Com","Api":"Graphics.Imaging","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -771,9 +774,9 @@
 				,"Params":[
 					{"Name":"uiIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"p","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MilPoint2D","TargetKind":"Default","Api":"UI.Wpf","Parents":[]}},"Attrs":["In","Out"]}
-					,{"Name":"fForwardTransform","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					,{"Name":"fForwardTransform","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pContext","Type":{"Kind":"ApiRef","Name":"IMILBitmapEffectRenderContext","TargetKind":"Com","Api":"UI.Wpf","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pfPointTransformed","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out"]}
+					,{"Name":"pfPointTransformed","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -787,7 +790,7 @@
 				,"Params":[
 					{"Name":"uiIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"p","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MilRectD","TargetKind":"Default","Api":"UI.Wpf","Parents":[]}},"Attrs":["In","Out"]}
-					,{"Name":"fForwardTransform","Type":{"Kind":"Native","Name":"Int16"},"Attrs":["In"]}
+					,{"Name":"fForwardTransform","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pContext","Type":{"Kind":"ApiRef","Name":"IMILBitmapEffectRenderContext","TargetKind":"Com","Api":"UI.Wpf","Parents":[]},"Attrs":["In"]}
 				]
 			}
@@ -801,7 +804,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"uiIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"pfAffine","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out"]}
+					,{"Name":"pfAffine","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -814,7 +817,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"uiIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"pfHasInverse","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out"]}
+					,{"Name":"pfHasInverse","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -850,7 +853,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"uiOutputIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"pfDirty","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pfDirty","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -863,7 +866,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"uiOutputIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"pfVolatile","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pfVolatile","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -948,7 +951,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pfConnected","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int16"}},"Attrs":["Out","RetVal"]}
+					{"Name":"pfConnected","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{

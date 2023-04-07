@@ -915,7 +915,7 @@
 		"Name":"SC_AGGREGATE_STORAGE_KEY"
 		,"Type":{"Kind":"Native","Name":"String"}
 		,"ValueType":"String"
-		,"Value":"System\\\\CurrentControlSet\\\\Control\\\\ServiceAggregatedEvents"
+		,"Value":"System\\CurrentControlSet\\Control\\ServiceAggregatedEvents"
 		,"Attrs":[]
 	}
 ]
@@ -1123,6 +1123,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Data","Type":{"Kind":"Array","Shape":{"Size":2},"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
 		]
@@ -1136,6 +1137,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"u","Type":{"Kind":"ApiRef","Name":"_u_e__Union","TargetKind":"Default","Api":"System.Services","Parents":[]},"Attrs":[]}
 		]
@@ -1147,6 +1149,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"CustomStateId","Type":{"Kind":"ApiRef","Name":"SERVICE_TRIGGER_CUSTOM_STATE_ID","TargetKind":"Default","Api":"System.Services","Parents":[]},"Attrs":[]}
 					,{"Name":"s","Type":{"Kind":"ApiRef","Name":"_s_e__Struct","TargetKind":"Default","Api":"System.Services","Parents":["_u_e__Union"]},"Attrs":[]}
@@ -1159,6 +1162,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"DataOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"Data","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -1177,6 +1181,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDescription","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 		]
@@ -1190,6 +1195,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDescription","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 		]
@@ -1219,6 +1225,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Type","Type":{"Kind":"ApiRef","Name":"SC_ACTION_TYPE","TargetKind":"Default","Api":"System.Services","Parents":[]},"Attrs":[]}
 			,{"Name":"Delay","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1233,6 +1240,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwResetPeriod","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"lpRebootMsg","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -1250,6 +1258,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwResetPeriod","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"lpRebootMsg","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -1267,6 +1276,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"fDelayedAutostart","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 		]
@@ -1280,6 +1290,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"fFailureActionsOnNonCrashFailures","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 		]
@@ -1293,6 +1304,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwServiceSidType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -1306,6 +1318,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"pmszRequiredPrivileges","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 		]
@@ -1319,6 +1332,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"pmszRequiredPrivileges","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 		]
@@ -1332,6 +1346,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwPreshutdownTimeout","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -1345,6 +1360,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwDataType","Type":{"Kind":"ApiRef","Name":"SERVICE_TRIGGER_SPECIFIC_DATA_ITEM_DATA_TYPE","TargetKind":"Default","Api":"System.Services","Parents":[]},"Attrs":[]}
 			,{"Name":"cbData","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1360,6 +1376,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwTriggerType","Type":{"Kind":"ApiRef","Name":"SERVICE_TRIGGER_TYPE","TargetKind":"Default","Api":"System.Services","Parents":[]},"Attrs":[]}
 			,{"Name":"dwAction","Type":{"Kind":"ApiRef","Name":"SERVICE_TRIGGER_ACTION","TargetKind":"Default","Api":"System.Services","Parents":[]},"Attrs":[]}
@@ -1377,6 +1394,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"cTriggers","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pTriggers","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SERVICE_TRIGGER","TargetKind":"Default","Api":"System.Services","Parents":[]}},"Attrs":[]}
@@ -1392,6 +1410,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"usPreferredNode","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"fDelete","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -1406,9 +1425,10 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
-			{"Name":"liNewTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"liOldTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			{"Name":"liNewTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"liOldTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -1420,6 +1440,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwLaunchProtected","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -1457,6 +1478,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwServiceType","Type":{"Kind":"ApiRef","Name":"ENUM_SERVICE_TYPE","TargetKind":"Default","Api":"System.Services","Parents":[]},"Attrs":[]}
 			,{"Name":"dwCurrentState","Type":{"Kind":"ApiRef","Name":"SERVICE_STATUS_CURRENT_STATE","TargetKind":"Default","Api":"System.Services","Parents":[]},"Attrs":[]}
@@ -1476,6 +1498,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwServiceType","Type":{"Kind":"ApiRef","Name":"ENUM_SERVICE_TYPE","TargetKind":"Default","Api":"System.Services","Parents":[]},"Attrs":[]}
 			,{"Name":"dwCurrentState","Type":{"Kind":"ApiRef","Name":"SERVICE_STATUS_CURRENT_STATE","TargetKind":"Default","Api":"System.Services","Parents":[]},"Attrs":[]}
@@ -1497,6 +1520,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpServiceName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"lpDisplayName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -1512,6 +1536,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpServiceName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"lpDisplayName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -1527,6 +1552,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpServiceName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"lpDisplayName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -1542,6 +1568,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpServiceName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"lpDisplayName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -1557,6 +1584,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"fIsLocked","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"lpLockOwner","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -1572,6 +1600,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"fIsLocked","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"lpLockOwner","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -1587,6 +1616,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwServiceType","Type":{"Kind":"ApiRef","Name":"ENUM_SERVICE_TYPE","TargetKind":"Default","Api":"System.Services","Parents":[]},"Attrs":[]}
 			,{"Name":"dwStartType","Type":{"Kind":"ApiRef","Name":"SERVICE_START_TYPE","TargetKind":"Default","Api":"System.Services","Parents":[]},"Attrs":[]}
@@ -1608,6 +1638,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwServiceType","Type":{"Kind":"ApiRef","Name":"ENUM_SERVICE_TYPE","TargetKind":"Default","Api":"System.Services","Parents":[]},"Attrs":[]}
 			,{"Name":"dwStartType","Type":{"Kind":"ApiRef","Name":"SERVICE_START_TYPE","TargetKind":"Default","Api":"System.Services","Parents":[]},"Attrs":[]}
@@ -1685,6 +1716,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpServiceName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"lpServiceProc","Type":{"Kind":"ApiRef","Name":"LPSERVICE_MAIN_FUNCTIONA","TargetKind":"FunctionPointer","Api":"System.Services","Parents":[]},"Attrs":[]}
@@ -1699,6 +1731,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpServiceName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"lpServiceProc","Type":{"Kind":"ApiRef","Name":"LPSERVICE_MAIN_FUNCTIONW","TargetKind":"FunctionPointer","Api":"System.Services","Parents":[]},"Attrs":[]}
@@ -1784,6 +1817,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pfnNotifyCallback","Type":{"Kind":"ApiRef","Name":"PFN_SC_NOTIFY_CALLBACK","TargetKind":"FunctionPointer","Api":"System.Services","Parents":[]},"Attrs":[]}
@@ -1801,6 +1835,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pfnNotifyCallback","Type":{"Kind":"ApiRef","Name":"PFN_SC_NOTIFY_CALLBACK","TargetKind":"FunctionPointer","Api":"System.Services","Parents":[]},"Attrs":[]}
@@ -1820,6 +1855,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pfnNotifyCallback","Type":{"Kind":"ApiRef","Name":"PFN_SC_NOTIFY_CALLBACK","TargetKind":"FunctionPointer","Api":"System.Services","Parents":[]},"Attrs":[]}
@@ -1839,6 +1875,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwReason","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pszComment","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -1854,6 +1891,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwReason","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pszComment","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -1869,6 +1907,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwReason","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -1910,6 +1949,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 		]
 		,"NestedTypes":[
@@ -2693,7 +2733,7 @@
 		,"Params":[
 			{"Name":"hService","Type":{"Kind":"ApiRef","Name":"SC_HANDLE","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwNumServiceArgs","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"lpServiceArgVectors","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"lpServiceArgVectors","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional","Const"]}
 		]
 	}
 	,{
@@ -2708,7 +2748,7 @@
 		,"Params":[
 			{"Name":"hService","Type":{"Kind":"ApiRef","Name":"SC_HANDLE","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwNumServiceArgs","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"lpServiceArgVectors","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"lpServiceArgVectors","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional","Const"]}
 		]
 	}
 	,{

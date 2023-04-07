@@ -2,83 +2,6 @@
 
 "Constants":[
 	{
-		"Name":"SHORT_PACKET_TERMINATE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1
-		,"Attrs":[]
-	}
-	,{
-		"Name":"AUTO_CLEAR_STALL"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2
-		,"Attrs":[]
-	}
-	,{
-		"Name":"PIPE_TRANSFER_TIMEOUT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":3
-		,"Attrs":[]
-	}
-	,{
-		"Name":"IGNORE_SHORT_PACKETS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":4
-		,"Attrs":[]
-	}
-	,{
-		"Name":"ALLOW_PARTIAL_READS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":5
-		,"Attrs":[]
-	}
-	,{
-		"Name":"AUTO_FLUSH"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":6
-		,"Attrs":[]
-	}
-	,{
-		"Name":"RAW_IO"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":7
-		,"Attrs":[]
-	}
-	,{
-		"Name":"MAXIMUM_TRANSFER_SIZE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":8
-		,"Attrs":[]
-	}
-	,{
-		"Name":"RESET_PIPE_ON_RESUME"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":9
-		,"Attrs":[]
-	}
-	,{
-		"Name":"AUTO_SUSPEND"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":129
-		,"Attrs":[]
-	}
-	,{
-		"Name":"SUSPEND_DELAY"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":131
-		,"Attrs":[]
-	}
-	,{
 		"Name":"DEVICE_SPEED"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -874,6 +797,13 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":288
+		,"Attrs":[]
+	}
+	,{
+		"Name":"USB_RESERVED_USER_BASE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1024
 		,"Attrs":[]
 	}
 	,{
@@ -3085,28 +3015,28 @@
 		"Name":"KREGUSBFNENUMPATH"
 		,"Type":{"Kind":"Native","Name":"String"}
 		,"ValueType":"String"
-		,"Value":"\\\\Registry\\\\Machine\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\USBFN\\\\"
+		,"Value":"\\Registry\\Machine\\SYSTEM\\CurrentControlSet\\Control\\USBFN\\"
 		,"Attrs":[]
 	}
 	,{
 		"Name":"UREGUSBFNENUMPATH"
 		,"Type":{"Kind":"Native","Name":"String"}
 		,"ValueType":"String"
-		,"Value":"HKEY_LOCAL_MACHINE\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\USBFN\\\\"
+		,"Value":"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\USBFN\\"
 		,"Attrs":[]
 	}
 	,{
 		"Name":"KREGMANUSBFNENUMPATH"
 		,"Type":{"Kind":"Native","Name":"String"}
 		,"ValueType":"String"
-		,"Value":"\\\\Registry\\\\Machine\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\ManufacturingMode\\\\Current\\\\USBFN\\\\"
+		,"Value":"\\Registry\\Machine\\SYSTEM\\CurrentControlSet\\Control\\ManufacturingMode\\Current\\USBFN\\"
 		,"Attrs":[]
 	}
 	,{
 		"Name":"UREGMANUSBFNENUMPATH"
 		,"Type":{"Kind":"Native","Name":"String"}
 		,"ValueType":"String"
-		,"Value":"HKEY_LOCAL_MACHINE\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\ManufacturingMode\\\\Current\\\\USBFN\\\\"
+		,"Value":"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\ManufacturingMode\\Current\\USBFN\\"
 		,"Attrs":[]
 	}
 	,{
@@ -3841,6 +3771,57 @@
 
 ,"Types":[
 	{
+		"Name":"WINUSB_PIPE_POLICY"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"SHORT_PACKET_TERMINATE","Value":1}
+			,{"Name":"AUTO_CLEAR_STALL","Value":2}
+			,{"Name":"PIPE_TRANSFER_TIMEOUT","Value":3}
+			,{"Name":"IGNORE_SHORT_PACKETS","Value":4}
+			,{"Name":"ALLOW_PARTIAL_READS","Value":5}
+			,{"Name":"AUTO_FLUSH","Value":6}
+			,{"Name":"RAW_IO","Value":7}
+			,{"Name":"MAXIMUM_TRANSFER_SIZE","Value":8}
+			,{"Name":"RESET_PIPE_ON_RESUME","Value":9}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
+		"Name":"WINUSB_POWER_POLICY"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"AUTO_SUSPEND","Value":129}
+			,{"Name":"SUSPEND_DELAY","Value":131}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
+		"Name":"WINUSB_INTERFACE_HANDLE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":"WinUsb_Free"
+	}
+	,{
+		"Name":"USB_CHANGE_REGISTRATION_HANDLE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
 		"Name":"USB_DEVICE_SPEED"
 		,"Architectures":[]
 		,"Platform":null
@@ -3875,6 +3856,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"s","Type":{"Kind":"ApiRef","Name":"_BM","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"B","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -3887,6 +3869,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 				]
@@ -3902,6 +3885,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bmRequestType","Type":{"Kind":"ApiRef","Name":"BM_REQUEST_TYPE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"bRequest","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -3917,6 +3901,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":1
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":["_wIndex"]},"Attrs":[]}
 					,{"Name":"W","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -3929,6 +3914,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"LowByte","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 							,{"Name":"HiByte","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -3945,6 +3931,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":1
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":["_wValue"]},"Attrs":[]}
 					,{"Name":"W","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -3957,6 +3944,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"LowByte","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 							,{"Name":"HiByte","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -3975,6 +3963,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AsUshort16","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -3987,6 +3976,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":1
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 				]
@@ -4002,6 +3992,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AsUshort16","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -4014,6 +4005,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":1
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 				]
@@ -4029,6 +4021,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AsUshort16","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -4041,6 +4034,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":1
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 				]
@@ -4056,6 +4050,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"bDescriptorType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4070,6 +4065,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"bDescriptorType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4096,6 +4092,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"bDescriptorType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4117,6 +4114,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"bDescriptorType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4133,6 +4131,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"bDescriptorType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4147,6 +4146,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":1
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"AsUlong","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":["_bmAttributes_e__Union"]},"Attrs":[]}
@@ -4159,6 +4159,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":1
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 						]
@@ -4176,6 +4177,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"bDescriptorType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4196,6 +4198,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":1
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"AsUlong","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":["_bmAttributes_e__Union"]},"Attrs":[]}
@@ -4208,6 +4211,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":1
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 						]
@@ -4225,6 +4229,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"bDescriptorType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4246,6 +4251,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":1
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"AsUshort","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 					,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":["_bmCapabilities_e__Union"]},"Attrs":[]}
@@ -4258,6 +4264,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":1
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 						]
@@ -4275,6 +4282,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"bDescriptorType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4295,6 +4303,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AsUlong32","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -4307,6 +4316,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":1
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 				]
@@ -4322,6 +4332,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"bDescriptorType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4340,6 +4351,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":1
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"AsUshort","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 					,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":["_wFunctionalitySupport_e__Union"]},"Attrs":[]}
@@ -4352,6 +4364,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":1
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 						]
@@ -4367,6 +4380,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":1
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"AsUlong","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":["_bmAttributes_e__Union"]},"Attrs":[]}
@@ -4379,6 +4393,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":1
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 						]
@@ -4396,6 +4411,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"bDescriptorType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4413,6 +4429,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"bDescriptorType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4431,6 +4448,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"bDescriptorType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4451,6 +4469,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":1
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"AsUshort","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 					,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":["_VconnPower_e__Union"]},"Attrs":[]}
@@ -4463,6 +4482,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":1
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 						]
@@ -4478,6 +4498,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":1
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"wSVID","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 					,{"Name":"bAlternateMode","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4495,6 +4516,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"bDescriptorType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4510,6 +4532,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":1
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"AsUlong","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":["_bmAttributes_e__Union"]},"Attrs":[]}
@@ -4522,6 +4545,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":1
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 						]
@@ -4539,6 +4563,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"bDescriptorType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4554,6 +4579,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"bDescriptorType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4574,6 +4600,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"bDescriptorType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4594,6 +4621,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"bDescriptorType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4615,6 +4643,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"bDescriptorType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4633,6 +4662,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"us","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 		]
@@ -4644,6 +4674,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":1
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 				]
@@ -4659,6 +4690,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"bDescriptorType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4674,6 +4706,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"bDescriptorType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4689,6 +4722,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"AsUchar","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 					,{"Name":"Bulk","Type":{"Kind":"ApiRef","Name":"_Bulk_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":["_bmAttributes_e__Union"]},"Attrs":[]}
@@ -4702,6 +4736,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"_bitfield","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 						]
@@ -4715,6 +4750,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"_bitfield","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 						]
@@ -4732,6 +4768,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"bDescriptorType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4748,6 +4785,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bDescriptorLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"bDescriptorType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4767,6 +4805,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"bDescriptorType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4788,6 +4827,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AsUshort16","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -4800,6 +4840,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":1
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 				]
@@ -4815,6 +4856,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AsUshort16","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -4827,6 +4869,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":1
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 				]
@@ -4842,6 +4885,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AsUlong32","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -4854,6 +4898,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"HubStatus","Type":{"Kind":"ApiRef","Name":"USB_HUB_STATUS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 					,{"Name":"HubChange","Type":{"Kind":"ApiRef","Name":"USB_HUB_CHANGE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -4870,6 +4915,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AsUshort16","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -4882,6 +4928,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":1
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 				]
@@ -4897,6 +4944,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AsUshort16","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -4909,6 +4957,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":1
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 				]
@@ -4924,6 +4973,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AsUshort16","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -4936,6 +4986,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":1
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 				]
@@ -4951,6 +5002,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AsUshort16","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -4963,6 +5015,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":1
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 				]
@@ -4978,6 +5031,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AsUshort16","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"Usb20PortStatus","Type":{"Kind":"ApiRef","Name":"USB_20_PORT_STATUS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -4993,6 +5047,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AsUshort16","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"Usb20PortChange","Type":{"Kind":"ApiRef","Name":"USB_20_PORT_CHANGE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -5008,6 +5063,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AsUlong32","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -5020,6 +5076,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":1
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 				]
@@ -5035,6 +5092,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AsUlong32","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -5047,6 +5105,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"PortStatus","Type":{"Kind":"ApiRef","Name":"USB_PORT_STATUS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 					,{"Name":"PortChange","Type":{"Kind":"ApiRef","Name":"USB_PORT_CHANGE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -5063,6 +5122,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AsUlong64","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -5075,6 +5135,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"PortStatusChange","Type":{"Kind":"ApiRef","Name":"USB_PORT_STATUS_AND_CHANGE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 					,{"Name":"PortExtStatus","Type":{"Kind":"ApiRef","Name":"USB_PORT_EXT_STATUS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -5091,6 +5152,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AsUchar8","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -5103,6 +5165,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 				]
@@ -5118,6 +5181,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AsUchar","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -5130,6 +5194,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 				]
@@ -5145,6 +5210,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"bDescriptorType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -5170,6 +5236,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"bDescriptorType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -5232,6 +5299,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"USBDI_Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Supported_USB_Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5261,6 +5329,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"OffsetNext","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"UsbdDeviceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -5276,6 +5345,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"MaximumPacketSize","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"EndpointAddress","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -5309,6 +5379,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"EndpointAddress","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -5316,12 +5387,12 @@
 			,{"Name":"Mode","Type":{"Kind":"ApiRef","Name":"USBD_ENDPOINT_OFFLOAD_MODE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"_bitfield1","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"_bitfield2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"TransferSegmentLA","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"TransferSegmentLA","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"TransferSegmentVA","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 			,{"Name":"TransferRingSize","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 			,{"Name":"TransferRingInitialCycleBit","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"MessageNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"EventRingSegmentLA","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"EventRingSegmentLA","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"EventRingSegmentVA","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 			,{"Name":"EventRingSize","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 			,{"Name":"EventRingInitialCycleBit","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5336,6 +5407,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"InterfaceNumber","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -5358,6 +5430,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Reserved8","Type":{"Kind":"Array","Shape":{"Size":8},"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":[]}
 		]
@@ -5371,6 +5444,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"Function","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -5388,6 +5462,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Hdr","Type":{"Kind":"ApiRef","Name":"_URB_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"ConfigurationHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -5403,6 +5478,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Hdr","Type":{"Kind":"ApiRef","Name":"_URB_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"ConfigurationDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"USB_CONFIGURATION_DESCRIPTOR","TargetKind":"Default","Api":"Devices.Usb","Parents":[]}},"Attrs":[]}
@@ -5419,6 +5495,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Hdr","Type":{"Kind":"ApiRef","Name":"_URB_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"PipeHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -5434,6 +5511,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Hdr","Type":{"Kind":"ApiRef","Name":"_URB_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 		]
@@ -5447,6 +5525,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Hdr","Type":{"Kind":"ApiRef","Name":"_URB_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"FrameLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5462,6 +5541,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Hdr","Type":{"Kind":"ApiRef","Name":"_URB_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"FrameLengthDelta","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -5476,6 +5556,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Hdr","Type":{"Kind":"ApiRef","Name":"_URB_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"FrameNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5490,6 +5571,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Hdr","Type":{"Kind":"ApiRef","Name":"_URB_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -5515,6 +5597,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Hdr","Type":{"Kind":"ApiRef","Name":"_URB_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -5538,6 +5621,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Hdr","Type":{"Kind":"ApiRef","Name":"_URB_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -5562,6 +5646,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Hdr","Type":{"Kind":"ApiRef","Name":"_URB_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -5587,6 +5672,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Hdr","Type":{"Kind":"ApiRef","Name":"_URB_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -5610,6 +5696,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Hdr","Type":{"Kind":"ApiRef","Name":"_URB_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -5631,6 +5718,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"bDescriptorType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -5646,6 +5734,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"bPad","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 					,{"Name":"bFlags","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -5662,6 +5751,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Hdr","Type":{"Kind":"ApiRef","Name":"_URB_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -5688,6 +5778,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Hdr","Type":{"Kind":"ApiRef","Name":"_URB_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"PipeHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -5709,6 +5800,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Hdr","Type":{"Kind":"ApiRef","Name":"_URB_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"PipeHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -5730,6 +5822,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Hdr","Type":{"Kind":"ApiRef","Name":"_URB_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"PipeHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -5750,6 +5843,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Offset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5765,6 +5859,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Hdr","Type":{"Kind":"ApiRef","Name":"_URB_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"PipeHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -5789,6 +5884,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"PipeHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 			,{"Name":"StreamID","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5805,6 +5901,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Hdr","Type":{"Kind":"ApiRef","Name":"_URB_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"PipeHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -5823,6 +5920,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Hdr","Type":{"Kind":"ApiRef","Name":"_URB_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"PipeHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -5839,6 +5937,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 		]
@@ -5850,6 +5949,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"UrbHeader","Type":{"Kind":"ApiRef","Name":"_URB_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 					,{"Name":"UrbSelectInterface","Type":{"Kind":"ApiRef","Name":"_URB_SELECT_INTERFACE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -5898,6 +5998,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"IdleCallback","Type":{"Kind":"ApiRef","Name":"USB_IDLE_CALLBACK","TargetKind":"FunctionPointer","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"IdleContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -5934,6 +6035,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"UsbUserRequest","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"UsbUserStatusCode","Type":{"Kind":"ApiRef","Name":"USB_USER_ERROR_CODE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -5950,6 +6052,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"DeviceAddress","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"EndpointAddress","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -5974,6 +6077,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"PacketParameters","Type":{"Kind":"ApiRef","Name":"PACKET_PARAMETERS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -5988,6 +6092,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"PortNumber","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"PortStatus","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -6002,6 +6107,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"Parameters","Type":{"Kind":"ApiRef","Name":"RAW_RESET_PORT_PARAMETERS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6016,6 +6122,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"PortNumber","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"PortFeature","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -6031,6 +6138,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"Parameters","Type":{"Kind":"ApiRef","Name":"RAW_ROOTPORT_FEATURE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6045,6 +6153,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"PortNumber","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"PortStatus","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -6059,6 +6168,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"Parameters","Type":{"Kind":"ApiRef","Name":"RAW_ROOTPORT_PARAMETERS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6073,6 +6183,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"PciVendorId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"PciDeviceId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6091,6 +6202,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"Info0","Type":{"Kind":"ApiRef","Name":"USB_CONTROLLER_INFO_0","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6105,6 +6217,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"String","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
@@ -6119,6 +6232,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"UnicodeName","Type":{"Kind":"ApiRef","Name":"USB_UNICODE_NAME","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6133,6 +6247,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"FunctionGUID","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"ParameterLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6148,6 +6263,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"PassThru","Type":{"Kind":"ApiRef","Name":"USB_PASS_THRU_PARAMETERS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6186,6 +6302,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SystemState","Type":{"Kind":"ApiRef","Name":"WDMUSB_POWER_STATE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"HcDevicePowerState","Type":{"Kind":"ApiRef","Name":"WDMUSB_POWER_STATE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6208,6 +6325,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"PowerInformation","Type":{"Kind":"ApiRef","Name":"USB_POWER_INFO","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6222,6 +6340,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"PortStatus","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"MaxPacketEp0","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -6236,6 +6355,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"Parameters","Type":{"Kind":"ApiRef","Name":"USB_OPEN_RAW_DEVICE_PARAMETERS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6250,6 +6370,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"xxx","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -6263,6 +6384,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"Parameters","Type":{"Kind":"ApiRef","Name":"USB_CLOSE_RAW_DEVICE_PARAMETERS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6277,6 +6399,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Usb_bmRequest","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Usb_bRequest","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -6300,6 +6423,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"Parameters","Type":{"Kind":"ApiRef","Name":"USB_SEND_RAW_COMMAND_PARAMETERS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6314,6 +6438,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"DeviceCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"TotalBusBandwidth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6337,6 +6462,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"BandwidthInformation","Type":{"Kind":"ApiRef","Name":"USB_BANDWIDTH_INFO","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6351,9 +6477,10 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"DeviceCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"CurrentSystemTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"CurrentSystemTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"CurrentUsbFrame","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"BulkBytes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"IsoBytes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6379,6 +6506,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"BusStatistics0","Type":{"Kind":"ApiRef","Name":"USB_BUS_STATISTICS_0","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6393,6 +6521,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"DriverTrackingCode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"USBDI_Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6411,6 +6540,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"Parameters","Type":{"Kind":"ApiRef","Name":"USB_DRIVER_VERSION_PARAMETERS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6425,6 +6555,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Usb2HwRevision","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 		]
@@ -6438,6 +6569,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"Parameters","Type":{"Kind":"ApiRef","Name":"USB_USB2HW_VERSION_PARAMETERS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6452,109 +6584,10 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"USBUSER_REQUEST_HEADER","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"WINUSB_PIPE_INFORMATION"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"PipeType","Type":{"Kind":"ApiRef","Name":"USBD_PIPE_TYPE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
-			,{"Name":"PipeId","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"MaximumPacketSize","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"Interval","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"WINUSB_PIPE_INFORMATION_EX"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"PipeType","Type":{"Kind":"ApiRef","Name":"USBD_PIPE_TYPE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
-			,{"Name":"PipeId","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"MaximumPacketSize","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"Interval","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"MaximumBytesPerInterval","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"WINUSB_SETUP_PACKET"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":1
-		,"Fields":[
-			{"Name":"RequestType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"Request","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"Value","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"Index","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"USB_START_TRACKING_FOR_TIME_SYNC_INFORMATION"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":1
-		,"Fields":[
-			{"Name":"TimeTrackingHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"IsStartupDelayTolerable","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"USB_STOP_TRACKING_FOR_TIME_SYNC_INFORMATION"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":1
-		,"Fields":[
-			{"Name":"TimeTrackingHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"USB_FRAME_NUMBER_AND_QPC_FOR_TIME_SYNC_INFORMATION"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":1
-		,"Fields":[
-			{"Name":"TimeTrackingHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"InputFrameNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"InputMicroFrameNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"QueryPerformanceCounterAtInputFrameOrMicroFrame","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"QueryPerformanceCounterFrequency","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"PredictedAccuracyInMicroSeconds","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"CurrentGenerationID","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"CurrentQueryPerformanceCounter","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"CurrentHardwareFrameNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"CurrentHardwareMicroFrameNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"CurrentUSBFrameNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -6660,6 +6693,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InterfaceNumber","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"AlternateInterfaceNumber","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -6674,6 +6708,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Event","Type":{"Kind":"ApiRef","Name":"USBFN_EVENT","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"u","Type":{"Kind":"ApiRef","Name":"_u_e__Union","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6686,6 +6721,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"BusSpeed","Type":{"Kind":"ApiRef","Name":"USBFN_BUS_SPEED","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 					,{"Name":"SetupPacket","Type":{"Kind":"ApiRef","Name":"USB_DEFAULT_PIPE_SETUP_PACKET","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6705,6 +6741,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"EpDesc","Type":{"Kind":"ApiRef","Name":"USB_ENDPOINT_DESCRIPTOR","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"PipeId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6719,6 +6756,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InterfaceNumber","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"PipeCount","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -6734,6 +6772,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"FullSpeedClassInterface","Type":{"Kind":"ApiRef","Name":"USBFN_CLASS_INTERFACE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"HighSpeedClassInterface","Type":{"Kind":"ApiRef","Name":"USBFN_CLASS_INTERFACE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6752,6 +6791,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"BaseInterfaceNumber","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"InterfaceCount","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -6768,6 +6808,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"FullSpeedClassInterfaceEx","Type":{"Kind":"ApiRef","Name":"USBFN_CLASS_INTERFACE_EX","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
 			,{"Name":"HighSpeedClassInterfaceEx","Type":{"Kind":"ApiRef","Name":"USBFN_CLASS_INTERFACE_EX","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6786,6 +6827,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InterfaceNumber","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Speed","Type":{"Kind":"ApiRef","Name":"USBFN_BUS_SPEED","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
@@ -6802,6 +6844,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"StringIndex","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"UsbString","Type":{"Kind":"Array","Shape":{"Size":255},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
@@ -6816,10 +6859,1147 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ConfigurationName","Type":{"Kind":"Array","Shape":{"Size":40},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"IsCurrent","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"IsActive","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_TOPOLOGY_ADDRESS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"PciBusNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"PciDeviceNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"PciFunctionNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"RootHubPortNumber","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"HubPortNumber","Type":{"Kind":"Array","Shape":{"Size":5},"Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":[]}
+			,{"Name":"Reserved2","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_HUB_NODE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"UsbHub","Value":0}
+			,{"Name":"UsbMIParent","Value":1}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"USB_HUB_INFORMATION"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"HubDescriptor","Type":{"Kind":"ApiRef","Name":"USB_HUB_DESCRIPTOR","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"HubIsBusPowered","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_MI_PARENT_INFORMATION"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"NumberOfInterfaces","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_NODE_INFORMATION"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"NodeType","Type":{"Kind":"ApiRef","Name":"USB_HUB_NODE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"u","Type":{"Kind":"ApiRef","Name":"_u_e__Union","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+			{
+				"Name":"_u_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"SizeField":""
+				,"Fields":[
+					{"Name":"HubInformation","Type":{"Kind":"ApiRef","Name":"USB_HUB_INFORMATION","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+					,{"Name":"MiParentInformation","Type":{"Kind":"ApiRef","Name":"USB_MI_PARENT_INFORMATION","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+		]
+	}
+	,{
+		"Name":"USB_PIPE_INFO"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"EndpointDescriptor","Type":{"Kind":"ApiRef","Name":"USB_ENDPOINT_DESCRIPTOR","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"ScheduleOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_CONNECTION_STATUS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"NoDeviceConnected","Value":0}
+			,{"Name":"DeviceConnected","Value":1}
+			,{"Name":"DeviceFailedEnumeration","Value":2}
+			,{"Name":"DeviceGeneralFailure","Value":3}
+			,{"Name":"DeviceCausedOvercurrent","Value":4}
+			,{"Name":"DeviceNotEnoughPower","Value":5}
+			,{"Name":"DeviceNotEnoughBandwidth","Value":6}
+			,{"Name":"DeviceHubNestedTooDeeply","Value":7}
+			,{"Name":"DeviceInLegacyHub","Value":8}
+			,{"Name":"DeviceEnumerating","Value":9}
+			,{"Name":"DeviceReset","Value":10}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"USB_NODE_CONNECTION_INFORMATION"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"ConnectionIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"DeviceDescriptor","Type":{"Kind":"ApiRef","Name":"USB_DEVICE_DESCRIPTOR","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"CurrentConfigurationValue","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"LowSpeed","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"DeviceIsHub","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"DeviceAddress","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"NumberOfOpenPipes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ConnectionStatus","Type":{"Kind":"ApiRef","Name":"USB_CONNECTION_STATUS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"PipeList","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"USB_PIPE_INFO","TargetKind":"Default","Api":"Devices.Usb","Parents":[]}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_NODE_CONNECTION_DRIVERKEY_NAME"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"ConnectionIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ActualLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"DriverKeyName","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_NODE_CONNECTION_NAME"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"ConnectionIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ActualLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"NodeName","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_HUB_NAME"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"ActualLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"HubName","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_ROOT_HUB_NAME"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"ActualLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"RootHubName","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_HCD_DRIVERKEY_NAME"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"ActualLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"DriverKeyName","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_DESCRIPTOR_REQUEST"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"ConnectionIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"SetupPacket","Type":{"Kind":"ApiRef","Name":"_SetupPacket_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"Data","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+			{
+				"Name":"_SetupPacket_e__Struct"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Struct"
+				,"Size":0
+				,"PackingSize":1
+				,"SizeField":""
+				,"Fields":[
+					{"Name":"bmRequest","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+					,{"Name":"bRequest","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+					,{"Name":"wValue","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+					,{"Name":"wIndex","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+					,{"Name":"wLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+		]
+	}
+	,{
+		"Name":"USB_HUB_CAPABILITIES"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_NODE_CONNECTION_ATTRIBUTES"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"ConnectionIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ConnectionStatus","Type":{"Kind":"ApiRef","Name":"USB_CONNECTION_STATUS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"PortAttributes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_NODE_CONNECTION_INFORMATION_EX"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"ConnectionIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"DeviceDescriptor","Type":{"Kind":"ApiRef","Name":"USB_DEVICE_DESCRIPTOR","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"CurrentConfigurationValue","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"Speed","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"DeviceIsHub","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"DeviceAddress","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"NumberOfOpenPipes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ConnectionStatus","Type":{"Kind":"ApiRef","Name":"USB_CONNECTION_STATUS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"PipeList","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"USB_PIPE_INFO","TargetKind":"Default","Api":"Devices.Usb","Parents":[]}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_HUB_CAP_FLAGS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Union"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"ul","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+			{
+				"Name":"_Anonymous_e__Struct"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Struct"
+				,"Size":0
+				,"PackingSize":1
+				,"SizeField":""
+				,"Fields":[
+					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+		]
+	}
+	,{
+		"Name":"USB_HUB_CAPABILITIES_EX"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"CapabilityFlags","Type":{"Kind":"ApiRef","Name":"USB_HUB_CAP_FLAGS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_CYCLE_PORT_PARAMS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"ConnectionIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"StatusReturned","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_ID_STRING"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"LanguageId","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"Pad","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"LengthInBytes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Buffer","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["NotNullTerminated"]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_HUB_DEVICE_UXD_SETTINGS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"PnpGuid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
+			,{"Name":"OwnerGuid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
+			,{"Name":"DeleteOnShutdown","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"DeleteOnReload","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"DeleteOnDisconnect","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Reserved","Type":{"Kind":"Array","Shape":{"Size":5},"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"HUB_DEVICE_CONFIG_INFO"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"HubFlags","Type":{"Kind":"ApiRef","Name":"USB_HUB_CAP_FLAGS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"HardwareIds","Type":{"Kind":"ApiRef","Name":"USB_ID_STRING","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"CompatibleIds","Type":{"Kind":"ApiRef","Name":"USB_ID_STRING","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"DeviceDescription","Type":{"Kind":"ApiRef","Name":"USB_ID_STRING","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"Reserved","Type":{"Kind":"Array","Shape":{"Size":19},"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			,{"Name":"UxdSettings","Type":{"Kind":"ApiRef","Name":"USB_HUB_DEVICE_UXD_SETTINGS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"HCD_STAT_COUNTERS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"BytesTransferred","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"IsoMissedCount","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"DataOverrunErrorCount","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"CrcErrorCount","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"ScheduleOverrunCount","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"TimeoutErrorCount","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"InternalHcErrorCount","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"BufferOverrunErrorCount","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"SWErrorCount","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"StallPidCount","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"PortDisableCount","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"HCD_ISO_STAT_COUNTERS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"LateUrbs","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"DoubleBufferedPackets","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"TransfersCF_5ms","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"TransfersCF_2ms","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"TransfersCF_1ms","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"MaxInterruptLatency","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"BadStartFrame","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"StaleUrbs","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"IsoPacketNotAccesed","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"IsoPacketHWError","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"SmallestUrbPacketCount","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"LargestUrbPacketCount","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"IsoCRC_Error","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"IsoOVERRUN_Error","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"IsoINTERNAL_Error","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"IsoUNKNOWN_Error","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"IsoBytesTransferred","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"LateMissedCount","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"HWIsoMissedCount","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"Reserved7","Type":{"Kind":"Array","Shape":{"Size":8},"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"HCD_STAT_INFORMATION_1"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"Reserved1","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Reserved2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ResetCounters","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"TimeRead","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"Counters","Type":{"Kind":"ApiRef","Name":"HCD_STAT_COUNTERS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"HCD_STAT_INFORMATION_2"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"Reserved1","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Reserved2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ResetCounters","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"TimeRead","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"LockedMemoryUsed","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+			,{"Name":"Counters","Type":{"Kind":"ApiRef","Name":"HCD_STAT_COUNTERS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"IsoCounters","Type":{"Kind":"ApiRef","Name":"HCD_ISO_STAT_COUNTERS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_NOTIFICATION_TYPE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"EnumerationFailure","Value":0}
+			,{"Name":"InsufficentBandwidth","Value":1}
+			,{"Name":"InsufficentPower","Value":2}
+			,{"Name":"OverCurrent","Value":3}
+			,{"Name":"ResetOvercurrent","Value":4}
+			,{"Name":"AcquireBusInfo","Value":5}
+			,{"Name":"AcquireHubName","Value":6}
+			,{"Name":"AcquireControllerName","Value":7}
+			,{"Name":"HubOvercurrent","Value":8}
+			,{"Name":"HubPowerChange","Value":9}
+			,{"Name":"HubNestedTooDeeply","Value":10}
+			,{"Name":"ModernDeviceInLegacyHub","Value":11}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"USB_NOTIFICATION"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"NotificationType","Type":{"Kind":"ApiRef","Name":"USB_NOTIFICATION_TYPE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_CONNECTION_NOTIFICATION"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"NotificationType","Type":{"Kind":"ApiRef","Name":"USB_NOTIFICATION_TYPE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"ConnectionNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"RequestedBandwidth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"EnumerationFailReason","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"PowerRequested","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"HubNameLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_BUS_NOTIFICATION"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"NotificationType","Type":{"Kind":"ApiRef","Name":"USB_NOTIFICATION_TYPE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"TotalBandwidth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ConsumedBandwidth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ControllerNameLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_ACQUIRE_INFO"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"NotificationType","Type":{"Kind":"ApiRef","Name":"USB_NOTIFICATION_TYPE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"TotalSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Buffer","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_WMI_DEVICE_NODE_TYPE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"UsbDevice","Value":0}
+			,{"Name":"HubDevice","Value":1}
+			,{"Name":"CompositeDevice","Value":2}
+			,{"Name":"UsbController","Value":3}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"USB_DEVICE_STATE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_HUB_PORT_INFORMATION"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"DeviceState","Type":{"Kind":"ApiRef","Name":"USB_DEVICE_STATE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"PortNumber","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"DeviceAddress","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"ConnectionIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ConnectionStatus","Type":{"Kind":"ApiRef","Name":"USB_CONNECTION_STATUS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_HUB_DEVICE_INFO"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"HubDescriptor","Type":{"Kind":"ApiRef","Name":"USB_HUB_DESCRIPTOR","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"HubNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"DeviceAddress","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"HubIsSelfPowered","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"HubIsRootHub","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"HubCapabilities","Type":{"Kind":"ApiRef","Name":"USB_HUB_CAPABILITIES","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"NumberOfHubPorts","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"PortInfo","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"USB_HUB_PORT_INFORMATION","TargetKind":"Default","Api":"Devices.Usb","Parents":[]}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_COMPOSITE_FUNCTION_INFO"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"FunctionNumber","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"BaseInterfaceNumber","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"NumberOfInterfaces","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"FunctionIsIdle","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_COMPOSITE_DEVICE_INFO"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"DeviceDescriptor","Type":{"Kind":"ApiRef","Name":"USB_DEVICE_DESCRIPTOR","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"CurrentConfigDescriptor","Type":{"Kind":"ApiRef","Name":"USB_CONFIGURATION_DESCRIPTOR","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"CurrentConfigurationValue","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"NumberOfFunctions","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"FunctionInfo","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"USB_COMPOSITE_FUNCTION_INFO","TargetKind":"Default","Api":"Devices.Usb","Parents":[]}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_CONTROLLER_DEVICE_INFO"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"PciVendorId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"PciDeviceId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"PciRevision","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"NumberOfRootPorts","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"HcFeatureFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_DEVICE_INFO"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"DeviceState","Type":{"Kind":"ApiRef","Name":"USB_DEVICE_STATE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"PortNumber","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"DeviceDescriptor","Type":{"Kind":"ApiRef","Name":"USB_DEVICE_DESCRIPTOR","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"CurrentConfigurationValue","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"Speed","Type":{"Kind":"ApiRef","Name":"USB_DEVICE_SPEED","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"DeviceAddress","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"ConnectionIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ConnectionStatus","Type":{"Kind":"ApiRef","Name":"USB_CONNECTION_STATUS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"PnpHardwareId","Type":{"Kind":"Array","Shape":{"Size":128},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+			,{"Name":"PnpCompatibleId","Type":{"Kind":"Array","Shape":{"Size":128},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+			,{"Name":"SerialNumberId","Type":{"Kind":"Array","Shape":{"Size":128},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+			,{"Name":"PnpDeviceDescription","Type":{"Kind":"Array","Shape":{"Size":128},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+			,{"Name":"NumberOfOpenPipes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"PipeList","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"USB_PIPE_INFO","TargetKind":"Default","Api":"Devices.Usb","Parents":[]}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_DEVICE_NODE_INFO"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"Sig","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"LengthInBytes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"DeviceDescription","Type":{"Kind":"Array","Shape":{"Size":40},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+			,{"Name":"NodeType","Type":{"Kind":"ApiRef","Name":"USB_WMI_DEVICE_NODE_TYPE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"BusAddress","Type":{"Kind":"ApiRef","Name":"USB_TOPOLOGY_ADDRESS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+			{
+				"Name":"_Anonymous_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"SizeField":""
+				,"Fields":[
+					{"Name":"UsbDeviceInfo","Type":{"Kind":"ApiRef","Name":"USB_DEVICE_INFO","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+					,{"Name":"HubDeviceInfo","Type":{"Kind":"ApiRef","Name":"USB_HUB_DEVICE_INFO","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+					,{"Name":"CompositeDeviceInfo","Type":{"Kind":"ApiRef","Name":"USB_COMPOSITE_DEVICE_INFO","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+					,{"Name":"ControllerDeviceInfo","Type":{"Kind":"ApiRef","Name":"USB_CONTROLLER_DEVICE_INFO","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+					,{"Name":"DeviceInformation","Type":{"Kind":"Array","Shape":{"Size":4},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+		]
+	}
+	,{
+		"Name":"USB_DEVICE_PERFORMANCE_INFO"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"BulkBytes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ControlDataBytes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"IsoBytes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"InterruptBytes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"BulkUrbCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ControlUrbCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"IsoUrbCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"InterruptUrbCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"AllocedInterrupt","Type":{"Kind":"Array","Shape":{"Size":6},"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			,{"Name":"AllocedIso","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Total32secBandwidth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"TotalTtBandwidth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"DeviceDescription","Type":{"Kind":"Array","Shape":{"Size":60},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+			,{"Name":"DeviceSpeed","Type":{"Kind":"ApiRef","Name":"USB_DEVICE_SPEED","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"TotalIsoLatency","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"DroppedIsoPackets","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"TransferErrors","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"PciInterruptCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"HcIdleState","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"HcAsyncIdleState","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"HcAsyncCacheFlushCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"HcPeriodicIdleState","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"HcPeriodicCacheFlushCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_HUB_TYPE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"UsbRootHub","Value":1}
+			,{"Name":"Usb20Hub","Value":2}
+			,{"Name":"Usb30Hub","Value":3}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"USB_HUB_INFORMATION_EX"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"HubType","Type":{"Kind":"ApiRef","Name":"USB_HUB_TYPE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"HighestPortNumber","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"u","Type":{"Kind":"ApiRef","Name":"_u_e__Union","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+			{
+				"Name":"_u_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"SizeField":""
+				,"Fields":[
+					{"Name":"UsbHubDescriptor","Type":{"Kind":"ApiRef","Name":"USB_HUB_DESCRIPTOR","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+					,{"Name":"Usb30HubDescriptor","Type":{"Kind":"ApiRef","Name":"USB_30_HUB_DESCRIPTOR","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+		]
+	}
+	,{
+		"Name":"USB_PORT_PROPERTIES"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Union"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"ul","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+			{
+				"Name":"_Anonymous_e__Struct"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Struct"
+				,"Size":0
+				,"PackingSize":1
+				,"SizeField":""
+				,"Fields":[
+					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+		]
+	}
+	,{
+		"Name":"USB_PORT_CONNECTOR_PROPERTIES"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"ConnectionIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ActualLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"UsbPortProperties","Type":{"Kind":"ApiRef","Name":"USB_PORT_PROPERTIES","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"CompanionIndex","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"CompanionPortNumber","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"CompanionHubSymbolicLinkName","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_PROTOCOLS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Union"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"ul","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+			{
+				"Name":"_Anonymous_e__Struct"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Struct"
+				,"Size":0
+				,"PackingSize":1
+				,"SizeField":""
+				,"Fields":[
+					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+		]
+	}
+	,{
+		"Name":"USB_NODE_CONNECTION_INFORMATION_EX_V2_FLAGS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Union"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"ul","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+			{
+				"Name":"_Anonymous_e__Struct"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Struct"
+				,"Size":0
+				,"PackingSize":1
+				,"SizeField":""
+				,"Fields":[
+					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+		]
+	}
+	,{
+		"Name":"USB_NODE_CONNECTION_INFORMATION_EX_V2"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"ConnectionIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"SupportedUsbProtocols","Type":{"Kind":"ApiRef","Name":"USB_PROTOCOLS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"USB_NODE_CONNECTION_INFORMATION_EX_V2_FLAGS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_TRANSPORT_CHARACTERISTICS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"TransportCharacteristicsFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"CurrentRoundtripLatencyInMilliSeconds","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"MaxPotentialBandwidth","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_TRANSPORT_CHARACTERISTICS_CHANGE_REGISTRATION"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"ChangeNotificationInputFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Handle","Type":{"Kind":"ApiRef","Name":"USB_CHANGE_REGISTRATION_HANDLE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"UsbTransportCharacteristics","Type":{"Kind":"ApiRef","Name":"USB_TRANSPORT_CHARACTERISTICS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_TRANSPORT_CHARACTERISTICS_CHANGE_NOTIFICATION"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"Handle","Type":{"Kind":"ApiRef","Name":"USB_CHANGE_REGISTRATION_HANDLE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"UsbTransportCharacteristics","Type":{"Kind":"ApiRef","Name":"USB_TRANSPORT_CHARACTERISTICS","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_TRANSPORT_CHARACTERISTICS_CHANGE_UNREGISTRATION"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"Handle","Type":{"Kind":"ApiRef","Name":"USB_CHANGE_REGISTRATION_HANDLE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_DEVICE_CHARACTERISTICS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Reserved","Type":{"Kind":"Array","Shape":{"Size":2},"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			,{"Name":"UsbDeviceCharacteristicsFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"MaximumSendPathDelayInMilliSeconds","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"MaximumCompletionPathDelayInMilliSeconds","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_START_TRACKING_FOR_TIME_SYNC_INFORMATION"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"TimeTrackingHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"IsStartupDelayTolerable","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_STOP_TRACKING_FOR_TIME_SYNC_INFORMATION"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"TimeTrackingHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"USB_FRAME_NUMBER_AND_QPC_FOR_TIME_SYNC_INFORMATION"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"TimeTrackingHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"InputFrameNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"InputMicroFrameNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"QueryPerformanceCounterAtInputFrameOrMicroFrame","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"QueryPerformanceCounterFrequency","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"PredictedAccuracyInMicroSeconds","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"CurrentGenerationID","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"CurrentQueryPerformanceCounter","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"CurrentHardwareFrameNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"CurrentHardwareMicroFrameNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"CurrentUSBFrameNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -6831,6 +8011,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"major","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"minor","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6846,6 +8027,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"uOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"uLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6862,6 +8044,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"uOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"uLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6881,6 +8064,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"EventChannelSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"uReadDataAlignment","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6911,6 +8095,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"DescriptorType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Index","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -6926,6 +8111,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"usVendorId","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"usProductId","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -6957,6 +8143,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"MaximumPacketSize","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"EndpointAddress","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -6973,6 +8160,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumberOfPipes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"PipeInfo","Type":{"Kind":"Array","Shape":{"Size":8},"Child":{"Kind":"ApiRef","Name":"USBSCAN_PIPE_INFORMATION","TargetKind":"Default","Api":"Devices.Usb","Parents":[]}},"Attrs":[]}
@@ -6987,10 +8175,64 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"TimeoutRead","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"TimeoutWrite","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"TimeoutEvent","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"WINUSB_PIPE_INFORMATION"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"PipeType","Type":{"Kind":"ApiRef","Name":"USBD_PIPE_TYPE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"PipeId","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"MaximumPacketSize","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"Interval","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"WINUSB_PIPE_INFORMATION_EX"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"PipeType","Type":{"Kind":"ApiRef","Name":"USBD_PIPE_TYPE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":[]}
+			,{"Name":"PipeId","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"MaximumPacketSize","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"Interval","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"MaximumBytesPerInterval","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"WINUSB_SETUP_PACKET"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"RequestType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"Request","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"Value","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"Index","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -7009,7 +8251,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"DeviceHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"InterfaceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out"]}
+			,{"Name":"InterfaceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WINUSB_INTERFACE_HANDLE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -7022,7 +8264,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"InterfaceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			{"Name":"InterfaceHandle","Type":{"Kind":"ApiRef","Name":"WINUSB_INTERFACE_HANDLE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -7035,9 +8277,9 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"InterfaceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			{"Name":"InterfaceHandle","Type":{"Kind":"ApiRef","Name":"WINUSB_INTERFACE_HANDLE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":["In"]}
 			,{"Name":"AssociatedInterfaceIndex","Type":{"Kind":"Native","Name":"Byte"},"Attrs":["In"]}
-			,{"Name":"AssociatedInterfaceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out"]}
+			,{"Name":"AssociatedInterfaceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WINUSB_INTERFACE_HANDLE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -7050,7 +8292,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"InterfaceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			{"Name":"InterfaceHandle","Type":{"Kind":"ApiRef","Name":"WINUSB_INTERFACE_HANDLE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":["In"]}
 			,{"Name":"DescriptorType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":["In"]}
 			,{"Name":"Index","Type":{"Kind":"Native","Name":"Byte"},"Attrs":["In"]}
 			,{"Name":"LanguageID","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":["In"]}
@@ -7069,7 +8311,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"InterfaceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			{"Name":"InterfaceHandle","Type":{"Kind":"ApiRef","Name":"WINUSB_INTERFACE_HANDLE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":["In"]}
 			,{"Name":"AlternateInterfaceNumber","Type":{"Kind":"Native","Name":"Byte"},"Attrs":["In"]}
 			,{"Name":"UsbAltInterfaceDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"USB_INTERFACE_DESCRIPTOR","TargetKind":"Default","Api":"Devices.Usb","Parents":[]}},"Attrs":["Out"]}
 		]
@@ -7084,7 +8326,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"InterfaceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			{"Name":"InterfaceHandle","Type":{"Kind":"ApiRef","Name":"WINUSB_INTERFACE_HANDLE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":["In"]}
 			,{"Name":"InformationType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"BufferLength","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
 			,{"Name":"Buffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":2}]}
@@ -7100,7 +8342,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"InterfaceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			{"Name":"InterfaceHandle","Type":{"Kind":"ApiRef","Name":"WINUSB_INTERFACE_HANDLE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":["In"]}
 			,{"Name":"SettingNumber","Type":{"Kind":"Native","Name":"Byte"},"Attrs":["In"]}
 		]
 	}
@@ -7114,7 +8356,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"InterfaceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			{"Name":"InterfaceHandle","Type":{"Kind":"ApiRef","Name":"WINUSB_INTERFACE_HANDLE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":["In"]}
 			,{"Name":"SettingNumber","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out"]}
 		]
 	}
@@ -7128,7 +8370,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"InterfaceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			{"Name":"InterfaceHandle","Type":{"Kind":"ApiRef","Name":"WINUSB_INTERFACE_HANDLE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":["In"]}
 			,{"Name":"AlternateInterfaceNumber","Type":{"Kind":"Native","Name":"Byte"},"Attrs":["In"]}
 			,{"Name":"PipeIndex","Type":{"Kind":"Native","Name":"Byte"},"Attrs":["In"]}
 			,{"Name":"PipeInformation","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WINUSB_PIPE_INFORMATION","TargetKind":"Default","Api":"Devices.Usb","Parents":[]}},"Attrs":["Out"]}
@@ -7144,7 +8386,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"InterfaceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			{"Name":"InterfaceHandle","Type":{"Kind":"ApiRef","Name":"WINUSB_INTERFACE_HANDLE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":["In"]}
 			,{"Name":"AlternateSettingNumber","Type":{"Kind":"Native","Name":"Byte"},"Attrs":["In"]}
 			,{"Name":"PipeIndex","Type":{"Kind":"Native","Name":"Byte"},"Attrs":["In"]}
 			,{"Name":"PipeInformationEx","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WINUSB_PIPE_INFORMATION_EX","TargetKind":"Default","Api":"Devices.Usb","Parents":[]}},"Attrs":["Out"]}
@@ -7160,9 +8402,9 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"InterfaceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			{"Name":"InterfaceHandle","Type":{"Kind":"ApiRef","Name":"WINUSB_INTERFACE_HANDLE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":["In"]}
 			,{"Name":"PipeID","Type":{"Kind":"Native","Name":"Byte"},"Attrs":["In"]}
-			,{"Name":"PolicyType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"PolicyType","Type":{"Kind":"ApiRef","Name":"WINUSB_PIPE_POLICY","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":["In"]}
 			,{"Name":"ValueLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"Value","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":3}]}
 		]
@@ -7177,9 +8419,9 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"InterfaceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			{"Name":"InterfaceHandle","Type":{"Kind":"ApiRef","Name":"WINUSB_INTERFACE_HANDLE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":["In"]}
 			,{"Name":"PipeID","Type":{"Kind":"Native","Name":"Byte"},"Attrs":["In"]}
-			,{"Name":"PolicyType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"PolicyType","Type":{"Kind":"ApiRef","Name":"WINUSB_PIPE_POLICY","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":["In"]}
 			,{"Name":"ValueLength","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
 			,{"Name":"Value","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":3}]}
 		]
@@ -7194,7 +8436,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"InterfaceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			{"Name":"InterfaceHandle","Type":{"Kind":"ApiRef","Name":"WINUSB_INTERFACE_HANDLE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":["In"]}
 			,{"Name":"PipeID","Type":{"Kind":"Native","Name":"Byte"},"Attrs":["In"]}
 			,{"Name":"Buffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":3},"Optional"]}
 			,{"Name":"BufferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -7212,7 +8454,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"InterfaceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			{"Name":"InterfaceHandle","Type":{"Kind":"ApiRef","Name":"WINUSB_INTERFACE_HANDLE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":["In"]}
 			,{"Name":"PipeID","Type":{"Kind":"Native","Name":"Byte"},"Attrs":["In"]}
 			,{"Name":"Buffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":3}]}
 			,{"Name":"BufferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -7230,7 +8472,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"InterfaceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			{"Name":"InterfaceHandle","Type":{"Kind":"ApiRef","Name":"WINUSB_INTERFACE_HANDLE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":["In"]}
 			,{"Name":"SetupPacket","Type":{"Kind":"ApiRef","Name":"WINUSB_SETUP_PACKET","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Buffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":3},"Optional"]}
 			,{"Name":"BufferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -7248,7 +8490,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"InterfaceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			{"Name":"InterfaceHandle","Type":{"Kind":"ApiRef","Name":"WINUSB_INTERFACE_HANDLE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":["In"]}
 			,{"Name":"PipeID","Type":{"Kind":"Native","Name":"Byte"},"Attrs":["In"]}
 		]
 	}
@@ -7262,7 +8504,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"InterfaceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			{"Name":"InterfaceHandle","Type":{"Kind":"ApiRef","Name":"WINUSB_INTERFACE_HANDLE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":["In"]}
 			,{"Name":"PipeID","Type":{"Kind":"Native","Name":"Byte"},"Attrs":["In"]}
 		]
 	}
@@ -7276,7 +8518,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"InterfaceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			{"Name":"InterfaceHandle","Type":{"Kind":"ApiRef","Name":"WINUSB_INTERFACE_HANDLE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":["In"]}
 			,{"Name":"PipeID","Type":{"Kind":"Native","Name":"Byte"},"Attrs":["In"]}
 		]
 	}
@@ -7290,8 +8532,8 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"InterfaceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
-			,{"Name":"PolicyType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			{"Name":"InterfaceHandle","Type":{"Kind":"ApiRef","Name":"WINUSB_INTERFACE_HANDLE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":["In"]}
+			,{"Name":"PolicyType","Type":{"Kind":"ApiRef","Name":"WINUSB_POWER_POLICY","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":["In"]}
 			,{"Name":"ValueLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"Value","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":2}]}
 		]
@@ -7306,8 +8548,8 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"InterfaceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
-			,{"Name":"PolicyType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			{"Name":"InterfaceHandle","Type":{"Kind":"ApiRef","Name":"WINUSB_INTERFACE_HANDLE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":["In"]}
+			,{"Name":"PolicyType","Type":{"Kind":"ApiRef","Name":"WINUSB_POWER_POLICY","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":["In"]}
 			,{"Name":"ValueLength","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
 			,{"Name":"Value","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":2}]}
 		]
@@ -7322,7 +8564,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"InterfaceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			{"Name":"InterfaceHandle","Type":{"Kind":"ApiRef","Name":"WINUSB_INTERFACE_HANDLE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpOverlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In"]}
 			,{"Name":"lpNumberOfBytesTransferred","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 			,{"Name":"bWait","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
@@ -7373,9 +8615,9 @@
 		,"Platform":"windows8.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"InterfaceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			{"Name":"InterfaceHandle","Type":{"Kind":"ApiRef","Name":"WINUSB_INTERFACE_HANDLE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":["In"]}
 			,{"Name":"CurrentFrameNumber","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-			,{"Name":"TimeStamp","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"TimeStamp","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int64"}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -7389,7 +8631,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"CurrentFrameNumber","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
-			,{"Name":"TimeStamp","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"TimeStamp","Type":{"Kind":"Native","Name":"Int64"},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -7402,7 +8644,7 @@
 		,"Platform":"windows8.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"InterfaceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			{"Name":"InterfaceHandle","Type":{"Kind":"ApiRef","Name":"WINUSB_INTERFACE_HANDLE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":["In"]}
 			,{"Name":"PipeID","Type":{"Kind":"Native","Name":"Byte"},"Attrs":["In"]}
 			,{"Name":"Buffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out",{"Kind":"MemorySize","BytesParamIndex":3}]}
 			,{"Name":"BufferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -7504,7 +8746,7 @@
 		,"Platform":"windows10.0.10240"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"InterfaceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			{"Name":"InterfaceHandle","Type":{"Kind":"ApiRef","Name":"WINUSB_INTERFACE_HANDLE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":["In"]}
 			,{"Name":"StartTrackingInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"USB_START_TRACKING_FOR_TIME_SYNC_INFORMATION","TargetKind":"Default","Api":"Devices.Usb","Parents":[]}},"Attrs":["In"]}
 		]
 	}
@@ -7518,7 +8760,7 @@
 		,"Platform":"windows10.0.10240"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"InterfaceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			{"Name":"InterfaceHandle","Type":{"Kind":"ApiRef","Name":"WINUSB_INTERFACE_HANDLE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":["In"]}
 			,{"Name":"FrameQpcInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"USB_FRAME_NUMBER_AND_QPC_FOR_TIME_SYNC_INFORMATION","TargetKind":"Default","Api":"Devices.Usb","Parents":[]}},"Attrs":["In"]}
 		]
 	}
@@ -7532,7 +8774,7 @@
 		,"Platform":"windows10.0.10240"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"InterfaceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			{"Name":"InterfaceHandle","Type":{"Kind":"ApiRef","Name":"WINUSB_INTERFACE_HANDLE","TargetKind":"Default","Api":"Devices.Usb","Parents":[]},"Attrs":["In"]}
 			,{"Name":"StopTrackingInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"USB_STOP_TRACKING_FOR_TIME_SYNC_INFORMATION","TargetKind":"Default","Api":"Devices.Usb","Parents":[]}},"Attrs":["In"]}
 		]
 	}

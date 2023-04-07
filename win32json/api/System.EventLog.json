@@ -95,6 +95,15 @@
 		,"FreeFunc":"DeregisterEventSource"
 	}
 	,{
+		"Name":"EVT_HANDLE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":"EvtClose"
+	}
+	,{
 		"Name":"EVT_VARIANT_TYPE"
 		,"Architectures":[]
 		,"Platform":null
@@ -136,6 +145,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":[]}
 			,{"Name":"Count","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -149,6 +159,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"BooleanVal","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 					,{"Name":"SByteVal","Type":{"Kind":"Native","Name":"SByte"},"Attrs":[]}
@@ -187,9 +198,9 @@
 					,{"Name":"AnsiStringArr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 					,{"Name":"SidArr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 					,{"Name":"SizeTArr","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UIntPtr"}},"Attrs":[]}
-					,{"Name":"EvtHandleVal","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+					,{"Name":"EvtHandleVal","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":[]}
 					,{"Name":"XmlVal","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
-					,{"Name":"XmlValArr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+					,{"Name":"XmlValArr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Const"]}
 				]
 				,"NestedTypes":[
 				]
@@ -221,7 +232,7 @@
 			,{"Name":"EvtRpcLoginAuthKerberos","Value":2}
 			,{"Name":"EvtRpcLoginAuthNTLM","Value":3}
 		]
-		,"IntegerBase":"Int32"
+		,"IntegerBase":"UInt32"
 	}
 	,{
 		"Name":"EVT_RPC_LOGIN"
@@ -230,6 +241,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Server","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"User","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -254,7 +266,7 @@
 			,{"Name":"EvtQueryReverseDirection","Value":512}
 			,{"Name":"EvtQueryTolerateQueryErrors","Value":4096}
 		]
-		,"IntegerBase":"Int32"
+		,"IntegerBase":"UInt32"
 	}
 	,{
 		"Name":"EVT_SEEK_FLAGS"
@@ -271,7 +283,7 @@
 			,{"Name":"EvtSeekOriginMask","Value":7}
 			,{"Name":"EvtSeekStrict","Value":65536}
 		]
-		,"IntegerBase":"Int32"
+		,"IntegerBase":"UInt32"
 	}
 	,{
 		"Name":"EVT_SUBSCRIBE_FLAGS"
@@ -288,7 +300,7 @@
 			,{"Name":"EvtSubscribeTolerateQueryErrors","Value":4096}
 			,{"Name":"EvtSubscribeStrict","Value":65536}
 		]
-		,"IntegerBase":"Int32"
+		,"IntegerBase":"UInt32"
 	}
 	,{
 		"Name":"EVT_SUBSCRIBE_NOTIFY_ACTION"
@@ -314,8 +326,8 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"Action","Type":{"Kind":"ApiRef","Name":"EVT_SUBSCRIBE_NOTIFY_ACTION","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In"]}
-			,{"Name":"UserContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Optional"]}
-			,{"Name":"Event","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+			,{"Name":"UserContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
+			,{"Name":"Event","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -360,7 +372,7 @@
 			,{"Name":"EvtRenderContextSystem","Value":1}
 			,{"Name":"EvtRenderContextUser","Value":2}
 		]
-		,"IntegerBase":"Int32"
+		,"IntegerBase":"UInt32"
 	}
 	,{
 		"Name":"EVT_RENDER_FLAGS"
@@ -374,7 +386,7 @@
 			,{"Name":"EvtRenderEventXml","Value":1}
 			,{"Name":"EvtRenderBookmark","Value":2}
 		]
-		,"IntegerBase":"Int32"
+		,"IntegerBase":"UInt32"
 	}
 	,{
 		"Name":"EVT_FORMAT_MESSAGE_FLAGS"
@@ -394,7 +406,7 @@
 			,{"Name":"EvtFormatMessageId","Value":8}
 			,{"Name":"EvtFormatMessageXml","Value":9}
 		]
-		,"IntegerBase":"Int32"
+		,"IntegerBase":"UInt32"
 	}
 	,{
 		"Name":"EVT_OPEN_LOG_FLAGS"
@@ -407,7 +419,7 @@
 			{"Name":"EvtOpenChannelPath","Value":1}
 			,{"Name":"EvtOpenFilePath","Value":2}
 		]
-		,"IntegerBase":"Int32"
+		,"IntegerBase":"UInt32"
 	}
 	,{
 		"Name":"EVT_LOG_PROPERTY_ID"
@@ -441,7 +453,7 @@
 			,{"Name":"EvtExportLogTolerateQueryErrors","Value":4096}
 			,{"Name":"EvtExportLogOverwrite","Value":8192}
 		]
-		,"IntegerBase":"Int32"
+		,"IntegerBase":"UInt32"
 	}
 	,{
 		"Name":"EVT_CHANNEL_CONFIG_PROPERTY_ID"
@@ -541,7 +553,7 @@
 		,"Values":[
 			{"Name":"EvtChannelReferenceImported","Value":1}
 		]
-		,"IntegerBase":"Int32"
+		,"IntegerBase":"UInt32"
 	}
 	,{
 		"Name":"EVT_PUBLISHER_METADATA_PROPERTY_ID"
@@ -640,6 +652,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -668,6 +681,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ulSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"szLogicalLogFile","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
@@ -684,6 +698,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwFull","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -697,7 +712,7 @@
 		"Name":"EvtOpenSession"
 		,"SetLastError":true
 		,"DllImport":"wevtapi.dll"
-		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.0.6000"
@@ -705,8 +720,8 @@
 		,"Params":[
 			{"Name":"LoginClass","Type":{"Kind":"ApiRef","Name":"EVT_LOGIN_CLASS","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Login","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
-			,{"Name":"Timeout","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
-			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"Timeout","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
+			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
@@ -719,7 +734,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"Object","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+			{"Name":"Object","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -732,7 +747,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"Object","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In","Optional"]}
+			{"Name":"Object","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In","Optional"]}
 		]
 	}
 	,{
@@ -754,13 +769,13 @@
 		"Name":"EvtQuery"
 		,"SetLastError":true
 		,"DllImport":"wevtapi.dll"
-		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"Session","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In","Optional"]}
+			{"Name":"Session","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"Path","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 			,{"Name":"Query","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -776,7 +791,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"ResultSet","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+			{"Name":"ResultSet","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In"]}
 			,{"Name":"EventsSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"Events","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"Native","Name":"IntPtr"}},"Attrs":["Out"]}
 			,{"Name":"Timeout","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -794,10 +809,10 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"ResultSet","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+			{"Name":"ResultSet","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Position","Type":{"Kind":"Native","Name":"Int64"},"Attrs":["In"]}
-			,{"Name":"Bookmark","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In","Optional"]}
-			,{"Name":"Timeout","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"Bookmark","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"Timeout","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
@@ -805,19 +820,19 @@
 		"Name":"EvtSubscribe"
 		,"SetLastError":true
 		,"DllImport":"wevtapi.dll"
-		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"Session","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In","Optional"]}
+			{"Name":"Session","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"SignalEvent","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"ChannelPath","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 			,{"Name":"Query","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
-			,{"Name":"Bookmark","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In","Optional"]}
-			,{"Name":"Context","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Optional"]}
-			,{"Name":"Callback","Type":{"Kind":"ApiRef","Name":"EVT_SUBSCRIBE_CALLBACK","TargetKind":"FunctionPointer","Api":"System.EventLog","Parents":[]},"Attrs":["Optional"]}
+			,{"Name":"Bookmark","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"Context","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
+			,{"Name":"Callback","Type":{"Kind":"ApiRef","Name":"EVT_SUBSCRIBE_CALLBACK","TargetKind":"FunctionPointer","Api":"System.EventLog","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
@@ -825,14 +840,14 @@
 		"Name":"EvtCreateRenderContext"
 		,"SetLastError":true
 		,"DllImport":"wevtapi.dll"
-		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ValuePathsCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"ValuePaths","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"ValuePaths","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
@@ -846,8 +861,8 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"Context","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In","Optional"]}
-			,{"Name":"Fragment","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+			{"Name":"Context","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"Fragment","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"BufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"Buffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":3},"Optional"]}
@@ -865,8 +880,8 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"PublisherMetadata","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In","Optional"]}
-			,{"Name":"Event","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In","Optional"]}
+			{"Name":"PublisherMetadata","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"Event","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"MessageId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"ValueCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"Values","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"ApiRef","Name":"EVT_VARIANT","TargetKind":"Default","Api":"System.EventLog","Parents":[]}},"Attrs":["In","Optional"]}
@@ -880,13 +895,13 @@
 		"Name":"EvtOpenLog"
 		,"SetLastError":true
 		,"DllImport":"wevtapi.dll"
-		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"Session","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In","Optional"]}
+			{"Name":"Session","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"Path","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
@@ -901,7 +916,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"Log","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+			{"Name":"Log","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In"]}
 			,{"Name":"PropertyId","Type":{"Kind":"ApiRef","Name":"EVT_LOG_PROPERTY_ID","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In"]}
 			,{"Name":"PropertyValueBufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"PropertyValueBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"EVT_VARIANT","TargetKind":"Default","Api":"System.EventLog","Parents":[]}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":2},"Optional"]}
@@ -918,7 +933,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"Session","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In","Optional"]}
+			{"Name":"Session","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"ChannelPath","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"TargetFilePath","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -934,7 +949,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"Session","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In","Optional"]}
+			{"Name":"Session","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"Path","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 			,{"Name":"Query","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 			,{"Name":"TargetFilePath","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
@@ -951,7 +966,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"Session","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In","Optional"]}
+			{"Name":"Session","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"LogFilePath","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"Locale","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -961,13 +976,13 @@
 		"Name":"EvtOpenChannelEnum"
 		,"SetLastError":true
 		,"DllImport":"wevtapi.dll"
-		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"Session","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In","Optional"]}
+			{"Name":"Session","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
@@ -981,7 +996,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"ChannelEnum","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+			{"Name":"ChannelEnum","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In"]}
 			,{"Name":"ChannelPathBufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"ChannelPathBuffer","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["Out","Optional"]}
 			,{"Name":"ChannelPathBufferUsed","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
@@ -991,13 +1006,13 @@
 		"Name":"EvtOpenChannelConfig"
 		,"SetLastError":true
 		,"DllImport":"wevtapi.dll"
-		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"Session","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In","Optional"]}
+			{"Name":"Session","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"ChannelPath","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
@@ -1012,7 +1027,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"ChannelConfig","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+			{"Name":"ChannelConfig","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
@@ -1026,7 +1041,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"ChannelConfig","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+			{"Name":"ChannelConfig","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In"]}
 			,{"Name":"PropertyId","Type":{"Kind":"ApiRef","Name":"EVT_CHANNEL_CONFIG_PROPERTY_ID","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"PropertyValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"EVT_VARIANT","TargetKind":"Default","Api":"System.EventLog","Parents":[]}},"Attrs":["In"]}
@@ -1042,7 +1057,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"ChannelConfig","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+			{"Name":"ChannelConfig","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In"]}
 			,{"Name":"PropertyId","Type":{"Kind":"ApiRef","Name":"EVT_CHANNEL_CONFIG_PROPERTY_ID","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"PropertyValueBufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -1054,13 +1069,13 @@
 		"Name":"EvtOpenPublisherEnum"
 		,"SetLastError":true
 		,"DllImport":"wevtapi.dll"
-		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"Session","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In","Optional"]}
+			{"Name":"Session","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
@@ -1074,7 +1089,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"PublisherEnum","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+			{"Name":"PublisherEnum","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In"]}
 			,{"Name":"PublisherIdBufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"PublisherIdBuffer","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["Out","Optional"]}
 			,{"Name":"PublisherIdBufferUsed","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
@@ -1084,13 +1099,13 @@
 		"Name":"EvtOpenPublisherMetadata"
 		,"SetLastError":true
 		,"DllImport":"wevtapi.dll"
-		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"Session","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In","Optional"]}
+			{"Name":"Session","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"PublisherId","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"LogFilePath","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 			,{"Name":"Locale","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -1107,7 +1122,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"PublisherMetadata","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+			{"Name":"PublisherMetadata","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In"]}
 			,{"Name":"PropertyId","Type":{"Kind":"ApiRef","Name":"EVT_PUBLISHER_METADATA_PROPERTY_ID","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"PublisherMetadataPropertyBufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -1119,13 +1134,13 @@
 		"Name":"EvtOpenEventMetadataEnum"
 		,"SetLastError":true
 		,"DllImport":"wevtapi.dll"
-		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"PublisherMetadata","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+			{"Name":"PublisherMetadata","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
@@ -1133,13 +1148,13 @@
 		"Name":"EvtNextEventMetadata"
 		,"SetLastError":true
 		,"DllImport":"wevtapi.dll"
-		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"EventMetadataEnum","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+			{"Name":"EventMetadataEnum","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
@@ -1153,7 +1168,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"EventMetadata","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+			{"Name":"EventMetadata","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In"]}
 			,{"Name":"PropertyId","Type":{"Kind":"ApiRef","Name":"EVT_EVENT_METADATA_PROPERTY_ID","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"EventMetadataPropertyBufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -1204,7 +1219,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"QueryOrSubscription","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+			{"Name":"QueryOrSubscription","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In"]}
 			,{"Name":"PropertyId","Type":{"Kind":"ApiRef","Name":"EVT_QUERY_PROPERTY_ID","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In"]}
 			,{"Name":"PropertyValueBufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"PropertyValueBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"EVT_VARIANT","TargetKind":"Default","Api":"System.EventLog","Parents":[]}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":2},"Optional"]}
@@ -1215,7 +1230,7 @@
 		"Name":"EvtCreateBookmark"
 		,"SetLastError":true
 		,"DllImport":"wevtapi.dll"
-		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.0.6000"
@@ -1234,8 +1249,8 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"Bookmark","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
-			,{"Name":"Event","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+			{"Name":"Bookmark","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In"]}
+			,{"Name":"Event","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -1248,7 +1263,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"Event","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+			{"Name":"Event","Type":{"Kind":"ApiRef","Name":"EVT_HANDLE","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In"]}
 			,{"Name":"PropertyId","Type":{"Kind":"ApiRef","Name":"EVT_EVENT_PROPERTY_ID","TargetKind":"Default","Api":"System.EventLog","Parents":[]},"Attrs":["In"]}
 			,{"Name":"PropertyValueBufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"PropertyValueBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"EVT_VARIANT","TargetKind":"Default","Api":"System.EventLog","Parents":[]}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":2},"Optional"]}
@@ -1518,7 +1533,7 @@
 			,{"Name":"lpUserSid","Type":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"wNumStrings","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":["In"]}
 			,{"Name":"dwDataSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"lpStrings","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":5,"Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"lpStrings","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":5,"Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"lpRawData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":6},"Optional"]}
 		]
 	}
@@ -1539,7 +1554,7 @@
 			,{"Name":"lpUserSid","Type":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"wNumStrings","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":["In"]}
 			,{"Name":"dwDataSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"lpStrings","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":5,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"lpStrings","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":5,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"lpRawData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":6},"Optional"]}
 		]
 	}

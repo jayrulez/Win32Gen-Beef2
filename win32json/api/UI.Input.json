@@ -82,6 +82,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -98,6 +99,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"usFlags","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"UI.Input","Parents":[]},"Attrs":[]}
@@ -114,6 +116,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"ulButtons","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"UI.Input","Parents":["_Anonymous_e__Union"]},"Attrs":[]}
@@ -126,6 +129,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"usButtonFlags","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 							,{"Name":"usButtonData","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -144,6 +148,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"MakeCode","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -162,6 +167,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSizeHid","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -177,6 +183,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"header","Type":{"Kind":"ApiRef","Name":"RAWINPUTHEADER","TargetKind":"Default","Api":"UI.Input","Parents":[]},"Attrs":[]}
 			,{"Name":"data","Type":{"Kind":"ApiRef","Name":"_data_e__Union","TargetKind":"Default","Api":"UI.Input","Parents":[]},"Attrs":[]}
@@ -189,6 +196,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"mouse","Type":{"Kind":"ApiRef","Name":"RAWMOUSE","TargetKind":"Default","Api":"UI.Input","Parents":[]},"Attrs":[]}
 					,{"Name":"keyboard","Type":{"Kind":"ApiRef","Name":"RAWKEYBOARD","TargetKind":"Default","Api":"UI.Input","Parents":[]},"Attrs":[]}
@@ -206,6 +214,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwNumberOfButtons","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -222,6 +231,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwSubType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -240,6 +250,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwVendorId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwProductId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -257,6 +268,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwType","Type":{"Kind":"ApiRef","Name":"RID_DEVICE_INFO_TYPE","TargetKind":"Default","Api":"UI.Input","Parents":[]},"Attrs":[]}
@@ -270,6 +282,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"mouse","Type":{"Kind":"ApiRef","Name":"RID_DEVICE_INFO_MOUSE","TargetKind":"Default","Api":"UI.Input","Parents":[]},"Attrs":[]}
 					,{"Name":"keyboard","Type":{"Kind":"ApiRef","Name":"RID_DEVICE_INFO_KEYBOARD","TargetKind":"Default","Api":"UI.Input","Parents":[]},"Attrs":[]}
@@ -287,6 +300,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"usUsagePage","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"usUsage","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -303,6 +317,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"hDevice","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"dwType","Type":{"Kind":"ApiRef","Name":"RID_DEVICE_INFO_TYPE","TargetKind":"Default","Api":"UI.Input","Parents":[]},"Attrs":[]}
@@ -349,6 +364,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"deviceType","Type":{"Kind":"ApiRef","Name":"INPUT_MESSAGE_DEVICE_TYPE","TargetKind":"Default","Api":"UI.Input","Parents":[]},"Attrs":[]}
 			,{"Name":"originId","Type":{"Kind":"ApiRef","Name":"INPUT_MESSAGE_ORIGIN_ID","TargetKind":"Default","Api":"UI.Input","Parents":[]},"Attrs":[]}

@@ -1318,6 +1318,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"EVENT_TRACE_TYPE_CONFIG_PHYSICALDISK_EX"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":19
+		,"Attrs":[]
+	}
+	,{
 		"Name":"EVENT_TRACE_TYPE_CONFIG_IRQ"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -3504,6 +3511,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"BufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ProviderId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3521,10 +3529,11 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"CountLost","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"KernelHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-					,{"Name":"TimeStamp","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+					,{"Name":"TimeStamp","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]
@@ -3536,6 +3545,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"HistoricalContext","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 					,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":["_Anonymous1_e__Union"]},"Attrs":[]}
@@ -3548,6 +3558,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"Linkage","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3566,6 +3577,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"OffsetInstanceData","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"LengthInstanceData","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3580,6 +3592,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"WnodeHeader","Type":{"Kind":"ApiRef","Name":"WNODE_HEADER","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 			,{"Name":"DataBlockOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3595,6 +3608,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"FixedInstanceSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"OffsetInstanceDataAndLength","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"OFFSETINSTANCEDATAANDLENGTH","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":[]}
@@ -3611,6 +3625,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"WnodeHeader","Type":{"Kind":"ApiRef","Name":"WNODE_HEADER","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 			,{"Name":"OffsetInstanceName","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3629,6 +3644,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"WnodeHeader","Type":{"Kind":"ApiRef","Name":"WNODE_HEADER","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 			,{"Name":"OffsetInstanceName","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3648,6 +3664,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"WnodeHeader","Type":{"Kind":"ApiRef","Name":"WNODE_HEADER","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 			,{"Name":"OffsetInstanceName","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3667,6 +3684,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"WnodeHeader","Type":{"Kind":"ApiRef","Name":"WNODE_HEADER","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 		]
@@ -3680,6 +3698,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"WnodeHeader","Type":{"Kind":"ApiRef","Name":"WNODE_HEADER","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 			,{"Name":"TargetGuid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
@@ -3694,6 +3713,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"TargetInstanceIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"TargetInstanceName","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
@@ -3710,6 +3730,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"WnodeHeader","Type":{"Kind":"ApiRef","Name":"WNODE_HEADER","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 			,{"Name":"SizeNeeded","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3724,6 +3745,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Guid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3738,6 +3760,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"InstanceNameList","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"BaseNameOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3756,6 +3779,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"BufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NextWmiRegInfo","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3810,13 +3834,14 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Size","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"Anonymous1","Type":{"Kind":"ApiRef","Name":"_Anonymous1_e__Union","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 			,{"Name":"Anonymous2","Type":{"Kind":"ApiRef","Name":"_Anonymous2_e__Union","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 			,{"Name":"ThreadId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ProcessId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"TimeStamp","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"TimeStamp","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"Anonymous3","Type":{"Kind":"ApiRef","Name":"_Anonymous3_e__Union","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 			,{"Name":"Anonymous4","Type":{"Kind":"ApiRef","Name":"_Anonymous4_e__Union","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 		]
@@ -3828,6 +3853,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Anonymous1","Type":{"Kind":"ApiRef","Name":"_Anonymous1_e__Struct","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":["_Anonymous4_e__Union"]},"Attrs":[]}
 					,{"Name":"ProcessorTime","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -3841,6 +3867,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"ClientContext","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3855,6 +3882,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"KernelTime","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"UserTime","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3871,6 +3899,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"Class","Type":{"Kind":"ApiRef","Name":"_Class_e__Struct","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":["_Anonymous2_e__Union"]},"Attrs":[]}
@@ -3883,6 +3912,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"Type","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 							,{"Name":"Level","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -3900,6 +3930,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"FieldTypeFlags","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 					,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":["_Anonymous1_e__Union"]},"Attrs":[]}
@@ -3912,6 +3943,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"HeaderType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 							,{"Name":"MarkerFlags","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -3928,6 +3960,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Guid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 					,{"Name":"GuidPtr","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -3944,13 +3977,14 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Size","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"Anonymous1","Type":{"Kind":"ApiRef","Name":"_Anonymous1_e__Union","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 			,{"Name":"Anonymous2","Type":{"Kind":"ApiRef","Name":"_Anonymous2_e__Union","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 			,{"Name":"ThreadId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ProcessId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"TimeStamp","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"TimeStamp","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"RegHandle","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"InstanceId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ParentInstanceId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3965,6 +3999,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Anonymous1","Type":{"Kind":"ApiRef","Name":"_Anonymous1_e__Struct","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":["_Anonymous3_e__Union"]},"Attrs":[]}
 					,{"Name":"ProcessorTime","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -3978,6 +4013,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"EventId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3992,6 +4028,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"KernelTime","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"UserTime","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4008,6 +4045,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"Class","Type":{"Kind":"ApiRef","Name":"_Class_e__Struct","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":["_Anonymous2_e__Union"]},"Attrs":[]}
@@ -4020,6 +4058,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"Type","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 							,{"Name":"Level","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4037,6 +4076,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"FieldTypeFlags","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 					,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":["_Anonymous1_e__Union"]},"Attrs":[]}
@@ -4049,6 +4089,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"HeaderType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 							,{"Name":"MarkerFlags","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4067,6 +4108,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"DataPtr","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4082,12 +4124,13 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"BufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Anonymous1","Type":{"Kind":"ApiRef","Name":"_Anonymous1_e__Union","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 			,{"Name":"ProviderVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NumberOfProcessors","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"EndTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"EndTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"TimerResolution","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"MaximumFileSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"LogFileMode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4096,9 +4139,9 @@
 			,{"Name":"LoggerName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"LogFileName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"TimeZone","Type":{"Kind":"ApiRef","Name":"TIME_ZONE_INFORMATION","TargetKind":"Default","Api":"System.Time","Parents":[]},"Attrs":[]}
-			,{"Name":"BootTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"PerfFreq","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"StartTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"BootTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"PerfFreq","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"StartTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"ReservedFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"BuffersLost","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -4110,6 +4153,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"LogInstanceGuid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 					,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":["_Anonymous2_e__Union"]},"Attrs":[]}
@@ -4122,6 +4166,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"StartBuffers","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"PointerSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4140,6 +4185,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"VersionDetail","Type":{"Kind":"ApiRef","Name":"_VersionDetail_e__Struct","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":["_Anonymous1_e__Union"]},"Attrs":[]}
@@ -4152,6 +4198,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"MajorVersion","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 							,{"Name":"MinorVersion","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4172,12 +4219,13 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"BufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Anonymous1","Type":{"Kind":"ApiRef","Name":"_Anonymous1_e__Union","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 			,{"Name":"ProviderVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NumberOfProcessors","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"EndTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"EndTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"TimerResolution","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"MaximumFileSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"LogFileMode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4186,9 +4234,9 @@
 			,{"Name":"LoggerName","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"LogFileName","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"TimeZone","Type":{"Kind":"ApiRef","Name":"TIME_ZONE_INFORMATION","TargetKind":"Default","Api":"System.Time","Parents":[]},"Attrs":[]}
-			,{"Name":"BootTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"PerfFreq","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"StartTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"BootTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"PerfFreq","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"StartTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"ReservedFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"BuffersLost","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -4200,6 +4248,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"LogInstanceGuid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 					,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":["_Anonymous2_e__Union"]},"Attrs":[]}
@@ -4212,6 +4261,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"StartBuffers","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"PointerSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4230,6 +4280,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"VersionDetail","Type":{"Kind":"ApiRef","Name":"_VersionDetail_e__Struct","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":["_Anonymous1_e__Union"]},"Attrs":[]}
@@ -4242,6 +4293,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"MajorVersion","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 							,{"Name":"MinorVersion","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4262,12 +4314,13 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"BufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Anonymous1","Type":{"Kind":"ApiRef","Name":"_Anonymous1_e__Union","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 			,{"Name":"ProviderVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NumberOfProcessors","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"EndTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"EndTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"TimerResolution","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"MaximumFileSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"LogFileMode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4276,9 +4329,9 @@
 			,{"Name":"LoggerName","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"LogFileName","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"TimeZone","Type":{"Kind":"ApiRef","Name":"TIME_ZONE_INFORMATION","TargetKind":"Default","Api":"System.Time","Parents":[]},"Attrs":[]}
-			,{"Name":"BootTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"PerfFreq","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"StartTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"BootTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"PerfFreq","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"StartTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"ReservedFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"BuffersLost","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -4290,6 +4343,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"LogInstanceGuid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 					,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":["_Anonymous2_e__Union"]},"Attrs":[]}
@@ -4302,6 +4356,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"StartBuffers","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"PointerSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4320,6 +4375,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"VersionDetail","Type":{"Kind":"ApiRef","Name":"_VersionDetail_e__Struct","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":["_Anonymous1_e__Union"]},"Attrs":[]}
@@ -4332,6 +4388,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"MajorVersion","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 							,{"Name":"MinorVersion","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4352,6 +4409,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"RegHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"InstanceId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4366,6 +4424,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Wnode","Type":{"Kind":"ApiRef","Name":"WNODE_HEADER","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 			,{"Name":"BufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4394,6 +4453,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"AgeLimit","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 					,{"Name":"FlushThreshold","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -4410,6 +4470,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Wnode","Type":{"Kind":"ApiRef","Name":"WNODE_HEADER","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 			,{"Name":"BufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4442,6 +4503,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":["_Anonymous3_e__Union"]},"Attrs":[]}
 					,{"Name":"V2Options","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -4454,6 +4516,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 						]
@@ -4469,6 +4532,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":["_Anonymous2_e__Union"]},"Attrs":[]}
 					,{"Name":"V2Control","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4481,6 +4545,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 						]
@@ -4496,6 +4561,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"AgeLimit","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 					,{"Name":"FlushThreshold","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -4512,6 +4578,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Guid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["Const"]}
 			,{"Name":"RegHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -4526,6 +4593,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Guid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"GuidType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4544,6 +4612,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 			,{"Name":"LoggerId","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -4556,6 +4625,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":["_Anonymous_e__Union"]},"Attrs":[]}
 					,{"Name":"ProcessorIndex","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -4568,6 +4638,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"ProcessorNumber","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 							,{"Name":"Alignment","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4586,6 +4657,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"IsEnabled","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Level","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4606,6 +4678,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NextOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"EnableCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4622,6 +4695,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InstanceCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4636,6 +4710,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NextEntryOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Source","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4669,6 +4744,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"OwnerType","Type":{"Kind":"ApiRef","Name":"ETW_PMC_COUNTER_OWNER_TYPE","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 			,{"Name":"ProfileSource","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4684,10 +4760,29 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ProcessorNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NumberOfCounters","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"CounterOwners","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"ETW_PMC_COUNTER_OWNER","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"ETW_PMC_SESSION_INFO"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"NextEntryOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"LoggerId","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"ProfileSourceCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"HookIdCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -4699,6 +4794,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"EVENT_TRACE_HEADER","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 			,{"Name":"InstanceId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4716,6 +4812,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"ClientContext","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"BufferContext","Type":{"Kind":"ApiRef","Name":"ETW_BUFFER_CONTEXT","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
@@ -4778,6 +4875,103 @@
 		]
 	}
 	,{
+		"Name":"ETW_BUFFER_HEADER"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"Reserved1","Type":{"Kind":"Array","Shape":{"Size":4},"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			,{"Name":"TimeStamp","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"Reserved2","Type":{"Kind":"Array","Shape":{"Size":4},"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			,{"Name":"ClientContext","Type":{"Kind":"ApiRef","Name":"ETW_BUFFER_CONTEXT","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
+			,{"Name":"Reserved3","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"FilledBytes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Reserved4","Type":{"Kind":"Array","Shape":{"Size":5},"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"ETW_BUFFER_CALLBACK_INFORMATION"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"TraceHandle","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"LogfileHeader","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TRACE_LOGFILE_HEADER","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":["Const"]}
+			,{"Name":"BuffersRead","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"PETW_BUFFER_CALLBACK"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"FunctionPointer"
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"Buffer","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ETW_BUFFER_HEADER","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":1},"Const"]}
+			,{"Name":"BufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"ConsumerInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ETW_BUFFER_CALLBACK_INFORMATION","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":["In","Const"]}
+			,{"Name":"CallbackContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
+		]
+	}
+	,{
+		"Name":"ETW_PROCESS_TRACE_MODES"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"ETW_PROCESS_TRACE_MODE_NONE","Value":0}
+			,{"Name":"ETW_PROCESS_TRACE_MODE_RAW_TIMESTAMP","Value":1}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"ETW_OPEN_TRACE_OPTIONS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"ProcessTraceModes","Type":{"Kind":"ApiRef","Name":"ETW_PROCESS_TRACE_MODES","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
+			,{"Name":"EventCallback","Type":{"Kind":"ApiRef","Name":"PEVENT_RECORD_CALLBACK","TargetKind":"FunctionPointer","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
+			,{"Name":"EventCallbackContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+			,{"Name":"BufferCallback","Type":{"Kind":"ApiRef","Name":"PETW_BUFFER_CALLBACK","TargetKind":"FunctionPointer","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
+			,{"Name":"BufferCallbackContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"PETW_BUFFER_COMPLETION_CALLBACK"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"FunctionPointer"
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"Void"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"Buffer","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ETW_BUFFER_HEADER","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":["In","Const"]}
+			,{"Name":"CallbackContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
+		]
+	}
+	,{
 		"Name":"WMIDPREQUEST"
 		,"Architectures":[]
 		,"Platform":null
@@ -4800,6 +4994,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"LogFileName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"LoggerName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -4824,6 +5019,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"LogFileMode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"ProcessTraceMode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4838,6 +5034,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"EventCallback","Type":{"Kind":"ApiRef","Name":"PEVENT_CALLBACK","TargetKind":"FunctionPointer","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 					,{"Name":"EventRecordCallback","Type":{"Kind":"ApiRef","Name":"PEVENT_RECORD_CALLBACK","TargetKind":"FunctionPointer","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
@@ -4854,6 +5051,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"LogFileName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"LoggerName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -4878,6 +5076,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"LogFileMode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"ProcessTraceMode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4892,6 +5091,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"EventCallback","Type":{"Kind":"ApiRef","Name":"PEVENT_CALLBACK","TargetKind":"FunctionPointer","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 					,{"Name":"EventRecordCallback","Type":{"Kind":"ApiRef","Name":"PEVENT_RECORD_CALLBACK","TargetKind":"FunctionPointer","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
@@ -4908,6 +5108,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"EnableProperty","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4925,6 +5126,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"EnableProperty","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4971,7 +5173,8 @@
 			,{"Name":"TraceStackCachingInfo","Value":24}
 			,{"Name":"TracePmcCounterOwners","Value":25}
 			,{"Name":"TraceUnifiedStackCachingInfo","Value":26}
-			,{"Name":"MaxTraceSetInfoClass","Value":27}
+			,{"Name":"TracePmcSessionInformation","Value":27}
+			,{"Name":"MaxTraceSetInfoClass","Value":28}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -4982,6 +5185,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"EventGuid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"Type","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4997,6 +5201,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Enabled","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"CacheSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5012,6 +5217,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Source","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Interval","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5026,6 +5232,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"EtwTraceProcessingVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5040,6 +5247,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"CaptureStateFrequencyInSeconds","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ProviderCount","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -5059,7 +5267,8 @@
 			{"Name":"EtwQueryPartitionInformation","Value":1}
 			,{"Name":"EtwQueryPartitionInformationV2","Value":2}
 			,{"Name":"EtwQueryLastDroppedTimes","Value":3}
-			,{"Name":"EtwQueryProcessHandleInfoMax","Value":4}
+			,{"Name":"EtwQueryLogFileHeader","Value":4}
+			,{"Name":"EtwQueryProcessHandleInfoMax","Value":5}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -5070,6 +5279,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"PartitionId","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"ParentId","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
@@ -5086,6 +5296,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"QpcOffsetFromRoot","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"PartitionType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5102,6 +5313,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Ptr","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5115,6 +5327,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":["_Anonymous_e__Union"]},"Attrs":[]}
@@ -5127,6 +5340,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"Type","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 							,{"Name":"Reserved1","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -5146,6 +5360,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Id","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"Version","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -5165,6 +5380,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Ptr","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5180,6 +5396,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Id","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"Version","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -5198,6 +5415,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"FilterIn","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -5214,6 +5432,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"MatchAnyKeyword","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"MatchAllKeyword","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -5232,6 +5451,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"MatchAnyKeyword","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"MatchAllKeyword","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -5283,6 +5503,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Reserved1","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"ExtType","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -5298,6 +5519,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 				]
@@ -5313,6 +5535,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"InstanceId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ParentInstanceId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5328,6 +5551,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"RelatedActivityId","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 		]
@@ -5341,6 +5565,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SessionId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -5354,6 +5579,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"MatchId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"Address","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
@@ -5368,6 +5594,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"MatchId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"Address","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":[]}
@@ -5382,6 +5609,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"MatchId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"StackKey","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5397,6 +5625,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"MatchId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"StackKey","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -5411,6 +5640,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"PebsIndex","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 		]
@@ -5424,6 +5654,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Counter","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":[]}
 		]
@@ -5437,6 +5668,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ProcessStartKey","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 		]
@@ -5450,6 +5682,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Key","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 		]
@@ -5463,6 +5696,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Size","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"HeaderType","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -5470,7 +5704,7 @@
 			,{"Name":"EventProperty","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"ThreadId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ProcessId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"TimeStamp","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"TimeStamp","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"ProviderId","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"EventDescriptor","Type":{"Kind":"ApiRef","Name":"EVENT_DESCRIPTOR","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
@@ -5484,6 +5718,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":["_Anonymous_e__Union"]},"Attrs":[]}
 					,{"Name":"ProcessorTime","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -5496,6 +5731,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"KernelTime","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"UserTime","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5514,6 +5750,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"EventHeader","Type":{"Kind":"ApiRef","Name":"EVENT_HEADER","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 			,{"Name":"BufferContext","Type":{"Kind":"ApiRef","Name":"ETW_BUFFER_CONTEXT","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
@@ -5563,6 +5800,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"OutputOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
@@ -5575,6 +5813,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Value","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"InputOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5622,6 +5861,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NameOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Flag","Type":{"Kind":"ApiRef","Name":"MAP_FLAGS","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
@@ -5637,6 +5877,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"MapEntryValueType","Type":{"Kind":"ApiRef","Name":"MAP_VALUETYPE","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 					,{"Name":"FormatStringOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5772,6 +6013,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"PROPERTY_FLAGS","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 			,{"Name":"NameOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5788,6 +6030,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":["_Anonymous4_e__Union"]},"Attrs":[]}
@@ -5800,6 +6043,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 						]
@@ -5815,6 +6059,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"count","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 					,{"Name":"countPropertyIndex","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -5829,6 +6074,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"nonStructType","Type":{"Kind":"ApiRef","Name":"_nonStructType","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":["_Anonymous1_e__Union"]},"Attrs":[]}
 					,{"Name":"structType","Type":{"Kind":"ApiRef","Name":"_structType","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":["_Anonymous1_e__Union"]},"Attrs":[]}
@@ -5842,6 +6088,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"InType","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 							,{"Name":"OutType","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -5857,6 +6104,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"InType","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 							,{"Name":"OutType","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -5872,6 +6120,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"StructStartIndex","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 							,{"Name":"NumOfStructMembers","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -5889,6 +6138,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 					,{"Name":"lengthPropertyIndex","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -5935,6 +6185,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ProviderGuid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"EventGuid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
@@ -5965,6 +6216,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"TEMPLATE_FLAGS","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 					,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":["_Anonymous3_e__Union"]},"Attrs":[]}
@@ -5977,6 +6229,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 						]
@@ -5992,6 +6245,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"EventNameOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"ActivityIDNameOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6006,6 +6260,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"EventAttributesOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"RelatedActivityIDNameOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6022,6 +6277,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"PropertyName","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"ArrayIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6062,6 +6318,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"FieldName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"CompareOp","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -6077,6 +6334,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Id","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Version","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -6112,6 +6370,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NameOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"DescriptionOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6127,6 +6386,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumberOfElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"FieldType","Type":{"Kind":"ApiRef","Name":"EVENT_FIELD_TYPE","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
@@ -6142,6 +6402,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ProviderGuid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"SchemaSource","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6157,6 +6418,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumberOfProviders","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6172,6 +6434,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumberOfEvents","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6204,6 +6467,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ParameterValue","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"ParameterType","Type":{"Kind":"ApiRef","Name":"TDH_CONTEXT_TYPE","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
@@ -6358,7 +6622,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"TimeStamp","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In"]}
+					{"Name":"TimeStamp","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int64"}},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -7372,7 +7636,7 @@
 			,{"Name":"EventMatchANY","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"PayloadPredicateCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"PayloadPredicates","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"ApiRef","Name":"PAYLOAD_FILTER_PREDICATE","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":["In"]}
-			,{"Name":"PayloadFilter","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","Optional"]}
+			,{"Name":"PayloadFilter","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out"]}
 		]
 	}
 	,{

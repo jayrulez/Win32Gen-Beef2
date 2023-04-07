@@ -1304,6 +1304,34 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"IPSEC_POLICY_FLAG_BANDWIDTH1"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":268435456
+		,"Attrs":[]
+	}
+	,{
+		"Name":"IPSEC_POLICY_FLAG_BANDWIDTH2"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":536870912
+		,"Attrs":[]
+	}
+	,{
+		"Name":"IPSEC_POLICY_FLAG_BANDWIDTH3"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1073741824
+		,"Attrs":[]
+	}
+	,{
+		"Name":"IPSEC_POLICY_FLAG_BANDWIDTH4"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2147483648
+		,"Attrs":[]
+	}
+	,{
 		"Name":"IPSEC_KEYING_POLICY_FLAG_TERMINATING_MATCH"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -1399,6 +1427,34 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":8388608
+		,"Attrs":[]
+	}
+	,{
+		"Name":"IPSEC_SA_BUNDLE_FLAG_TUNNEL_BANDWIDTH1"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":268435456
+		,"Attrs":[]
+	}
+	,{
+		"Name":"IPSEC_SA_BUNDLE_FLAG_TUNNEL_BANDWIDTH2"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":536870912
+		,"Attrs":[]
+	}
+	,{
+		"Name":"IPSEC_SA_BUNDLE_FLAG_TUNNEL_BANDWIDTH3"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1073741824
+		,"Attrs":[]
+	}
+	,{
+		"Name":"IPSEC_SA_BUNDLE_FLAG_TUNNEL_BANDWIDTH4"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2147483648
 		,"Attrs":[]
 	}
 	,{
@@ -2088,6 +2144,20 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"FWPM_LAYER_OUTBOUND_NETWORK_CONNECTION_POLICY_V4"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"037f317a-d696-494a-bba5-bffc265e6052"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"FWPM_LAYER_OUTBOUND_NETWORK_CONNECTION_POLICY_V6"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"22a4fdb1-6d7e-48ae-ae77-3742525c3119"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"FWPM_SUBLAYER_RPC_AUDIT"
 		,"Type":{"Kind":"Native","Name":"Guid"}
 		,"ValueType":"String"
@@ -2204,6 +2274,13 @@
 		,"Type":{"Kind":"Native","Name":"Guid"}
 		,"ValueType":"String"
 		,"Value":"1ec6c7e1-fdd9-478a-b55f-ff8ba1d2c17d"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"FWPM_SUBLAYER_MPSSVC_APP_ISOLATION"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"ffe221c3-92a8-4564-a59f-dafb70756020"
 		,"Attrs":[]
 	}
 	,{
@@ -3215,6 +3292,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"FWPM_PROVIDER_MPSSVC_APP_ISOLATION"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"3cc2631f-2d5d-43a0-b174-614837d863a1"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"FWPM_CALLOUT_IPSEC_INBOUND_TRANSPORT_V4"
 		,"Type":{"Kind":"Native","Name":"Guid"}
 		,"ValueType":"String"
@@ -3527,6 +3611,20 @@
 		,"Type":{"Kind":"Native","Name":"Guid"}
 		,"ValueType":"String"
 		,"Value":"b3423249-8d09-4858-9210-95c7fda8e30f"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"FWPM_CALLOUT_OUTBOUND_NETWORK_CONNECTION_POLICY_LAYER_V4"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"103090d4-8e28-4fd6-9894-d1d67d6b10c9"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"FWPM_CALLOUT_OUTBOUND_NETWORK_CONNECTION_POLICY_LAYER_V6"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"4ed3446d-8dc7-459b-b09f-c1cb7a8f8689"
 		,"Attrs":[]
 	}
 	,{
@@ -4290,6 +4388,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"byteArray6","Type":{"Kind":"Array","Shape":{"Size":6},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 		]
@@ -4303,6 +4402,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"byteArray16","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 		]
@@ -4316,6 +4416,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"data","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -4330,6 +4431,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"sidCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"sids","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SID_AND_ATTRIBUTES","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":[]}
@@ -4346,6 +4448,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"type","Type":{"Kind":"ApiRef","Name":"FWP_DATA_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -4358,6 +4461,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"uint8","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 					,{"Name":"uint16","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -4415,6 +4519,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"addr","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"mask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4429,6 +4534,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"addr","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"prefixLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4443,6 +4549,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"valueLow","Type":{"Kind":"ApiRef","Name":"FWP_VALUE0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"valueHigh","Type":{"Kind":"ApiRef","Name":"FWP_VALUE0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -4457,6 +4564,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"type","Type":{"Kind":"ApiRef","Name":"FWP_DATA_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -4469,6 +4577,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"uint8","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 					,{"Name":"uint16","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -4496,6 +4605,21 @@
 				]
 			}
 		]
+	}
+	,{
+		"Name":"FWP_NETWORK_CONNECTION_POLICY_SETTING_TYPE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"FWP_NETWORK_CONNECTION_POLICY_SOURCE_ADDRESS","Value":0}
+			,{"Name":"FWP_NETWORK_CONNECTION_POLICY_NEXT_HOP_INTERFACE","Value":1}
+			,{"Name":"FWP_NETWORK_CONNECTION_POLICY_NEXT_HOP","Value":2}
+			,{"Name":"FWP_NETWORK_CONNECTION_POLICY_MAX","Value":3}
+		]
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"FWP_CLASSIFY_OPTION_TYPE"
@@ -4553,6 +4677,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"name","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"description","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -4567,6 +4692,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"virtualIfTunnelId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"trafficSelectorId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -4635,6 +4761,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"presharedKey","Type":{"Kind":"ApiRef","Name":"FWP_BYTE_BLOB","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 		]
@@ -4648,6 +4775,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"presharedKey","Type":{"Kind":"ApiRef","Name":"FWP_BYTE_BLOB","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"flags","Type":{"Kind":"ApiRef","Name":"IKEEXT_PRESHARED_KEY_AUTHENTICATION_FLAGS","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -4662,6 +4790,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"certData","Type":{"Kind":"ApiRef","Name":"FWP_BYTE_BLOB","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"flags","Type":{"Kind":"ApiRef","Name":"IKEEXT_CERT_FLAGS","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -4692,6 +4821,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"inboundConfigType","Type":{"Kind":"ApiRef","Name":"IKEEXT_CERT_CONFIG_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"Anonymous1","Type":{"Kind":"ApiRef","Name":"_Anonymous1_e__Union","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -4707,6 +4837,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":["_Anonymous2_e__Union"]},"Attrs":[]}
 					,{"Name":"outboundEnterpriseStoreConfig","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IKEEXT_CERT_ROOT_CONFIG0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -4720,6 +4851,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"outboundRootArraySize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"outboundRootArray","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IKEEXT_CERT_ROOT_CONFIG0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -4736,6 +4868,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":["_Anonymous1_e__Union"]},"Attrs":[]}
 					,{"Name":"inboundEnterpriseStoreConfig","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IKEEXT_CERT_ROOT_CONFIG0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -4749,6 +4882,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"inboundRootArraySize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"inboundRootArray","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IKEEXT_CERT_ROOT_CONFIG0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -4767,6 +4901,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"inboundConfigType","Type":{"Kind":"ApiRef","Name":"IKEEXT_CERT_CONFIG_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"Anonymous1","Type":{"Kind":"ApiRef","Name":"_Anonymous1_e__Union","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -4783,6 +4918,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":["_Anonymous2_e__Union"]},"Attrs":[]}
 					,{"Name":"outboundEnterpriseStoreConfig","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IKEEXT_CERT_ROOT_CONFIG0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -4796,6 +4932,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"outboundRootArraySize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"outboundRootArray","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IKEEXT_CERT_ROOT_CONFIG0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -4812,6 +4949,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":["_Anonymous1_e__Union"]},"Attrs":[]}
 					,{"Name":"inboundEnterpriseStoreConfig","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IKEEXT_CERT_ROOT_CONFIG0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -4825,6 +4963,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"inboundRootArraySize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"inboundRootArray","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IKEEXT_CERT_ROOT_CONFIG0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -4862,6 +5001,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"numEku","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"eku","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
@@ -4876,6 +5016,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"nameType","Type":{"Kind":"ApiRef","Name":"IKEEXT_CERT_CRITERIA_NAME_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"certName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -4890,6 +5031,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"certData","Type":{"Kind":"ApiRef","Name":"FWP_BYTE_BLOB","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"certHash","Type":{"Kind":"ApiRef","Name":"FWP_BYTE_BLOB","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -4907,6 +5049,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"inboundConfigType","Type":{"Kind":"ApiRef","Name":"IKEEXT_CERT_CONFIG_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"Anonymous1","Type":{"Kind":"ApiRef","Name":"_Anonymous1_e__Union","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -4923,6 +5066,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Anonymous1","Type":{"Kind":"ApiRef","Name":"_Anonymous1_e__Struct","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":["_Anonymous2_e__Union"]},"Attrs":[]}
 					,{"Name":"Anonymous2","Type":{"Kind":"ApiRef","Name":"_Anonymous2_e__Struct","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":["_Anonymous2_e__Union"]},"Attrs":[]}
@@ -4936,6 +5080,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"outboundEnterpriseStoreArraySize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"outboundEnterpriseStoreCriteria","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IKEEXT_CERTIFICATE_CRITERIA0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -4950,6 +5095,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"outboundRootStoreArraySize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"outboundTrustedRootStoreCriteria","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IKEEXT_CERTIFICATE_CRITERIA0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -4964,6 +5110,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"outboundRootArraySize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"outboundRootCriteria","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IKEEXT_CERTIFICATE_CRITERIA0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -4980,6 +5127,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Anonymous1","Type":{"Kind":"ApiRef","Name":"_Anonymous1_e__Struct","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":["_Anonymous1_e__Union"]},"Attrs":[]}
 					,{"Name":"Anonymous2","Type":{"Kind":"ApiRef","Name":"_Anonymous2_e__Struct","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":["_Anonymous1_e__Union"]},"Attrs":[]}
@@ -4993,6 +5141,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"inboundRootStoreArraySize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"inboundTrustedRootStoreCriteria","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IKEEXT_CERTIFICATE_CRITERIA0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -5007,6 +5156,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"inboundRootArraySize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"inboundRootCriteria","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IKEEXT_CERTIFICATE_CRITERIA0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -5021,6 +5171,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"inboundEnterpriseStoreArraySize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"inboundEnterpriseStoreCriteria","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IKEEXT_CERTIFICATE_CRITERIA0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -5039,6 +5190,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"keyContainerName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"cspName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -5056,6 +5208,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"flags","Type":{"Kind":"ApiRef","Name":"IKEEXT_KERBEROS_AUTHENTICATION_FLAGS","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 		]
@@ -5069,6 +5222,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"flags","Type":{"Kind":"ApiRef","Name":"IKEEXT_KERBEROS_AUTHENTICATION_FLAGS","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"proxyServer","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -5083,6 +5237,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"flags","Type":{"Kind":"ApiRef","Name":"IKEEXT_RESERVED_AUTHENTICATION_FLAGS","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 		]
@@ -5096,6 +5251,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -5109,6 +5265,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"flags","Type":{"Kind":"ApiRef","Name":"IKEEXT_EAP_AUTHENTICATION_FLAGS","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 		]
@@ -5122,6 +5279,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"authenticationMethodType","Type":{"Kind":"ApiRef","Name":"IKEEXT_AUTHENTICATION_METHOD_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -5134,6 +5292,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"presharedKeyAuthentication","Type":{"Kind":"ApiRef","Name":"IKEEXT_PRESHARED_KEY_AUTHENTICATION0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 					,{"Name":"certificateAuthentication","Type":{"Kind":"ApiRef","Name":"IKEEXT_CERTIFICATE_AUTHENTICATION0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -5154,6 +5313,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"authenticationMethodType","Type":{"Kind":"ApiRef","Name":"IKEEXT_AUTHENTICATION_METHOD_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -5166,6 +5326,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"presharedKeyAuthentication","Type":{"Kind":"ApiRef","Name":"IKEEXT_PRESHARED_KEY_AUTHENTICATION1","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 					,{"Name":"certificateAuthentication","Type":{"Kind":"ApiRef","Name":"IKEEXT_CERTIFICATE_AUTHENTICATION1","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -5187,6 +5348,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"authenticationMethodType","Type":{"Kind":"ApiRef","Name":"IKEEXT_AUTHENTICATION_METHOD_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -5199,6 +5361,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"presharedKeyAuthentication","Type":{"Kind":"ApiRef","Name":"IKEEXT_PRESHARED_KEY_AUTHENTICATION1","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 					,{"Name":"certificateAuthentication","Type":{"Kind":"ApiRef","Name":"IKEEXT_CERTIFICATE_AUTHENTICATION2","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -5240,6 +5403,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"algoIdentifier","Type":{"Kind":"ApiRef","Name":"IKEEXT_CIPHER_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"keyLen","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5271,6 +5435,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"algoIdentifier","Type":{"Kind":"ApiRef","Name":"IKEEXT_INTEGRITY_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 		]
@@ -5304,6 +5469,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"cipherAlgorithm","Type":{"Kind":"ApiRef","Name":"IKEEXT_CIPHER_ALGORITHM0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"integrityAlgorithm","Type":{"Kind":"ApiRef","Name":"IKEEXT_INTEGRITY_ALGORITHM0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -5321,6 +5487,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"softExpirationTime","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"numAuthenticationMethods","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5341,6 +5508,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"softExpirationTime","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"numAuthenticationMethods","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5362,6 +5530,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"softExpirationTime","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"numAuthenticationMethods","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5383,6 +5552,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"numAuthenticationMethods","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"authenticationMethods","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IKEEXT_AUTHENTICATION_METHOD0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -5398,6 +5568,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"numAuthenticationMethods","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"authenticationMethods","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IKEEXT_AUTHENTICATION_METHOD1","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -5413,6 +5584,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"numAuthenticationMethods","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"authenticationMethods","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IKEEXT_AUTHENTICATION_METHOD2","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -5428,6 +5600,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"currentActiveMainModes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"totalMainModesStarted","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5458,6 +5631,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"currentActiveMainModes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"totalMainModesStarted","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5488,6 +5662,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"v4Statistics","Type":{"Kind":"ApiRef","Name":"IKEEXT_IP_VERSION_SPECIFIC_KEYMODULE_STATISTICS0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"v6Statistics","Type":{"Kind":"ApiRef","Name":"IKEEXT_IP_VERSION_SPECIFIC_KEYMODULE_STATISTICS0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -5506,6 +5681,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"v4Statistics","Type":{"Kind":"ApiRef","Name":"IKEEXT_IP_VERSION_SPECIFIC_KEYMODULE_STATISTICS1","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"v6Statistics","Type":{"Kind":"ApiRef","Name":"IKEEXT_IP_VERSION_SPECIFIC_KEYMODULE_STATISTICS1","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -5524,6 +5700,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"totalSocketReceiveFailures","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"totalSocketSendFailures","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5538,6 +5715,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"totalSocketReceiveFailures","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"totalSocketSendFailures","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5552,6 +5730,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"v4Statistics","Type":{"Kind":"ApiRef","Name":"IKEEXT_IP_VERSION_SPECIFIC_COMMON_STATISTICS0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"v6Statistics","Type":{"Kind":"ApiRef","Name":"IKEEXT_IP_VERSION_SPECIFIC_COMMON_STATISTICS0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -5569,6 +5748,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"v4Statistics","Type":{"Kind":"ApiRef","Name":"IKEEXT_IP_VERSION_SPECIFIC_COMMON_STATISTICS1","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"v6Statistics","Type":{"Kind":"ApiRef","Name":"IKEEXT_IP_VERSION_SPECIFIC_COMMON_STATISTICS1","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -5586,6 +5766,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ikeStatistics","Type":{"Kind":"ApiRef","Name":"IKEEXT_KEYMODULE_STATISTICS0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"authipStatistics","Type":{"Kind":"ApiRef","Name":"IKEEXT_KEYMODULE_STATISTICS0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -5601,6 +5782,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ikeStatistics","Type":{"Kind":"ApiRef","Name":"IKEEXT_KEYMODULE_STATISTICS1","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"authipStatistics","Type":{"Kind":"ApiRef","Name":"IKEEXT_KEYMODULE_STATISTICS1","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -5617,6 +5799,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ipVersion","Type":{"Kind":"ApiRef","Name":"FWP_IP_VERSION","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"Anonymous1","Type":{"Kind":"ApiRef","Name":"_Anonymous1_e__Union","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -5631,6 +5814,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"remoteV4Address","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"remoteV6Address","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -5645,6 +5829,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"localV4Address","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"localV6Address","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -5661,6 +5846,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"initiator","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"responder","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -5675,6 +5861,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"subjectName","Type":{"Kind":"ApiRef","Name":"FWP_BYTE_BLOB","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"certHash","Type":{"Kind":"ApiRef","Name":"FWP_BYTE_BLOB","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -5690,6 +5877,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"principalName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 		]
@@ -5703,6 +5891,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"authenticationMethodType","Type":{"Kind":"ApiRef","Name":"IKEEXT_AUTHENTICATION_METHOD_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"impersonationType","Type":{"Kind":"ApiRef","Name":"IKEEXT_AUTHENTICATION_IMPERSONATION_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -5716,6 +5905,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"presharedKey","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IKEEXT_PRESHARED_KEY_AUTHENTICATION0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 					,{"Name":"certificate","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IKEEXT_CERTIFICATE_CREDENTIAL0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -5733,6 +5923,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"localCredentials","Type":{"Kind":"ApiRef","Name":"IKEEXT_CREDENTIAL0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"peerCredentials","Type":{"Kind":"ApiRef","Name":"IKEEXT_CREDENTIAL0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -5747,6 +5938,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"numCredentials","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"credentials","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IKEEXT_CREDENTIAL_PAIR0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -5761,6 +5953,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"saId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"keyModuleType","Type":{"Kind":"ApiRef","Name":"IKEEXT_KEY_MODULE_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -5781,6 +5974,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"v4UdpEncapsulation","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPSEC_V4_UDP_ENCAPSULATION0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 				]
@@ -5796,6 +5990,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"subjectName","Type":{"Kind":"ApiRef","Name":"FWP_BYTE_BLOB","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"certHash","Type":{"Kind":"ApiRef","Name":"FWP_BYTE_BLOB","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -5812,6 +6007,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"authenticationMethodType","Type":{"Kind":"ApiRef","Name":"IKEEXT_AUTHENTICATION_METHOD_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"impersonationType","Type":{"Kind":"ApiRef","Name":"IKEEXT_AUTHENTICATION_IMPERSONATION_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -5825,6 +6021,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"presharedKey","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IKEEXT_PRESHARED_KEY_AUTHENTICATION1","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 					,{"Name":"certificate","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IKEEXT_CERTIFICATE_CREDENTIAL1","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -5842,6 +6039,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"localCredentials","Type":{"Kind":"ApiRef","Name":"IKEEXT_CREDENTIAL1","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"peerCredentials","Type":{"Kind":"ApiRef","Name":"IKEEXT_CREDENTIAL1","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -5856,6 +6054,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"numCredentials","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"credentials","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IKEEXT_CREDENTIAL_PAIR1","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -5870,6 +6069,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"saId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"keyModuleType","Type":{"Kind":"ApiRef","Name":"IKEEXT_KEY_MODULE_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -5891,6 +6091,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"v4UdpEncapsulation","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPSEC_V4_UDP_ENCAPSULATION0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 				]
@@ -5906,6 +6107,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"authenticationMethodType","Type":{"Kind":"ApiRef","Name":"IKEEXT_AUTHENTICATION_METHOD_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"impersonationType","Type":{"Kind":"ApiRef","Name":"IKEEXT_AUTHENTICATION_IMPERSONATION_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -5919,6 +6121,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"presharedKey","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IKEEXT_PRESHARED_KEY_AUTHENTICATION1","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 					,{"Name":"certificate","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IKEEXT_CERTIFICATE_CREDENTIAL1","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -5936,6 +6139,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"localCredentials","Type":{"Kind":"ApiRef","Name":"IKEEXT_CREDENTIAL2","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"peerCredentials","Type":{"Kind":"ApiRef","Name":"IKEEXT_CREDENTIAL2","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -5950,6 +6154,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"numCredentials","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"credentials","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IKEEXT_CREDENTIAL_PAIR2","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -5964,6 +6169,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"saId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"keyModuleType","Type":{"Kind":"ApiRef","Name":"IKEEXT_KEY_MODULE_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -5985,6 +6191,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"v4UdpEncapsulation","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPSEC_V4_UDP_ENCAPSULATION0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 				]
@@ -6000,6 +6207,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"localSubNet","Type":{"Kind":"ApiRef","Name":"FWP_CONDITION_VALUE0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"remoteSubNet","Type":{"Kind":"ApiRef","Name":"FWP_CONDITION_VALUE0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -6081,6 +6289,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lifetimeSeconds","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"lifetimeKilobytes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6131,6 +6340,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"authType","Type":{"Kind":"ApiRef","Name":"IPSEC_AUTH_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"authConfig","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -6145,6 +6355,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"authTransformId","Type":{"Kind":"ApiRef","Name":"IPSEC_AUTH_TRANSFORM_ID0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"cryptoModuleId","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":[]}
@@ -6176,6 +6387,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"cipherType","Type":{"Kind":"ApiRef","Name":"IPSEC_CIPHER_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"cipherConfig","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -6190,6 +6402,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"cipherTransformId","Type":{"Kind":"ApiRef","Name":"IPSEC_CIPHER_TRANSFORM_ID0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"cryptoModuleId","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":[]}
@@ -6204,6 +6417,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"authTransform","Type":{"Kind":"ApiRef","Name":"IPSEC_AUTH_TRANSFORM0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"cipherTransform","Type":{"Kind":"ApiRef","Name":"IPSEC_CIPHER_TRANSFORM0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -6218,6 +6432,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ipsecTransformType","Type":{"Kind":"ApiRef","Name":"IPSEC_TRANSFORM_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -6230,6 +6445,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"ahTransform","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPSEC_AUTH_TRANSFORM0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 					,{"Name":"espAuthTransform","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPSEC_AUTH_TRANSFORM0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -6270,6 +6486,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lifetime","Type":{"Kind":"ApiRef","Name":"IPSEC_SA_LIFETIME0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"numSaTransforms","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6286,6 +6503,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"idleTimeoutSeconds","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"idleTimeoutSecondsFailOver","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6300,6 +6518,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"protocolId","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"portStart","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -6316,6 +6535,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"startV4Address","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"startV6Address","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -6330,6 +6550,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"endV4Address","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"endV6Address","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -6346,6 +6567,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"numLocalTrafficSelectors","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6363,6 +6585,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"numIpsecProposals","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ipsecProposals","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPSEC_PROPOSAL0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -6381,6 +6604,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"numIpsecProposals","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ipsecProposals","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPSEC_PROPOSAL0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -6399,6 +6623,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"numIpsecProposals","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ipsecProposals","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPSEC_PROPOSAL0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -6417,6 +6642,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ipVersion","Type":{"Kind":"ApiRef","Name":"FWP_IP_VERSION","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"Anonymous1","Type":{"Kind":"ApiRef","Name":"_Anonymous1_e__Union","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -6430,6 +6656,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"localV4Address","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"localV6Address","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -6444,6 +6671,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"remoteV4Address","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"remoteV6Address","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -6460,6 +6688,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ipVersion","Type":{"Kind":"ApiRef","Name":"FWP_IP_VERSION","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -6472,6 +6701,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"v4Address","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"v6Address","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -6488,6 +6718,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ipVersion","Type":{"Kind":"ApiRef","Name":"FWP_IP_VERSION","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"Anonymous1","Type":{"Kind":"ApiRef","Name":"_Anonymous1_e__Union","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -6505,6 +6736,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"remoteV4Address","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"remoteV6Address","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -6519,6 +6751,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"localV4Address","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"localV6Address","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -6535,6 +6768,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ipVersion","Type":{"Kind":"ApiRef","Name":"FWP_IP_VERSION","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"Anonymous1","Type":{"Kind":"ApiRef","Name":"_Anonymous1_e__Union","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -6549,6 +6783,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"remoteV4Address","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"remoteV6Address","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -6563,6 +6798,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"localV4Address","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"localV6Address","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -6579,6 +6815,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"flags","Type":{"Kind":"ApiRef","Name":"IPSEC_POLICY_FLAG","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"numIpsecProposals","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6597,6 +6834,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"flags","Type":{"Kind":"ApiRef","Name":"IPSEC_POLICY_FLAG","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"numIpsecProposals","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6615,6 +6853,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"flags","Type":{"Kind":"ApiRef","Name":"IPSEC_POLICY_FLAG","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"numIpsecProposals","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6634,6 +6873,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"numIpsecProposals","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6656,6 +6896,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"numKeyMods","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"keyModKeys","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":[]}
@@ -6670,6 +6911,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"numKeyMods","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"keyModKeys","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":[]}
@@ -6685,6 +6927,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"activeSas","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pendingSaNegotiations","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6704,6 +6947,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"invalidSpisOnInbound","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"decryptionFailuresOnInbound","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6721,6 +6965,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"invalidSpisOnInbound","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"authenticationFailuresOnInbound","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6737,6 +6982,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"invalidSpisOnInbound","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"decryptionFailuresOnInbound","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6758,6 +7004,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"invalidSpisOnInbound","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"decryptionFailuresOnInbound","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6780,6 +7027,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"encryptedByteCount","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"authenticatedAHByteCount","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -6798,6 +7046,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"encryptedByteCount","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"authenticatedAHByteCount","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -6817,6 +7066,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"aggregateSaStatistics","Type":{"Kind":"ApiRef","Name":"IPSEC_AGGREGATE_SA_STATISTICS0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"espDropPacketStatistics","Type":{"Kind":"ApiRef","Name":"IPSEC_ESP_DROP_PACKET_STATISTICS0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -6835,6 +7085,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"aggregateSaStatistics","Type":{"Kind":"ApiRef","Name":"IPSEC_AGGREGATE_SA_STATISTICS0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"espDropPacketStatistics","Type":{"Kind":"ApiRef","Name":"IPSEC_ESP_DROP_PACKET_STATISTICS0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -6853,6 +7104,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"authTransform","Type":{"Kind":"ApiRef","Name":"IPSEC_AUTH_TRANSFORM0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"authKey","Type":{"Kind":"ApiRef","Name":"FWP_BYTE_BLOB","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -6867,6 +7119,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"cipherTransform","Type":{"Kind":"ApiRef","Name":"IPSEC_CIPHER_TRANSFORM0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"cipherKey","Type":{"Kind":"ApiRef","Name":"FWP_BYTE_BLOB","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -6881,6 +7134,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"saCipherInformation","Type":{"Kind":"ApiRef","Name":"IPSEC_SA_CIPHER_INFORMATION0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"saAuthInformation","Type":{"Kind":"ApiRef","Name":"IPSEC_SA_AUTH_INFORMATION0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -6895,6 +7149,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"spi","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"saTransformType","Type":{"Kind":"ApiRef","Name":"IPSEC_TRANSFORM_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -6908,6 +7163,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"ahInformation","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPSEC_SA_AUTH_INFORMATION0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 					,{"Name":"espAuthInformation","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPSEC_SA_AUTH_INFORMATION0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -6927,6 +7183,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"keyModuleKey","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"stateBlob","Type":{"Kind":"ApiRef","Name":"FWP_BYTE_BLOB","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -6983,6 +7240,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"type","Type":{"Kind":"ApiRef","Name":"IPSEC_TOKEN_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"principal","Type":{"Kind":"ApiRef","Name":"IPSEC_TOKEN_PRINCIPAL","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -6999,6 +7257,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"mmTargetName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"emTargetName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -7017,6 +7276,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"flags","Type":{"Kind":"ApiRef","Name":"IPSEC_SA_BUNDLE_FLAGS","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"lifetime","Type":{"Kind":"ApiRef","Name":"IPSEC_SA_LIFETIME0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -7041,6 +7301,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"peerV4PrivateAddress","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 				]
@@ -7056,6 +7317,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"flags","Type":{"Kind":"ApiRef","Name":"IPSEC_SA_BUNDLE_FLAGS","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"lifetime","Type":{"Kind":"ApiRef","Name":"IPSEC_SA_LIFETIME0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -7082,6 +7344,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"peerV4PrivateAddress","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 				]
@@ -7111,6 +7374,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ipVersion","Type":{"Kind":"ApiRef","Name":"FWP_IP_VERSION","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"Anonymous1","Type":{"Kind":"ApiRef","Name":"_Anonymous1_e__Union","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -7127,6 +7391,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"ipsecFilterId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 					,{"Name":"tunnelPolicyId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -7141,6 +7406,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"localV4Address","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"localV6Address","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -7155,6 +7421,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"remoteV4Address","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"remoteV6Address","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -7171,6 +7438,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ipVersion","Type":{"Kind":"ApiRef","Name":"FWP_IP_VERSION","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"Anonymous1","Type":{"Kind":"ApiRef","Name":"_Anonymous1_e__Union","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -7191,6 +7459,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"remoteV4Address","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"remoteV6Address","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -7205,6 +7474,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"ipsecFilterId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 					,{"Name":"tunnelPolicyId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -7219,6 +7489,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"localV4Address","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"localV6Address","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -7235,6 +7506,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"localUdpEncapPort","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"remoteUdpEncapPort","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -7249,6 +7521,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"inboundIpsecTraffic","Type":{"Kind":"ApiRef","Name":"IPSEC_TRAFFIC0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"ipVersion","Type":{"Kind":"ApiRef","Name":"FWP_IP_VERSION","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -7263,6 +7536,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"inboundUdpEncapsulation","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPSEC_V4_UDP_ENCAPSULATION0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 				]
@@ -7278,6 +7552,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"inboundIpsecTraffic","Type":{"Kind":"ApiRef","Name":"IPSEC_TRAFFIC1","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"ipVersion","Type":{"Kind":"ApiRef","Name":"FWP_IP_VERSION","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -7292,6 +7567,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"inboundUdpEncapsulation","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPSEC_V4_UDP_ENCAPSULATION0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 				]
@@ -7307,6 +7583,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ipVersion","Type":{"Kind":"ApiRef","Name":"FWP_IP_VERSION","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"saDirection","Type":{"Kind":"ApiRef","Name":"FWP_DIRECTION","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -7323,6 +7600,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"udpEncapsulation","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPSEC_V4_UDP_ENCAPSULATION0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 				]
@@ -7338,6 +7616,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ipVersion","Type":{"Kind":"ApiRef","Name":"FWP_IP_VERSION","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"saDirection","Type":{"Kind":"ApiRef","Name":"FWP_DIRECTION","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -7355,6 +7634,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"udpEncapsulation","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPSEC_V4_UDP_ENCAPSULATION0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 				]
@@ -7370,6 +7650,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"saContextId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"inboundSa","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPSEC_SA_DETAILS0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -7385,6 +7666,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"saContextId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"inboundSa","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPSEC_SA_DETAILS1","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -7400,6 +7682,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"localSubNet","Type":{"Kind":"ApiRef","Name":"FWP_CONDITION_VALUE0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"remoteSubNet","Type":{"Kind":"ApiRef","Name":"FWP_CONDITION_VALUE0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -7414,6 +7697,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"saDirection","Type":{"Kind":"ApiRef","Name":"FWP_DIRECTION","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 		]
@@ -7427,6 +7711,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"enumTemplate","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPSEC_SA_CONTEXT_ENUM_TEMPLATE0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -7456,6 +7741,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"changeType","Type":{"Kind":"ApiRef","Name":"IPSEC_SA_CONTEXT_EVENT_TYPE0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"saContextId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -7485,6 +7771,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"numV4Addresses","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"v4Addresses","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
@@ -7501,6 +7788,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"stateIdleTimeoutSeconds","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"perIPRateLimitQueueIdleTimeoutSeconds","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -7535,6 +7823,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"totalStateEntriesCreated","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"currentStateEntries","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -7565,6 +7854,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"publicHostV6Addr","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"internalHostV6Addr","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -7582,6 +7872,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"publicV6AddrMask","Type":{"Kind":"ApiRef","Name":"FWP_V6_ADDR_AND_MASK","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"internalV6AddrMask","Type":{"Kind":"ApiRef","Name":"FWP_V6_ADDR_AND_MASK","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -7596,6 +7887,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"keyManagerKey","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"displayData","Type":{"Kind":"ApiRef","Name":"FWPM_DISPLAY_DATA0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -7674,6 +7966,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"sessionKey","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"displayData","Type":{"Kind":"ApiRef","Name":"FWPM_DISPLAY_DATA0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -7694,6 +7987,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"reserved","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 		]
@@ -7707,6 +8001,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"providerKey","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"displayData","Type":{"Kind":"ApiRef","Name":"FWPM_DISPLAY_DATA0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -7724,6 +8019,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"reserved","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 		]
@@ -7737,6 +8033,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"changeType","Type":{"Kind":"ApiRef","Name":"FWPM_CHANGE_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"providerKey","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
@@ -7751,6 +8048,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"enumTemplate","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FWPM_PROVIDER_ENUM_TEMPLATE0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -7766,6 +8064,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"type","Type":{"Kind":"ApiRef","Name":"FWP_CLASSIFY_OPTION_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"value","Type":{"Kind":"ApiRef","Name":"FWP_VALUE0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -7780,9 +8079,40 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"numOptions","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"options","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FWPM_CLASSIFY_OPTION0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"FWPM_NETWORK_CONNECTION_POLICY_SETTING0"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"type","Type":{"Kind":"ApiRef","Name":"FWP_NETWORK_CONNECTION_POLICY_SETTING_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
+			,{"Name":"value","Type":{"Kind":"ApiRef","Name":"FWP_VALUE0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"FWPM_NETWORK_CONNECTION_POLICY_SETTINGS0"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"numSettings","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"settings","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FWPM_NETWORK_CONNECTION_POLICY_SETTING0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -7808,7 +8138,8 @@
 			,{"Name":"FWPM_IPSEC_IKEV2_MM_CONTEXT","Value":10}
 			,{"Name":"FWPM_IPSEC_DOSP_CONTEXT","Value":11}
 			,{"Name":"FWPM_IPSEC_IKEV2_QM_TRANSPORT_CONTEXT","Value":12}
-			,{"Name":"FWPM_PROVIDER_CONTEXT_TYPE_MAX","Value":13}
+			,{"Name":"FWPM_NETWORK_CONNECTION_POLICY_CONTEXT","Value":13}
+			,{"Name":"FWPM_PROVIDER_CONTEXT_TYPE_MAX","Value":14}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -7819,6 +8150,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"providerContextKey","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"displayData","Type":{"Kind":"ApiRef","Name":"FWPM_DISPLAY_DATA0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -7837,6 +8169,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"keyingPolicy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPSEC_KEYING_POLICY0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 					,{"Name":"ikeQmTransportPolicy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPSEC_TRANSPORT_POLICY0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -7860,6 +8193,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"providerContextKey","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"displayData","Type":{"Kind":"ApiRef","Name":"FWPM_DISPLAY_DATA0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -7878,6 +8212,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"keyingPolicy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPSEC_KEYING_POLICY0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 					,{"Name":"ikeQmTransportPolicy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPSEC_TRANSPORT_POLICY1","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -7904,6 +8239,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"providerContextKey","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"displayData","Type":{"Kind":"ApiRef","Name":"FWPM_DISPLAY_DATA0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -7922,6 +8258,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"keyingPolicy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPSEC_KEYING_POLICY1","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 					,{"Name":"ikeQmTransportPolicy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPSEC_TRANSPORT_POLICY2","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -7949,6 +8286,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"providerContextKey","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"displayData","Type":{"Kind":"ApiRef","Name":"FWPM_DISPLAY_DATA0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -7967,6 +8305,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"keyingPolicy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPSEC_KEYING_POLICY1","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 					,{"Name":"ikeQmTransportPolicy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPSEC_TRANSPORT_POLICY2","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -7981,6 +8320,7 @@
 					,{"Name":"ikeV2QmTransportPolicy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPSEC_TRANSPORT_POLICY2","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 					,{"Name":"ikeV2MmPolicy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IKEEXT_POLICY2","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 					,{"Name":"idpOptions","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPSEC_DOSP_OPTIONS0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
+					,{"Name":"networkConnectionPolicy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FWPM_NETWORK_CONNECTION_POLICY_SETTINGS0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]
@@ -7994,6 +8334,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"providerKey","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":[]}
 			,{"Name":"providerContextType","Type":{"Kind":"ApiRef","Name":"FWPM_PROVIDER_CONTEXT_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -8008,6 +8349,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"changeType","Type":{"Kind":"ApiRef","Name":"FWPM_CHANGE_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"providerContextKey","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
@@ -8023,6 +8365,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"enumTemplate","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FWPM_PROVIDER_CONTEXT_ENUM_TEMPLATE0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 			,{"Name":"flags","Type":{"Kind":"ApiRef","Name":"FWPM_SUBSCRIPTION_FLAGS","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -8038,6 +8381,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"subLayerKey","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"displayData","Type":{"Kind":"ApiRef","Name":"FWPM_DISPLAY_DATA0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -8056,6 +8400,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"providerKey","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":[]}
 		]
@@ -8069,6 +8414,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"changeType","Type":{"Kind":"ApiRef","Name":"FWPM_CHANGE_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"subLayerKey","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
@@ -8083,6 +8429,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"enumTemplate","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FWPM_SUBLAYER_ENUM_TEMPLATE0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 			,{"Name":"flags","Type":{"Kind":"ApiRef","Name":"FWPM_SUBSCRIPTION_FLAGS","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -8113,6 +8460,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"fieldKey","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":[]}
 			,{"Name":"type","Type":{"Kind":"ApiRef","Name":"FWPM_FIELD_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -8128,6 +8476,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"layerKey","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"displayData","Type":{"Kind":"ApiRef","Name":"FWPM_DISPLAY_DATA0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -8147,6 +8496,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"reserved","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 		]
@@ -8160,6 +8510,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"calloutKey","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"displayData","Type":{"Kind":"ApiRef","Name":"FWPM_DISPLAY_DATA0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -8179,6 +8530,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"providerKey","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":[]}
 			,{"Name":"layerKey","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
@@ -8193,6 +8545,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"changeType","Type":{"Kind":"ApiRef","Name":"FWPM_CHANGE_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"calloutKey","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
@@ -8208,6 +8561,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"enumTemplate","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FWPM_CALLOUT_ENUM_TEMPLATE0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -8223,6 +8577,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"type","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -8235,6 +8590,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"filterType","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 					,{"Name":"calloutKey","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
@@ -8251,6 +8607,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"fieldKey","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"matchType","Type":{"Kind":"ApiRef","Name":"FWP_MATCH_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -8266,6 +8623,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"filterKey","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"displayData","Type":{"Kind":"ApiRef","Name":"FWPM_DISPLAY_DATA0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -8291,6 +8649,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"rawContext","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 					,{"Name":"providerContextKey","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
@@ -8307,6 +8666,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"providerKey","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":[]}
 			,{"Name":"layerKey","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
@@ -8328,6 +8688,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"changeType","Type":{"Kind":"ApiRef","Name":"FWPM_CHANGE_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"filterKey","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
@@ -8343,6 +8704,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"enumTemplate","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FWPM_FILTER_ENUM_TEMPLATE0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -8358,6 +8720,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"layerId","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"classifyPermitCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -8375,6 +8738,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"numLayerStatistics","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"layerStatistics","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FWPM_LAYER_STATISTICS0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -8423,6 +8787,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"timeStamp","Type":{"Kind":"ApiRef","Name":"FILETIME","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -8444,6 +8809,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"localAddrV4","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"localAddrV6","Type":{"Kind":"ApiRef","Name":"FWP_BYTE_ARRAY16","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -8458,6 +8824,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"remoteAddrV4","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"remoteAddrV6","Type":{"Kind":"ApiRef","Name":"FWP_BYTE_ARRAY16","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -8474,6 +8841,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"timeStamp","Type":{"Kind":"ApiRef","Name":"FILETIME","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -8496,6 +8864,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":["_Anonymous3_e__Union"]},"Attrs":[]}
 				]
@@ -8507,6 +8876,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"reserved1","Type":{"Kind":"ApiRef","Name":"FWP_AF","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 							,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":["_Anonymous3_e__Union","_Anonymous_e__Struct"]},"Attrs":[]}
@@ -8519,6 +8889,7 @@
 								,"Kind":"Union"
 								,"Size":0
 								,"PackingSize":0
+								,"SizeField":""
 								,"Fields":[
 									{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":["_Anonymous3_e__Union","_Anonymous_e__Struct","_Anonymous_e__Union"]},"Attrs":[]}
 								]
@@ -8530,6 +8901,7 @@
 										,"Kind":"Struct"
 										,"Size":0
 										,"PackingSize":0
+										,"SizeField":""
 										,"Fields":[
 											{"Name":"reserved2","Type":{"Kind":"ApiRef","Name":"FWP_BYTE_ARRAY6","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 											,{"Name":"reserved3","Type":{"Kind":"ApiRef","Name":"FWP_BYTE_ARRAY6","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -8557,6 +8929,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"localAddrV4","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"localAddrV6","Type":{"Kind":"ApiRef","Name":"FWP_BYTE_ARRAY16","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -8571,6 +8944,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"remoteAddrV4","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"remoteAddrV6","Type":{"Kind":"ApiRef","Name":"FWP_BYTE_ARRAY16","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -8587,6 +8961,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"timeStamp","Type":{"Kind":"ApiRef","Name":"FILETIME","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -8610,6 +8985,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"localAddrV4","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"localAddrV6","Type":{"Kind":"ApiRef","Name":"FWP_BYTE_ARRAY16","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -8624,6 +9000,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"remoteAddrV4","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"remoteAddrV6","Type":{"Kind":"ApiRef","Name":"FWP_BYTE_ARRAY16","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -8640,6 +9017,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"timeStamp","Type":{"Kind":"ApiRef","Name":"FILETIME","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -8666,6 +9044,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"localAddrV4","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"localAddrV6","Type":{"Kind":"ApiRef","Name":"FWP_BYTE_ARRAY16","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -8680,6 +9059,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"remoteAddrV4","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"remoteAddrV6","Type":{"Kind":"ApiRef","Name":"FWP_BYTE_ARRAY16","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -8719,6 +9099,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"failureErrorCode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"failurePoint","Type":{"Kind":"ApiRef","Name":"IPSEC_FAILURE_POINT","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -8741,6 +9122,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"failureErrorCode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"failurePoint","Type":{"Kind":"ApiRef","Name":"IPSEC_FAILURE_POINT","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -8769,6 +9151,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"failureErrorCode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"failurePoint","Type":{"Kind":"ApiRef","Name":"IPSEC_FAILURE_POINT","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -8798,6 +9181,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"failureErrorCode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"failurePoint","Type":{"Kind":"ApiRef","Name":"IPSEC_FAILURE_POINT","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -8817,6 +9201,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"localSubNet","Type":{"Kind":"ApiRef","Name":"FWP_CONDITION_VALUE0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 				]
@@ -8830,6 +9215,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"remoteSubNet","Type":{"Kind":"ApiRef","Name":"FWP_CONDITION_VALUE0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 				]
@@ -8845,6 +9231,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"failureErrorCode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"failurePoint","Type":{"Kind":"ApiRef","Name":"IPSEC_FAILURE_POINT","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -8866,6 +9253,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"localSubNet","Type":{"Kind":"ApiRef","Name":"FWP_CONDITION_VALUE0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 				]
@@ -8879,6 +9267,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"remoteSubNet","Type":{"Kind":"ApiRef","Name":"FWP_CONDITION_VALUE0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 				]
@@ -8894,6 +9283,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"failureErrorCode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"failurePoint","Type":{"Kind":"ApiRef","Name":"IPSEC_FAILURE_POINT","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -8915,6 +9305,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"failureErrorCode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"failurePoint","Type":{"Kind":"ApiRef","Name":"IPSEC_FAILURE_POINT","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -8943,6 +9334,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"filterId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"layerId","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -8957,6 +9349,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"filterId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"layerId","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -8976,6 +9369,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"filterId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"layerId","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -8998,6 +9392,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"localMacAddr","Type":{"Kind":"ApiRef","Name":"FWP_BYTE_ARRAY6","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"remoteMacAddr","Type":{"Kind":"ApiRef","Name":"FWP_BYTE_ARRAY6","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -9029,6 +9424,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"filterId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"layerId","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -9048,6 +9444,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"failureStatus","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"direction","Type":{"Kind":"ApiRef","Name":"FWP_DIRECTION","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -9065,6 +9462,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ipVersion","Type":{"Kind":"ApiRef","Name":"FWP_IP_VERSION","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"Anonymous1","Type":{"Kind":"ApiRef","Name":"_Anonymous1_e__Union","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -9080,6 +9478,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"publicHostV4Addr","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"publicHostV6Addr","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -9094,6 +9493,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"internalHostV4Addr","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"internalHostV6Addr","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -9124,6 +9524,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"networkCapabilityId","Type":{"Kind":"ApiRef","Name":"FWPM_APPC_NETWORK_CAPABILITY_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"filterId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -9139,6 +9540,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"networkCapabilityId","Type":{"Kind":"ApiRef","Name":"FWPM_APPC_NETWORK_CAPABILITY_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"filterId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -9154,6 +9556,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"spi","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -9167,6 +9570,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"header","Type":{"Kind":"ApiRef","Name":"FWPM_NET_EVENT_HEADER0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"type","Type":{"Kind":"ApiRef","Name":"FWPM_NET_EVENT_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -9180,6 +9584,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"ikeMmFailure","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FWPM_NET_EVENT_IKEEXT_MM_FAILURE0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 					,{"Name":"ikeQmFailure","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FWPM_NET_EVENT_IKEEXT_QM_FAILURE0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -9200,6 +9605,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"header","Type":{"Kind":"ApiRef","Name":"FWPM_NET_EVENT_HEADER1","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"type","Type":{"Kind":"ApiRef","Name":"FWPM_NET_EVENT_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -9213,6 +9619,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"ikeMmFailure","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FWPM_NET_EVENT_IKEEXT_MM_FAILURE1","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 					,{"Name":"ikeQmFailure","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FWPM_NET_EVENT_IKEEXT_QM_FAILURE0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -9233,6 +9640,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"header","Type":{"Kind":"ApiRef","Name":"FWPM_NET_EVENT_HEADER2","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"type","Type":{"Kind":"ApiRef","Name":"FWPM_NET_EVENT_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -9246,6 +9654,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"ikeMmFailure","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FWPM_NET_EVENT_IKEEXT_MM_FAILURE1","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 					,{"Name":"ikeQmFailure","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FWPM_NET_EVENT_IKEEXT_QM_FAILURE0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -9270,6 +9679,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"header","Type":{"Kind":"ApiRef","Name":"FWPM_NET_EVENT_HEADER3","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"type","Type":{"Kind":"ApiRef","Name":"FWPM_NET_EVENT_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -9283,6 +9693,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"ikeMmFailure","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FWPM_NET_EVENT_IKEEXT_MM_FAILURE1","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 					,{"Name":"ikeQmFailure","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FWPM_NET_EVENT_IKEEXT_QM_FAILURE0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -9307,6 +9718,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"header","Type":{"Kind":"ApiRef","Name":"FWPM_NET_EVENT_HEADER3","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"type","Type":{"Kind":"ApiRef","Name":"FWPM_NET_EVENT_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -9320,6 +9732,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"ikeMmFailure","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FWPM_NET_EVENT_IKEEXT_MM_FAILURE2","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 					,{"Name":"ikeQmFailure","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FWPM_NET_EVENT_IKEEXT_QM_FAILURE1","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -9344,6 +9757,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"header","Type":{"Kind":"ApiRef","Name":"FWPM_NET_EVENT_HEADER3","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"type","Type":{"Kind":"ApiRef","Name":"FWPM_NET_EVENT_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -9357,6 +9771,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"ikeMmFailure","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FWPM_NET_EVENT_IKEEXT_MM_FAILURE2","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 					,{"Name":"ikeQmFailure","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FWPM_NET_EVENT_IKEEXT_QM_FAILURE1","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -9382,6 +9797,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"startTime","Type":{"Kind":"ApiRef","Name":"FILETIME","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"endTime","Type":{"Kind":"ApiRef","Name":"FILETIME","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -9398,6 +9814,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"enumTemplate","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FWPM_NET_EVENT_ENUM_TEMPLATE0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -9429,6 +9846,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"type","Type":{"Kind":"ApiRef","Name":"FWPM_SYSTEM_PORT_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"numPorts","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -9444,6 +9862,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"numTypes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"types","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FWPM_SYSTEM_PORTS_BY_TYPE0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
@@ -9458,6 +9877,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"connectionId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"ipVersion","Type":{"Kind":"ApiRef","Name":"FWP_IP_VERSION","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
@@ -9482,6 +9902,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"localV4Address","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"localV6Address","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -9496,6 +9917,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"remoteV4Address","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"remoteV6Address","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -9512,6 +9934,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"connectionId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -9526,6 +9949,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"enumTemplate","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FWPM_CONNECTION_ENUM_TEMPLATE0","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]}},"Attrs":[]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -9572,6 +9996,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"eventType","Type":{"Kind":"ApiRef","Name":"FWPM_VSWITCH_EVENT_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":[]}
 			,{"Name":"vSwitchId","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -9585,6 +10010,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"positionInfo","Type":{"Kind":"ApiRef","Name":"_positionInfo_e__Struct","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":["_Anonymous_e__Union"]},"Attrs":[]}
 					,{"Name":"reorderInfo","Type":{"Kind":"ApiRef","Name":"_reorderInfo_e__Struct","TargetKind":"Default","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":["_Anonymous_e__Union"]},"Attrs":[]}
@@ -9597,6 +10023,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"numvSwitchFilterExtensions","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"vSwitchFilterExtensions","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
@@ -9611,6 +10038,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"inRequiredPosition","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 							,{"Name":"numvSwitchFilterExtensions","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -9630,6 +10058,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"sessionKey","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
@@ -9772,6 +10201,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"reserved","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -9997,10 +10427,10 @@
 		,"Params":[
 			{"Name":"engineHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"securityInfo","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"sidOwner","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"sidGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"dacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out","Optional"]}
-			,{"Name":"sacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out","Optional"]}
+			,{"Name":"sidOwner","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"sidGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"dacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"sacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
 			,{"Name":"securityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
@@ -10211,10 +10641,10 @@
 			{"Name":"engineHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"key","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"securityInfo","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"sidOwner","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"sidGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"dacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out","Optional"]}
-			,{"Name":"sacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out","Optional"]}
+			,{"Name":"sidOwner","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"sidGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"dacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"sacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
 			,{"Name":"securityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
@@ -10605,10 +11035,10 @@
 			{"Name":"engineHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"key","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"securityInfo","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"sidOwner","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"sidGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"dacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out","Optional"]}
-			,{"Name":"sacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out","Optional"]}
+			,{"Name":"sidOwner","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"sidGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"dacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"sacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
 			,{"Name":"securityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
@@ -10780,10 +11210,10 @@
 			{"Name":"engineHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"key","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"securityInfo","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"sidOwner","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"sidGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"dacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out","Optional"]}
-			,{"Name":"sacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out","Optional"]}
+			,{"Name":"sidOwner","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"sidGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"dacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"sacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
 			,{"Name":"securityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
@@ -10941,10 +11371,10 @@
 			{"Name":"engineHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"key","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"securityInfo","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"sidOwner","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"sidGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"dacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out","Optional"]}
-			,{"Name":"sacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out","Optional"]}
+			,{"Name":"sidOwner","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"sidGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"dacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"sacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
 			,{"Name":"securityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
@@ -11100,10 +11530,10 @@
 			{"Name":"engineHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"key","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"securityInfo","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"sidOwner","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"sidGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"dacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out","Optional"]}
-			,{"Name":"sacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out","Optional"]}
+			,{"Name":"sidOwner","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"sidGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"dacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"sacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
 			,{"Name":"securityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
@@ -11305,10 +11735,10 @@
 			{"Name":"engineHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"key","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"securityInfo","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"sidOwner","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"sidGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"dacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out","Optional"]}
-			,{"Name":"sacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out","Optional"]}
+			,{"Name":"sidOwner","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"sidGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"dacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"sacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
 			,{"Name":"securityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
@@ -11910,10 +12340,10 @@
 		,"Params":[
 			{"Name":"engineHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"securityInfo","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"sidOwner","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"sidGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"dacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out","Optional"]}
-			,{"Name":"sacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out","Optional"]}
+			,{"Name":"sidOwner","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"sidGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"dacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"sacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
 			,{"Name":"securityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
@@ -12007,10 +12437,10 @@
 		,"Params":[
 			{"Name":"engineHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"securityInfo","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"sidOwner","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"sidGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"dacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out","Optional"]}
-			,{"Name":"sacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out","Optional"]}
+			,{"Name":"sidOwner","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"sidGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"dacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"sacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
 			,{"Name":"securityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
@@ -12088,12 +12518,12 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"engineHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"reserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Reserved","Const"]}
+			,{"Name":"reserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional","Const"]}
 			,{"Name":"securityInfo","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"sidOwner","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"sidGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"dacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out","Optional"]}
-			,{"Name":"sacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out","Optional"]}
+			,{"Name":"sidOwner","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"sidGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"dacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"sacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
 			,{"Name":"securityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
@@ -12108,7 +12538,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"engineHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"reserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Reserved","Const"]}
+			,{"Name":"reserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional","Const"]}
 			,{"Name":"securityInfo","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"sidOwner","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SID","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"sidGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SID","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["In","Optional","Const"]}
@@ -12297,10 +12727,10 @@
 		,"Params":[
 			{"Name":"engineHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"securityInfo","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"sidOwner","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"sidGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"dacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out","Optional"]}
-			,{"Name":"sacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out","Optional"]}
+			,{"Name":"sidOwner","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"sidGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"dacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"sacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
 			,{"Name":"securityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
@@ -12465,10 +12895,10 @@
 		,"Params":[
 			{"Name":"engineHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"securityInfo","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"sidOwner","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"sidGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"dacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out","Optional"]}
-			,{"Name":"sacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out","Optional"]}
+			,{"Name":"sidOwner","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"sidGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"dacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"sacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
 			,{"Name":"securityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
@@ -12658,7 +13088,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"engineHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
-			,{"Name":"reserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"reserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"callback","Type":{"Kind":"ApiRef","Name":"FWPM_SYSTEM_PORTS_CALLBACK0","TargetKind":"FunctionPointer","Api":"NetworkManagement.WindowsFilteringPlatform","Parents":[]},"Attrs":["In"]}
 			,{"Name":"context","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
 			,{"Name":"sysPortsHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
@@ -12751,10 +13181,10 @@
 		,"Params":[
 			{"Name":"engineHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"securityInfo","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"sidOwner","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"sidGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"dacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out","Optional"]}
-			,{"Name":"sacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out","Optional"]}
+			,{"Name":"sidOwner","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"sidGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"dacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"sacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
 			,{"Name":"securityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
@@ -12850,10 +13280,10 @@
 		,"Params":[
 			{"Name":"engineHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"securityInfo","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"sidOwner","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"sidGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"dacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out","Optional"]}
-			,{"Name":"sacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out","Optional"]}
+			,{"Name":"sidOwner","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"sidGroup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSID","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"dacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"sacl","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACL","TargetKind":"Default","Api":"Security","Parents":[]}}},"Attrs":["Out"]}
 			,{"Name":"securityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["Out"]}
 		]
 	}

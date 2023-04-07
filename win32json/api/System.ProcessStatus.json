@@ -33,6 +33,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpBaseOfDll","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 			,{"Name":"SizeOfImage","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -48,6 +49,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"FaultingPc","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 			,{"Name":"FaultingVa","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -62,6 +64,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"BasicInfo","Type":{"Kind":"ApiRef","Name":"PSAPI_WS_WATCH_INFORMATION","TargetKind":"Default","Api":"System.ProcessStatus","Parents":[]},"Attrs":[]}
 			,{"Name":"FaultingThreadId","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
@@ -77,6 +80,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Flags","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.ProcessStatus","Parents":[]},"Attrs":[]}
@@ -89,6 +93,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 				]
@@ -104,6 +109,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"NumberOfEntries","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 			,{"Name":"WorkingSetInfo","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"PSAPI_WORKING_SET_BLOCK","TargetKind":"Default","Api":"System.ProcessStatus","Parents":[]}},"Attrs":[]}
@@ -118,6 +124,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Flags","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"System.ProcessStatus","Parents":[]},"Attrs":[]}
@@ -130,6 +137,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.ProcessStatus","Parents":["_Anonymous_e__Union"]},"Attrs":[]}
 					,{"Name":"Invalid","Type":{"Kind":"ApiRef","Name":"_Invalid_e__Struct","TargetKind":"Default","Api":"System.ProcessStatus","Parents":["_Anonymous_e__Union"]},"Attrs":[]}
@@ -142,6 +150,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 						]
@@ -155,6 +164,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 						]
@@ -172,6 +182,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"VirtualAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 			,{"Name":"VirtualAttributes","Type":{"Kind":"ApiRef","Name":"PSAPI_WORKING_SET_EX_BLOCK","TargetKind":"Default","Api":"System.ProcessStatus","Parents":[]},"Attrs":[]}
@@ -186,6 +197,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"cb","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"PageFaultCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -208,6 +220,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"cb","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"PageFaultCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -231,6 +244,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"cb","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"CommitTotal","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
@@ -257,6 +271,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"cb","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -301,6 +316,414 @@
 
 ,"Functions":[
 	{
+		"Name":"EnumProcesses"
+		,"SetLastError":true
+		,"DllImport":"PSAPI.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows5.1.2600"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"lpidProcess","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":1}]}
+			,{"Name":"cb","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"lpcbNeeded","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"EnumProcessModules"
+		,"SetLastError":true
+		,"DllImport":"PSAPI.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows5.1.2600"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hProcess","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"lphModule","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":2}]}
+			,{"Name":"cb","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"lpcbNeeded","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"EnumProcessModulesEx"
+		,"SetLastError":true
+		,"DllImport":"PSAPI.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows6.0.6000"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hProcess","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"lphModule","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":2}]}
+			,{"Name":"cb","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"lpcbNeeded","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+			,{"Name":"dwFilterFlag","Type":{"Kind":"ApiRef","Name":"ENUM_PROCESS_MODULES_EX_FLAGS","TargetKind":"Default","Api":"System.ProcessStatus","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"GetModuleBaseNameA"
+		,"SetLastError":true
+		,"DllImport":"PSAPI.dll"
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows5.1.2600"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hProcess","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"hModule","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"lpBaseName","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out"]}
+			,{"Name":"nSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"GetModuleBaseNameW"
+		,"SetLastError":true
+		,"DllImport":"PSAPI.dll"
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows5.1.2600"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hProcess","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"hModule","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"lpBaseName","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["Out"]}
+			,{"Name":"nSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"GetModuleFileNameExA"
+		,"SetLastError":true
+		,"DllImport":"PSAPI.dll"
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows5.1.2600"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hProcess","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"hModule","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"lpFilename","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out"]}
+			,{"Name":"nSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"GetModuleFileNameExW"
+		,"SetLastError":true
+		,"DllImport":"PSAPI.dll"
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows5.1.2600"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hProcess","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"hModule","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"lpFilename","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["Out"]}
+			,{"Name":"nSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"GetModuleInformation"
+		,"SetLastError":true
+		,"DllImport":"PSAPI.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows5.1.2600"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hProcess","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"hModule","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"lpmodinfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MODULEINFO","TargetKind":"Default","Api":"System.ProcessStatus","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"cb","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"EmptyWorkingSet"
+		,"SetLastError":true
+		,"DllImport":"PSAPI.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows5.1.2600"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hProcess","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"InitializeProcessForWsWatch"
+		,"SetLastError":true
+		,"DllImport":"PSAPI.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows5.1.2600"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hProcess","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"GetWsChanges"
+		,"SetLastError":true
+		,"DllImport":"PSAPI.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows5.1.2600"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hProcess","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"lpWatchInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSAPI_WS_WATCH_INFORMATION","TargetKind":"Default","Api":"System.ProcessStatus","Parents":[]}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":2}]}
+			,{"Name":"cb","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"GetWsChangesEx"
+		,"SetLastError":true
+		,"DllImport":"PSAPI.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows6.0.6000"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hProcess","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"lpWatchInfoEx","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSAPI_WS_WATCH_INFORMATION_EX","TargetKind":"Default","Api":"System.ProcessStatus","Parents":[]}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":2}]}
+			,{"Name":"cb","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
+		]
+	}
+	,{
+		"Name":"GetMappedFileNameW"
+		,"SetLastError":true
+		,"DllImport":"PSAPI.dll"
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows5.1.2600"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hProcess","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"lpv","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			,{"Name":"lpFilename","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["Out"]}
+			,{"Name":"nSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"GetMappedFileNameA"
+		,"SetLastError":true
+		,"DllImport":"PSAPI.dll"
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows5.1.2600"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hProcess","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"lpv","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			,{"Name":"lpFilename","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out"]}
+			,{"Name":"nSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"EnumDeviceDrivers"
+		,"SetLastError":true
+		,"DllImport":"PSAPI.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows5.1.2600"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"lpImageBase","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":1}]}
+			,{"Name":"cb","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"lpcbNeeded","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"GetDeviceDriverBaseNameA"
+		,"SetLastError":true
+		,"DllImport":"PSAPI.dll"
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows5.1.2600"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"ImageBase","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			,{"Name":"lpFilename","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out"]}
+			,{"Name":"nSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"GetDeviceDriverBaseNameW"
+		,"SetLastError":true
+		,"DllImport":"PSAPI.dll"
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows5.1.2600"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"ImageBase","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			,{"Name":"lpBaseName","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["Out"]}
+			,{"Name":"nSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"GetDeviceDriverFileNameA"
+		,"SetLastError":true
+		,"DllImport":"PSAPI.dll"
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows5.1.2600"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"ImageBase","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			,{"Name":"lpFilename","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out"]}
+			,{"Name":"nSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"GetDeviceDriverFileNameW"
+		,"SetLastError":true
+		,"DllImport":"PSAPI.dll"
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows5.1.2600"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"ImageBase","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			,{"Name":"lpFilename","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["Out"]}
+			,{"Name":"nSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"QueryWorkingSet"
+		,"SetLastError":true
+		,"DllImport":"PSAPI.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows5.1.2600"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hProcess","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"pv","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":2}]}
+			,{"Name":"cb","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"QueryWorkingSetEx"
+		,"SetLastError":true
+		,"DllImport":"PSAPI.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows6.0.6000"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hProcess","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"pv","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":2}]}
+			,{"Name":"cb","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"GetProcessMemoryInfo"
+		,"SetLastError":true
+		,"DllImport":"PSAPI.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows5.1.2600"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"Process","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"ppsmemCounters","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PROCESS_MEMORY_COUNTERS","TargetKind":"Default","Api":"System.ProcessStatus","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"cb","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"GetPerformanceInfo"
+		,"SetLastError":true
+		,"DllImport":"PSAPI.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows5.1.2600"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"pPerformanceInformation","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PERFORMANCE_INFORMATION","TargetKind":"Default","Api":"System.ProcessStatus","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"cb","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"EnumPageFilesW"
+		,"SetLastError":true
+		,"DllImport":"PSAPI.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows5.1.2600"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"pCallBackRoutine","Type":{"Kind":"ApiRef","Name":"PENUM_PAGE_FILE_CALLBACKW","TargetKind":"FunctionPointer","Api":"System.ProcessStatus","Parents":[]},"Attrs":["In"]}
+			,{"Name":"pContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out"]}
+		]
+	}
+	,{
+		"Name":"EnumPageFilesA"
+		,"SetLastError":true
+		,"DllImport":"PSAPI.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows5.1.2600"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"pCallBackRoutine","Type":{"Kind":"ApiRef","Name":"PENUM_PAGE_FILE_CALLBACKA","TargetKind":"FunctionPointer","Api":"System.ProcessStatus","Parents":[]},"Attrs":["In"]}
+			,{"Name":"pContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out"]}
+		]
+	}
+	,{
+		"Name":"GetProcessImageFileNameA"
+		,"SetLastError":true
+		,"DllImport":"PSAPI.dll"
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows5.1.2600"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hProcess","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"lpImageFileName","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out"]}
+			,{"Name":"nSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"GetProcessImageFileNameW"
+		,"SetLastError":true
+		,"DllImport":"PSAPI.dll"
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows5.1.2600"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hProcess","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"lpImageFileName","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["Out"]}
+			,{"Name":"nSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
 		"Name":"K32EnumProcesses"
 		,"SetLastError":false
 		,"DllImport":"KERNEL32.dll"
@@ -326,7 +749,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hProcess","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"lphModule","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":2}]}
+			,{"Name":"lphModule","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":2}]}
 			,{"Name":"cb","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"lpcbNeeded","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 		]
@@ -342,10 +765,10 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hProcess","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"lphModule","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":2}]}
+			,{"Name":"lphModule","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":2}]}
 			,{"Name":"cb","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"lpcbNeeded","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-			,{"Name":"dwFilterFlag","Type":{"Kind":"ApiRef","Name":"ENUM_PROCESS_MODULES_EX_FLAGS","TargetKind":"Default","Api":"System.ProcessStatus","Parents":[]},"Attrs":["In"]}
+			,{"Name":"dwFilterFlag","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -359,7 +782,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hProcess","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"hModule","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"hModule","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpBaseName","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out"]}
 			,{"Name":"nSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
@@ -375,7 +798,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hProcess","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"hModule","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"hModule","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpBaseName","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["Out"]}
 			,{"Name":"nSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
@@ -391,7 +814,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hProcess","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
-			,{"Name":"hModule","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"hModule","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpFilename","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out"]}
 			,{"Name":"nSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
@@ -407,7 +830,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hProcess","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
-			,{"Name":"hModule","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"hModule","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpFilename","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["Out"]}
 			,{"Name":"nSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
@@ -423,7 +846,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hProcess","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"hModule","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"hModule","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpmodinfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MODULEINFO","TargetKind":"Default","Api":"System.ProcessStatus","Parents":[]}},"Attrs":["Out"]}
 			,{"Name":"cb","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
@@ -712,6 +1135,13 @@
 
 ,"UnicodeAliases":[
 	"PENUM_PAGE_FILE_CALLBACK"
+	,"GetModuleBaseName"
+	,"GetModuleFileNameEx"
+	,"GetMappedFileName"
+	,"GetDeviceDriverBaseName"
+	,"GetDeviceDriverFileName"
+	,"EnumPageFiles"
+	,"GetProcessImageFileName"
 	,"K32GetModuleBaseName"
 	,"K32GetModuleFileNameEx"
 	,"K32GetMappedFileName"

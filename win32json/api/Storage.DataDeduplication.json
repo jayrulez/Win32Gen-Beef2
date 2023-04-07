@@ -25,6 +25,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ContainerIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"StartOffset","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
@@ -40,6 +41,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Length","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"Offset","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
@@ -63,7 +65,7 @@
 	,{
 		"Name":"IDedupReadFileCallback"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"7bacc67a-2f1d-42d0-897e-6ff62dd533bb"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -119,7 +121,7 @@
 	,{
 		"Name":"IDedupBackupSupport"
 		,"Architectures":[]
-		,"Platform":"windowsServer2012"
+		,"Platform":"windowsserver2012"
 		,"Kind":"Com"
 		,"Guid":"c719d963-2b2d-415e-acf7-7eb7ca596ff4"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -165,6 +167,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ChunkFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ChunkOffsetInStream","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -360,6 +363,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Hash","Type":{"Kind":"Array","Shape":{"Size":32},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 		]
@@ -373,6 +377,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Hash","Type":{"Kind":"ApiRef","Name":"DedupHash","TargetKind":"Default","Api":"Storage.DataDeduplication","Parents":[]},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"DedupChunkFlags","TargetKind":"Default","Api":"Storage.DataDeduplication","Parents":[]},"Attrs":[]}
@@ -389,6 +394,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Hash","Type":{"Kind":"ApiRef","Name":"DedupHash","TargetKind":"Default","Api":"Storage.DataDeduplication","Parents":[]},"Attrs":[]}
 			,{"Name":"LogicalSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -404,6 +410,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Path","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"Offset","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}

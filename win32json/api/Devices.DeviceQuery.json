@@ -64,6 +64,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Operator","Type":{"Kind":"ApiRef","Name":"DEVPROP_OPERATOR","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]},"Attrs":[]}
 			,{"Name":"Property","Type":{"Kind":"ApiRef","Name":"DEVPROPERTY","TargetKind":"Default","Api":"Devices.Properties","Parents":[]},"Attrs":[]}
@@ -147,6 +148,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ObjectType","Type":{"Kind":"ApiRef","Name":"DEV_OBJECT_TYPE","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]},"Attrs":[]}
 			,{"Name":"pszObjectId","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
@@ -163,6 +165,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Action","Type":{"Kind":"ApiRef","Name":"DEV_QUERY_RESULT_ACTION","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]},"Attrs":[]}
 			,{"Name":"Data","Type":{"Kind":"ApiRef","Name":"_DEV_QUERY_RESULT_UPDATE_PAYLOAD","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]},"Attrs":[]}
@@ -175,6 +178,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"State","Type":{"Kind":"ApiRef","Name":"DEV_QUERY_STATE","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]},"Attrs":[]}
 					,{"Name":"DeviceObject","Type":{"Kind":"ApiRef","Name":"DEV_OBJECT","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]},"Attrs":[]}
@@ -191,9 +195,10 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Key","Type":{"Kind":"ApiRef","Name":"DEVPROPKEY","TargetKind":"Default","Api":"Devices.Properties","Parents":[]},"Attrs":[]}
-			,{"Name":"Type","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Type","Type":{"Kind":"ApiRef","Name":"DEVPROPTYPE","TargetKind":"Default","Api":"Devices.Properties","Parents":[]},"Attrs":[]}
 			,{"Name":"BufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Buffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 		]
@@ -207,6 +212,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"unused","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 		]
@@ -397,7 +403,7 @@
 			,{"Name":"cFilterExpressionCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pFilter","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":4,"Child":{"Kind":"ApiRef","Name":"DEVPROP_FILTER_EXPRESSION","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"pcObjectCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-			,{"Name":"ppObjects","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEV_OBJECT","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}}},"Attrs":["Out","Optional","Const"]}
+			,{"Name":"ppObjects","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEV_OBJECT","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}}},"Attrs":["Out","Const"]}
 		]
 	}
 	,{
@@ -419,7 +425,7 @@
 			,{"Name":"cExtendedParameterCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pExtendedParameters","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":6,"Child":{"Kind":"ApiRef","Name":"DEV_QUERY_PARAMETER","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"pcObjectCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-			,{"Name":"ppObjects","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEV_OBJECT","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}}},"Attrs":["Out","Optional","Const"]}
+			,{"Name":"ppObjects","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEV_OBJECT","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}}},"Attrs":["Out","Const"]}
 		]
 	}
 	,{

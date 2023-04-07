@@ -4998,6 +4998,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"nSize","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"nVersion","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -5036,6 +5037,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"emr","Type":{"Kind":"ApiRef","Name":"EMR","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]},"Attrs":[]}
 			,{"Name":"pfd","Type":{"Kind":"ApiRef","Name":"PIXELFORMATDESCRIPTOR","TargetKind":"Default","Api":"Graphics.OpenGL","Parents":[]},"Attrs":[]}
@@ -5050,6 +5052,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"x","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"y","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -5064,6 +5067,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"gmfBlackBoxX","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"gmfBlackBoxY","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -5081,6 +5085,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"nSize","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"nVersion","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -5388,6 +5393,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 		]
 		,"NestedTypes":[
@@ -5400,6 +5406,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 		]
 		,"NestedTypes":[
@@ -5412,6 +5419,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 		]
 		,"NestedTypes":[
@@ -5637,7 +5645,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hdc","Type":{"Kind":"ApiRef","Name":"HDC","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]},"Attrs":["In"]}
-			,{"Name":"iPixelFormat","Type":{"Kind":"ApiRef","Name":"PFD_PIXEL_TYPE","TargetKind":"Default","Api":"Graphics.OpenGL","Parents":[]},"Attrs":["In"]}
+			,{"Name":"iPixelFormat","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"nBytes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"ppfd","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PIXELFORMATDESCRIPTOR","TargetKind":"Default","Api":"Graphics.OpenGL","Parents":[]}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":2},"Optional"]}
 		]

@@ -58,10 +58,31 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"CLSID_INDEX_SERVER_DSO"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"f9ae8980-7e52-11d0-8964-00c04fd611d7"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"PSGUID_FILENAME"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"41cf5ae0-f75a-4806-bd87-59c7d9248eb9"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"PID_FILENAME"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":100
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBPROPSET_FSCIFRMWRK_EXT"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"a9bd1526-6a80-11d0-8c9d-0020af1d740e"
 		,"Attrs":[]
 	}
 	,{
@@ -142,10 +163,24 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"DBPROPSET_SESS_QUERYEXT"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"63623309-2d8b-4d17-b152-6e2956c26a70"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"DBPROP_DEFAULT_EQUALS_BEHAVIOR"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":2
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBPROPSET_QUERYEXT"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"a7ac77ed-f8d7-11ce-a798-0020f8008025"
 		,"Attrs":[]
 	}
 	,{
@@ -254,6 +289,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"DBPROPSET_CIFRMWRKCORE_EXT"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"afafaca5-b5d1-11d0-8c62-00c04fc2db8d"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"DBPROP_MACHINE"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -265,6 +307,13 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":3
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DBPROPSET_MSIDXS_ROWSETEXT"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"aa6ee6b0-e828-11d0-b23e-00aa0047fc01"
 		,"Attrs":[]
 	}
 	,{
@@ -984,6 +1033,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"cbStruct","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"cWordList","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1011,6 +1061,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"guidPropSet","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"psProperty","Type":{"Kind":"ApiRef","Name":"PROPSPEC","TargetKind":"Default","Api":"System.Com.StructuredStorage","Parents":[]},"Attrs":[]}
@@ -1091,6 +1142,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"idChunk","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"cwcStart","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1106,6 +1158,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"idChunk","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"breakType","Type":{"Kind":"ApiRef","Name":"CHUNK_BREAKTYPE","TargetKind":"Default","Api":"Storage.IndexServer","Parents":[]},"Attrs":[]}
@@ -1202,6 +1255,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"uGuid","Type":{"Kind":"ApiRef","Name":"_uGuid_e__Union","TargetKind":"Default","Api":"Storage.IndexServer","Parents":[]},"Attrs":[]}
 			,{"Name":"eKind","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1215,6 +1269,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"guid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 					,{"Name":"pguid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":[]}
@@ -1229,6 +1284,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"pwszName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 					,{"Name":"ulPropid","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1317,6 +1373,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":2
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"uGuid","Type":{"Kind":"ApiRef","Name":"_uGuid_e__Union","TargetKind":"Default","Api":"Storage.IndexServer","Parents":[]},"Attrs":[]}
 			,{"Name":"eKind","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1330,6 +1387,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":2
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"pwszName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 					,{"Name":"ulPropid","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1344,6 +1402,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":2
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"guid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 					,{"Name":"pguid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":[]}

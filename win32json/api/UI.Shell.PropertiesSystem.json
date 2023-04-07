@@ -18,6 +18,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"fmtid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"pid","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -249,7 +250,7 @@
 			,{"Name":"GPS_VOLATILEPROPERTIESONLY","Value":4096}
 			,{"Name":"GPS_MASK_VALID","Value":8191}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"IObjectWithPropertyKey"
@@ -297,7 +298,7 @@
 			,{"Name":"PKA_APPEND","Value":1}
 			,{"Name":"PKA_DELETE","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"IPropertyChange"
@@ -740,7 +741,7 @@
 			,{"Name":"PDVF_CANWRAP","Value":4096}
 			,{"Name":"PDVF_MASK_ALL","Value":7167}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"PROPDESC_DISPLAYTYPE"
@@ -800,7 +801,7 @@
 			,{"Name":"PDFF_READONLY","Value":4096}
 			,{"Name":"PDFF_NOAUTOREADINGORDER","Value":8192}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"PROPDESC_SORTDESCRIPTION"
@@ -1221,7 +1222,7 @@
 			,{"Name":"PDSIF_ALWAYSINCLUDE","Value":8}
 			,{"Name":"PDSIF_USEFORTYPEAHEAD","Value":16}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"PROPDESC_COLUMNINDEX_TYPE"
@@ -1595,6 +1596,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 		]
 		,"NestedTypes":[
@@ -1741,7 +1743,7 @@
 			{"Name":"PSTF_UTC","Value":0}
 			,{"Name":"PSTF_LOCAL","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"PROPVAR_COMPARE_UNIT"
@@ -1777,7 +1779,7 @@
 			,{"Name":"PVCF_USESTRCMPIC","Value":16}
 			,{"Name":"PVCF_DIGITSASNUMBERS_CASESENSITIVE","Value":32}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"PROPVAR_CHANGE_FLAGS"
@@ -1794,7 +1796,7 @@
 			,{"Name":"PVCHF_LOCALBOOL","Value":8}
 			,{"Name":"PVCHF_NOHEXSTRING","Value":16}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"DRAWPROGRESSFLAGS"
@@ -1811,7 +1813,7 @@
 			,{"Name":"DPF_WARNING","Value":8}
 			,{"Name":"DPF_STOPPED","Value":16}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"SYNC_TRANSFER_STATUS"
@@ -1834,7 +1836,7 @@
 			,{"Name":"STS_INCOMPLETE","Value":512}
 			,{"Name":"STS_PLACEHOLDER_IFEMPTY","Value":1024}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"PLACEHOLDER_STATES"
@@ -1852,7 +1854,7 @@
 			,{"Name":"PS_DEFAULT","Value":7}
 			,{"Name":"PS_ALL","Value":15}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"PROPERTYUI_NAME_FLAGS"
@@ -1865,7 +1867,7 @@
 			{"Name":"PUIFNF_DEFAULT","Value":0}
 			,{"Name":"PUIFNF_MNEMONIC","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"PROPERTYUI_FLAGS"
@@ -1879,7 +1881,7 @@
 			,{"Name":"PUIF_RIGHTALIGN","Value":1}
 			,{"Name":"PUIF_NOLABELININFOTIP","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"PROPERTYUI_FORMAT_FLAGS"
@@ -1895,7 +1897,7 @@
 			,{"Name":"PUIFFDF_NOTIME","Value":4}
 			,{"Name":"PUIFFDF_FRIENDLYDATE","Value":8}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"IPropertyUI"
@@ -2065,7 +2067,7 @@
 			,{"Name":"SESF_PAUSED_DUE_TO_USER_REQUEST","Value":256}
 			,{"Name":"SESF_ALL_FLAGS","Value":511}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"PROPPRG"
@@ -2074,6 +2076,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"flPrg","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"flPrgInit","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -2106,7 +2109,7 @@
 		,"Params":[
 			{"Name":"propvar","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PROPVARIANT","TargetKind":"Default","Api":"System.Com.StructuredStorage","Parents":[]}},"Attrs":["In","Const"]}
 			,{"Name":"riid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
-			,{"Name":"ppv","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","ComOutPtr","Optional"]}
+			,{"Name":"ppv","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","ComOutPtr"]}
 		]
 	}
 	,{
@@ -3116,7 +3119,7 @@
 		,"Platform":"windows5.1.2600"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hinst","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hinst","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"id","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"ppropvar","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PROPVARIANT","TargetKind":"Default","Api":"System.Com.StructuredStorage","Parents":[]}},"Attrs":["Out"]}
 		]
@@ -3367,7 +3370,7 @@
 		,"Platform":"windows5.1.2600"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"prgsz","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional"]}
+			{"Name":"prgsz","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"cElems","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"ppropvar","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PROPVARIANT","TargetKind":"Default","Api":"System.Com.StructuredStorage","Parents":[]}},"Attrs":["Out"]}
 		]
@@ -4282,7 +4285,7 @@
 		,"Platform":"windows5.1.2600"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hinst","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			{"Name":"hinst","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"id","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pvar","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
 		]
@@ -4505,7 +4508,7 @@
 		,"Platform":"windows5.1.2600"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"prgsz","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In"]}
+			{"Name":"prgsz","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Const"]}
 			,{"Name":"cElems","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pvar","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
 		]
@@ -5335,7 +5338,7 @@
 			,{"Name":"pbc","Type":{"Kind":"ApiRef","Name":"IBindCtx","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"flags","Type":{"Kind":"ApiRef","Name":"GETPROPERTYSTOREFLAGS","TargetKind":"Default","Api":"UI.Shell.PropertiesSystem","Parents":[]},"Attrs":["In"]}
 			,{"Name":"riid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
-			,{"Name":"ppv","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out"]}
+			,{"Name":"ppv","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","ComOutPtr"]}
 		]
 	}
 	,{

@@ -438,6 +438,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"pszCard","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"pszReader","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -454,6 +455,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pszProfile","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -468,6 +470,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pszProfile","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -486,6 +489,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"pszUserName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"pszDomain","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -502,6 +506,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ProfilePath","Type":{"Kind":"Array","Shape":{"Size":257},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"HomeDir","Type":{"Kind":"Array","Shape":{"Size":257},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
@@ -517,6 +522,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pszUserName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -534,6 +540,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pszUserName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -552,6 +559,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"UserToken","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -559,18 +567,18 @@
 			,{"Name":"Quotas","Type":{"Kind":"ApiRef","Name":"QUOTA_LIMITS","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":[]}
 			,{"Name":"UserName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"Domain","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"LogonTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"LogonTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"SmartCardLogon","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"ProfileLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"MessageType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"LogonCount","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"BadPasswordCount","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"ProfileLogonTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"LogoffTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"KickOffTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"PasswordLastSet","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"PasswordCanChange","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"PasswordMustChange","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"ProfileLogonTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"LogoffTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"KickOffTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"PasswordLastSet","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"PasswordCanChange","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"PasswordMustChange","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"LogonScript","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"HomeDirectory","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"FullName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -591,6 +599,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1007,6 +1016,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"WlxUseCtrlAltDel","Type":{"Kind":"ApiRef","Name":"PWLX_USE_CTRL_ALT_DEL","TargetKind":"FunctionPointer","Api":"Security.WinWlx","Parents":[]},"Attrs":[]}
 			,{"Name":"WlxSetContextPointer","Type":{"Kind":"ApiRef","Name":"PWLX_SET_CONTEXT_POINTER","TargetKind":"FunctionPointer","Api":"Security.WinWlx","Parents":[]},"Attrs":[]}
@@ -1032,6 +1042,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"WlxUseCtrlAltDel","Type":{"Kind":"ApiRef","Name":"PWLX_USE_CTRL_ALT_DEL","TargetKind":"FunctionPointer","Api":"Security.WinWlx","Parents":[]},"Attrs":[]}
 			,{"Name":"WlxSetContextPointer","Type":{"Kind":"ApiRef","Name":"PWLX_SET_CONTEXT_POINTER","TargetKind":"FunctionPointer","Api":"Security.WinWlx","Parents":[]},"Attrs":[]}
@@ -1061,6 +1072,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"WlxUseCtrlAltDel","Type":{"Kind":"ApiRef","Name":"PWLX_USE_CTRL_ALT_DEL","TargetKind":"FunctionPointer","Api":"Security.WinWlx","Parents":[]},"Attrs":[]}
 			,{"Name":"WlxSetContextPointer","Type":{"Kind":"ApiRef","Name":"PWLX_SET_CONTEXT_POINTER","TargetKind":"FunctionPointer","Api":"Security.WinWlx","Parents":[]},"Attrs":[]}
@@ -1091,6 +1103,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"WlxUseCtrlAltDel","Type":{"Kind":"ApiRef","Name":"PWLX_USE_CTRL_ALT_DEL","TargetKind":"FunctionPointer","Api":"Security.WinWlx","Parents":[]},"Attrs":[]}
 			,{"Name":"WlxSetContextPointer","Type":{"Kind":"ApiRef","Name":"PWLX_SET_CONTEXT_POINTER","TargetKind":"FunctionPointer","Api":"Security.WinWlx","Parents":[]},"Attrs":[]}
@@ -1128,6 +1141,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"WlxUseCtrlAltDel","Type":{"Kind":"ApiRef","Name":"PWLX_USE_CTRL_ALT_DEL","TargetKind":"FunctionPointer","Api":"Security.WinWlx","Parents":[]},"Attrs":[]}
 			,{"Name":"WlxSetContextPointer","Type":{"Kind":"ApiRef","Name":"PWLX_SET_CONTEXT_POINTER","TargetKind":"FunctionPointer","Api":"Security.WinWlx","Parents":[]},"Attrs":[]}
@@ -1181,6 +1195,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}

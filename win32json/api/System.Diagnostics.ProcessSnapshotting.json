@@ -43,7 +43,7 @@
 			,{"Name":"PSS_HANDLE_HAVE_BASIC_INFORMATION","Value":4}
 			,{"Name":"PSS_HANDLE_HAVE_TYPE_SPECIFIC_INFORMATION","Value":8}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"PSS_OBJECT_TYPE"
@@ -141,7 +141,7 @@
 			{"Name":"PSS_DUPLICATE_NONE","Value":0}
 			,{"Name":"PSS_DUPLICATE_CLOSE_SOURCE","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"PSS_PROCESS_FLAGS"
@@ -158,7 +158,7 @@
 			,{"Name":"PSS_PROCESS_FLAGS_RESERVED_04","Value":8}
 			,{"Name":"PSS_PROCESS_FLAGS_FROZEN","Value":16}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"PSS_PROCESS_INFORMATION"
@@ -167,6 +167,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ExitStatus","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"PebBaseAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -205,6 +206,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"VaCloneHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 		]
@@ -218,6 +220,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"AuxPagesCaptured","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -231,6 +234,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"RegionCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -244,6 +248,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"HandlesCaptured","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -257,6 +262,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ThreadsCaptured","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ContextLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -271,6 +277,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"SectionHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -285,6 +292,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"TotalCycleCount","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"TotalWallClockPeriod","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -309,6 +317,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Address","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 			,{"Name":"BasicInformation","Type":{"Kind":"ApiRef","Name":"MEMORY_BASIC_INFORMATION","TargetKind":"Default","Api":"System.Memory","Parents":[]},"Attrs":[]}
@@ -326,6 +335,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"BaseAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 			,{"Name":"AllocationBase","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -351,6 +361,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Handle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"PSS_HANDLE_FLAGS","TargetKind":"Default","Api":"System.Diagnostics.ProcessSnapshotting","Parents":[]},"Attrs":[]}
@@ -377,6 +388,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Process","Type":{"Kind":"ApiRef","Name":"_Process_e__Struct","TargetKind":"Default","Api":"System.Diagnostics.ProcessSnapshotting","Parents":["_TypeSpecificInformation_e__Union"]},"Attrs":[]}
 					,{"Name":"Thread","Type":{"Kind":"ApiRef","Name":"_Thread_e__Struct","TargetKind":"Default","Api":"System.Diagnostics.ProcessSnapshotting","Parents":["_TypeSpecificInformation_e__Union"]},"Attrs":[]}
@@ -393,10 +405,11 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"BaseAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 							,{"Name":"AllocationAttributes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-							,{"Name":"MaximumSize","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+							,{"Name":"MaximumSize","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]
@@ -408,6 +421,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"CurrentCount","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 							,{"Name":"Abandoned","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -424,6 +438,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"ExitStatus","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"PebBaseAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -443,29 +458,10 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"ManualReset","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 							,{"Name":"Signaled","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-						]
-						,"NestedTypes":[
-						]
-					}
-					,{
-						"Name":"_Thread_e__Struct"
-						,"Architectures":[]
-						,"Platform":null
-						,"Kind":"Struct"
-						,"Size":0
-						,"PackingSize":0
-						,"Fields":[
-							{"Name":"ExitStatus","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-							,{"Name":"TebBaseAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-							,{"Name":"ProcessId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-							,{"Name":"ThreadId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-							,{"Name":"AffinityMask","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
-							,{"Name":"Priority","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-							,{"Name":"BasePriority","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-							,{"Name":"Win32StartAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]
@@ -477,9 +473,31 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"CurrentCount","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 							,{"Name":"MaximumCount","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+						]
+						,"NestedTypes":[
+						]
+					}
+					,{
+						"Name":"_Thread_e__Struct"
+						,"Architectures":[]
+						,"Platform":null
+						,"Kind":"Struct"
+						,"Size":0
+						,"PackingSize":0
+						,"SizeField":""
+						,"Fields":[
+							{"Name":"ExitStatus","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+							,{"Name":"TebBaseAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+							,{"Name":"ProcessId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+							,{"Name":"ThreadId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+							,{"Name":"AffinityMask","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
+							,{"Name":"Priority","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+							,{"Name":"BasePriority","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+							,{"Name":"Win32StartAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]
@@ -499,7 +517,7 @@
 			{"Name":"PSS_THREAD_FLAGS_NONE","Value":0}
 			,{"Name":"PSS_THREAD_FLAGS_TERMINATED","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"PSS_THREAD_ENTRY"
@@ -508,6 +526,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ExitStatus","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"TebBaseAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -539,6 +558,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Context","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 			,{"Name":"AllocRoutine","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
