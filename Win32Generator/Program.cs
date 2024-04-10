@@ -78,6 +78,7 @@ namespace Win32Generator
             "Equals",
             "GetFlags",
             "GetType",
+            "GetTypeId",
             "ToString"
         };
 
